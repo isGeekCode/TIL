@@ -42,7 +42,7 @@ enum 오류종류이름 : Error {
 }
 ```
 
-오류의 종류는 enum으로 정의해주는다 아래와 같이 정의합니다. 
+오류의 종류는 아래와 같이 enum으로 정의합니다.
 
 ```swift
 enum TestError : Error {
@@ -65,7 +65,7 @@ public enum AFError: Error {
 
 예외상황이 많아질수록 케이스가 늘어날 수 있습니다.
 
-여기서 1**. 오류의 종류를 정의 하는 부분**은  선택사항입니다.
+여기서 1**. 오류의 종류를 정의 하는 부분**은 선택사항입니다.
 
 그 이유는 궂이 케이스별로 오류처리하지 않을 때도 있기 때문입니다.
 
@@ -73,20 +73,20 @@ public enum AFError: Error {
 
 # **2. 발생한 오류 던지기**
 
-오류는 **throws** 를 이용해 던집니다.  “**오류를 처리해 주는 곳으로 전달해준다 “**라는 것을 의미 합니다. 
+오류는 **throws** 를 이용해 던집니다. “**오류를 처리해 주는 곳으로 전달해준다 “**라는 것을 의미 합니다.
 
 ```swift
 func printNumber(_ number: Int) -> Int {
     var text = ""                    // 변수생성
 	  guard number > 0 else { return } // 오류가 발생할 수 있는 부분
- 
+
 		return text
 }
 ```
 
 자, 위에 printNumber()라는 메소드가 있습니다.
 
-중간에 guard문을 썼는데 이부분에서 오류가 발생할 수도 있기 때문에 사용했습니다. 
+중간에 guard문을 썼는데 이부분에서 오류가 발생할 수도 있기 때문에 사용했습니다.
 
 오류를 던지기 위해 **throw를 총 두 군데에 써줍니다.**
 
@@ -96,20 +96,19 @@ func printNumber(_ number: Int)throws -> Int {    // 1   throws
 
   guard number > 0 else {
 		throw TestError.outOfRange                // 2 throw
-	}    
+	}
 	return text
 }
 ```
 
 1. 첫번째 **throws는 오류가 발생할 가능성이 있는 메소드 제목 옆**에 써줍니다.
 2. 두번째 **throw ( ‘s’ 없음)은 오류가 발생할 구간에**서 써줍니다.
-    
-    → 처음에 오류를 정의 했다면 이곳에 추가합니다.
-    
+
+   → 처음에 오류를 정의 했다면 이곳에 추가합니다.
 
 ```swift
-enum TestError : Error {   
-	case outOfRange                          // 1   
+enum TestError : Error {
+	case outOfRange                          // 1
 	case invalidInputNum(testNum : Int)      // 2
 }
 ```
@@ -117,10 +116,10 @@ enum TestError : Error {
 여기서 2번처럼 변수가 있는 경우, 아래와 같이 구현합니다.
 
 ```swift
-func printNumber(_ number: Int) throws -> Int {       
+func printNumber(_ number: Int) throws -> Int {
 	var text = ""
 	guard number > 0 else {
-		throw TestError.invalidInputNum(testNum: number)                  
+		throw TestError.invalidInputNum(testNum: number)
 	}
   return text
 }
@@ -170,7 +169,7 @@ let resultNumber = object.printNumber(-20)
 
 근데 printNumber에 변수로 -20이라는 음수값을 넣어줬습니다.
 
-이러면 에러가 발생하게 되는데 
+이러면 에러가 발생하게 되는데
 
 이때 오류가 발생하는 메소드는 **try**를 써줘야합니다.
 
@@ -201,7 +200,7 @@ func printNumber(_ number: Int)throws -> Int {
 하지만 여기서 끝이 아니라 do-catch로 감싸줘야 처리를 할 수 있습니다.
 
 ```swift
-do {   
+do {
 
 	let resultNumber = try object.printNumber(-20)
 
@@ -221,7 +220,7 @@ do {
 심지어는 catch를 생략해도 무방합니다.
 
 ```swift
-do {   
+do {
 
 	let resultNumber = try object.printNumber(-20)
 
@@ -235,11 +234,11 @@ do {
 활용방법을 알아봅시다.
 
 ```swift
-do {   
+do {
 
 	let resultNumber = try object.printNumber(-20)
 
-} catch TestError.outOfRange {  
+} catch TestError.outOfRange {
 	// 오류처리
 } catch TestError.invalidInput(let testNumber) {
    // 오류처리
@@ -251,14 +250,14 @@ do {
 오류처리까지 채우면 이렇습니다
 
 ```swift
-do {  
+do {
 
 	let resultNumber = try object.printNumber(-20)
-	
+
 	} catch TestError.outOfRange {
 	   print("양수가 아닙니다!")
-	
-	} catch TestError.invalidInput(let testNumber) { 
+
+	} catch TestError.invalidInput(let testNumber) {
 	  print("부적절한 숫자 \(testNumber)")
 	}
 ```
@@ -266,16 +265,16 @@ do {
 케이스별로 처리하기 때문에 switch문으로도 쓸 수 있습니다
 
 ```swift
-do {   
+do {
 
 	let resultNumber = try object.printNumber(-20)
 
 } catch {switch error {
-	
+
 	   case TestError.outOfRange:
 	       // 오류처리
 	   case TestError.invalidInput(let number):
-	       // 오류처리   
+	       // 오류처리
 	}
 }
 ```
