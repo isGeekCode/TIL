@@ -50,7 +50,7 @@ C언어는 저급 언어와 고급 언어의 특징을 모두 가지고 있는 �
 
 C언어에서 실행 파일을 생성하는 순서는 다음 그림과 같습니다.
 
-![img_c_programming.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aa5e4a84-9e99-4c66-a0f4-dc7406ff1a72/img_c_programming.png)
+![img_c_programming](https://user-images.githubusercontent.com/76529148/164407431-65015bf4-51aa-484e-a6a2-2a29df95f606.png)
 
 1. 소스 파일(source file)의 작성
 
