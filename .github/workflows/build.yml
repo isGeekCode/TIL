@@ -24,5 +24,5 @@ jobs:
             포스팅은 이 곳에서  [이곳][1]에서 확인가능합니다.
           footer: |
             [1]: https://h1guitar.tistory.com/
-          list_most_recent: 5 # optional, lists most recent TILS below description
+          list_most_recent: 1 # optional, lists most recent TILS below description
           date_format: '2020 Jan 15:04' # optional, must align to https://golang.org/pkg/time/#Time.Format
