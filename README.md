@@ -10,7 +10,7 @@ _44 TILs and counting..._
 
 ### 2 most recent TILs
 
-- [# 진법](Computer Science/TIL 221021_진법(base  radix).md) - Mon Oct 24 13:16:51 2022 +0900
+- [# 2진법, 10진법, 16진법](Computer Science/TIL 221021_진법(base  radix).md) - Mon Oct 24 13:16:51 2022 +0900
 - [백만장자의 시크릿](Book/TIL 220604_BookReview_Millionaire'sSecret.md) - Mon Oct 24 13:16:51 2022 +0900
 
 ### Categories
@@ -23,10 +23,10 @@ _44 TILs and counting..._
 - [백만장자의 시크릿](Book/TIL 220604_BookReview_Millionaire'sSecret.md)
 
 ### [Computer Science](#Computer Science)
-- [# 진법](Computer Science/TIL 221021_진법(base  radix).md)
+- [# 2진법, 10진법, 16진법](Computer Science/TIL 221021_진법(base  radix).md)
 
 ### [swift](#swift)
-- [# 📌 안전하게 배열에 접근하는 방법](swift/TIL220310_contact to array safely.md)
+- [안전하게 배열에 접근하는 방법](swift/TIL220310_contact to array safely.md)
 - [CocoaPods이란](swift/TIL220311_cocoaPods & Spm.md)
 - [View의 계층구조](swift/TIL220314_addSubView 2.md)
 - [View의 계층구조](swift/TIL220314_addSubView.md)
