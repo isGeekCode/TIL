@@ -4,28 +4,32 @@
 오늘 배운 것들을 정리하는 곳 ✨
 
 
-_45 TILs and counting..._
+_42 TILs and counting..._
 
 ---
 
 ### 2 most recent TILs
 
-- [부모님의정원](Book/TIL_220601_부모님의 정원.md) - Mon Oct 24 14:17:50 2022 +0900
-- [2진법,10진법,16진법](ComputerScience/221021_진법(base  radix).md) - Mon Oct 24 14:14:44 2022 +0900
+- [참고 사이트: [http://www.tcpschool.com/c/c_intro_basic](http://www.tcpschool.com/c/c_intro_basic)](Objc/TIL220421_about ObjectiveC.md) - Mon Oct 24 14:25:37 2022 +0900
+- [부모님의 정원](Book/TIL_220601_부모님의 정원.md) - Mon Oct 24 14:17:50 2022 +0900
 
 ### Categories
 
 - [Book](#Book)
 - [ComputerScience](#ComputerScience)
+- [Objc](#Objc)
 - [Test](#Test)
 - [swift](#swift)
 
 ### [Book](#Book)
 - [백만장자의 시크릿](Book/220604_BookReview_Millionaire'sSecret.md)
-- [부모님의정원](Book/TIL_220601_부모님의 정원.md)
+- [부모님의 정원](Book/TIL_220601_부모님의 정원.md)
 
 ### [ComputerScience](#ComputerScience)
 - [2진법,10진법,16진법](ComputerScience/221021_진법(base  radix).md)
+
+### [Objc](#Objc)
+- [참고 사이트: [http://www.tcpschool.com/c/c_intro_basic](http://www.tcpschool.com/c/c_intro_basic)](Objc/TIL220421_about ObjectiveC.md)
 
 ### [Test](#Test)
 - [commit test22](Test/Test.md)
@@ -53,14 +57,10 @@ _45 TILs and counting..._
 - [WKWebView에서 보내는 JS를 캐치하는 방법](swift/TIL220415_WKWebViewCatchingJS.md)
 - [TIL220419_CGRect](swift/TIL220419_CGRect.md)
 - [**TIL220420_socket**](swift/TIL220420_socket.md)
-- [참고 사이트: [http://www.tcpschool.com/c/c_intro_basic](http://www.tcpschool.com/c/c_intro_basic)](swift/TIL220421_about ObjectiveC.md)
 - [공동작업을 위한 Git 버전관리](swift/TIL220422_GitControl.md)
 - [롱프레스 및 햅틱진동 구현하기](swift/TIL220426_Haptic AndLongpress.md)
 - [오토레이아웃에 대하여](swift/TIL220514_autoLayout.md)
-- [텍스트인코딩에 관하여](swift/TIL220517_aboutTextEncoding 2 2.md)
-- [텍스트인코딩에 관하여](swift/TIL220517_aboutTextEncoding 2.md)
 - [텍스트인코딩에 관하여](swift/TIL220517_aboutTextEncoding.md)
-- [배열안에 담긴 url 유효성 검사](swift/TIL220520_about checkArrayComponent 복사본.md)
 - [배열안에 담긴 url 유효성 검사](swift/TIL220520_about checkArrayComponent.md)
 - [# 현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](swift/TIL220523_current Device Check & use Combine Reactive AutoLayout.md)
 - [깃으로 SPM 설치하기](swift/TIL220524_HowToUseSPM.md)
