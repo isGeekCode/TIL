@@ -24,7 +24,7 @@ _46 TILs and counting..._
 - [백만장자의 시크릿](Book/TIL 220604_BookReview_Millionaire'sSecret.md)
 
 ### [Computer Science](#Computer Science)
-- [# 2진법, 10진법, 16진법](Computer Science/TIL 221021_진법(base  radix).md)
+- [2진법, 10진법, 16진법](Computer Science/TIL 221021_진법(base  radix).md)
 
 ### [Test](#Test)
 - [commit test22](Test/Test.md)
