@@ -29,7 +29,7 @@ _42 TILs and counting..._
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
 
 ### [Objc](#Objc)
-- [참고 사이트: [http://www.tcpschool.com/c/c_intro_basic](http://www.tcpschool.com/c/c_intro_basic)](Objc/TIL220421_aboutObjectiveC.md)
+- [c언어와 objective-c의 발전](Objc/TIL220421_aboutObjectiveC.md)
 
 ### [Test](#Test)
 - [commit test22](Test/Test.md)
@@ -65,10 +65,10 @@ _42 TILs and counting..._
 - [# 현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](swift/TIL220523_currentDeviceCheck&useCombineReactiveAutoLayout.md)
 - [깃으로 SPM 설치하기](swift/TIL220524_HowToUseSPM.md)
 - [CGColor에 대하여](swift/TIL220525_aboutUIColorCgColor.md)
-- [](swift/TIL220528_PragmaMark.md)
+- [주석사용법](swift/TIL220528_PragmaMark.md)
 - [# 22년 05월 리뷰](swift/TIL220530_MayReview.md)
 - [스위프트로 코딩할 때 가끔 서버와의 통신 등을 이유로 유닉스 타임스탬프를 사용해야 할 때가 있습니다. 그런데 스위프트에서는 기본적으로 유닉스 타임스탬프 값을 얻는 방법을 제공하고 있지 않습니다. 따라서 이번 포스팅에서는 이를 간단하게 익스텐션으로 구현하는 방법에 대해 알아보겠습니다.](swift/TIL220914_TimeStamp.md)
-- [참고: [https://blogchannel.tistory.com/269](https://blogchannel.tistory.com/269)](swift/TIL220915_KindsOfImageFormats.md)
+- [이미지의 형태](swift/TIL220915_KindsOfImageFormats.md)
 - [Special Literal](swift/TIL_220527_specialLiteral.md)
 - [TIL_220529_UILabel CodeProgramming](swift/TIL_220529_UILabelCodeProgramming.md)
 - [# Xcode Assistant가 작동하지 않을때 체크해야할 것](swift/TIL_220531_XcodeAssistant.md)
