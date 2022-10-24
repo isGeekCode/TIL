@@ -1,15 +1,14 @@
-
 # Special Literal
 
 소스코드를 보다보면 #file #line #function 같은 것들을 보게되는데요
 
-특히  fatalError나 assert 함수를 자세히 살펴보면  아래와 같은 구성요소를 볼수가 있어요.
+특히 fatalError나 assert 함수를 자세히 살펴보면 아래와 같은 구성요소를 볼수가 있어요.
 
 ```swift
 func fatalError(_ message: @autoclosure() -> String = String(), file: Stitic String = #file, line: UInt = #line) -> Never
 ```
 
-Literal은 아래처럼 구성돼요 
+Literal은 아래처럼 구성돼요
 
 - 일반 리터럴: “Hello”같은 문자열이나 숫자
 - Array 리터럴: [1,2,3]
