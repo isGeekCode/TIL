@@ -10,8 +10,8 @@ _42 TILs and counting..._
 
 ### 2 most recent TILs
 
-- [CocoaPods이란](swift/TIL220311_cocoaPods&Spm.md) - Mon Oct 24 14:49:55 2022 +0900
-- [# 현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](swift/TIL220523_current DeviceCheck&useCombineReactiveAutoLayout.md) - Mon Oct 24 14:49:55 2022 +0900
+- [롱프레스와 햅틱진동 구현하기](swift/TIL220426_HapticAndLongpress.md) - Mon Oct 24 15:09:38 2022 +0900
+- [TIL_220529_UILabel CodeProgramming](swift/TIL_220529_UILabelCodeProgramming.md) - Mon Oct 24 15:09:38 2022 +0900
 
 ### Categories
 
@@ -58,19 +58,19 @@ _42 TILs and counting..._
 - [TIL220419_CGRect](swift/TIL220419_CGRect.md)
 - [**TIL220420_socket**](swift/TIL220420_socket.md)
 - [공동작업을 위한 Git 버전관리](swift/TIL220422_GitControl.md)
-- [롱프레스와 햅틱진동 구현하기](swift/TIL220426_Haptic AndLongpress.md)
+- [롱프레스와 햅틱진동 구현하기](swift/TIL220426_HapticAndLongpress.md)
 - [오토레이아웃에 대하여](swift/TIL220514_autoLayout.md)
 - [텍스트인코딩에 관하여](swift/TIL220517_aboutTextEncoding.md)
 - [배열안에 담긴 url 유효성 검사](swift/TIL220520_aboutCheckArrayComponent.md)
-- [# 현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](swift/TIL220523_current DeviceCheck&useCombineReactiveAutoLayout.md)
+- [# 현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](swift/TIL220523_currentDeviceCheck&useCombineReactiveAutoLayout.md)
 - [깃으로 SPM 설치하기](swift/TIL220524_HowToUseSPM.md)
-- [🍊 CGColor](swift/TIL220525_aboutUIColorCgColor.md)
+- [CGColor에 대하여](swift/TIL220525_aboutUIColorCgColor.md)
 - [](swift/TIL220528_PragmaMark.md)
-- [# 5월달에 잘한것](swift/TIL220530_MayReview.md)
+- [# 22년 05월 리뷰](swift/TIL220530_MayReview.md)
 - [스위프트로 코딩할 때 가끔 서버와의 통신 등을 이유로 유닉스 타임스탬프를 사용해야 할 때가 있습니다. 그런데 스위프트에서는 기본적으로 유닉스 타임스탬프 값을 얻는 방법을 제공하고 있지 않습니다. 따라서 이번 포스팅에서는 이를 간단하게 익스텐션으로 구현하는 방법에 대해 알아보겠습니다.](swift/TIL220914_TimeStamp.md)
 - [참고: [https://blogchannel.tistory.com/269](https://blogchannel.tistory.com/269)](swift/TIL220915_KindsOfImageFormats.md)
-- [](swift/TIL_220527_specialLiteral.md)
-- [TIL_220529_UILabel CodeProgramming](swift/TIL_220529_UILabel CodeProgramming.md)
+- [Special Literal](swift/TIL_220527_specialLiteral.md)
+- [TIL_220529_UILabel CodeProgramming](swift/TIL_220529_UILabelCodeProgramming.md)
 - [# Xcode Assistant가 작동하지 않을때 체크해야할 것](swift/TIL_220531_XcodeAssistant.md)
 
 [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
