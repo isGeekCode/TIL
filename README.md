@@ -12,8 +12,8 @@ _40 TILs and counting..._
 
 ### 2 most recent TILs
 
-- [주석사용법](Self-Review/TIL220528_PragmaMark.md) - Mon Oct 24 15:24:21 2022 +0900
-- [부모님의 정원](Book/TIL_220601_parentsGarden.md) - Mon Oct 24 15:16:54 2022 +0900
+- [주석사용법](swift/TIL220528_PragmaMark.md) - Mon Oct 24 15:30:06 2022 +0900
+- [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md) - Mon Oct 24 15:30:06 2022 +0900
 
 ### Categories
 
@@ -34,7 +34,7 @@ _40 TILs and counting..._
 - [c언어와 objective-c의 발전](Objc/TIL220421_aboutObjectiveC.md)
 
 ### [Self-Review](#Self-Review)
-- [주석사용법](Self-Review/TIL220528_PragmaMark.md)
+- [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
 
 ### [swift](#swift)
 - [안전하게 배열에 접근하는 방법](swift/TIL220310_contactArraySafely.md)
@@ -66,7 +66,7 @@ _40 TILs and counting..._
 - [# 현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](swift/TIL220523_currentDeviceCheck&useCombineReactiveAutoLayout.md)
 - [깃으로 SPM 설치하기](swift/TIL220524_HowToUseSPM.md)
 - [CGColor에 대하여](swift/TIL220525_aboutUIColorCgColor.md)
-- [# 22년 05월 리뷰](swift/TIL220530_MayReview.md)
+- [주석사용법](swift/TIL220528_PragmaMark.md)
 - [타임스탬프 구현하기](swift/TIL220914_TimeStamp.md)
 - [이미지의 형태](swift/TIL220915_KindsOfImageFormats.md)
 - [Special Literal](swift/TIL_220527_specialLiteral.md)
