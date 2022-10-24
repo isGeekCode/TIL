@@ -14,15 +14,16 @@ jobs:
         with:
           # necessary for github-action-til-autoformat-readme
           fetch-depth: 0
-      - name: TIL Auto-Format README
-        uses: cflynn07/github-action-til-autoformat-readme@1.2.0
+      - name: Autoformat README
+        uses: cflynn07/github-action-til-autoformat-readme@1.1.0
         with:
           description: |
-            개발자로서 성장하는 하루하루를 기록하기위해 만든 공간입니다. 2단계를 통해 학습, 복습하고 있습니다.
-            1단계. GitHub에 공부한것을 메모한다 : GitHub
-            2단계. 블로그에 정리해서 게시한다 : Tistory's Blog
-            포스팅은 이 곳에서  [이곳][1]에서 확인가능합니다.
+            A collection of concrete writeups of small things I learn daily while working
+            and researching. My goal is to work in public. I was inspired to start this
+            repository after reading Simon Wilson's [hacker new post][1], and he was
+            apparently inspired by Josh Branchaud's [TIL collection][2].
           footer: |
-            [1]: https://h1guitar.tistory.com/
-          list_most_recent: 1 # optional, lists most recent TILS below description
+            [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
+            [2]: https://github.com/jbranchaud/til
+          list_most_recent: 2 # optional, lists most recent TILS below description
           date_format: '2020 Jan 15:04' # optional, must align to https://golang.org/pkg/time/#Time.Format
