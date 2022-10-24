@@ -10,8 +10,8 @@ _42 TILs and counting..._
 
 ### 2 most recent TILs
 
+- [부모님의 정원](Book/TIL_220601_parentsGarden.md) - Mon Oct 24 15:16:54 2022 +0900
 - [롱프레스와 햅틱진동 구현하기](swift/TIL220426_HapticAndLongpress.md) - Mon Oct 24 15:09:38 2022 +0900
-- [TIL_220529_UILabel CodeProgramming](swift/TIL_220529_UILabelCodeProgramming.md) - Mon Oct 24 15:09:38 2022 +0900
 
 ### Categories
 
@@ -23,7 +23,7 @@ _42 TILs and counting..._
 
 ### [Book](#Book)
 - [백만장자의 시크릿](Book/220604_BookReview_Millionaire_Secret.md)
-- [부모님의 정원](Book/TIL_220601_부모님의 정원.md)
+- [부모님의 정원](Book/TIL_220601_parentsGarden.md)
 
 ### [ComputerScience](#ComputerScience)
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
