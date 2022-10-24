@@ -10,21 +10,21 @@ _46 TILs and counting..._
 
 ### 2 most recent TILs
 
-- [Test again](Test/Test333.md) - Mon Oct 24 14:07:04 2022 +0900
-- [commit test22](Test/Test.md) - Mon Oct 24 14:02:11 2022 +0900
+- [2진법, 10진법, 16진법](ComputerScience/221021_진법(base  radix).md) - Mon Oct 24 14:14:44 2022 +0900
+- [백만장자의 시크릿](Book/220604_BookReview_Millionaire'sSecret.md) - Mon Oct 24 14:14:44 2022 +0900
 
 ### Categories
 
 - [Book](#Book)
-- [Computer Science](#Computer Science)
+- [ComputerScience](#ComputerScience)
 - [Test](#Test)
 - [swift](#swift)
 
 ### [Book](#Book)
-- [백만장자의 시크릿](Book/TIL 220604_BookReview_Millionaire'sSecret.md)
+- [백만장자의 시크릿](Book/220604_BookReview_Millionaire'sSecret.md)
 
-### [Computer Science](#Computer Science)
-- [2진법, 10진법, 16진법](Computer Science/TIL 221021_진법(base  radix).md)
+### [ComputerScience](#ComputerScience)
+- [2진법, 10진법, 16진법](ComputerScience/221021_진법(base  radix).md)
 
 ### [Test](#Test)
 - [commit test22](Test/Test.md)
