@@ -1,6 +1,5 @@
 # [Gesture Recognizer] Long Press
 
-
 ## 서론
 
 핸드폰에서 지원하는 제스쳐란 그냥 단순하게 화면을 터치할 수도 있고, 길게 누를수도 있고, 두손가락으로 확대할 수 도 있고, 화면도 넘길 수 있다.
@@ -13,9 +12,9 @@
 
 ## **Overview**
 
-`[UIGestureRecognizer](https://developer.apple.com/documentation/uikit/uigesturerecognizer)`의 하위 클래스이다. 
+`[UIGestureRecognizer](https://developer.apple.com/documentation/uikit/uigesturerecognizer)`의 하위 클래스이다.
 
-사용자는 작업이 트리거되기전에 뷰에서 하나이상의 손가락을 누르고 최소시간동안 손가락을 누르고 있어야한다. 
+사용자는 작업이 트리거되기전에 뷰에서 하나이상의 손가락을 누르고 최소시간동안 손가락을 누르고 있어야한다.
 
 그 시간동안 사용자의 손가락이 지정된 거리 이상 움직일 수 없고 실패하게 된다.
 
@@ -39,7 +38,7 @@ UIGestureRecognizer
 
 **스토리보드로 구현**
 
-제스쳐를 사용할 ViewController 에 UILongPressGestureRecognizer를 추가한다. 
+제스쳐를 사용할 ViewController 에 UILongPressGestureRecognizer를 추가한다.
 
 **코드로 구현** → 스토리보드에서 추가 안해도된다.
 
@@ -98,7 +97,7 @@ case failed
 
 드래그 애니메이션에 사용
 
-### location(in:_)
+### location(in:\_)
 
 **Summary**
 
@@ -122,9 +121,9 @@ A UIView object on which the gesture took place. Specify nil to indicate the win
 
 A point in the local coordinate system of view that identifies the location of the gesture. If nil is specified for view, the method returns the gesture location in the window’s base coordinate system
 
-**터치한 위치정보의 좌표를 알려준다. 어느View를 기준으로 할지 정해야한다.** 
+**터치한 위치정보의 좌표를 알려준다. 어느View를 기준으로 할지 정해야한다.**
 
-전체 화면에서의 xy좌표를 알면 좋겠지만, 특정 View 위에서 x,y가 몇인지 계산하기 복잡하니 기준점을 정하면 거기서 부터 계산된 값을 알려준다. 
+전체 화면에서의 xy좌표를 알면 좋겠지만, 특정 View 위에서 x,y가 몇인지 계산하기 복잡하니 기준점을 정하면 거기서 부터 계산된 값을 알려준다.
 
 ```swift
 @objc
@@ -161,15 +160,15 @@ func longTouchAction(_ recognizer: UILongPressGestureRecognizer) {
 
 드래그관련 추가적인 블로그
 
- [https://jiseobkim.github.io/swift/ui/2020/03/25/swift-DragAnimation_Step2_Transform.html](https://jiseobkim.github.io/swift/ui/2020/03/25/swift-DragAnimation_Step2_Transform.html)
+[https://jiseobkim.github.io/swift/ui/2020/03/25/swift-DragAnimation_Step2_Transform.html](https://jiseobkim.github.io/swift/ui/2020/03/25/swift-DragAnimation_Step2_Transform.html)
 
 ### 탭틱과 햅틱
 
 탭틱 : 압력 센서를 통해 압력을 주는 경우 동작되는 원리이며 이를 탭틱 엔진으로 피드백 하는 방식
 
-햅틱 : 압력을 통해 동작되는 원리가 아닌 Long press (S/W로 구현)를 통해 동작되는 원리이며 이를 진동으로 피드백 하는 방식 
+햅틱 : 압력을 통해 동작되는 원리가 아닌 Long press (S/W로 구현)를 통해 동작되는 원리이며 이를 진동으로 피드백 하는 방식
 
-iPhone XR을 시작으로 새로운 모델들이 모두 3D Touch 없이 Haptic Touch만 가능하며 기존 3D Touch를 지원하는 모델도  HapticTouch로 전환됨
+iPhone XR을 시작으로 새로운 모델들이 모두 3D Touch 없이 Haptic Touch만 가능하며 기존 3D Touch를 지원하는 모델도 HapticTouch로 전환됨
 
 iPhone 6s에 3D Touch가 최초 적용 당시 압력 감도를 인식한다하여 삼차원 터치라고 불렸던 경우도 있었다.
 
@@ -204,7 +203,7 @@ class ViewController: UIViewController {
 }
 ```
 
-****Configuring the Gesture Recognizer****
+\***\*Configuring the Gesture Recognizer\*\***
 
 **minimumPressDuration: TimeInterval**
 
@@ -232,7 +231,7 @@ The maximum movement of the fingers on the view before the gesture fails.
 
 다른 제스쳐
 
-****Standard Gestures****
+\***\*Standard Gestures\*\***
 
 [Handling UIKit Gestures](https://developer.apple.com/documentation/uikit/touches_presses_and_gestures/handling_uikit_gestures)
 
@@ -241,7 +240,7 @@ Use gesture recognizers to simplify touch handling and create a consistent user 
 [Coordinating Multiple Gesture Recognizers](https://developer.apple.com/documentation/uikit/touches_presses_and_gestures/coordinating_multiple_gesture_recognizers)
 
 Discover how to use multiple gesture recognizers on the same view.
- 
+
 `[class UIHoverGestureRecognizer](https://developer.apple.com/documentation/uikit/uihovergesturerecognizer)`
 
 A discrete gesture recognizer that interprets pointer movement over a view.
