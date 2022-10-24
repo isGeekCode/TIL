@@ -4,13 +4,13 @@
 오늘 배운 것들을 정리하는 곳 ✨
 
 
-_46 TILs and counting..._
+_45 TILs and counting..._
 
 ---
 
 ### 2 most recent TILs
 
-- [부모님의 정원](Book/TIL_220601_부모님의 정원.md) - Mon Oct 24 14:17:50 2022 +0900
+- [부모님의정원](Book/TIL_220601_부모님의 정원.md) - Mon Oct 24 14:17:50 2022 +0900
 - [2진법,10진법,16진법](ComputerScience/221021_진법(base  radix).md) - Mon Oct 24 14:14:44 2022 +0900
 
 ### Categories
@@ -22,7 +22,7 @@ _46 TILs and counting..._
 
 ### [Book](#Book)
 - [백만장자의 시크릿](Book/220604_BookReview_Millionaire'sSecret.md)
-- [부모님의 정원](Book/TIL_220601_부모님의 정원.md)
+- [부모님의정원](Book/TIL_220601_부모님의 정원.md)
 
 ### [ComputerScience](#ComputerScience)
 - [2진법,10진법,16진법](ComputerScience/221021_진법(base  radix).md)
@@ -34,7 +34,6 @@ _46 TILs and counting..._
 ### [swift](#swift)
 - [안전하게 배열에 접근하는 방법](swift/TIL220310_contact to array safely.md)
 - [CocoaPods이란](swift/TIL220311_cocoaPods & Spm.md)
-- [View의 계층구조](swift/TIL220314_addSubView 2.md)
 - [View의 계층구조](swift/TIL220314_addSubView.md)
 - [View](swift/TIL220315_aboutViewSummary.md)
 - [디자인패턴](swift/TIL220316_aboutMVVM&Init.md)
