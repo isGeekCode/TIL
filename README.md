@@ -4,14 +4,14 @@
 오늘 배운 것들을 정리하는 곳 ✨
 
 
-_45 TILs and counting..._
+_46 TILs and counting..._
 
 ---
 
 ### 2 most recent TILs
 
-- [commit test](Test/Test.md) - Mon Oct 24 14:02:11 2022 +0900
-- [# 2진법, 10진법, 16진법](Computer Science/TIL 221021_진법(base  radix).md) - Mon Oct 24 13:16:51 2022 +0900
+- [Test again](Test/Test333.md) - Mon Oct 24 14:07:04 2022 +0900
+- [commit test22](Test/Test.md) - Mon Oct 24 14:02:11 2022 +0900
 
 ### Categories
 
@@ -27,7 +27,8 @@ _45 TILs and counting..._
 - [# 2진법, 10진법, 16진법](Computer Science/TIL 221021_진법(base  radix).md)
 
 ### [Test](#Test)
-- [commit test](Test/Test.md)
+- [commit test22](Test/Test.md)
+- [Test again](Test/Test333.md)
 
 ### [swift](#swift)
 - [안전하게 배열에 접근하는 방법](swift/TIL220310_contact to array safely.md)
