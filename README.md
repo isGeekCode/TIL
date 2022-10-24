@@ -10,8 +10,8 @@ _46 TILs and counting..._
 
 ### 2 most recent TILs
 
-- [2진법, 10진법, 16진법](ComputerScience/221021_진법(base  radix).md) - Mon Oct 24 14:14:44 2022 +0900
-- [백만장자의 시크릿](Book/220604_BookReview_Millionaire'sSecret.md) - Mon Oct 24 14:14:44 2022 +0900
+- [부모님의 정원](Book/TIL_220601_부모님의 정원.md) - Mon Oct 24 14:17:50 2022 +0900
+- [2진법,10진법,16진법](ComputerScience/221021_진법(base  radix).md) - Mon Oct 24 14:14:44 2022 +0900
 
 ### Categories
 
@@ -22,9 +22,10 @@ _46 TILs and counting..._
 
 ### [Book](#Book)
 - [백만장자의 시크릿](Book/220604_BookReview_Millionaire'sSecret.md)
+- [부모님의 정원](Book/TIL_220601_부모님의 정원.md)
 
 ### [ComputerScience](#ComputerScience)
-- [2진법, 10진법, 16진법](ComputerScience/221021_진법(base  radix).md)
+- [2진법,10진법,16진법](ComputerScience/221021_진법(base  radix).md)
 
 ### [Test](#Test)
 - [commit test22](Test/Test.md)
@@ -72,7 +73,6 @@ _46 TILs and counting..._
 - [](swift/TIL_220527_specialLiteral.md)
 - [TIL_220529_UILabel CodeProgramming](swift/TIL_220529_UILabel CodeProgramming.md)
 - [# Xcode Assistant가 작동하지 않을때 체크해야할 것](swift/TIL_220531_XcodeAssistant.md)
-- [](swift/TIL_220601_부모님의 정원.md)
 
 [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 [2]: https://github.com/jbranchaud/til
