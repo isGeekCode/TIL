@@ -6,14 +6,14 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_40 TILs and counting..._
+_42 TILs and counting..._
 
 ---
 
 ### 2 most recent TILs
 
-- [주석사용법](swift/TIL220528_PragmaMark.md) - Mon Oct 24 15:30:06 2022 +0900
-- [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md) - Mon Oct 24 15:30:06 2022 +0900
+- [hex값을 UIcolor로 변환하는 방법](swift/TIL221025_convertHexToUIColor.md) - Tue Oct 25 15:52:21 2022 +0900
+- [트랜지스터의 원리](ComputerScience/221024_transister.md) - Tue Oct 25 15:52:21 2022 +0900
 
 ### Categories
 
@@ -29,6 +29,7 @@ _40 TILs and counting..._
 
 ### [ComputerScience](#ComputerScience)
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
+- [트랜지스터의 원리](ComputerScience/221024_transister.md)
 
 ### [Objc](#Objc)
 - [c언어와 objective-c의 발전](Objc/TIL220421_aboutObjectiveC.md)
@@ -69,6 +70,7 @@ _40 TILs and counting..._
 - [주석사용법](swift/TIL220528_PragmaMark.md)
 - [타임스탬프 구현하기](swift/TIL220914_TimeStamp.md)
 - [이미지의 형태](swift/TIL220915_KindsOfImageFormats.md)
+- [hex값을 UIcolor로 변환하는 방법](swift/TIL221025_convertHexToUIColor.md)
 - [Special Literal](swift/TIL_220527_specialLiteral.md)
 - [TIL_220529_UILabel CodeProgramming](swift/TIL_220529_UILabelCodeProgramming.md)
 - [# Xcode Assistant가 작동하지 않을때 체크해야할 것](swift/TIL_220531_XcodeAssistant.md)
