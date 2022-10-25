@@ -10,10 +10,13 @@ _42 TILs and counting..._
 
 ---
 
-### 2 most recent TILs
+### 5 most recent TILs
 
 - [hex값을 UIcolor로 변환하는 방법](swift/TIL221025_convertHexToUIColor.md) - Tue Oct 25 15:52:21 2022 +0900
 - [트랜지스터의 원리](ComputerScience/221024_transister.md) - Tue Oct 25 15:52:21 2022 +0900
+- [주석사용법](swift/TIL220528_PragmaMark.md) - Mon Oct 24 15:30:06 2022 +0900
+- [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md) - Mon Oct 24 15:30:06 2022 +0900
+- [부모님의 정원](Book/TIL_220601_parentsGarden.md) - Mon Oct 24 15:16:54 2022 +0900
 
 ### Categories
 
