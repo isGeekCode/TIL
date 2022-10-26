@@ -19,4 +19,4 @@ Xcode 디버깅 중 변수 변화 캐치하기: watch point
 - Increase, Decrease 버튼으로 count 변수값을 바꿀 때마다 break가 걸리는 것을 볼 수 있다.
   ![12](https://user-images.githubusercontent.com/76529148/197956874-6d031e0f-8229-4ff1-add6-767309a87d5b.gif)
 
-![참고링크](https://meetup.toast.com/posts/315) : https://meetup.toast.com/posts/315
+[출처](https://meetup.toast.com/posts/315)
