@@ -12,7 +12,7 @@ _44 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md) - Thu Oct 27 14:59:12 2022 +0900
+- [iOS - Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md) - Thu Oct 27 14:59:12 2022 +0900
 - [Xcode 디버깅으로 변수변화 캐치하기](swift/TIL221026_howToDebugging.md) - Wed Oct 26 16:15:08 2022 +0900
 - [hex값을 UIcolor로 변환하는 방법](swift/TIL221025_convertHexToUIColor.md) - Tue Oct 25 15:52:21 2022 +0900
 - [트랜지스터의 원리](ComputerScience/221024_transister.md) - Tue Oct 25 15:52:21 2022 +0900
@@ -36,7 +36,7 @@ _44 TILs and counting..._
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
 
 ### [Error](#Error)
-- [Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md)
+- [iOS - Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md)
 
 ### [Objc](#Objc)
 - [c언어와 objective-c의 발전](Objc/TIL220421_aboutObjectiveC.md)
