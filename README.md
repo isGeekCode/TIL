@@ -6,22 +6,23 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_43 TILs and counting..._
+_44 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md) - Thu Oct 27 14:59:12 2022 +0900
 - [Xcode 디버깅으로 변수변화 캐치하기](swift/TIL221026_howToDebugging.md) - Wed Oct 26 16:15:08 2022 +0900
 - [hex값을 UIcolor로 변환하는 방법](swift/TIL221025_convertHexToUIColor.md) - Tue Oct 25 15:52:21 2022 +0900
 - [트랜지스터의 원리](ComputerScience/221024_transister.md) - Tue Oct 25 15:52:21 2022 +0900
-- [주석사용법](swift/TIL220528_PragmaMark.md) - Mon Oct 24 15:30:06 2022 +0900
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md) - Mon Oct 24 15:30:06 2022 +0900
 
 ### Categories
 
 - [Book](#Book)
 - [ComputerScience](#ComputerScience)
+- [Error](#Error)
 - [Objc](#Objc)
 - [Self-Review](#Self-Review)
 - [swift](#swift)
@@ -33,6 +34,9 @@ _43 TILs and counting..._
 ### [ComputerScience](#ComputerScience)
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
+
+### [Error](#Error)
+- [Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md)
 
 ### [Objc](#Objc)
 - [c언어와 objective-c의 발전](Objc/TIL220421_aboutObjectiveC.md)
