@@ -52,6 +52,7 @@ extension UIColor {
 
 사용예
 
-```
-    static let testColor = UIColor(hex: "#000000")
+```swift
+static let testColor = UIColor(hex: "#000000")
+static let test2Color = UIColor(hex: "#000000", alpha: 0.5)
 ```
