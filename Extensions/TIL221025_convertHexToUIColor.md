@@ -28,18 +28,30 @@ static let test2Color = UIColor(hex: 0x00D7F1, alpha: 0.5)
 hexString코드를 UIColor로 변환하는 방법
 
 ```swift
-    static func colorWithHex(rgbHex: Int, alpha: CGFloat = 1.0) -> UIColor {
+extension UIColor {
 
-        let red = (CGFloat((rgbHex & 0xFF0000) >> 16)) / 255.0
-        let green = (CGFloat((rgbHex & 0x00FF00) >> 8)) / 255.0
-        let blue = (CGFloat(rgbHex & 0x0000FF)) / 255.0
+    convenience init(hex: String, alpha: CGFloat = 1.0) {
+        var hexFormatted: String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
 
-        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
+        if hexFormatted.hasPrefix("#") {
+            hexFormatted = String(hexFormatted.dropFirst())
+        }
+
+        assert(hexFormatted.count == 6, "Invalid hex code used.")
+
+        var rgbValue: UInt64 = 0
+        Scanner(string: hexFormatted).scanHexInt64(&rgbValue)
+
+        self.init(red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+                  green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+                  blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+                  alpha: alpha)
     }
+}
 ```
 
 사용예
 
 ```
-    static let test3Color = UIColor.colorFromHex(hex: "#751485")
+    static let testColor = UIColor(hex: "#000000")
 ```
