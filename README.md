@@ -6,16 +6,16 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_45 TILs and counting..._
+_46 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md) - Mon Oct 31 11:13:21 2022 +0900
 - [SwiftLint 세팅하기](Library/TIL221028_SwiftLint.md) - Fri Oct 28 16:47:27 2022 +0900
 - [iOS - Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md) - Thu Oct 27 14:59:12 2022 +0900
 - [Xcode 디버깅으로 변수변화 캐치하기](swift/TIL221026_howToDebugging.md) - Wed Oct 26 16:15:08 2022 +0900
-- [hex값을 UIcolor로 변환하는 방법](swift/TIL221025_convertHexToUIColor.md) - Tue Oct 25 15:52:21 2022 +0900
 - [트랜지스터의 원리](ComputerScience/221024_transister.md) - Tue Oct 25 15:52:21 2022 +0900
 
 ### Categories
@@ -23,6 +23,7 @@ _45 TILs and counting..._
 - [Book](#Book)
 - [ComputerScience](#ComputerScience)
 - [Error](#Error)
+- [Extensions](#Extensions)
 - [Library](#Library)
 - [Objc](#Objc)
 - [Self-Review](#Self-Review)
@@ -38,6 +39,9 @@ _45 TILs and counting..._
 
 ### [Error](#Error)
 - [iOS - Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md)
+
+### [Extensions](#Extensions)
+- [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md)
 
 ### [Library](#Library)
 - [SwiftLint 세팅하기](Library/TIL221028_SwiftLint.md)
