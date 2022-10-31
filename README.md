@@ -12,11 +12,11 @@ _46 TILs and counting..._
 
 ### 5 most recent TILs
 
+- [hex값을 UIcolor로 변환하는 방법](Extensions/TIL221025_convertHexToUIColor.md) - Mon Oct 31 13:03:57 2022 +0900
 - [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md) - Mon Oct 31 11:13:21 2022 +0900
 - [SwiftLint 세팅하기](Library/TIL221028_SwiftLint.md) - Fri Oct 28 16:47:27 2022 +0900
 - [iOS - Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md) - Thu Oct 27 14:59:12 2022 +0900
 - [Xcode 디버깅으로 변수변화 캐치하기](swift/TIL221026_howToDebugging.md) - Wed Oct 26 16:15:08 2022 +0900
-- [트랜지스터의 원리](ComputerScience/221024_transister.md) - Tue Oct 25 15:52:21 2022 +0900
 
 ### Categories
 
@@ -42,6 +42,7 @@ _46 TILs and counting..._
 
 ### [Extensions](#Extensions)
 - [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md)
+- [hex값을 UIcolor로 변환하는 방법](Extensions/TIL221025_convertHexToUIColor.md)
 
 ### [Library](#Library)
 - [SwiftLint 세팅하기](Library/TIL221028_SwiftLint.md)
@@ -85,7 +86,6 @@ _46 TILs and counting..._
 - [주석사용법](swift/TIL220528_PragmaMark.md)
 - [타임스탬프 구현하기](swift/TIL220914_TimeStamp.md)
 - [이미지의 형태](swift/TIL220915_KindsOfImageFormats.md)
-- [hex값을 UIcolor로 변환하는 방법](swift/TIL221025_convertHexToUIColor.md)
 - [Xcode 디버깅으로 변수변화 캐치하기](swift/TIL221026_howToDebugging.md)
 - [Special Literal](swift/TIL_220527_specialLiteral.md)
 - [TIL_220529_UILabel CodeProgramming](swift/TIL_220529_UILabelCodeProgramming.md)
