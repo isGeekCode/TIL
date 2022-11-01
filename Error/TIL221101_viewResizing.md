@@ -28,3 +28,5 @@ let webView = WKWebView(frame: webViewFrame, configuration: configuration)
 ```
 
 해당 에러는 설정된 프레임보다 설정된 Constraint의 Inset의 사이즈가 적절하지 않을때 발생한다.
+
+참고링크 : https://stackoverflow.com/questions/73314364/wkwebview-viewportsizing-logs-in-swiftui
