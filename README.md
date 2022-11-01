@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_48 TILs and counting..._
+_49 TILs and counting..._
 
 ---
 
@@ -19,8 +19,8 @@ _48 TILs and counting..._
 - [iOS - Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md) - Thu Oct 27 14:59:12 2022 +0900
 - [Xcode 디버깅으로 변수변화 캐치하기](swift/TIL221026_howToDebugging.md) - Wed Oct 26 16:15:08 2022 +0900
 - [트랜지스터의 원리](ComputerScience/221024_transister.md) - Tue Oct 25 15:52:21 2022 +0900
-- [주석사용법](swift/TIL220528_PragmaMark.md) - Mon Oct 24 15:30:06 2022 +0900
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md) - Mon Oct 24 15:30:06 2022 +0900
+- [주석사용법](swift/TIL220528_PragmaMark.md) - Mon Oct 24 15:30:06 2022 +0900
 - [부모님의 정원](Book/TIL_220601_parentsGarden.md) - Mon Oct 24 15:16:54 2022 +0900
 
 ### Categories
@@ -45,6 +45,7 @@ _48 TILs and counting..._
 ### [Error](#Error)
 - [iOS - Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md)
 - [Presenting view controllers on detached view controllers is discouraged.](Error/TIL221031_Alert_In_UIViewController_Init.md)
+- [maximumViewportInset cannot be larger than frame](Error/TIL221101_viewResizing.md)
 
 ### [Extensions](#Extensions)
 - [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md)
