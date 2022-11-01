@@ -1,7 +1,5 @@
 # SwiftLint 세부설정하기
 
-# SwiftLint 세부설정하기
-
 이전글: [SwiftLint 세팅하기](https://github.com/isGeekCode/TIL/blob/main/Library/TIL221028_SwiftLint.md)
 
 SwiftLint를 brew로 설치해 사용하고 있다.
