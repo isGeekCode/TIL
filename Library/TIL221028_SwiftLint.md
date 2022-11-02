@@ -87,3 +87,21 @@ SwiftLint phase를 'Compile Sources' 단계 직전으로 옮겨 컴파일 전에
 
 오늘처럼 설치를 하면 SwiftLint에서 기본적으로 세팅되어있는 기능만 검사를 하게 된다.
 이 외에 내가 원하는 조건을 위해서는 따로 조건을 입력해야하는데 다른 글에서 다시 소개해야겠다.
+
+++++++++++
+
+다음글: [SwiftLint 세팅하기](https://github.com/isGeekCode/TIL/blob/main/Library/TIL221101_SwiftLintCustomRule.md)
+
+---
+
+### GitHooks
+
+GitHook이란 git을 관리할때 특정 상황들을 트리거로 사용자가 규칙을 정할 수 있게 해주는 Git자체기능 중 하나이다.
+
+**주로 사용되는 훅**
+
+- pre-commit : 커밋시 가장 먼저 실행되는 훅
+- prepare-commit-msg : 커밋 메세지를 생성하고 편집기 실행전에 실행
+- post-merge : Merge가 끝나고 실행되는 훅
+
+SwiftLint의 세팅과 연결해 깃 커밋전에 SwiftLint 검사를 하도록 세팅해서 내가 원하는 컨벤션만 깃에 저장될 수 있도록 설정 할 수 있다.
