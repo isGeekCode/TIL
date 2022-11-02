@@ -83,8 +83,6 @@ SwiftLint phase를 'Compile Sources' 단계 직전으로 옮겨 컴파일 전에
 
 만약 위반 사항(violations)을 자동으로 수정하는 것을 원한다면, 스크립트에 `swiftlint` 대신 `swiftlint --fix && swiftlint`을 적는다. 이는 프로젝트의 수정 가능한 모든 위반 사항들이 수정되고 나머지 위반 사항에 대한 경고가 표시된다는 것을 의미한다.
 
-<img width="518" alt="스크린샷 2022-10-28 오후 4 33 08" src="https://user-images.githubusercontent.com/76529148/198532386-660e8e68-73f5-406c-80b8-58dd7dd34960.png">
-
 오늘처럼 설치를 하면 SwiftLint에서 기본적으로 세팅되어있는 기능만 검사를 하게 된다.
 이 외에 내가 원하는 조건을 위해서는 따로 조건을 입력해야하는데 다른 글에서 다시 소개해야겠다.
 
@@ -94,14 +92,14 @@ SwiftLint phase를 'Compile Sources' 단계 직전으로 옮겨 컴파일 전에
 
 ---
 
+추가로 GitHooks와 함께 사용하면 SwiftLint의 세팅과 연결해 깃 커밋전에 SwiftLint 검사를 하도록 세팅해서 내가 원하는 컨벤션만 깃에 저장될 수 있도록 설정 할 수 있다.
+
 ### GitHooks
 
-GitHook이란 git을 관리할때 특정 상황들을 트리거로 사용자가 규칙을 정할 수 있게 해주는 Git자체기능 중 하나이다.
+GitHooks란 git을 관리할때 특정 상황들을 트리거로 사용자가 규칙을 정할 수 있게 해주는 Git자체기능 중 하나이다.
 
 **주로 사용되는 훅**
 
 - pre-commit : 커밋시 가장 먼저 실행되는 훅
 - prepare-commit-msg : 커밋 메세지를 생성하고 편집기 실행전에 실행
 - post-merge : Merge가 끝나고 실행되는 훅
-
-SwiftLint의 세팅과 연결해 깃 커밋전에 SwiftLint 검사를 하도록 세팅해서 내가 원하는 컨벤션만 깃에 저장될 수 있도록 설정 할 수 있다.
