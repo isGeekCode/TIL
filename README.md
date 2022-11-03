@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_49 TILs and counting..._
+_50 TILs and counting..._
 
 ---
 
@@ -32,6 +32,7 @@ _49 TILs and counting..._
 - [Library](#Library)
 - [Objc](#Objc)
 - [Self-Review](#Self-Review)
+- [iOS](#iOS)
 - [swift](#swift)
 
 ### [Book](#Book)
@@ -60,6 +61,9 @@ _49 TILs and counting..._
 
 ### [Self-Review](#Self-Review)
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
+
+### [iOS](#iOS)
+- [앱 빌드설정 선택하기](iOS/TIL221103_XcodeBuildSet.md)
 
 ### [swift](#swift)
 - [안전하게 배열에 접근하는 방법](swift/TIL220310_contactArraySafely.md)
