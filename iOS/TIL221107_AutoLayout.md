@@ -49,3 +49,57 @@ Constraint : 100
 선택한 요소들을 특정 기준에 맞게 정렬하는 방법도 있다.
 
 각 앵커의 TBLT에 맞게 맞출 수도 있고, Horizontal, Vertical의 중아에 맞게 설정또한 가능하다.
+
+
+## IBDesignable & IBInspectable
+
+### View의 외곽 라인 라운딩처리하기
+
+TestView.layer.cornerRadius = 20
+
+→ 그림자나 외곽선 같은 경우는 Layer에 접근한다.
+
+```swift
+// MARK: Step 1. 클래스 구현
+
+@IBDesignable
+class CustomView: UIView {
+
+	@IBInspectable
+	var cornerRadius: CGFloat = 0 {
+		// 값이 설정될 때 알 수 있음
+		didSet {
+			self.layer.cornerRadius = cornerRadius
+		}
+	}
+}
+
+// MARK: Step 2. 스토리보드에서 원하는 뷰 클래스를 CustomView로 변경
+
+// MARK: Step 3. 적용할 ViewController의 생명주기에 맞게 접근하여 값 부여
+class MainViewController: UIViewController {
+
+	IBOutlet var testVIew: CustomView!
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+
+		testView.cornerRadius = 10
+
+		// CustomView IBInspectable세팅을 안해둔 경우
+		testView.layer.cornerRadius = 10
+	}
+}
+```
+
+아래와 같이 설정을 한다음, 스토리보드에서 클래스를 CustomView로 설정한다면   
+
+ViewDidLoad 에서 layer를 생략하고 바로 접근이 가능하다.
+
+### IBInspectable
+
+@ 어노테이션으로 IBInspectable를 추가하면 새로 didSet세팅한 항복을 스토리보드의 인스펙터패널에서  GUI로 슬롯이 생성된다.
+
+### IBDesignable
+
+@ 어노테이션으로 IBDesignable를 추가하면 IBInspectable로 생성된 슬롯의 값을 바꿀때 바로바로 스토리보드에서 변화를 확인 할 수가 있다.
