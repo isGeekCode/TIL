@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_50 TILs and counting..._
+_51 TILs and counting..._
 
 ---
 
@@ -42,6 +42,7 @@ _50 TILs and counting..._
 - [iOS - Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md)
 - [Presenting view controllers on detached view controllers is discouraged.](Error/TIL221031_Alert_In_UIViewController_Init.md)
 - [maximumViewportInset cannot be larger than frame](Error/TIL221101_viewResizing.md)
+- [# Xcode Assistant가 작동하지 않을때 체크해야할 것](Error/TIL_220531_XcodeAssistant.md)
 
 ### [Extensions](#Extensions)
 - [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md)
@@ -58,13 +59,15 @@ _50 TILs and counting..._
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
 
 ### [iOS](#iOS)
+- [CocoaPods이란](iOS/TIL220311_cocoaPods&Spm.md)
+- [View의 계층구조](iOS/TIL220314_addSubView.md)
+- [View](iOS/TIL220315_aboutViewSummary.md)
 - [앱 빌드설정 선택하기](iOS/TIL221103_XcodeBuildSet.md)
+- [오토레이아웃의 개념](iOS/TIL221107_AutoLayout.md)
+- [TIL_220529_UILabel CodeProgramming](iOS/TIL_220529_UILabelCodeProgramming.md)
 
 ### [swift](#swift)
 - [안전하게 배열에 접근하는 방법](swift/TIL220310_contactArraySafely.md)
-- [CocoaPods이란](swift/TIL220311_cocoaPods&Spm.md)
-- [View의 계층구조](swift/TIL220314_addSubView.md)
-- [View](swift/TIL220315_aboutViewSummary.md)
 - [디자인패턴](swift/TIL220316_aboutMVVM&Init.md)
 - [1. 로컬라이징](swift/TIL220317_aboutLocalize&UIScreen&&UIDevice.md)
 - [[Common Method] 로그 관련 함수](swift/TIL220318_aboutLogMethod.md)
@@ -95,8 +98,6 @@ _50 TILs and counting..._
 - [이미지의 형태](swift/TIL220915_KindsOfImageFormats.md)
 - [Xcode 디버깅으로 변수변화 캐치하기](swift/TIL221026_howToDebugging.md)
 - [Special Literal](swift/TIL_220527_specialLiteral.md)
-- [TIL_220529_UILabel CodeProgramming](swift/TIL_220529_UILabelCodeProgramming.md)
-- [# Xcode Assistant가 작동하지 않을때 체크해야할 것](swift/TIL_220531_XcodeAssistant.md)
 
 [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 [2]: https://github.com/jbranchaud/til
