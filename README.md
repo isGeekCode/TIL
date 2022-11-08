@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_51 TILs and counting..._
+_52 TILs and counting..._
 
 ---
 
@@ -24,6 +24,7 @@ _51 TILs and counting..._
 - [ComputerScience](#ComputerScience)
 - [Error](#Error)
 - [Extensions](#Extensions)
+- [Git](#Git)
 - [Library](#Library)
 - [Objc](#Objc)
 - [Self-Review](#Self-Review)
@@ -47,6 +48,9 @@ _51 TILs and counting..._
 ### [Extensions](#Extensions)
 - [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md)
 - [hex값을 UIcolor로 변환하는 방법](Extensions/TIL221025_convertHexToUIColor.md)
+
+### [Git](#Git)
+- [git ignore 사용하기](Git/TIL221108_how_to_make_ignore.md)
 
 ### [Library](#Library)
 - [SwiftLint 세팅하기](Library/TIL221028_SwiftLint.md)
