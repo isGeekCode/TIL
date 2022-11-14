@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_53 TILs and counting..._
+_54 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [전통적인 MVC구조로 HTTP사용하기](iOS/TIL221114_Traditional_MVC.md) - Mon Nov 14 23:20:31 2022 +0900
 - [Presenting view controllers on detached view controllers is discouraged.](Error/TIL221031_Alert_In_UIViewController_Init.md) - Mon Oct 31 14:19:24 2022 +0900
 - [hex값을 UIcolor로 변환하는 방법](Extensions/TIL221025_convertHexToUIColor.md) - Mon Oct 31 13:03:57 2022 +0900
 - [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md) - Mon Oct 31 11:13:21 2022 +0900
 - [SwiftLint 세팅하기](Library/TIL221028_SwiftLint.md) - Fri Oct 28 16:47:27 2022 +0900
-- [iOS - Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md) - Thu Oct 27 14:59:12 2022 +0900
 
 ### Categories
 
@@ -68,6 +68,7 @@ _53 TILs and counting..._
 - [View](iOS/TIL220315_aboutViewSummary.md)
 - [앱 빌드설정 선택하기](iOS/TIL221103_XcodeBuildSet.md)
 - [오토레이아웃의 개념](iOS/TIL221107_AutoLayout.md)
+- [전통적인 MVC구조로 HTTP사용하기](iOS/TIL221114_Traditional_MVC.md)
 - [TIL_220529_UILabel CodeProgramming](iOS/TIL_220529_UILabelCodeProgramming.md)
 - [UserInterfaceState.xcuserState가 자꾸 뜰 때](iOS/what_is_UserInterfaceState.md)
 
