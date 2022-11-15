@@ -94,3 +94,23 @@ extension MainViewController: WKNavigationDelegate {
     }
 }
 ```
+
+1. `func webView(WKWebView, decidePolicyFor: WKNavigationAction, preferences: WKWebpagePreferences, decisionHandler: (WKNavigationActionPolicy, WKWebpagePreferences) -> Void)`
+
+👉🏻 처음에 Action 으로 요청할때 해당 **navigation request 를 허용하거나 거부**
+
+2. `func webView(WKWebView, didStartProvisionalNavigation: WKNavigation!)`
+
+👉🏻 1번에서 `decisionHandler(.allow)` 로 허가 났으면 **navigation 시작**
+
+3. `func webView(WKWebView, decidePolicyFor: WKNavigationResponse, decisionHandler: (WKNavigationResponsePolicy) -> Void)`
+
+👉🏻 navigation request 에 대한 **응답을 받고 난 후, 이어서 새 콘텐츠로 이동을 허용하거나 거부**
+
+4. `func webView(WKWebView, didCommit: WKNavigation!)`
+
+👉🏻 3번에서 `decisionHandler(.allow)` 로 허가 났으면 **메인 프레임 내용 수신 시작**
+
+5. `func webView(WKWebView, didFinish: WKNavigation!)`
+
+👉🏻 **navigation 완료**
