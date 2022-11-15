@@ -95,9 +95,11 @@ extension MainViewController: WKNavigationDelegate {
 }
 ```
 
+### Navigation Delegate의 흐름
+
 1. `func webView(WKWebView, decidePolicyFor: WKNavigationAction, preferences: WKWebpagePreferences, decisionHandler: (WKNavigationActionPolicy, WKWebpagePreferences) -> Void)`
 
-👉🏻 처음에 Action 으로 요청할때 해당 **navigation request 를 허용하거나 거부**
+   👉🏻 처음에 Action 으로 요청할때 해당 **navigation request 를 허용하거나 거부**
 
 2. `func webView(WKWebView, didStartProvisionalNavigation: WKNavigation!)`
 
