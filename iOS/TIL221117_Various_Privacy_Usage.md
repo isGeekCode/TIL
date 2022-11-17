@@ -19,7 +19,7 @@ UIView를 그리는데 있어 에러가는 경우는 Xcode에서 친절하게 �
 
 info.plist에 내용을 추가 하기만하면 정상작동한다.
 
-<img width="1036" alt="스크린샷 2022-11-17 오후 2 28 29" src="https://user-images.githubusercontent.com/76529148/202377136-15e48782-45de-4d80-b919-d3bc21fe1ee2.png">
+![스크린샷_2022-11-17_오후_1 42 10](https://user-images.githubusercontent.com/76529148/202377586-909a4144-d614-4c8a-b359-4f43f777635b.png)
 
 ### 다양한 접근권한
 
