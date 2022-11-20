@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_58 TILs and counting..._
+_59 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [WKWebView에서 탐색 요청을 수락,로드 및 완료하는 과정에서 트리거되는 메서드들](iOS/TIL221115_WebKit_NavigationDelegate.md) - Fri Nov 18 17:01:07 2022 +0900
+- [CustomShadow 를 만드는 방법](iOS/how_to_make_CustomShadow.md) - Sun Nov 20 13:11:55 2022 +0900
 - [앱과 웹간 소통방법(1)](iOS/TIL221118_AppNWeb.md) - Fri Nov 18 17:01:07 2022 +0900
+- [WKWebView에서 탐색 요청을 수락,로드 및 완료하는 과정에서 트리거되는 메서드들](iOS/TIL221115_WebKit_NavigationDelegate.md) - Fri Nov 18 17:01:07 2022 +0900
 - [Xcode - Launching _AppName_ is taking longer than expected](Error/xcodeError_Launching_is_taking_longer_than.md) - Thu Nov 17 16:37:40 2022 +0900
 - [여러가지 접근권한요청](iOS/TIL221117_Various_Privacy_Usage.md) - Thu Nov 17 15:54:37 2022 +0900
-- [전통적인 MVC구조로 HTTP사용하기](iOS/TIL221114_Traditional_MVC.md) - Mon Nov 14 23:20:31 2022 +0900
 
 ### Categories
 
@@ -74,6 +74,7 @@ _58 TILs and counting..._
 - [여러가지 접근권한요청](iOS/TIL221117_Various_Privacy_Usage.md)
 - [앱과 웹간 소통방법(1)](iOS/TIL221118_AppNWeb.md)
 - [TIL_220529_UILabel CodeProgramming](iOS/TIL_220529_UILabelCodeProgramming.md)
+- [CustomShadow 를 만드는 방법](iOS/how_to_make_CustomShadow.md)
 - [UserInterfaceState.xcuserState가 자꾸 뜰 때](iOS/what_is_UserInterfaceState.md)
 
 ### [swift](#swift)
