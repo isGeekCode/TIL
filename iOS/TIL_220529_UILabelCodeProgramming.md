@@ -1,5 +1,4 @@
-# TIL_220529_UILabel CodeProgramming
-
+# UILabel 코드로 생성하기 - 코드로 UIView요소 생성하기
 ```swift
 
 class MainViewController: UIViewController {
