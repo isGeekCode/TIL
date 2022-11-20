@@ -1,4 +1,4 @@
-# View의 계층구조
+# Layout - View의 계층구조
 
 ### 1. view의 계층구조는 superView, subView, siblingView 로 구성
 
