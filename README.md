@@ -16,7 +16,7 @@ _59 TILs and counting..._
 - [WebView - 앱과 웹간 소통방법(1)](iOS/TIL221118_AppNWeb.md) - Fri Nov 18 17:01:07 2022 +0900
 - [WKWebView에서 탐색 요청을 수락,로드 및 완료하는 과정에서 트리거되는 메서드들](iOS/TIL221115_WebKit_NavigationDelegate.md) - Fri Nov 18 17:01:07 2022 +0900
 - [Xcode - Launching _AppName_ is taking longer than expected](Error/xcodeError_Launching_is_taking_longer_than.md) - Thu Nov 17 16:37:40 2022 +0900
-- [여러가지 접근권한요청](iOS/TIL221117_Various_Privacy_Usage.md) - Thu Nov 17 15:54:37 2022 +0900
+- [Privacy - 여러가지 접근권한요청](iOS/TIL221117_Various_Privacy_Usage.md) - Thu Nov 17 15:54:37 2022 +0900
 
 ### Categories
 
@@ -64,18 +64,18 @@ _59 TILs and counting..._
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
 
 ### [iOS](#iOS)
-- [CocoaPods이란](iOS/TIL220311_cocoaPods&Spm.md)
+- [Library - CocoaPods이란](iOS/TIL220311_cocoaPods&Spm.md)
 - [Layout - View의 계층구조](iOS/TIL220314_addSubView.md)
-- [View](iOS/TIL220315_aboutViewSummary.md)
-- [앱 빌드설정 선택하기](iOS/TIL221103_XcodeBuildSet.md)
+- [UIView](iOS/TIL220315_aboutViewSummary.md)
+- [Xcode - 앱 빌드설정 선택하기](iOS/TIL221103_XcodeBuildSet.md)
 - [오토레이아웃의 개념](iOS/TIL221107_AutoLayout.md)
-- [전통적인 MVC구조로 HTTP사용하기](iOS/TIL221114_Traditional_MVC.md)
+- [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](iOS/TIL221114_Traditional_MVC.md)
 - [WKWebView에서 탐색 요청을 수락,로드 및 완료하는 과정에서 트리거되는 메서드들](iOS/TIL221115_WebKit_NavigationDelegate.md)
-- [여러가지 접근권한요청](iOS/TIL221117_Various_Privacy_Usage.md)
+- [Privacy - 여러가지 접근권한요청](iOS/TIL221117_Various_Privacy_Usage.md)
 - [WebView - 앱과 웹간 소통방법(1)](iOS/TIL221118_AppNWeb.md)
 - [Layout - UILabel 코드로 생성하기 : 코드로 UIView요소 생성하기](iOS/TIL_220529_UILabelCodeProgramming.md)
 - [Layout - CustomShadow를 만드는 방법 (feat.CustomClass)](iOS/how_to_make_CustomShadow.md)
-- [UserInterfaceState.xcuserState가 자꾸 뜰 때](iOS/what_is_UserInterfaceState.md)
+- [XcodeError - UserInterfaceState.xcuserState가 자꾸 뜰 때](iOS/what_is_UserInterfaceState.md)
 
 ### [swift](#swift)
 - [안전하게 배열에 접근하는 방법](swift/TIL220310_contactArraySafely.md)
