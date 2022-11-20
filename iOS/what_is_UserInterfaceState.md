@@ -1,4 +1,4 @@
-UserInterfaceState.xcuserState가 자꾸 뜰 때
+# XcodeError - UserInterfaceState.xcuserState가 자꾸 뜰 때
 
 Xcode작업을 하고 깃에 업로드를 하다보면 UserInterfaceState.xcuserstate 이 파일이 계속 보일 때가 있다.
 
