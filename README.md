@@ -73,7 +73,7 @@ _59 TILs and counting..._
 - [WKWebView에서 탐색 요청을 수락,로드 및 완료하는 과정에서 트리거되는 메서드들](iOS/TIL221115_WebKit_NavigationDelegate.md)
 - [여러가지 접근권한요청](iOS/TIL221117_Various_Privacy_Usage.md)
 - [앱과 웹간 소통방법(1)](iOS/TIL221118_AppNWeb.md)
-- [TIL_220529_UILabel CodeProgramming](iOS/TIL_220529_UILabelCodeProgramming.md)
+- [UILabel 코드로 생성하기 - 코드로 UIView요소 생성하기](iOS/TIL_220529_UILabelCodeProgramming.md)
 - [CustomShadow 를 만드는 방법](iOS/how_to_make_CustomShadow.md)
 - [UserInterfaceState.xcuserState가 자꾸 뜰 때](iOS/what_is_UserInterfaceState.md)
 
