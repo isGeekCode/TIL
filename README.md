@@ -13,7 +13,7 @@ _61 TILs and counting..._
 ### 5 most recent TILs
 
 - [연산프로퍼티 - 프로퍼티(2)](swift/aboutProperty2.md) - Tue Nov 22 17:01:11 2022 +0900
-- [연산프로퍼티 - 프로퍼티(2)](swift/aboutProperty1.md) - Mon Nov 21 22:57:08 2022 +0900
+- [저장프로퍼티 - 프로퍼티(1)](swift/aboutProperty1.md) - Mon Nov 21 22:57:08 2022 +0900
 - [Layout - CustomShadow를 만드는 방법 (feat.CustomClass)](iOS/how_to_make_CustomShadow.md) - Sun Nov 20 13:11:55 2022 +0900
 - [WKWebView에서 탐색 요청을 수락,로드 및 완료하는 과정에서 트리거되는 메서드들](iOS/TIL221115_WebKit_NavigationDelegate.md) - Fri Nov 18 17:01:07 2022 +0900
 - [WebView - 앱과 웹간 소통방법(1)](iOS/TIL221118_AppNWeb.md) - Fri Nov 18 17:01:07 2022 +0900
@@ -109,7 +109,7 @@ _61 TILs and counting..._
 - [이미지의 형태](swift/TIL220915_KindsOfImageFormats.md)
 - [Xcode 디버깅으로 변수변화 캐치하기](swift/TIL221026_howToDebugging.md)
 - [Special Literal](swift/TIL_220527_specialLiteral.md)
-- [연산프로퍼티 - 프로퍼티(2)](swift/aboutProperty1.md)
+- [저장프로퍼티 - 프로퍼티(1)](swift/aboutProperty1.md)
 - [연산프로퍼티 - 프로퍼티(2)](swift/aboutProperty2.md)
 
 [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
