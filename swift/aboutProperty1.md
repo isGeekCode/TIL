@@ -1,7 +1,10 @@
-# 저장프로퍼티 - 프로퍼티(1)
+# 연산프로퍼티 - 프로퍼티(2)
+
 
 - [[참고: 애플문서]](https://docs.swift.org/swift-book/LanguageGuide/Properties.html)
-- [[참고: Zedd’s Blog]](https://zeddios.tistory.com/243)
+- [[참고: Zedd’s Blog]](https://zeddios.tistory.com/245)
+
+
 
 **프로퍼티 시리즈**
 
@@ -10,6 +13,8 @@
 - **[프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](https://www.notion.so/willSet-didSet-2-5-886d6a17a23a47669ae7b9adde0e65dc)**
 - [타입프로퍼티(static) - 프로퍼티(3)](https://www.notion.so/static-3-d0f7852984df40029ba6994dec0eb5a1)
 
+
+
 Property는 저장프로퍼티와 연산프로퍼티, 타입프로퍼티 가 있다.
 
 클래스나 구조체는 이 저장프로퍼티, 연산프로퍼티로 이루어지는 것이다.
@@ -17,6 +22,8 @@ Property는 저장프로퍼티와 연산프로퍼티, 타입프로퍼티 가 있
 연산프로퍼티는 열거형에서도 사용된다. 
 
 이제 설명할 내용은 그중 저장프로퍼티다.
+
+
 
 # Stored Property
 
@@ -27,6 +34,8 @@ Property는 저장프로퍼티와 연산프로퍼티, 타입프로퍼티 가 있
 이때 사용되는 것이 변수와 상수이다. 
 
  `var`로 선언하면 변수가 저장되고, `let`으로 선언하면 상수가 저장된다. 
+ 
+ 
 
 ## 구조체
 
@@ -48,11 +57,15 @@ FixedLengthRange안에 있는  `firstValue`와  `length`가  **저장프로퍼�
 
 초기값은 주지 않은 상태이다. 
 
+
+
 ### 인스턴스 생성
 
 아래코드를 통해 `**var**`로 `FixedLengthRange`의 인스턴스를 하나 만들었다.
 
 `var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)`
+
+
 
 ### 구조체는 간편하게 이니셜이 가능하다.
 
@@ -85,6 +98,8 @@ rangeOfThreeItems.length = 8      // ERROR!!!!
 ```
 
 rangeOfThreeItems 자체가 상수이기 떄문에 length가 변수였어도 에러가 발생한다. 
+
+
 
 ## 클래스
 
@@ -123,6 +138,8 @@ rangeOfThreeItems.firstValue = 6
 
 rangeOfThreeItems.firstValue = 6   // 6
 rangeOfThreeItems.length = 8       // ERROR!!!!
+
+
 ```
 
 ### 클래스의 특징: 참조 (Reference)
@@ -132,6 +149,8 @@ rangeOfThreeItems.length = 8       // ERROR!!!!
 그렇기 때문에 위의 경우에서 rangeOfThreeItems를 let으로 생성했지만 firstValue를 변경가능하다. 
 
 하지만 length는 애초에 let으로 생성된 저장프로퍼티라 변경할 수 없다. 
+
+
 
 # Lazy
 
