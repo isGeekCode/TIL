@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_62 TILs and counting..._
+_63 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [# Date로 두 개의 시간차 구하기](iOS/getTimeInterval.md) - Thu Nov 24 16:07:25 2022 +0900
 - [간단한 MVVM구조 예제](iOS/this_is_BasicMVVM.md) - Wed Nov 23 22:55:21 2022 +0900
 - [연산프로퍼티 - 프로퍼티(2)](swift/aboutProperty2.md) - Tue Nov 22 17:01:11 2022 +0900
 - [저장프로퍼티 - 프로퍼티(1)](swift/aboutProperty1.md) - Mon Nov 21 22:57:08 2022 +0900
 - [Layout - CustomShadow를 만드는 방법 (feat.CustomClass)](iOS/how_to_make_CustomShadow.md) - Sun Nov 20 13:11:55 2022 +0900
-- [WKWebView에서 탐색 요청을 수락,로드 및 완료하는 과정에서 트리거되는 메서드들](iOS/TIL221115_WebKit_NavigationDelegate.md) - Fri Nov 18 17:01:07 2022 +0900
 
 ### Categories
 
@@ -74,6 +74,7 @@ _62 TILs and counting..._
 - [Privacy - 여러가지 접근권한요청](iOS/TIL221117_Various_Privacy_Usage.md)
 - [WebView - 앱과 웹간 소통방법(1)](iOS/TIL221118_AppNWeb.md)
 - [Layout - UILabel 코드로 생성하기 : 코드로 UIView요소 생성하기](iOS/TIL_220529_UILabelCodeProgramming.md)
+- [# Date로 두 개의 시간차 구하기](iOS/getTimeInterval.md)
 - [Layout - CustomShadow를 만드는 방법 (feat.CustomClass)](iOS/how_to_make_CustomShadow.md)
 - [간단한 MVVM구조 예제](iOS/this_is_BasicMVVM.md)
 - [XcodeError - UserInterfaceState.xcuserState가 자꾸 뜰 때](iOS/what_is_UserInterfaceState.md)
