@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_63 TILs and counting..._
+_64 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](swift/aboutProperty205.md) - Fri Nov 25 15:30:23 2022 +0900
 - [Date로 두 개의 시간차 구하기](iOS/getTimeInterval.md) - Thu Nov 24 16:07:25 2022 +0900
 - [간단한 MVVM구조 예제](iOS/this_is_BasicMVVM.md) - Wed Nov 23 22:55:21 2022 +0900
 - [연산프로퍼티 - 프로퍼티(2)](swift/aboutProperty2.md) - Tue Nov 22 17:01:11 2022 +0900
 - [저장프로퍼티 - 프로퍼티(1)](swift/aboutProperty1.md) - Mon Nov 21 22:57:08 2022 +0900
-- [Layout - CustomShadow를 만드는 방법 (feat.CustomClass)](iOS/how_to_make_CustomShadow.md) - Sun Nov 20 13:11:55 2022 +0900
 
 ### Categories
 
@@ -113,6 +113,7 @@ _63 TILs and counting..._
 - [Special Literal](swift/TIL_220527_specialLiteral.md)
 - [저장프로퍼티 - 프로퍼티(1)](swift/aboutProperty1.md)
 - [연산프로퍼티 - 프로퍼티(2)](swift/aboutProperty2.md)
+- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](swift/aboutProperty205.md)
 
 [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 [2]: https://github.com/jbranchaud/til
