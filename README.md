@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_66 TILs and counting..._
+_67 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Closure 톺아보기](swift/swift_firstClassClosureMaster.md) - Sun Nov 27 12:51:05 2022 +0900
 - [1급 객체](swift/swift_firstClassObject.md) - Sun Nov 27 12:43:59 2022 +0900
 - [타입프로퍼티(static) - 프로퍼티(3)](swift/aboutProperty3.md) - Fri Nov 25 15:41:15 2022 +0900
 - [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](swift/aboutProperty205.md) - Fri Nov 25 15:30:23 2022 +0900
 - [Date로 두 개의 시간차 구하기](iOS/getTimeInterval.md) - Thu Nov 24 16:07:25 2022 +0900
-- [간단한 MVVM구조 예제](iOS/this_is_BasicMVVM.md) - Wed Nov 23 22:55:21 2022 +0900
 
 ### Categories
 
@@ -115,6 +115,7 @@ _66 TILs and counting..._
 - [연산프로퍼티 - 프로퍼티(2)](swift/aboutProperty2.md)
 - [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](swift/aboutProperty205.md)
 - [타입프로퍼티(static) - 프로퍼티(3)](swift/aboutProperty3.md)
+- [Closure 톺아보기](swift/swift_firstClassClosureMaster.md)
 - [1급 객체](swift/swift_firstClassObject.md)
 
 [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
