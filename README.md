@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_68 TILs and counting..._
+_69 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md) - Wed Nov 30 11:10:48 2022 +0900
 - [How to Set - 세로모드 고정](iOS/how_to_set_potrait.md) - Mon Nov 28 16:39:32 2022 +0900
 - [Closure 톺아보기](swift/swift_firstClassClosureMaster.md) - Sun Nov 27 12:51:05 2022 +0900
 - [1급 객체](swift/swift_firstClassObject.md) - Sun Nov 27 12:43:59 2022 +0900
 - [타입프로퍼티(static) - 프로퍼티(3)](swift/aboutProperty3.md) - Fri Nov 25 15:41:15 2022 +0900
-- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](swift/aboutProperty205.md) - Fri Nov 25 15:30:23 2022 +0900
 
 ### Categories
 
@@ -78,6 +78,7 @@ _68 TILs and counting..._
 - [Layout - CustomShadow를 만드는 방법 (feat.CustomClass)](iOS/how_to_make_CustomShadow.md)
 - [How to Set - 세로모드 고정](iOS/how_to_set_potrait.md)
 - [간단한 MVVM구조 예제](iOS/this_is_BasicMVVM.md)
+- [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md)
 - [XcodeError - UserInterfaceState.xcuserState가 자꾸 뜰 때](iOS/what_is_UserInterfaceState.md)
 
 ### [swift](#swift)
