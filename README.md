@@ -69,7 +69,7 @@ _72 TILs and counting..._
 ### [iOS](#iOS)
 - [Date - Date로 두 개의 시간차 구하기](iOS/Date_getTimeInterval.md)
 - [Layout - 오토레이아웃의 개념](iOS/Layout_About_AutoLayout.md)
-- [UIView에 대하여](iOS/Layout_About_UIView.md)
+- [Layout - UIView에 대하여](iOS/Layout_About_UIView.md)
 - [Layout - CodeUI: CustomShadow(feat.CustomClass)](iOS/Layout_CodeUI_CustomShadow.md)
 - [Layout - CodeUI: UIView, UILabel](iOS/Layout_CodeUI_UILabel_UIView.md)
 - [Layout - Hierarchy of UIView (feat. addSubView)](iOS/Layout_addSubView.md)
