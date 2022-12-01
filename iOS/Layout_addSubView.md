@@ -1,4 +1,5 @@
-# Layout - View의 계층구조
+# Layout - Hierarchy of UIView
+
 
 ### 1. view의 계층구조는 superView, subView, siblingView 로 구성
 
@@ -7,11 +8,6 @@
 - 동일한 superView 내부에 여러 siblingView가 있다면 먼저 addSubView가 된 순으로 drawing된다.
 - siblingView가 겹쳐질 때는 , 먼저 drawing된 View가 가려진다.
 
- 
-
-![스크린샷 2022-03-14 오후 4.23.58.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/93052722-2b95-43b8-9af6-17751e4b1fd9/스크린샷_2022-03-14_오후_4.23.58.png)
-
-그림출처: KxCoding
 
 ### 2. superView와 subView의 계층 구조에 따른 몇가지 특징
 

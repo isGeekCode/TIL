@@ -1,4 +1,5 @@
-WKWebView에서 탐색 요청을 수락,로드 및 완료하는 과정에서 트리거되는 메서드들
+# WebView - Delegate method
+WebView에서 탐색 요청을 수락,로드 및 완료하는 과정에서 트리거되는 메서드들
 
 ```swift
 import Foundation

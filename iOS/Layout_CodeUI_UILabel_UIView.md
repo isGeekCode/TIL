@@ -1,4 +1,6 @@
-# Layout - UILabel 코드로 생성하기 : 코드로 UIView요소 생성하기
+# Layout - CodeUI: UIView, UILabel
+
+
 ```swift
 
 class MainViewController: UIViewController {
