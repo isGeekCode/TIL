@@ -1,4 +1,4 @@
-# 간단한 MVVM구조 예제
+# Architecture - 간단한 MVVM구조 예제
 
 원문 [https://www.kodeco.com/34-design-patterns-by-tutorials-mvvm](https://www.kodeco.com/34-design-patterns-by-tutorials-mvvm)
 
