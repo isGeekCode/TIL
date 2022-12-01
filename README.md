@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_69 TILs and counting..._
+_70 TILs and counting..._
 
 ---
 
@@ -52,6 +52,7 @@ _69 TILs and counting..._
 
 ### [Git](#Git)
 - [git ignore 사용하기](Git/TIL221108_how_to_make_ignore.md)
+- [Commit Template - 소스트리](Git/how_to_make_SourceTree_Commit_Template.md)
 
 ### [Library](#Library)
 - [SwiftLint 세팅하기](Library/TIL221028_SwiftLint.md)
