@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_70 TILs and counting..._
+_72 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md) - Wed Nov 30 11:10:48 2022 +0900
-- [How to Set - 세로모드 고정](iOS/how_to_set_potrait.md) - Mon Nov 28 16:39:32 2022 +0900
 - [Closure 톺아보기](swift/swift_firstClassClosureMaster.md) - Sun Nov 27 12:51:05 2022 +0900
 - [1급 객체](swift/swift_firstClassObject.md) - Sun Nov 27 12:43:59 2022 +0900
 - [타입프로퍼티(static) - 프로퍼티(3)](swift/aboutProperty3.md) - Fri Nov 25 15:41:15 2022 +0900
+- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](swift/aboutProperty205.md) - Fri Nov 25 15:30:23 2022 +0900
 
 ### Categories
 
@@ -33,6 +33,7 @@ _70 TILs and counting..._
 
 ### [Book](#Book)
 - [백만장자의 시크릿](Book/220604_BookReview_Millionaire_Secret.md)
+- [부의 추월차선](Book/TIL 220606_DailySummary.md)
 - [부모님의 정원](Book/TIL_220601_parentsGarden.md)
 
 ### [ComputerScience](#ComputerScience)
@@ -53,6 +54,7 @@ _70 TILs and counting..._
 ### [Git](#Git)
 - [git ignore 사용하기](Git/TIL221108_how_to_make_ignore.md)
 - [Commit Template - 소스트리](Git/how_to_make_SourceTree_Commit_Template.md)
+- [XcodeError - UserInterfaceState.xcuserState가 자꾸 뜰 때](Git/what_is_UserInterfaceState.md)
 
 ### [Library](#Library)
 - [SwiftLint 세팅하기](Library/TIL221028_SwiftLint.md)
@@ -65,22 +67,22 @@ _70 TILs and counting..._
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
 
 ### [iOS](#iOS)
-- [Library - CocoaPods이란](iOS/TIL220311_cocoaPods&Spm.md)
-- [Layout - View의 계층구조](iOS/TIL220314_addSubView.md)
-- [UIView](iOS/TIL220315_aboutViewSummary.md)
-- [Xcode - 앱 빌드설정 선택하기](iOS/TIL221103_XcodeBuildSet.md)
-- [오토레이아웃의 개념](iOS/TIL221107_AutoLayout.md)
-- [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](iOS/TIL221114_Traditional_MVC.md)
-- [WKWebView에서 탐색 요청을 수락,로드 및 완료하는 과정에서 트리거되는 메서드들](iOS/TIL221115_WebKit_NavigationDelegate.md)
-- [Privacy - 여러가지 접근권한요청](iOS/TIL221117_Various_Privacy_Usage.md)
-- [WebView - 앱과 웹간 소통방법(1)](iOS/TIL221118_AppNWeb.md)
-- [Layout - UILabel 코드로 생성하기 : 코드로 UIView요소 생성하기](iOS/TIL_220529_UILabelCodeProgramming.md)
-- [Date로 두 개의 시간차 구하기](iOS/getTimeInterval.md)
-- [Layout - CustomShadow를 만드는 방법 (feat.CustomClass)](iOS/how_to_make_CustomShadow.md)
-- [How to Set - 세로모드 고정](iOS/how_to_set_potrait.md)
-- [간단한 MVVM구조 예제](iOS/this_is_BasicMVVM.md)
+- [Date - Date로 두 개의 시간차 구하기](iOS/Date_getTimeInterval.md)
+- [Layout - CodeUI: CustomShadow(feat.CustomClass)](iOS/Layout_CodeUI_CustomShadow.md)
+- [Layout - CodeUI: UIView, UILabel](iOS/Layout_CodeUI_UILabel_UIView.md)
+- [Layout - Hierarchy of UIView](iOS/Layout_addSubView.md)
+- [Library - CocoaPods이란](iOS/Library_cocoaPods&Spm.md)
+- [](iOS/Login_Logic.md)
+- [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](iOS/Pattern_Traditional_MVC.md)
+- [간단한 MVVM구조 예제](iOS/Pattern_baic_MVVM.md)
+- [Privacy - 여러가지 접근권한요청](iOS/Privacy_permissions.md)
+- [WebView - Delegate method](iOS/WebView_Delegate.md)
+- [WebView - 앱과 웹간 소통방법(1)](iOS/WebView_commute_with_Web.md)
+- [오토레이아웃의 개념](iOS/about_AutoLayout.md)
+- [UIView에 대하여](iOS/about_UIView.md)
+- [Xcode - 앱 빌드설정 선택하기](iOS/set_XcodeBuildSet.md)
+- [How to Set - 세로모드 고정](iOS/set_potrait.md)
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md)
-- [XcodeError - UserInterfaceState.xcuserState가 자꾸 뜰 때](iOS/what_is_UserInterfaceState.md)
 
 ### [swift](#swift)
 - [안전하게 배열에 접근하는 방법](swift/TIL220310_contactArraySafely.md)
