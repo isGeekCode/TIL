@@ -1,4 +1,4 @@
-# Layout - Hierarchy of UIView
+# Layout - Hierarchy of UIView (feat. addSubView)
 
 
 ### 1. view의 계층구조는 superView, subView, siblingView 로 구성
