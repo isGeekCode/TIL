@@ -33,7 +33,7 @@ _72 TILs and counting..._
 
 ### [Book](#Book)
 - [백만장자의 시크릿](Book/220604_BookReview_Millionaire_Secret.md)
-- [부의 추월차선](Book/TIL 220606_DailySummary.md)
+- [# 부의 추월차선: The Millionaire Fastlane](Book/Economics_The Millionaire Fastlane.md)
 - [부모님의 정원](Book/TIL_220601_parentsGarden.md)
 
 ### [ComputerScience](#ComputerScience)
