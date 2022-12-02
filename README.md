@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_72 TILs and counting..._
+_73 TILs and counting..._
 
 ---
 
@@ -33,7 +33,7 @@ _72 TILs and counting..._
 
 ### [Book](#Book)
 - [백만장자의 시크릿](Book/220604_BookReview_Millionaire_Secret.md)
-- [# 부의 추월차선: The Millionaire Fastlane](Book/Economics_TheMillionaireFastlane.md)
+- [부의 추월차선: The Millionaire Fastlane](Book/Economics_TheMillionaireFastlane.md)
 - [부모님의 정원](Book/TIL_220601_parentsGarden.md)
 
 ### [ComputerScience](#ComputerScience)
@@ -73,7 +73,7 @@ _72 TILs and counting..._
 - [Layout - CodeUI: CustomShadow(feat.CustomClass)](iOS/Layout_CodeUI_CustomShadow.md)
 - [Layout - CodeUI: UIView, UILabel](iOS/Layout_CodeUI_UILabel_UIView.md)
 - [Layout - Hierarchy of UIView (feat. addSubView)](iOS/Layout_addSubView.md)
-- [Library - CocoaPods이란](iOS/Library_cocoaPods&Spm.md)
+- [Library - CocoaPods이란](iOS/Library_cocoaPods&Spm 2.md)
 - [Login Logic (feat. UserDefault)](iOS/Login_Logic.md)
 - [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](iOS/Pattern_Traditional_MVC.md)
 - [Architecture - 간단한 MVVM구조 예제](iOS/Pattern_baic_MVVM.md)
@@ -82,6 +82,7 @@ _72 TILs and counting..._
 - [Privacy - 여러가지 접근권한요청](iOS/Z_Privacy_permissions.md)
 - [Xcode - 앱 빌드설정 선택하기](iOS/Z_set_XcodeBuildSet.md)
 - [How to Set - 세로모드 고정](iOS/Z_set_potrait.md)
+- [UICollectionViewCell에서 isSelected 설정하기](iOS/ios_CollectionViewCell.md)
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md)
 
 ### [swift](#swift)
