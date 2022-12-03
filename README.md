@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_73 TILs and counting..._
+_74 TILs and counting..._
 
 ---
 
@@ -68,6 +68,7 @@ _73 TILs and counting..._
 
 ### [iOS](#iOS)
 - [Date - Date로 두 개의 시간차 구하기](iOS/Date_getTimeInterval.md)
+- [Info - App Version 가져오기](iOS/Info_appVersion.md)
 - [Layout - 오토레이아웃의 개념](iOS/Layout_About_AutoLayout.md)
 - [Layout - UIView에 대하여](iOS/Layout_About_UIView.md)
 - [Layout - CodeUI: CustomShadow(feat.CustomClass)](iOS/Layout_CodeUI_CustomShadow.md)
