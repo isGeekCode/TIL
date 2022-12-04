@@ -16,29 +16,23 @@ AccessoryType
 - checkmark
 - detailButton
 
-`[case none](https://developer.apple.com/documentation/uikit/uitableviewcell/accessorytype/none)`
+간단히 설명해보자면 아래와 같다.
 
-액세서리 보기가 없습니다.
+- case none
+  - 액세서리가 따로 없는 기본값
+- case disclosureIndicator
+  - 새 콘텐츠를 표시하기 위한 셰브론 모양의 컨트롤입니다.
+- case detailDisclosureButton
+  - 정보 버튼 및 공개(쉐브론) 컨트롤.
+- case checkmark
+  - 체크마크 이미지.
+- case detailButton
+  - 정보 버튼
+  - enum값을 각각 테이블뷰에 설정해보면 아래와 같이 나타난다.
 
-`[case disclosureIndicator](https://developer.apple.com/documentation/uikit/uitableviewcell/accessorytype/disclosureindicator)`
-
-새 콘텐츠를 표시하기 위한 셰브론 모양의 컨트롤입니다.
-
-`[case detailDisclosureButton](https://developer.apple.com/documentation/uikit/uitableviewcell/accessorytype/detaildisclosurebutton)`
-
-정보 버튼 및 공개(쉐브론) 컨트롤.
-
-`[case checkmark](https://developer.apple.com/documentation/uikit/uitableviewcell/accessorytype/checkmark)`
-
-체크마크 이미지.
-
-`[case detailButton](https://developer.apple.com/documentation/uikit/uitableviewcell/accessorytype/detailbutton)`
-
-정보 버튼.
-
-enum값을 각각 테이블뷰에 설정해보면 아래와 같이 나타난다.
 
 <img width="251" alt="스크린샷 2022-12-04 오전 9 36 23" src="https://user-images.githubusercontent.com/76529148/205469300-0b4eb7f8-c55a-4378-a2f8-06f2c46386cb.png">
+
 
 ### DisclouserIndicator
 
@@ -48,11 +42,10 @@ enum값을 각각 테이블뷰에 설정해보면 아래와 같이 나타난다.
 
 문서에 따르면 
 
-Accessory View 안에서의 터치 이벤트에 대한 응답으로 델리게이트 함수인`tableView(_:accessoryButtonTappedForRowWith[:)](https://developer.apple.com/documentation/uikit/uitableviewdelegate/1614996-tableview)`  을 호출하지 않는다. 
+Accessory View 안에서의 터치 이벤트에 대한 응답으로 델리게이트 함수인`tableView(_:accessoryButtonTappedForRowWith)`  을 호출하지 않는다. 
 
  
-
-라는 말은 나머지는 저기서 조작하라는 말인가..
+라고 써있는데 이 말은 나머지는 저기서 조작하라는 말인가..
 
 ### Detail Disclousure Button
 
@@ -68,7 +61,7 @@ detail 버튼에 대한 응답을 구현하려면 `tableView(_:accessoryButtonTa
 
 체크마크를 숨기려면 none과 checkMark사이에 왔다갔다할 수 있도록
 
-`[tableView(_:](https://developer.apple.com/documentation/uikit/uitableviewdelegate/1614877-tableview)didSelectRowAt[:)](https://developer.apple.com/documentation/uikit/uitableviewdelegate/1614877-tableview)` 함수를 구현하면 된다.
+tableView(didSelectRowAt)` 함수에 구현하면 된다.
 
 ### Detail Button
 
