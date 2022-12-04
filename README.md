@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_74 TILs and counting..._
+_75 TILs and counting..._
 
 ---
 
@@ -72,12 +72,13 @@ _74 TILs and counting..._
 - [Layout - 오토레이아웃의 개념](iOS/Layout_About_AutoLayout.md)
 - [Layout - UIView에 대하여](iOS/Layout_About_UIView.md)
 - [Layout - CodeUI: CustomShadow(feat.CustomClass)](iOS/Layout_CodeUI_CustomShadow.md)
-- [Layout - CodeUI: UIView, UILabel](iOS/Layout_CodeUI_UILabel_UIView.md)
+- [Layout - CodeUI: UIView, UILabel](iOS/Layout_CodeUI_UILabel_UIView 2.md)
 - [Layout - Hierarchy of UIView (feat. addSubView)](iOS/Layout_addSubView.md)
 - [Library - CocoaPods이란](iOS/Library_cocoaPods&Spm 2.md)
 - [Login Logic (feat. UserDefault)](iOS/Login_Logic.md)
 - [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](iOS/Pattern_Traditional_MVC.md)
 - [Architecture - 간단한 MVVM구조 예제](iOS/Pattern_baic_MVVM.md)
+- [TableViewCell - accessoryType](iOS/TableView_Delegate_AccessoryType.md)
 - [WebView - Delegate method](iOS/WebView_Delegate.md)
 - [WebView - 앱과 웹간 소통방법(1)](iOS/WebView_commute_with_Web.md)
 - [Privacy - 여러가지 접근권한요청](iOS/Z_Privacy_permissions.md)
