@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_76 TILs and counting..._
+_77 TILs and counting..._
 
 ---
 
@@ -88,6 +88,7 @@ _76 TILs and counting..._
 - [TableViewCell - accessoryType](iOS/TableView_Delegate_AccessoryType.md)
 - [WebView - Delegate method](iOS/WebView_Delegate.md)
 - [WebView - 앱과 웹간 소통방법(1)](iOS/WebView_commute_with_Web.md)
+- [PC에서 사용중인 내부망을 Iphone으로 연결시키는 방법](iOS/Webview_Zhow_to_ connect_intranet.md)
 - [UICollectionViewCell에서 isSelected 설정하기](iOS/ios_CollectionViewCell.md)
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md)
 
