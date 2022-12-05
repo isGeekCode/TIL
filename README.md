@@ -60,9 +60,9 @@ _79 TILs and counting..._
 - [XcodeError - UserInterfaceState.xcuserState가 자꾸 뜰 때](Git/what_is_UserInterfaceState.md)
 
 ### [IOS-Architecture](#IOS-Architecture)
+- [디자인패턴이란](IOS-Architecture/About_Design_MVX_Init.md)
 - [Architecture - IOS MVC의 한계](IOS-Architecture/MVC_Massive.md)
 - [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](IOS-Architecture/MVC_traditional.md)
-- [디자인패턴](IOS-Architecture/MVVM&Init.md)
 - [Architecture - 간단한 MVVM구조 예제](IOS-Architecture/MVVM_simpleExample.md)
 - [Architecture - 비즈니스 로직이란](IOS-Architecture/aboutBusinessLogic.md)
 
