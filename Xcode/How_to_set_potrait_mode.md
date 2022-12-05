@@ -1,4 +1,4 @@
-# How to Set - 세로모드 고정
+# How to Set - 세로모드 고정 (Potrait)
 
 ## Step1.
 

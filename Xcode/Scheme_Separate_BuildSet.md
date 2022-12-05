@@ -1,4 +1,4 @@
-# Xcode - Debug / Release 빌드 분리하기
+# Scheme - Debug / Release 빌드 분리하기
 
 앱을 운영버전과 개발버전 혹은 QA버전으로 나누어 빌드하는 경우가 있다. 이를 위해 타겟을 여러개 두는 경우가 있지만, 운영과 개발만 사용하는 경우 간단하게 Edit Scheme를 통해 설정할 수 가 있다.
 
