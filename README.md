@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_79 TILs and counting..._
+_78 TILs and counting..._
 
 ---
 
@@ -59,7 +59,7 @@ _79 TILs and counting..._
 
 ### [Library](#Library)
 - [About Swift PackageManager](Library/About_SPM.md)
-- [About CocoaPods이란](Library/About_cocoaPods.md)
+- [About CocoaPods](Library/About_cocoaPods.md)
 - [Convention - SwiftLint 세팅하기](Library/Convention_SwiftLint.md)
 - [Convention - SwiftLint 세부설정하기](Library/Convention_SwiftLintCustomRule.md)
 - [Push - 핑거푸시](Library/Push_fingerPush.md)
@@ -83,7 +83,6 @@ _79 TILs and counting..._
 - [Info - App Version 가져오기](iOS/Info_appVersion.md)
 - [Layout - 오토레이아웃의 개념](iOS/Layout_About_AutoLayout.md)
 - [Layout - UIView에 대하여](iOS/Layout_About_UIView.md)
-- [오토레이아웃에 대하여](iOS/Layout_AutoLayout.md)
 - [Layout - CodeUI: CustomShadow(feat.CustomClass)](iOS/Layout_CodeUI_CustomShadow.md)
 - [Layout - CodeUI: UIView, UILabel](iOS/Layout_CodeUI_UILabel_UIView.md)
 - [Layout - Hierarchy of UIView (feat. addSubView)](iOS/Layout_addSubView.md)
@@ -100,14 +99,14 @@ _79 TILs and counting..._
 - [CGPoint, CGSize, CGRect](iOS/UIKit_CGPoint_CGSize_CGRect.md)
 - [UIDevice](iOS/UIKit_UIDevice.md)
 - [CGColor에 대하여](iOS/UIKit_aboutUIColorCgColor.md)
-- [App에서 웹페이지를 여는 방법](iOS/WebView.md)
 - [WebView - PC에서 사용중인 내부망을 Iphone으로 연결시키는 방법](iOS/WebViewZ_intranet.md)
 - [WebView - WKWebView에서 보내는 JS를 캐치하는 방법](iOS/WebView_CatchingJS.md)
 - [WKWebView에서 자주 사용하는 메서드들](iOS/WebView_Delegage.md)
 - [WebView - Delegate method](iOS/WebView_Delegate.md)
-- [URLSession 사용하기](iOS/WebView_aboutURLSession.md)
-- [WebView - 앱과 웹간 소통방법(1)](iOS/WebView_commute_with_Web.md)
-- [UICollectionViewCell에서 isSelected 설정하기](iOS/ios_CollectionViewCell.md)
+- [WebView - URLSession 사용하기](iOS/WebView_aboutURLSession.md)
+- [WebView - App에서 웹페이지를 여는 3가지 방법](iOS/WebView_basic_use.md)
+- [WebView - Safari로 웹뷰 디버깅하는 방법](iOS/WebView_commute_with_Web.md)
+- [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS/ios_CollectionViewCell.md)
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md)
 
 ### [swift](#swift)
