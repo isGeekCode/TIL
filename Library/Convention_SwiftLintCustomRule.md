@@ -1,4 +1,4 @@
-# SwiftLint 세부설정하기
+# Convention - SwiftLint 세부설정하기
 
 이전글: [SwiftLint 세팅하기](https://github.com/isGeekCode/TIL/blob/main/Library/TIL221028_SwiftLint.md)
 
