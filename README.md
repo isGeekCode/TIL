@@ -68,10 +68,10 @@ _76 TILs and counting..._
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
 
 ### [Xcode](#Xcode)
-- [Privacy - 여러가지 접근권한요청](Xcode/How_to_set_PrivercyPermission.md)
-- [Xcode - Debug / Release 빌드 분리하기](Xcode/How_to_set_Separate_BuildSet.md)
-- [Xcode doesn’t support iOS DeviceSupport](Xcode/How_to_set_iOSDeviceSupport.md)
-- [How to Set - 세로모드 고정](Xcode/How_to_set_potrait_mode.md)
+- [How to Set - 세로모드 고정 (Potrait)](Xcode/How_to_set_potrait_mode.md)
+- [Privacy - 여러가지 접근권한요청](Xcode/PrivercyPermission_various.md)
+- [Scheme - Debug / Release 빌드 분리하기](Xcode/Scheme_Separate_BuildSet.md)
+- [iOS DeviceSupport - 테스트 디바이스 iOS 수동 업데이트](Xcode/iOSDeviceSupport_Manually_update.md)
 
 ### [iOS](#iOS)
 - [Date - Date로 두 개의 시간차 구하기](iOS/Date_getTimeInterval.md)
