@@ -7,10 +7,10 @@
 
 **프로퍼티 시리즈**
 
-- [저장프로퍼티(feat.클래스와 구조체) - 프로퍼티(1)](https://www.notion.so/feat-1-f7bdd1442cc6485d81743f181ad6f16e)
-- [연산프로퍼티(Getter/Setter) - 프로퍼티(2)](https://www.notion.so/Getter-Setter-2-f89ddb3673d54156b9cca5d1bd2ec65c)
+- [저장프로퍼티(feat.클래스와 구조체) - 프로퍼티(1)](https://github.com/isGeekCode/TIL/blob/main/swift/aboutProperty1.md)
+- [연산프로퍼티(Getter/Setter) - 프로퍼티(2)](https://github.com/isGeekCode/TIL/blob/main/swift/aboutProperty2.md)
 - 🍊 **프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)**
-- [타입프로퍼티(static) - 프로퍼티(3)](https://www.notion.so/static-3-d0f7852984df40029ba6994dec0eb5a1)
+- [타입프로퍼티(static) - 프로퍼티(3)](https://github.com/isGeekCode/TIL/blob/main/swift/aboutProperty3.md)
 
 
 

@@ -1,4 +1,4 @@
-# UICollectionViewCell에서 isSelected 설정하기
+# UICollectionView - 프로퍼티 옵저버 didSet과 isSelected
 
 UICollectionViewCell은 isSelected라는 Bool값이 있어
 
