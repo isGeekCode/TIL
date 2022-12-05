@@ -1,22 +1,5 @@
-# TIL220323_aboutURLSession
+# URLSession 사용하기
 
-Category: isConcept
-Langu: Swift
-Tag: API, JSON
-isGrammer: No
-isOK: No
-isPosted: No
-isRad: No
-isRead: No
-isSecret: No
-공부날짜: 2022년 3월 4일
-생성일시: 2022년 2월 25일 오후 3:59
-선행지식: Codable, EscapeClosure, HTTP, OptionalBinding, URLSession
-최종편집: 2022년 3월 23일 오후 4:56
-추가개념?: No
-환경: Xcode
-
-alamofire이용
 
 참고 [https://furang-note.tistory.com/3](https://furang-note.tistory.com/33)
 

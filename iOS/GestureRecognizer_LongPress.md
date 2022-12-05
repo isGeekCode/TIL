@@ -1,4 +1,4 @@
-# [Gesture Recognizer] Long Press
+# Gesture Recognizer - Long Press
 
 ## 서론
 

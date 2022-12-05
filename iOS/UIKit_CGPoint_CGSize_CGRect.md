@@ -1,6 +1,4 @@
-CGRect에 대하여
-
-# TIL220419_CGRect
+# CGPoint, CGSize, CGRect
 
 **참고사이트**
 
@@ -62,7 +60,7 @@ CGSize라는 구조체를 살펴보면
 let size: CGSize = .init(width: 100, height: 100)
 ```
 
-### 2. CGSize와 CGRect를 가지고 있는 CGRect
+### 2. CGSize와 CGPoint를 가지고 있는 CGRect
 
 실제 UIView를 init할때에는 frame의 파라미터로 CGRect가 들어간다.
 

@@ -1,4 +1,4 @@
-# WKWebView에서 보내는 JS를 캐치하는 방법
+# WebView - WKWebView에서 보내는 JS를 캐치하는 방법
 
 웹에서 보내는 javascript를 캐치하려면 미리 등록을 해야한다.
 
