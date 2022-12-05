@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_77 TILs and counting..._
+_78 TILs and counting..._
 
 ---
 
@@ -86,6 +86,7 @@ _77 TILs and counting..._
 - [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](iOS/Pattern_Traditional_MVC.md)
 - [Architecture - 간단한 MVVM구조 예제](iOS/Pattern_baic_MVVM.md)
 - [TableViewCell - accessoryType](iOS/TableView_Delegate_AccessoryType.md)
+- [PC에서 사용중인 내부망을 Iphone으로 연결시키는 방법](iOS/WebViewZ_intranet.md)
 - [WebView - Delegate method](iOS/WebView_Delegate.md)
 - [WebView - 앱과 웹간 소통방법(1)](iOS/WebView_commute_with_Web.md)
 - [PC에서 사용중인 내부망을 Iphone으로 연결시키는 방법](iOS/Webview_Zhow_to_ connect_intranet.md)
