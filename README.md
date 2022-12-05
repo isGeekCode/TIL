@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_78 TILs and counting..._
+_79 TILs and counting..._
 
 ---
 
@@ -25,6 +25,7 @@ _78 TILs and counting..._
 - [Error](#Error)
 - [Extensions](#Extensions)
 - [Git](#Git)
+- [IOS-Architecture](#IOS-Architecture)
 - [Library](#Library)
 - [Objc](#Objc)
 - [Self-Review](#Self-Review)
@@ -53,9 +54,17 @@ _78 TILs and counting..._
 - [hex값을 UIcolor로 변환하는 방법](Extensions/TIL221025_convertHexToUIColor.md)
 
 ### [Git](#Git)
+- [공동작업을 위한 Git 버전관리](Git/TIL220422_GitControl.md)
 - [git ignore 사용하기](Git/TIL221108_how_to_make_ignore.md)
 - [Commit Template - 소스트리](Git/how_to_make_SourceTree_Commit_Template.md)
 - [XcodeError - UserInterfaceState.xcuserState가 자꾸 뜰 때](Git/what_is_UserInterfaceState.md)
+
+### [IOS-Architecture](#IOS-Architecture)
+- [Architecture - IOS MVC의 한계](IOS-Architecture/MVC_Massive.md)
+- [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](IOS-Architecture/MVC_traditional.md)
+- [디자인패턴](IOS-Architecture/MVVM&Init.md)
+- [Architecture - 간단한 MVVM구조 예제](IOS-Architecture/MVVM_simpleExample.md)
+- [Architecture - 비즈니스 로직이란](IOS-Architecture/aboutBusinessLogic.md)
 
 ### [Library](#Library)
 - [About Swift PackageManager](Library/About_SPM.md)
@@ -78,6 +87,7 @@ _78 TILs and counting..._
 
 ### [iOS](#iOS)
 - [userDefault](iOS/AboutUserDefualt.md)
+- [Container ViewController Type - Navigation Controller](iOS/Container_ViewController_NavigationController.md)
 - [Date - Date로 두 개의 시간차 구하기](iOS/Date_getTimeInterval.md)
 - [Gesture Recognizer - Long Press](iOS/GestureRecognizer_LongPress.md)
 - [Info - App Version 가져오기](iOS/Info_appVersion.md)
@@ -89,8 +99,6 @@ _78 TILs and counting..._
 - [현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](iOS/Layout_currentDeviceCheck&useCombineReactiveAutoLayout.md)
 - [로컬라이징](iOS/Localization.md)
 - [Login Logic (feat. UserDefault)](iOS/Login_Logic.md)
-- [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](iOS/Pattern_Traditional_MVC.md)
-- [Architecture - 간단한 MVVM구조 예제](iOS/Pattern_baic_MVVM.md)
 - [소켓이란](iOS/TIL220420_socket.md)
 - [타임스탬프 구현하기](iOS/TIL220914_TimeStamp.md)
 - [TableViewCell - accessoryType](iOS/TableView_Delegate_AccessoryType.md)
@@ -110,15 +118,11 @@ _78 TILs and counting..._
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md)
 
 ### [swift](#swift)
+- [Do - Try - Catch](swift/DoTryCatch.md)
 - [안전하게 배열에 접근하는 방법](swift/TIL220310_contactArraySafely.md)
-- [디자인패턴](swift/TIL220316_aboutMVVM&Init.md)
 - [[Common Method] 로그 관련 함수](swift/TIL220318_aboutLogMethod.md)
-- [비즈니스 로직](swift/TIL220321_aboutBusinessLogic.md)
-- [MVC의 한계](swift/TIL220322_AboutMVC_NavigationController.md)
-- [TIL220324_DoTryCatch](swift/TIL220324_AboutDoTryCatch.md)
 - [# 여러개의 Action을 한번에 추가하기](swift/TIL220404_forEach.md)
 - [mutating 과 구조체](swift/TIL220413_mutating.md)
-- [공동작업을 위한 Git 버전관리](swift/TIL220422_GitControl.md)
 - [텍스트인코딩에 관하여](swift/TIL220517_aboutTextEncoding.md)
 - [배열안에 담긴 url 유효성 검사](swift/TIL220520_aboutCheckArrayComponent.md)
 - [주석사용법](swift/TIL220528_PragmaMark.md)
