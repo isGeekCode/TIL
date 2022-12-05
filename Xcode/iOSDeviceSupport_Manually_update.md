@@ -32,7 +32,7 @@ Finder를 열고 좌측상단 패널 - “이동”탭에서 “폴더로 이동
 
 이곳에서 아래 경로를 입력한다.
 
-`/Users/kanghyeonjung/Library/Developer/Xcode`
+`~/Library/Developer/Xcode`
 
 Xcode폴더 안에서 iOS DeviceSupport폴더에 들어간다.
 
@@ -46,7 +46,7 @@ Xcode폴더 안에서 iOS DeviceSupport폴더에 들어간다.
 
 ### Step 3.
 
-Xcode재시작
+Xcode 재시작
 
 ### Step 4.
 
