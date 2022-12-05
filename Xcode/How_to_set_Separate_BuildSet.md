@@ -1,4 +1,4 @@
-# Xcode - 앱 빌드설정 선택하기
+# Xcode - Debug / Release 빌드 분리하기
 
 앱을 운영버전과 개발버전 혹은 QA버전으로 나누어 빌드하는 경우가 있다. 이를 위해 타겟을 여러개 두는 경우가 있지만, 운영과 개발만 사용하는 경우 간단하게 Edit Scheme를 통해 설정할 수 가 있다.
 
@@ -20,3 +20,15 @@ Xcode의 중앙 상단 에 앱의 아이콘부분 - Edit Schem 를 누른다.
 각 동작을 누르면 해당 동작의 빌드 설정을 선택가능하다.
 
 <img width="564" alt="스크린샷 2022-11-03 오후 2 25 19" src="https://user-images.githubusercontent.com/76529148/199670192-7132aa91-bddb-4fbd-a09d-34dbb61c841e.png">
+
+만약 Debug / Release 두가지정도로 분리한다면 이것만 조작하여 
+사용가능하다. 또한 해당 빌드로 코드를 전처리 시키려면 아래와 같이 사용가능하다.
+
+
+```
+#if DEBUG
+        // Code description for Debug
+#else
+        // Code description for Release
+#endif
+```
