@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_75 TILs and counting..._
+_76 TILs and counting..._
 
 ---
 
@@ -28,6 +28,7 @@ _75 TILs and counting..._
 - [Library](#Library)
 - [Objc](#Objc)
 - [Self-Review](#Self-Review)
+- [Xcode](#Xcode)
 - [iOS](#iOS)
 - [swift](#swift)
 
@@ -66,6 +67,12 @@ _75 TILs and counting..._
 ### [Self-Review](#Self-Review)
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
 
+### [Xcode](#Xcode)
+- [Privacy - 여러가지 접근권한요청](Xcode/How_to_set_PrivercyPermission.md)
+- [Xcode - Debug / Release 빌드 분리하기](Xcode/How_to_set_Separate_BuildSet.md)
+- [Xcode doesn’t support iOS DeviceSupport](Xcode/How_to_set_iOSDeviceSupport.md)
+- [How to Set - 세로모드 고정](Xcode/How_to_set_potrait_mode.md)
+
 ### [iOS](#iOS)
 - [Date - Date로 두 개의 시간차 구하기](iOS/Date_getTimeInterval.md)
 - [Info - App Version 가져오기](iOS/Info_appVersion.md)
@@ -81,9 +88,6 @@ _75 TILs and counting..._
 - [TableViewCell - accessoryType](iOS/TableView_Delegate_AccessoryType.md)
 - [WebView - Delegate method](iOS/WebView_Delegate.md)
 - [WebView - 앱과 웹간 소통방법(1)](iOS/WebView_commute_with_Web.md)
-- [Privacy - 여러가지 접근권한요청](iOS/Z_Privacy_permissions.md)
-- [Xcode - 앱 빌드설정 선택하기](iOS/Z_set_XcodeBuildSet.md)
-- [How to Set - 세로모드 고정](iOS/Z_set_potrait.md)
 - [UICollectionViewCell에서 isSelected 설정하기](iOS/ios_CollectionViewCell.md)
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md)
 
