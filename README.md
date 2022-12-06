@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_79 TILs and counting..._
+_80 TILs and counting..._
 
 ---
 
@@ -41,6 +41,7 @@ _79 TILs and counting..._
 ### [ComputerScience](#ComputerScience)
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
+- [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
 ### [Error](#Error)
 - [iOS - Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md)
