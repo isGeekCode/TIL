@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_81 TILs and counting..._
+_82 TILs and counting..._
 
 ---
 
@@ -130,6 +130,7 @@ _81 TILs and counting..._
 - [이미지의 형태](swift/TIL220915_KindsOfImageFormats.md)
 - [Xcode 디버깅으로 변수변화 캐치하기](swift/TIL221026_howToDebugging.md)
 - [Special Literal](swift/TIL_220527_specialLiteral.md)
+- [enum 사용법](swift/aboutEnum.md)
 - [저장프로퍼티 - 프로퍼티(1)](swift/aboutProperty1.md)
 - [연산프로퍼티 - 프로퍼티(2)](swift/aboutProperty2.md)
 - [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](swift/aboutProperty205.md)
