@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_82 TILs and counting..._
+_83 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [WebView - 스와이프로 리프레시 세팅](iOS/WebView_swipe_refresh.md) - Mon Dec 12 16:07:43 2022 +0900
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md) - Wed Nov 30 11:10:48 2022 +0900
 - [Closure 톺아보기](swift/swift_firstClassClosureMaster.md) - Sun Nov 27 12:51:05 2022 +0900
 - [1급 객체](swift/swift_firstClassObject.md) - Sun Nov 27 12:43:59 2022 +0900
 - [타입프로퍼티(static) - 프로퍼티(3)](swift/aboutProperty3.md) - Fri Nov 25 15:41:15 2022 +0900
-- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](swift/aboutProperty205.md) - Fri Nov 25 15:30:23 2022 +0900
 
 ### Categories
 
@@ -115,6 +115,7 @@ _82 TILs and counting..._
 - [WebView - URLSession 사용하기](iOS/WebView_aboutURLSession.md)
 - [WebView - App에서 웹페이지를 여는 3가지 방법](iOS/WebView_basic_use.md)
 - [WebView - Safari로 웹뷰 디버깅하는 방법](iOS/WebView_commute_with_Web.md)
+- [WebView - 스와이프로 리프레시 세팅](iOS/WebView_swipe_refresh.md)
 - [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS/ios_CollectionViewCell.md)
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md)
 
