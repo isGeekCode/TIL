@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_83 TILs and counting..._
+_84 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [TableViewCell - ContentView](iOS/TableView_ContentView.md) - Thu Dec 15 20:07:06 2022 +0900
 - [WKWebView에서 자주 사용하는 메서드들](iOS/WebView_often_use_delegate_method.md) - Tue Dec 13 19:07:54 2022 +0900
 - [WebView - 스와이프로 리프레시 세팅](iOS/WebView_swipe_refresh.md) - Mon Dec 12 16:07:43 2022 +0900
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md) - Wed Nov 30 11:10:48 2022 +0900
 - [Closure 톺아보기](swift/swift_firstClassClosureMaster.md) - Sun Nov 27 12:51:05 2022 +0900
-- [1급 객체](swift/swift_firstClassObject.md) - Sun Nov 27 12:43:59 2022 +0900
 
 ### Categories
 
@@ -102,6 +102,7 @@ _83 TILs and counting..._
 - [Login Logic (feat. UserDefault)](iOS/Login_Logic.md)
 - [소켓이란](iOS/TIL220420_socket.md)
 - [타임스탬프 구현하기](iOS/TIL220914_TimeStamp.md)
+- [TableViewCell - ContentView](iOS/TableView_ContentView.md)
 - [TableViewCell - accessoryType](iOS/TableView_Delegate_AccessoryType.md)
 - [AudioToolbox - 롱프레스와 햅틱진동 구현하기 (Feat.Long press)](iOS/Third_AudioToolBox_HapticAndLongpress.md)
 - [써드파티(Third party)](iOS/Third_party.md)
