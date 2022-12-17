@@ -7,6 +7,11 @@
 
 이 콘솔창에 특정 키를 넣어 입력할 수 있다
 
+만약 개발자용이 보이지않는 경우, 사파리 - 설정 - 고급 에서 메뉴 막대에서 개발자용 메뉴보기 체크를 해야한다.
+
+- [https://support.apple.com/ko-kr/guide/safari/sfri20948/mac](https://support.apple.com/ko-kr/guide/safari/sfri20948/mac)
+
+
 ### 웹뷰 새로고침
 
 - 좌측 상단의 새로고침 버튼
