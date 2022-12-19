@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_85 TILs and counting..._
+_86 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [FileManager - 사용하기](iOS/FileManager_introduce.md) - Mon Dec 19 23:26:13 2022 +0900
 - [ReactiveX: RxSwift Introduce](Library/RxSwift_Introduce.md) - Sun Dec 18 21:33:49 2022 +0900
 - [TableViewCell - ContentView](iOS/TableView_ContentView.md) - Thu Dec 15 20:07:06 2022 +0900
 - [WKWebView에서 자주 사용하는 메서드들](iOS/WebView_often_use_delegate_method.md) - Tue Dec 13 19:07:54 2022 +0900
 - [WebView - 스와이프로 리프레시 세팅](iOS/WebView_swipe_refresh.md) - Mon Dec 12 16:07:43 2022 +0900
-- [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md) - Wed Nov 30 11:10:48 2022 +0900
 
 ### Categories
 
@@ -91,6 +91,7 @@ _85 TILs and counting..._
 - [userDefault](iOS/AboutUserDefualt.md)
 - [Container ViewController Type - Navigation Controller](iOS/Container_ViewController_NavigationController.md)
 - [Date - Date로 두 개의 시간차 구하기](iOS/Date_getTimeInterval.md)
+- [FileManager - 사용하기](iOS/FileManager_introduce.md)
 - [Gesture Recognizer - Long Press](iOS/GestureRecognizer_LongPress.md)
 - [Info - App Version 가져오기](iOS/Info_appVersion.md)
 - [Layout - 오토레이아웃의 개념](iOS/Layout_About_AutoLayout.md)
