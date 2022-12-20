@@ -74,3 +74,109 @@ if let data: Data = "안녕하세요.".data(using: String.Encoding.utf8) { // St
     }
 }
 ```
+
+
+```
+    func fileDownload(url: String) {
+        guard let url = URL(string: url) else { return }
+        print("input url: \(url)")
+        let fileManager = FileManager.default // 인스턴스 생성
+        let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0] // 도큐먼트 URL가져오기
+
+        let fileName = url.lastPathComponent.removingPercentEncoding ?? ""
+        let originalFileName = url.lastPathComponent
+        
+        print("documentsURL:\(documentsURL)")
+        print("fileName:\(fileName)")
+        print("originalFileName:\(originalFileName)")
+
+        // 가져온 도큐먼트URL경로를 파일을 저장할 Directory로 설정
+        let fileURL = documentsURL.appendingPathComponent(fileName)
+        print("fileURL: \(fileURL)")
+        //확장자 추출
+        let ext = fileURL.lastPathComponent.components(separatedBy: ".").last ?? ""
+        print("확장자 - ext: \(ext)")
+        
+        
+        // URL Session 생성
+        let sessionConfig = URLSessionConfiguration.default
+        let session = URLSession(configuration: sessionConfig)
+        print("url.: \(url)")
+        print("url.: \(url.path)")
+        
+        // 서버의 파일 URL 추출, URL Request 생성
+        let strArr = url.path.components(separatedBy: "url=")
+        let urlStr = URL(string: strArr.last!)!
+        let request = URLRequest(url: urlStr)
+        
+        // 파일 다운로드 통신 시작
+        let task = session.downloadTask(with: request) { tempLocalUrl, response, error in
+            if let tempLocalUrl = tempLocalUrl, error == nil {
+                
+                if let statusCode = (response as? HTTPURLResponse)?.statusCode {
+                    print("download success status code ::: \(statusCode)")
+                }
+                
+                do {
+                    let fileURLString = (documentsURL.absoluteString + originalFileName).replacingOccurrences(of: "file://", with: "")
+                    let isExist = fileManager.fileExists(atPath: fileURLString)
+                    
+                    if !isExist {
+                        try fileManager.copyItem(at: tempLocalUrl, to: fileURL)
+                    } else {
+                        // 파일이 존재하는 경우
+                        let onlyFileName = fileName.replacingOccurrences(of: ".\(ext)", with: "")
+                        let fileNamesExt = onlyFileName.appending("(1)").appending(".\(ext)")
+                        print("이름 변경 확인 ::: \(fileNamesExt)")
+                        
+                        // 도큐먼트 경로에 새로만튼 파일 경로 설정
+                        let fileNameChangeUrl = documentsURL.appendingPathComponent(fileNamesExt)
+                        // 파일 쓰기
+                        try fileManager.copyItem(at: tempLocalUrl, to: fileNameChangeUrl)
+                        
+                    }
+                    
+                    let alert = UIAlertController(title: "", message: "첨부파일 다운로드에 성공했습니다.", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "확인", style: .default) { _ in
+                        self.dismiss(animated: true)
+                    }
+
+                    alert.addAction(ok)
+
+                    DispatchQueue.main.async {
+                        self.present(alert, animated: false, completion: nil)
+                    }
+                    
+                } catch {
+                    print("Error creating file \(fileURL) ::: error ::: \(error)")
+                    
+                    let alert = UIAlertController(title: "", message: "파일 다운로드에 실패했습니다.", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "확인", style: .default) { _ in
+                        self.dismiss(animated: true)
+                    }
+                    
+                    alert.addAction(ok)
+                    DispatchQueue.main.async {
+                        self.present(alert, animated: false, completion: nil)
+                    }
+                }
+                
+            } else {
+                print("error took place while downloading a file error ::: \(String(describing: error))")
+                
+                let alert = UIAlertController(title: "", message: "파일 다운로드에 실패했습니다.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "확인", style: .default) { _ in
+                    self.dismiss(animated: true)
+                }
+                alert.addAction(ok)
+                
+                DispatchQueue.main.async {
+                    self.present(alert, animated: false, completion: nil)
+                }
+            }
+        }
+        task.resume()
+    }
+}
+
+```
