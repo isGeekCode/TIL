@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_87 TILs and counting..._
+_88 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](iOS/zAppStore_missing_Compliance.md) - Thu Dec 22 22:37:33 2022 +0900
 - [UIButton - 스토리보드 / 코드 구현하기 / addTarget / 스토리보드의 장단점](iOS/Layout_UIButton.md) - Wed Dec 21 10:04:29 2022 +0900
 - [FileManager - 사용하기](iOS/FileManager_introduce.md) - Mon Dec 19 23:26:13 2022 +0900
 - [ReactiveX: RxSwift Introduce](Library/RxSwift_Introduce.md) - Sun Dec 18 21:33:49 2022 +0900
 - [TableViewCell - ContentView](iOS/TableView_ContentView.md) - Thu Dec 15 20:07:06 2022 +0900
-- [WKWebView에서 자주 사용하는 메서드들](iOS/WebView_often_use_delegate_method.md) - Tue Dec 13 19:07:54 2022 +0900
 
 ### Categories
 
@@ -122,6 +122,7 @@ _87 TILs and counting..._
 - [WebView - 스와이프로 리프레시 세팅](iOS/WebView_swipe_refresh.md)
 - [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS/ios_CollectionViewCell.md)
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md)
+- [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](iOS/zAppStore_missing_Compliance.md)
 
 ### [swift](#swift)
 - [Do - Try - Catch](swift/DoTryCatch.md)
