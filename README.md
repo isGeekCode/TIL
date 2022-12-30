@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_92 TILs and counting..._
+_93 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [.ipa 파일 만들기](Xcode/How_to.make_ipa.md) - Fri Dec 30 18:36:41 2022 +0900
 - [DynamicSplash 세팅하기](iOS/DynamicSplashView.md) - Wed Dec 28 15:50:04 2022 +0900
 - [Codable](iOS/Codable.md) - Tue Dec 27 11:09:39 2022 +0900
 - [UIImage - 경로를 통해 이미지 다운로드하여 세팅하기](iOS/UIImage_setImageDownload.md) - Mon Dec 26 16:39:29 2022 +0900
 - [FileManager - 파일 다운로드하기](iOS/FileManager_fileDownload.md) - Sat Dec 24 10:50:20 2022 +0900
-- [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](iOS/zAppStore_missing_Compliance.md) - Thu Dec 22 22:37:33 2022 +0900
 
 ### Categories
 
@@ -82,6 +82,7 @@ _92 TILs and counting..._
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
 
 ### [Xcode](#Xcode)
+- [.ipa 파일 만들기](Xcode/How_to.make_ipa.md)
 - [How to Set - 세로모드 고정 (Potrait)](Xcode/How_to_set_potrait_mode.md)
 - [Privacy - 여러가지 접근권한요청](Xcode/PrivercyPermission_various.md)
 - [Scheme - Debug / Release 빌드 분리하기](Xcode/Scheme_Separate_BuildSet.md)
