@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_93 TILs and counting..._
+_94 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [UIAlert 어디서든 띄우기](iOS/Layout_UIAlert.md) - Sat Dec 31 20:35:25 2022 +0900
 - [.ipa 파일 만들기](Xcode/How_to.make_ipa.md) - Fri Dec 30 18:36:41 2022 +0900
 - [DynamicSplash 세팅하기](iOS/DynamicSplashView.md) - Wed Dec 28 15:50:04 2022 +0900
 - [Codable](iOS/Codable.md) - Tue Dec 27 11:09:39 2022 +0900
 - [UIImage - 경로를 통해 이미지 다운로드하여 세팅하기](iOS/UIImage_setImageDownload.md) - Mon Dec 26 16:39:29 2022 +0900
-- [FileManager - 파일 다운로드하기](iOS/FileManager_fileDownload.md) - Sat Dec 24 10:50:20 2022 +0900
 
 ### Categories
 
@@ -102,6 +102,7 @@ _93 TILs and counting..._
 - [Layout - UIView에 대하여](iOS/Layout_About_UIView.md)
 - [Layout - CodeUI: CustomShadow(feat.CustomClass)](iOS/Layout_CodeUI_CustomShadow.md)
 - [Layout - CodeUI: UIView, UILabel](iOS/Layout_CodeUI_UILabel_UIView.md)
+- [UIAlert 어디서든 띄우기](iOS/Layout_UIAlert.md)
 - [UIButton - 스토리보드 / 코드 구현하기 / addTarget / 스토리보드의 장단점](iOS/Layout_UIButton.md)
 - [Layout - Hierarchy of UIView (feat. addSubView)](iOS/Layout_addSubView.md)
 - [현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](iOS/Layout_currentDeviceCheck&useCombineReactiveAutoLayout.md)
