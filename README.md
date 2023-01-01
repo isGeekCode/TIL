@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_94 TILs and counting..._
+_95 TILs and counting..._
 
 ---
 
@@ -72,6 +72,7 @@ _94 TILs and counting..._
 - [About CocoaPods](Library/About_cocoaPods.md)
 - [Convention - SwiftLint 세팅하기](Library/Convention_SwiftLint.md)
 - [Convention - SwiftLint 세부설정하기](Library/Convention_SwiftLintCustomRule.md)
+- [Library - GIFu 사용하기](Library/Library_Gifu.md)
 - [Push - 핑거푸시](Library/Push_fingerPush.md)
 - [ReactiveX: RxSwift Introduce](Library/RxSwift_Introduce.md)
 
