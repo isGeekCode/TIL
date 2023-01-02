@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_95 TILs and counting..._
+_96 TILs and counting..._
 
 ---
 
@@ -14,9 +14,9 @@ _95 TILs and counting..._
 
 - [UIAlert 어디서든 띄우기](iOS/Layout_UIAlert.md) - Sat Dec 31 20:35:25 2022 +0900
 - [.ipa 파일 만들기](Xcode/How_to.make_ipa.md) - Fri Dec 30 18:36:41 2022 +0900
-- [DynamicSplash 세팅하기](iOS/DynamicSplashView.md) - Wed Dec 28 15:50:04 2022 +0900
 - [Codable](iOS/Codable.md) - Tue Dec 27 11:09:39 2022 +0900
 - [UIImage - 경로를 통해 이미지 다운로드하여 세팅하기](iOS/UIImage_setImageDownload.md) - Mon Dec 26 16:39:29 2022 +0900
+- [FileManager - 파일 다운로드하기](iOS/FileManager_fileDownload.md) - Sat Dec 24 10:50:20 2022 +0900
 
 ### Categories
 
@@ -91,10 +91,10 @@ _95 TILs and counting..._
 
 ### [iOS](#iOS)
 - [userDefault](iOS/AboutUserDefualt.md)
+- [DynamicSplash 세팅하기](iOS/Codable 2.md)
 - [Codable](iOS/Codable.md)
 - [Container ViewController Type - Navigation Controller](iOS/Container_ViewController_NavigationController.md)
 - [Date - Date로 두 개의 시간차 구하기](iOS/Date_getTimeInterval.md)
-- [DynamicSplash 세팅하기](iOS/DynamicSplashView.md)
 - [FileManager - 파일 다운로드하기](iOS/FileManager_fileDownload.md)
 - [FileManager - 사용하기](iOS/FileManager_introduce.md)
 - [Gesture Recognizer - Long Press](iOS/GestureRecognizer_LongPress.md)
@@ -129,6 +129,7 @@ _95 TILs and counting..._
 - [WebView - 스와이프로 리프레시 세팅](iOS/WebView_swipe_refresh.md)
 - [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS/ios_CollectionViewCell.md)
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md)
+- [appStoreReceiptURL](iOS/xIsProductionCheck.md)
 - [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](iOS/zAppStore_missing_Compliance.md)
 
 ### [swift](#swift)
