@@ -1,4 +1,4 @@
-# Library - GIFu 사용하기
+# 라이브러리 - GIFu 사용하기
 
 iOS에서 이미지파일인 PNG, JPG 확장자는 UIImage를 통해 바로바로 사용할 수 있다.
 
@@ -120,27 +120,36 @@ override func viewDidLoad() {
 
 ## Parameters
 
-### animate(withGIFNamed: )
+파일 URL과 파일명,  Data를 파라미터로 넣어주어 세팅이 가능하다. 
 
-### animate(withGIFData: )
+prepareForAnimation을 할경우 세팅을 미리 해주고 
 
-### animate(withGIFURL: )
+원하는 시점에서  startAnimatingGIF() / stopAnimatingGIF()  를 할 수 있다.
 
-- 
+animate를 사용하는 경우에도 동일하지만,
+
+이곳에 preparationBlock과 animationBlock Completion이 있어서
+
+준비되는시점, 애니메이션이 완료되는 시점에 각각 함수를 추가할 수 가 있다.
+
+### 파일URL
+
+animate(withGIFURL: )
+
+prepareForAnimation(withGIFURL: "<파일URL>") 
+
+### 파일명
+
+animate(withGIFNamed: )
+
+prepareForAnimation(withGIFNamed: "<파일명>") 
+
+### 파일 Data
+
+animate(withGIFData: ) 
+
+prepareForAnimation(withGIFData: "<파일DATA>") 
 
 ### loopCount
 
 몇번 재생할 것인지 세팅할 수 있다.
-
-### prepareForAnimation(withGIFNamed: "<파일명>")
-
-파일명으로 세팅하기
-
-### prepareForAnimation(withGIFNamed: "<파일명>")
-
-- `[animate(withGIFNamed:loopCount:completionHandler:)](http://kaishin.github.io/Gifu/Protocols/GIFAnimatable.html#/s:4Gifu13GIFAnimatablePAAE7animateySS12withGIFNamed_Si9loopCountyycSg17completionHandlertF)` *확장 방법*
-- `[animate(withGIFData:loopCount:completionHandler:)](http://kaishin.github.io/Gifu/Protocols/GIFAnimatable.html#/s:4Gifu13GIFAnimatablePAAE7animatey10Foundation4DataV11withGIFData_Si9loopCountyycSg17completionHandlertF)` *확장 방법*
-- `[animate(withGIFURL:loopCount:completionHandler:)](http://kaishin.github.io/Gifu/Protocols/GIFAnimatable.html#/s:4Gifu13GIFAnimatablePAAE7animatey10Foundation3URLV10withGIFURL_Si9loopCountyycSg17completionHandlertF)` *확장 방법*
-- `[prepareForAnimation(withGIFNamed:loopCount:completionHandler:)](http://kaishin.github.io/Gifu/Protocols/GIFAnimatable.html#/s:4Gifu13GIFAnimatablePAAE19prepareForAnimationySS12withGIFNamed_Si9loopCountyycSg17completionHandlertF)` *확장 방법*
-- `[prepareForAnimation(withGIFData:loopCount:completionHandler:)](http://kaishin.github.io/Gifu/Protocols/GIFAnimatable.html#/s:4Gifu13GIFAnimatablePAAE19prepareForAnimationy10Foundation4DataV11withGIFData_Si9loopCountyycSg17completionHandlertF)` *확장 방법*
-- `[prepareForAnimation(withGIFURL:loopCount:completionHandler:)](http://kaishin.github.io/Gifu/Protocols/GIFAnimatable.html#/s:4Gifu13GIFAnimatablePAAE19prepareForAnimationy10Foundation3URLV10withGIFURL_Si9loopCountyycSg17completionHandlertF)` *확장 방법*
