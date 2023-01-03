@@ -148,8 +148,8 @@ self.player.play()
 
 ### 어레이에 여러 시간 세팅하기
 
-테스트 주석을 해제하면 정지하고 재생이 되는데 영상에서의 해당 시점에 도달하면 로그가 찍힌다. 
-
+- 테스트 주석을 해제하면 정지하고 재생이 되는데 영상에서의 해당 시점에 도달하면 로그가 찍힌다. 
+- 어레이의 순서에 상관없이 생성했던 타임라인에 따라 실행된다.
 ```swift
 let targetNSValue = NSValue(time: CMTime(seconds: 6, preferredTimescale: 1))
 let targetNSValue2 = NSValue(time: CMTime(seconds: 2, preferredTimescale: 1))
