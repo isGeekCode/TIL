@@ -91,7 +91,6 @@ _96 TILs and counting..._
 
 ### [iOS](#iOS)
 - [userDefault](iOS/AboutUserDefualt.md)
-- [DynamicSplash 세팅하기](iOS/Codable 2.md)
 - [Codable](iOS/Codable.md)
 - [Container ViewController Type - Navigation Controller](iOS/Container_ViewController_NavigationController.md)
 - [Date - Date로 두 개의 시간차 구하기](iOS/Date_getTimeInterval.md)
@@ -128,6 +127,7 @@ _96 TILs and counting..._
 - [WKWebView에서 자주 사용하는 메서드들](iOS/WebView_often_use_delegate_method.md)
 - [WebView - 스와이프로 리프레시 세팅](iOS/WebView_swipe_refresh.md)
 - [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS/ios_CollectionViewCell.md)
+- [DynamicSplash 세팅하기](iOS/splash_dynamicSplash.md)
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md)
 - [appStoreReceiptURL](iOS/xIsProductionCheck.md)
 - [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](iOS/zAppStore_missing_Compliance.md)
