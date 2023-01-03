@@ -146,7 +146,9 @@ player.addBoundaryTimeObserver(forTimes: targetTimeArray, queue: mainQueue) {
 self.player.play()
 ```
 
-어레이에 여러 시간을 세팅이 가능하다
+### 어레이에 여러 시간 세팅하기
+
+테스트 주석을 해제하면 정지하고 재생이 되는데 영상에서의 해당 시점에 도달하면 로그가 찍힌다. 
 
 ```swift
 let targetNSValue = NSValue(time: CMTime(seconds: 6, preferredTimescale: 1))
@@ -170,7 +172,3 @@ player.addBoundaryTimeObserver(forTimes: targetTimeArray, queue: mainQueue) {
 }
 self.player.play()
 ```
-
-Audio 관련 참고
-
-[https://wlgusdn700.tistory.com/82](https://wlgusdn700.tistory.com/82)
