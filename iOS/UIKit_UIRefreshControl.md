@@ -39,12 +39,15 @@ refreshControl.addTarget(self, action: #selector(reloadWebView(_:)), for: .value
 mainWebView.scrollView.refreshControl = refreshControl
 ```
 
-## Step5. 웹뷰인경우는 ScrollView의 바운스를 허용해주어야만 한다.
+## Step5. 웹뷰인경우는 ScrollView의 delegate와  bounce를 확인
 
  
 
 ```swift
+mainWebView.scrollView.delegate = self
 mainWebView.scrollView.bounces = true
+mainWebView.scrollView.alwaysBounceVertical = false
+
 ```
 
 # 전체코드
@@ -64,4 +67,7 @@ mainWebView.scrollView.bounces = true
     sender.endRefreshing()
 }
 
+mainWebView.scrollView.delegate = self
+mainWebView.scrollView.bounces = true
+mainWebView.scrollView.alwaysBounceVertical = false
 ```
