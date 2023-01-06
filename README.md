@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_102 TILs and counting..._
+_101 TILs and counting..._
 
 ---
 
@@ -123,7 +123,6 @@ _102 TILs and counting..._
 - [WebView - PC에서 사용중인 내부망을 Iphone으로 연결시키는 방법](iOS/WebViewZ_intranet.md)
 - [WebView - WKWebView에서 보내는 JS를 캐치하는 방법](iOS/WebView_CatchingJS.md)
 - [WebView - Delegate method](iOS/WebView_Delegate.md)
-- [](iOS/WebView_How_to_Send_JS.md)
 - [WebView - 앱에서 웹으로 JavaScript보내기](iOS/WebView_Sending_JS.md)
 - [WebView - URLSession 사용하기](iOS/WebView_aboutURLSession.md)
 - [WebView - App에서 웹페이지를 여는 3가지 방법](iOS/WebView_basic_use.md)
