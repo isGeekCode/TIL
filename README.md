@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_105 TILs and counting..._
+_106 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Layout - StoryboardUI: CornerRadius](iOS/Layout_StoryboardUI_CornerRadius.md) - Thu Jan 12 23:30:07 2023 +0900
 - [custom scheme - 커스텀 앱스키마 만들기](iOS/info_howTomakeCustomScheme.md) - Wed Jan 11 13:25:47 2023 +0900
 - [Xcode - cannot be opened because it is in a future Xcode project file format.](Error/xcodeError_cannotBeOpened.md) - Tue Jan 10 09:06:33 2023 +0900
 - [UIAlert 어디서든 띄우기](iOS/Layout_UIAlert.md) - Sat Dec 31 20:35:25 2022 +0900
 - [.ipa 파일 만들기](Xcode/How_to.make_ipa.md) - Fri Dec 30 18:36:41 2022 +0900
-- [Codable](iOS/Codable.md) - Tue Dec 27 11:09:39 2022 +0900
 
 ### Categories
 
@@ -105,6 +105,7 @@ _105 TILs and counting..._
 - [Layout - CGRectMake는 뭘까](iOS/Layout_CGRectMake.md)
 - [Layout - CodeUI: CustomShadow(feat.CustomClass)](iOS/Layout_CodeUI_CustomShadow.md)
 - [Layout - CodeUI: UIView, UILabel](iOS/Layout_CodeUI_UILabel_UIView.md)
+- [Layout - StoryboardUI: CornerRadius](iOS/Layout_StoryboardUI_CornerRadius.md)
 - [UIAlert 어디서든 띄우기](iOS/Layout_UIAlert.md)
 - [UIButton - 스토리보드 / 코드 구현하기 / addTarget / 스토리보드의 장단점](iOS/Layout_UIButton.md)
 - [Layout - Hierarchy of UIView (feat. addSubView)](iOS/Layout_addSubView.md)
