@@ -31,3 +31,29 @@ static public func alertControllerShow(WithTitle titl: String, message msg: Stri
         vc.present(alertController, animated: true, completion: nil)
     }
 ```
+
+
+## Alert + DatePicker
+
+```swift
+@IBActionfuncCSPicker(_ sender:Any) {
+
+//let dialog = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+
+let datePicker =UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.locale =NSLocale(localeIdentifier: "ko_KO")asLocale// datePicker의 default 값이 영어이기 때문에 한글로 바꿔줘야한다. 그래서 이 방식으로 변경할 수 있다.
+
+let dateChooserAlert =UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        dateChooserAlert.view.addSubview(datePicker)
+        dateChooserAlert.addAction(UIAlertAction(title: "선택완료", style: .cancel, handler: nil))
+//dialog.setValue(contentVC, forKey: "contentViewController") // private api
+
+let height :NSLayoutConstraint =NSLayoutConstraint(item: dateChooserAlert.view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.1, constant: 300)
+        dateChooserAlert.view.addConstraint(height)
+
+        present(dateChooserAlert, animated: true, completion: nil)
+
+    }
+```
