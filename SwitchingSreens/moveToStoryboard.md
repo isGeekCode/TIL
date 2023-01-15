@@ -1,4 +1,4 @@
-# 화면전환 - CodeUI에서 스토리보드연결하기
+# present - CodeUI to StoryBoard
 
 이번에 빠르게 작업을 했었던 사례였다.
 
