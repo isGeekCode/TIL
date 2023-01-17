@@ -1,4 +1,4 @@
-# TableViewCell - ContentView
+# UIKit - UITableViewCell : ContentView
 
 UITableViewCell안에는 여러 View들이 있습니다.
 
