@@ -12,7 +12,7 @@ _112 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [Timer 사용하기](iOS/Timer.md) - Wed Jan 18 22:56:31 2023 +0900
+- [NSObject - Timer](iOS/NSObject_Timer.md) - Wed Jan 18 22:58:34 2023 +0900
 - [UIKit - UITableViewCell : accessoryType](iOS/UIKit_UITableView_Delegate_AccessoryType.md) - Tue Jan 17 21:26:04 2023 +0900
 - [UIKit - UITableViewCell : ContentView](iOS/UIKit_UITableView_ContentView.md) - Tue Jan 17 21:26:04 2023 +0900
 - [UIKit - UITableView](iOS/UIKit_UITableView.md) - Tue Jan 17 21:24:08 2023 +0900
@@ -118,11 +118,11 @@ _112 TILs and counting..._
 - [로컬라이징](iOS/Localization.md)
 - [Login Logic (feat. UserDefault)](iOS/Login_Logic.md)
 - [MessageUI - 문의메일 보내기](iOS/MessageUI_sendMail.md)
+- [NSObject - Timer](iOS/NSObject_Timer.md)
 - [소켓이란](iOS/TIL220420_socket.md)
 - [타임스탬프 구현하기](iOS/TIL220914_TimeStamp.md)
 - [AudioToolbox - 롱프레스와 햅틱진동 구현하기 (Feat.Long press)](iOS/Third_AudioToolBox_HapticAndLongpress.md)
 - [써드파티(Third party)](iOS/Third_party.md)
-- [Timer 사용하기](iOS/Timer.md)
 - [UIImage - 경로를 통해 이미지 다운로드하여 세팅하기](iOS/UIImage_setImageDownload.md)
 - [CGPoint, CGSize, CGRect](iOS/UIKit_CGPoint_CGSize_CGRect.md)
 - [DatePicker 설치하기](iOS/UIKit_UIDatePicker.md)
