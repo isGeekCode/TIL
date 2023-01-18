@@ -1,4 +1,4 @@
-# Timer 사용하기
+# NSObject - Timer
 
 타이머를 만들 수 있는 타입이다.
 
