@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_112 TILs and counting..._
+_113 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [UIKit - UIAlertController : 장문의 얼럿 만들기](iOS/UIKit_UIAlertController_NSMutableAttributedString.md) - Thu Jan 19 22:28:33 2023 +0900
 - [NSObject - Timer](iOS/NSObject_Timer.md) - Wed Jan 18 22:58:34 2023 +0900
 - [UIKit - UITableViewCell : accessoryType](iOS/UIKit_UITableView_Delegate_AccessoryType.md) - Tue Jan 17 21:26:04 2023 +0900
 - [UIKit - UITableViewCell : ContentView](iOS/UIKit_UITableView_ContentView.md) - Tue Jan 17 21:26:04 2023 +0900
 - [UIKit - UITableView](iOS/UIKit_UITableView.md) - Tue Jan 17 21:24:08 2023 +0900
-- [DatePicker 설치하기](iOS/UIKit_UIDatePicker.md) - Tue Jan 17 21:24:08 2023 +0900
 
 ### Categories
 
@@ -125,6 +125,7 @@ _112 TILs and counting..._
 - [써드파티(Third party)](iOS/Third_party.md)
 - [UIImage - 경로를 통해 이미지 다운로드하여 세팅하기](iOS/UIImage_setImageDownload.md)
 - [CGPoint, CGSize, CGRect](iOS/UIKit_CGPoint_CGSize_CGRect.md)
+- [UIKit - UIAlertController : 장문의 얼럿 만들기](iOS/UIKit_UIAlertController_NSMutableAttributedString.md)
 - [DatePicker 설치하기](iOS/UIKit_UIDatePicker.md)
 - [UIDevice](iOS/UIKit_UIDevice.md)
 - [UIRefreshControl 사용하기](iOS/UIKit_UIRefreshControl.md)
