@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_113 TILs and counting..._
+_114 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md) - Fri Jan 20 22:40:44 2023 +0900
 - [UIKit - UIAlertController : 장문의 얼럿 만들기](iOS/UIKit_UIAlertController_NSMutableAttributedString.md) - Thu Jan 19 22:28:33 2023 +0900
 - [NSObject - Timer](iOS/NSObject_Timer.md) - Wed Jan 18 22:58:34 2023 +0900
 - [UIKit - UITableViewCell : accessoryType](iOS/UIKit_UITableView_Delegate_AccessoryType.md) - Tue Jan 17 21:26:04 2023 +0900
 - [UIKit - UITableViewCell : ContentView](iOS/UIKit_UITableView_ContentView.md) - Tue Jan 17 21:26:04 2023 +0900
-- [UIKit - UITableView](iOS/UIKit_UITableView.md) - Tue Jan 17 21:24:08 2023 +0900
 
 ### Categories
 
@@ -26,6 +26,7 @@ _113 TILs and counting..._
 - [Extensions](#Extensions)
 - [Git](#Git)
 - [IOS-Architecture](#IOS-Architecture)
+- [Integrity](#Integrity)
 - [Library](#Library)
 - [Objc](#Objc)
 - [Self-Review](#Self-Review)
@@ -68,6 +69,9 @@ _113 TILs and counting..._
 - [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](IOS-Architecture/MVC_traditional.md)
 - [Architecture - 간단한 MVVM구조 예제](IOS-Architecture/MVVM_simpleExample.md)
 - [Architecture - 비즈니스 로직이란](IOS-Architecture/aboutBusinessLogic.md)
+
+### [Integrity](#Integrity)
+- [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md)
 
 ### [Library](#Library)
 - [About Swift PackageManager](Library/About_SPM.md)
