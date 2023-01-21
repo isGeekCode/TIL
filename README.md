@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_114 TILs and counting..._
+_115 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Git - command line tools are already installed (사실 git 에러 아님)](Error/xcodeError_CommandLineTool.md) - Sat Jan 21 10:13:07 2023 +0900
 - [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md) - Fri Jan 20 22:40:44 2023 +0900
 - [UIKit - UIAlertController : 장문의 얼럿 만들기](iOS/UIKit_UIAlertController_NSMutableAttributedString.md) - Thu Jan 19 22:28:33 2023 +0900
 - [NSObject - Timer](iOS/NSObject_Timer.md) - Wed Jan 18 22:58:34 2023 +0900
 - [UIKit - UITableViewCell : accessoryType](iOS/UIKit_UITableView_Delegate_AccessoryType.md) - Tue Jan 17 21:26:04 2023 +0900
-- [UIKit - UITableViewCell : ContentView](iOS/UIKit_UITableView_ContentView.md) - Tue Jan 17 21:26:04 2023 +0900
 
 ### Categories
 
@@ -50,6 +50,7 @@ _114 TILs and counting..._
 - [Presenting view controllers on detached view controllers is discouraged.](Error/TIL221031_Alert_In_UIViewController_Init.md)
 - [maximumViewportInset cannot be larger than frame](Error/TIL221101_viewResizing.md)
 - [# Xcode Assistant가 작동하지 않을때 체크해야할 것](Error/TIL_220531_XcodeAssistant.md)
+- [Git - command line tools are already installed (사실 git 에러 아님)](Error/xcodeError_CommandLineTool.md)
 - [Xcode - Launching _AppName_ is taking longer than expected](Error/xcodeError_Launching_is_taking_longer_than.md)
 - [Xcode - cannot be opened because it is in a future Xcode project file format.](Error/xcodeError_cannotBeOpened.md)
 
