@@ -14,3 +14,4 @@
 
 # 참고링크
 - https://stackoverflow.com/questions/35056705/convert-c-to-swift-add-magnifying-glass-icon-to-uitextfield
+- https://stackoverflow.com/questions/37452813/padding-before-textfield-icon
