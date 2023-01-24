@@ -3,13 +3,13 @@
 ### 왼쪽아이콘
 `searchBar.setImage(UIImage(named: "icSearchNonW"), for: .search, state: .normal)`
 
-- 서치바의 왼쪽 돋보기 아이콘 이미지 세팅은 `.setImage` 
+- 서치바의 왼쪽 돋보기 아이콘 이미지 세팅: `.setImage`함수 사용 
 - `for:UISearchBar.Icon.search(서치아이콘)`
 - `state: .normal`
 
 
 ### 오른쪽 아이콘
-- 서치바의 오른쪽 엑스버튼 이미지 세팅(검색했을 때)와 마찬지이지만 for에는 .clear(검색한 문장을 없앨때 아이콘)로만 바꿔주시면 됩니다.
+- 서치바의 오른쪽 엑스버튼 이미지 세팅(검색했을 때)와 마찬가지지만 for에는 .clear(검색한 문장을 없앨때 아이콘)
 
 ### 세팅하기
 ```swift
@@ -49,4 +49,4 @@
 ```
 
 ### UITextField
-- [TIL정리](https://github.com/isGeekCode/TIL/blob/main/iOS/UIKit_UITextField.md)
+- [UIKit - UITextField](https://github.com/isGeekCode/TIL/blob/main/iOS/UIKit_UITextField.md)
