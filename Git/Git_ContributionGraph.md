@@ -13,7 +13,13 @@ https://api.github.com/users/isgeekcode
 ```
 <img src="https://ghchart.rshah.org/깃허브아이디" />
 ```
-<img src="http://ghchart.rshah.org/isgeekcode"
+![Alt text](http://ghchart.rshah.org/isgeekcode)
+![Alt text](http://ghchart.rshah.org/isgeekcode "Optional title")
+
+![](http://ghchart.rshah.org/isgeekcode)
+![](http://ghchart.rshah.org/isgeekcode.png)
+
+<img src="http://ghchart.rshah.org/isgeekcode"></img>
 
 
 ### 색상 테마 지정하기
