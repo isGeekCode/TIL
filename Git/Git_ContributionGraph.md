@@ -13,12 +13,19 @@ https://api.github.com/users/isgeekcode
 ```
 <img src="https://ghchart.rshah.org/깃허브아이디" />
 ```
+테스트1
 ![Alt text](http://ghchart.rshah.org/isgeekcode)
+
+테스트2
 ![Alt text](http://ghchart.rshah.org/isgeekcode "Optional title")
 
+테스트3
 ![](http://ghchart.rshah.org/isgeekcode)
+
+테스트4
 ![](http://ghchart.rshah.org/isgeekcode.png)
 
+테스트5
 <img src="http://ghchart.rshah.org/isgeekcode"></img>
 
 
