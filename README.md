@@ -6,16 +6,16 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_121 TILs and counting..._
+_122 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [present - CodeUI to StoryBoard](SwitchingScreens/moveToStoryboard.md) - Fri Jan 27 15:12:06 2023 +0900
+- [Terminal 기초 사용법](ComputerScience/Terminal.md) - Fri Jan 27 15:12:06 2023 +0900
 - [GitHub - Various APIs](Git/Git_ContributionGraph.md) - Fri Jan 27 08:20:37 2023 +0900
 - [NSDate - Timezone: UTC, GMT, KST](iOS/NSObject_NSDate_UTC.md) - Thu Jan 26 23:09:09 2023 +0900
-- [CGColor에 대하여](iOS/UIKit_NSObject_UIColorCgColor.md) - Wed Jan 25 13:03:46 2023 +0900
-- [UIImage - 경로를 통해 이미지 다운로드하여 세팅하기](iOS/UIKit_NSObject_UIResponder_UIView_UIImageView_setImageDownload.md) - Wed Jan 25 13:03:46 2023 +0900
 - [UIView - UIControl - UIButton](iOS/UIKit_NSObject_UIResponder_UIView_UIControl_UIButton.md) - Wed Jan 25 13:03:46 2023 +0900
 
 ### Categories
@@ -30,7 +30,7 @@ _121 TILs and counting..._
 - [Library](#Library)
 - [Objc](#Objc)
 - [Self-Review](#Self-Review)
-- [SwitchingSreens](#SwitchingSreens)
+- [SwitchingScreens](#SwitchingScreens)
 - [Xcode](#Xcode)
 - [iOS](#iOS)
 - [swift](#swift)
@@ -43,6 +43,7 @@ _121 TILs and counting..._
 ### [ComputerScience](#ComputerScience)
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
+- [Terminal 기초 사용법](ComputerScience/Terminal.md)
 - [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
 ### [Error](#Error)
@@ -92,8 +93,8 @@ _121 TILs and counting..._
 ### [Self-Review](#Self-Review)
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
 
-### [SwitchingSreens](#SwitchingSreens)
-- [present - CodeUI to StoryBoard](SwitchingSreens/moveToStoryboard.md)
+### [SwitchingScreens](#SwitchingScreens)
+- [present - CodeUI to StoryBoard](SwitchingScreens/moveToStoryboard.md)
 
 ### [Xcode](#Xcode)
 - [.ipa 파일 만들기](Xcode/How_to.make_ipa.md)
