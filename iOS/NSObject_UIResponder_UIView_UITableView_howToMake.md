@@ -41,19 +41,21 @@
 
 ### TableView Protocol Delegate 선언
   ```swfit
-      tableView.delegate = self
-      tableView.dataSource = self
+    tableView.delegate = self
+    tableView.dataSource = self
   ```
 
 ### TableView Delegate 함수 세팅
-
+- 첫 UITableViewCell은 여기서 구현을 한 상황이다.
   ```
+    /// 테이블뷰 섹션 내부의 Row의 갯수를 선언하는 부분
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       return 10
     }
     
-
+    /// cell이 어떻게 보여질지 세팅하는 부분
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      // UITableViewCell 구현
       let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
     
       cell.textLabel?.text = "Hello world"
@@ -93,13 +95,14 @@ class TableViewController: UIViewController {
 
 extension TableViewController: UITableViewDelegate, UITableViewDataSource {
 
+  /// 테이블뷰 섹션 내부의 Row의 갯수를 선언하는 부분
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 10
   }
   
-
+  /// 테이블뷰의 cell이 어떻게 보여질지 선언하는 부분
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+    // UITableViewCell 구현
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
   
     cell.textLabel?.text = "Hello world"
