@@ -65,12 +65,12 @@
   ```
 
 
-### 작업화면
+### 현재까지의 작업화면
 - 시뮬레이터 다크모드전환 단축키: `Shift + Command + A`
 <img width="356" alt="스크린샷 2023-01-28 오후 3 13 58" src="https://user-images.githubusercontent.com/76529148/215250704-86891e64-c094-4898-80ea-d76f41e6d14a.png">
 
 
-### 현재까지 전체 코드
+### 현재까지의 전체코드
 
 ```swift
 import UIKit
@@ -84,14 +84,16 @@ class TableViewController: UIViewController {
     return table
   }()
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      title = "Settings"
-      view.addSubview(tableView)
-      tableView.delegate = self
-      tableView.dataSource = self
-      tableView.frame = view.bounds
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    title = "Settings"
+    view.addSubview(tableView)
+    tableView.frame = view.bounds
+
+    tableView.delegate = self
+    tableView.dataSource = self
+  }
+}
 
 extension TableViewController: UITableViewDelegate, UITableViewDataSource {
 
@@ -112,4 +114,119 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
 
 ```
 
+# Step2. 테이블뷰 내용을 보여주기위한 구조체 구현
 
+### 구조체 구현
+- `icon`처럼 항상 존재하지는 않을 정보라면 `?`을 통해 옵셔널 세팅해줄 것
+  ```swift
+  struct SettingsOptions {
+    let title: String
+    let icon: UIImage?
+    let iconBackgroundColor: UIColor
+    let handler: (() -> Void)
+  }
+
+  class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource { }
+  ```
+
+### 구조체 init
+- 변수선언
+  ```swift
+  var models = [SettingsOptions]()
+  ```
+- 변수값 세팅: 임의로 101개 세팅
+  ```swift
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    configure()
+  }
+
+  func configure() {
+    self.models = Array(0...100).compactMap({
+      SettingsOptions(title: "Item \($0)", icon: UIImage(systemName: "house"), iconBackgroundColor: .systemPink) {
+      }
+    })
+  } 
+  ```
+### TabelView에 반영하기
+- numberOfRowsInSection에 모델변수의 갯수 선언
+- cellForRowAt에 모델변수의 텍스트값 세팅
+```swift
+
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return models.count
+  }
+  
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let model = models[indexPath.row]
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+  
+    cell.textLabel?.text = model.title
+    return cell
+  }
+```
+
+
+### 현재까지의 작업화면
+<img width="358" alt="스크린샷 2023-01-28 오후 3 55 43" src="https://user-images.githubusercontent.com/76529148/215251949-32f24bc6-b9f7-4ec7-97eb-37c888c4cf87.png">
+
+### 현재까지의 전체코드
+```swift
+import UIKit
+
+struct SettingsOptions {
+  let title: String
+  let icon: UIImage?
+  let iconBackgroundColor: UIColor
+  let handler: (() -> Void)
+}
+
+class TableViewController: UIViewController {
+
+  private let tableView: UITableView = {
+    let table = UITableView(frame: .zero, style: .grouped)
+    table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    return table
+  }()
+  
+  var models = [SettingsOptions]()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    configure()
+    title = "Settings"
+    view.addSubview(tableView)
+    tableView.frame = view.bounds
+
+    tableView.delegate = self
+    tableView.dataSource = self
+  }
+
+  func configure() {
+    self.models = Array(0...100).compactMap({
+      SettingsOptions(title: "Item \($0)", icon: UIImage(systemName: "house"), iconBackgroundColor: .systemPink) {
+
+      }
+    })
+  }
+}
+
+extension TableViewController: UITableViewDelegate, UITableViewDataSource {
+
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return models.count
+  }
+  
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let model = models[indexPath.row]
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+  
+    cell.textLabel?.text = model.title
+    return cell
+  }
+}
+
+```
