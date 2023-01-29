@@ -114,7 +114,7 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
 
 ```
 
-# Step2. 테이블뷰 내용을 보여주기위한 구조체 구현
+## Step2. 테이블뷰 내용을 보여주기위한 구조체 구현
 
 ### 구조체 구현
 - `icon`처럼 항상 존재하지는 않을 정보라면 `?`을 통해 옵셔널 세팅해줄 것
@@ -230,3 +230,60 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 ```
+
+## Step3. UITableViewCell생성하기
+- identifier 세팅하기
+  ```
+  static let identifier = "SettingTableViewCell"
+
+  ```
+- swift파일 세팅
+  ```
+  import UIKit
+
+  class SettingTableViewCell: UITableViewCell {
+
+    static let identifier = "SettingTableViewCell"
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+      super.init(style: style, reuseIdentifier: reuseIdentifier)
+    }
+    
+    required init?(coder: NSCoder) {
+      fatalError()
+    }
+    
+    override func layoutSubviews() {
+      super.layoutSubviews()
+    }
+    
+    override func prepareForReuse() {
+      super.prepareForReuse()
+    }
+  }
+
+  ```
+
+- ViewController에서 해당 TableViewCell 등록하기
+  ```
+  // Property
+  private let tableView: UITableView = {
+    let table = UITableView(frame: .zero, style: .grouped)
+    table.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.identifier)
+    return table
+  }()
+  
+  // TableViewDelegate - Cell for Row At 에도 셀정보 등록
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let model = models[indexPath.row]
+    guard let cell = tableView.dequeueReusableCell(
+      withIdentifier: SettingTableViewCell.identifier,
+      for: indexPath
+    ) as? SettingTableViewCell else {
+      return UITableViewCell()
+    }
+  
+    cell.configure(with: model)
+    return cell
+  }
+  ```
