@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_123 TILs and counting..._
+_124 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [NSObject_UIResponder_UIView_UITableView_만들기](iOS/NSObject_UIResponder_UIView_UITableView_howToMake.md) - Sat Jan 28 15:32:24 2023 +0900
-- [Terminal 기초 사용법](ComputerScience/Terminal.md) - Fri Jan 27 15:12:06 2023 +0900
+- [NSObject - Timer](iOS/UIKit_NSObject_Timer.md) - Tue Jan 31 13:00:11 2023 +0900
+- [NSObject_UIResponder_UIView_UIActivityIndicatorView_만들기](iOS/UIKit_NsObject_UIResponder_UIView_UIActivityIndicatorView.md) - Tue Jan 31 13:00:11 2023 +0900
+- [NSDate - Timezone: UTC, GMT, KST](iOS/UIKit_NSObject_NSDate_UTC.md) - Tue Jan 31 13:00:11 2023 +0900
+- [NSObject_UIResponder_UIView_UITableView_만들기](iOS/UIKit_NSObject_UIResponder_UIView_UITableView_howToMake.md) - Tue Jan 31 13:00:11 2023 +0900
 - [present - CodeUI to StoryBoard](SwitchingScreens/moveToStoryboard.md) - Fri Jan 27 15:12:06 2023 +0900
-- [GitHub - Various APIs](Git/Git_ContributionGraph.md) - Fri Jan 27 08:20:37 2023 +0900
-- [NSDate - Timezone: UTC, GMT, KST](iOS/NSObject_NSDate_UTC.md) - Thu Jan 26 23:09:09 2023 +0900
 
 ### Categories
 
@@ -126,17 +126,18 @@ _123 TILs and counting..._
 - [로컬라이징](iOS/Localization.md)
 - [Login Logic (feat. UserDefault)](iOS/Login_Logic.md)
 - [MessageUI - 문의메일 보내기](iOS/MessageUI_sendMail.md)
-- [NSDate - Timezone: UTC, GMT, KST](iOS/NSObject_NSDate_UTC.md)
-- [NSObject - Timer](iOS/NSObject_Timer.md)
-- [NSObject_UIResponder_UIView_UITableView_만들기](iOS/NSObject_UIResponder_UIView_UITableView_howToMake.md)
 - [소켓이란](iOS/TIL220420_socket.md)
 - [타임스탬프 구현하기](iOS/TIL220914_TimeStamp.md)
 - [AudioToolbox - 롱프레스와 햅틱진동 구현하기 (Feat.Long press)](iOS/Third_AudioToolBox_HapticAndLongpress.md)
 - [써드파티(Third party)](iOS/Third_party.md)
 - [CGPoint, CGSize, CGRect](iOS/UIKit_CGPoint_CGSize_CGRect.md)
+- [NSDate - Timezone: UTC, GMT, KST](iOS/UIKit_NSObject_NSDate_UTC.md)
+- [NSObject - Timer](iOS/UIKit_NSObject_Timer.md)
 - [CGColor에 대하여](iOS/UIKit_NSObject_UIColorCgColor.md)
 - [UIView - UIControl - UIButton](iOS/UIKit_NSObject_UIResponder_UIView_UIControl_UIButton.md)
 - [UIImage - 경로를 통해 이미지 다운로드하여 세팅하기](iOS/UIKit_NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
+- [NSObject_UIResponder_UIView_UITableView_만들기](iOS/UIKit_NSObject_UIResponder_UIView_UITableView_howToMake.md)
+- [NSObject_UIResponder_UIView_UIActivityIndicatorView_만들기](iOS/UIKit_NsObject_UIResponder_UIView_UIActivityIndicatorView.md)
 - [UIKit - UIAlertController : 장문의 얼럿 만들기](iOS/UIKit_UIAlertController_NSMutableAttributedString.md)
 - [DatePicker 설치하기](iOS/UIKit_UIDatePicker.md)
 - [UIDevice](iOS/UIKit_UIDevice.md)
