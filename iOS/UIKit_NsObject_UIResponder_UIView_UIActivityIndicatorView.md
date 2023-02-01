@@ -35,6 +35,8 @@ class MainViewController {
 
 ```
 ## 싱글톤 객체 생성하기
+- 여러곳에서 전역적으로 인디케이터를 사용해야할 때가 있다. 그때마다 객체를 만들수 없기때문에 싱글톤을 생성한다. 
+- 탑뷰가 아니라 특정뷰, 특히 웹뷰에 대한 로딩을 해야할 상황이 있다. 이때 웹뷰의 바로위에 로딩뷰를 배치하기 위해선 두번째 함수를 사용한다. 
 ```
 class CustomIndicator {
     private var activityIndicatorView = UIActivityIndicatorView()
@@ -56,11 +58,27 @@ class CustomIndicator {
         activityIndicatorView.style = .large
         activityIndicatorView.startAnimating()
     }
+    /// 로딩비률 해당 웹뷰 바로위에만 둬야하는경우
+    func startAnimating(webView: WkWebView, view: UIView = (UIApplication.topViewController()?.view)!) {
+        webView.addSubview(activityIndicatorView)
+        activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            activityIndicatorView.centerXAnchor.constraint(equalTo: webView.centerXAnchor),
+            activityIndicatorView.centerYAnchor.constraint(equalTo: webView.centerYAnchor),
+        ])
+
+        activityIndicatorView.style = .large
+        activityIndicatorView.startAnimating()
+    }
+    
     /// 로딩뷰를 종료하는 함수
     func stopAnimating() {
         activityIndicatorView.stopAnimating()
         activityIndicatorView.removeFromSuperview()
     }
+    
+    
 }
 
 ```
