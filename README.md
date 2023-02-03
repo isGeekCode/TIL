@@ -6,14 +6,14 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_125 TILs and counting..._
+_126 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [Terminal 기초 사용법](ComputerScience/Terminal.md) - Fri Jan 27 15:12:06 2023 +0900
 - [present - CodeUI to StoryBoard](SwitchingScreens/moveToStoryboard.md) - Fri Jan 27 15:12:06 2023 +0900
+- [Terminal 기초 사용법](ComputerScience/Terminal.md) - Fri Jan 27 15:12:06 2023 +0900
 - [GitHub - Various APIs](Git/Git_ContributionGraph.md) - Fri Jan 27 08:20:37 2023 +0900
 - [UIKit - UISearchBar](iOS/UIKit_UITextField_UISearchBar.md) - Tue Jan 24 11:44:03 2023 +0900
 - [UIKit - UITextField](iOS/UIKit_UITextField.md) - Mon Jan 23 23:24:05 2023 +0900
@@ -24,6 +24,7 @@ _125 TILs and counting..._
 - [ComputerScience](#ComputerScience)
 - [Error](#Error)
 - [Extensions](#Extensions)
+- [GPTChatAI](#GPTChatAI)
 - [Git](#Git)
 - [IOS-Architecture](#IOS-Architecture)
 - [Integrity](#Integrity)
@@ -58,6 +59,9 @@ _125 TILs and counting..._
 ### [Extensions](#Extensions)
 - [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md)
 - [hex값을 UIcolor로 변환하는 방법](Extensions/TIL221025_convertHexToUIColor.md)
+
+### [GPTChatAI](#GPTChatAI)
+- [요즘 핫안 GPT로 앱만들어보기](GPTChatAI/MVVM_ReactorKit_Snapkit_RxSwift.md)
 
 ### [Git](#Git)
 - [Git Actions - Permission to ....git denied to github-actions](Git/GitAction_tokenError.md)
