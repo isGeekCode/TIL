@@ -84,6 +84,7 @@ AF.request("https://www.example.com/api/v1/data").responseJSON { response in
 
 
 ## POST형식
+여기에서 Post는 API가 반환하는 JSON 데이터를 매핑하는 Swift 구조체다.
 
 ```swift
 import Alamofire
@@ -125,17 +126,35 @@ AF.request("https://www.example.com/api/v1/data").responseData { response in
 }
 ```
 
-
 - 3. responseString
 
 ```swift
+import Alamofire
+
+AF.request("https://httpbin.org/get").responseString { response in
+    switch response.result {
+    case .success(let value):
+        print(value)
+    case .failure(let error):
+        print(error)
+    }
+}
 ```
 
 - 4. responseJSON
-
+상단 post부분 참조
 
 - 5. responseDecodable
+ responseDecodable 메서드는 응답 데이터를 [Post] 타입으로 자동으로 디코딩하고, 결과가 성공하면 response.value에 값이 할당된다.
+```swift
+import Alamofire
 
+AF.request("https://your-api.com/posts").responseDecodable(of: [Post].self) { (response) in
+    if let posts = response.value {
+        // do something with your decoded posts
+    }
+}
+```
 
 
 # Validation
