@@ -65,6 +65,17 @@ viewController 내부에 아래 코드를 입력한다.
     textField.leftView = imageView
 ```
 
+# Simulator Env
+
+## Simulator로 테스트할 때 TextField를 클릭하여 현재 키보드 모양을 보고싶은데 보이지 않을 때 보이게 하는 방법
+
+### Step1. Keyboard설정 들어가기
+구버전 위치
+- iOS Simulator -> Hardware -> Keyboard
+신버전 위치
+- I/O -> Keyboard
+### Step2. "Connect Hardware Keyboard" 체크 해제
+
 # 참고링크
 - https://stackoverflow.com/questions/35056705/convert-c-to-swift-add-magnifying-glass-icon-to-uitextfield
 - https://stackoverflow.com/questions/37452813/padding-before-textfield-icon
