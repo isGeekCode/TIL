@@ -1,5 +1,59 @@
 # UIKit - UITextField
 
+
+## textfield 사용하기
+1. 프로토콜 채택
+```swift
+  extension ViewController: UITextFieldDelegate { }
+```
+2. delegate 선언
+```swift
+  textfield.delegate = self
+```
+3. delegate 함수 구현
+아래는 return입력시 비활성화처리 코드
+```swift
+
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder() // TextField 비활성화
+    return true
+  }
+
+```
+
+## 입력시작시키기
+```swift
+(TextField 또는 UISearchBar).becomeFirstResponder()
+```
+
+
+## 입력종료시키기
+```swift
+(TextField 또는 UISearchBar).resignFirstResponder()
+```
+
+```swift
+extension ViewController: UITextFieldDelegate {
+  
+  textfield.delegate = self
+  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder() // TextField 비활성화
+    return true
+  }
+}
+```
+
+
+## VC내부를 클릭하면 입력 종료시키기 
+viewController 내부에 아래 코드를 입력한다.
+```swift
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    self.view.endEditing(true)
+  }
+```
+
+
 ## 텍스트필드 아이콘 넣기
 ```
     let imageView = UIImageView()
@@ -10,7 +64,6 @@
     textField.leftViewMode = .always
     textField.leftView = imageView
 ```
-
 
 # 참고링크
 - https://stackoverflow.com/questions/35056705/convert-c-to-swift-add-magnifying-glass-icon-to-uitextfield
