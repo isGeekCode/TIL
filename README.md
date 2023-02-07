@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_126 TILs and counting..._
+_127 TILs and counting..._
 
 ---
 
@@ -171,6 +171,7 @@ _126 TILs and counting..._
 
 ### [swift](#swift)
 - [Do - Try - Catch](swift/DoTryCatch.md)
+- [](swift/Swift_random_in_array.md)
 - [안전하게 배열에 접근하는 방법](swift/TIL220310_contactArraySafely.md)
 - [[Common Method] 로그 관련 함수](swift/TIL220318_aboutLogMethod.md)
 - [# 여러개의 Action을 한번에 추가하기](swift/TIL220404_forEach.md)
