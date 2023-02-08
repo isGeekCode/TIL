@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_127 TILs and counting..._
+_128 TILs and counting..._
 
 ---
 
@@ -73,6 +73,7 @@ _127 TILs and counting..._
 
 ### [IOS-Architecture](#IOS-Architecture)
 - [디자인패턴이란](IOS-Architecture/About_Design_MVX_Init.md)
+- [](IOS-Architecture/CocoaDesignPattern_Singleton.md)
 - [Architecture - IOS MVC의 한계](IOS-Architecture/MVC_Massive.md)
 - [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](IOS-Architecture/MVC_traditional.md)
 - [Architecture - 간단한 MVVM구조 예제](IOS-Architecture/MVVM_simpleExample.md)
