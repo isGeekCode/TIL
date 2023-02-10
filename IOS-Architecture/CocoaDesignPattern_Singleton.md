@@ -1,4 +1,3 @@
-
 # Cocoa Design Pattern - Singleton
 
 싱글톤 패턴이란, 
