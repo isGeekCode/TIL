@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_128 TILs and counting..._
+_129 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [UIApplication - AppDelegate - App's Status](iOS/UIApplication_lifeCycle.md) - Fri Feb 10 23:38:13 2023 +0900
 - [present - CodeUI to StoryBoard](SwitchingScreens/moveToStoryboard.md) - Fri Jan 27 15:12:06 2023 +0900
 - [Terminal 기초 사용법](ComputerScience/Terminal.md) - Fri Jan 27 15:12:06 2023 +0900
 - [GitHub - Various APIs](Git/Git_ContributionGraph.md) - Fri Jan 27 08:20:37 2023 +0900
 - [UIKit - UISearchBar](iOS/UIKit_UITextField_UISearchBar.md) - Tue Jan 24 11:44:03 2023 +0900
-- [UIKit - UITextField](iOS/UIKit_UITextField.md) - Mon Jan 23 23:24:05 2023 +0900
 
 ### Categories
 
@@ -143,6 +143,7 @@ _128 TILs and counting..._
 - [타임스탬프 구현하기](iOS/TIL220914_TimeStamp.md)
 - [AudioToolbox - 롱프레스와 햅틱진동 구현하기 (Feat.Long press)](iOS/Third_AudioToolBox_HapticAndLongpress.md)
 - [써드파티(Third party)](iOS/Third_party.md)
+- [UIApplication - AppDelegate - App's Status](iOS/UIApplication_lifeCycle.md)
 - [CGPoint, CGSize, CGRect](iOS/UIKit_CGPoint_CGSize_CGRect.md)
 - [UIKit - UIAlertController : 장문의 얼럿 만들기](iOS/UIKit_UIAlertController_NSMutableAttributedString.md)
 - [DatePicker 설치하기](iOS/UIKit_UIDatePicker.md)
