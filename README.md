@@ -174,7 +174,7 @@ _130 TILs and counting..._
 
 ### [swift](#swift)
 - [Do - Try - Catch](swift/DoTryCatch.md)
-- [](swift/Swift_random_in_array.md)
+- [random함수를 이용해 Random한 숫자 뽑아내기](swift/Swift_random_in_array.md)
 - [안전하게 배열에 접근하는 방법](swift/TIL220310_contactArraySafely.md)
 - [[Common Method] 로그 관련 함수](swift/TIL220318_aboutLogMethod.md)
 - [# 여러개의 Action을 한번에 추가하기](swift/TIL220404_forEach.md)
