@@ -1,4 +1,3 @@
-
 # random함수를 이용해 Random한 숫자 뽑아내기
 Random한 Int 값을 뽑기 위해서는 random 함수를 이용하면 된다.
 
