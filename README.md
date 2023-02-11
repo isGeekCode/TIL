@@ -190,7 +190,7 @@ _129 TILs and counting..._
 - [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](swift/aboutProperty205.md)
 - [타입프로퍼티(static) - 프로퍼티(3)](swift/aboutProperty3.md)
 - [Array - 빠르게 **빈 배열 만들기**](swift/array_fastInit.md)
-- [📌 component()](swift/splite_component_map.md)
+- [Splite과 Component](swift/splite_component_map.md)
 - [Closure 톺아보기](swift/swift_firstClassClosureMaster.md)
 - [1급 객체](swift/swift_firstClassObject.md)
 - [Switch case let, If case let, guard case let](swift/switchCaseLet_IfCaseLet_GuardCaseLet.md)
