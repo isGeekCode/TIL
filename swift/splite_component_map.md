@@ -1,3 +1,5 @@
+# Splite과 Component
+
 # 📌 component()
 
 `Apple Document`
