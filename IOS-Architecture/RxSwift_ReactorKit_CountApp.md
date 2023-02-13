@@ -301,9 +301,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         counterVC?.reactor = counterViewReactor
     }
 }
+```
 여기까지가 기본 기능이다. 
-내일은 추가적으로 로딩관련 내용을 넣어야겠다.
 
+그러면 한가지더 로직을 추가해서 다채롭게 만들어보자
+# IndicatorView 추가하기
+비동기 같은 상황을 만들고 IndicatorView를 추가하고자 한다. 
+
+## 조건
+- 비동기에서 처럼 1초후 값이 증가, 감소하게 만들어줄 것
+- 1초 동안 떠있을 인디케이터를 만들 것
+
+## IndicatorView 변수 선언
+```swift
+    // 인디케이터 뷰를 추가
+    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
+```
+## Reactor 구현
+
+
+```swift
+    struct State {
+        var value: Int = 0
+        // 새로 구현
+        var isLoading: Bool = false
+    }
 ```
 ```swift
 ```
@@ -311,6 +333,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 ```
 ```swift
 ```
+
+```swift
+```
+
 
 ### 참고
 - https://h1guitar.tistory.com/302
+- https://velog.io/@tmdckd232/Swift-Reactor-Kit
