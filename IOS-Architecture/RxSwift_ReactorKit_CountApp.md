@@ -74,3 +74,243 @@ class CounterViewReactor: Reactor {
 
 
 
+# Reactor Kit 예제
+## 최초상태
+최초상태는 아래와 같다. 
+- increaseButton과 decreaseButton, valueLabel이 있다.
+- 두 버튼을 누르면 valueLabel에 있는 숫자가 늘어나고 줄어든다. 
+
+```swift
+import RxSwift
+import RxCocoa
+import ReactorKit
+import UIKit
+
+class CounterViewController: UIViewController {
+
+    @IBOutlet var increaseButton: UIButton!
+    @IBOutlet var decreaseButton: UIButton!
+    @IBOutlet var valueLabel: UILabel!
+    
+```
+
+
+# Reactor 만들기
+CounterViewController는 ReactorKit에서 'View'에 해당하는데, 이 View에 대응되는 Reactor를 만들어주는 과정이다.  
+
+Reactor는 View의 상태를 관찰한다. View로부터 Action을 전달받아 비즈니스 로직을 수행한 후 상태를 변경하여 다시 View에 전달한다.
+
+Reactor 프로토콜
+- 사용자와의 상호작용을 표현하는 Action
+- 상태를 변경하는 Mutation
+- View의 상태를 표현하는 State
+- 최초의 상태를 나타내는 initialState
+
+이렇게 Reactor프로토콜을 따르는 CounterViewReactor를 만들어보자
+아래는 Reactor프로토콜을 충족시키는 기본구조이다. 
+```swift
+class CounterViewReactor: Reactor {
+    enum Action { }
+    
+    enum Mutation { }
+    
+    struct State { }
+    
+    let initialState = State()
+}
+```
+
+### 1. Action
+
+- 사용자 액션은 increase(플러스버튼누르기)와 decrease(마이너스 버튼 누르기)가 있는데, 이것을 정의한다. 
+  (사용자가 위의 액션을 하면 Reactor에 increase 또는 decrease가 전달될 것이다.)
+
+
+### 2. State
+- 현재 값을 정의하는 value라는 것을 만든다. 
+
+
+### 3. Mutation 
+- Action과 State을 이어주는 부분이다.
+
+아래 두가지를 정의한다.
+- increase라는 Action이 들어왔을 때는 value를 1 증가처리 -> increaseValue 
+- decraese라는 Action이 들어왔을 때는 value를 1 감소처리 -> decreaseValue 
+
+ ```swift
+class CounterViewReactor: Reactor {
+    enum Action {
+        case increase
+        case decrease
+    }
+    
+    enum Mutation {
+        case increaseValue
+        case decreaseValue
+    }
+    
+    struct State {
+        var value: Int = 0
+    }
+    
+    let initialState = State()
+}
+```
+
+### mutate() 구현하기
+action을 받아서 mutation의 Observable을 리턴해주는 함수이다.
+- Action 스트림을 Mutation 스트림으로 변환하고, 네트워킹 또는 비동기 로직등의 Side Effect를 처리한다.
+그 결과로 Observable<Mutation>이 반환되고 reduce() 메소드로 전달된다.
+
+`increase`라는 action이 들어오면 `increaseValue`라는 mutation의 Observable을 
+`decrease`라는 action이 들어오면 `decreaseValue`라는 mutation의 Observable을 리턴하도록 구현한다.
+
+enum타입의 action에 구현한 내용들은 switch에 모두 작성해야한다. 여기서 Observable을 리턴하기때문에 스트림이 시작된다. 
+
+```swift
+    func mutate(action: CounterViewReactor.Action) -> Observable<CounterViewReactor.Mutation> {
+        switch action {
+        case .increase:
+                Observable.just(Mutation.increaseValue)
+        case .decrease:
+                Observable.just(Mutation.decreaseValue)
+        }
+    }
+```
+
+###  reduce() 구현하기
+이제 reduce 함수를 구현한다. 이 함수는 이전 상태와 mutaion을 받아서 다음 상태를 반환하는 함수이다.
+enum타입의 mutate에 구현한 내용들은 switch에 모두 작성해야한다.
+
+```swift
+
+    func reduce(state: CounterViewReactor.State, mutation: CounterViewReactor.Mutation) -> CounterViewReactor.State {
+        var newState = state
+        switch mutation {
+        case .increaseValue:
+            newState.value += 1
+        case .decreaseValue:
+            newState.value -= 1
+        }
+        return newState
+    }
+```
+- mutation이 increaeValue이면 이전상태에서 1을 증가시킨 새로운 상태를 리턴해주고
+- mutation이 decreaseValue이면 이전 상태에서 1을 감소시킨 새로운 상태를 리턴해준다.
+
+이렇게 하면 Reactor의 구현이 끝난다.
+
+
+# View 채택하기
+ReactorKit의 View로 만들려면 View라는 프로토콜을 따르게 해줘야한다.
+만약 storyboard로 구현을 했다면 StoryboardView를 채택하고, 그게 아니라면 View를 채택한다. 
+## 채택 예시
+```swift
+class CounterViewController: UIViewController, StoryboardView { }
+
+class CounterViewController: UIViewController, View { }
+```
+View는 아래와 같이 구성되어있다.
+
+## View의 기본구조
+스토리보드를 사용하니까 StoryboardView 프로토콜을 따르게 해준다.
+disposeBag을 구현해주고
+bind라는 함수의 구현한다. (reactor 타입을 아까 만든 CounterViewReactor로 한다.)
+
+```swift
+class CounterViewController: UIViewController, View { 
+
+    var disposeBag: DisposeBag = DisposeBag()
+
+    @IBOutlet var increaseButton: UIButton!
+    @IBOutlet var decreaseButton: UIButton!
+    @IBOutlet var valueLabel: UILabel!
+
+    func bind(reactor: CounterViewReactor) { }
+```
+
+## View의 bind구현하기
+### Action 바인딩
+이제 bind함수에서 사용자 액션을 reactor의 action으로 바인딩한다.
+
+```swift
+
+    func bind(reactor: CounterViewReactor) {
+        // Action 바인딩
+        increaseButton.rx.tap
+            .map { Reactor.Action.increase }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        decreaseButton.rx.tap
+            .map { Reactor.Action.decrease }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+    }
+```
+increaseButton이 탭되면 increase 액션으로 변환하여 reactor의 action에 바인딩해주겠다
+decreaseButton이 탭되면 decrease 액션으로 변환하여 reactor의 action에 바인딩해주겠다
+
+라는 의미의 코드이다.
+### State 바인딩
+
+이제 reactor가 새로운 state를 주면, state안에 있는 value로 valueLabel을 업데이트 시키도록 한다.  
+(다만 value가 이전 값이랑 다르다면)
+
+```swift
+
+    func bind(reactor: CounterViewReactor) {
+        // Action 바인딩
+        increaseButton.rx.tap
+            .map { Reactor.Action.increase }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        decreaseButton.rx.tap
+            .map { Reactor.Action.decrease }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        // State 바인딩
+        reactor.state
+            .map { $0.value }
+            .distinctUntilChanged()
+            .map { "\($0)" }
+            .bind(to: valueLabel.rx.text)
+            .disposed(by: disposeBag)
+    }
+```
+이제 view의 구현도 완료되었다.
+
+
+## View에 Reactor 넣어주기
+이렇게 View내부에 바인딩을 한다고 동작하지않는다. bind메서드는 *해당 View의 reactor*에 새로운 값이 들어와야만 반응하기 때문이다. 
+
+## AppDelegate / SceneDelegate
+버전마다 다른 경우 인데, 현재 View를 init하는 부분에 이 View의 reactor를 넣어준다. 그러면 bind함수가 실행 가능해진다. 
+
+```swift
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
+    var window: UIWindow?
+
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let _ = (scene as? UIWindowScene) else { return }
+        let counterVC = window?.rootViewController as? CounterViewController
+        let counterViewReactor = CounterViewReactor()
+        counterVC?.reactor = counterViewReactor
+    }
+}
+여기까지가 기본 기능이다. 
+내일은 추가적으로 로딩관련 내용을 넣어야겠다.
+
+```
+```swift
+```
+```swift
+```
+```swift
+```
+
+### 참고
+- https://h1guitar.tistory.com/302
