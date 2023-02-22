@@ -1,4 +1,6 @@
-# UIButton - 스토리보드 / 코드 구현하기 / addTarget / 스토리보드의 장단점
+# Layout - CodeUI, StoryboardUI: UIButton
+
+
 
 UIButton 은 말그대로 버튼을 눌렀을 때, 특정 로직을 실행할 수 있도록 
 
@@ -118,6 +120,48 @@ class ViewController: UIViewController {
 }
 
 ```
+
+
+## UIButton에 버튼이미지 세팅하기
+### Step1: UIImage생성
+버튼에 들어가는 이미지는 UIImage에 담아 사용한다. 
+이때 UIImage는 아래와 같이 만든다. 
+```swift
+// 아이콘이미지를 사용하는 경우
+let image = UIImage(systemName: "heart.fill")
+
+// Assets에 넣은 커스텀 이미지를 사용하는 경우
+let image = UIImage(named: "normal-image")
+```
+### Step2: 원하는 버튼의 상태에 세팅
+기본적인 상태의 버튼 이미지를 선택할때는 아래와 같다.
+```swift
+myButton.setImage(normalImage, for: .normal)
+```
+
+버튼을 클릭하는 순간의 이미지를 선택할 경우 highlighted를 세팅한다.
+```swift
+myButton.setImage(normalImage, for: .highlighted)
+```
+
+
+### UIControl.State
+버튼의 상태는 UIControl.State 구조체로 이루어져있다.
+
+.normal: 기본 상태
+.highlighted: 터치 다운 상태
+.disabled: 비활성화 상태
+.selected: 선택된 상태
+.focused: 포커스된 상태
+.application: 어플리케이션 정의 상태
+
+
+
+
+각 상태는 해당하는 경우에 UIControl에서 발생하는 이벤트 및 동작을 다르게 처리하도록 도와준다. 예를 들어, .normal 상태에서는 버튼이 보통 상태이므로, 사용자가 버튼을 눌렀을 때의 동작을 정의할 수 있다. 반면에, .disabled 상태에서는 버튼이 비활성화되었으므로, 사용자가 버튼을 눌러도 아무런 동작이 수행되지 않도록 처리할 수 있다.
+
+UIControl 클래스에서는 state 프로퍼티를 통해 현재 상태를 확인할 수 있으며, `setEnabled(_:animated:)`, `setSelected(_:animated:)`, `setHighlighted(_:animated:)` 등의 메서드를 사용하여 상태를 변경할 수 있다.
+
 
 ## 스토리보드에서 작업하면 생략되는 코드들
 
