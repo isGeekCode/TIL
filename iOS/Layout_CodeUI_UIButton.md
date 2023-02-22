@@ -1,4 +1,4 @@
-# Layout - CodeUI, StoryboardUI: UIButton
+# Layout - CodeUI: UIButton
 
 
 
@@ -148,12 +148,12 @@ myButton.setImage(normalImage, for: .highlighted)
 ### UIControl.State
 버튼의 상태는 UIControl.State 구조체로 이루어져있다.
 
-.normal: 기본 상태
-.highlighted: 터치 다운 상태
-.disabled: 비활성화 상태
-.selected: 선택된 상태
-.focused: 포커스된 상태
-.application: 어플리케이션 정의 상태
+- .normal: 기본 상태
+- .highlighted: 터치 다운 상태
+- .disabled: 비활성화 상태
+- .selected: 선택된 상태
+- .focused: 포커스된 상태
+- .application: 어플리케이션 정의 상태
 
 
 
