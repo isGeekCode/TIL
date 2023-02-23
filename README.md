@@ -145,7 +145,7 @@ _137 TILs and counting..._
 - [CGColor에 대하여](iOS/NSObject_UIColorCgColor.md)
 - [NSObject - UIFont](iOS/NSObject_UIFont.md)
 - [UIView - UIControl - UIButton](iOS/NSObject_UIResponder_UIView_UIControl_UIButton.md)
-- [UIImage - 경로를 통해 이미지 다운로드하여 세팅하기](iOS/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
+- [NSObjet-UIResponder-UIView-UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](iOS/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
 - [NSObject_UIResponder_UIView_UITableView_만들기](iOS/NSObject_UIResponder_UIView_UITableView_howToMake.md)
 - [NSObject - URLSession](iOS/NSObject_URLSession.md)
 - [NSObject_UIResponder_UIView_UIActivityIndicatorView_만들기](iOS/NsObject_UIResponder_UIView_UIActivityIndicatorView.md)
