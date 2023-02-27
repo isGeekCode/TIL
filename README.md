@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_139 TILs and counting..._
+_140 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [KVC와 KVO](iOS/KVC_KVO.md) - Mon Feb 27 20:53:27 2023 +0900
 - [Swift문법 기초](swift/Swift1.md) - Sat Feb 25 09:56:13 2023 +0900
 - [언어모델이란](GPTChatAI/chatGPT.md) - Fri Feb 24 23:57:46 2023 +0900
 - [NSObject - UIFont](iOS/NSObject_UIFont.md) - Thu Feb 23 09:31:53 2023 +0900
 - [Layout - CodeUI: UIButton](iOS/Layout_CodeUI_UIButton.md) - Wed Feb 22 23:54:58 2023 +0900
-- [dp와 pt에 대하여 (Feat. 포인트란)](Util/DP_PT.md) - Tue Feb 21 23:22:42 2023 +0900
 
 ### Categories
 
@@ -124,6 +124,7 @@ _139 TILs and counting..._
 - [FileManager - 사용하기](iOS/FileManager_introduce.md)
 - [Gesture Recognizer - Long Press](iOS/GestureRecognizer_LongPress.md)
 - [Info - App Version 가져오기](iOS/Info_appVersion.md)
+- [KVC와 KVO](iOS/KVC_KVO.md)
 - [Layout - 오토레이아웃의 개념](iOS/Layout_About_AutoLayout.md)
 - [Layout - UIView에 대하여](iOS/Layout_About_UIView.md)
 - [Layout - CGRectMake는 뭘까](iOS/Layout_CGRectMake.md)
