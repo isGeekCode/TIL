@@ -43,7 +43,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 ```
-<img width="368" alt="스크린샷 2023-02-15 오후 7 18 26" src="https://user-images.githubusercontent.com/76529148/219061864-f28b2dfd-de2d-4ed7-ab14-0f0764f7a010.png">
 
 아래처럼 여러 옵션을 선택할 수 있다. 
 - bold
@@ -54,3 +53,4 @@ struct ContentView_Previews: PreviewProvider {
 - foregroundColor 
 - background
 
+<img width="368" alt="스크린샷 2023-02-15 오후 7 18 26" src="https://user-images.githubusercontent.com/76529148/219061864-f28b2dfd-de2d-4ed7-ab14-0f0764f7a010.png">
