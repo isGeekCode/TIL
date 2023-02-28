@@ -32,7 +32,9 @@ VStack {
         }
 ```
 
-![https://user-images.githubusercontent.com/76529148/221868073-7b9d9f9b-c5cc-4162-8099-bf9769ded5de.png](https://user-images.githubusercontent.com/76529148/221868073-7b9d9f9b-c5cc-4162-8099-bf9769ded5de.png){: width="300" height="300"){: .center}
+<center>
+<img src="https://user-images.githubusercontent.com/76529148/221868073-7b9d9f9b-c5cc-4162-8099-bf9769ded5de.png  width="200" height="400"></center>
+
 
 그래서 기존 Stack을 ScrollView로 수정하게 되면 아래와 같이 스크롤이 가능한 객체로 된다.  ScrollView의 인자로는 스크롤 가능한 컨텐츠를 포함하는 뷰가 전달된다. 이 컨텐츠 뷰는 ScrollView에 배치된 다양한 SwiftUI 뷰와 레이아웃 방식이 동일하다.
 
