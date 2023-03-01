@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_141 TILs and counting..._
+_142 TILs and counting..._
 
 ---
 
@@ -133,6 +133,7 @@ _141 TILs and counting..._
 - [Layout - CodeUI: UIView, UILabel](iOS/Layout_CodeUI_UILabel_UIView.md)
 - [Layout - StoryboardUI: CornerRadius](iOS/Layout_StoryboardUI_CornerRadius.md)
 - [Layout - SwiftUI: HStack, VStack, ZStack](iOS/Layout_SwiftUI_HStackVStackZstack.md)
+- [Layout - SwiftUI: List](iOS/Layout_SwiftUI_List.md)
 - [Layout - SwiftUI: ScrollView](iOS/Layout_SwiftUI_ScrollView.md)
 - [Layout - SwiftUI: UIButton](iOS/Layout_SwiftUI_UIButton.md)
 - [Layout - SwiftUI: UIImage](iOS/Layout_SwiftUI_UIImage.md)
