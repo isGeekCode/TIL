@@ -174,3 +174,135 @@ struct ContentView: View {
 ```
 
 결론적으로 뭔가 더 길어진것 처럼 보이지만 Person을 구현하면 한 부분에서 관리하기 쉬워진다는 장점이 있다.
+
+
+# Section
+
+List를 사용하다보면 너무 복잡해져서 카테고리별로 나눠야할 때가 있다.
+
+아이폰에서 설정페이지를 진입하면 분류에 따라 칸이 나뉘어져 있다는 걸 알 수 있다.
+
+이렇게 묶어서 표현하는 것을 Section이라고 한다. 
+
+<img width="223" alt="스크린샷 2023-03-01 오후 6 57 14" src="https://user-images.githubusercontent.com/76529148/222105825-17b125d6-01f0-4e4d-bc3d-6b8a4f96d08c.png">
+
+## Section 만들기
+
+가장 간단한 구조는 `Section { 들어갈 컨텐츠 }` 의 구조로 생성할 수 있다.
+
+```swift
+List {
+  Section {
+    HStack {
+      Image(systemName: "sun.min.fill")
+      Text("GeekCode")
+    }
+    HStack {
+      Image(systemName: "cloud.fill")
+      Text("HamSik")
+    }
+    HStack {
+      Image(systemName: "bolt")
+      Text("DRu")
+    }
+  }
+
+  Section {
+    HStack {
+      Image(systemName: "sun.min.fill")
+      Text("GeekCode")
+    }
+    HStack {
+      Image(systemName: "cloud.fill")
+      Text("HamSik")
+    }
+    HStack {
+      Image(systemName: "bolt")
+      Text("DRu")
+    }
+  }
+}
+```
+
+<img width="223" alt="스크린샷 2023-03-01 오후 6 49 50" src="https://user-images.githubusercontent.com/76529148/222103990-6422a66e-e94a-40fe-931c-94d6067f4f57.png">
+
+### Section의 Header, Footer
+
+UIKit에서 TableView와 마찬가지로 Section에도 Header와 Footer를 만들 수 있다.
+
+이 부분에는 Section의 컨텐츠 부분과 마찬가지로 HStack에 넣어사용하면 되고 , 심지어 VStack도 들어간다. 
+
+`Text`는 대문자로 들어간다. 
+
+기본구조는 아래와 같다. 
+
+```swift
+List {
+  Section {
+
+  // 컨텐츠
+
+  } header: {
+
+  // 헤더
+
+  } footer: {
+
+  // 푸터
+
+  }
+}
+```
+
+아래와 같이 Header와 Footer를 각 Section에 만들 수 있다.
+
+```swift
+List {
+    Section {
+          // 컨텐츠
+          HStack {
+            Image(systemName: "sun.min.fill")
+            Text("GeekCode")
+          }
+          HStack {
+            Image(systemName: "cloud.fill")
+            Text("HamSik")
+          }
+          HStack {
+            Image(systemName: "bolt")
+            Text("DRu")
+          }
+
+      } header: {
+        // 헤더
+        HStack {
+          Image(systemName: "sun.min.fill")
+          Text("Header")
+        }
+
+      } footer: {
+        // 푸터
+        HStack {
+          Image(systemName: "sun.min.fill")
+          Text("Footer")
+        }
+    } // Section1
+      
+    Section {
+        HStack {
+          Image(systemName: "sun.min.fill")
+          Text("GeekCode")
+        }
+        HStack {
+          Image(systemName: "cloud.fill")
+          Text("HamSik")
+        }
+        HStack {
+          Image(systemName: "bolt")
+          Text("DRu")
+        }
+    } // Section2
+}
+```
+
+<img width="214" alt="스크린샷 2023-03-01 오후 7 08 48" src="https://user-images.githubusercontent.com/76529148/222108719-835d3ba4-7a66-4eaa-95f7-f67d80ecf29b.png">
