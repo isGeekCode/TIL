@@ -14,7 +14,9 @@
 - 타이머 기능을 정지하려면 Invalidate() 메서드를 호출
 
 ```swift
-let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startTimer), userInfo: nil, repeats: true)
+var timer: Timer?
+
+timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startTimer), userInfo: nil, repeats: true)
 
 // 타이머 시작
 @objc func startTimer() {
