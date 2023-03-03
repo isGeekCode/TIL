@@ -148,7 +148,7 @@ _145 TILs and counting..._
 - [Login Logic (feat. UserDefault)](iOS/Login_Logic.md)
 - [MessageUI - 문의메일 보내기](iOS/MessageUI_sendMail.md)
 - [NSDate - Timezone: UTC, GMT, KST](iOS/NSObject_NSDate_UTC.md)
-- [NSObject - Timer](iOS/NSObject_Timer.md)
+- [NSObject - Timer : 타이머 구현하기](iOS/NSObject_Timer.md)
 - [CGColor에 대하여](iOS/NSObject_UIColorCgColor.md)
 - [NSObject - UIFont](iOS/NSObject_UIFont.md)
 - [UIView - UIControl - UIButton](iOS/NSObject_UIResponder_UIView_UIControl_UIButton.md)
