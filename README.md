@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_143 TILs and counting..._
+_145 TILs and counting..._
 
 ---
 
@@ -30,9 +30,9 @@ _143 TILs and counting..._
 - [Integrity](#Integrity)
 - [Library](#Library)
 - [Objc](#Objc)
+- [RelatedImage](#RelatedImage)
 - [Self-Review](#Self-Review)
 - [SwitchingScreens](#SwitchingScreens)
-- [Util](#Util)
 - [Xcode](#Xcode)
 - [iOS](#iOS)
 - [swift](#swift)
@@ -71,6 +71,8 @@ _143 TILs and counting..._
 - [GitHub - Various APIs](Git/Git_ContributionGraph.md)
 - [공동작업을 위한 Git 버전관리](Git/TIL220422_GitControl.md)
 - [git ignore 사용하기](Git/TIL221108_how_to_make_ignore.md)
+- [Git - Fork한 레포지토리 최신화 하기](Git/gitFork.md)
+- [Git - 깃 리모트 변경 하기](Git/gitRemoteChange.md)
 - [Commit Template - 소스트리](Git/how_to_make_SourceTree_Commit_Template.md)
 - [XcodeError - UserInterfaceState.xcuserState가 자꾸 뜰 때](Git/what_is_UserInterfaceState.md)
 
@@ -99,14 +101,14 @@ _143 TILs and counting..._
 ### [Objc](#Objc)
 - [c언어와 objective-c의 발전](Objc/TIL220421_aboutObjectiveC.md)
 
+### [RelatedImage](#RelatedImage)
+- [dp와 pt에 대하여 (Feat. 포인트란)](RelatedImage/DP_PT.md)
+
 ### [Self-Review](#Self-Review)
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
 
 ### [SwitchingScreens](#SwitchingScreens)
 - [present - CodeUI to StoryBoard](SwitchingScreens/moveToStoryboard.md)
-
-### [Util](#Util)
-- [dp와 pt에 대하여 (Feat. 포인트란)](Util/DP_PT.md)
 
 ### [Xcode](#Xcode)
 - [.ipa 파일 만들기](Xcode/How_to.make_ipa.md)
