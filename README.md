@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_145 TILs and counting..._
+_146 TILs and counting..._
 
 ---
 
@@ -47,6 +47,7 @@ _145 TILs and counting..._
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
 - [Terminal 기초 사용법](ComputerScience/Terminal.md)
 - [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
+- [OSI 7 Layer](ComputerScience/osi_7layer.md)
 - [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
 ### [Error](#Error)
