@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_147 TILs and counting..._
+_148 TILs and counting..._
 
 ---
 
@@ -74,6 +74,7 @@ _147 TILs and counting..._
 - [공동작업을 위한 Git 버전관리](Git/TIL220422_GitControl.md)
 - [git ignore 사용하기](Git/TIL221108_how_to_make_ignore.md)
 - [Git - Fork한 레포지토리 최신화 하기](Git/gitFork.md)
+- [Git - 갑자기 터미널이 한글로 나온다면](Git/gitKorean.md)
 - [Git - 깃 리모트 변경 하기](Git/gitRemoteChange.md)
 - [Commit Template - 소스트리](Git/how_to_make_SourceTree_Commit_Template.md)
 - [XcodeError - UserInterfaceState.xcuserState가 자꾸 뜰 때](Git/what_is_UserInterfaceState.md)
