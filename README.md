@@ -20,6 +20,7 @@ _149 TILs and counting..._
 
 ### Categories
 
+- [AppStore](#AppStore)
 - [Book](#Book)
 - [ComputerScience](#ComputerScience)
 - [Error](#Error)
@@ -36,6 +37,9 @@ _149 TILs and counting..._
 - [Xcode](#Xcode)
 - [iOS](#iOS)
 - [swift](#swift)
+
+### [AppStore](#AppStore)
+- [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](AppStore/AppStore_missing_Compliance.md)
 
 ### [Book](#Book)
 - [백만장자의 시크릿](Book/220604_BookReview_Millionaire_Secret.md)
@@ -190,7 +194,6 @@ _149 TILs and counting..._
 - [DynamicSplash 세팅하기](iOS/splash_dynamicSplash.md)
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md)
 - [appStoreReceiptURL](iOS/xIsProductionCheck.md)
-- [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](iOS/zAppStore_missing_Compliance.md)
 
 ### [swift](#swift)
 - [Do - Try - Catch](swift/DoTryCatch.md)
