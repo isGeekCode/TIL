@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_150 TILs and counting..._
+_151 TILs and counting..._
 
 ---
 
@@ -76,6 +76,7 @@ _150 TILs and counting..._
 ### [Git](#Git)
 - [Git Actions - Permission to ....git denied to github-actions](Git/GitAction_tokenError.md)
 - [GitHub - Various APIs](Git/Git_ContributionGraph.md)
+- [푸시 에러 : 원격 저장소와 커밋 기록이 다른 경우](Git/Git_pushError_OtherCommit.md)
 - [공동작업을 위한 Git 버전관리](Git/TIL220422_GitControl.md)
 - [git ignore 사용하기](Git/TIL221108_how_to_make_ignore.md)
 - [Git - Fork한 레포지토리 최신화 하기](Git/gitFork.md)
