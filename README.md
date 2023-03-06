@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_149 TILs and counting..._
+_150 TILs and counting..._
 
 ---
 
@@ -39,6 +39,7 @@ _149 TILs and counting..._
 - [swift](#swift)
 
 ### [AppStore](#AppStore)
+- [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](AppStore/AppStore_AppDismiss.md)
 - [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](AppStore/AppStore_missing_Compliance.md)
 
 ### [Book](#Book)
