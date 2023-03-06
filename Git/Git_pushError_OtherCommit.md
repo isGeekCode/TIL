@@ -34,6 +34,19 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 - 화면을 나오면 그대로 `git pull`입력
 - 정상적으로 git pull 처리후 그대로 git push
 
+### 자세한 설명
+이 방법은 원격 저장소의 변경 사항을 가져와서 로컬 브랜치에 병합한 후에 다시 푸시하는 방법이다.
+위 그림은 자동으로 등장하지만, 기본 과정은 아래 명령어를 입력하면 동일하게 위 그림저럼 동작한다.
+```
+$ git fetch origin
+$ git merge origin/main
+$ git push origin main
+```
+위 그림은 변경사항을 어떻게 merge (병합) 할건지 물어보는 부분이다.
+별다른 내용이 없다면 위 과정처럼 단순히 나오기만하면 된다.
+`git merge origin/main`명령어나 `git push origin main` 이 두개는 위에서 설명한 것처럼 간단하게 입력해도 진행이 된다. 
+
+
 ## 방법 2. 병합을 중단처리하고 이어가기
 커밋도 많고 방법1에서 나온화면에서 정상적이지 않은 방법으로 처리가 안됐다면 이방법을 써야한다. 
 - 소스트리를 이용한다면 HEAD를 날리면된다.
