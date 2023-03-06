@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_145 TILs and counting..._
+_149 TILs and counting..._
 
 ---
 
@@ -47,6 +47,8 @@ _145 TILs and counting..._
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
 - [Terminal 기초 사용법](ComputerScience/Terminal.md)
 - [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
+- [iOS와 HTTP/2에 대하여](ComputerScience/http_2.md)
+- [OSI 7 Layer](ComputerScience/osi_7layer.md)
 - [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
 ### [Error](#Error)
@@ -72,6 +74,7 @@ _145 TILs and counting..._
 - [공동작업을 위한 Git 버전관리](Git/TIL220422_GitControl.md)
 - [git ignore 사용하기](Git/TIL221108_how_to_make_ignore.md)
 - [Git - Fork한 레포지토리 최신화 하기](Git/gitFork.md)
+- [Git - 갑자기 터미널이 한글로 나온다면](Git/gitKorean.md)
 - [Git - 깃 리모트 변경 하기](Git/gitRemoteChange.md)
 - [Commit Template - 소스트리](Git/how_to_make_SourceTree_Commit_Template.md)
 - [XcodeError - UserInterfaceState.xcuserState가 자꾸 뜰 때](Git/what_is_UserInterfaceState.md)
@@ -148,7 +151,7 @@ _145 TILs and counting..._
 - [Login Logic (feat. UserDefault)](iOS/Login_Logic.md)
 - [MessageUI - 문의메일 보내기](iOS/MessageUI_sendMail.md)
 - [NSDate - Timezone: UTC, GMT, KST](iOS/NSObject_NSDate_UTC.md)
-- [NSObject - Timer](iOS/NSObject_Timer.md)
+- [NSObject - Timer : 타이머 구현하기](iOS/NSObject_Timer.md)
 - [CGColor에 대하여](iOS/NSObject_UIColorCgColor.md)
 - [NSObject - UIFont](iOS/NSObject_UIFont.md)
 - [UIView - UIControl - UIButton](iOS/NSObject_UIResponder_UIView_UIControl_UIButton.md)
@@ -209,6 +212,7 @@ _145 TILs and counting..._
 - [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](swift/aboutProperty205.md)
 - [타입프로퍼티(static) - 프로퍼티(3)](swift/aboutProperty3.md)
 - [Array - 빠르게 **빈 배열 만들기**](swift/array_fastInit.md)
+- [고차함수 - Higher Order Function : Map, Filter, Reduce, Sort, FlatMap](swift/higherOrderFuction.md)
 - [Splite과 Component](swift/splite_component_map.md)
 - [Closure 톺아보기](swift/swift_firstClassClosureMaster.md)
 - [1급 객체](swift/swift_firstClassObject.md)
