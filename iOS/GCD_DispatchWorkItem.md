@@ -1,4 +1,4 @@
-
+# GCD - DispatchWorkItem
 DispatchWorkItem은 Grand Central Dispatch(GCD)에서 제공하는 클래스 중 하나로, 비동기 작업을 처리할 수 있는 객체다. 작업을 실행할 블록(block)을 가지고 있고, 큐에 추가하여 비동기적으로 실행할 수 있다.
 
 아래는 DispatchWorkItem 클래스의 주요 특징이다.
