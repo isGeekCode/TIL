@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_154 TILs and counting..._
+_155 TILs and counting..._
 
 ---
 
@@ -136,6 +136,7 @@ _154 TILs and counting..._
 - [Date - Date로 두 개의 시간차 구하기](iOS/Date_getTimeInterval.md)
 - [FileManager - 파일 다운로드하기](iOS/FileManager_fileDownload.md)
 - [FileManager - 사용하기](iOS/FileManager_introduce.md)
+- [](iOS/GCD_DispatchWorkItem.md)
 - [Gesture Recognizer - Long Press](iOS/GestureRecognizer_LongPress.md)
 - [Info - App Version 가져오기](iOS/Info_appVersion.md)
 - [KVC와 KVO](iOS/KVC_KVO.md)
