@@ -6,26 +6,26 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_156 TILs and counting..._
+_159 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [딥러닝 - 신경망으로 숫자에서 패턴찾기](AboutAI/DeepLearning_Neural.md) - Fri Mar 10 00:16:01 2023 +0900
+- [DeepLearning - 살펴보기](AboutAI/DeepLearning.md) - Fri Mar 10 00:07:35 2023 +0900
+- [요즘 핫한 GPT로 앱만들어보기](AboutAI/MVVM_ReactorKit_Snapkit_RxSwift.md) - Fri Mar 10 00:07:35 2023 +0900
+- [언어모델이란](AboutAI/chatGPT.md) - Fri Mar 10 00:07:35 2023 +0900
 - [Layout - SwiftUI: ScrollView](iOS/Layout_SwiftUI_ScrollView.md) - Tue Feb 28 22:49:49 2023 +0900
-- [KVC와 KVO](iOS/KVC_KVO.md) - Mon Feb 27 20:53:27 2023 +0900
-- [Swift문법 기초](swift/Swift1.md) - Sat Feb 25 09:56:13 2023 +0900
-- [언어모델이란](GPTChatAI/chatGPT.md) - Fri Feb 24 23:57:46 2023 +0900
-- [NSObject - UIFont](iOS/NSObject_UIFont.md) - Thu Feb 23 09:31:53 2023 +0900
 
 ### Categories
 
+- [AboutAI](#AboutAI)
 - [AppStore](#AppStore)
 - [Book](#Book)
 - [ComputerScience](#ComputerScience)
 - [Error](#Error)
 - [Extensions](#Extensions)
-- [GPTChatAI](#GPTChatAI)
 - [Git](#Git)
 - [IOS-Architecture](#IOS-Architecture)
 - [Integrity](#Integrity)
@@ -37,6 +37,12 @@ _156 TILs and counting..._
 - [Xcode](#Xcode)
 - [iOS](#iOS)
 - [swift](#swift)
+
+### [AboutAI](#AboutAI)
+- [DeepLearning - 살펴보기](AboutAI/DeepLearning.md)
+- [딥러닝 - 신경망으로 숫자에서 패턴찾기](AboutAI/DeepLearning_Neural.md)
+- [요즘 핫한 GPT로 앱만들어보기](AboutAI/MVVM_ReactorKit_Snapkit_RxSwift.md)
+- [언어모델이란](AboutAI/chatGPT.md)
 
 ### [AppStore](#AppStore)
 - [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](AppStore/AppStore_AppDismiss.md)
@@ -68,10 +74,6 @@ _156 TILs and counting..._
 ### [Extensions](#Extensions)
 - [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md)
 - [hex값을 UIcolor로 변환하는 방법](Extensions/TIL221025_convertHexToUIColor.md)
-
-### [GPTChatAI](#GPTChatAI)
-- [요즘 핫안 GPT로 앱만들어보기](GPTChatAI/MVVM_ReactorKit_Snapkit_RxSwift.md)
-- [언어모델이란](GPTChatAI/chatGPT.md)
 
 ### [Git](#Git)
 - [Git Actions - Permission to ....git denied to github-actions](Git/GitAction_tokenError.md)
@@ -150,6 +152,7 @@ _156 TILs and counting..._
 - [Layout - StoryboardUI: CornerRadius](iOS/Layout_StoryboardUI_CornerRadius.md)
 - [Layout - SwiftUI: HStack, VStack, ZStack](iOS/Layout_SwiftUI_HStackVStackZstack.md)
 - [Layout - SwiftUI: List](iOS/Layout_SwiftUI_List.md)
+- [Layout - SwiftUI: Padding](iOS/Layout_SwiftUI_Padding.md)
 - [Layout - SwiftUI: ScrollView](iOS/Layout_SwiftUI_ScrollView.md)
 - [Layout - SwiftUI: UIButton](iOS/Layout_SwiftUI_UIButton.md)
 - [Layout - SwiftUI: UIImage](iOS/Layout_SwiftUI_UIImage.md)
@@ -197,7 +200,7 @@ _156 TILs and counting..._
 - [CMTime](iOS/cmtime.md)
 - [custom scheme - 커스텀 앱스키마 만들기](iOS/info_howTomakeCustomScheme.md)
 - [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS/ios_CollectionViewCell.md)
-- [](iOS/ios_caching.md)
+- [IOS에 있어서 Caching](iOS/ios_caching.md)
 - [DynamicSplash 세팅하기](iOS/splash_dynamicSplash.md)
 - [webview - 바운스 효과 제거하기](iOS/webview_how_to_stop_bounce.md)
 - [appStoreReceiptURL](iOS/xIsProductionCheck.md)
