@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_160 TILs and counting..._
+_158 TILs and counting..._
 
 ---
 
@@ -26,7 +26,6 @@ _160 TILs and counting..._
 - [ComputerScience](#ComputerScience)
 - [Error](#Error)
 - [Extensions](#Extensions)
-- [GPTChatAI](#GPTChatAI)
 - [Git](#Git)
 - [IOS-Architecture](#IOS-Architecture)
 - [Integrity](#Integrity)
@@ -74,10 +73,6 @@ _160 TILs and counting..._
 ### [Extensions](#Extensions)
 - [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md)
 - [hex값을 UIcolor로 변환하는 방법](Extensions/TIL221025_convertHexToUIColor.md)
-
-### [GPTChatAI](#GPTChatAI)
-- [요즘 핫안 GPT로 앱만들어보기](GPTChatAI/MVVM_ReactorKit_Snapkit_RxSwift.md)
-- [언어모델이란](GPTChatAI/chatGPT.md)
 
 ### [Git](#Git)
 - [Git Actions - Permission to ....git denied to github-actions](Git/GitAction_tokenError.md)
