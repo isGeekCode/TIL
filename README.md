@@ -6,20 +6,21 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_157 TILs and counting..._
+_160 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [DeepLearning - 살펴보기](AboutAI/DeepLearning.md) - Fri Mar 10 00:07:35 2023 +0900
+- [요즘 핫안 GPT로 앱만들어보기](AboutAI/MVVM_ReactorKit_Snapkit_RxSwift.md) - Fri Mar 10 00:07:35 2023 +0900
+- [언어모델이란](AboutAI/chatGPT.md) - Fri Mar 10 00:07:35 2023 +0900
 - [Layout - SwiftUI: ScrollView](iOS/Layout_SwiftUI_ScrollView.md) - Tue Feb 28 22:49:49 2023 +0900
 - [KVC와 KVO](iOS/KVC_KVO.md) - Mon Feb 27 20:53:27 2023 +0900
-- [Swift문법 기초](swift/Swift1.md) - Sat Feb 25 09:56:13 2023 +0900
-- [언어모델이란](GPTChatAI/chatGPT.md) - Fri Feb 24 23:57:46 2023 +0900
-- [NSObject - UIFont](iOS/NSObject_UIFont.md) - Thu Feb 23 09:31:53 2023 +0900
 
 ### Categories
 
+- [AboutAI](#AboutAI)
 - [AppStore](#AppStore)
 - [Book](#Book)
 - [ComputerScience](#ComputerScience)
@@ -37,6 +38,11 @@ _157 TILs and counting..._
 - [Xcode](#Xcode)
 - [iOS](#iOS)
 - [swift](#swift)
+
+### [AboutAI](#AboutAI)
+- [DeepLearning - 살펴보기](AboutAI/DeepLearning.md)
+- [요즘 핫안 GPT로 앱만들어보기](AboutAI/MVVM_ReactorKit_Snapkit_RxSwift.md)
+- [언어모델이란](AboutAI/chatGPT.md)
 
 ### [AppStore](#AppStore)
 - [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](AppStore/AppStore_AppDismiss.md)
