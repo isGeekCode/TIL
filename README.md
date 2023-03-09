@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_158 TILs and counting..._
+_159 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [딥러닝 - 신경망으로 숫자에서 패턴찾기](AboutAI/DeepLearning_Neural.md) - Fri Mar 10 00:16:01 2023 +0900
 - [DeepLearning - 살펴보기](AboutAI/DeepLearning.md) - Fri Mar 10 00:07:35 2023 +0900
 - [요즘 핫한 GPT로 앱만들어보기](AboutAI/MVVM_ReactorKit_Snapkit_RxSwift.md) - Fri Mar 10 00:07:35 2023 +0900
 - [언어모델이란](AboutAI/chatGPT.md) - Fri Mar 10 00:07:35 2023 +0900
 - [Layout - SwiftUI: ScrollView](iOS/Layout_SwiftUI_ScrollView.md) - Tue Feb 28 22:49:49 2023 +0900
-- [KVC와 KVO](iOS/KVC_KVO.md) - Mon Feb 27 20:53:27 2023 +0900
 
 ### Categories
 
@@ -40,6 +40,7 @@ _158 TILs and counting..._
 
 ### [AboutAI](#AboutAI)
 - [DeepLearning - 살펴보기](AboutAI/DeepLearning.md)
+- [딥러닝 - 신경망으로 숫자에서 패턴찾기](AboutAI/DeepLearning_Neural.md)
 - [요즘 핫한 GPT로 앱만들어보기](AboutAI/MVVM_ReactorKit_Snapkit_RxSwift.md)
 - [언어모델이란](AboutAI/chatGPT.md)
 
