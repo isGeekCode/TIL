@@ -13,7 +13,7 @@ _158 TILs and counting..._
 ### 5 most recent TILs
 
 - [DeepLearning - 살펴보기](AboutAI/DeepLearning.md) - Fri Mar 10 00:07:35 2023 +0900
-- [요즘 핫안 GPT로 앱만들어보기](AboutAI/MVVM_ReactorKit_Snapkit_RxSwift.md) - Fri Mar 10 00:07:35 2023 +0900
+- [요즘 핫한 GPT로 앱만들어보기](AboutAI/MVVM_ReactorKit_Snapkit_RxSwift.md) - Fri Mar 10 00:07:35 2023 +0900
 - [언어모델이란](AboutAI/chatGPT.md) - Fri Mar 10 00:07:35 2023 +0900
 - [Layout - SwiftUI: ScrollView](iOS/Layout_SwiftUI_ScrollView.md) - Tue Feb 28 22:49:49 2023 +0900
 - [KVC와 KVO](iOS/KVC_KVO.md) - Mon Feb 27 20:53:27 2023 +0900
@@ -40,7 +40,7 @@ _158 TILs and counting..._
 
 ### [AboutAI](#AboutAI)
 - [DeepLearning - 살펴보기](AboutAI/DeepLearning.md)
-- [요즘 핫안 GPT로 앱만들어보기](AboutAI/MVVM_ReactorKit_Snapkit_RxSwift.md)
+- [요즘 핫한 GPT로 앱만들어보기](AboutAI/MVVM_ReactorKit_Snapkit_RxSwift.md)
 - [언어모델이란](AboutAI/chatGPT.md)
 
 ### [AppStore](#AppStore)
