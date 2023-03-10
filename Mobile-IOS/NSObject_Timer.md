@@ -48,6 +48,29 @@ let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer i
 - `[userInfo: Any?](https://developer.apple.com/documentation/foundation/timer/1408911-userinfo)`
     - 보낼 정보
     
+## 메모리누수 방지하기
+iOS Timer 객체를 메모리 해제하려면, Timer 객체의 invalidate() 메서드를 호출하여 타이머를 중지시켜야 한다. 그러나 invalidate() 메서드를 호출해도 Timer 객체가 메모리에서 해제되지 않는 경우가 있다. 이는 Timer 객체가 Timer 객체가 등록된 Run Loop의 Strong 참조를 가지고 있기 때문이다.
+
+### 1. Timer 객체의 invalidate() 메서드 호출 후, nil 처리하기
+```swift
+timer?.invalidate()
+timer = nil
+```
+
+### 2. Timer 객체를 생성할 때, weak self를 사용하여 Timer 객체가 강한 참조를 가지지 않도록 하기
+```swift
+Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+    self?.updateTimer()
+}
+```
+
+### 3. Timer 객체를 생성할 때, unowned self를 사용하여 Timer 객체가 강한 참조를 가지지 않도록 하기
+```swift
+Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [unowned self] _ in
+    self.updateTimer()
+}
+```
+
 
 ## Userinfo사용하기
 
