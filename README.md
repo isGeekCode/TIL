@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_159 TILs and counting..._
+_161 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [딥러닝 - 신경망으로 숫자에서 패턴찾기](AboutAI/DeepLearning_Neural.md) - Fri Mar 10 00:16:01 2023 +0900
-- [DeepLearning - 살펴보기](AboutAI/DeepLearning.md) - Fri Mar 10 00:07:35 2023 +0900
-- [요즘 핫한 GPT로 앱만들어보기](AboutAI/MVVM_ReactorKit_Snapkit_RxSwift.md) - Fri Mar 10 00:07:35 2023 +0900
-- [언어모델이란](AboutAI/chatGPT.md) - Fri Mar 10 00:07:35 2023 +0900
-- [Layout - SwiftUI: ScrollView](iOS/Layout_SwiftUI_ScrollView.md) - Tue Feb 28 22:49:49 2023 +0900
+- [c언어와 objective-c의 발전](Objective-C/TIL220421_aboutObjectiveC.md) - Fri Mar 10 16:25:35 2023 +0900
+- [현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](Mobile-IOS/Layout_currentDeviceCheck&useCombineReactiveAutoLayout.md) - Fri Mar 10 10:07:28 2023 +0900
+- [Layout - SwiftUI: UIText](Mobile-IOS/Layout_SwiftUI_UIText.md) - Fri Mar 10 10:07:28 2023 +0900
+- [Layout - SwiftUI: UIImage](Mobile-IOS/Layout_SwiftUI_UIImage.md) - Fri Mar 10 10:07:28 2023 +0900
+- [webview - 바운스 효과 제거하기](Mobile-IOS/Webview_how_to_stop_bounce.md) - Fri Mar 10 10:07:28 2023 +0900
 
 ### Categories
 
@@ -32,7 +32,7 @@ _159 TILs and counting..._
 - [Library](#Library)
 - [Mobile-Android](#Mobile-Android)
 - [Mobile-IOS](#Mobile-IOS)
-- [Objc](#Objc)
+- [Objective-C](#Objective-C)
 - [RelatedImage](#RelatedImage)
 - [Self-Review](#Self-Review)
 - [SwitchingScreens](#SwitchingScreens)
@@ -103,8 +103,7 @@ _159 TILs and counting..._
 ### [Library](#Library)
 - [About Swift PackageManager](Library/About_SPM.md)
 - [About CocoaPods](Library/About_cocoaPods_basic.md)
-- [About CocoaPods Error 방지하기
- Error](Library/About_cocoaPods_error.md)
+- [About CocoaPods Error 방지하기](Library/About_cocoaPods_error.md)
 - [Convention - SwiftLint 세팅하기](Library/Convention_SwiftLint.md)
 - [Convention - SwiftLint 세부설정하기](Library/Convention_SwiftLintCustomRule.md)
 - [라이브러리 - GIFu 사용하기](Library/Library_Gifu.md)
@@ -114,8 +113,7 @@ _159 TILs and counting..._
 - [ReactiveX: RxSwift Introduce](Library/RxSwift_Introduce.md)
 
 ### [Mobile-Android](#Mobile-Android)
-- [Android - Basic : 안드로이드의 기본 앱구조](Mobile-Android/Android_Basic_AppStructure.md
-)
+- [Android - Basic : 안드로이드의 기본 앱구조](Mobile-Android/Android_Basic_AppStructure.md)
 
 ### [Mobile-IOS](#Mobile-IOS)
 - [AVPlayer 사용하기](Mobile-IOS/AboutAVPlayer.md)
@@ -137,7 +135,7 @@ _159 TILs and counting..._
 - [Layout - CodeUI: UIButton](Mobile-IOS/Layout_CodeUI_UIButton.md)
 - [Layout - CodeUI: UIView, UILabel](Mobile-IOS/Layout_CodeUI_UILabel_UIView.md)
 - [Layout - StoryboardUI: CornerRadius](Mobile-IOS/Layout_StoryboardUI_CornerRadius.md)
-- [Layout - SwiftUI: HStack, VStack, ZStack](iOS/Layout_SwiftUI_HStackVStackZstack.md)
+- [Layout - SwiftUI: HStack, VStack, ZStack](Mobile-IOS/Layout_SwiftUI_HStackVStackZstack.md)
 - [Layout - SwiftUI: List](Mobile-IOS/Layout_SwiftUI_List.md)
 - [Layout - SwiftUI: Padding](Mobile-IOS/Layout_SwiftUI_Padding.md)
 - [Layout - SwiftUI: ScrollView](Mobile-IOS/Layout_SwiftUI_ScrollView.md)
@@ -148,7 +146,7 @@ _159 TILs and counting..._
 - [Layout - Hierarchy of UIView (feat. addSubView)](Mobile-IOS/Layout_addSubView.md)
 - [현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](Mobile-IOS/Layout_currentDeviceCheck&useCombineReactiveAutoLayout.md)
 - [로컬라이징](Mobile-IOS/Localization.md)
-- [Login Logic (feat. UserDefault)](iOS/Login_Logic.md)
+- [Login Logic (feat. UserDefault)](Mobile-IOS/Login_Logic.md)
 - [MessageUI - 문의메일 보내기](Mobile-IOS/MessageUI_sendMail.md)
 - [NSDate - Timezone: UTC, GMT, KST](Mobile-IOS/NSObject_NSDate_UTC.md)
 - [NSObject - Timer : 타이머 구현하기](Mobile-IOS/NSObject_Timer.md)
@@ -184,16 +182,16 @@ _159 TILs and counting..._
 - [WebView - Safari로 웹뷰 디버깅하는 방법](Mobile-IOS/WebView_commute_with_Web.md)
 - [WKWebView에서 자주 사용하는 메서드들](Mobile-IOS/WebView_often_use_delegate_method.md)
 - [WebView - 스와이프로 리프레시 세팅](Mobile-IOS/WebView_swipe_refresh.md)
-- [CMTime](iOS/cmtime.md)
+- [webview - 바운스 효과 제거하기](Mobile-IOS/Webview_how_to_stop_bounce.md)
+- [CMTime](Mobile-IOS/cmtime.md)
 - [custom scheme - 커스텀 앱스키마 만들기](Mobile-IOS/info_howTomakeCustomScheme.md)
 - [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](Mobile-IOS/ios_CollectionViewCell.md)
 - [IOS에 있어서 Caching](Mobile-IOS/ios_caching.md)
 - [DynamicSplash 세팅하기](Mobile-IOS/splash_dynamicSplash.md)
-- [webview - 바운스 효과 제거하기](Mobile-IOS/webview_how_to_stop_bounce.md)
 - [appStoreReceiptURL](Mobile-IOS/xIsProductionCheck.md)
 
-### [Objc](#Objc)
-- [c언어와 objective-c의 발전](Objc/TIL220421_aboutObjectiveC.md)
+### [Objective-C](#Objective-C)
+- [c언어와 objective-c의 발전](Objective-C/TIL220421_aboutObjectiveC.md)
 
 ### [RelatedImage](#RelatedImage)
 - [dp와 pt에 대하여 (Feat. 포인트란)](RelatedImage/DP_PT.md)
