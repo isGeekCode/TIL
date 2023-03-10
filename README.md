@@ -102,7 +102,9 @@ _159 TILs and counting..._
 
 ### [Library](#Library)
 - [About Swift PackageManager](Library/About_SPM.md)
-- [About CocoaPods](Library/About_cocoaPods.md)
+- [About CocoaPods](Library/About_cocoaPods_basic.md)
+- [About CocoaPods Error 방지하기
+ Error](Library/About_cocoaPods_error.md)
 - [Convention - SwiftLint 세팅하기](Library/Convention_SwiftLint.md)
 - [Convention - SwiftLint 세부설정하기](Library/Convention_SwiftLintCustomRule.md)
 - [라이브러리 - GIFu 사용하기](Library/Library_Gifu.md)
