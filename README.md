@@ -180,7 +180,7 @@ _161 TILs and counting..._
 - [WebView - URLSession 사용하기](Mobile-IOS/WebView_aboutURLSession.md)
 - [WebView - App에서 웹페이지를 여는 3가지 방법](Mobile-IOS/WebView_basic_use.md)
 - [WebView - Safari로 웹뷰 디버깅하는 방법](Mobile-IOS/WebView_commute_with_Web.md)
-- [WKWebView에서 자주 사용하는 메서드들](Mobile-IOS/WebView_often_use_delegate_method.md)
+- [WebView - 자주 사용하는 메서드](Mobile-IOS/WebView_often_use_delegate_method.md)
 - [WebView - 스와이프로 리프레시 세팅](Mobile-IOS/WebView_swipe_refresh.md)
 - [webview - 바운스 효과 제거하기](Mobile-IOS/Webview_how_to_stop_bounce.md)
 - [CMTime](Mobile-IOS/cmtime.md)
