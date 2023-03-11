@@ -1,4 +1,4 @@
-# WKWebView에서 자주 사용하는 메서드들
+# WebView - 자주 사용하는 메서드
 
 ## load( \_: )
 
