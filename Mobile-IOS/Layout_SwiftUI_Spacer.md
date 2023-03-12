@@ -23,8 +23,8 @@
           }
       ```
     </td>
-    <td>
-      <img width="238" alt="이미지 설명" src="https://user-images.githubusercontent.com/76529148/224518972-2bb24991-cb19-4493-b944-8f74cb1e0296.png">
+    <td style="text-align:center">
+      <img alt="이미지 설명" src="https://user-images.githubusercontent.com/76529148/224518972-2bb24991-cb19-4493-b944-8f74cb1e0296.png" width="238">
     </td>
   </tr>
 </table>
