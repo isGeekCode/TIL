@@ -3,8 +3,7 @@
 아래 코드는 Image, Text, Button 이 VStack안에 구성되어있다.
 <table>
   <tr>
-    <td>
-
+    <td width="50%">
       ```swift
       VStack{
             Image(systemName: "bolt")
@@ -23,7 +22,6 @@
             }
           }
       ```
-
     </td>
     <td>
       <img width="238" alt="이미지 설명" src="https://user-images.githubusercontent.com/76529148/224518972-2bb24991-cb19-4493-b944-8f74cb1e0296.png">
