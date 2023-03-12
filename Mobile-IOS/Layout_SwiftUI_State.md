@@ -59,7 +59,7 @@ struct ContentView: View {
 }
 ```
 
-## Button을 누르면 Text가 바뀌는 예제
+## Slider을 변경하면 Text가 바뀌는 예제
 ```swift
 struct ContentView: View {
     @State private var value: Double = 0.5
@@ -102,6 +102,6 @@ PropertyObserver의 경우는 그에 반해 값이 변경 될때마다 지정한
 아래는 SwiftUI의 View 생명주기 동안 호출하는 함수들이다.
 
 - init(): 뷰(View)가 생성될 때 호출된다. 이 메서드에서는 뷰(View)가 사용할 초기 상태(State)를 설정한다.
-- body: 뷰(View)의 내용을 정의하는 계산형 프로퍼티(Computed property). 이 프로퍼티는 뷰(View)가 나타내는 콘텐츠를 정의한다.
+- body: 뷰(View)가 나타내는 콘텐츠를 정의한다.
 - onAppear(): 뷰(View)가 나타날 때 호출된다. 이 메서드에서는 뷰(View)가 나타나기 전에 수행해야 할 작업을 구현할 수 있다.
 - onDisappear(): 뷰(View)가 사라질 때 호출된다. 이 메서드에서는 뷰(View)가 사라지기 전에 수행해야 할 작업을 구현할 수 있다.
