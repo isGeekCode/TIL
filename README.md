@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_164 TILs and counting..._
+_165 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Git - 현재 깃폴더에 연동한 username 확인하고 변경하기](Git/Git_username.md) - Sun Mar 12 12:31:57 2023 +0900
 - [Layout - SwiftUI: State와 바인딩](Mobile-IOS/Layout_SwiftUI_State.md) - Sun Mar 12 12:16:15 2023 +0900
 - [Layout - SwiftUI: Color](Mobile-IOS/Layout_SwiftUI_Color.md) - Sun Mar 12 11:50:38 2023 +0900
 - [Layout - SwiftUI: Spacer](Mobile-IOS/Layout_SwiftUI_Spacer.md) - Sun Mar 12 10:56:35 2023 +0900
 - [c언어와 objective-c의 발전](Objective-C/TIL220421_aboutObjectiveC.md) - Fri Mar 10 16:25:35 2023 +0900
-- [현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](Mobile-IOS/Layout_currentDeviceCheck&useCombineReactiveAutoLayout.md) - Fri Mar 10 10:07:28 2023 +0900
 
 ### Categories
 
@@ -80,6 +80,7 @@ _164 TILs and counting..._
 - [Git Actions - Permission to ....git denied to github-actions](Git/GitAction_tokenError.md)
 - [GitHub - Various APIs](Git/Git_ContributionGraph.md)
 - [푸시 에러 : 원격 저장소와 커밋 기록이 다른 경우](Git/Git_pushError_OtherCommit.md)
+- [Git - 현재 깃폴더에 연동한 username 확인하고 변경하기](Git/Git_username.md)
 - [공동작업을 위한 Git 버전관리](Git/TIL220422_GitControl.md)
 - [git ignore 사용하기](Git/TIL221108_how_to_make_ignore.md)
 - [Git - Fork한 레포지토리 최신화 하기](Git/gitFork.md)
