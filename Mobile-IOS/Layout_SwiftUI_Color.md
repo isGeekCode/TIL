@@ -24,7 +24,7 @@ Color(.systemGreen).edgesIgnoringSafeArea([.top,.bottom])
 
 ```
 
-<img width="400" alt="스크린샷 2023-03-12 오전 11 46 40" src="https://user-images.githubusercontent.com/76529148/224521388-c4162529-1e3d-4ca9-a5d2-cc7da8cac8e7.png">
+<img width="700" alt="스크린샷 2023-03-12 오전 11 46 40" src="https://user-images.githubusercontent.com/76529148/224521388-c4162529-1e3d-4ca9-a5d2-cc7da8cac8e7.png">
 
 
 
