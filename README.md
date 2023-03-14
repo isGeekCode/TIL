@@ -12,8 +12,8 @@ _168 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [](ComputerScience/MVP.md) - Tue Mar 14 16:35:47 2023 +0900
-- [](ComputerScience/VirtualMemory_PageFileSwap.md) - Mon Mar 13 16:54:59 2023 +0900
+- [MVP: Minimum Viable Product](ComputerScience/MVP.md) - Tue Mar 14 16:35:47 2023 +0900
+- [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md) - Mon Mar 13 16:54:59 2023 +0900
 - [전처리문 사용하기](Objective-C/Objc_preprocessorCommand.md) - Mon Mar 13 16:54:59 2023 +0900
 - [Git - 현재 깃폴더에 연동한 username 확인하고 변경하기](Git/Git_username.md) - Sun Mar 12 12:31:57 2023 +0900
 - [Layout - SwiftUI: State와 바인딩](Mobile-IOS/Layout_SwiftUI_State.md) - Sun Mar 12 12:16:15 2023 +0900
@@ -57,9 +57,9 @@ _168 TILs and counting..._
 ### [ComputerScience](#ComputerScience)
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
-- [](ComputerScience/MVP.md)
+- [MVP: Minimum Viable Product](ComputerScience/MVP.md)
 - [Terminal 기초 사용법](ComputerScience/Terminal.md)
-- [](ComputerScience/VirtualMemory_PageFileSwap.md)
+- [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
 - [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
 - [iOS와 HTTP/2에 대하여](ComputerScience/http_2.md)
 - [OSI 7 Layer](ComputerScience/osi_7layer.md)
