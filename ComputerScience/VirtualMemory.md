@@ -1,4 +1,4 @@
-# iOS의 Virtual Memory
+# iOS의 Virtual Memory에 대하여 
 iOS의 Virtual Memory(가상 메모리)는 페이지 교환(page swapping)과 메모리 압축(memory compression) 등의 기술을 사용하여 메모리를 효율적으로 관리한다.
 
 ## 페이지 교환
