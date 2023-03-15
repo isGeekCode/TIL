@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_169 TILs and counting..._
+_170 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Cocoa Design Pattern - Delegate 델리게이트 패턴](IOS-Architecture/CocoaDesignPattern_Delegate.md) - Wed Mar 15 15:13:10 2023 +0900
 - [iOS의 Virtual Memory에 대하여](ComputerScience/VirtualMemory.md) - Tue Mar 14 16:57:22 2023 +0900
 - [MVP: Minimum Viable Product](ComputerScience/MVP.md) - Tue Mar 14 16:35:47 2023 +0900
 - [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md) - Mon Mar 13 16:54:59 2023 +0900
 - [전처리문 사용하기](Objective-C/Objc_preprocessorCommand.md) - Mon Mar 13 16:54:59 2023 +0900
-- [Git - 현재 깃폴더에 연동한 username 확인하고 변경하기](Git/Git_username.md) - Sun Mar 12 12:31:57 2023 +0900
 
 ### Categories
 
@@ -94,6 +94,7 @@ _169 TILs and counting..._
 
 ### [IOS-Architecture](#IOS-Architecture)
 - [디자인패턴이란](IOS-Architecture/About_Design_MVX_Init.md)
+- [Cocoa Design Pattern - Delegate 델리게이트 패턴](IOS-Architecture/CocoaDesignPattern_Delegate.md)
 - [Cocoa Design Pattern - Singleton](IOS-Architecture/CocoaDesignPattern_Singleton.md)
 - [Architecture - IOS MVC의 한계](IOS-Architecture/MVC_Massive.md)
 - [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](IOS-Architecture/MVC_traditional.md)
