@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_182 TILs and counting..._
+_171 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [WebView - URLSession 사용하기](Networking/WebView_aboutURLSession.md) - Wed Mar 15 15:59:15 2023 +0900
-- [NSObject - URLSession](Networking/NSObject_URLSession.md) - Wed Mar 15 15:59:15 2023 +0900
-- [WebView - App에서 웹페이지를 여는 3가지 방법](Networking/WebView_basic_use.md) - Wed Mar 15 15:59:15 2023 +0900
 - [WebView - WKWebView에서 보내는 JS를 캐치하는 방법](Networking/WebView_CatchingJS.md) - Wed Mar 15 15:59:15 2023 +0900
-- [WebView - PC에서 사용중인 내부망을 Iphone으로 연결시키는 방법](Networking/WebViewZ_intranet.md) - Wed Mar 15 15:59:15 2023 +0900
+- [WebView - Safari로 웹뷰 디버깅하는 방법](Networking/WebView_commute_with_Web.md) - Wed Mar 15 15:59:15 2023 +0900
+- [NSObject - URLSession](Networking/NSObject_URLSession.md) - Wed Mar 15 15:59:15 2023 +0900
+- [WebView - Delegate method](Networking/WebView_Delegate.md) - Wed Mar 15 15:59:15 2023 +0900
+- [WebView - 앱에서 웹으로 JavaScript보내기](Networking/WebView_Sending_JS.md) - Wed Mar 15 15:59:15 2023 +0900
 
 ### Categories
 
@@ -164,7 +164,6 @@ _182 TILs and counting..._
 - [UIView - UIControl - UIButton](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UIButton.md)
 - [NSObjet-UIResponder-UIView-UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](Mobile-IOS/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
 - [NSObject_UIResponder_UIView_UITableView_만들기](Mobile-IOS/NSObject_UIResponder_UIView_UITableView_howToMake.md)
-- [NSObject - URLSession](Mobile-IOS/NSObject_URLSession.md)
 - [NSObject_UIResponder_UIView_UIActivityIndicatorView_만들기](Mobile-IOS/NsObject_UIResponder_UIView_UIActivityIndicatorView.md)
 - [소켓이란](Mobile-IOS/TIL220420_socket.md)
 - [타임스탬프 구현하기](Mobile-IOS/TIL220914_TimeStamp.md)
@@ -182,16 +181,6 @@ _182 TILs and counting..._
 - [UIKit - UITableViewCell : accessoryType](Mobile-IOS/UIKit_UITableView_Delegate_AccessoryType.md)
 - [UIKit - UITextField](Mobile-IOS/UIKit_UITextField.md)
 - [UIKit - UISearchBar](Mobile-IOS/UIKit_UITextField_UISearchBar.md)
-- [WebView - PC에서 사용중인 내부망을 Iphone으로 연결시키는 방법](Mobile-IOS/WebViewZ_intranet.md)
-- [WebView - WKWebView에서 보내는 JS를 캐치하는 방법](Mobile-IOS/WebView_CatchingJS.md)
-- [WebView - Delegate method](Mobile-IOS/WebView_Delegate.md)
-- [WebView - 앱에서 웹으로 JavaScript보내기](Mobile-IOS/WebView_Sending_JS.md)
-- [WebView - URLSession 사용하기](Mobile-IOS/WebView_aboutURLSession.md)
-- [WebView - App에서 웹페이지를 여는 3가지 방법](Mobile-IOS/WebView_basic_use.md)
-- [WebView - Safari로 웹뷰 디버깅하는 방법](Mobile-IOS/WebView_commute_with_Web.md)
-- [WebView - 자주 사용하는 메서드](Mobile-IOS/WebView_often_use_delegate_method.md)
-- [WebView - 스와이프로 리프레시 세팅](Mobile-IOS/WebView_swipe_refresh.md)
-- [webview - 바운스 효과 제거하기](Mobile-IOS/Webview_how_to_stop_bounce.md)
 - [CMTime](Mobile-IOS/cmtime.md)
 - [custom scheme - 커스텀 앱스키마 만들기](Mobile-IOS/info_howTomakeCustomScheme.md)
 - [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](Mobile-IOS/ios_CollectionViewCell.md)
