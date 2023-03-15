@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_170 TILs and counting..._
+_171 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [네트워킹 - 각종 URL의 유효성 검사](Networking/URL_ValidationCheck.md) - Wed Mar 15 15:54:56 2023 +0900
 - [Cocoa Design Pattern - Delegate 델리게이트 패턴](IOS-Architecture/CocoaDesignPattern_Delegate.md) - Wed Mar 15 15:13:10 2023 +0900
 - [iOS의 Virtual Memory에 대하여](ComputerScience/VirtualMemory.md) - Tue Mar 14 16:57:22 2023 +0900
 - [MVP: Minimum Viable Product](ComputerScience/MVP.md) - Tue Mar 14 16:35:47 2023 +0900
 - [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md) - Mon Mar 13 16:54:59 2023 +0900
-- [전처리문 사용하기](Objective-C/Objc_preprocessorCommand.md) - Mon Mar 13 16:54:59 2023 +0900
 
 ### Categories
 
@@ -32,6 +32,7 @@ _170 TILs and counting..._
 - [Library](#Library)
 - [Mobile-Android](#Mobile-Android)
 - [Mobile-IOS](#Mobile-IOS)
+- [Networking](#Networking)
 - [Objective-C](#Objective-C)
 - [RelatedImage](#RelatedImage)
 - [Self-Review](#Self-Review)
@@ -197,6 +198,9 @@ _170 TILs and counting..._
 - [IOS에 있어서 Caching](Mobile-IOS/ios_caching.md)
 - [DynamicSplash 세팅하기](Mobile-IOS/splash_dynamicSplash.md)
 - [appStoreReceiptURL](Mobile-IOS/xIsProductionCheck.md)
+
+### [Networking](#Networking)
+- [네트워킹 - 각종 URL의 유효성 검사](Networking/URL_ValidationCheck.md)
 
 ### [Objective-C](#Objective-C)
 - [전처리문 사용하기](Objective-C/Objc_preprocessorCommand.md)
