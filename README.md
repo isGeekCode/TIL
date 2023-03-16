@@ -6,16 +6,16 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_171 TILs and counting..._
+_172 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [WebView - WKWebView에서 보내는 JS를 캐치하는 방법](Networking/WebView_CatchingJS.md) - Wed Mar 15 15:59:15 2023 +0900
-- [WebView - Safari로 웹뷰 디버깅하는 방법](Networking/WebView_commute_with_Web.md) - Wed Mar 15 15:59:15 2023 +0900
+- [IOS에서 사용하는 알림의 종류](Notifications/iOS_Notification.md) - Thu Mar 16 16:55:16 2023 +0900
+- [webview - 바운스 효과 제거하기](Networking/Webview_how_to_stop_bounce.md) - Wed Mar 15 15:59:15 2023 +0900
+- [WebView - 스와이프로 리프레시 세팅](Networking/WebView_swipe_refresh.md) - Wed Mar 15 15:59:15 2023 +0900
 - [NSObject - URLSession](Networking/NSObject_URLSession.md) - Wed Mar 15 15:59:15 2023 +0900
-- [WebView - Delegate method](Networking/WebView_Delegate.md) - Wed Mar 15 15:59:15 2023 +0900
 - [WebView - 앱에서 웹으로 JavaScript보내기](Networking/WebView_Sending_JS.md) - Wed Mar 15 15:59:15 2023 +0900
 
 ### Categories
@@ -33,6 +33,7 @@ _171 TILs and counting..._
 - [Mobile-Android](#Mobile-Android)
 - [Mobile-IOS](#Mobile-IOS)
 - [Networking](#Networking)
+- [Notifications](#Notifications)
 - [Objective-C](#Objective-C)
 - [RelatedImage](#RelatedImage)
 - [Self-Review](#Self-Review)
@@ -201,6 +202,9 @@ _171 TILs and counting..._
 - [WebView - 자주 사용하는 메서드](Networking/WebView_often_use_delegate_method.md)
 - [WebView - 스와이프로 리프레시 세팅](Networking/WebView_swipe_refresh.md)
 - [webview - 바운스 효과 제거하기](Networking/Webview_how_to_stop_bounce.md)
+
+### [Notifications](#Notifications)
+- [IOS에서 사용하는 알림의 종류](Notifications/iOS_Notification.md)
 
 ### [Objective-C](#Objective-C)
 - [전처리문 사용하기](Objective-C/Objc_preprocessorCommand.md)
