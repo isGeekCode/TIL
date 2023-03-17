@@ -1,5 +1,6 @@
 # Understanding Closures in Swift : 클로저 톺아보기
-
+[toc]
+[TOC]
 
 ### Index
 - [클로저란](#클로저란)
@@ -9,7 +10,7 @@
     - [실행하기](#실행하기)
 - [후행 클로저 - Trailing Closure](#후행-클로저---Trailing-Closure)
 - [경량화 문법 - Lightweight Closure Syntax](#경량화-문법---lightweight-closure-syntax)
-- [iOS에서 흔하게 사용하는 클로저](#iOS에서-흔하게-사용하는-클로저)
+- [iOS에서 흔하게 사용하는 클로저](#iOS에서흔하게-사용하는-클로저)
     - [탈출 클로저 - Escaping Closure](#탈출-클로저---Escaping-Closure)
     - [오토 클로저 - Auto Closure](#오토-클로저---Auto-Closure)
 
@@ -39,7 +40,7 @@ let doSomething = { print("do something!!!") }
 2. 함수의 인자값으로 클로저를 전달할 수 있다.
 3. 함수의 반환값으로 클로저를 사용할 수 있다.
 
-### [표현식](#표현식)
+### 표현식
 
 unnamed Closure , 익명함수 (이하 클로저로 설명) 는 헤드 부분과 바디부분으로 나누어진다. 
 
@@ -48,7 +49,7 @@ unnamed Closure , 익명함수 (이하 클로저로 설명) 는 헤드 부분과
 <img width="529" alt="스크린샷 2022-11-25 오전 9 00 59" src="https://user-images.githubusercontent.com/76529148/225813360-e75d0bf6-9f3f-4caf-8b46-f38dec54806c.png">
 
 
-## [사용하기](#사용하기)
+## 사용하기
 
 ### 함수의 사용법
 
@@ -89,7 +90,7 @@ doSomething("work") // doSomething( firstParam: "work")   //ERROR!!!!
 ```
 
 
-## [1급객체](#1급객체)
+## 1급객체
 
 ### 1. 변수나 상수에 대입할 수 있다.
 
@@ -139,7 +140,7 @@ func doSomething() -> () -> () {
 }
 ```
 
-## [실행하기](#실행하기)
+## 실행하기
 
 1. 대입된 변수나 상수로 호출하기
 
