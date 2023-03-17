@@ -1,6 +1,4 @@
 # Understanding Closures in Swift : 클로저 톺아보기
-[toc]
-[TOC]
 
 ### Index
 - [클로저란](#클로저란)
