@@ -7,7 +7,7 @@
     - [사용하기](#사용하기)
     - [1급객체](#1급객체)
     - [실행하기](#실행하기)
-- [후행 클로저 - Trailing Closure](#후행-클로저---Trailing-Closure)
+- [후행 클로저 : Trailing Closure](#후행-클로저---Trailing-Closure)
 - [경량화 문법 - Lightweight Closure Syntax](#경량화-문법---lightweight-closure-syntax)
 - [iOS에서 흔하게 사용하는 클로저](#iOS에서-흔하게-사용하는-클로저)
     - [탈출 클로저 - Escaping Closure](#탈출-클로저---Escaping-Closure)
@@ -162,7 +162,7 @@ closure()
 } )()
 ```
 
-## [후행 클로저 - Trailing Closure](#후행-클로저---Trailing-Closure)
+## [후행 클로저 : Trailing Closure](#후행-클로저---Trailing-Closure)
 
 - 함수의 마지막 파라미터가 클로저일 때, 이 클로저를  파라미터 값 형식이 아니라  함수 뒤에 붙여서 작성할 수 있다.
 - Argument Label은 생략한다.
