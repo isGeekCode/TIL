@@ -9,8 +9,9 @@
     - [실행하기](#실행하기)
 - [후행 클로저 - Trailing Closure](#후행-클로저---Trailing-Closure)
 - [경량화 문법 - Lightweight Closure Syntax](#경량화-문법---lightweight-closure-syntax)
-- [탈출 클로저 - Escaping Closure](#탈출-클로저---Escaping-Closure)
-- [오토 클로저 - Auto Closure](#오토-클로저---Auto-Closure)
+- [iOS에서 흔하게 사용하는 클로저](#iOS에서-흔하게-사용하는-클로저)
+    - [탈출 클로저 - Escaping Closure](#탈출-클로저---Escaping-Closure)
+    - [오토 클로저 - Auto Closure](#오토-클로저---Auto-Closure)
 
 
 ## [클로저란](#클로저란)
@@ -241,15 +242,7 @@ fetchData(success:  { () -> () in
 
 그러면 success의 파라미터 값은 inlineClosure, fail의 파라미터 값은 후행클로저로 호출이 가능하다.
 
-fetchData(success:  { () -> () **in**
-
-print("Success!")
-
-}) { () -> () **in**
-
-print("Fail!")
-
-}
+<img width="271" alt="스크린샷 2023-03-17 오후 3 44 32" src="https://user-images.githubusercontent.com/76529148/225832162-9a36b386-7a1a-413c-b0d0-694e15c305b1.png">
 
 하지만 이렇게 파라미터가 여러개일 경우에는 파라미터를 넘겨줘야하기 때문에 함수 호출 구문()을 생략할 수 없다.
 
@@ -425,7 +418,7 @@ doSomething {
 
 사용할 땐 내가 원하는 상황, 시점에 후행 클로저 안에서 @escaping을 붙인 파라미터를 호출하면된다. 
 
-### iOS에서 흔하게 사용하는 클로저
+## [iOS에서 흔하게 사용하는 클로저](#iOS에서-흔하게-사용하는-클로저)
 
 ### 후행클로저
 
