@@ -3,10 +3,12 @@
 
 ### Categories
 - [클로저란](#클로저란)
-- [클로저 표현식](#클로저 표현식)
-- [클로저의 사용하기](#클로저의 사용하기)
+- [표현식](#표현식)
+- [사용하기](#사용하기)
+- [1급객체](#1급객체)
+- [실행하기](#실행하기)
 
-### [클로저란](#클로저란)
+## [클로저란](#클로저란)
 클로저는 Named Closure와 Unnamed Closure로 나뉜다.
 
 우리가 흔하게 사용하는 함수는 Named Closure다.
@@ -31,16 +33,16 @@ let doSomething = { print("do something!!!") }
 2. 함수의 인자값으로 클로저를 전달할 수 있다.
 3. 함수의 반환값으로 클로저를 사용할 수 있다.
 
-### [클로저 표현식](#클로저 표현식)
+### [표현식](#표현식)
 
 unnamed Closure , 익명함수 (이하 클로저로 설명) 는 헤드 부분과 바디부분으로 나누어진다. 
 
 이걸 구분하는게 in이라는 키워드이다. 
 
-![스크린샷 2022-11-25 오전 9.00.59.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/daec0b09-5c42-4bad-be40-be0db4dc9978/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-11-25_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_9.00.59.png)
+<img width="529" alt="스크린샷 2022-11-25 오전 9 00 59" src="https://user-images.githubusercontent.com/76529148/225813360-e75d0bf6-9f3f-4caf-8b46-f38dec54806c.png">
 
 
-### [클로저의 사용하기](#클로저의 사용하기)
+## [사용하기](#사용하기)
 
 ### 함수의 사용법
 
@@ -80,7 +82,8 @@ doSomething("work") // doSomething( firstParam: "work")   //ERROR!!!!
 // Something is work
 ```
 
-## 1급객체의 특징
+
+## [1급객체](#1급객체)
 
 ### 1. 변수나 상수에 대입할 수 있다.
 
@@ -110,7 +113,7 @@ func doSomething(closure: () -> ()) {
 
 이걸 아래처럼 파라미터 안에 클로저를 넣어줘도 된다.
 
-![스크린샷 2022-11-25 오후 12.34.53.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/488994d8-0e8b-4c68-8bad-fde118a035ee/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-11-25_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_12.34.53.png)
+<img width="285" alt="스크린샷 2022-11-25 오후 12 34 53" src="https://user-images.githubusercontent.com/76529148/225813355-0d743c29-a262-451f-b723-23aa1b5943ce.png">
 
 표시된 부분이 파라미터 안에 들어간 클로저다.
 
@@ -130,7 +133,7 @@ func doSomething() -> () -> () {
 }
 ```
 
-## 클로저 실행하기
+## [실행하기](#실행하기)
 
 1. 대입된 변수나 상수로 호출하기
 
@@ -429,7 +432,8 @@ public struct FileDownloader {
 
 아래와 같이 사용한다.
 
-![스크린샷 2022-11-25 오후 3.03.19.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8abf0b3e-b316-42b9-96c5-1235c7c7a069/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-11-25_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.03.19.png)
+![스크린샷 2022-11-25 오후 3 03 19](https://user-images.githubusercontent.com/76529148/225813348-72b8789d-261e-40c7-a9bc-a866287ced3a.png)
+
 
 API를 이용할 때도 많이 사용한다. 
 
