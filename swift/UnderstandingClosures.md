@@ -10,6 +10,7 @@
 - [후행 클로저 - Trailing Closure](#후행-클로저---Trailing-Closure)
 - [경량화 문법 - Lightweight Closure Syntax](#경량화-문법---lightweight-closure-syntax)
 - [탈출 클로저 - Escaping Closure](#탈출-클로저---Escaping-Closure)
+- [오토 클로저 - Auto Closure](#오토-클로저---Auto-Closure)
 
 
 ## [클로저란](#클로저란)
@@ -324,7 +325,9 @@ doSomething {
 }
 ```
 
-## 2. @autoClosure
+## [오토 클로저 - Auto Closure](#오토-클로저---Auto-Closure)
+
+
 오토클로저는 인자로 전달된 표현식을 자동으로 클로저로 변환해주는 어노테이션이다.
 파라미터로 전달된 일반구문 과 함수를 클로저로  래핑(wrapping)하는 것을 말한다. 
 
