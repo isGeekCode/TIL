@@ -325,10 +325,48 @@ doSomething {
 ```
 
 ## 2. @autoClosure
-
+오토클로저는 인자로 전달된 표현식을 자동으로 클로저로 변환해주는 어노테이션이다.
 파라미터로 전달된 일반구문 과 함수를 클로저로  래핑(wrapping)하는 것을 말한다. 
 
 @autoClosure 어노테이션은 파라미터의 함수타입정의 바로앞에 붙인다. 
+
+@autoclosure를 사용하면, 함수 호출 시 클로저를 작성하지 않고도 간결하게 코드를 작성할 수 있다.
+
+예를 들어, 다음과 같은 and 함수가 있다고 가정해보면
+
+```swift
+func and(_ a: Bool, _ b: Bool) -> Bool {
+    return a && b
+}
+```
+이 함수를 호출하려면, 다음과 같이 작성할 수 있다.
+```swift
+let result = and(true, false) // false
+```
+하지만, 만약 and 함수가 클로저 대신에 불리언 값을 인자로 받도록 변경한다면, 함수 호출 시에 true나 false를 직접 작성해야 한다.
+
+
+```swift
+func and(_ a: () -> Bool, _ b: () -> Bool) -> Bool {
+    return a() && b()
+}
+
+let result = and({ true }, { false }) // false
+```
+
+이때, `@autoclosure`를 사용하면, 함수 호출 시에 클로저를 작성하지 않아도 되므로, 더 간결한 코드를 작성할 수 있다.
+
+```swift
+func and(_ a: @autoclosure () -> Bool, _ b: @autoclosure () -> Bool) -> Bool {
+    return a() && b()
+}
+
+let result = and(true, false) // false
+```
+
+
+두번째 에제
+
 
 ```swift
 func doSomething(closure: @autoclosure () -> ()) {
