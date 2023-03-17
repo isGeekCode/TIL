@@ -3,10 +3,13 @@
 
 ### Categories
 - [클로저란](#클로저란)
-- [표현식](#표현식)
-- [사용하기](#사용하기)
-- [1급객체](#1급객체)
-- [실행하기](#실행하기)
+    - [표현식](#표현식)
+    - [사용하기](#사용하기)
+    - [1급객체](#1급객체)
+    - [실행하기](#실행하기)
+- [후행클로저:Trailing_Closure](#후행클로저:Trailing_Closure)
+- [경량화:Lightweight_Closure_Syntax](#경량화:Lightweight_Closure_Syntax)
+
 
 ## [클로저란](#클로저란)
 클로저는 Named Closure와 Unnamed Closure로 나뉜다.
@@ -156,7 +159,7 @@ closure()
 } )()
 ```
 
-## 1. 후행클로저 Trailing Closure
+## [후행클로저:Trailing_Closure](#후행클로저:Trailing_Closure)
 
 - 함수의 마지막 파라미터가 클로저일 때, 이 클로저를  파라미터 값 형식이 아니라  함수 뒤에 붙여서 작성할 수 있다.
 - Argument Label은 생략한다.
@@ -248,7 +251,7 @@ print("Fail!")
 
 하지만 이렇게 파라미터가 여러개일 경우에는 파라미터를 넘겨줘야하기 때문에 함수 호출 구문()을 생략할 수 없다.
 
-## 클로저 경량화
+## [경량화:Lightweight_Closure_Syntax](#경량화:Lightweight_Closure_Syntax)
 
 클로저는 헤드부분  `() → () in` 여러종류의 괄호때문에 살짝 가독성이 떨어진다.  그래서 어려워보인다. 그래서 문법을 최적화해서 클로저를 단순하게 쓸 때 사용하는 것이 경량화 문법이다.
 
