@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_172 TILs and counting..._
+_173 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Understanding Closures in Swift : 클로저 톺아보기](swift/UnderstandingClosures.md) - Fri Mar 17 13:01:02 2023 +0900
 - [IOS에서 사용하는 알림의 종류](Notifications/iOS_Notification.md) - Thu Mar 16 16:55:16 2023 +0900
-- [webview - 바운스 효과 제거하기](Networking/Webview_how_to_stop_bounce.md) - Wed Mar 15 15:59:15 2023 +0900
-- [WebView - 스와이프로 리프레시 세팅](Networking/WebView_swipe_refresh.md) - Wed Mar 15 15:59:15 2023 +0900
+- [WebView - PC에서 사용중인 내부망을 Iphone으로 연결시키는 방법](Networking/WebViewZ_intranet.md) - Wed Mar 15 15:59:15 2023 +0900
+- [WebView - 자주 사용하는 메서드](Networking/WebView_often_use_delegate_method.md) - Wed Mar 15 15:59:15 2023 +0900
 - [NSObject - URLSession](Networking/NSObject_URLSession.md) - Wed Mar 15 15:59:15 2023 +0900
-- [WebView - 앱에서 웹으로 JavaScript보내기](Networking/WebView_Sending_JS.md) - Wed Mar 15 15:59:15 2023 +0900
 
 ### Categories
 
@@ -240,6 +240,7 @@ _172 TILs and counting..._
 - [이미지의 형태](swift/TIL220915_KindsOfImageFormats.md)
 - [Xcode 디버깅으로 변수변화 캐치하기](swift/TIL221026_howToDebugging.md)
 - [Special Literal](swift/TIL_220527_specialLiteral.md)
+- [Understanding Closures in Swift : 클로저 톺아보기](swift/UnderstandingClosures.md)
 - [enum 사용법](swift/aboutEnum.md)
 - [저장프로퍼티 - 프로퍼티(1)](swift/aboutProperty1.md)
 - [연산프로퍼티 - 프로퍼티(2)](swift/aboutProperty2.md)
