@@ -1,5 +1,9 @@
 # Layout - SwiftUI: TabBar
 
+ContentView는 SwiftUI View 구조체를 나타낸다. body 속성은 TabView를 반환하며, TabView의 각 탭은 Text 뷰를 사용하여 표시한다. 
+각 탭에는 Image(systemName:)과 Text() 함수를 사용하여 아이콘과 텍스트를 추가한다.
+
+ContentView_Previews는 미리보기 기능을 위한 코드이다. SwiftUI 미리보기를 사용하면 코드를 빠르게 시각적으로 확인할 수 있다.
 
 ## tabItem을 이용하여 구현하기
 ```swift
