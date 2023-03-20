@@ -1,4 +1,4 @@
-# RubyGems - Package Manager
+# RubyGems - Package Manager :　gem 관리하기
 
 루비에서는 RubyGems라는 패키지관리 시스템이 있다. 이걸 통해 패키지(라이브러리)를 설치하고 관리 할 수있다.
 

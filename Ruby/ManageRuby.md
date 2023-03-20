@@ -23,5 +23,71 @@ Rbenv는 루비의 버전을 독립적으로 사용할 수 있도록 도와주�
 
 루비에서는 RubyGems라는 패키지관리 시스템이 있다. 이걸 통해 패키지(라이브러리)를 설치하고 관리 할 수있다.
 
+이때 라이브러리의 버전에 대한 dependency를 관리해야 할 일이 생기는데, rbenv는 dependency를 책임지는 라이브러리가 비생성 되다보니 이 덕분에 라이브러리 dependency도 함께 설치되는 rvm에 비해 가볍다는 장점이 있다.
 
-gem 이라고 불리는 라이브러리 version에 대한 dependency를 관리해야 할 일이 생기는데, rbenv는 dependency를 책임지는 라이브러리가 비생성 되다보니 이 덕분에 라이브러리 dependency도 함께 설치되는 rvm에 비해 가볍다는 장점이
+## Rbenv 사용법
+brew를 통해 설치할 수 있다.
+
+```
+# 설치
+brew update
+brew install rbenv ruby-build
+
+# 설치 확인
+rbenv versions
+## 혹은 
+rbenv -v
+
+# 아래의 형태로 나오면 system ruby 사용중
+* system (set by /Users/...
+```
+rbenv를 설치하고 버전을 확인해보면 system으로 나오게 된다. 시스템에 기본적으로 설치된 버전이다.
+```
+# 해당 명령어를 통해 설치가능한 ruby 버전 확인
+rbenv install -l
+
+# 버전을 입력하여 루비 설치
+rbenv install <version>
+
+# 설치된 ruby들을 확인하기
+rbenv versions
+
+# 설치된 ruby들이 나오고, 선택된 루비가 표시됨
+* system (set by /Users/<유저이름>/.rbenv/version)
+  3.0.1
+  
+# 여기서 global명령어로 현재 루비버전을 변경
+rbenv global 3.0.1
+
+# Shell 설정파일 편집 진입
+vi ~/.zshrc
+
+## 아래 내용 추가
+[[ -d ~/.rbenv  ]] && \
+  export PATH=${HOME}/.rbenv/bin:${PATH} && \
+  eval "$(rbenv init -)"
+
+# Shell 설정파일 저장 후 적용
+source ~/.zshrc
+```
+
+설치 이후에는 아래와 같이 버전만 변경하여 사용하면 된다.
+
+### 버전 전환하기
+
+```
+# 설치된 ruby들을 확인하기
+rbenv versions
+
+# 설치된 ruby들이 나오고, 선택된 루비가 표시됨
+* system (set by /Users/<유저이름>/.rbenv/version)
+  3.0.1
+  
+# 여기서 global명령어로 현재 루비버전을 변경
+rbenv global 3.0.1
+```
+
+
+## 관련 링크
+- [RubyGems - Package Manager :　gem 관리하기](https://github.com/isGeekCode/TIL/blob/main/Ruby/ManageGem.md)
+
