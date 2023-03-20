@@ -12,7 +12,7 @@ _179 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [RubyGems - Package Manager](Ruby/ManageGem.md) - Mon Mar 20 13:26:53 2023 +0900
+- [RubyGems - Package Manager :　gem 관리하기](Ruby/ManageGem.md) - Mon Mar 20 13:26:53 2023 +0900
 - [Ruby - 버전관리 : RVM, Rbenv 사용법](Ruby/ManageRuby.md) - Mon Mar 20 13:26:53 2023 +0900
 - [Installation: Ruby](Ruby/Installation_Ruby.md) - Mon Mar 20 10:09:12 2023 +0900
 - [Layout - SwiftUI: TabBar](Mobile-IOS/Layout_SwiftUI_TabBar.md) - Sat Mar 18 23:57:29 2023 +0900
@@ -219,7 +219,7 @@ _179 TILs and counting..._
 
 ### [Ruby](#Ruby)
 - [Installation: Ruby](Ruby/Installation_Ruby.md)
-- [RubyGems - Package Manager](Ruby/ManageGem.md)
+- [RubyGems - Package Manager :　gem 관리하기](Ruby/ManageGem.md)
 - [Ruby - 버전관리 : RVM, Rbenv 사용법](Ruby/ManageRuby.md)
 
 ### [Self-Review](#Self-Review)
