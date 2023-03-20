@@ -1,6 +1,6 @@
 # Ruby - 버전관리 : RVM, Rbenv 사용법
 
-## RVM이란
+## RVM
 
 Ruby Version Manager을 줄여 RVM이라 한다.
 
@@ -25,7 +25,7 @@ Rbenv는 루비의 버전을 독립적으로 사용할 수 있도록 도와주�
 
 이때 라이브러리의 버전에 대한 dependency를 관리해야 할 일이 생기는데, rbenv는 dependency를 책임지는 라이브러리가 비생성 되다보니 이 덕분에 라이브러리 dependency도 함께 설치되는 rvm에 비해 가볍다는 장점이 있다.
 
-## Rbenv 사용법
+### Rbenv 사용법
 brew를 통해 설치할 수 있다.
 
 ```
@@ -87,6 +87,10 @@ rbenv versions
 rbenv global 3.0.1
 ```
 
+### rbenv 사용시 주의할 점
+rbenv를 사용하는 경우 버전마다 각각 설치되니 헷갈리지않도록 주의한다. rbenv로 버전을 전환해도 가끔 system의 gem에 참조되어 있는 경우가 있다. bash나 zshrc같은 shell 설정파일에 경로 설정을 했는지 꼭 체크를 해야한다.
+
+자칫 gem관련 에러가 발생하면 brew에서 설치된 라이브러리들이 실행이 안되거나 cocoapods도 실행이 안되기도 한다. 
 
 ## 관련 링크
 - [RubyGems - Package Manager :　gem 관리하기](https://github.com/isGeekCode/TIL/blob/main/Ruby/ManageGem.md)
