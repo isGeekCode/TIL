@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_177 TILs and counting..._
+_179 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [RubyGems - Package Manager](Ruby/ManageGem.md) - Mon Mar 20 13:26:53 2023 +0900
+- [Ruby - 버전관리 : RVM, Rbenv 사용법](Ruby/ManageRuby.md) - Mon Mar 20 13:26:53 2023 +0900
 - [Installation: Ruby](Ruby/Installation_Ruby.md) - Mon Mar 20 10:09:12 2023 +0900
 - [Layout - SwiftUI: TabBar](Mobile-IOS/Layout_SwiftUI_TabBar.md) - Sat Mar 18 23:57:29 2023 +0900
 - [Android - WebView : 앱에서 웹으로 JavaScript 보내기](Mobile-Android/Android_WebView_Sending_JS.md) - Fri Mar 17 16:55:48 2023 +0900
-- [MardDown - TOC기능 만들기 (Table Of Contents)](ComputerScience/MarkDown_TOC.md) - Fri Mar 17 16:50:58 2023 +0900
-- [Understanding Closures in Swift : 클로저 톺아보기](swift/UnderstandingClosures.md) - Fri Mar 17 13:01:02 2023 +0900
 
 ### Categories
 
@@ -219,6 +219,8 @@ _177 TILs and counting..._
 
 ### [Ruby](#Ruby)
 - [Installation: Ruby](Ruby/Installation_Ruby.md)
+- [RubyGems - Package Manager](Ruby/ManageGem.md)
+- [Ruby - 버전관리 : RVM, Rbenv 사용법](Ruby/ManageRuby.md)
 
 ### [Self-Review](#Self-Review)
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
