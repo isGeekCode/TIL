@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_176 TILs and counting..._
+_177 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Installation: Ruby](Ruby/Installation_Ruby.md) - Mon Mar 20 10:09:12 2023 +0900
 - [Layout - SwiftUI: TabBar](Mobile-IOS/Layout_SwiftUI_TabBar.md) - Sat Mar 18 23:57:29 2023 +0900
 - [Android - WebView : 앱에서 웹으로 JavaScript 보내기](Mobile-Android/Android_WebView_Sending_JS.md) - Fri Mar 17 16:55:48 2023 +0900
 - [MardDown - TOC기능 만들기 (Table Of Contents)](ComputerScience/MarkDown_TOC.md) - Fri Mar 17 16:50:58 2023 +0900
 - [Understanding Closures in Swift : 클로저 톺아보기](swift/UnderstandingClosures.md) - Fri Mar 17 13:01:02 2023 +0900
-- [IOS에서 사용하는 알림의 종류](Notifications/iOS_Notification.md) - Thu Mar 16 16:55:16 2023 +0900
 
 ### Categories
 
@@ -36,6 +36,7 @@ _176 TILs and counting..._
 - [Notifications](#Notifications)
 - [Objective-C](#Objective-C)
 - [RelatedImage](#RelatedImage)
+- [Ruby](#Ruby)
 - [Self-Review](#Self-Review)
 - [SwitchingScreens](#SwitchingScreens)
 - [Xcode](#Xcode)
@@ -110,7 +111,7 @@ _176 TILs and counting..._
 
 ### [Library](#Library)
 - [About Swift PackageManager](Library/About_SPM.md)
-- [About CocoaPods](Library/About_cocoaPods_basic.md)
+- [Installation: CocoaPods](Library/About_cocoaPods_basic.md)
 - [About CocoaPods Error 방지하기](Library/About_cocoaPods_error.md)
 - [Convention - SwiftLint 세팅하기](Library/Convention_SwiftLint.md)
 - [Convention - SwiftLint 세부설정하기](Library/Convention_SwiftLintCustomRule.md)
@@ -215,6 +216,9 @@ _176 TILs and counting..._
 
 ### [RelatedImage](#RelatedImage)
 - [dp와 pt에 대하여 (Feat. 포인트란)](RelatedImage/DP_PT.md)
+
+### [Ruby](#Ruby)
+- [Installation: Ruby](Ruby/Installation_Ruby.md)
 
 ### [Self-Review](#Self-Review)
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
