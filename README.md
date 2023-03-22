@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_185 TILs and counting..._
+_187 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [AppStore - 인증서에 관하여](AppStore/AppStore_Certificate.md) - Wed Mar 22 16:56:49 2023 +0900
+- [기존 배포되어있는 앱을 다른 앱으로 바꾸기](AppStore/AppStore_ChangeBundleId.md) - Wed Mar 22 16:56:49 2023 +0900
 - [Xcode - warning: libobjc.A.dylib is being read from process memory...](Error/xcodeError_warningLibObjc.md) - Wed Mar 22 13:25:41 2023 +0900
 - [Xcode - iPhone is busy: Making Apple Watch ready for development](Error/xcodeError_makingAppleWatch.md) - Wed Mar 22 13:25:05 2023 +0900
 - [Flutter - Installation](Flutter/Installation_flutter.md) - Tue Mar 21 23:45:51 2023 +0900
-- [Objective-C 프로젝트에서 Swift 라이브러리 사용하기](Objective-C/Objc_Bridging_SwiftInObjc.md) - Tue Mar 21 17:02:59 2023 +0900
-- [Library - 카카오 SDK 설치하기](Library/Library_A_kakaoSDK.md) - Mon Mar 20 16:58:38 2023 +0900
 
 ### Categories
 
@@ -51,6 +51,8 @@ _185 TILs and counting..._
 
 ### [AppStore](#AppStore)
 - [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](AppStore/AppStore_AppDismiss.md)
+- [AppStore - 인증서에 관하여](AppStore/AppStore_Certificate.md)
+- [기존 배포되어있는 앱을 다른 앱으로 바꾸기](AppStore/AppStore_ChangeBundleId.md)
 - [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](AppStore/AppStore_missing_Compliance.md)
 
 ### [Book](#Book)
