@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_183 TILs and counting..._
+_185 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Xcode - warning: libobjc.A.dylib is being read from process memory...](Error/xcodeError_warningLibObjc.md) - Wed Mar 22 13:25:41 2023 +0900
+- [Xcode - iPhone is busy: Making Apple Watch ready for development](Error/xcodeError_makingAppleWatch.md) - Wed Mar 22 13:25:05 2023 +0900
 - [Flutter - Installation](Flutter/Installation_flutter.md) - Tue Mar 21 23:45:51 2023 +0900
 - [Objective-C 프로젝트에서 Swift 라이브러리 사용하기](Objective-C/Objc_Bridging_SwiftInObjc.md) - Tue Mar 21 17:02:59 2023 +0900
 - [Library - 카카오 SDK 설치하기](Library/Library_A_kakaoSDK.md) - Mon Mar 20 16:58:38 2023 +0900
-- [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](Library/About_A_iOS_Package.md) - Mon Mar 20 14:25:07 2023 +0900
-- [Ruby - 버전관리 : RVM, Rbenv 사용법](Ruby/ManageRuby.md) - Mon Mar 20 13:26:53 2023 +0900
 
 ### Categories
 
@@ -79,6 +79,8 @@ _183 TILs and counting..._
 - [Git - command line tools are already installed (사실 git 에러 아님)](Error/xcodeError_CommandLineTool.md)
 - [Xcode - Launching _AppName_ is taking longer than expected](Error/xcodeError_Launching_is_taking_longer_than.md)
 - [Xcode - cannot be opened because it is in a future Xcode project file format.](Error/xcodeError_cannotBeOpened.md)
+- [Xcode - iPhone is busy: Making Apple Watch ready for development](Error/xcodeError_makingAppleWatch.md)
+- [Xcode - warning: libobjc.A.dylib is being read from process memory...](Error/xcodeError_warningLibObjc.md)
 
 ### [Extensions](#Extensions)
 - [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md)
