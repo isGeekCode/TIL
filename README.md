@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_188 TILs and counting..._
+_189 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Array의 특정값을 포함한 IndexPath찾고 값 바꾸기](swift/swift_replacingArrayIndexValue..md) - Fri Mar 24 13:45:31 2023 +0900
 - [Cookie란](Networking/Cookie_about.md) - Fri Mar 24 09:26:27 2023 +0900
 - [AppStore - 인증서에 관하여](AppStore/AppStore_Certificate.md) - Wed Mar 22 16:56:49 2023 +0900
 - [기존 배포되어있는 앱을 다른 앱으로 바꾸기](AppStore/AppStore_ChangeBundleId.md) - Wed Mar 22 16:56:49 2023 +0900
 - [Xcode - warning: libobjc.A.dylib is being read from process memory...](Error/xcodeError_warningLibObjc.md) - Wed Mar 22 13:25:41 2023 +0900
-- [Xcode - iPhone is busy: Making Apple Watch ready for development](Error/xcodeError_makingAppleWatch.md) - Wed Mar 22 13:25:05 2023 +0900
 
 ### Categories
 
@@ -273,6 +273,7 @@ _188 TILs and counting..._
 - [Splite과 Component](swift/splite_component_map.md)
 - [Closure 톺아보기](swift/swift_firstClassClosureMaster.md)
 - [1급 객체](swift/swift_firstClassObject.md)
+- [Array의 특정값을 포함한 IndexPath찾고 값 바꾸기](swift/swift_replacingArrayIndexValue..md)
 - [Switch case let, If case let, guard case let](swift/switchCaseLet_IfCaseLet_GuardCaseLet.md)
 
 [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
