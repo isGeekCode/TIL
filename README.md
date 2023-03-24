@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_187 TILs and counting..._
+_188 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Cookie란](Networking/Cookie_about.md) - Fri Mar 24 09:26:27 2023 +0900
 - [AppStore - 인증서에 관하여](AppStore/AppStore_Certificate.md) - Wed Mar 22 16:56:49 2023 +0900
 - [기존 배포되어있는 앱을 다른 앱으로 바꾸기](AppStore/AppStore_ChangeBundleId.md) - Wed Mar 22 16:56:49 2023 +0900
 - [Xcode - warning: libobjc.A.dylib is being read from process memory...](Error/xcodeError_warningLibObjc.md) - Wed Mar 22 13:25:41 2023 +0900
 - [Xcode - iPhone is busy: Making Apple Watch ready for development](Error/xcodeError_makingAppleWatch.md) - Wed Mar 22 13:25:05 2023 +0900
-- [Flutter - Installation](Flutter/Installation_flutter.md) - Tue Mar 21 23:45:51 2023 +0900
 
 ### Categories
 
@@ -204,6 +204,7 @@ _187 TILs and counting..._
 - [appStoreReceiptURL](Mobile-IOS/xIsProductionCheck.md)
 
 ### [Networking](#Networking)
+- [Cookie란](Networking/Cookie_about.md)
 - [NSObject - URLSession](Networking/NSObject_URLSession.md)
 - [네트워킹 - 각종 URL의 유효성 검사](Networking/URL_ValidationCheck.md)
 - [WebView - PC에서 사용중인 내부망을 Iphone으로 연결시키는 방법](Networking/WebViewZ_intranet.md)
