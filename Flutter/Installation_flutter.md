@@ -1,8 +1,5 @@
 # Flutter - Installation
 
-## M1기준
-
-
 ## 필요한 것들
 - Android Studio
 - Xcode
@@ -10,6 +7,10 @@
 - VSCode
 - VSCode Extension - Flutter
 - Flutter SDK
+
+
+
+# M1기준
 
 ## 안드로이드 스튜디오 설치
 
@@ -22,6 +23,7 @@ M1여부를 꼭 확인해서 다운로드할 것
 - Install한다.
 
 - 설치가 완료되면 새로 생긴 Restart IDE 버튼을 눌러 안드로이드 스튜디오 프로그램을 재시작
+- 잘 됐다면 프로젝트 생성에서 플러터 프로젝터로 생성가능해진다.
 
 
 ## Xcode
@@ -50,4 +52,27 @@ export PATH=$PATH:~/Downloads/flutter/bin
 
 ## VSCode Flutter
 - extension 플러터 설치
+
+
+
+
+# Intel 기준
+
+## 안드로이드 스튜디오 설치
+
+Intel 여부를 꼭 확인해서 다운로드할 것
+[사이트링크](https://developer.android.com/studio)
+
+- Flutter를 Install
+- 설치 중간에 Dart 플러그인이 필요하다고한다.
+- Install한다.
+
+- 설치가 완료되면 새로 생긴 Restart IDE 버튼을 눌러 안드로이드 스튜디오 프로그램을 재시작
+- 잘 됐다면 프로젝트 생성에서 플러터 프로젝터로 생성가능해진다.
+
+## 플러터 SDK 설치
+[사이트링크](https://docs.flutter.dev/get-started/install/macos)
+- Intel 클릭 및 다운로드
+- 터미널을 열고 다운로드 받은 폴더로 이동
+
 
