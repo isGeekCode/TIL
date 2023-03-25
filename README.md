@@ -205,6 +205,7 @@ _189 TILs and counting..._
 
 ### [Networking](#Networking)
 - [Cookie란](Networking/Cookie_about.md)
+- [Cookie - cookieAcceptPolicy (쿠키수락정책)](Networking/Cookie_cookieAcceptPolicy.md)
 - [NSObject - URLSession](Networking/NSObject_URLSession.md)
 - [네트워킹 - 각종 URL의 유효성 검사](Networking/URL_ValidationCheck.md)
 - [WebView - PC에서 사용중인 내부망을 Iphone으로 연결시키는 방법](Networking/WebViewZ_intranet.md)
