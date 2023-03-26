@@ -75,7 +75,7 @@ _189 TILs and counting..._
 - [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
 ### [Conference](#Conference)
-- [230325 - iOS Daejeon Club 후기 (참석)](https://github.com/isGeekCode/TIL/blob/main/Conference/230325_DaejonCodingClub.md)
+- [230325 - iOS Daejeon Club 후기 (참석)](Conference/230325_DaejonCodingClub.md)
 
 ### [Error](#Error)
 - [iOS - Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md)
