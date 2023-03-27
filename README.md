@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_189 TILs and counting..._
+_192 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md) - Mon Mar 27 11:01:43 2023 +0900
+- [230325 - iOS Daejeon Club 후기 (참석)](Conference/230325_DaejonCodingClub.md) - Sun Mar 26 23:21:41 2023 +0900
+- [Cookie - cookieAcceptPolicy (쿠키수락정책)](Networking/Cookie_cookieAcceptPolicy.md) - Fri Mar 24 17:17:40 2023 +0900
 - [Array의 특정값을 포함한 IndexPath찾고 값 바꾸기](swift/swift_replacingArrayIndexValue..md) - Fri Mar 24 13:45:31 2023 +0900
 - [Cookie란](Networking/Cookie_about.md) - Fri Mar 24 09:26:27 2023 +0900
-- [AppStore - 인증서에 관하여](AppStore/AppStore_Certificate.md) - Wed Mar 22 16:56:49 2023 +0900
-- [기존 배포되어있는 앱을 다른 앱으로 바꾸기](AppStore/AppStore_ChangeBundleId.md) - Wed Mar 22 16:56:49 2023 +0900
-- [Xcode - warning: libobjc.A.dylib is being read from process memory...](Error/xcodeError_warningLibObjc.md) - Wed Mar 22 13:25:41 2023 +0900
 
 ### Categories
 
@@ -55,6 +55,7 @@ _189 TILs and counting..._
 - [AppStore - 인증서에 관하여](AppStore/AppStore_Certificate.md)
 - [기존 배포되어있는 앱을 다른 앱으로 바꾸기](AppStore/AppStore_ChangeBundleId.md)
 - [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](AppStore/AppStore_missing_Compliance.md)
+- [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md)
 
 ### [Book](#Book)
 - [백만장자의 시크릿](Book/220604_BookReview_Millionaire_Secret.md)
