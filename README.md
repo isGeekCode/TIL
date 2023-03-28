@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_192 TILs and counting..._
+_193 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile )](Integrity/Integrity_Certificate_Provisioning.md) - Tue Mar 28 23:12:27 2023 +0900
+- [Integrity - 인증서에 관하여](Integrity/Integrity_Certificate.md) - Tue Mar 28 22:52:44 2023 +0900
 - [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md) - Mon Mar 27 11:01:43 2023 +0900
 - [230325 - iOS Daejeon Club 후기 (참석)](Conference/230325_DaejonCodingClub.md) - Sun Mar 26 23:21:41 2023 +0900
 - [Cookie - cookieAcceptPolicy (쿠키수락정책)](Networking/Cookie_cookieAcceptPolicy.md) - Fri Mar 24 17:17:40 2023 +0900
-- [Array의 특정값을 포함한 IndexPath찾고 값 바꾸기](swift/swift_replacingArrayIndexValue..md) - Fri Mar 24 13:45:31 2023 +0900
-- [Cookie란](Networking/Cookie_about.md) - Fri Mar 24 09:26:27 2023 +0900
 
 ### Categories
 
@@ -52,7 +52,6 @@ _192 TILs and counting..._
 
 ### [AppStore](#AppStore)
 - [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](AppStore/AppStore_AppDismiss.md)
-- [AppStore - 인증서에 관하여](AppStore/AppStore_Certificate.md)
 - [기존 배포되어있는 앱을 다른 앱으로 바꾸기](AppStore/AppStore_ChangeBundleId.md)
 - [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](AppStore/AppStore_missing_Compliance.md)
 - [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md)
@@ -121,6 +120,8 @@ _192 TILs and counting..._
 
 ### [Integrity](#Integrity)
 - [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md)
+- [Integrity - 인증서에 관하여](Integrity/Integrity_Certificate.md)
+- [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile )](Integrity/Integrity_Certificate_Provisioning.md)
 
 ### [Library](#Library)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](Library/About_A_iOS_Package.md)
