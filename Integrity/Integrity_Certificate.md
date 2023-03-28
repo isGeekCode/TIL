@@ -1,4 +1,4 @@
-# AppStore - 인증서에 관하여
+# Integrity - 인증서에 관하여
 
 
 ## 앱과 관련된 정보는 Apple Developer에서 확인 가능
