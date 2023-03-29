@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_193 TILs and counting..._
+_194 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Layout - 이미지 컨텐츠 모드 (ContentMode)](Mobile-IOS/Layout_ImageContentMode.md) - Wed Mar 29 10:44:04 2023 +0900
 - [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](Integrity/Integrity_Certificate_Provisioning.md) - Tue Mar 28 23:12:27 2023 +0900
 - [Integrity - 인증서에 관하여](Integrity/Integrity_Certificate.md) - Tue Mar 28 22:52:44 2023 +0900
 - [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md) - Mon Mar 27 11:01:43 2023 +0900
 - [230325 - iOS Daejeon Club 후기 (참석)](Conference/230325_DaejonCodingClub.md) - Sun Mar 26 23:21:41 2023 +0900
-- [Cookie - cookieAcceptPolicy (쿠키수락정책)](Networking/Cookie_cookieAcceptPolicy.md) - Fri Mar 24 17:17:40 2023 +0900
 
 ### Categories
 
@@ -160,6 +160,7 @@ _193 TILs and counting..._
 - [Layout - CodeUI: CustomShadow(feat.CustomClass)](Mobile-IOS/Layout_CodeUI_CustomShadow.md)
 - [Layout - CodeUI: UIButton](Mobile-IOS/Layout_CodeUI_UIButton.md)
 - [Layout - CodeUI: UIView, UILabel](Mobile-IOS/Layout_CodeUI_UILabel_UIView.md)
+- [Layout - 이미지 컨텐츠 모드 (ContentMode)](Mobile-IOS/Layout_ImageContentMode.md)
 - [Layout - StoryboardUI: CornerRadius](Mobile-IOS/Layout_StoryboardUI_CornerRadius.md)
 - [Layout - SwiftUI: Color](Mobile-IOS/Layout_SwiftUI_Color.md)
 - [Layout - SwiftUI: HStack, VStack, ZStack](Mobile-IOS/Layout_SwiftUI_HStackVStackZstack.md)
