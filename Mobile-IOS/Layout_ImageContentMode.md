@@ -31,4 +31,5 @@ ContentMode는 UIViewContentMode 열거형으로 정의되며, 다양한 옵션�
 
 ## ContentMode별 이미지 표시 
 <img width="955" alt="스크린샷 2023-03-29 오전 10 35 07" src="https://user-images.githubusercontent.com/76529148/228403784-d833ac70-159f-4007-b2fa-eee2518e180f.png">  
-이미지 출처 : [핀터레스트](https://i.pinimg.com/564x/16/22/31/162231131a07dda331e720811b87f9d8.jpg)
+
+- 이미지 출처 : [핀터레스트](https://i.pinimg.com/564x/16/22/31/162231131a07dda331e720811b87f9d8.jpg)
