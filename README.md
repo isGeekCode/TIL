@@ -12,7 +12,7 @@ _193 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile )](Integrity/Integrity_Certificate_Provisioning.md) - Tue Mar 28 23:12:27 2023 +0900
+- [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](Integrity/Integrity_Certificate_Provisioning.md) - Tue Mar 28 23:12:27 2023 +0900
 - [Integrity - 인증서에 관하여](Integrity/Integrity_Certificate.md) - Tue Mar 28 22:52:44 2023 +0900
 - [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md) - Mon Mar 27 11:01:43 2023 +0900
 - [230325 - iOS Daejeon Club 후기 (참석)](Conference/230325_DaejonCodingClub.md) - Sun Mar 26 23:21:41 2023 +0900
@@ -121,7 +121,7 @@ _193 TILs and counting..._
 ### [Integrity](#Integrity)
 - [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md)
 - [Integrity - 인증서에 관하여](Integrity/Integrity_Certificate.md)
-- [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile )](Integrity/Integrity_Certificate_Provisioning.md)
+- [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](Integrity/Integrity_Certificate_Provisioning.md)
 
 ### [Library](#Library)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](Library/About_A_iOS_Package.md)
