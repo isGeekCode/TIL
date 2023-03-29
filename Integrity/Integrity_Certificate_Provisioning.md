@@ -1,4 +1,4 @@
-# Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile ) 
+# Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile) 
 
 ## 이건 어디서 사용할까?
 
@@ -23,7 +23,7 @@
 
 
 
-참고 링크 (1) : [Line Engineering - 심민영 : iOS 코드 서명에 대해서](https://engineering.linecorp.com/ko/blog/ios-code-signing) 
+참고 링크 (1) : [Line Engineering - 심민영 : iOS 코드 서명에 대해서](https://engineering.linecorp.com/ko/blog/ios-code-signing)  
 참고 링크 (2) : [Let'Swift 2022 - 강수진 : 인증서와 프로비저닝 프로파일]
 (https://www.youtube.com/watch?v=Kbx_lBhhwDA)
 
