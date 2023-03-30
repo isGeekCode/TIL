@@ -59,7 +59,7 @@ CSR은 인증서 발급을 위해 필요한 정보를 담고있는 데이터다.
 참고로 CSR을 만들때 생성되는 킸아에 대한 정보도 지정할 수 있다. 기본적으로 키 크기는 2048비트이고, 알고리즘은 RSA로 설정되어있다. 기본적으로 인증서는 Apple Developer Program에 가입된 사람들만 신청을 할 수 있다.
 
 애플 개발자 사이트에서 확인할 수 있는 인증서 유형은 아래 링크를 참고
-- [TIL : 인증서에 관하여](https://github.com/isGeekCode/TIL/blob/main/Integrity/Integrity_Certificate.md)
+- [TIL : 인증서에 관하여](https://github.com/isGeekCode/TIL/blob/main/Integrity/Integrity_Certificate.md)  
 여기서 가장 중요하다고 말한 두개의 인증서가 있다. 바로 Apple Development와 Apple Distribution 인증서이다. 
 
 - Apple Development : 개발용
@@ -84,6 +84,6 @@ Run 을 하든 Archive 하든, 기본적으로 프로젝트를 빌드할 때 필
 
 ### 참고 링크
 - 링크 1 : [Line Engineering - 심민영 : iOS 코드 서명에 대해서](https://engineering.linecorp.com/ko/blog/ios-code-signing)  
-- 링크 2 : [Let'Swift 2022 - 강수진 : 인증서와 프로비저닝 프로파일](https://www.youtube.com/watch?v=Kbx_lBhhwDA)
-- 링크 3 : [Let'Swift 2022 - 강수진 : 인증서와 프로비저닝 프로파일 블로그 ](https://sujinnaljin.medium.com/ios-certificate-%EC%99%80-provisioning-profile-e1b9455e8a51)
-- 링크 4 : [TechTalk | iOS 앱 서명 개요](https://www.youtube.com/watch?v=0lJvQ-442OY&ab_channel=iLane)
+- 링크 2 : [Let'Swift 2022 - 강수진 : 인증서와 프로비저닝 프로파일](https://www.youtube.com/watch?v=Kbx_lBhhwDA)  
+- 링크 3 : [Let'Swift 2022 - 강수진 : 인증서와 프로비저닝 프로파일 블로그 ](https://sujinnaljin.medium.com/ios-certificate-%EC%99%80-provisioning-profile-e1b9455e8a51)  
+- 링크 4 : [TechTalk | iOS 앱 서명 개요](https://www.youtube.com/watch?v=0lJvQ-442OY&ab_channel=iLane)  
