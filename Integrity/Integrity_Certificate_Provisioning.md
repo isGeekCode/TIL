@@ -60,6 +60,8 @@ CSR은 인증서 발급을 위해 필요한 정보를 담고있는 데이터다.
 
 애플 개발자 사이트에서 확인할 수 있는 인증서 유형은 아래 링크를 참고
 - [TIL : 인증서에 관하여](https://github.com/isGeekCode/TIL/blob/main/Integrity/Integrity_Certificate.md)  
+  
+  
 여기서 가장 중요하다고 말한 두개의 인증서가 있다. 바로 Apple Development와 Apple Distribution 인증서이다. 
 
 - Apple Development : 개발용
