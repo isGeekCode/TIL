@@ -46,7 +46,7 @@ _195 TILs and counting..._
 - [swift](#swift)
 
 ### [AboutAI](#AboutAI)
-- [DeepLearning - 살펴보기](AboutAI/DeepLearning.md)
+- [딥러닝이란](AboutAI/DeepLearning.md)
 - [딥러닝 - 신경망으로 숫자에서 패턴찾기](AboutAI/DeepLearning_Neural.md)
 - [요즘 핫한 GPT로 앱만들어보기](AboutAI/MVVM_ReactorKit_Snapkit_RxSwift.md)
 - [언어모델이란](AboutAI/chatGPT.md)
