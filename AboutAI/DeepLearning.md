@@ -84,11 +84,18 @@
 
 그래서 사람이 만드는 것은 한계가 있다.
 
+23.03.31
+--
+
 ## 딥러닝은 이 방법과는 완전히 다른 방식이기에 가능하다.
   
-<img width="807" alt="스크린샷 2023-04-01 오전 8 08 59" src="https://user-images.githubusercontent.com/76529148/229248545-8ea87dea-a0b9-432f-b061-a68114b0e8f3.png">  
+  그렇다면 딥러닝은 어떤 다른 방법이기에 가능할까??
+  아래 링크에서 이어서 설명.
   
+  링크 : [TIL: 딥러닝 - 신경망으로 숫자에서 패턴찾기](https://github.com/isGeekCode/TIL/blob/main/AboutAI/DeepLearning_Neural.md)  
 
+
+  
 ### 참고 링크
 - 링크 1 : [2022.2.25 안될과학, 보이저엑스 남세동대표님 : 인공지능, 딥러닝을 알고싶다면 이 영상을 보세요](https://www.youtube.com/watch?v=CA5Ggqg5x6o&t=665s)  
 - 링크 1 : [2023.3.26 티타임즈, 보이저엑스 남세동대표님 : 파라미터, AI모델~ 1차함수만 알면 이해된다](https://www.youtube.com/watch?v=pDNPew0LuD0)  
