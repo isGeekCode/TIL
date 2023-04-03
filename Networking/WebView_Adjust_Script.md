@@ -21,7 +21,9 @@ self.userContentController.addUserScript(cookieScript)
 
 
 ## Evaluate JavaScript
-- [TIL : WebView - 앱에서 웹으로 JavaScript보내기 참고](https://github.com/isGeekCode/TIL/blob/main/Networking/WebView_Sending_JS.md) evaluateJavaScript() 메서드를 사용하여 iOS 웹뷰에서 동적으로 스크립트를 실행할 수 있다.
+- [TIL : WebView - 앱에서 웹으로 JavaScript보내기 참고](https://github.com/isGeekCode/TIL/blob/main/Networking/WebView_Sending_JS.md)  
+
+evaluateJavaScript() 메서드를 사용하여 iOS 웹뷰에서 동적으로 스크립트를 실행할 수 있다.
 
 이 방법은 웹 페이지가 로드될 때마다 스크립트를 실행할 수 있으며, WKUserContentController와는 달리 페이지가 변경될 때마다 추가하지 않아도 된다.
 
