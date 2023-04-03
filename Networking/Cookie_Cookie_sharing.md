@@ -1,4 +1,4 @@
-# Cookie - 여러 웹뷰에서 쿠키 공유하기
+# Cookie - WKProcessPool를 사용해 여러 웹뷰에서 쿠키 공유하기
 
 WKProcessPool을 사용하면 앱의 여러 WKWebView 객체에서 쿠키를 공유할 수 있다. 
 
