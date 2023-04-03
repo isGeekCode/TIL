@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_197 TILs and counting..._
+_198 TILs and counting..._
 
 ---
 
@@ -216,6 +216,7 @@ _197 TILs and counting..._
 - [appStoreReceiptURL](Mobile-IOS/xIsProductionCheck.md)
 
 ### [Networking](#Networking)
+- [](Networking/Cookie_AdjustCookie.md)
 - [Cookie란](Networking/Cookie_about.md)
 - [Cookie - cookieAcceptPolicy (쿠키수락정책)](Networking/Cookie_cookieAcceptPolicy.md)
 - [NSObject - URLSession](Networking/NSObject_URLSession.md)
