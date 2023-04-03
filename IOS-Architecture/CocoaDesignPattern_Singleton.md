@@ -1,9 +1,14 @@
-# Cocoa Design Pattern - Singleton
+# Cocoa Design Pattern - Singleton (싱글톤 패턴)
 
 싱글톤 패턴이란, 
 특정 용도로 객체를 하나만 생성하여, 공용으로 사용하고 싶을 때 사용하는 디자인 패턴이다.
 
 ## 싱글톤 예시
+
+아래처럼 클래스명을 그대로 담는다.
+하지만 반드시 shared로 사용할 필요는 없다. 
+원리상 또다른 객체를 만들지않고 한 객체만 계속해서 사용하는 것도 싱글톤이라고 할 수 있다.
+
 ### 생성방법
 ```swift
 class Singleton {
@@ -45,7 +50,7 @@ struct Model {
 }
 ```
 
-### 접근방법s
+### 접근방법
 ```swift
 Singleton.shared.model = Model(name: "My Model")
 print(Singleton.shared.model?.name) 
@@ -131,10 +136,10 @@ print(Singleton.shared.model?.name)
 ```swift
 let screen = UIScreen.main                     // 좌표공간, 앱 프레임, 스크린경계, 기기화면의 배율 (스케일)
 let userDefault = UserDefaults.standard        // 앱 저장정보 : 앱을 껐다켜도 저장됨
-let application = UIApplication.shared         // 실행중인 앱을 제어하고 조정하는 싱글톤
+let application = UIApplication.shared         // 현재 실행 중인 앱을 나타내는 객체
 let fileManager = FileManager.default          // 앱마다 자기만의 공간을 가지고 있는데, 이 공간을 관리하는 매니저
 let notification = NotificationCenter.default  // 앱 내에서 메세지를 던지면 아무데서나 이 메세지를 받을 수 있게 하는 역할
-URLSession.shared.dataTask
+URLSession.shared.dataTask                     // 네트워크 작업을 위한 객체
 UIApplication.shared.open(URL
-URLCache.shared.removeAllCachedResponses
+URLCache.shared.removeAllCachedResponses       // 앱 전반에서 캐시된 데이터를 공유하고 관리
 ```
