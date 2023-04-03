@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_195 TILs and counting..._
+_196 TILs and counting..._
 
 ---
 
@@ -82,6 +82,7 @@ _195 TILs and counting..._
 - [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md)
 
 ### [Error](#Error)
+- [SourceTree - 시도때도 없이 꺼지는 현상](Error/SourceTree_fatalError.md)
 - [iOS - Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md)
 - [Presenting view controllers on detached view controllers is discouraged.](Error/TIL221031_Alert_In_UIViewController_Init.md)
 - [maximumViewportInset cannot be larger than frame](Error/TIL221101_viewResizing.md)
