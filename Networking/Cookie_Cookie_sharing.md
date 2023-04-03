@@ -25,7 +25,7 @@ let webView1 = WKWebView(frame: .zero, configuration: configuration)
 let webView2 = WKWebView(frame: .zero, configuration: configuration)
 ```
 
-**쿠키 공유 확인**
+**Step 3. 쿠키 공유 확인**
 
 위와 같이 WKWebView를 초기화하면,
 두 WKWebView가 같은 WKProcessPool을 사용하므로 쿠키가 자동으로 공유된다.
