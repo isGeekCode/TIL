@@ -1,4 +1,4 @@
-# 230325 - iOS Daejeon Club 후기 (참석)
+# iOS Daejeon Club - 230325 후기 (참석)
 
 ## 당신은 어떻게 iOS를 시작하게 되었나요?
 
