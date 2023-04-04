@@ -14,12 +14,13 @@ _203 TILs and counting..._
 
 - [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md) - Wed Mar 29 11:12:36 2023 +0900
 - [Layout - 이미지 컨텐츠 모드 (ContentMode)](Mobile-IOS/Layout_ImageContentMode.md) - Wed Mar 29 10:44:04 2023 +0900
-- [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](Integrity/Integrity_Certificate_Provisioning.md) - Tue Mar 28 23:12:27 2023 +0900
 - [Integrity - 인증서에 관하여](Integrity/Integrity_Certificate.md) - Tue Mar 28 22:52:44 2023 +0900
 - [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md) - Mon Mar 27 11:01:43 2023 +0900
+- [Cookie - cookieAcceptPolicy (쿠키수락정책)](Networking/Cookie_cookieAcceptPolicy.md) - Fri Mar 24 17:17:40 2023 +0900
 
 ### Categories
 
+- [A_Writing_in_Progress](#A_Writing_in_Progress)
 - [AboutAI](#AboutAI)
 - [AppStore](#AppStore)
 - [Book](#Book)
@@ -44,6 +45,10 @@ _203 TILs and counting..._
 - [SwitchingScreens](#SwitchingScreens)
 - [Xcode](#Xcode)
 - [swift](#swift)
+
+### [A_Writing_in_Progress](#A_Writing_in_Progress)
+- [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](A_Writing_in_Progress/Integrity_Certificate_Provisioning.md)
+- [NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기](A_Writing_in_Progress/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
 
 ### [AboutAI](#AboutAI)
 - [딥러닝이란](AboutAI/DeepLearning.md)
@@ -127,7 +132,6 @@ _203 TILs and counting..._
 ### [Integrity](#Integrity)
 - [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md)
 - [Integrity - 인증서에 관하여](Integrity/Integrity_Certificate.md)
-- [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](Integrity/Integrity_Certificate_Provisioning.md)
 
 ### [Library](#Library)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](Library/About_A_iOS_Package.md)
@@ -189,7 +193,6 @@ _203 TILs and counting..._
 - [NSObject - Timer : 타이머 구현하기](Mobile-IOS/NSObject_Timer.md)
 - [CGColor에 대하여](Mobile-IOS/NSObject_UIColorCgColor.md)
 - [NSObject - UIFont](Mobile-IOS/NSObject_UIFont.md)
-- [NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기](Mobile-IOS/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
 - [UIView - UIControl - UIButton](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UIButton.md)
 - [NSObjet-UIResponder-UIView-UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](Mobile-IOS/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
 - [NSObject_UIResponder_UIView_UITableView_만들기](Mobile-IOS/NSObject_UIResponder_UIView_UITableView_howToMake.md)
