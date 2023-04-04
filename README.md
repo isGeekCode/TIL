@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_201 TILs and counting..._
+_202 TILs and counting..._
 
 ---
 
@@ -76,7 +76,8 @@ _201 TILs and counting..._
 - [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
 ### [Conference](#Conference)
-- [230325 - iOS Daejeon Club 후기 (참석)](Conference/230325_DaejonCodingClub.md)
+- [iOS Daejeon Club - 230325 후기 (참석)](Conference/IOSDaejonCodingClub_230325.md)
+- [Let us: Go! 2022 가을 - 221105 후기 (미참석)](Conference/LetUsGo2022_3Fall.md)
 
 ### [Docs](#Docs)
 - [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md)
