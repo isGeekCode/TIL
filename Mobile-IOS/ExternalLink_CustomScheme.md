@@ -2,7 +2,7 @@
 
 Target - info 에서 하단의 URL Types에 내용을 추가한다. 
 
-<img width="400" alt="스크린샷 2023-01-11 오후 1 15 43" src="https://user-images.githubusercontent.com/76529148/211722963-8a77980f-bb45-4ce6-9751-2f4175910bf9.png">
+<img width="700" alt="스크린샷 2023-01-11 오후 1 15 43" src="https://user-images.githubusercontent.com/76529148/211722963-8a77980f-bb45-4ce6-9751-2f4175910bf9.png">
 
 - identifier: 앱의 identifier
 - URL Schemes: 앱이름
