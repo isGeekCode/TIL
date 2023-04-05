@@ -193,7 +193,7 @@ _203 TILs and counting..._
 - [CGColor에 대하여](Mobile-IOS/NSObject_UIColorCgColor.md)
 - [NSObject - UIFont](Mobile-IOS/NSObject_UIFont.md)
 - [NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기 기능](Mobile-IOS/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
-- [UIView - UIControl - UIButton](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UIButton.md)
+- [UIView_UIControl_UIButton](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UIButton.md)
 - [NSObjet-UIResponder-UIView-UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](Mobile-IOS/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
 - [NSObject_UIResponder_UIView_UITableView_만들기](Mobile-IOS/NSObject_UIResponder_UIView_UITableView_howToMake.md)
 - [NSObject_UIResponder_UIView_UIActivityIndicatorView_만들기](Mobile-IOS/NsObject_UIResponder_UIView_UIActivityIndicatorView.md)
