@@ -1,4 +1,4 @@
-NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기
+# NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기 기능
 
 ## UIActivityViewController
 앱에서 정말 많이 사용하는 기능 중 하나가 공유하기 기능이다. 
