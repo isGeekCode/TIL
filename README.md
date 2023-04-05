@@ -48,7 +48,6 @@ _203 TILs and counting..._
 
 ### [A_Writing_in_Progress](#A_Writing_in_Progress)
 - [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](A_Writing_in_Progress/Integrity_Certificate_Provisioning.md)
-- [NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기](A_Writing_in_Progress/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
 
 ### [AboutAI](#AboutAI)
 - [딥러닝이란](AboutAI/DeepLearning.md)
@@ -193,6 +192,7 @@ _203 TILs and counting..._
 - [NSObject - Timer : 타이머 구현하기](Mobile-IOS/NSObject_Timer.md)
 - [CGColor에 대하여](Mobile-IOS/NSObject_UIColorCgColor.md)
 - [NSObject - UIFont](Mobile-IOS/NSObject_UIFont.md)
+- [NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기](Mobile-IOS/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
 - [UIView - UIControl - UIButton](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UIButton.md)
 - [NSObjet-UIResponder-UIView-UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](Mobile-IOS/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
 - [NSObject_UIResponder_UIView_UITableView_만들기](Mobile-IOS/NSObject_UIResponder_UIView_UITableView_howToMake.md)
