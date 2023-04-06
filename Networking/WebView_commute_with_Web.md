@@ -3,13 +3,24 @@
 
 ## 웹뷰 디버깅
 
-사파리 - 관리자도구를 누르면 콘솔창이 보인다.
+### 현재 웹뷰의 콘솔창 띄우기
+사파리 - 개발자용 - 나의 기기 이름 - 현재 띄운 웹페이지 클릭
+
+### 맥 사파리에서 개발자용 탭이 보이지않는 경우
+ KOR : 사파리 - 설정 - 고급 에서 메뉴 막대에서 개발자용 메뉴보기 체크를 해야한다.
+ ENG : Preferences - General - Show Develop menu in menu bar
+
+### 개발자용 탭에 나의 기기에서 `기기에서 웹속성 활성화`라고 나오는 경우 
+
+ KOR : 설정 - 사파리 - 고급 - 웹속성 스위치를 활성화한다.
+ ENG : Setting - Safari - Advanced - Web Inspector (활성화)
+
+## 콘솔창
+
+관리자도구를 누르면 콘솔창이 보인다.
 
 이 콘솔창에 특정 키를 넣어 입력할 수 있다
 
-만약 개발자용이 보이지않는 경우, 사파리 - 설정 - 고급 에서 메뉴 막대에서 개발자용 메뉴보기 체크를 해야한다.
-
-- [https://support.apple.com/ko-kr/guide/safari/sfri20948/mac](https://support.apple.com/ko-kr/guide/safari/sfri20948/mac)
 
 
 ### 웹뷰 새로고침
