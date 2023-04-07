@@ -21,13 +21,13 @@ _204 TILs and counting..._
 ### Categories
 
 - [A_Writing_in_Progress](#A_Writing_in_Progress)
+- [About-Error](#About-Error)
 - [AboutAI](#AboutAI)
 - [AppStore](#AppStore)
 - [Book](#Book)
 - [ComputerScience](#ComputerScience)
 - [Conference](#Conference)
 - [Docs](#Docs)
-- [Error](#Error)
 - [Extensions](#Extensions)
 - [Flutter](#Flutter)
 - [Git](#Git)
@@ -48,6 +48,18 @@ _204 TILs and counting..._
 
 ### [A_Writing_in_Progress](#A_Writing_in_Progress)
 - [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](A_Writing_in_Progress/Integrity_Certificate_Provisioning.md)
+
+### [About-Error](#About-Error)
+- [SourceTree - 시도때도 없이 꺼지는 현상](About-Error/SourceTree_fatalError.md)
+- [iOS - Unknown class @@ in Interface Builder file.](About-Error/TIL221027_xcodeError.md)
+- [Presenting view controllers on detached view controllers is discouraged.](About-Error/TIL221031_Alert_In_UIViewController_Init.md)
+- [maximumViewportInset cannot be larger than frame](About-Error/TIL221101_viewResizing.md)
+- [# Xcode Assistant가 작동하지 않을때 체크해야할 것](About-Error/TIL_220531_XcodeAssistant.md)
+- [Git - command line tools are already installed (사실 git 에러 아님)](About-Error/xcodeError_CommandLineTool.md)
+- [Xcode - Launching _AppName_ is taking longer than expected](About-Error/xcodeError_Launching_is_taking_longer_than.md)
+- [Xcode - cannot be opened because it is in a future Xcode project file format.](About-Error/xcodeError_cannotBeOpened.md)
+- [Xcode - iPhone is busy: Making Apple Watch ready for development](About-Error/xcodeError_makingAppleWatch.md)
+- [Xcode - warning: libobjc.A.dylib is being read from process memory...](About-Error/xcodeError_warningLibObjc.md)
 
 ### [AboutAI](#AboutAI)
 - [딥러닝이란](AboutAI/DeepLearning.md)
@@ -86,18 +98,6 @@ _204 TILs and counting..._
 
 ### [Docs](#Docs)
 - [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md)
-
-### [Error](#Error)
-- [SourceTree - 시도때도 없이 꺼지는 현상](Error/SourceTree_fatalError.md)
-- [iOS - Unknown class @@ in Interface Builder file.](Error/TIL221027_xcodeError.md)
-- [Presenting view controllers on detached view controllers is discouraged.](Error/TIL221031_Alert_In_UIViewController_Init.md)
-- [maximumViewportInset cannot be larger than frame](Error/TIL221101_viewResizing.md)
-- [# Xcode Assistant가 작동하지 않을때 체크해야할 것](Error/TIL_220531_XcodeAssistant.md)
-- [Git - command line tools are already installed (사실 git 에러 아님)](Error/xcodeError_CommandLineTool.md)
-- [Xcode - Launching _AppName_ is taking longer than expected](Error/xcodeError_Launching_is_taking_longer_than.md)
-- [Xcode - cannot be opened because it is in a future Xcode project file format.](Error/xcodeError_cannotBeOpened.md)
-- [Xcode - iPhone is busy: Making Apple Watch ready for development](Error/xcodeError_makingAppleWatch.md)
-- [Xcode - warning: libobjc.A.dylib is being read from process memory...](Error/xcodeError_warningLibObjc.md)
 
 ### [Extensions](#Extensions)
 - [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md)
