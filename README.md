@@ -54,7 +54,7 @@ _204 TILs and counting..._
 - [iOS - Unknown class @@ in Interface Builder file.](About-Error/TIL221027_xcodeError.md)
 - [Presenting view controllers on detached view controllers is discouraged.](About-Error/TIL221031_Alert_In_UIViewController_Init.md)
 - [maximumViewportInset cannot be larger than frame](About-Error/TIL221101_viewResizing.md)
-- [# Xcode Assistant가 작동하지 않을때 체크해야할 것](About-Error/TIL_220531_XcodeAssistant.md)
+- [Xcode Assistant가 작동하지 않을때 체크해야할 것](About-Error/TIL_220531_XcodeAssistant.md)
 - [Git - command line tools are already installed (사실 git 에러 아님)](About-Error/xcodeError_CommandLineTool.md)
 - [Xcode - Launching _AppName_ is taking longer than expected](About-Error/xcodeError_Launching_is_taking_longer_than.md)
 - [Xcode - cannot be opened because it is in a future Xcode project file format.](About-Error/xcodeError_cannotBeOpened.md)
