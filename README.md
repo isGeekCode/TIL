@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_203 TILs and counting..._
+_204 TILs and counting..._
 
 ---
 
@@ -58,6 +58,7 @@ _203 TILs and counting..._
 ### [AppStore](#AppStore)
 - [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](AppStore/AppStore_AppDismiss.md)
 - [기존 배포되어있는 앱을 다른 앱으로 바꾸기](AppStore/AppStore_ChangeBundleId.md)
+- [AppStore - 긴급 심사 요청(Request Expedited Review)](AppStore/AppStore_expeditedReview.md)
 - [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](AppStore/AppStore_missing_Compliance.md)
 - [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md)
 
