@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_204 TILs and counting..._
+_205 TILs and counting..._
 
 ---
 
@@ -24,7 +24,6 @@ _204 TILs and counting..._
 - [About-Error](#About-Error)
 - [AboutAI](#AboutAI)
 - [AppStore](#AppStore)
-- [Book](#Book)
 - [ComputerScience](#ComputerScience)
 - [Conference](#Conference)
 - [Docs](#Docs)
@@ -32,6 +31,7 @@ _204 TILs and counting..._
 - [Flutter](#Flutter)
 - [Git](#Git)
 - [IOS-Architecture](#IOS-Architecture)
+- [Insight](#Insight)
 - [Integrity](#Integrity)
 - [Library](#Library)
 - [Mobile-Android](#Mobile-Android)
@@ -73,11 +73,6 @@ _204 TILs and counting..._
 - [AppStore - 긴급 심사 요청(Request Expedited Review)](AppStore/AppStore_expeditedReview.md)
 - [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](AppStore/AppStore_missing_Compliance.md)
 - [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md)
-
-### [Book](#Book)
-- [백만장자의 시크릿](Book/220604_BookReview_Millionaire_Secret.md)
-- [부의 추월차선: The Millionaire Fastlane](Book/Economics_TheMillionaireFastlane.md)
-- [부모님의 정원](Book/TIL_220601_parentsGarden.md)
 
 ### [ComputerScience](#ComputerScience)
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
@@ -128,6 +123,12 @@ _204 TILs and counting..._
 - [Architecture - 간단한 MVVM구조 예제](IOS-Architecture/MVVM_simpleExample.md)
 - [ReactorKit - 예제: CountApp](IOS-Architecture/RxSwift_ReactorKit_CountApp.md)
 - [Architecture - 비즈니스 로직이란](IOS-Architecture/aboutBusinessLogic.md)
+
+### [Insight](#Insight)
+- [백만장자의 시크릿](Insight/220604_BookReview_Millionaire_Secret.md)
+- [나에게 TIL이란](Insight/230408_About_TIL.md)
+- [부의 추월차선: The Millionaire Fastlane](Insight/Economics_TheMillionaireFastlane.md)
+- [부모님의 정원](Insight/TIL_220601_parentsGarden.md)
 
 ### [Integrity](#Integrity)
 - [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md)
