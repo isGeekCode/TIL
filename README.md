@@ -78,7 +78,6 @@ _205 TILs and counting..._
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
 - [MVP: Minimum Viable Product](ComputerScience/MVP.md)
-- [MardDown - TOC기능 만들기 (Table Of Contents)](ComputerScience/MarkDown_TOC.md)
 - [Terminal 기초 사용법](ComputerScience/Terminal.md)
 - [iOS의 Virtual Memory에 대하여](ComputerScience/VirtualMemory.md)
 - [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
@@ -93,6 +92,7 @@ _205 TILs and counting..._
 
 ### [Docs](#Docs)
 - [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md)
+- [MardDown - TOC기능 만들기 (Table Of Contents)](Docs/MarkDown_TOC.md)
 
 ### [Extensions](#Extensions)
 - [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md)
