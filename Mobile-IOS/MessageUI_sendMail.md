@@ -1,6 +1,13 @@
-# MessageUI - 문의메일 보내기
+# MessageUI - MFMailComposeVC : 문의메일 보내기
 
-iOS 디바이스에서 Email 보내는 방법이다.
+## MFMailComposeViewController
+
+iOS에서 이메일을 작성하고 보내기 위한 시스템 뷰 컨트롤러.
+
+이를 사용하여 사용자가 이메일 본문, 수신자 목록, 제목 및 첨부 파일을 포함한 이메일을 작성하고 전송할 수 있다.
+
+
+## iOS 디바이스에서 Email을 보내는 방법
 - 먼저 Email을 보내려면 MessageUI를 import해야한다. 
 - 시뮬레이터에서는 실행되지 않는다.
 - iOS 디바이스 내 Mail계정이 연동되어 있어야만 메일 발송이 가능하다.
