@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_205 TILs and counting..._
+_206 TILs and counting..._
 
 ---
 
@@ -190,6 +190,7 @@ _205 TILs and counting..._
 - [현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](Mobile-IOS/Layout_currentDeviceCheck&useCombineReactiveAutoLayout.md)
 - [로컬라이징](Mobile-IOS/Localization.md)
 - [Login Logic (feat. UserDefault)](Mobile-IOS/Login_Logic.md)
+- [MessageUI - MFMessageComposeVC : 문자메세지 보내기](Mobile-IOS/MessageUI.md)
 - [MessageUI - 문의메일 보내기](Mobile-IOS/MessageUI_sendMail.md)
 - [NSDate - Timezone: UTC, GMT, KST](Mobile-IOS/NSObject_NSDate_UTC.md)
 - [NSObject - Timer : 타이머 구현하기](Mobile-IOS/NSObject_Timer.md)
