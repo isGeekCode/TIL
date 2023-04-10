@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_207 TILs and counting..._
+_208 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [터미널에러 - xcrun: error: active developer path...](About-Error/terminalError_xcrun230410.md) - Mon Apr 10 10:51:27 2023 +0900
 - [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md) - Wed Mar 29 11:12:36 2023 +0900
 - [Layout - 이미지 컨텐츠 모드 (ContentMode)](Mobile-IOS/Layout_ImageContentMode.md) - Wed Mar 29 10:44:04 2023 +0900
 - [Integrity - 인증서에 관하여](Integrity/Integrity_Certificate.md) - Tue Mar 28 22:52:44 2023 +0900
 - [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md) - Mon Mar 27 11:01:43 2023 +0900
-- [Cookie - cookieAcceptPolicy (쿠키수락정책)](Networking/Cookie_cookieAcceptPolicy.md) - Fri Mar 24 17:17:40 2023 +0900
 
 ### Categories
 
@@ -55,6 +55,7 @@ _207 TILs and counting..._
 - [Presenting view controllers on detached view controllers is discouraged.](About-Error/TIL221031_Alert_In_UIViewController_Init.md)
 - [maximumViewportInset cannot be larger than frame](About-Error/TIL221101_viewResizing.md)
 - [Xcode Assistant가 작동하지 않을때 체크해야할 것](About-Error/TIL_220531_XcodeAssistant.md)
+- [터미널에러 - xcrun: error: active developer path...](About-Error/terminalError_xcrun230410.md)
 - [Git - command line tools are already installed (사실 git 에러 아님)](About-Error/xcodeError_CommandLineTool.md)
 - [Xcode - Launching _AppName_ is taking longer than expected](About-Error/xcodeError_Launching_is_taking_longer_than.md)
 - [Xcode - cannot be opened because it is in a future Xcode project file format.](About-Error/xcodeError_cannotBeOpened.md)
