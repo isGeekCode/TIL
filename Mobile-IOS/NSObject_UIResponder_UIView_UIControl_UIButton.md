@@ -1,4 +1,4 @@
-# UIView_UIControl_UIButton
+# NSObject_UIResponder_UIView_UIControl_UIButton
 
 ### 클릭시 알파값으로 하이라이트 처리하기
 
