@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_208 TILs and counting..._
+_209 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [iOS_Hierachy - UIKit](Mobile-iOS-Hierachy/IOS_Hierachy_UIKit.md) - Mon Apr 10 14:44:56 2023 +0900
 - [터미널에러 - xcrun: error: active developer path...](About-Error/terminalError_xcrun230410.md) - Mon Apr 10 10:51:27 2023 +0900
 - [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md) - Wed Mar 29 11:12:36 2023 +0900
 - [Layout - 이미지 컨텐츠 모드 (ContentMode)](Mobile-IOS/Layout_ImageContentMode.md) - Wed Mar 29 10:44:04 2023 +0900
 - [Integrity - 인증서에 관하여](Integrity/Integrity_Certificate.md) - Tue Mar 28 22:52:44 2023 +0900
-- [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md) - Mon Mar 27 11:01:43 2023 +0900
 
 ### Categories
 
@@ -36,6 +36,7 @@ _208 TILs and counting..._
 - [Library](#Library)
 - [Mobile-Android](#Mobile-Android)
 - [Mobile-IOS](#Mobile-IOS)
+- [Mobile-iOS-Hierachy](#Mobile-iOS-Hierachy)
 - [Networking](#Networking)
 - [Notifications](#Notifications)
 - [Objective-C](#Objective-C)
@@ -224,6 +225,9 @@ _208 TILs and counting..._
 - [IOS에 있어서 Caching](Mobile-IOS/ios_caching.md)
 - [DynamicSplash 세팅하기](Mobile-IOS/splash_dynamicSplash.md)
 - [appStoreReceiptURL](Mobile-IOS/xIsProductionCheck.md)
+
+### [Mobile-iOS-Hierachy](#Mobile-iOS-Hierachy)
+- [iOS_Hierachy - UIKit](Mobile-iOS-Hierachy/IOS_Hierachy_UIKit.md)
 
 ### [Networking](#Networking)
 - [Cookie - ios에서 쿠키 다루기](Networking/Cookie_AdjustCookie.md)
