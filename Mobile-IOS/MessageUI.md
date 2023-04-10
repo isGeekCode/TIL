@@ -22,10 +22,12 @@ MessageUI에 속한 ViewController는 모두 사용자가 데이터를 입력하
 
 
 ### UIKit
-- **UIDocumentPickerViewController**
-  - 사용자가 파일을 선택하고 공유하기 위한 뷰 컨트롤러.
 - **UIActivityViewController**
   - 애플리케이션에서 지원하는 모든 활동을 사용자에게 제공하여 공유할 수 있도록하는 뷰 컨트롤러.
+  - [관련 TIL:NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기 기능](https://github.com/isGeekCode/TIL/blob/main/Mobile-IOS/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
+
+- **UIDocumentPickerViewController**
+  - 사용자가 파일을 선택하고 공유하기 위한 뷰 컨트롤러.
 - **UIImagePickerController**
   - 사진 또는 비디오를 선택하고 공유하기 위한 뷰 컨트롤러.
 
