@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_209 TILs and counting..._
+_210 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [NSObject_UIResponder : Responder Chain 리스폰더 체인에 대하여](Mobile-IOS/NSObject_UIResponder_.md) - Mon Apr 10 17:04:54 2023 +0900
 - [iOS_Hierachy - UIKit](Mobile-iOS-Hierachy/IOS_Hierachy_UIKit.md) - Mon Apr 10 14:44:56 2023 +0900
 - [터미널에러 - xcrun: error: active developer path...](About-Error/terminalError_xcrun230410.md) - Mon Apr 10 10:51:27 2023 +0900
 - [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md) - Wed Mar 29 11:12:36 2023 +0900
 - [Layout - 이미지 컨텐츠 모드 (ContentMode)](Mobile-IOS/Layout_ImageContentMode.md) - Wed Mar 29 10:44:04 2023 +0900
-- [Integrity - 인증서에 관하여](Integrity/Integrity_Certificate.md) - Tue Mar 28 22:52:44 2023 +0900
 
 ### Categories
 
@@ -199,6 +199,7 @@ _209 TILs and counting..._
 - [NSObject - Timer : 타이머 구현하기](Mobile-IOS/NSObject_Timer.md)
 - [CGColor에 대하여](Mobile-IOS/NSObject_UIColorCgColor.md)
 - [NSObject - UIFont](Mobile-IOS/NSObject_UIFont.md)
+- [NSObject_UIResponder : Responder Chain 리스폰더 체인에 대하여](Mobile-IOS/NSObject_UIResponder_.md)
 - [NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기 기능](Mobile-IOS/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
 - [NSObject_UIResponder_UIView_UIControl_UIButton](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UIButton.md)
 - [NSObject_UIResponder_UIView_UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](Mobile-IOS/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
