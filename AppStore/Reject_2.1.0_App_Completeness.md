@@ -28,7 +28,7 @@ Please provide detailed answers to the following questions in your reply to this
 
 ## 2.3 Performance - Accurate Metadata(정확한 메타데이터)
 
-### 리젝사유(230407) : 2.3.3 Screenshots should show the app in use
+### 리젝사유(230407) : 2.3.3 Screenshots should show the app in use(스크린샷 사용)
 ```
 We noticed that your screenshots do not sufficiently show your app in use. 
 
