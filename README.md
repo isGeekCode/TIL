@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_210 TILs and counting..._
+_211 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [리젝사유 - 2. Performance(성능)](AppStore/Reject_2.1.0_App_Completeness.md) - Tue Apr 11 13:50:02 2023 +0900
+- [Notifications - IOS에서 사용하는 알림의 종류](Networking/Apple_Notification.md) - Tue Apr 11 13:50:02 2023 +0900
 - [NSObject_UIResponder : Responder Chain 리스폰더 체인에 대하여](Mobile-IOS/NSObject_UIResponder_.md) - Mon Apr 10 17:04:54 2023 +0900
 - [iOS_Hierachy - UIKit](Mobile-iOS-Hierachy/IOS_Hierachy_UIKit.md) - Mon Apr 10 14:44:56 2023 +0900
 - [터미널에러 - xcrun: error: active developer path...](About-Error/terminalError_xcrun230410.md) - Mon Apr 10 10:51:27 2023 +0900
-- [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md) - Wed Mar 29 11:12:36 2023 +0900
-- [Layout - 이미지 컨텐츠 모드 (ContentMode)](Mobile-IOS/Layout_ImageContentMode.md) - Wed Mar 29 10:44:04 2023 +0900
 
 ### Categories
 
@@ -38,7 +38,6 @@ _210 TILs and counting..._
 - [Mobile-IOS](#Mobile-IOS)
 - [Mobile-iOS-Hierachy](#Mobile-iOS-Hierachy)
 - [Networking](#Networking)
-- [Notifications](#Notifications)
 - [Objective-C](#Objective-C)
 - [RelatedImage](#RelatedImage)
 - [Ruby](#Ruby)
@@ -74,6 +73,7 @@ _210 TILs and counting..._
 - [기존 배포되어있는 앱을 다른 앱으로 바꾸기](AppStore/AppStore_ChangeBundleId.md)
 - [AppStore - 긴급 심사 요청(Request Expedited Review)](AppStore/AppStore_expeditedReview.md)
 - [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](AppStore/AppStore_missing_Compliance.md)
+- [리젝사유 - 2. Performance(성능)](AppStore/Reject_2.1.0_App_Completeness.md)
 - [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md)
 
 ### [ComputerScience](#ComputerScience)
@@ -231,6 +231,7 @@ _210 TILs and counting..._
 - [iOS_Hierachy - UIKit](Mobile-iOS-Hierachy/IOS_Hierachy_UIKit.md)
 
 ### [Networking](#Networking)
+- [Notifications - IOS에서 사용하는 알림의 종류](Networking/Apple_Notification.md)
 - [Cookie - ios에서 쿠키 다루기](Networking/Cookie_AdjustCookie.md)
 - [Cookie - WKProcessPool를 사용해 여러 웹뷰에서 쿠키 공유하기](Networking/Cookie_Cookie_sharing.md)
 - [WebView - WKWebsiteDataStore 사용하여 웹뷰의 데이터관리하기](Networking/Cookie_WebView_WKWebsiteDataStore.md)
@@ -250,9 +251,6 @@ _210 TILs and counting..._
 - [WebView - 자주 사용하는 메서드](Networking/WebView_often_use_delegate_method.md)
 - [WebView - 스와이프로 리프레시 세팅](Networking/WebView_swipe_refresh.md)
 - [webview - 바운스 효과 제거하기](Networking/Webview_how_to_stop_bounce.md)
-
-### [Notifications](#Notifications)
-- [IOS에서 사용하는 알림의 종류](Notifications/iOS_Notification.md)
 
 ### [Objective-C](#Objective-C)
 - [Objective-C 프로젝트에서 Swift 라이브러리 사용하기](Objective-C/Objc_Bridging_SwiftInObjc.md)
