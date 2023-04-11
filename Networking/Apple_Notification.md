@@ -1,4 +1,4 @@
-# IOS에서 사용하는 알림의 종류
+# Notifications - IOS에서 사용하는 알림의 종류
 iOS에서 사용하는 알림의 종류는 다음과 같다.
 NotificationCenter를 제외하고는 우리가 아는 앱의 알림의 형태를 띈다.
 
