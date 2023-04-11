@@ -1,12 +1,12 @@
 # 리젝사유 - 2. Performance(성능)
 
-## List
-- [2.1.0 Performance(성능): App Completeness(앱 완전성)](#2.1.0-Performance)
+## Content
+- [2.1.0 Performance(성능): App Completeness(앱 완전성)](#2.1.0-Performance:-App-Completeness)
     - [리젝사유 : Guideline 2.3.3 - Performance - Accurate Metadata](#리젝사유-:-Guideline-2.1---Information-Needed)
 
-## [2.1.0 Performance(성능): App Completeness(앱 완전성)](#2.1.0-Performance)
+## 2.1.0 Performance: App Completeness
 
-### 리젝사유 : Guideline 2.1 - Information Needed
+### 리젝사유 : 2.1.0 - Information Needed
 230409
 We’re looking forward to completing the review of your app, but we need more information to continue.
 
