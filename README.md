@@ -85,7 +85,7 @@ _211 TILs and counting..._
 - [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
 - [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
 - [iOS와 HTTP/2에 대하여](ComputerScience/http_2.md)
-- [OSI 7 Layer](ComputerScience/osi_7layer.md)
+- [OSI 7 Layer](ComputerScience/osi_7layer_m.md)
 - [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
 ### [Conference](#Conference)
