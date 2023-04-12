@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_211 TILs and counting..._
+_214 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [리젝사유 - 2. Performance(성능)](AppStore/Reject_2.1.0_App_Completeness.md) - Tue Apr 11 13:50:02 2023 +0900
+- [Git - 튜토리얼 : 브랜치 생성하기. 리스트 확인, 브랜치 체크아웃](Git/Git_tutorial_checkout.md) - Thu Apr 13 08:53:09 2023 +0900
+- [OSI 7 Layer](ComputerScience/osi_7layer_m.md) - Wed Apr 12 15:41:59 2023 +0900
+- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_Physical.md) - Wed Apr 12 15:36:36 2023 +0900
+- [](Integrity/Integrity_DeviceCheck_App_Attest.md) - Tue Apr 11 17:09:55 2023 +0900
 - [Notifications - IOS에서 사용하는 알림의 종류](Networking/Apple_Notification.md) - Tue Apr 11 13:50:02 2023 +0900
-- [NSObject_UIResponder : Responder Chain 리스폰더 체인에 대하여](Mobile-IOS/NSObject_UIResponder_.md) - Mon Apr 10 17:04:54 2023 +0900
-- [iOS_Hierachy - UIKit](Mobile-iOS-Hierachy/IOS_Hierachy_UIKit.md) - Mon Apr 10 14:44:56 2023 +0900
-- [터미널에러 - xcrun: error: active developer path...](About-Error/terminalError_xcrun230410.md) - Mon Apr 10 10:51:27 2023 +0900
 
 ### Categories
 
@@ -85,8 +85,8 @@ _211 TILs and counting..._
 - [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
 - [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
 - [iOS와 HTTP/2에 대하여](ComputerScience/http_2.md)
-- [OSI 7 Layer](ComputerScience/osi_7layer_m.md)
 - [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_Physical.md)
+- [OSI 7 Layer](ComputerScience/osi_7layer_m.md)
 - [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
 ### [Conference](#Conference)
@@ -108,6 +108,7 @@ _211 TILs and counting..._
 - [Git Actions - Permission to ....git denied to github-actions](Git/GitAction_tokenError.md)
 - [GitHub - Various APIs](Git/Git_ContributionGraph.md)
 - [푸시 에러 : 원격 저장소와 커밋 기록이 다른 경우](Git/Git_pushError_OtherCommit.md)
+- [Git - 튜토리얼 : 브랜치 생성하기. 리스트 확인, 브랜치 체크아웃](Git/Git_tutorial_checkout.md)
 - [Git - 현재 깃폴더에 연동한 username 확인하고 변경하기](Git/Git_username.md)
 - [공동작업을 위한 Git 버전관리](Git/TIL220422_GitControl.md)
 - [git ignore 사용하기](Git/TIL221108_how_to_make_ignore.md)
@@ -136,6 +137,7 @@ _211 TILs and counting..._
 ### [Integrity](#Integrity)
 - [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md)
 - [Integrity - 인증서에 관하여](Integrity/Integrity_Certificate.md)
+- [](Integrity/Integrity_DeviceCheck_App_Attest.md)
 
 ### [Library](#Library)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](Library/About_A_iOS_Package.md)
