@@ -12,11 +12,11 @@ _214 TILs and counting..._
 
 ### 5 most recent TILs
 
+- [OSI 7 Layer](ComputerScience/osi_7layer.md) - Thu Apr 13 09:16:00 2023 +0900
+- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_1.Physical.md) - Thu Apr 13 09:16:00 2023 +0900
 - [Integrity - DeviceCheck & App Attest](A_Writing_in_Progress/Integrity_DeviceCheck_App_Attest.md) - Thu Apr 13 09:10:17 2023 +0900
 - [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md) - Thu Apr 13 09:10:17 2023 +0900
 - [Git - 튜토리얼 : 브랜치 생성하기. 리스트 확인, 브랜치 체크아웃](Git/Git_tutorial_checkout.md) - Thu Apr 13 08:53:09 2023 +0900
-- [OSI 7 Layer](ComputerScience/osi_7layer_m.md) - Wed Apr 12 15:41:59 2023 +0900
-- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_Physical.md) - Wed Apr 12 15:36:36 2023 +0900
 
 ### Categories
 
@@ -86,8 +86,8 @@ _214 TILs and counting..._
 - [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
 - [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
 - [iOS와 HTTP/2에 대하여](ComputerScience/http_2.md)
-- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_Physical.md)
-- [OSI 7 Layer](ComputerScience/osi_7layer_m.md)
+- [OSI 7 Layer](ComputerScience/osi_7layer.md)
+- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_1.Physical.md)
 - [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
 ### [Conference](#Conference)
