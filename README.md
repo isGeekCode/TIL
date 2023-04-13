@@ -137,7 +137,7 @@ _214 TILs and counting..._
 
 ### [Integrity](#Integrity)
 - [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md)
-- [Integrity - 인증서에 관하여](Integrity/Integrity_Certificate.md)
+- [Integrity - 인증서(.p8, .p12 / Development, Distribution / Producation SSL / Development SSL )](Integrity/Integrity_Certificate.md)
 
 ### [Library](#Library)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](Library/About_A_iOS_Package.md)
