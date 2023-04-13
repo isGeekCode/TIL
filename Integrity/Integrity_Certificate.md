@@ -1,4 +1,4 @@
-# Integrity - 인증서(.p8, .p12 / Development, Distribution / Producation SSL / Development SSL )
+# Integrity - 인증서(.p8, .p12 / Development, Distribution / Producation SSL, Development SSL)
 
 
 ## 앱과 관련된 정보는 Apple Developer에서 확인 가능
