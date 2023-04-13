@@ -27,15 +27,15 @@
 - Apple Push Notification Service (APNs) 인증서
     - iOS에서 푸시 알림을 보내기 위해 사용된다. APNs 인증서는 앱의 서버에서 APNs 서버로 보내는 모든 푸시 알림에 대한 보안 인증을 제공한다.
 
-- + 인터넷 인증서
+- 인터넷 인증서
     - 인터넷 연결이 필요한 경우 사용된다. HTTPS와 같은 보안 연결을 설정하거나 네트워크 연결에 대한 보안 인증을 제공하는 데 사용된다.
 
 
-## 인증서 생성하기
+## 인증서의 종류 (소프트웨어 관련 / 서비스 관련)
 인증서를 생성하기 전에는 자신이 개발하고자 하는 앱의 용도와 기능에 따라 적절한 인증서를 선택해야 한다.
 일단 너무 종류가 많기때문에 여기서 당황할 수 있다. 위에서 말했듯이 보통 사용하는 인증서는 몇개 밖에 없다. 아래는 인증서 생성할 수 있는 전체 리스트이니  걱정하지 말자...
 
-### 소프트웨어관련 인증서
+### 소프트웨어 관련 인증서
 iOS 앱 뿐만 아니라 macOS, watchOS, tvOS 앱을 개발하고 배포할 때도 사용하는 인증서. Xcode에서 빌드 및 서명할 때 사용된다. 또한, 앱을 Ad Hoc 또는 App Store로 배포할 때도 사용된다.
 
 - Apple Development
@@ -63,7 +63,7 @@ iOS 앱 뿐만 아니라 macOS, watchOS, tvOS 앱을 개발하고 배포할 때�
     - macOS 앱을 Mac App Store 이외의 곳에서 배포하기 위해 서명하는 데 사용된다. 이 인증서는 앱의 무결성을 검증하고, 앱이 신뢰할 수 있는 앱임을 보장된다.
 
 
-### 서비스관련 인증서
+### 서비스 관련 인증서
 
 - Apple Push Notification service SSL (Sandbox)
     - 앱의 개발 버전에서 Apple Push Notification 서비스(Sandbox)를 사용하기 위해 필요한 인증서. 이 인증서는 앱에서 원격으로 알림을 보내는 데 사용된다.
@@ -134,3 +134,7 @@ Apple에서는 대부분의 인증서를 p12 형식으로 만들어야 하지만
     - "Type" 또는 "Certificate Type"이 "iOS App Development"이면, 해당 인증서 또는 키는 iOS 앱의 개발용 인증서이며, p12 형식.
     - "Type" 또는 "Certificate Type"이 "iOS Distribution (App Store and Ad Hoc)"이면, 해당 인증서 또는 키는 iOS 앱의 배포용 인증서이며, p12 형식.
     - "Type" 또는 "Certificate Type"이 "Apple Push Notification service SSL (Sandbox)" 또는 "Apple Push Notification service SSL (Sandbox & Production)"이면, 해당 인증서 또는 키는 Push Notification 서비스를 위한 인증서이며, p8 형식.
+
+### History
+- 230330 : 애플인증서 발급절차 생성하기
+    - Comment: 이제 좀 알것같기도.. 
