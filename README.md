@@ -12,11 +12,11 @@ _214 TILs and counting..._
 
 ### 5 most recent TILs
 
+- [Integrity - 앱 설치환경 체크](A_Writing_in_Progress/Integrity_Build_Environment.md) - Thu Apr 13 09:00:28 2023 +0900
 - [Git - 튜토리얼 : 브랜치 생성하기. 리스트 확인, 브랜치 체크아웃](Git/Git_tutorial_checkout.md) - Thu Apr 13 08:53:09 2023 +0900
 - [OSI 7 Layer](ComputerScience/osi_7layer_m.md) - Wed Apr 12 15:41:59 2023 +0900
 - [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_Physical.md) - Wed Apr 12 15:36:36 2023 +0900
-- [](Integrity/Integrity_DeviceCheck_App_Attest.md) - Tue Apr 11 17:09:55 2023 +0900
-- [Notifications - IOS에서 사용하는 알림의 종류](Networking/Apple_Notification.md) - Tue Apr 11 13:50:02 2023 +0900
+- [Integrity - DeviceCheck & App Attest](Integrity/Integrity_DeviceCheck_App_Attest.md) - Tue Apr 11 17:09:55 2023 +0900
 
 ### Categories
 
@@ -47,6 +47,7 @@ _214 TILs and counting..._
 - [swift](#swift)
 
 ### [A_Writing_in_Progress](#A_Writing_in_Progress)
+- [Integrity - 앱 설치환경 체크](A_Writing_in_Progress/Integrity_Build_Environment.md)
 - [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](A_Writing_in_Progress/Integrity_Certificate_Provisioning.md)
 
 ### [About-Error](#About-Error)
@@ -135,9 +136,8 @@ _214 TILs and counting..._
 - [부모님의 정원](Insight/TIL_220601_parentsGarden.md)
 
 ### [Integrity](#Integrity)
-- [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md)
 - [Integrity - 인증서에 관하여](Integrity/Integrity_Certificate.md)
-- [](Integrity/Integrity_DeviceCheck_App_Attest.md)
+- [Integrity - DeviceCheck & App Attest](Integrity/Integrity_DeviceCheck_App_Attest.md)
 
 ### [Library](#Library)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](Library/About_A_iOS_Package.md)
