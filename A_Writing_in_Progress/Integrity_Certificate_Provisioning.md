@@ -81,8 +81,9 @@ Run 을 하든 Archive 하든, 기본적으로 프로젝트를 빌드할 때 필
   - Apple Development : isGeekCode(isGeekCode) 개인키
 
 
--> 2023.03.30
 
+### History
+- 230330 : 애플인증서 발급절차 생성하기
 
 ### 참고 링크
 - 링크 1 : [Line Engineering - 심민영 : iOS 코드 서명에 대해서](https://engineering.linecorp.com/ko/blog/ios-code-signing)  
