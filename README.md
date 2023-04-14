@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_216 TILs and counting..._
+_217 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [OSI 7 Layer - 1.5 여러 컴퓨터간 통신](ComputerScience/osi_7layer_011_internet.md) - Fri Apr 14 14:47:59 2023 +0900
+- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md) - Fri Apr 14 14:47:59 2023 +0900
 - [OSI 7 Layer - 2. Data Link Layer(데이터 링크 계층)](ComputerScience/osi_7layer_2.DataLink.md) - Fri Apr 14 14:20:35 2023 +0900
-- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_1.Physical.md) - Fri Apr 14 13:21:12 2023 +0900
 - [Info.plist : (값 가져오기, 권한)](Xcode/InfoPlist.md) - Fri Apr 14 09:06:10 2023 +0900
 - [Info.plist - App Version 가져오기](Xcode/InfoPlist_appVersion.md) - Fri Apr 14 09:06:10 2023 +0900
-- [OSI 7 Layer](ComputerScience/osi_7layer.md) - Thu Apr 13 09:16:00 2023 +0900
 
 ### Categories
 
@@ -87,7 +87,8 @@ _216 TILs and counting..._
 - [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
 - [iOS와 HTTP/2에 대하여](ComputerScience/http_2.md)
 - [OSI 7 Layer](ComputerScience/osi_7layer.md)
-- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_1.Physical.md)
+- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md)
+- [OSI 7 Layer - 1.5 여러 컴퓨터간 통신](ComputerScience/osi_7layer_011_internet.md)
 - [OSI 7 Layer - 2. Data Link Layer(데이터 링크 계층)](ComputerScience/osi_7layer_2.DataLink.md)
 - [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
