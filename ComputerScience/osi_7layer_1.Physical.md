@@ -34,6 +34,9 @@
     - 1계층 Decoder의 Input에 아날로그 신호를 넣어준다.
     - 1계층 Encoder의 Output에서 데이터를 내보낸다.
 
+<img width="800" alt="스크린샷 2023-04-14 오후 2 18 08" src="https://user-images.githubusercontent.com/76529148/231948056-ffe4d0cb-a5b9-4d46-9aca-96b3005605b5.png">
+
+
 
 ## 📌 전송에 대한 더 세부적인 설명
 
