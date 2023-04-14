@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_214 TILs and counting..._
+_215 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Info.plist - App Version 가져오기](Xcode/InfoPlist_appVersion.md) - Fri Apr 14 09:06:10 2023 +0900
+- [Info.plist란, 값 가져오기, 권한](Xcode/InfoPlist.md) - Fri Apr 14 09:06:10 2023 +0900
 - [OSI 7 Layer](ComputerScience/osi_7layer.md) - Thu Apr 13 09:16:00 2023 +0900
 - [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_1.Physical.md) - Thu Apr 13 09:16:00 2023 +0900
 - [Integrity - DeviceCheck & App Attest](A_Writing_in_Progress/Integrity_DeviceCheck_App_Attest.md) - Thu Apr 13 09:10:17 2023 +0900
-- [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md) - Thu Apr 13 09:10:17 2023 +0900
-- [Git - 튜토리얼 : 브랜치 생성하기. 리스트 확인, 브랜치 체크아웃](Git/Git_tutorial_checkout.md) - Thu Apr 13 08:53:09 2023 +0900
 
 ### Categories
 
@@ -137,7 +137,7 @@ _214 TILs and counting..._
 
 ### [Integrity](#Integrity)
 - [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md)
-- [Integrity - 인증서(.p8, .p12 / Development, Distribution / Producation SSL / Development SSL )](Integrity/Integrity_Certificate.md)
+- [Integrity - 인증서(.p8, .p12 / Development, Distribution / Producation SSL, Development SSL)](Integrity/Integrity_Certificate.md)
 
 ### [Library](#Library)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](Library/About_A_iOS_Package.md)
@@ -146,7 +146,7 @@ _214 TILs and counting..._
 - [About CocoaPods Error 방지하기](Library/About_cocoaPods_error.md)
 - [Convention - SwiftLint 세팅하기](Library/Convention_SwiftLint.md)
 - [Convention - SwiftLint 세부설정하기](Library/Convention_SwiftLintCustomRule.md)
-- [Library - 카카오 SDK 설치하기](Library/Library_A_kakaoSDK.md)
+- [라이브러리 - 카카오 SDK 사용하기](Library/Library_A_kakaoSDK.md)
 - [라이브러리 - GIFu 사용하기](Library/Library_Gifu.md)
 - [라이브러리 - Kingfisher 사용하기](Library/Library_Kingfisher.md)
 - [라이브러리 - swiftSoup](Library/Library_SwiftSoup.md)
@@ -169,7 +169,6 @@ _214 TILs and counting..._
 - [GCD - DispatchWorkItem](Mobile-IOS/GCD_DispatchWorkItem.md)
 - [GCD 톺아보기](Mobile-IOS/GCD_Total.md)
 - [Gesture Recognizer - Long Press](Mobile-IOS/GestureRecognizer_LongPress.md)
-- [Info - App Version 가져오기](Mobile-IOS/Info_appVersion.md)
 - [KVC와 KVO](Mobile-IOS/KVC_KVO.md)
 - [Layout - 오토레이아웃의 개념](Mobile-IOS/Layout_About_AutoLayout.md)
 - [Layout - UIView에 대하여](Mobile-IOS/Layout_About_UIView.md)
@@ -277,6 +276,8 @@ _214 TILs and counting..._
 ### [Xcode](#Xcode)
 - [.ipa 파일 만들기](Xcode/How_to.make_ipa.md)
 - [How to Set - 세로모드 고정 (Potrait)](Xcode/How_to_set_potrait_mode.md)
+- [Info.plist란, 값 가져오기, 권한](Xcode/InfoPlist.md)
+- [Info.plist - App Version 가져오기](Xcode/InfoPlist_appVersion.md)
 - [주석사용법](Xcode/PragmaMark.md)
 - [Privacy - 여러가지 접근권한요청](Xcode/PrivercyPermission_various.md)
 - [Scheme - Debug / Release 빌드 분리하기](Xcode/Scheme_Separate_BuildSet.md)
