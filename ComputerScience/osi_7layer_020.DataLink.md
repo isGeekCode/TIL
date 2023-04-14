@@ -41,7 +41,7 @@
     - 2계층 Decoder의 Input에 Framing된 데이터를 넣어준다.
     - 2계층 Decoder의 Output에서 원래의 데이터로 복원한다.
 
-<img width="900" alt="스크린샷 2023-04-14 오후 3 03 58" src="https://user-images.githubusercontent.com/76529148/231954904-e030f975-14fc-4f46-a76a-8c7aeaa4ac87.png">
+<img width="800" alt="스크린샷 2023-04-14 오후 3 26 58" src="https://user-images.githubusercontent.com/76529148/231960900-f958080f-95a3-402f-896c-45628432f57c.png">
 
 
 ## 📌 조금더 자세한 설명
