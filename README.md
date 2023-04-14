@@ -13,7 +13,7 @@ _215 TILs and counting..._
 ### 5 most recent TILs
 
 - [Info.plist - App Version 가져오기](Xcode/InfoPlist_appVersion.md) - Fri Apr 14 09:06:10 2023 +0900
-- [Info.plist란, 값 가져오기, 권한](Xcode/InfoPlist.md) - Fri Apr 14 09:06:10 2023 +0900
+- [Info.plist : (값 가져오기, 권한)](Xcode/InfoPlist.md) - Fri Apr 14 09:06:10 2023 +0900
 - [OSI 7 Layer](ComputerScience/osi_7layer.md) - Thu Apr 13 09:16:00 2023 +0900
 - [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_1.Physical.md) - Thu Apr 13 09:16:00 2023 +0900
 - [Integrity - DeviceCheck & App Attest](A_Writing_in_Progress/Integrity_DeviceCheck_App_Attest.md) - Thu Apr 13 09:10:17 2023 +0900
@@ -276,7 +276,7 @@ _215 TILs and counting..._
 ### [Xcode](#Xcode)
 - [.ipa 파일 만들기](Xcode/How_to.make_ipa.md)
 - [How to Set - 세로모드 고정 (Potrait)](Xcode/How_to_set_potrait_mode.md)
-- [Info.plist란, 값 가져오기, 권한](Xcode/InfoPlist.md)
+- [Info.plist : (값 가져오기, 권한)](Xcode/InfoPlist.md)
 - [Info.plist - App Version 가져오기](Xcode/InfoPlist_appVersion.md)
 - [주석사용법](Xcode/PragmaMark.md)
 - [Privacy - 여러가지 접근권한요청](Xcode/PrivercyPermission_various.md)
