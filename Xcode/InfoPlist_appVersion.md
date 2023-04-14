@@ -1,4 +1,4 @@
-# Info - App Version 가져오기
+# Info.plist - App Version 가져오기
 
 앱의 버전을 가져와야하는 경우가 있다.
 
