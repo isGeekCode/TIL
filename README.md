@@ -12,9 +12,9 @@ _215 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [OSI 7 Layer - 1. Physical Layer(물리계층)](A_Writing_in_Progress/osi_7layer_1.Physical.md) - Fri Apr 14 10:03:59 2023 +0900
-- [Info.plist : (값 가져오기, 권한)](Xcode/InfoPlist.md) - Fri Apr 14 09:06:10 2023 +0900
+- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_1.Physical.md) - Fri Apr 14 13:21:12 2023 +0900
 - [Info.plist - App Version 가져오기](Xcode/InfoPlist_appVersion.md) - Fri Apr 14 09:06:10 2023 +0900
+- [Info.plist : (값 가져오기, 권한)](Xcode/InfoPlist.md) - Fri Apr 14 09:06:10 2023 +0900
 - [OSI 7 Layer](ComputerScience/osi_7layer.md) - Thu Apr 13 09:16:00 2023 +0900
 - [Integrity - DeviceCheck & App Attest](A_Writing_in_Progress/Integrity_DeviceCheck_App_Attest.md) - Thu Apr 13 09:10:17 2023 +0900
 
@@ -49,7 +49,6 @@ _215 TILs and counting..._
 ### [A_Writing_in_Progress](#A_Writing_in_Progress)
 - [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](A_Writing_in_Progress/Integrity_Certificate_Provisioning.md)
 - [Integrity - DeviceCheck & App Attest](A_Writing_in_Progress/Integrity_DeviceCheck_App_Attest.md)
-- [OSI 7 Layer - 1. Physical Layer(물리계층)](A_Writing_in_Progress/osi_7layer_1.Physical.md)
 
 ### [About-Error](#About-Error)
 - [SourceTree - 시도때도 없이 꺼지는 현상](About-Error/SourceTree_fatalError.md)
@@ -88,6 +87,7 @@ _215 TILs and counting..._
 - [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
 - [iOS와 HTTP/2에 대하여](ComputerScience/http_2.md)
 - [OSI 7 Layer](ComputerScience/osi_7layer.md)
+- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_1.Physical.md)
 - [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
 ### [Conference](#Conference)
