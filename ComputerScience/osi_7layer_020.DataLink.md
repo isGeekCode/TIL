@@ -37,7 +37,7 @@
 - 1계층 Decoding : 아날로그 신호를 데이터로 전환.
     - 1계층 Decoder의 Input에 아날로그 신호를 넣어준다.
     - 1계층 Decoder의 Output에서 데이터를 내보낸다.
-- 2계층 Encoding : Framing 되어있는 데이터를 순수한 데이터로 변환.
+- 2계층 Decoding : Framing 되어있는 데이터를 순수한 데이터로 변환.
     - 2계층 Decoder의 Input에 Framing된 데이터를 넣어준다.
     - 2계층 Decoder의 Output에서 원래의 데이터로 복원한다.
 
