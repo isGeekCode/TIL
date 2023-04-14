@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_217 TILs and counting..._
+_218 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [](ComputerScience/osi_7layer_030.Network.md) - Fri Apr 14 16:50:04 2023 +0900
 - [OSI 7 Layer - 2. Data Link Layer(데이터 링크 계층)](ComputerScience/osi_7layer_020.DataLink.md) - Fri Apr 14 15:23:58 2023 +0900
 - [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md) - Fri Apr 14 14:47:59 2023 +0900
 - [OSI 7 Layer - 1.5 여러 컴퓨터간 통신](ComputerScience/osi_7layer_011_internet.md) - Fri Apr 14 14:47:59 2023 +0900
 - [Info.plist : (값 가져오기, 권한)](Xcode/InfoPlist.md) - Fri Apr 14 09:06:10 2023 +0900
-- [Info.plist - App Version 가져오기](Xcode/InfoPlist_appVersion.md) - Fri Apr 14 09:06:10 2023 +0900
 
 ### Categories
 
@@ -90,6 +90,7 @@ _217 TILs and counting..._
 - [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md)
 - [OSI 7 Layer - 1.5 여러 컴퓨터간 통신](ComputerScience/osi_7layer_011_internet.md)
 - [OSI 7 Layer - 2. Data Link Layer(데이터 링크 계층)](ComputerScience/osi_7layer_020.DataLink.md)
+- [](ComputerScience/osi_7layer_030.Network.md)
 - [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
 ### [Conference](#Conference)
