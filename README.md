@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_218 TILs and counting..._
+_219 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [PNG와 JPG에 대하여](RelatedImage/png_jpg.md) - Sat Apr 15 23:24:32 2023 +0900
 - [OSI 7 Layer - 3. Network Layer(네트워크 계층)](ComputerScience/osi_7layer_030.Network.md) - Fri Apr 14 16:50:04 2023 +0900
 - [OSI 7 Layer - 2. Data Link Layer(데이터 링크 계층)](ComputerScience/osi_7layer_020.DataLink.md) - Fri Apr 14 15:23:58 2023 +0900
 - [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md) - Fri Apr 14 14:47:59 2023 +0900
 - [OSI 7 Layer - 1.5 여러 컴퓨터간 통신](ComputerScience/osi_7layer_011_internet.md) - Fri Apr 14 14:47:59 2023 +0900
-- [Info.plist : (값 가져오기, 권한)](Xcode/InfoPlist.md) - Fri Apr 14 09:06:10 2023 +0900
 
 ### Categories
 
@@ -264,6 +264,7 @@ _218 TILs and counting..._
 
 ### [RelatedImage](#RelatedImage)
 - [dp와 pt에 대하여 (Feat. 포인트란)](RelatedImage/DP_PT.md)
+- [PNG와 JPG에 대하여](RelatedImage/png_jpg.md)
 
 ### [Ruby](#Ruby)
 - [Installation: Ruby](Ruby/Installation_Ruby.md)
