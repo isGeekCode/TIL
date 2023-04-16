@@ -42,7 +42,7 @@ M1여부를 꼭 확인해서 다운로드할 것
 
 ```
 # flutter용 환경변수
-export PATH=$PATH:~/Downloads/flutter/bin
+export PATH="$PATH:~/Downloads/flutter/bin"
 ```
 - source ~/.zshrc
 - 터미널 재시작
