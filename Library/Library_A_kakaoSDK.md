@@ -35,6 +35,22 @@ Kakao SDK의 일부 모듈은 다른 모듈에 의존성이 있으며, 각 모�
 
 CocoaPods라이브러리를 사용하게되면 새로생긴 .xcworkspace 파일을 사용해야한다.
 
+## 계정에 앱 정보 등록하기
+- 개발자 계정에서 앱 생성
+- 플랫폼 - iOS 에 정보입력 : 필요한 정보는 아래와 같다.
+    - bundle ID
+    - 앱스토어 ID
+
+## 앱에 카카오 정보 등록하기
+KakaoSDK를 사용하기 위해서는 계정에 등록된 앱키를 확인하는 작업이 필요하다.
+
+- 카카오URL스키마를 사용하는 경우
+    - 앱타겟 - Info - URL Types에 아래 형태로 입력한다.
+        - URL Schemes : kakao`앱키`
+        이렇게 하면, kakao`앱키`://kakaolink 로 카카오에서 호출이 가능하다.
+    - [TIL : 외부링크 만들기 참고](https://github.com/isGeekCode/TIL/blob/main/Mobile-IOS/ExternalLink_CustomScheme.md)
+    ‼️ 안드로이드 같은 경우는 따로 이 작업을 하지않아도 기입한 패키지정보를 호출한다고 한다. 그래서 외부링크 세팅을 안해도 앱을 켤 수 있다. (iOS도 Bundle ID로 불러달라...)
+
 ## 공유하기기능
 
 
