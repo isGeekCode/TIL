@@ -1,4 +1,4 @@
-# Let us: Go! 2022 가을 - 221105 후기 (미참석)
+# Let us: Go! 2022 가을 - 221105(미참석)
 
 - [Let us: Go! 2022 가을 사이트 링크](https://let-us-go-2022-fall.vercel.app/) 
 - [Let us: Go! 2022 가을 유튜브 링크](https://www.youtube.com/playlist?list=PLfx4MMAj7YbFUnrH7M4Fc8IMAkP5NusNi) 

@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_220 TILs and counting..._
+_222 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [iOS Daejeon Club - 230325(참석)](Conference/Conference2023_IOSDaejonCodingClub_230325.md) - Tue Apr 18 16:17:56 2023 +0900
+- [Let us: Go! 2022 가을 - 221105(미참석)](Conference/Conference2022_LetUsGo2022_3Fall.md) - Tue Apr 18 16:17:56 2023 +0900
+- [Let us: Go! 2023 봄 - 2304(미참석)](Conference/Conference2023_LetUSGo2023_1Spring.md) - Tue Apr 18 16:17:56 2023 +0900
+- [Git - 푸시한 커밋의 Author 변경하기(username과 user email 수정하기)](Git/Git_tutorial_changeUsername.md) - Mon Apr 17 16:11:31 2023 +0900
 - [Flutter - 기본 4가지 위젯](Flutter/Flutter_Basic_Widget.md) - Sun Apr 16 14:47:46 2023 +0900
-- [PNG와 JPG에 대하여](RelatedImage/png_jpg.md) - Sat Apr 15 23:24:32 2023 +0900
-- [OSI 7 Layer - 3. Network Layer(네트워크 계층)](ComputerScience/osi_7layer_030.Network.md) - Fri Apr 14 16:50:04 2023 +0900
-- [OSI 7 Layer - 2. Data Link Layer(데이터 링크 계층)](ComputerScience/osi_7layer_020.DataLink.md) - Fri Apr 14 15:23:58 2023 +0900
-- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md) - Fri Apr 14 14:47:59 2023 +0900
 
 ### Categories
 
@@ -94,8 +94,9 @@ _220 TILs and counting..._
 - [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
 ### [Conference](#Conference)
-- [iOS Daejeon Club - 230325 후기 (참석)](Conference/IOSDaejonCodingClub_230325.md)
-- [Let us: Go! 2022 가을 - 221105 후기 (미참석)](Conference/LetUsGo2022_3Fall.md)
+- [Let us: Go! 2022 가을 - 221105(미참석)](Conference/Conference2022_LetUsGo2022_3Fall.md)
+- [iOS Daejeon Club - 230325(참석)](Conference/Conference2023_IOSDaejonCodingClub_230325.md)
+- [Let us: Go! 2023 봄 - 2304(미참석)](Conference/Conference2023_LetUSGo2023_1Spring.md)
 
 ### [Docs](#Docs)
 - [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md)
@@ -113,6 +114,7 @@ _220 TILs and counting..._
 - [Git Actions - Permission to ....git denied to github-actions](Git/GitAction_tokenError.md)
 - [GitHub - Various APIs](Git/Git_ContributionGraph.md)
 - [푸시 에러 : 원격 저장소와 커밋 기록이 다른 경우](Git/Git_pushError_OtherCommit.md)
+- [Git - 푸시한 커밋의 Author 변경하기(username과 user email 수정하기)](Git/Git_tutorial_changeUsername.md)
 - [Git - 튜토리얼 : 브랜치 생성하기. 리스트 확인, 브랜치 체크아웃](Git/Git_tutorial_checkout.md)
 - [Git - 현재 깃폴더에 연동한 username 확인하고 변경하기](Git/Git_username.md)
 - [공동작업을 위한 Git 버전관리](Git/TIL220422_GitControl.md)
