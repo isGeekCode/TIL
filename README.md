@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_225 TILs and counting..._
+_226 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Objc - 로그찍기](Objective-C/Objc_Log.md) - Fri Apr 21 09:29:03 2023 +0900
 - [Objc - 라이브러리 : 직접 파일삽입된 라이브러리 제거작업](Objective-C/Objc_DeleteFramework.md) - Thu Apr 20 11:21:35 2023 +0900
 - [NSObject_UIBarItem](Mobile-IOS/NSObject_UIBarItem.md) - Wed Apr 19 21:46:12 2023 +0900
 - [Let us: Go! 2022 가을 - 221105(미참석)](Conference/Conference2022_LetUsGo2022_3Fall.md) - Tue Apr 18 16:17:56 2023 +0900
 - [Let us: Go! 2023 봄 - 2304(미참석)](Conference/Conference2023_LetUSGo2023_1Spring.md) - Tue Apr 18 16:17:56 2023 +0900
-- [iOS Daejeon Club - 230325(참석)](Conference/Conference2023_IOSDaejonCodingClub_230325.md) - Tue Apr 18 16:17:56 2023 +0900
 
 ### Categories
 
@@ -263,10 +263,11 @@ _225 TILs and counting..._
 - [webview - 바운스 효과 제거하기](Networking/Webview_how_to_stop_bounce.md)
 
 ### [Objective-C](#Objective-C)
-- [Objective-C 프로젝트에서 Swift 라이브러리 사용하기](Objective-C/Objc_Bridging_SwiftInObjc.md)
+- [Objc - Objc 프로젝트에서 Swift 라이브러리 사용하기](Objective-C/Objc_Bridging_SwiftInObjc.md)
 - [Objc - 라이브러리 : 직접 파일삽입된 라이브러리 제거작업](Objective-C/Objc_DeleteFramework.md)
-- [전처리문 사용하기](Objective-C/Objc_preprocessorCommand.md)
-- [c언어와 objective-c의 발전](Objective-C/TIL220421_aboutObjectiveC.md)
+- [Objc - 로그찍기](Objective-C/Objc_Log.md)
+- [XCode - 전처리문 사용하기](Objective-C/Objc_preprocessorCommand.md)
+- [Objc - c언어와 objective-c의 차이, 발전](Objective-C/TIL220421_aboutObjectiveC.md)
 
 ### [RelatedImage](#RelatedImage)
 - [dp와 pt에 대하여 (Feat. 포인트란)](RelatedImage/DP_PT.md)
