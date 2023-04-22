@@ -1,4 +1,4 @@
-# NSObject_UIBarItem
+# NSObject_UIBarItem : 네비게이션바 / 툴바 / 탭바를 표시하는 아이템
 
 NSObject 의 UIBarItem은 iOS 애플리케이션에서 사용되는 클래스 중 하나로,
 
@@ -9,7 +9,19 @@ UIBarItem 클래스는 구체적으로 구현된 것이 아니기 때문에, 이
 ## UIBarButtonItem
 UIBarItem 클래스는 텍스트, 이미지, 뷰 등의 속성을 가지며, 이를 설정하여 아이템의 모양을 변경할 수 있다. 또한 isEnabled 속성을 통해 아이템을 활성화/비활성화할 수 있다.
 
+### UIBarButtonItem의 속성
+
+- title: UIBarButtonItem에 표시되는 문자열 제목.
+- image: UIBarButtonItem에 표시되는 이미지. 일반적으로 25x25 또는 50x50 크기의 이미지를 사용.
+- style: UIBarButtonItem의 스타일. 버튼 또는 바 버튼 스타일 중 하나일 수 있습니다. 바 버튼 스타일은 텍스트 레이블과 함께 표시되며, 일반적으로 네비게이션 바에서 사용.
+- target: UIBarButtonItem의 이벤트를 처리하는 객체. 일반적으로 뷰 컨트롤러 또는 그에 대한 델리게이트가 된다.
+- action: UIBarButtonItem을 탭할 때 실행되는 메서드 또는 셀렉터.
+- enabled: UIBarButtonItem이 사용 가능한지 여부를 나타내는 부울 값. false로 설정하면 UIBarButtonItem이 회색조로 변경.
+- tintColor: UIBarButtonItem의 색상. 기본 색상은 시스템 색상이며, 다른 색상으로 변경할 수 있다.
+
 ### 툴바 사용하기
+- 네비게이션바를 임베드 먼저 해야 동작한다.
+
 ```swift
 class ViewController: UIViewController {
 
@@ -66,5 +78,56 @@ class ViewController: UIViewController {
 ## UITabBarItem
 NSObject_UIBarItem 클래스는 애플리케이션에서 매우 자주 사용되는 클래스이며, UI를 구성하는데 매우 중요한 역할을 합니다.
 
+탭 바 인터페이스는 일반적으로 화면 아래에 위치하며, 여러 화면(뷰 컨트롤러) 간에 전환할 수 있는 간단한 방법을 제공한다.
+
+### UITabBarItem의 속성
+
+- title: 탭 바 항목에 표시되는 문자열 제목.
+- image: 탭 바 항목에 표시되는 이미지. 일반적으로 25x25 또는 50x50 크기의 이미지를 사용한다.
+- selectedImage: 탭 바 항목이 선택되었을 때 표시되는 이미지. 이 속성을 사용하지 않으면 이미지가 회색조로 변경된다.
+- badgeValue: 탭 바 항목 오른쪽 상단 모서리에 표시되는 배지 값. 일반적으로 읽지 않은 알림 수 또는 작업 수를 나타내는 데 사용된다.
 
 
+
+### 탭바 사용하기
+
+- 탭바를 임베드 먼저 해야 동작한다.
+```swift
+class ViewController: UIViewController {
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    // Create two view controllers
+    let firstVC = UIViewController()
+    firstVC.view.backgroundColor = .systemYellow
+    let secondVC = UIViewController()
+    secondVC.view.backgroundColor = .systemTeal
+    
+    // Create two UITabBarItem instances
+    let firstTabBarItem = UITabBarItem(title: "First", image: UIImage(named: "first"), selectedImage: UIImage(named: "first_selected"))
+    let secondTabBarItem = UITabBarItem(title: "Second", image: UIImage(named: "second"), selectedImage: UIImage(named: "second_selected"))
+    
+    // Set the tab bar item for each view controller
+    firstVC.tabBarItem = firstTabBarItem
+    secondVC.tabBarItem = secondTabBarItem
+    
+    // Create a UITabBarController and set the view controllers
+    let tabBarController = UITabBarController()
+    tabBarController.viewControllers = [firstVC, secondVC]
+    
+    // Set the UITabBarController as the root view controller
+    self.view.addSubview(tabBarController.view)
+    self.addChild(tabBarController)
+    tabBarController.didMove(toParent: self)
+  }
+}
+```
+
+### 결과화면
+
+https://user-images.githubusercontent.com/76529148/233790777-2d4235ff-8764-4031-9408-fad7e1bf77a4.mov
+
+## History
+- 230420 : UIBarButtonItem 추가
+- 230422 : UITabBarItem 추가
