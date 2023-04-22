@@ -15,7 +15,7 @@ _226 TILs and counting..._
 - [XCode - 전처리문 사용하기](Xcode/PreprocessorCommand.md) - Fri Apr 21 09:31:09 2023 +0900
 - [Objc - 로그찍기](Objective-C/Objc_Log.md) - Fri Apr 21 09:29:03 2023 +0900
 - [Objc - 라이브러리 : 직접 파일삽입된 라이브러리 제거작업](Objective-C/Objc_DeleteFramework.md) - Thu Apr 20 11:21:35 2023 +0900
-- [NSObject_UIBarItem](Mobile-IOS/NSObject_UIBarItem.md) - Wed Apr 19 21:46:12 2023 +0900
+- [NSObject_UIBarItem : 네비게이션바 / 툴바 / 탭바를 표시하는 아이템](Mobile-IOS/NSObject_UIBarItem.md) - Wed Apr 19 21:46:12 2023 +0900
 - [Let us: Go! 2022 가을 - 221105(미참석)](Conference/Conference2022_LetUsGo2022_3Fall.md) - Tue Apr 18 16:17:56 2023 +0900
 
 ### Categories
@@ -206,7 +206,7 @@ _226 TILs and counting..._
 - [MessageUI - MFMessageComposeVC : 문자메세지 보내기](Mobile-IOS/MessageUI_sendSMS.md)
 - [NSDate - Timezone: UTC, GMT, KST](Mobile-IOS/NSObject_NSDate_UTC.md)
 - [NSObject - Timer : 타이머 구현하기](Mobile-IOS/NSObject_Timer.md)
-- [NSObject_UIBarItem](Mobile-IOS/NSObject_UIBarItem.md)
+- [NSObject_UIBarItem : 네비게이션바 / 툴바 / 탭바를 표시하는 아이템](Mobile-IOS/NSObject_UIBarItem.md)
 - [CGColor에 대하여](Mobile-IOS/NSObject_UIColorCgColor.md)
 - [NSObject - UIFont](Mobile-IOS/NSObject_UIFont.md)
 - [NSObject_UIResponder : Responder Chain 리스폰더 체인에 대하여](Mobile-IOS/NSObject_UIResponder_.md)
