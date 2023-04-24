@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_227 TILs and counting..._
+_228 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [리뷰에 관하여](Self-Review/230424_Spring.md) - Mon Apr 24 22:36:59 2023 +0900
 - [Flutter - Drawer : GNB / 사이드바](Flutter/Flutter_Drawer.md) - Sun Apr 23 22:18:12 2023 +0900
 - [XCode - 전처리문 사용하기](Xcode/PreprocessorCommand.md) - Fri Apr 21 09:31:09 2023 +0900
 - [Objc - 로그찍기](Objective-C/Objc_Log.md) - Fri Apr 21 09:29:03 2023 +0900
 - [Objc - 라이브러리 : 직접 파일삽입된 라이브러리 제거작업](Objective-C/Objc_DeleteFramework.md) - Thu Apr 20 11:21:35 2023 +0900
-- [NSObject_UIBarItem : 네비게이션바 / 툴바 / 탭바를 표시하는 아이템](Mobile-IOS/NSObject_UIBarItem.md) - Wed Apr 19 21:46:12 2023 +0900
 
 ### Categories
 
@@ -279,6 +279,7 @@ _227 TILs and counting..._
 - [Ruby - 버전관리 : RVM, Rbenv 사용법](Ruby/ManageRuby.md)
 
 ### [Self-Review](#Self-Review)
+- [리뷰에 관하여](Self-Review/230424_Spring.md)
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
 
 ### [SwitchingScreens](#SwitchingScreens)
