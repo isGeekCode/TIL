@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_228 TILs and counting..._
+_229 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [UIApplication_AppDelegate - userNotificationCenter](Mobile-IOS/UIApplication_AppDelegate_userNotificationCenter.md) - Tue Apr 25 13:38:06 2023 +0900
 - [리뷰에 관하여](Self-Review/230424_Spring.md) - Mon Apr 24 22:36:59 2023 +0900
 - [Flutter - Drawer : GNB / 사이드바](Flutter/Flutter_Drawer.md) - Sun Apr 23 22:18:12 2023 +0900
 - [XCode - 전처리문 사용하기](Xcode/PreprocessorCommand.md) - Fri Apr 21 09:31:09 2023 +0900
 - [Objc - 로그찍기](Objective-C/Objc_Log.md) - Fri Apr 21 09:29:03 2023 +0900
-- [Objc - 라이브러리 : 직접 파일삽입된 라이브러리 제거작업](Objective-C/Objc_DeleteFramework.md) - Thu Apr 20 11:21:35 2023 +0900
 
 ### Categories
 
@@ -221,6 +221,7 @@ _228 TILs and counting..._
 - [AudioToolbox - 롱프레스와 햅틱진동 구현하기 (Feat.Long press)](Mobile-IOS/Third_AudioToolBox_HapticAndLongpress.md)
 - [써드파티(Third party)](Mobile-IOS/Third_party.md)
 - [UIApplication - App의 LifeCycle](Mobile-IOS/UIApplication_AppDelegate_AppLifeCycle.md)
+- [UIApplication_AppDelegate - userNotificationCenter](Mobile-IOS/UIApplication_AppDelegate_userNotificationCenter.md)
 - [UIApplication - AppDelegate - App's Status](Mobile-IOS/UIApplication_StatusCycle_of_App.md)
 - [CGPoint, CGSize, CGRect](Mobile-IOS/UIKit_CGPoint_CGSize_CGRect.md)
 - [UIKit - UIAlertController : 장문의 얼럿 만들기](Mobile-IOS/UIKit_UIAlertController_NSMutableAttributedString.md)
