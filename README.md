@@ -222,7 +222,7 @@ _229 TILs and counting..._
 - [써드파티(Third party)](Mobile-IOS/Third_party.md)
 - [UIApplication_AppDelegate - 탭바컨트롤러 / 네비게이션컨트롤러 / 기본적인 ios 앱의 계층구조](Mobile-IOS/UIApplication_AppDelegate_AppLifeCycle.md)
 - [UIApplication_AppDelegate - userNotificationCenter](Mobile-IOS/UIApplication_AppDelegate_userNotificationCenter.md)
-- [UIApplication_AppDelegate - App's Status / App's Life-Cycle](Mobile-IOS/UIApplication_StatusCycle_of_App.md)
+- [UIApplication_AppDelegate - UIApplicationDelegate : 앱의 상태 / 생명주기(Life-Cycle)](Mobile-IOS/UIApplication_StatusCycle_of_App.md)
 - [CGPoint, CGSize, CGRect](Mobile-IOS/UIKit_CGPoint_CGSize_CGRect.md)
 - [UIKit - UIAlertController : 장문의 얼럿 만들기](Mobile-IOS/UIKit_UIAlertController_NSMutableAttributedString.md)
 - [DatePicker 설치하기](Mobile-IOS/UIKit_UIDatePicker.md)
