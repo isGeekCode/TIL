@@ -1,5 +1,21 @@
-# UIApplication - AppDelegate - App's Status
+# UIApplication - AppDelegate - App's Status / App's Life-Cycle
+
+- UIApplication: 애플리케이션의 라이프 사이클을 관리하는 싱글톤 클래스
+
+화면을 터치하여 앱을 실행시키면 UIApplication이라는 클래스에  오프젝트 하나가 생긴다.
+자신의 이벤트를 대행해줄  AppDelegate라는 오브젝트를 만든다.
+
+AppDelegate라는 Object는 개발자가 직접 만들어가는 클래스이다. 
+Application의 시동, 종료, Background,Foreground, in-active, active 상태로 다녀오는 것을 관리한다. 
+
+가장먼저 하는 일은 window을 만드는 것이다.
+iOS에서는 기본적으로 Single-window이다. 
+`하나의 window가 앱 전체를 채우고 있고, 앱을 종료하면 window가 종료된다.`
+
+App에서 사용하는 여러 data들은 AppDelegate가 관리한다. 이는 AppDelegate가 UIApplication으로 부터 앱의 시동과 종료등에 중요한 역할을 위임받고 있고, Singleton에 준하는 Object이기 때문이다. 
+
 아이폰에서 주 화면에 현재 앱이 얼마만큼 점유하고 있느냐에 따라 앱의 상태가 달라진다. 
+
 
 ## Not Running
 앱이 시작되지않은상태
