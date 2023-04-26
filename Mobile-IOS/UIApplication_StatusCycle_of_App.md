@@ -1,8 +1,8 @@
-# UIApplication - AppDelegate - App's Status / App's Life-Cycle
+# UIApplication_AppDelegate - App's Status / App's Life-Cycle
 
 - UIApplication: 애플리케이션의 라이프 사이클을 관리하는 싱글톤 클래스
 
-화면을 터치하여 앱을 실행시키면 UIApplication이라는 클래스에  오프젝트 하나가 생긴다.
+화면을 터치하여 앱을 실행시키면 UIApplication이git라는 클래스에  오프젝트 하나가 생긴다.
 자신의 이벤트를 대행해줄  AppDelegate라는 오브젝트를 만든다.
 
 AppDelegate라는 Object는 개발자가 직접 만들어가는 클래스이다. 

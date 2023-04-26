@@ -1,4 +1,4 @@
-# UIApplication - 탭바컨트롤러 / 네비게이션컨트롤러 / 기본적인 ios 앱의 계층구조
+# UIApplication_AppDelegate - 탭바컨트롤러 / 네비게이션컨트롤러 / 기본적인 ios 앱의 계층구조
 
 ## TabBar 
 - TabBarController라는 객체가 관리한다.
