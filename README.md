@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_229 TILs and counting..._
+_230 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [UIApplication_AppDelegate - 헷갈릴수 있는 두 함수(didReceive형제)](Mobile-IOS/UIApplication_AppDelegate-DifferenceNotification.md) - Thu Apr 27 17:38:52 2023 +0900
 - [UIApplication_AppDelegate - userNotificationCenter](Mobile-IOS/UIApplication_AppDelegate_userNotificationCenter.md) - Tue Apr 25 13:38:06 2023 +0900
 - [리뷰에 관하여](Self-Review/230424_Spring.md) - Mon Apr 24 22:36:59 2023 +0900
 - [Flutter - Drawer : GNB / 사이드바](Flutter/Flutter_Drawer.md) - Sun Apr 23 22:18:12 2023 +0900
 - [XCode - 전처리문 사용하기](Xcode/PreprocessorCommand.md) - Fri Apr 21 09:31:09 2023 +0900
-- [Objc - 로그찍기](Objective-C/Objc_Log.md) - Fri Apr 21 09:29:03 2023 +0900
 
 ### Categories
 
@@ -220,6 +220,7 @@ _229 TILs and counting..._
 - [타임스탬프 구현하기](Mobile-IOS/TIL220914_TimeStamp.md)
 - [AudioToolbox - 롱프레스와 햅틱진동 구현하기 (Feat.Long press)](Mobile-IOS/Third_AudioToolBox_HapticAndLongpress.md)
 - [써드파티(Third party)](Mobile-IOS/Third_party.md)
+- [UIApplication_AppDelegate - 헷갈릴수 있는 두 함수(didReceive형제)](Mobile-IOS/UIApplication_AppDelegate-DifferenceNotification.md)
 - [UIApplication_AppDelegate - 탭바컨트롤러 / 네비게이션컨트롤러 / 기본적인 ios 앱의 계층구조](Mobile-IOS/UIApplication_AppDelegate_AppLifeCycle.md)
 - [UIApplication_AppDelegate - userNotificationCenter](Mobile-IOS/UIApplication_AppDelegate_userNotificationCenter.md)
 - [UIApplication_AppDelegate - UIApplicationDelegate : 앱의 상태 / 생명주기(Life-Cycle)](Mobile-IOS/UIApplication_StatusCycle_of_App.md)
