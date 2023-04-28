@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_230 TILs and counting..._
+_231 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [23년 4월 피드백 / 5월 목표](Self-Review/230428April.md) - Fri Apr 28 23:37:04 2023 +0900
 - [UIApplication_AppDelegate - 헷갈릴수 있는 두 함수(didReceive형제)](Mobile-IOS/UIApplication_AppDelegate-DifferenceNotification.md) - Thu Apr 27 17:38:52 2023 +0900
 - [UIApplication_AppDelegate - userNotificationCenter](Mobile-IOS/UIApplication_AppDelegate_userNotificationCenter.md) - Tue Apr 25 13:38:06 2023 +0900
 - [리뷰에 관하여](Self-Review/230424_Spring.md) - Mon Apr 24 22:36:59 2023 +0900
 - [Flutter - Drawer : GNB / 사이드바](Flutter/Flutter_Drawer.md) - Sun Apr 23 22:18:12 2023 +0900
-- [XCode - 전처리문 사용하기](Xcode/PreprocessorCommand.md) - Fri Apr 21 09:31:09 2023 +0900
 
 ### Categories
 
@@ -282,6 +282,7 @@ _230 TILs and counting..._
 
 ### [Self-Review](#Self-Review)
 - [리뷰에 관하여](Self-Review/230424_Spring.md)
+- [23년 4월 피드백 / 5월 목표](Self-Review/230428April.md)
 - [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
 
 ### [SwitchingScreens](#SwitchingScreens)
