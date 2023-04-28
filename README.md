@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_231 TILs and counting..._
+_232 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [NSObject_UIResponder_UIView_UIProgressView](Mobile-IOS/NSObject_UIResponder_UIView_UIProgressView.md) - Sat Apr 29 00:15:44 2023 +0900
 - [23년 4월 피드백 / 5월 목표](Self-Review/230428April.md) - Fri Apr 28 23:37:04 2023 +0900
 - [UIApplication_AppDelegate - 헷갈릴수 있는 두 함수(didReceive형제)](Mobile-IOS/UIApplication_AppDelegate-DifferenceNotification.md) - Thu Apr 27 17:38:52 2023 +0900
 - [UIApplication_AppDelegate - userNotificationCenter](Mobile-IOS/UIApplication_AppDelegate_userNotificationCenter.md) - Tue Apr 25 13:38:06 2023 +0900
 - [리뷰에 관하여](Self-Review/230424_Spring.md) - Mon Apr 24 22:36:59 2023 +0900
-- [Flutter - Drawer : GNB / 사이드바](Flutter/Flutter_Drawer.md) - Sun Apr 23 22:18:12 2023 +0900
 
 ### Categories
 
@@ -214,6 +214,7 @@ _231 TILs and counting..._
 - [NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기 기능](Mobile-IOS/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
 - [NSObject_UIResponder_UIView_UIControl_UIButton](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UIButton.md)
 - [NSObject_UIResponder_UIView_UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](Mobile-IOS/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
+- [NSObject_UIResponder_UIView_UIProgressView](Mobile-IOS/NSObject_UIResponder_UIView_UIProgressView.md)
 - [NSObject_UIResponder_UIView_UITableView_만들기](Mobile-IOS/NSObject_UIResponder_UIView_UITableView_howToMake.md)
 - [NSObject_UIResponder_UIView_UIActivityIndicatorView_만들기](Mobile-IOS/NsObject_UIResponder_UIView_UIActivityIndicatorView.md)
 - [소켓이란](Mobile-IOS/TIL220420_socket.md)
