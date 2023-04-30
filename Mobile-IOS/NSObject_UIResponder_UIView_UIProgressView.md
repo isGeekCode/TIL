@@ -27,3 +27,59 @@ UIView.animate(withDuration: 0.5) {
 ```
 
 위와 같은 방법으로 UIProgressView를 사용하여 iOS 앱에서 간단한 프로그래스바를 만들 수 있다.
+
+## 상태값에 따른 체크
+
+```swift
+    @IBOutlet weak var progressBar: UIProgressView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // 프로그래스바 초기값 설정
+        setProgressBar(progress: 0.5)
+        
+        // 타이머 시작
+        startTimer()
+
+    }
+
+    func setProgressBar(progress: Float) {
+        progressBar.progress = progress
+    }
+    
+    func updateProgressBar(progress: Float) {
+        // 애니메이션 효과와 함께 프로그래스바 업데이트
+        UIView.animate(withDuration: 0.5) {
+            self.progressBar.setProgress(progress, animated: true)
+        }
+        
+        // 프로그래스바가 100%가 되었을 때 처리할 함수
+        if progress == 1.0 {
+            progressBarComplete()
+        }
+    }
+    
+    func progressBarComplete() {
+        // 프로그래스바가 100%가 되었을 때 처리할 코드 작성
+        print("프로그래스바 완료!")
+    }
+    
+    /// 특정 기준(시간)에 따라 함수를 체크하여 진행도 체크, 상황에 따라 커스텀 필요
+    /// 어떤 기준을 가지고 퍼센트를 산정할지 정해야한다.
+    func startTimer() {
+      var progress: Float = 0.0
+      let timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+          progress += 0.01
+          
+          if progress >= 1.0 {
+              timer.invalidate()
+              self.updateProgressBar(progress: 1.0)
+          } else {
+              self.updateProgressBar(progress: progress)
+          }
+      }
+      timer.fire()
+    }
+}
+```
