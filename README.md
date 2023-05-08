@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_232 TILs and counting..._
+_233 TILs and counting..._
 
 ---
 
@@ -215,6 +215,7 @@ _232 TILs and counting..._
 - [NSObject_UIResponder_UIView_UIControl_UIButton](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UIButton.md)
 - [NSObject_UIResponder_UIView_UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](Mobile-IOS/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
 - [NSObject_UIResponder_UIView_UIProgressView](Mobile-IOS/NSObject_UIResponder_UIView_UIProgressView.md)
+- [NSObject_UIResponder_UIView_UIScrollView](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView.md)
 - [NSObject_UIResponder_UIView_UITableView_만들기](Mobile-IOS/NSObject_UIResponder_UIView_UITableView_howToMake.md)
 - [NSObject_UIResponder_UIView_UIActivityIndicatorView_만들기](Mobile-IOS/NsObject_UIResponder_UIView_UIActivityIndicatorView.md)
 - [소켓이란](Mobile-IOS/TIL220420_socket.md)
