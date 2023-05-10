@@ -8,7 +8,7 @@
     - [리젝사유(230409) - 훗타운app : 2.1 - Information Needed](#리젝사유230409---훗타운app--21---information-needed)
     - [리젝사유(230510) - 라드씨엔에스app : 2.1 - Information Needed](#리젝사유230510---라드씨엔에스app--21---information-needed)
 - [2.3 Performance - Accurate Metadata(정확한 메타데이터)](#23-performance---accurate-metadata정확한-메타데이터)  
-        - [리젝사유(230409) - 훗타운app : 2.3 Performance - Accurate Metadata](#230409---훗타운app--23-performance---Accurate-metadata)
+    - [리젝사유(230409) - 훗타운app : 2.3 Performance - Accurate Metadata](#230409---훗타운app--23-performance---Accurate-metadata)
     - [2.3.3 (스크린샷)](#233-스크린샷)
         - [리젝사유(230407) - 훗타운app : 2.3.3 Screenshots should show the app in use(스크린샷 사용)](#리젝사유230407---훗타운app--233-screenshots-should-show-the-app-in-use스크린샷-사용)
 
