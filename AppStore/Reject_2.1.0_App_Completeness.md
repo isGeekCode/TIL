@@ -2,15 +2,15 @@
 
 ## Content
 - [2.1 Performance: App Completeness(앱 완전성)](#21-performance-app-completeness앱-완전성)
-  - [리젝사유(230409) : 2.1.0 - Information Needed](#리젝사유230409--210---information-needed)
-  - [리젝사유(230510) : 2.1.0 - Information Needed](#리젝사유230409--210---information-needed)
+  - [리젝사유(230409) - 훗타운app : 2.1.0 - Information Needed](#리젝사유230409---훗타운app--210---information-needed)
+  - [리젝사유(230510) - 라드씨엔에스app  : 2.1.0 - Information Needed](#리젝사유230409---라드씨엔에스app--210---information-needed)
 
 - [2.3 Performance - Accurate Metadata(정확한 메타데이터)](#23-performance---accurate-metadata정확한-메타데이터)
-  - [리젝사유(230407) : 2.3.3 Screenshots should show the app in use(스크린샷 사용)](#리젝사유230407--233-screenshots-should-show-the-app-in-use스크린샷-사용)
+  - [리젝사유(230407) - 훗타운app : 2.3.3 Screenshots should show the app in use(스크린샷 사용)](#리젝사유230407---훗타운app--233-screenshots-should-show-the-app-in-use스크린샷-사용)
 
 ## 2.1 Performance: App Completeness(앱 완전성)
 
-### 리젝사유(230409) : 2.1.0 - Information Needed
+### 리젝사유(230409) - 훗타운app : 2.1.0 - Information Needed
 
 ```
 We’re looking forward to completing the review of your app, but we need more information to continue.
@@ -32,7 +32,7 @@ Please provide detailed answers to the following questions in your reply to this
     - 앱 내 차단기능의 동영상을 찍어서, 메모와 함께 제출
 
 
-### 리젝사유(230510) : 2.1.0 - Information Needed
+### 리젝사유(230510) - 라드씨엔에스app : 2.1.0 - Information Needed
 ```
 We’re looking forward to continuing our review, but we need more information about your business model and your users to help you find the best distribution option for your app. 
 
@@ -75,7 +75,7 @@ Please review the following questions and provide as much detailed information a
 
 ## 2.3 Performance - Accurate Metadata(정확한 메타데이터)
 
-### 리젝사유(230407) : 2.3.3 Screenshots should show the app in use(스크린샷 사용)
+### 리젝사유(230407) - 훗타운app : 2.3.3 Screenshots should show the app in use(스크린샷 사용)
 ```
 We noticed that your screenshots do not sufficiently show your app in use. 
 
@@ -84,9 +84,7 @@ We noticed that your screenshots do not sufficiently show your app in use.
 To help users understand your app’s functionality and value, your screenshots should highlight your app's core concept. For example, a gaming app should feature screenshots that capture actual gameplay within the app.
 ```
 - 상황
-이 앱은 신규프로젝트를 기존에 배포했던 다른 앱 프로젝트 Bundle ID에 세팅하는 것으로 기획이 수정되었다.
-
-신규프로젝트에 맡게 앱 정보를 모두 수정했는데,  앱정보 `미디어 관리에서 모든 크기 보기`를 누르면 모든 디스플레이에 대한 스크린샷세팅화면으로 이동할 수 있다.  
+    - 이 앱은 신규프로젝트를 기존에 배포했던 다른 앱 프로젝트 Bundle ID에 세팅하는 것으로 기획이 수정되었다. 신규프로젝트에 맡게 앱 정보를 모두 수정했는데,  앱정보 `미디어 관리에서 모든 크기 보기`를 누르면 모든 디스플레이에 대한 스크린샷세팅화면으로 이동할 수 있다.  
 - 대응
-이곳에 4형 디스플레이와, 3.5형 디스플레이 이미지가 있었기 떄문에 삭제하며 상황 종료
+    - 이곳에 4형 디스플레이와, 3.5형 디스플레이 이미지가 있었기 떄문에 삭제하며 상황 종료
 
