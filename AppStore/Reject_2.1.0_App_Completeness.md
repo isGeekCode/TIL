@@ -16,15 +16,60 @@ We’re looking forward to completing the review of your app, but we need more i
 Please provide detailed answers to the following questions in your reply to this message in App Store Connect:
 
 - Does your app include a blocking mechanism that is the ability to block abusive users from the service? If so, where can we locate the feature in the app?
-```
+
+# 번역
 귀하의 앱 검토를 완료하기를 고대하고 있지만 계속하려면 추가 정보가 필요합니다. 
 - 귀하의 앱에는 악의적인 사용자를 서비스에서 차단할 수 있는 차단 메커니즘이 포함되어 있습니까? 그렇다면 앱에서 기능을 어디에서 찾을 수 있습니까?
+```
 
-- 상황
-커뮤니티 기능이 있는 앱은 악의적인 사용자를 차단할 수 있는 로직이 들어있어야한다. 심사관이 이를 확인 할 수 없어서 요청
 
-- 대응
-앱 내 차단기능의 동영상을 찍어서, 메모와 함께 제출
+- 상황  
+    - 커뮤니티 기능이 있는 앱은 악의적인 사용자를 차단할 수 있는 로직이 들어있어야한다. 심사관이 이를 확인 할 수 없어서 요청
+
+- 대응  
+    - 앱 내 차단기능의 동영상을 찍어서, 메모와 함께 제출
+
+
+### 리젝사유(230510) 2.1.0 - Information Needed
+```
+We’re looking forward to continuing our review, but we need more information about your business model and your users to help you find the best distribution option for your app. 
+
+Please review the following questions and provide as much detailed information as you can for each question.
+
+1. Is your app restricted to users who are part of a single company? This may include users of the company's partners, employees, and contractors.
+2. Is your app designed for use by a limited or specific group of companies? 
+- If yes, which companies use this app? 
+- If not, can any company become a client and utilize this app?
+3. What features in the app, if any, are intended for use by the general public?
+4. How do users obtain an account?
+5. Is there any paid content in the app and if so who pays for it? For example, do users pay for opening an account or using certain features in the app?
+
+# 번역
+
+귀하의 앱 검토를 완료하기를 고대하고 있지만 계속하려면 추가 정보가 필요합니다.
+  1. 앱이 단일 회사에 속한 사용자로 제한되어 있습니까? 여기에는 회사의 파트너, 직원 및 계약자의 사용자가 포함될 수 있습니다. 
+  2. 앱이 제한적이거나 특정 회사 그룹에서 사용하도록 설계되었습니까? 
+    - 있다면 어떤 회사에서 이 앱을 사용하나요? 
+    - 그렇지 않다면 아무 회사나 클라이언트가 되어 이 앱을 활용할 수 있나요? 
+  3. 일반 대중이 사용할 수 있는 앱의 기능은 무엇입니까? 
+  4. 사용자는 어떻게 계정을 얻습니까?
+  5. 앱에 유료 콘텐츠가 있습니까? 그렇다면 누가 비용을 지불합니까? 예를 들어, 사용자는 계정을 개설하거나 앱의 특정 기능을 사용하는 데 비용을 지불합니까? 
+```
+
+- 상황  
+    - 사실상 인하우스 앱은 기업용배포를 해야하는데 편의상 사용해온 앱.
+
+- 대응  
+    - 메모에 아래 내용을 추가하여 앱 심사 제출
+    ```
+    - Guideline 2.1 - Information Needed
+        - 앱의 사용자는 자사, 자사 이외에 파트너사의 사원들, 협력업체의 사원들이 사용합니다.
+        - 일반 사용자가 사용하기 위한 앱 기능은 출퇴근, 회의실 예약, 휴가신청, 조회, 직원조회가 있습니다.
+        - 사용자는 자사에서 계정을 발급합니다.
+        - 앱에 유료기능이 없기 때문에 콘텐츠 비용이 존재하지 않습니다.  
+    ```
+
+
 
 ## 2.3 Performance - Accurate Metadata(정확한 메타데이터)
 
