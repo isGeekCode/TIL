@@ -3,7 +3,7 @@
 ## Content
 - [2.1 Performance: App Completeness(앱 완전성)](#21-performance-app-completeness앱-완전성)
   - [리젝사유(230409) - 훗타운app : 2.1.0 - Information Needed](#리젝사유230409---훗타운app--210---information-needed)
-  - [리젝사유(230510) - 라드씨엔에스app  : 2.1.0 - Information Needed](#리젝사유230409---라드씨엔에스app--210---information-needed)
+  - [리젝사유(230510) - 라드씨엔에스app : 2.1.0 - Information Needed](#리젝사유230409---라드씨엔에스app--210---information-needed)
 
 - [2.3 Performance - Accurate Metadata(정확한 메타데이터)](#23-performance---accurate-metadata정확한-메타데이터)
   - [리젝사유(230407) - 훗타운app : 2.3.3 Screenshots should show the app in use(스크린샷 사용)](#리젝사유230407---훗타운app--233-screenshots-should-show-the-app-in-use스크린샷-사용)
