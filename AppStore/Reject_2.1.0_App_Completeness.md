@@ -1,4 +1,6 @@
 # 리젝사유 - 2. Performance(성능)
+- AppStore Review GuideLine
+    - [2. Performance 링크](https://developer.apple.com/app-store/review/guidelines/#performance)
 
 ## Content
 - [2.1 Performance: App Completeness(앱 완전성)](#21-performance-app-completeness앱-완전성)
@@ -6,9 +8,18 @@
   - [리젝사유(230510) - 라드씨엔에스app : 2.1.0 - Information Needed](#리젝사유230510---라드씨엔에스app--210---information-needed)
 
 - [2.3 Performance - Accurate Metadata(정확한 메타데이터)](#23-performance---accurate-metadata정확한-메타데이터)
-  - [리젝사유(230407) - 훗타운app : 2.3.3 Screenshots should show the app in use(스크린샷 사용)](#리젝사유230407---훗타운app--233-screenshots-should-show-the-app-in-use스크린샷-사용)
+  - [2.3.3 (스크린샷)](#233-스크린샷)
+    - [리젝사유(230407) - 훗타운app : 2.3.3 Screenshots should show the app in use(스크린샷 사용)](#리젝사유230407---훗타운app--233-screenshots-should-show-the-app-in-use스크린샷-사용)
 
-## 2.1 Performance: App Completeness(앱 완전성)
+# 2.1 Performance: App Completeness(앱 완전성)
+- 사전 주문할 수 있도록 만든 앱을 포함하여 App Review에 제출하는 것은 필요한 모든 메타데이터와 완벽하게 작동하는 URL이 포함된 최종 버전이어야 합니다.
+- 앱을 제출하기 전에 placeholder 텍스트, 빈 웹 사이트 및 기타 임시 콘텐츠를 제거해야 합니다.
+- 앱을 제출하기 전에 장치에서 버그 및 안정성 테스트를 거쳤는지 확인하고 앱에 로그인이 포함된 경우 데모 계정 정보를 포함하고 백엔드 서비스를 활성화하시기 바랍니다. 
+- 법적 또는 보안 의무로 인해 데모 계정을 제공할 수 없는 경우, Apple의 사전 승인을 받아 데모 계정 대신 기본 제공 데모 모드를 포함할 수 있습니다. 
+- 데모 모드가 앱의 전체 기능을 표시하는지 확인하십시오. 
+- 앱에서 인앱 구매를 제공하는 경우 완전하고 최신이며 검토자가 볼 수 있는지 확인하거나 검토 노트에 이유를 설명하십시오.
+- 또한 앱심사를 소프트웨어 테스트용으로 사용하지 마세요. 
+- 충돌이 발생하거나 명백한 기술적 문제를 나타내는 불완전한 앱 번들 및 바이너리는 거부됩니다
 
 ### 리젝사유(230409) - 훗타운app : 2.1.0 - Information Needed
 
@@ -74,6 +85,18 @@ Please review the following questions and provide as much detailed information a
 
 
 ## 2.3 Performance - Accurate Metadata(정확한 메타데이터)
+```
+Customers should know what they’re getting when they download or buy your app, so make sure all your app metadata, including privacy information, your app description, screenshots, and previews accurately reflect the app’s core experience and remember to keep them up-to-date with new versions.
+
+사용자가 앱을 다운로드하거나 구입할 때, 앱에 대하여 명확히 알 수 있도록 민감성 정보, 앱 설명, 스크린샷 및 미리보기를 포함한 모든 앱 메타데이터를 표기해야합니다. 그래서 앱의 핵심 경험을 정확하게 반영하고 새 버전으로 최신 상태로 유지해야 합니다.
+```
+
+## 2.3.3 (스크린샷)
+```
+Screenshots should show the app in use, and not merely the title art, login page, or splash screen. They may also include text and image overlays (e.g. to demonstrate input mechanisms, such as an animated touch point or Apple Pencil) and show extended functionality on device, such as Touch Bar.
+
+스크린샷에는 제목 아트, 로그인 페이지 또는 시작 화면뿐만 아니라 사용 중인 앱이 표시되어야 합니다. 또한 텍스트 및 이미지 오버레이(예: 애니메이션 터치 포인트 또는 Apple Pencil 등의 입력 메커니즘을 시연하기 위한 것)를 포함하고 터치 바와 같은 장치에서 확장된 기능을 표시할 수 있습니다
+```
 
 ### 리젝사유(230407) - 훗타운app : 2.3.3 Screenshots should show the app in use(스크린샷 사용)
 ```
