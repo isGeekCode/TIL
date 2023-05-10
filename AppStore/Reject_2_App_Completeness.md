@@ -4,10 +4,11 @@
 
 ## Content
 - [2.1 Performance: App Completeness(앱 완전성)](#21-performance-app-completeness앱-완전성)
-    - [리젝사유(230409) - 훗타운app : 2.1.0 - Information Needed](#리젝사유230409---훗타운app--210---information-needed)
-    - [리젝사유(230510) - 라드씨엔에스app : 2.1.0 - Information Needed](#리젝사유230510---라드씨엔에스app--210---information-needed)
-
+    - [리젝사유(230409) - 훗타운app : 2.1 - Performance - App Completeness](#리젝사유230409---훗타운app--21---Performance---App-Completeness)
+    - [리젝사유(230409) - 훗타운app : 2.1 - Information Needed](#리젝사유230409---훗타운app--21---information-needed)
+    - [리젝사유(230510) - 라드씨엔에스app : 2.1 - Information Needed](#리젝사유230510---라드씨엔에스app--21---information-needed)
 - [2.3 Performance - Accurate Metadata(정확한 메타데이터)](#23-performance---accurate-metadata정확한-메타데이터)
+        - [리젝사유(230409) - 훗타운app : 2.3 Performance - Accurate Metadata](#230409---훗타운app--23-performance---Accurate-metadata)
     - [2.3.3 (스크린샷)](#233-스크린샷)
         - [리젝사유(230407) - 훗타운app : 2.3.3 Screenshots should show the app in use(스크린샷 사용)](#리젝사유230407---훗타운app--233-screenshots-should-show-the-app-in-use스크린샷-사용)
 
@@ -21,7 +22,27 @@
 - 또한 앱심사를 소프트웨어 테스트용으로 사용하지 마세요. 
 - 충돌이 발생하거나 명백한 기술적 문제를 나타내는 불완전한 앱 번들 및 바이너리는 거부됩니다
 
-### 리젝사유(230409) - 훗타운app : 2.1.0 - Information Needed
+### 리젝사유(230409) - 훗타운app : 2.1 - Performance - App Completeness
+```
+We discovered one or more bugs in your app. 
+Specifically, “서비스 점검 안내” message was displayed in the Home. 
+Also, we were unable to register or log in using Sign in with Apple.
+Additionally, an error message was displayed when we tapped on the Chat tab.
+
+# 번역
+앱에서 하나 이상의 버그를 발견했습니다. 
+구체적으로 홈에 "홈" 메시지가 표시되었습니다. 
+또한, 애플 로그인을 사용하여 등록하거나 로그인할 수 없습니다.
+또한 채팅 탭을 누르면 오류 메시지가 표시됩니다.
+```
+
+- 상황
+    - 웹뷰관련 앱이었는데 심사를 등록하는 시점에선 정상동작을 했지만, 심사를 하는 시점에 웹에서 서비스 점검 안내 메세지를 띄워서 리젝
+- 대응
+    - 심사중에 서비스 점검 안내 화면이 뜨지 않도록 조치
+
+
+### 리젝사유(230409) - 훗타운app : 2.1 - Information Needed
 
 ```
 We’re looking forward to completing the review of your app, but we need more information to continue.
@@ -87,6 +108,23 @@ Please review the following questions and provide as much detailed information a
 # 2.3 Performance - Accurate Metadata(정확한 메타데이터)
 - 사용자가 앱을 다운로드하거나 구입할 때, 앱에 대하여 명확히 알 수 있도록 민감성 정보, 앱 설명, 스크린샷 및 미리보기를 포함한 모든 앱 메타데이터를 표기해야합니다. 그래서 앱의 핵심 경험을 정확하게 반영하고 새 버전으로 최신 상태로 유지해야 합니다.
 
+### 리젝사유(230409) - 훗타운app : 2.3 Performance - Accurate Metadata
+```
+We noticed that your app's metadata includes the following information, which is not relevant to the app's content and functionality:
+
+“배송대행” feature in the app’s description.
+
+#번역
+앱의 메타데이터에는 앱의 콘텐츠 및 기능과 관련이 없는 다음 정보가 포함되어 있습니다:
+
+앱 설명에 있는 "배송대행" 기능입니다.
+```
+
+- 상황
+    - 배송대행관련 앱을 심사하는데 해당 내용으로 리젝되었다.
+
+- 대응
+    - 해당 내용에는 대응 하지않았음
 
 
 ## 2.3.3 (스크린샷)
@@ -105,4 +143,16 @@ To help users understand your app’s functionality and value, your screenshots 
     - 이 앱은 신규프로젝트를 기존에 배포했던 다른 앱 프로젝트 Bundle ID에 세팅하는 것으로 기획이 수정되었다. 신규프로젝트에 맡게 앱 정보를 모두 수정했는데,  앱정보 `미디어 관리에서 모든 크기 보기`를 누르면 모든 디스플레이에 대한 스크린샷세팅화면으로 이동할 수 있다.  
 - 대응
     - 이곳에 4형 디스플레이와, 3.5형 디스플레이 이미지가 있었기 떄문에 삭제하며 상황 종료
+
+# History
+- 230407
+    - 리젝사유(230407) - 훗타운app : 2.3.3 Screenshots should show the app in use(스크린샷 사용)
+- 230510
+    - 2.1 앱 완전성 번역
+    - 2.3 정확한 메타데이터 번역
+    - 2.3.3 스크린샷 번역
+    - 리젝사유(230409) - 훗타운app : 2.3 Performance - Accurate Metadata
+    - 리젝사유(230409) - 훗타운app : 2.1 - Performance - App Completeness
+    - 리젝사유(230409) - 훗타운app : 2.1 - Information Needed
+    - 리젝사유(230510) - 라드씨엔에스app : 2.1 - Information Needed
 
