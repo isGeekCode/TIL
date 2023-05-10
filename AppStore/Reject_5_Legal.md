@@ -9,7 +9,7 @@ Apps must comply with all legal requirements in any location where you make them
 ## Content
 - [5.1 Privacy(민감성 정보)](#51-Privacy민감성-정보)
     - [5.1.1 Data Collection and Storage(데이터 수집 및 저장)](#511-Data-Collection-and-Storage데이터-수집-및-저장)
-        - [리젝사유(230409) - 훗타운app : 5.1.1 - Legal - Privacy - Data Collection and Storage](#리젝사유230409---훗타운app--511---Legal---Privacy---Data-Collection-and-Storage)
+        - [리젝사유(230409) - 훗타운app : 5.1.1 - Legal - Privacy - Data Collection and Storage(데이터 수집 및 저장)](#리젝사유230409---훗타운app--511---Legal---Privacy---Data-Collection-and-Storage데이터-수집-및-저장)
 
 ## 5.1.1 Data Collection and Storage(데이터 수집 및 저장)
 
@@ -28,7 +28,7 @@ Apps must comply with all legal requirements in any location where you make them
     - 유료 기능은 이 데이터에 대한 액세스 권한을 사용자에게 부여하거나 요구해서는 안 됩니다. 또한 앱은 고객에게 동의를 철회할 수 있는 쉽고 이해할 수 있는 방법을 제공해야 합니다.
     - 목적 문자열이 데이터 사용을 명확하고 완벽하게 설명하는지 확인합니다. 유럽 연합의 일반 데이터 보호 규정("GDPR") 또는 유사한 법령의 조항에 의존하여 동의 없이 정당한 이익을 위해 데이터를 수집하는 앱은 해당 법률의 모든 조항을 준수해야 합니다.
         - [권한 요청에 대해 자세한 내용](https://developer.apple.com/documentation/uikit/protecting_the_user_s_privacy)
-- (iii) 데이터 최소화
+- (iii) Data Minimization(데이터 최소화)
     - 앱은 앱의 핵심 기능과 관련된 데이터에 대한 액세스만 요청해야 하며 관련 작업을 수행하는 데 필요한 데이터만 수집하여 사용해야 합니다. 가능한 경우 사진 또는 연락처와 같은 보호된 리소스에 대한 전체 액세스를 요청하는 대신 프로세스가 끝난 선택기 또는 공유 시트를 사용합니다
 - (iv) Access(액세스)
     - 앱은 사용자의 권한 설정을 존중해야 하며 불필요한 데이터 액세스를 조작, 속임수 또는 강제로 허용하지 않아야 합니다.
@@ -43,7 +43,7 @@ Apps must comply with all legal requirements in any location where you make them
 - (ix) 규제가 심한 분야(예: 은행 및 금융 서비스, 의료, 도박, 합법적 대마초 사용 및 항공 여행)에서 서비스를 제공하거나 민감한 사용자 정보가 필요한 앱은 개별 개발자가 아니라 서비스를 제공하는 법인이 제출해야 합니다. 대마초의 합법적 판매를 촉진하는 앱은 해당 법적 관할 구역으로 지역 제한되어야 합니다.
 - (x) 앱은 사용자가 원하는 기본 연락처 정보(예: 이름 및 이메일 주소)를 요청할 수 있으며, 기능 및 서비스는 정보 제공을 조건으로 하지 않으며, 어린이로부터 정보를 수집하는 제한 사항을 포함하여 본 지침의 다른 모든 조항을 준수합니다.
 
-### 리젝사유(230409) - 훗타운app : 5.1.1 - Legal - Privacy - Data Collection and Storage
+### 리젝사유(230409) - 훗타운app : 5.1.1 - Legal - Privacy - Data Collection and Storage(데이터 수집 및 저장)
 ```
 Additionally, we noticed that your app requests the user’s consent to access the microphone, but doesn’t sufficiently explain the use of the microphone in the purpose string.
 
@@ -72,10 +72,10 @@ Xcode의 속성 목록 편집기를 사용하여 앱의 Info.plist 파일을 수
     - 기존문구
         ```
         Privacy - Camera Usage Description
-            이미지 등록을 위해 카메라 접근을 승인해주세요. 설정 - 개인정보보호-카메라 에서도 변경할 수 있습니다.
+        이미지 등록을 위해 카메라 접근을 승인해주세요. 설정 - 개인정보보호-카메라 에서도 변경할 수 있습니다.
         
         Privacy - Microphone Usage Description
-            동영상 촬영을 위해 마이크 접근을 승인해주세요. 설정 - 개인정보보호 - 마이크 에서도 변경할 수 있습니다.
+        동영상 촬영을 위해 마이크 접근을 승인해주세요. 설정 - 개인정보보호 - 마이크 에서도 변경할 수 있습니다.
         ```
 
     - 개선한 문구
