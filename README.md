@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_233 TILs and counting..._
+_234 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [리젝사유 - 2. Performance(성능)](AppStore/Reject_2_App_Completeness.md) - Wed May 10 13:12:04 2023 +0900
+- [리젝사유 - 5. Legal(성능)](AppStore/Reject_5_Legal.md) - Wed May 10 13:12:04 2023 +0900
 - [NSObject_UIResponder_UIView_UIProgressView](Mobile-IOS/NSObject_UIResponder_UIView_UIProgressView.md) - Sat Apr 29 00:15:44 2023 +0900
 - [23년 4월 피드백 / 5월 목표](Self-Review/230428April.md) - Fri Apr 28 23:37:04 2023 +0900
 - [UIApplication_AppDelegate - 헷갈릴수 있는 두 함수(didReceive형제)](Mobile-IOS/UIApplication_AppDelegate-DifferenceNotification.md) - Thu Apr 27 17:38:52 2023 +0900
-- [UIApplication_AppDelegate - userNotificationCenter](Mobile-IOS/UIApplication_AppDelegate_userNotificationCenter.md) - Tue Apr 25 13:38:06 2023 +0900
-- [리뷰에 관하여](Self-Review/230424_Spring.md) - Mon Apr 24 22:36:59 2023 +0900
 
 ### Categories
 
@@ -74,7 +74,8 @@ _233 TILs and counting..._
 - [기존 배포되어있는 앱을 다른 앱으로 바꾸기](AppStore/AppStore_ChangeBundleId.md)
 - [AppStore - 긴급 심사 요청(Request Expedited Review)](AppStore/AppStore_expeditedReview.md)
 - [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](AppStore/AppStore_missing_Compliance.md)
-- [리젝사유 - 2. Performance(성능)](AppStore/Reject_2.1.0_App_Completeness.md)
+- [리젝사유 - 2. Performance(성능)](AppStore/Reject_2_App_Completeness.md)
+- [리젝사유 - 5. Legal(성능)](AppStore/Reject_5_Legal.md)
 - [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md)
 
 ### [ComputerScience](#ComputerScience)
