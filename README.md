@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_234 TILs and counting..._
+_236 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Integrity - DeviceCheck / App Attest](Integrity/Integrity_DeviceCheck.md) - Thu May 11 08:37:43 2023 +0900
+- [Integrity - UUID / UDID / IDFA](Integrity/Integrity_UUID_UDID_IDFA.md) - Thu May 11 08:37:43 2023 +0900
 - [리젝사유 - 2. Performance(성능)](AppStore/Reject_2_App_Completeness.md) - Wed May 10 13:12:04 2023 +0900
 - [리젝사유 - 5. Legal(성능)](AppStore/Reject_5_Legal.md) - Wed May 10 13:12:04 2023 +0900
 - [NSObject_UIResponder_UIView_UIProgressView](Mobile-IOS/NSObject_UIResponder_UIView_UIProgressView.md) - Sat Apr 29 00:15:44 2023 +0900
-- [23년 4월 피드백 / 5월 목표](Self-Review/230428April.md) - Fri Apr 28 23:37:04 2023 +0900
-- [UIApplication_AppDelegate - 헷갈릴수 있는 두 함수(didReceive형제)](Mobile-IOS/UIApplication_AppDelegate-DifferenceNotification.md) - Thu Apr 27 17:38:52 2023 +0900
 
 ### Categories
 
@@ -147,6 +147,8 @@ _234 TILs and counting..._
 ### [Integrity](#Integrity)
 - [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md)
 - [Integrity - 인증서(.p8, .p12 / Development, Distribution / Producation SSL, Development SSL)](Integrity/Integrity_Certificate.md)
+- [Integrity - DeviceCheck / App Attest](Integrity/Integrity_DeviceCheck.md)
+- [Integrity - UUID / UDID / IDFA](Integrity/Integrity_UUID_UDID_IDFA.md)
 
 ### [Library](#Library)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](Library/About_A_iOS_Package.md)
