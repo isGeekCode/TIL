@@ -1,7 +1,8 @@
 # 리젝사유 - 2. Performance(성능)
-- AppStore Review GuideLine
-    - [2. Performance 링크](https://developer.apple.com/app-store/review/guidelines/#performance)
 
+[AppStore Review GuideLine - 2. Performance 링크](https://developer.apple.com/app-store/review/guidelines/#performance){:target="_blank"}
+  
+  
 ## Content
 - [2.1 Performance: App Completeness(앱 완전성)](#21-performance-app-completeness앱-완전성)
     - [리젝사유(230409) - 훗타운app : 2.1.0 - Information Needed](#리젝사유230409---훗타운app--210---information-needed)
