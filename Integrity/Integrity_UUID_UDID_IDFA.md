@@ -7,6 +7,37 @@ MAC 주소 등을 이용해 UUID를 생성할 수 있다. 하지만 이는 보�
 
 UUID는 생성할 때 마다 랜덤하게 변경 되며 기기별로 구분할 수 있는 유니크한(중복되지 않는) 값이다.
 
+### 그럼에도 UUID를 얻는 방법
+- 라이브러리 사용하기(TAKUUID) : Cocoapods, Carthage
+[링크: TAKUUID](https://github.com/taka0125/TAKUUID)
+```swift
+import TAKUUID
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var uuidInTheKeychain: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initUUID()
+    }
+    
+    private func initUUID() {
+        TAKUUIDStorage.sharedInstance().migrate()
+        uuidInTheKeychain.text = TAKUUIDStorage.sharedInstance().findOrCreate()
+    }
+}
+```
+
+### 키체인 사용하기
+- 키체인 세팅
+    - Signing & Capabilities
+    - `+ Capability` 클릭
+    - Keychain Sharing
+    - `+`클릭 후 Identifier 입력
+    Keychain Group은 이 Team ID가 같은 앱들끼리 Keychain을 공유하게 해준다. 보안주의!!
+    추가 보완 필요
+
 보통 앱을 처음 실행할 경우 UUID를 생성해서 값을 앱 내부에 저장하고 서버에도 저장을 해서 서버와 통신하며 해당 기기를 구분하게 된다. 
 
 그런데 UUID를 앱 내부에 파일이나 DB(sqlite, core data)... 형태로 저장할 경우 앱을 지웠다가 다시 설치 하면 없어지기 때문에 앱을 지우더라도 저장값을 유지하기 위해서 보통 키체인에 저장해서 불러온다. 
@@ -15,10 +46,6 @@ UUID는 생성할 때 마다 랜덤하게 변경 되며 기기별로 구분할 �
 키체인은 보통 암호나 인증서들을 저장하는 용도로 쓰인다.
 단, 공장초기화를 하면 키체인에 저장한 값은 지워진다.  
 [UUID를 키체인에 저장하는 방법](http://webs.co.kr/index.php?mid=iphone&listStyle=gallery&document_srl=3319716)
-
-
-### 그럼에도 UUID를 얻는 방법
-
 
 ## UDID(Universally Unique Device Identifier)
 
