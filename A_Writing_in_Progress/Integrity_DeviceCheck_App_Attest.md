@@ -57,9 +57,11 @@ if DCDevice.current.isSupported {
         return
       }
       let tokenString = dataData.base64EncodedString()
-      print(tokenString) // AgAAAHXbhcMDrOhwYgRYbuTll...+4V94A==
+      print("임시 DeviceToken :: \(tokenString)")
+      // AgAAAHXbhcMDrOhwYgRYbuTll...+4V94A==
       
       // deviceToken은 Back-end로 가서 애플서버를 거쳐 다시 App으로 
+      // use URLSession or something to send the token string to your server API
     }​
 }
 
@@ -334,6 +336,12 @@ end
 update를 할때에는 따로 반환내용이 없다. 반환값이 200일 경우, update성공이다. 
 
 
+
+
+## 2번째 CupertinoJWT 라이브러리를 이용한 Serverless 로직
+
+
+
 ## 참고링크
 - [AppleDocument: DeviceCheck Framework ](https://developer.apple.com/documentation/devicecheck)
 - [Blog - 일회성 제안 또는 평가판을 실행하는 iOS의 완벽한 방법(Chinese)](https://medium.com/zrealm-ios-dev/ios-%E5%AE%8C%E7%BE%8E%E5%AF%A6%E8%B8%90%E4%B8%80%E6%AC%A1%E6%80%A7%E5%84%AA%E6%83%A0%E6%88%96%E8%A9%A6%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95-swift-c5e7e580c341)
@@ -346,6 +354,8 @@ update를 할때에는 따로 반환내용이 없다. 반환값이 200일 경우
 ](https://developer.apple.com/videos/play/wwdc2021/10110)
 - [한번더 확인해봐야하는 WWDC15:Privacy your Apps](https://developer.apple.com/videos/play/wwdc2015/703/)
 - [Blog - Uniquely identify iOS device using DeviceCheck (Tutorial)](https://fluffy.es/devicecheck-tutorial/)
+  
+  
 ## History
 - 230511 : 초안 및 레퍼런스 작성
 
