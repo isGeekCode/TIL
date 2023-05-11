@@ -13,7 +13,7 @@ _236 TILs and counting..._
 ### 5 most recent TILs
 
 - [Integrity - KeyChain](A_Writing_in_Progress/Integrity_KeyChain.md) - Thu May 11 09:33:17 2023 +0900
-- [Integrity - UUID / UDID / IDFA](Integrity/Integrity_UUID_UDID_IDFA.md) - Thu May 11 08:37:43 2023 +0900
+- [Integrity - UUID / UDID / IDFA / IDFV](Integrity/Integrity_UUID_UDID_IDFA.md) - Thu May 11 08:37:43 2023 +0900
 - [리젝사유 - 5. Legal(성능)](AppStore/Reject_5_Legal.md) - Wed May 10 13:12:04 2023 +0900
 - [리젝사유 - 2. Performance(성능)](AppStore/Reject_2_App_Completeness.md) - Wed May 10 13:12:04 2023 +0900
 - [NSObject_UIResponder_UIView_UIProgressView](Mobile-IOS/NSObject_UIResponder_UIView_UIProgressView.md) - Sat Apr 29 00:15:44 2023 +0900
@@ -148,7 +148,7 @@ _236 TILs and counting..._
 ### [Integrity](#Integrity)
 - [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md)
 - [Integrity - 인증서(.p8, .p12 / Development, Distribution / Producation SSL, Development SSL)](Integrity/Integrity_Certificate.md)
-- [Integrity - UUID / UDID / IDFA](Integrity/Integrity_UUID_UDID_IDFA.md)
+- [Integrity - UUID / UDID / IDFA / IDFV](Integrity/Integrity_UUID_UDID_IDFA.md)
 
 ### [Library](#Library)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](Library/About_A_iOS_Package.md)
