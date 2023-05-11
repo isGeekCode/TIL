@@ -1,4 +1,4 @@
-# Integrity - UUID / UDID / IDFA
+# Integrity - UUID / UDID / IDFA / IDFV
 
 ## UUID(Universally Unique Identifier)
 
@@ -81,3 +81,15 @@ UDID는 기기 자체를 식별하기 위해 사용한다. iOS 개발자가 기�
 ## IDFA(Identifier for Advertisers)
 
 - iOS 6 이후 버전에서는 UUID를 대신해 안전하게 사용할 수 있는 IDFA(Identifier for Advertisers)를 사용하는 것이 권장된다. IDFA는 광고 추적을 위해 사용되며, 사용자가 동의한 경우에만 수집이 가능하다.
+
+## IDFV(Identifier for Vendor)
+- iOS 기기의 고유한 식별자
+
+## IDFA 와 IDFV의 차이
+IDFA와 IDFV는 모두 iOS 기기의 고유한 식별자이지만, 다른 용도로 사용된다.
+
+IDFA는 광고주들이 iOS 기기를 추적하기 위해 사용되는 식별자. IDFA는 사용자가 광고 추적에 동의한 경우에만 수집이 가능하며, 광고주들은 이를 이용해 광고를 타겟팅할 수 있다. IDFA는 iOS 설정에서 광고 추적 제한을 선택한 경우 수집이 차단된다.
+
+IDFV는 앱에서 사용자를 식별하기 위해 사용되는 식별자. IDFV는 기기마다 유일한 값으로, 하나의 벤더(개발자)만이 액세스할 수 있다. 다른 벤더의 앱에서는 동일한 IDFV 값을 얻을 수 없다. IDFV는 iOS 기기에서 앱을 삭제하거나, 기기를 초기화하거나, iOS 업데이트를 하더라도 변경되지 않는다.
+
+
