@@ -86,7 +86,9 @@ DeviceCheck API를 사용하기 위해서는 Apple Developer 에서 DeviceCheck 
     
 ### DeviceCheck Flow를 위한 준비물
 - Team ID
+    - [Apple Developer Website](https://developer.apple.com/account) 에 들어가면 멤버십 세부 사항에서 찾을 수 있다.
 - Key ID
+    - 생성한 DeviceCheck키를 클릭하면 볼 수 있다.
 - privateKey.p8
 
 ### Apple 사양의 JWT(JSON Web Token)형식 생성
@@ -95,7 +97,7 @@ DeviceCheck API를 사용하기 위해서는 Apple Developer 에서 DeviceCheck 
 //HEADER:
 {
   "alg": "ES256",
-  "kid": Key ID  // Developer 웹사이트에서 DeviceCheck키를 발급할 때, 적어둔 Key ID
+  "kid": Key ID
 }
 //PAYLOAD:
 {
@@ -340,6 +342,458 @@ update를 할때에는 따로 반환내용이 없다. 반환값이 200일 경우
 
 ## 2번째 CupertinoJWT 라이브러리를 이용한 Serverless 로직
 
+```swift
+//
+//  ViewController.swift
+//  DCDeviceTest
+//
+//  Created by 李仲澄 on 2019/4/29.
+//  Copyright © 2019 ZhgChgLi. All rights reserved.
+//
+import UIKit
+import DeviceCheck
+import CupertinoJWT
+
+extension String {
+    var queryEncode:String {
+        return self.addingPercentEncoding(withAllowedCharacters: .whitespacesAndNewlines)?.replacingOccurrences(of: "+", with: "%2B") ?? ""
+    }
+}
+class ViewController: UIViewController {
+
+    
+    @IBOutlet weak var getBtn: UIButton!
+    @IBOutlet weak var statusBtn: UIButton!
+    @IBAction func getBtnClick(_ sender: Any) {
+    
+        DCDevice.current.generateToken { dataOrNil, errorOrNil in
+            guard let data = dataOrNil else { return }
+            
+            let deviceToken = data.base64EncodedString()
+            
+            //正式情況：
+            //POST deviceToken 到後端，請後端去跟蘋果伺服器查詢，然後再回傳結果給APP處理
+            
+            
+            //!!!!!!以下僅為測試、示範所需，不建議用於正式環境!!!!!!
+            //!!!!!!      請勿隨意暴露您的PRIVATE KEY    !!!!!!
+                let p8 = """
+                    -----BEGIN PRIVATE KEY-----
+                    -----END PRIVATE KEY-----
+                    """
+                let keyID = "" //你的KEY ID
+                let teamID = "" //你的Developer Team ID :https://developer.apple.com/account/#/membership
+            
+                let jwt = JWT(keyID: keyID, teamID: teamID, issueDate: Date(), expireDuration: 60 * 60)
+            
+                do {
+                    let token = try jwt.sign(with: p8)
+                    var request = URLRequest(url: URL(string: "https://api.devicecheck.apple.com/v1/update_two_bits")!)
+                    request.httpMethod = "POST"
+                    request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+                    request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+                    let json:[String : Any] = ["device_token":deviceToken,"transaction_id":UUID().uuidString,"timestamp":Int(Date().timeIntervalSince1970.rounded()) * 1000,"bit0":true,"bit1":false]
+                    request.httpBody = try? JSONSerialization.data(withJSONObject: json)
+                    
+                    let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                        guard let data = data else {
+                            return
+                        }
+                        print(String(data:data, encoding: String.Encoding.utf8))
+                        DispatchQueue.main.async {
+                            self.getBtn.isHidden = true
+                            self.statusBtn.isSelected = true
+                        }
+                    }
+                    task.resume()
+                } catch {
+                    // Handle error
+                }
+            //!!!!!!以上僅為測試、示範所需，不建議用於正式環境!!!!!!
+            //
+            
+        }
+
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        DCDevice.current.generateToken { dataOrNil, errorOrNil in
+            guard let data = dataOrNil else { return }
+            
+            let deviceToken = data.base64EncodedString()
+            
+            //正式情況：
+                //POST deviceToken 到後端，請後端去跟蘋果伺服器查詢，然後再回傳結果給APP處理
+            
+            
+            //!!!!!!以下僅為測試、示範所需，不建議用於正式環境!!!!!!
+            //!!!!!!      請勿隨意暴露您的PRIVATE KEY    !!!!!!
+                let p8 = """
+                -----BEGIN PRIVATE KEY-----
+                
+                -----END PRIVATE KEY-----
+                """
+                let keyID = "" //你的KEY ID
+                let teamID = "" //你的Developer Team ID :https://developer.apple.com/account/#/membership
+            
+                let jwt = JWT(keyID: keyID, teamID: teamID, issueDate: Date(), expireDuration: 60 * 60)
+            
+                do {
+                    let token = try jwt.sign(with: p8)
+                    var request = URLRequest(url: URL(string: "https://api.devicecheck.apple.com/v1/query_two_bits")!)
+                    request.httpMethod = "POST"
+                    request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+                    request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+                    let json:[String : Any] = ["device_token":deviceToken,"transaction_id":UUID().uuidString,"timestamp":Int(Date().timeIntervalSince1970.rounded()) * 1000]
+                    request.httpBody = try? JSONSerialization.data(withJSONObject: json)
+                    
+                    let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                        guard let data = data,let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:Any],let stauts = json["bit0"] as? Int else {
+                            return
+                        }
+                        print(json)
+                        
+                        if stauts == 1 {
+                            DispatchQueue.main.async {
+                                self.getBtn.isHidden = true
+                                self.statusBtn.isSelected = true
+                            }
+                        }
+                    }
+                    task.resume()
+                } catch {
+                    // Handle error
+                }
+            //!!!!!!以上僅為測試、示範所需，不建議用於正式環境!!!!!!
+            //
+            
+        }
+        // Do any additional setup after loading the view.
+    }
+
+
+}
+
+```
+
+작업을 해보니 response는 아래 내용이 포함되어있다.
+content-type을 보면 `application/json`이라고 나오는데 상황에 따라   `"text/plain`으로 나오는 경우도 있다. 여길 참고한다.
+
+- Statue Code
+- Headers
+    - Content-Encoding
+    - Content-Length
+    - Content-Type
+    - Date
+    - Server
+    - Strict-Transport-Security
+    - apple-originating-system
+    - apple-seq
+    - apple-tk
+    - x-apple-jingle-correlation-key
+    - x-apple-request-uuid
+    - x-content-type-options
+    - x-frame-options
+    - x-responding-instance
+    - x-xss-protection
+
+```
+{ Status Code: 200, Headers {
+    "Content-Encoding" =     (
+        gzip
+    );
+    "Content-Length" =     (
+        44
+    );
+    "Content-Type" =     (
+        "application/json; charset=UTF-8"
+    );
+    Date =     (
+        "Fri, 12 May 2023 02:00:53 GMT"
+    );
+    Server =     (
+        Apple
+    );
+    "Strict-Transport-Security" =     (
+        "max-age=31536000; includeSubdomains"
+    );
+    "apple-originating-system" =     (
+        UnknownOriginatingSystem
+    );
+    "apple-seq" =     (
+        0
+    );
+    "apple-tk" =     (
+        false
+    );
+    "x-apple-jingle-correlation-key" =     (
+        33C6GFPHY2UNZB5I5BSFUB7YWE
+    );
+    "x-apple-request-uuid" =     (
+        
+        // 보안상 비공개
+    );
+    "x-content-type-options" =     (
+        nosniff
+    );
+    "x-frame-options" =     (
+        SAMEORIGIN
+    );
+    "x-responding-instance" =     (
+        "af-bit-store-7858cd868d-d4xxn"
+    );
+    "x-xss-protection" =     (
+        "1; mode=block"
+    );
+} }
+```
+
+## 테스트 작업
+
+### APP-SIDE
+```swift
+
+enum DeviceCheckType {
+    case query
+    case update
+    case validation
+    
+    var path: String {
+        switch self {
+        case .query: return "query_two_bits"
+        case .update: return "update_two_bits"
+        case .validation: return "validate_device_token"
+        }
+    }
+}
+
+func appSideAction() {
+    generateDeviceToken { deviceToken in
+    
+        // 생성된 deviceToken은 CustomServer로 보내는 과정 대신 server-side 함수로 구현
+        // 통신 타입에 따라 세가지로 사용가능하다.
+        /*
+        self.serverSideAction(deviceToken: deviceToken, deviceCheckType: .validation)
+        self.serverSideAction(deviceToken: deviceToken, deviceCheckType: .query)
+        self.serverSideAction(deviceToken: deviceToken, deviceCheckType: .update, insertValue: [true, true])
+        */
+    }
+}
+
+/// DeviceToken을 생성하여 생성완료 시점을 확정하기 위해 Completion사용
+func generateDeviceToken(completion: @escaping (String) -> ()) {
+    var deviceToken = ""
+    if DCDevice.current.isSupported {
+        DCDevice.current.generateToken { dataData, error in
+            guard let dataData = dataData else {
+                print("token is empty: \(error!.localizedDescription)")
+                return
+            }
+            deviceToken = dataData.base64EncodedString()
+            completion(deviceToken)
+            // AgAAAHXbhcMDrOhwYgRYbuTll...+4V94A==
+        }
+    }
+}
+```
+
+### Server-Side
+커스텀 서버에서 동작할 로직, JWT를 생성하여 Apple Server로 전송
+테스트를 위해 앱안에서 Serverless로 구현
+
+```swift
+/// - Parameter deviceToken: 앱에서 생성된 토큰값
+func serverSideAction(deviceToken : String, deviceCheckType: DeviceCheckType = .query, insertValue: [Bool] = [true, true]) {
+    // Back-end 작업을 여기서 처리
+    let jwt = self.generateJWT()
+    if jwt.isEmpty { return }
+
+    var json:[String : Any] = [
+        "device_token" : deviceToken,
+        "transaction_id" : UUID().uuidString,
+        "timestamp" : Int(Date().timeIntervalSince1970.rounded()) * 1000
+    ]
+
+    let pathString = "https://api.devicecheck.apple.com/v1/\(deviceCheckType.path)"
+
+    // UPDATE할때만 BIT가 추가된다.
+    if deviceCheckType == .update {
+        guard insertValue.count >= 2,
+              let firstBit = insertValue.first,
+              let secondBit = insertValue.last else { return }
+        
+        json["bit0"] = firstBit
+        json["bit1"] = secondBit
+    }
+    print("json: \(json)")
+
+//  통신부
+    self.postDataForDeviceCheck(url: pathString, token: jwt, parameters: json) { resultData in
+
+        guard let data = resultData else { return }
+        print("responseData: \(data)")
+
+    } errorHandler: { error in
+        print("deviceCheckAPI error ::: \(error)")
+    }
+}
+
+    func generateJWT() -> String {
+        print("Back-end 작업 시작")
+
+        let p8 = """
+            -----BEGIN PRIVATE KEY-----
+            // 고유값
+            -----END PRIVATE KEY-----
+            """
+        let keyID = "PDJF이런값" //KEY ID
+        let teamID = "3KFKS이런값" //Developer Team ID
+
+        let jwt = JWT(keyID: keyID, teamID: teamID, issueDate: Date(), expireDuration: 60 * 60)
+        print("JWT INIT::\(jwt)")
+        
+        do {
+            let token = try jwt.sign(with: p8)
+            print("jwt token String 생성완료 ::\n\(token)")
+            return token
+
+        } catch {
+            print("error:\(error.localizedDescription)")
+            return ""
+        }
+    }
+
+
+
+func postDataForDeviceCheck(url: String, token: String, parameters: [String: Any], successHandler: @escaping (_ resultData: [String:Any]?)-> Void, errorHandler: @escaping (_ error: Error) -> Void) -> Void {
+ print("들어온 url: \(url)")
+    if let reqUrl = URL(string: url) {
+        print("생성된 queryURL::\(reqUrl)")
+        var request = URLRequest(url: reqUrl)
+        request.httpMethod = "POST"
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        if parameters.count > 0 {
+            request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+            } catch {
+                successHandler(nil)
+                print("JSON Pasing Error")
+            }
+        }
+    
+    
+        URLSession.shared.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
+            //error 일경우 종료
+            guard error == nil && data != nil else {
+                if let err = error {
+                    errorHandler(err)
+                    print(err.localizedDescription)
+                }
+                return
+            }
+            
+            // response를 확인하여 어떤 타입으로 들어오는지 확인할것
+            // 서버에 값이 없는경우, 있는 경우에 따라 파싱방법이 달라져야한다. 
+            guard let response = response else { return }
+            print("response: \(response)")
+
+                if let resultData = data {
+                    // text/plain으로 들어올때 확인용
+                    
+                    if let resultString = NSString(data: resultData, encoding: String.Encoding.utf8.rawValue) {
+                        let resultStr = String(resultString)
+                        print("resultStr: \(resultStr)")
+                        /*
+                         최초 bit 값이 등록되지않은 경우는 Failed to find bit state 값이 나온다.
+                         validation을 할경우: Unable to parse empty data
+                         */
+
+                        //메인쓰레드에서 출력하기 위해
+                        DispatchQueue.main.async {
+                            
+                            do {
+                                
+                                if let json = try JSONSerialization.jsonObject(with: resultData, options: []) as? [String: Any] {
+                                    // 파싱된 JSON 데이터에 접근하여 필요한 작업 수행
+                                    // 예시: JSON 데이터에서 특정 키 값을 가져와서 처리
+                                    print("jsonResult: \(json)")
+                                    successHandler(json)
+                                    // 다른 필요한 작업 수행
+                                    
+                                } else {
+                                    // JSON 데이터 파싱에 실패한 경우
+                                    print("Invalid JSON format")
+                                }
+                                
+                            } catch {
+                                errorHandler(error);
+                                print("parsing error : \(error.localizedDescription)")
+                            }
+                        } // DispatchQueue
+                        
+                        
+                    } //resultString
+                } else {
+                    print("data is Nil")
+                } // resultData = data
+            
+        }).resume()
+
+
+    } else {
+        print("url is nil or empty")
+    } // url check
+}
+
+
+```
+
+###
+```
+        /*
+         // MARK: 애플로 보내는 JWT 형식
+         //HEADER:
+         {
+           "alg": "ES256",
+           "kid": Key ID  // Developer 웹사이트에서 DeviceCheck키를 발급할 때, 적어둔 Key ID
+         }
+         //PAYLOAD:
+         {
+           "iss": Team ID,
+           "iat": 요청 타임스탬프 (Unix Timestamp,EX:1556549164),
+           "exp": 만료 타임스탬프 (Unix Timestamp,EX:1557000000)
+         }
+         //타임스탬프는 반드시 정수 형식이어야 한다
+         
+         // cupertinoJWT 특징
+         - ES256 형식
+         - issueDate에 들어가는 Date타입을 변환
+         - expireDuration에 interval만 넣으면 자동으로 합산처리
+      
+      
+        // MARK: 파라미터
+        // update_two_bits
+        let json:[String : Any] = [
+            "device_token":deviceToken,
+            "transaction_id":UUID().uuidString,
+            "timestamp":Int(Date().timeIntervalSince1970.rounded()) * 1000,
+            "bit0":true,
+            "bit1":false
+        ]
+         
+        // query_two_bits
+        let json:[String : Any] = [
+            "device_token":deviceToken,
+            "transaction_id":UUID().uuidString,
+            "timestamp":Int(Date().timeIntervalSince1970.rounded()) * 1000
+        ]
+         */
+
+```
 
 
 ## 참고링크
@@ -358,5 +812,5 @@ update를 할때에는 따로 반환내용이 없다. 반환값이 200일 경우
   
 ## History
 - 230511 : 초안 및 레퍼런스 작성
-
+- 230512 : DeviceCheck 서버리스 구현 성공, 코드 편집후 업로드
 
