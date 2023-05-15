@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_236 TILs and counting..._
+_237 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [NSObject_UIResponder_UIView_UIControl_UISwitch](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UISwitch.md) - Mon May 15 17:02:25 2023 +0900
 - [Integrity - KeyChain](A_Writing_in_Progress/Integrity_KeyChain.md) - Thu May 11 09:33:17 2023 +0900
 - [Integrity - UUID / UDID / IDFA / IDFV](Integrity/Integrity_UUID_UDID_IDFA.md) - Thu May 11 08:37:43 2023 +0900
-- [리젝사유 - 5. Legal(성능)](AppStore/Reject_5_Legal.md) - Wed May 10 13:12:04 2023 +0900
 - [리젝사유 - 2. Performance(성능)](AppStore/Reject_2_App_Completeness.md) - Wed May 10 13:12:04 2023 +0900
-- [NSObject_UIResponder_UIView_UIProgressView](Mobile-IOS/NSObject_UIResponder_UIView_UIProgressView.md) - Sat Apr 29 00:15:44 2023 +0900
+- [리젝사유 - 5. Legal(성능)](AppStore/Reject_5_Legal.md) - Wed May 10 13:12:04 2023 +0900
 
 ### Categories
 
@@ -216,6 +216,7 @@ _236 TILs and counting..._
 - [NSObject_UIResponder : Responder Chain 리스폰더 체인에 대하여](Mobile-IOS/NSObject_UIResponder_.md)
 - [NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기 기능](Mobile-IOS/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
 - [NSObject_UIResponder_UIView_UIControl_UIButton](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UIButton.md)
+- [NSObject_UIResponder_UIView_UIControl_UISwitch](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UISwitch.md)
 - [NSObject_UIResponder_UIView_UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](Mobile-IOS/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
 - [NSObject_UIResponder_UIView_UIProgressView](Mobile-IOS/NSObject_UIResponder_UIView_UIProgressView.md)
 - [NSObject_UIResponder_UIView_UIScrollView](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView.md)
