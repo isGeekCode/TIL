@@ -35,6 +35,15 @@ Trustable payload: App Attest 할때 보낸 payload 가 변조된 것이 아닌�
 2. Attest and verify key
 3. Generate and verify assertion 
 
+## 앱의 무결성 설정
+앱이 손상되면 변조된 결과를 일으킬 수 있기때문에 자체적으로 보안 검사를 수행해야만 한다. 
+- 앱에서 하드웨어 기반 암호화 키를 생성
+- AttestService를 이용하여 인증된 키를 상용해 서버요청에 암호화 서명을 한다.
+
+<img width="700" alt="스크린샷 2023-05-16 오후 5 00 59" src="https://github.com/isGeekCode/TIL/assets/76529148/e3711bb1-9d4d-4436-9d59-97d99095fc01">
+<p align="center">이미지 출처 : Apple Document</p>  
+
+
 ### Check for availability
 모든 기기에서 App Attest 서비스를 할 수 있는게아니기 때문에 서비스 액세스 전에 앱에서 호환성 검사를 실시한다.
 
@@ -77,10 +86,47 @@ service.generateKey { keyID, error in
 
 App Attest 서비스는 이 키를 사용하여 서명을 생성할 수는 있지만 그 밖에 어떤 프로세스도 읽거나 수정할 수 없으므로 보안이 보장된다.
 
-
+- 이 부분 분석 필요
 App Clip에서 키 페어를 생성하면 해당 앱에서 동일한 키 페어를 사용합니다. 이를 지원하려면 전체 앱에서 액세스할 수 있는 공유 컨테이너에 식별자를 저장해야 합니다. App Clip과 정식 앱 간의 데이터 공유에 대한 자세한 내용은 App Clip과 정식 앱 간에 데이터 공유를 참조하세요 .
 
-보안 보호가 약화되므로 장치의 여러 사용자 간에 키를 재사용하지 마십시오. 특히 손상된 버전의 앱을 실행하는 여러 원격 사용자에게 서비스를 제공하기 위해 손상된 단일 장치를 사용하는 공격을 탐지하기가 어려워집니다. 자세한 내용은 사기 위험 평가를 참조하십시오 .ㄴ
+- 보안이 약화되기 때문에 여러 사용자간에 키를 재사용하지 말아야한다.
+- 특히 변조된 앱을 실행하는 여러 사용자에게 서비스를 제공하는데에 어려워지기 때문이다. 
+
+
+
+
+### App Attest 서비스 사용준비
+보안 보호가 약화되므로 장치의 여러 사용자 간에 키를 재사용하지 마십시오. 특히 손상된 버전의 앱을 실행하는 여러 원격 사용자에게 서비스를 제공하기 위해 손상된 단일 장치를 사용하는 공격을 탐지하기가 어려워지기 떄문이다. [자세한 내용은 Assessing Fraud Risk를 참고](https://developer.apple.com/documentation/devicecheck/assessing_fraud_risk)  
+
+### 키 쌍의 유효성 인증하기
+키 쌍을 사용하기전에 이 키쌍의 출처를 증명하기 위해 Apple에 요청하는 과정이다.
+증명 결과를 확인하는 앱의 로직을 신뢰할 수 없기 때문에 결과를 서버로 보낸다.
+이 절차 중에 재차 공격의 위험을 줄이기 위해 서버에서 고유한 일회성 챌린지의 hash를 포함하게 된다. CryptoKit의 구현을 사용해 생성가능하다.
+
+```swift
+import CryptoKit
+
+let challenge =  <# Data from your server. #>
+let hash = Data(SHA256.hash(data: challenge))
+```
+
+이후 이전 섹션에서 만든 키쌍과 해시를 이용해 증명을 시작한다.
+```swift
+service.attestKey(keyId, clientDataHash: hash) { attestation, error in
+    guard error == nil else { /* Handle error and return. */ }
+
+    // Send the attestation object to your server for verification.
+}
+```
+
+
+
+
+## 대규모 사용자가 있는 서비스의 경우
+대규모 사용자 기반이 있는 경우 단계적으로 App Attest를 활성화하는 것이 좋다. 
+앱이 호출하면 (일반적으로 기기당 사용자당 한 번 수행) DeviceCheck 프레임워크는 앱증명을 수행하기 위해 Apple 서버를 호출하게 된다. 
+App Attest를 활성화하는 앱 업데이트를 동시에 받는 사용자가 많은 경우, Apple 서버애서 특정 앱의 증명 트래픽을 제한할 수 있다.
+
 ## 참고링크
 - [AppleDocument: DeviceCheck Framework ](https://developer.apple.com/documentation/devicecheck)
 - [Blog - [iOS/WWDC] App Attest & Device Check](https://jooeungen.tistory.com/entry/iOSWWDC-App-Attest-Device-Check)
