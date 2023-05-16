@@ -888,7 +888,7 @@ func postDataForDeviceCheck(url: String, token: String, parameters: [String: Any
 - [WWDC21: AppAttest and DeviceCheck](https://developer.apple.com/videos/play/wwdc2021/10244/)
 - [WWDC21: Safeguard your accounts, promotions, and content
 ](https://developer.apple.com/videos/play/wwdc2021/10110)
-- [한번더 확인해봐야하는 WWDC15:Privacy your Apps](https://developer.apple.com/videos/play/wwdc2015/703/)
+- [WWDC15:Privacy your Apps](https://developer.apple.com/videos/play/wwdc2015/703/)
 - [Blog - Uniquely identify iOS device using DeviceCheck (Tutorial)](https://fluffy.es/devicecheck-tutorial/)
   
   
