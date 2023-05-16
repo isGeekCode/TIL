@@ -1,13 +1,5 @@
-# Integrity - DeviceCheck & App Attest
+# Integrity - DeviceCheck
 
-앱과 콘텐츠를 보호하기 위해 만들어진 Apple의 강력한 사기 방지 도구인 App Attest 및 DeviceCheck를 사용하는 방법을 알아보자.
-
-앱과 콘텐츠의 무단 수정을 차단하기 위해 App Attest를 앱에 통합하여 배포해보자.
-
-또한 DeviceCheck를 사용하여 앱에서 프리미엄 콘텐츠를 받은 고객과 불법적인 수단을 통해 프리미엄 콘텐츠를 얻은 고객을 구별할 수 있도록 하는 방법을 알아보자.
-
-
-# DeviceCheck 
 애플에서 제공하는 고유한 디바이스 식별을 가능하게 해주는 API 서비스다.
 WWDC17에 공개되어 iOS11부터 지원한다. 아쉽게도 해당 영상은 Apple에서 내려갔다.(왜지)
 
@@ -25,9 +17,21 @@ WWDC17에 공개되어 iOS11부터 지원한다. 아쉽게도 해당 영상은 A
   
 <p align="center">사용예시 - (이미지 출처 : 김종권의 iOS앱 개발 알아가기)</p>  
 
+## DeviceCheck API의 한계성
+이 API는 디바이스 식별을 하기 위한 인터페이스이다. 때문에 여러 확인 결과, 로직상 계정서비스를 이용하는 경우에는 적합하지 않다.
+하지만 커스텀 로직을 생성한다면 `앱  <-> 서버`에서 동일한 로직에 계정에 대한 식별자를 추가함으로 사용 가능하다고 판단된다.
+
+## DeviceCheck API로 할 수 있는 것
+- 각 사용자가 앱을 처음 설치한 시점을 확인하거나, 특정 기능을 사용한 시점을 추적가능
+    - 앱이 처음 설치되거나 특정 기능이 처음 사용될 때 DeviceCheck API를 사용하여 해당 시점의 타임스탬프를 설정할 수 있다. 이후에 이 타임스탬프를 조회하여 사용자가 앱을 처음 설치한 시점이나 특정 기능을 처음 사용한 시점을 확인할 수 있다.
+- 사용자가 앱을 삭제하고 다시 설치한 경우에도 그 사용자의 앱 사용 기록을 유지
+    - 일반적으로 앱을 삭제하면 앱의 사용 기록도 함께 삭제되지만, DeviceCheck API를 사용하면 앱을 삭제하고 다시 설치한 후에도 사용 기록을 유지할 수 있다. 이는 앱이 기기에 대한 정보를 Apple의 서버에서 안전하게 관리하기 때문.
+- 사기나 악용을 방지하기 위해 각 기기에서 앱의 사용량을 제한.
+    - 앱에서 프리미엄 콘텐츠를 받은 고객과 불법적인 수단을 통해 프리미엄 콘텐츠를 얻은 고객을 구별할 수 있다.
+    - 예를 들어, 무료 체험 기간이나 할인 쿠폰 등을 한 기기에서 한 번만 사용할 수 있도록 제한하거나, 일정 시간 동안 특정 기능을 사용할 수 있는 횟수를 제한하는 등의 기능을 구현할 수 있다. 이를 통해 사용자가 여러 계정을 생성하여 이러한 제한을 우회하는 등의 사기나 악용을 방지할 수 있다.
 
 ## DeviceCheck의 흐름
-- 1. (App)장치 식별을 위한 임시 토큰 생성
+- 1. (App)장치 식별을 위한 토큰 생성 (이 토큰은 앱을 재설치해도 동일하다)
 - 2. (App -> Backend) token data를 post형식으로 Backend에 데이터를 보내 JWT 생성
 - 3. (Backend -> Apple Server) backend에서 만든 JWT token data를 post형식으로 apple server에 전달 
 - 4. (Apple Server -> Backend) apple에서 2bit 응답값과 상태를 Response
@@ -222,18 +226,30 @@ $body = [
 postRequest("https://api.development.devicecheck.apple.com/v1/update_two_bits", $jwt, $body);
 ```
   
-  
-  
 ### Apple 서버로 데이터 전송
 APNS 푸시 브로드캐스트와 마찬가지로 두종류의 환경(운영, 개발)이 있다.
 
 1. 개발 환경: https://api.devicecheck.apple.com
 2. 운영 환경: https://api.development.devicecheck.apple.com
 
-제공되는 API 경로는 아래 3가지이다. 
+제공되는 API의 엔드포인트는 아래 3가지이다. 
 - 기본도메인/v1/query_two_bits
 - 기본도메인/v1/update_two_bits 
 - 기본도메인/v1/validate_device_token
+
+### 각 엔드포인트의 설명
+
+- query_two_bits
+    - 기존에 등록한 bits 정보를 조회하는 데 사용
+    - 등록한 적이 없다면 reponse data에 `Failed to find bit state`로 응답받는다.
+- update_two_bits
+    - 새로운 bits 정보를 등록하는 데 사용
+    - 특별한 response data 가 없다
+- validate_device_token
+    - 이미 등록한 기기토큰의 유효성을 검사하기 위해 사용
+    - 한번도 등록하지않은 기기는 query_two_bits를 사용
+    - 특별한 response data 가 없다
+
 
 ### 1. 저장되어있는 데이터 쿼리 요청하기
 - 기본도메인/v1/query_two_bits
@@ -337,7 +353,24 @@ end
 ### Response 내용
 update를 할때에는 따로 반환내용이 없다. 반환값이 200일 경우, update성공이다. 
 
+- query_two_bits
+    - 값을 넣은 적이 없는 경우
+        - header에는 JSON이라 정의되어있지만 parse error를 받는다.
+        - data를 String으로 변환하면 `Failed to find bit state`라는 메세지로 응답받는다
+    - 값이 있는 경우 
+        - response JSON
+        - [
+            "bit0": 1
+            "bit1": 0,
+            "last_update_time": 2023-05
+          ]
+- update_two_bits
+    - header에는 text라고 정의되어있지만 text가 빈 칸으로 들어온다.
+    - Status Code가 200 인걸로 판단이 가능하다.
 
+- validate
+    - header에는 JSON이라 정의되어있지만 JSON이 빈 칸으로 들어온다.
+    - Status Code가 200 인걸로 판단이 가능하다.
 
 
 ## 2번째 CupertinoJWT 라이브러리를 이용한 Serverless 로직
@@ -479,26 +512,49 @@ class ViewController: UIViewController {
 ```
 
 작업을 해보니 response는 아래 내용이 포함되어있다.
-content-type을 보면 `application/json`이라고 나오는데 상황에 따라   `"text/plain`으로 나오는 경우도 있다. 여길 참고한다.
 
 - Statue Code
 - Headers
     - Content-Encoding
+        - payload의 압축 형식
     - Content-Length
+        - payload의 용량
     - Content-Type
+        - payload의 형식이 어떤 형식이고 인코딩 형식이 무엇인지
+        - 예시
+            - "application/json; charset=UTF-8"
+            - "text/plain; charset=UTF-8"
     - Date
+        - response 받은 날짜와 시간
     - Server
+        - 서버가 Apple사의 서버임을 나타냄
     - Strict-Transport-Security
+        - 예 : `"max-age=31536000; includeSubdomains"`
+        - 엄격한 전송 보안 정책이 적용되어 있음을 표시. 보안 헤더 중 하나로, 브라우저에게 HTTPS를 통한 통신만 허용하고, 보안 기간이 1년(31536000초)으로 설정되었음을 표시. 서브도메인도 포함되어야 함을 의미.
     - apple-originating-system
+        - request의 출처 
+        - 예시 : `UnknownOriginatingSystem` (왜 알수없음???)
     - apple-seq
+        - Apple 시퀀스 번호
     - apple-tk
+        -  Bool타입으로 Apple token 여부
     - x-apple-jingle-correlation-key
+        - Apple Jingle 키로, Apple 사에서 사용하는 내부 운용을 위한 키.
     - x-apple-request-uuid
+        - Apple 요청 UUID로, Apple 사에서 생성된 요청의 고유 식별자
     - x-content-type-options
+        - 브라우저에서 MIME 타입을 자동으로 감지하지 않도록 설정
     - x-frame-options
+        - 브라우저에서 해당 응답을 iframe으로 사용할 수 있는지 제한. 
+        - 예: `SAMEORIGIN` - 동일한 출처에서만 iframe으로 사용할 수 있음을 의미.
     - x-responding-instance
+        - 이 헤더는 HTTP 응답에서 서버의 응답 인스턴스를 식별하는 데 사용.
+        - 일반적으로 이 헤더는 로드 밸런서, 프록시 서버 또는 백엔드 서버 클러스터와 같은 환경에서 사용된다.
+        - 각 서버 또는 인스턴스는 고유한 식별자를 가지며, 이를 통해 요청이 특정 서버 또는 인스턴스로 라우팅되었음을 확인할 수 있다.
     - x-xss-protection
-
+        - 이 헤더는 브라우저에서 크로스 사이트 스크립팅(XSS) 공격을 방지하기 위한 보호 기능을 활성화하는 데 사용.
+        - 이 헤더를 사용하여 브라우저가 XSS 공격을 탐지하고 차단하는 기능을 활성화할 수 있다.
+        - 값으로 "1; mode=block"을 설정하면 브라우저는 XSS 공격을 감지하면 페이지 로딩을 차단하여 보안을 강화한다는 의미.
 ```
 { Status Code: 200, Headers {
     "Content-Encoding" =     (
@@ -668,87 +724,112 @@ func serverSideAction(deviceToken : String, deviceCheckType: DeviceCheckType = .
 
 
 func postDataForDeviceCheck(url: String, token: String, parameters: [String: Any], successHandler: @escaping (_ resultData: [String:Any]?)-> Void, errorHandler: @escaping (_ error: Error) -> Void) -> Void {
- print("들어온 url: \(url)")
-    if let reqUrl = URL(string: url) {
-        print("생성된 queryURL::\(reqUrl)")
-        var request = URLRequest(url: reqUrl)
-        request.httpMethod = "POST"
-        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        
-        if parameters.count > 0 {
-            request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-            do {
-                request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
-            } catch {
-                successHandler(nil)
-                print("JSON Pasing Error")
-            }
-        }
-    
-    
-        URLSession.shared.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
-            //error 일경우 종료
-            guard error == nil && data != nil else {
-                if let err = error {
-                    errorHandler(err)
-                    print(err.localizedDescription)
-                }
-                return
-            }
-            
-            // response를 확인하여 어떤 타입으로 들어오는지 확인할것
-            // 서버에 값이 없는경우, 있는 경우에 따라 파싱방법이 달라져야한다. 
-            guard let response = response else { return }
-            print("response: \(response)")
-
-                if let resultData = data {
-                    // text/plain으로 들어올때 확인용
-                    
-                    if let resultString = NSString(data: resultData, encoding: String.Encoding.utf8.rawValue) {
-                        let resultStr = String(resultString)
-                        print("resultStr: \(resultStr)")
-                        /*
-                         최초 bit 값이 등록되지않은 경우는 Failed to find bit state 값이 나온다.
-                         validation을 할경우: Unable to parse empty data
-                         */
-
-                        //메인쓰레드에서 출력하기 위해
-                        DispatchQueue.main.async {
-                            
-                            do {
-                                
-                                if let json = try JSONSerialization.jsonObject(with: resultData, options: []) as? [String: Any] {
-                                    // 파싱된 JSON 데이터에 접근하여 필요한 작업 수행
-                                    // 예시: JSON 데이터에서 특정 키 값을 가져와서 처리
-                                    print("jsonResult: \(json)")
-                                    successHandler(json)
-                                    // 다른 필요한 작업 수행
-                                    
-                                } else {
-                                    // JSON 데이터 파싱에 실패한 경우
-                                    print("Invalid JSON format")
-                                }
-                                
-                            } catch {
-                                errorHandler(error);
-                                print("parsing error : \(error.localizedDescription)")
-                            }
-                        } // DispatchQueue
-                        
-                        
-                    } //resultString
-                } else {
-                    print("data is Nil")
-                } // resultData = data
-            
-        }).resume()
-
-
-    } else {
+    guard let reqUrl = URL(string: url) else {
         print("url is nil or empty")
-    } // url check
+        return
+    }
+    print("request URL::\(reqUrl)")
+    var request = URLRequest(url: reqUrl)
+    request.httpMethod = "POST"
+    request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+    
+    if parameters.count > 0 {
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
+        } catch {
+            successHandler(nil)
+            print("JSON Pasing Error")
+        }
+    }
+    
+    URLSession.shared.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
+        //error 일경우 종료
+        guard error == nil, let responseData = data else {
+            if let error = error {
+                // 오류 처리
+                errorHandler(error)
+                print("dataTask Error: \(error.localizedDescription)")
+            }
+            return
+        }
+        print("response : \(String(describing: response))\ndata : \(String(describing: data))");
+        
+        
+        // 응답의 Content-Type 헤더 확인
+        if let httpResponse = response as? HTTPURLResponse,
+           let contentType = httpResponse.allHeaderFields["Content-Type"] as? String {
+            
+            if let dateString = httpResponse.allHeaderFields["Date"] as? String {
+                // GMT를 한국시간으로 보여주기
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "E, d MMM yyyy HH:mm:ss zzz"
+                dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+                dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
+                
+                if let date = dateFormatter.date(from: dateString) {
+                    let koreaTimeZone = TimeZone(identifier: "Asia/Seoul")
+                    dateFormatter.timeZone = koreaTimeZone
+                    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                    
+                    let koreaDateStr = dateFormatter.string(from: date)
+                    print("Korea Time: \(koreaDateStr)")
+                } else {
+                    print("Failed to convert date")
+                }
+            }
+            
+            print("allHeaderFields: \(httpResponse.allHeaderFields)")
+            
+            if contentType.contains("application/json") {
+                print("allHeaderFields.Content-Type: \(httpResponse.allHeaderFields["Content-Type"] as? String)")
+                
+                // JSON 데이터인 경우 파싱 수행
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: responseData, options: []) as? [String: Any] {
+                        // 파싱된 JSON 데이터 전체를 활용하는 경우
+                        print("Parsed JSON: \(json)")
+                        successHandler(json)
+                    } else {
+                        print("Invalid JSON format")
+                    }
+                } catch let error {
+                    // JSON 데이터 파싱 중에 오류가 발생한 경우
+                    if responseData.isEmpty {
+                        print("Data is empty")
+                    } else {
+                        errorHandler(error)
+                        print("Error: \(error)")
+                        print("Error: \(error.localizedDescription)")
+                        
+                        // query인 경우에 body는 여기에 텍스트로만 온다.
+                        if let responseString = String(data: responseData, encoding: .utf8) {
+                            print("Response data string:\n \(responseString)")
+                        }
+                    }
+                }
+            } else if contentType.contains("text/plain") {
+                // Content-Type이 JSON이 아닌 경우에 대한 처리
+                print("Content-Type is TEXT")
+                if let textData = String(data: responseData, encoding: .utf8) {
+                    if !textData.isEmpty {
+                        // 텍스트 데이터에 접근하여 필요한 작업 수행
+                        print("Text Data: \(textData)")
+                    } else {
+                        print("Text Data is empty")
+                    }
+                    
+                    // 필요한 작업을 수행한 후, successHandler 등을 호출하여 결과를 처리할 수 있음
+                } else {
+                    print("Failed to decode text data")
+                }
+                
+            } else {
+                print("Content-Type is not JSON, TEXT")
+            }
+        } // contentType 여부
+    }).resume()
 }
-
 
 ```
 
@@ -813,4 +894,5 @@ func postDataForDeviceCheck(url: String, token: String, parameters: [String: Any
 ## History
 - 230511 : 초안 및 레퍼런스 작성
 - 230512 : DeviceCheck 서버리스 구현 성공, 코드 편집후 업로드
-
+- 230515 : 테스트앱 구현
+- 230516 : 각 엔드포인트별 분석 및 엔드포인트별 에러처리
