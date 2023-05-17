@@ -63,7 +63,8 @@ UDID 역시 개인정보 보호 문제로 iOS 7부터는 제한적으로 사용�
     ![스크린샷 2023-05-17 오전 9 03 12](https://github.com/isGeekCode/TIL/assets/76529148/580cfbb1-95b4-4986-8e11-088999ef87c0)  
 
 - Xcode를 통한 UDID 얻기
-    - Xcode를 실행하고, iOS 기기를 컴퓨터에 연결한다. 이후 'Window' 메뉴에서 'Devices and Simulators'를 선택하고, 연결된 기기를 선택한다. 상단 헤더에서 기기정보중 identifier가 UDID  
+    - Xcode를 실행하고, iOS 기기를 컴퓨터에 연결한다. 이후 'Window' 메뉴에서 'Devices and Simulators'를 선택하거나 Xcode내부 simulator부분을 클릭해서 Add Additional Simulators...를 클릭하면 두방법 모드 같은 곳으로 이동한다.
+    - 연결된 기기를 선택한다. 상단 헤더에서 기기정보중 identifier가 UDID  
     
     <img width="871" alt="스크린샷 2023-05-17 오전 9 07 18" src="https://github.com/isGeekCode/TIL/assets/76529148/89e16408-eb79-4477-b55c-6c62522951a2">  
     <img width="871" alt="스크린샷 2023-05-17 오전 9 07 40" src="https://github.com/isGeekCode/TIL/assets/76529148/b1473075-2953-41f6-94a9-ed215abe6721">
@@ -101,3 +102,6 @@ IDFA는 광고주들이 iOS 기기를 추적하기 위해 사용되는 식별자
 IDFV는 앱에서 사용자를 식별하기 위해 사용되는 식별자. IDFV는 기기마다 유일한 값으로, 하나의 벤더(개발자)만이 액세스할 수 있다. 다른 벤더의 앱에서는 동일한 IDFV 값을 얻을 수 없다. IDFV는 iOS 기기에서 앱을 삭제하거나, 기기를 초기화하거나, iOS 업데이트를 하더라도 변경되지 않는다.
 
 
+## History
+- 230511 : 초안 작성
+- 230517 : UDID 얻는 방법 사진 자료 추가
