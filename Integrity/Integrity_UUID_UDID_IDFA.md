@@ -55,11 +55,19 @@ UDID 역시 개인정보 보호 문제로 iOS 7부터는 제한적으로 사용�
 
 ### 그럼에도 UDID를 얻는 방법
 
-- iTunes를 통한 UDID 얻기
+- iTunes를 통한 UDID 얻기 (Depricated)
     - iOS 기기를 컴퓨터에 연결한 후 iTunes를 실행하고, 해당 기기를 선택한다. 이후 요약(Summary) 탭을 클릭하면 기기 정보가 표시되며, 여기서 '시리얼 번호'를 클릭하면 UDID가 표시된다. 이 방법은 iOS 6 이전 버전에서 사용 가능.
+- Finder를 통한 UDID 얻기
+    - iOS 기기를 컴퓨터에 연결한 후 Finder를 실행하고, 사이드바에서 연결된 기기를 클릭한다. 헤더의 아이폰 아이콘과 이름이 보이는 곳을 보면 이름 아래에 기종에 대한 정보와 배터리 잔량이 보인다. 이부분을 클릭하면 일련번호 / UDID / IMEI를 확인할 수 있다.
+    
+    ![스크린샷 2023-05-17 오전 9 03 12](https://github.com/isGeekCode/TIL/assets/76529148/580cfbb1-95b4-4986-8e11-088999ef87c0)  
 
 - Xcode를 통한 UDID 얻기
-    - Xcode를 실행하고, iOS 기기를 컴퓨터에 연결한다. 이후 'Window' 메뉴에서 'Devices and Simulators'를 선택하고, 연결된 기기를 선택한다. 이후 'Details' 탭을 클릭하면 UDID가 표시된다.
+    - Xcode를 실행하고, iOS 기기를 컴퓨터에 연결한다. 이후 'Window' 메뉴에서 'Devices and Simulators'를 선택하고, 연결된 기기를 선택한다. 상단 헤더에서 기기정보중 identifier가 UDID  
+    
+    <img width="871" alt="스크린샷 2023-05-17 오전 9 07 18" src="https://github.com/isGeekCode/TIL/assets/76529148/89e16408-eb79-4477-b55c-6c62522951a2">  
+    <img width="871" alt="스크린샷 2023-05-17 오전 9 07 40" src="https://github.com/isGeekCode/TIL/assets/76529148/b1473075-2953-41f6-94a9-ed215abe6721">
+
 
 - UDID 앱을 이용한 UDID 얻기
     - App Store에서 다운로드 가능한 'UDID 앱'을 이용해 UDID를 얻을 수도 있다. 이 앱을 설치한 후 실행하면, UDID가 표시됩니다. 이 방법은 iOS 6 이후 버전에서도 사용 가능하다.
