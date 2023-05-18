@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_238 TILs and counting..._
+_239 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Integrity - Secure Enclave](A_Writing_in_Progress/Integrity_secureEnclave.md) - Thu May 18 09:45:48 2023 +0900
 - [Integrity - DeviceCheck](Integrity/Integrity_DeviceCheck.md) - Tue May 16 14:56:35 2023 +0900
 - [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md) - Tue May 16 14:54:47 2023 +0900
 - [NSObject_UIResponder_UIView_UIControl_UISwitch](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UISwitch.md) - Mon May 15 17:02:25 2023 +0900
 - [Integrity - KeyChain](A_Writing_in_Progress/Integrity_KeyChain.md) - Thu May 11 09:33:17 2023 +0900
-- [Integrity - UUID / UDID / IDFA / IDFV](Integrity/Integrity_UUID_UDID_IDFA.md) - Thu May 11 08:37:43 2023 +0900
 
 ### Categories
 
@@ -50,6 +50,7 @@ _238 TILs and counting..._
 - [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md)
 - [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](A_Writing_in_Progress/Integrity_Certificate_Provisioning.md)
 - [Integrity - KeyChain](A_Writing_in_Progress/Integrity_KeyChain.md)
+- [Integrity - Secure Enclave](A_Writing_in_Progress/Integrity_secureEnclave.md)
 
 ### [About-Error](#About-Error)
 - [SourceTree - 시도때도 없이 꺼지는 현상](About-Error/SourceTree_fatalError.md)
