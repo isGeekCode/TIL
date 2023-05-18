@@ -20,13 +20,21 @@ DeviceCheck API를 사용하게 되면 device unique 라서 앱을 삭제하거�
 
 이때 어떤 앱으로부터 request를 받으면 이 요청이 운영중인 앱에서 온건지 알기 어려울 수 있다.
 이때 App Attest를 사용하면 앱이 하드웨어 지원 어설션을 request의 일부로 첨부할 수 있다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 3 57 46" src="https://github.com/isGeekCode/TIL/assets/76529148/985f484e-3078-413a-8264-939b31e60f50">
 그럼 서버에서는 이 어설션을 이용하여 request가 정품 Apple  app에서 온것인지 확인할 수 있다.
 
 
 여행 중에 수집품을 발견하도록 장려하는 아름다운 앱을 디자인했는데 수정된 앱으로 집을 떠나지 않고도 모든 것을 수집할 수 있다는 것을 알게 되었다고 상상해 보십시오.
 또는 경쟁적인 멀티플레이어 레이싱 게임에서 치트를 사용하여 무제한 부스트를 얻어 다른 사람들이 순위표에서 경쟁하는 것을 보는 플레이어의 좌절감을 상상해 보십시오.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 3 57 58" src="https://github.com/isGeekCode/TIL/assets/76529148/97475c1f-d921-49b1-9b4c-2b20672109ac">
+  
 또는 토요일에 일어나서 서버에서 매우 많은 요청 볼륨을 보았지만 조사 후 호출이 앱에서 전혀 오지 않는다는 것을 알게 되어 매우 기쁩니다.
-이렇게 App Attest는 앱의 정품 벚던과 수정된 버전을 식별하여 앱 경험과 비즈니스를 보호할 수 있도록 도와준다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 3 58 06" src="https://github.com/isGeekCode/TIL/assets/76529148/c9c03ba7-b1b8-49c8-87a4-f68817326367">
+
+이렇게 App Attest는 앱의 정품 버전과 수정된 버전을 식별하여 앱 경험과 비즈니스를 보호할 수 있도록 도와준다.
 
 App Attest는 개발자와 개발자의 고객을 보호하기위해 활용할 수 있는 3가지의 주요 속성을 제공한다.
 - Genuine Apple device : 애플 정품 기기
@@ -35,31 +43,55 @@ App Attest는 개발자와 개발자의 고객을 보호하기위해 활용할 �
 
 App Attest를 사용하면 서비스에서 위 세가지 조건을 충족하여 앱의 적법한 인스턴스에서 요청이 왔는지 확인할 수 있다. 요청은 정품 Apple 기기 에서 왔고, 정품 App을 실행중이며, 페이로드가 변조되지않은 상태이다. 
 
+<img width="800" alt="스크린샷 2023-05-18 오후 3 59 12" src="https://github.com/isGeekCode/TIL/assets/76529148/b84e9c5d-f065-4f61-8800-3a00efbdae60">
 App Attest의 중심에는 보안키 쌍과 Apple에서 서명한 증명이 있고, 키 쌍이 정품 Apple 기기에서 생성 되었음을 인증한다.
 
 개인키는 App Attest API를 이용하는 Secure Enclave를 통해서만 저장 및 액세스 할 수 있다.
 
-앱이 Apple 기기에서 실행되려면 서명이 되어야한다. 그리고 앱을 무단으로 수정하는 사람은 자신이 제어하는 ID로 앱에 다시 서명해야 한다. 이 때, 필연적으로 App ID는 수정된다. 증명에 앱 ID의 해시를 포함한다. 그래서 앱ID를 증명에 포함된 것과 비교하여 호출자가 수정된 버전을 사용하고 있는지 확인할 수 있다.
+<img width="800" alt="스크린샷 2023-05-18 오후 3 59 29" src="https://github.com/isGeekCode/TIL/assets/76529148/994cf080-b9e9-4603-9983-4eb7d189d618">
 
+앱이 Apple 기기에서 실행되려면 서명이 되어야한다. 그리고 앱을 무단으로 수정하는 사람은 자신이 제어하는 ID로 앱에 다시 서명해야 한다. 이 때, 필연적으로 App ID는 수정된다. 
+
+<img width="800" alt="스크린샷 2023-05-18 오후 3 59 35" src="https://github.com/isGeekCode/TIL/assets/76529148/4092346c-5f88-4fa8-9ed5-f39417578478">
+
+증명에 앱 ID의 해시를 포함한다. 그래서 앱ID를 증명에 포함된 것과 비교하여 호출자가 수정된 버전을 사용하고 있는지 확인할 수 있다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 3 59 41" src="https://github.com/isGeekCode/TIL/assets/76529148/6e07e96f-7c45-4f7a-af24-28360adb4921">
+
+
+### 요청 페이로드
 요청이 정품기기와 정품앱에서 온 것임을 알았으니 이제 요청 페이로드에 대해 이야기 해보자
+
+<img width="800" alt="스크린샷 2023-05-18 오후 3 59 45" src="https://github.com/isGeekCode/TIL/assets/76529148/d639deb0-42e8-49d9-8731-176ea55053d3">
+
+
 
 서버에 페이로드를 보내기전에 App Prostant에 증명된 키를 사용하여 페이로드 다이제스트에 서명하도록 지시할 수 있다. 이렇게 하면 페이로드의 어설션이 생성된다.
 
 페이로드의 어설션 = App Attest에 세팅증명된 키 + 페이로드 다이제스트에 서명
+
+<img width="800" alt="스크린샷 2023-05-18 오후 3 59 57" src="https://github.com/isGeekCode/TIL/assets/76529148/42aab934-5298-4db0-9a6f-f208b2395350">
 
 이제 앱은 payload와 assertion을 서비스로 전송해야한다.
 
 페이로드에 대한 assertion을 확인하면 페이로드가 전송중에 변조되지않았음을 신뢰할 수 있다.
 
 이것이 세가지 핵심 속성이다.
-프라이버시 섹션6'44''
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 00 07" src="https://github.com/isGeekCode/TIL/assets/76529148/d32350ff-d6d1-4e05-b4b0-eacf2ef6406b">
+
+이제 프라이버시에 대해 이야기해보자
 
 Apple에서는 Privacy가 건강한 앱 생태계의 필수 기반이라고 믿고 있다.
 그래서 App Attest의 각 요소는 개인 정보 보호를 염두해 두고 구축되었다.
 또한 이 증명은 추적을 방지하면서 정품 장치에 대한 보증을 제공하도록 설계되었다.
 
+<img width="800" alt="스크린샷 2023-05-18 오후 4 00 30" src="https://github.com/isGeekCode/TIL/assets/76529148/70ab7794-9919-4765-81c5-4969968135ac">
 - Attestations are anonymous
 증명은 익명이며 하드웨어 식별자를 포함하지않는다.
+
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 00 35" src="https://github.com/isGeekCode/TIL/assets/76529148/bf86fff2-c26f-4f1c-8737-4298c8caf5d8">
 
 - Keys are unique per installation
 App Attest키는 앱 설치마다 고유하다. 이말은 즉, App Attest키는 앱 재설치 후에도 유지되지않고 백업되지 않으며 기기간에 동기화 되지 않는다는 말이다.
@@ -95,12 +127,16 @@ App Attest는 Secure Enclave가 있는 장치에서 지원되지만 isSupported�
 
 또다른 접근 방식은 서비스를 호출할 때 App Attest를 지원하지 않는다고 주장한느 장치의 갑작스러운 증가를 모니터링을 하는 것이다.
 App Attest를 지원하는 장치의 비율이 갑자기 감소하면 수정되 냉ㅂ이 확인을 우회하려고 시도하는 신호일 수 있다.
-이제 App Attest키가 성공적으로 생성되었으므로 계속해서 키를 증명해보자
 
+<img width="800" alt="스크린샷 2023-05-18 오후 4 01 35" src="https://github.com/isGeekCode/TIL/assets/76529148/4c3cfa14-1cbc-4bd9-9d23-1b19a7ae589c">
+
+이제 App Attest키가 성공적으로 생성되었으므로 계속해서 키를 증명해보자
 
 1. 챌린지 발행
 중간자 공격 (MITM;man-in-the-middle Attack)이나 재생 공격(Replay Attack)을 방지하려면 일회성 서버 챌린지가 필요하다.
 그래서 서버에서 앱에 대한 챌린지를 발행한다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 01 40" src="https://github.com/isGeekCode/TIL/assets/76529148/b4633c89-e6f9-47a5-9586-1b92a5ff192f">
 
 증명을 사용자 계정 ID 혹은 기타 값과 연결하기 위해서는, 해당하는 값을 챌린지와 함께 해시하여 clientDataHash를 만든다.
 
@@ -113,11 +149,25 @@ appAttesService.attestKey(keyId, clientDataHash: hash) { attestationObject, erro
 }
 ```
 앞서 만든 keyId와 함께 clientDataHash를 사용하여 이제 attestKey API를 호출할 수 있다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 02 16" src="https://github.com/isGeekCode/TIL/assets/76529148/30ade3ca-02b3-4483-873f-b0c444f66a7c">  
+
 attestKey는 개인키를 사용하여 장치에 대한 하드웨어 증명 요청을 생성하고, 이를 확인하기 위해 request를  Apple Server로 제출한다.
 
 확인이 되면 Apple에서는 익명의 증명객체를 앱에 반환한다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 02 31" src="https://github.com/isGeekCode/TIL/assets/76529148/a78b0c56-8e6c-49e8-95f2-74f97d7793e9">
+
 확인을 위해 사용자 지정 페이로드와 함께 증명을 다시 커스텀 서버로 보낸다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 02 39" src="https://github.com/isGeekCode/TIL/assets/76529148/deb03f70-8fa0-4af1-a46a-fbd9bae535c2">
+
+## Verify Key attestation
+
 이제 앱이 증명을 서버로 보냈기 때문에 확인을 시도해자
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 02 50" src="https://github.com/isGeekCode/TIL/assets/76529148/ccb585b7-9693-4297-8929-87200576c948">
+
 
 증명(attestation)은 웹 인증 표준을 따르며 Apple에서 서명한 인증서 목록, 인증자 데이터 구조, 위험지표 수신(Risk metric receipt) 이렇게 세 부분으로 구성된다.
 
@@ -128,16 +178,24 @@ attestKey는 개인키를 사용하여 장치에 대한 하드웨어 증명 요�
     - Risk metric receipt
     
 ### Certificate 섹션
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 03 05" src="https://github.com/isGeekCode/TIL/assets/76529148/261bff91-6a24-4566-97ae-5cbd19b07451">
+
 인증서 섹션에는 리프(Leap certificate) 및 중간 인증서(intermediate cetrificate)가 포함된다.
 App Attest 루트인증서는 Apple Private PKI 레포지토리에서 사용할 수 있다.
 
 전체 인증서 체인의 유효성을 검사하면 장치가 정품 Apple 장치임을 알 수 있다.
-    
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 03 17" src="https://github.com/isGeekCode/TIL/assets/76529148/df3b6b55-7d7f-4d5f-9549-cf5e6c54d33e">
+
 `attestKey()`를 호출하면 nonce라고 하는 일회용 해시가 clientDataHash 및  기타 데이터에서 생성되었다. 해당 nonce는 리프인증서에 포함된다.
 
 그리고 변조를 방지하기 위해 서버에서 nonce를 재구성하고 일치하는지 확인한다.
 
 ### Authenticator data 섹션
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 03 33" src="https://github.com/isGeekCode/TIL/assets/76529148/17dc9b84-dd60-40b4-98ab-23fc199a879f">  
+
 인증자 데이터 블록에는 앱 ID의 해시를 포함하여 호출하는 앱인지 확인하는 데 사용할 수 있는 여러 속성이 포함되어있다.
 
 ### Risk metric receipt 
@@ -155,6 +213,9 @@ isSupported에서 false를 리턴받거나, ramp up중에 제한되어지는 것
 이러한 확인 구현에 대한 자세한 내용은 설명서를 참고 할 것
 
 ### 대규모 설치
+
+![스크린샷 2023-05-18 오후 4 38 00](https://github.com/isGeekCode/TIL/assets/76529148/79c4f2c9-43bd-4519-b710-676130d7dbbc)
+
 attest-Key API를 호출하면 앱에서 App Attest 서비스로의 네트워크 호출이 생성된다. 이는 앱 인스턴스당 한 번만 발생한다. 그러나 대규모 설치 기반이 있는 경우 집합적으로 앱이 App Attest에 많은 요청을 보낼 수 있다.
 리소스를 관리하고 속도제한을 피하려면 전체 설치 기반에서 이 기능을 점진적으로 활성화해야한다.
 
@@ -162,15 +223,6 @@ attest-Key API를 호출하면 앱에서 App Attest 서비스로의 네트워크
 만약 일일 활성 사용자가 10억명이라면 !! 한달 이상에 걸쳐 증가해야한다.
 
 
-
-증명된 키가 있으므로 이제 generateAssertion API호출을 이용하여 앱과 서버간의 민감한 통신을 보호할 수 있다.
-
-이제 어설션 흐름은 Apple서버가 더이상 관련되지않으므로 증명보다 간단해진다.
-키를 사용하는 모든 어설션은 장치(device)에서 생성되고 서버에서 검증된다.
-서버에서 고유한 챌린지를 요청하여 시작한다음 페이로드 다이제스트를  생성하고 generateAssertion을 호출한다.
-generateAssertion은 다이제스트를 사용하여 nonce를 계산하고 App Attest키로 서명한다.
-
-그러면 앱에서 페이로드와 어설션을 서버로 보낼 수 있게된다.
 
 ```swift
 // Generate and verify assertions
@@ -180,33 +232,82 @@ appAttestService.generateAssertion(keyId, clientDataHash: hash) { assertionObjec
     // Send assertion object with your server for verification
 }
 ```
+
+![스크린샷 2023-05-18 오후 4 39 23](https://github.com/isGeekCode/TIL/assets/76529148/9fa8e097-176f-4c09-8a1a-b021462c5eb1)
+
+증명된 키가 있으므로 이제 generateAssertion API호출을 이용하여 앱과 서버간의 민감한 통신을 보호할 수 있다.
+
+이제 어설션 흐름은 Apple서버가 더이상 관련되지않으므로 증명보다 간단해진다.
+키를 사용하는 모든 어설션은 장치(device)에서 생성되고 서버에서 검증된다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 05 05" src="https://github.com/isGeekCode/TIL/assets/76529148/1a31d3af-0ff0-449f-b2d6-66a4a957c955">
+
+서버에서 고유한 챌린지를 요청하여 시작한다음 페이로드 다이제스트를  생성하고 generateAssertion을 호출한다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 06 15" src="https://github.com/isGeekCode/TIL/assets/76529148/0ddaa160-6be4-4b3a-a3b4-b5257e0b2302">
+
+generateAssertion은 다이제스트를 사용하여 nonce를 계산하고 App Attest키로 서명한다.
+
+그러면 앱에서 페이로드와 어설션을 서버로 보낼 수 있게된다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 06 19" src="https://github.com/isGeekCode/TIL/assets/76529148/9d4a6cef-edc4-408b-8c68-616196917f6b">
+
+
 마지막으로 서버에서 페이로드를 확인해야한다. 
+
+### 어설션의 페이로드
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 06 25" src="https://github.com/isGeekCode/TIL/assets/76529148/7aaee9f9-3a95-4358-a253-94989593c8e0">
+
 어설션의 페이로드에는 이 상위 수준 구조가 포함되어있다.
 - Assertion data
     - Signature (서명)
     - Authenticator data (인증자 데이터 섹션)
+    
+<img width="800" alt="스크린샷 2023-05-18 오후 4 03 05" src="https://github.com/isGeekCode/TIL/assets/76529148/7b689b33-f76a-4185-ae28-524ad9ba83ba">   
+    
 서명의 유효성을 검사하려면 서버에서 nonce를 재구성하는 프로세스를 역순으로 수행한다.
 그 다음 공개키를 이용하여 서명을 확인한다. 
 서명이 유요하면 페이로드가 수정되지않았음을 신뢰할 수 있다.
 
+<img width="800" alt="스크린샷 2023-05-18 오후 4 07 15" src="https://github.com/isGeekCode/TIL/assets/76529148/d2e62c7b-20ed-42f0-8249-ffd5738b00d4">
+  
+    
 인증자 데이터 섹션에는 앱 ID 해시가 포함되어있다. 어설션이 정품앱에서 온 것인지 확인하려면 해시를 검증하자
-이 인증자 데이터에는 지속적으로 증가하는 카운터도 포함된다.
 
+<img width="800" alt="스크린샷 2023-05-18 오후 4 07 22" src="https://github.com/isGeekCode/TIL/assets/76529148/0d7a2458-7e7c-446b-aaf4-3920ba8724b4">
+이 인증자 데이터에는 지속적으로 증가하는 카운터도 포함된다.
 재생공격 (Replay Attack)으로부터 보호하려면 카운터 값을 서버에 저장하고 후속 요청이 있을 때마다 값이 증가할 것으로 예상하자.
+
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 07 30" src="https://github.com/isGeekCode/TIL/assets/76529148/2a2678dc-25e8-48e7-90d7-7e53d2c60324">
 
 키를 사용하면 이제 이 과정을 필요한 만큼 반복할 수 있다.
 어설션 생성은 Apple 서버를 호출하지 않지만 약간의 대기시간을 추가하는 암호화 작업이다.
 App Attest를 앱에 통합할 때 이 점을 앱 디자인에 고려해야한다.
 
+<img width="800" alt="스크린샷 2023-05-18 오후 4 07 46" src="https://github.com/isGeekCode/TIL/assets/76529148/14948890-efb2-4027-b5f1-13d89e1c904b">
+
 어설션은 중요하지만 빈도가 낮은 호출이나 추가 대기시간 및 필요한 계산을 처리할 수 있는 호출에 적합하다.
-빈번한 실시간 네트워크 명령의 경우 어설션이 적합하지않을 수있다.
+빈번한 실시간 네트워크 명령의 경우 어설션이 적합하지않을 수 있다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 07 50" src="https://github.com/isGeekCode/TIL/assets/76529148/3156a0d9-6370-4408-8014-b69056772a27">
 
 이렇게 하면 App Attest의 기본 구현이 완료됐다.
 여기까지의 구현만으로도 들어오는 서버 request를 원본 인지 수정된 것인지 분류하고, 이 사기 감지 신호를 비즈니스 로직에 합칠 수 있다.
 
 하지만 추가적으로 해야하는게 있다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 08 02" src="https://github.com/isGeekCode/TIL/assets/76529148/c1d3184d-6497-4228-a662-f2ae6821351a">
+
 공격자가 한 기기를 이용하여 많은 수의 App Attest키를 생성하고 이 기기를 이용하여 조작된 많은 앱과 서버간의 통신을 제공함으로서 App Attest를 우회하려고 시도할 수가 있다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 08 05" src="https://github.com/isGeekCode/TIL/assets/76529148/13cf4439-2a54-498a-966f-cc641a9de93d">
+
 이러한 동작을 감지하는데 도움이 되도록  Apple 에서는 기기에서 생성된 대략적인 키 수를 제공하는 App Attest Risk Metric Service라는 서비스를 제공한다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 08 23" src="https://github.com/isGeekCode/TIL/assets/76529148/07c6dce3-e1d5-452c-92e8-b2598334b1e8">
+
 attestKey는 증명(attestation)과 위험 메트릭 영수증을 반환한다. 
 서버는 해당 영수증을 서비스에 제출하고 새 영수증으로 교환할 수 있다.
 
@@ -214,15 +315,20 @@ attestKey는 증명(attestation)과 위험 메트릭 영수증을 반환한다.
 그래서 주기적으로 해당 앱/device 쌍에 대해 업데이트된 메트릭에 대한 최신 영수증을 사용할 수 있다.
 
 다음은 영수증 구조에 대한 개요다.
- 
-Risk metric receipt
+
+### Risk metric receipt
 - Payload
 - Certificate chain
 - Signature
+ <img width="800" alt="스크린샷 2023-05-18 오후 4 08 29" src="https://github.com/isGeekCode/TIL/assets/76529148/eac09339-018e-4788-99b5-79eb5f390551">
+
 이건 PKCS7 컨테이너다. 더 자세한 내용은 DeviceCheck Framework 공식문서의 Assessing Fraud 아티클을 참조하자.
 
 ## App Clips
+<img width="800" alt="스크린샷 2023-05-18 오후 4 08 36" src="https://github.com/isGeekCode/TIL/assets/76529148/c6abdb1d-f67b-44a0-a3f6-962852c7175f">
 iOS15의 App Clip에 App Attest 지원이 추가되었다.
+
+<img width="800" alt="스크린샷 2023-05-18 오후 4 08 42" src="https://github.com/isGeekCode/TIL/assets/76529148/dffe7d63-2ae6-427d-907b-de394c582923">
 App Clip에서 전체 앱으로의 원활한 업그레이드를 지원하기 위해 App Clip과 full app 은 App AttestContext에서 동일한 App ID를 공유한다.  
 서버측에서 앱 ID를 확인할 때 이 점을 명심하자.
 App Clip이 수동으로 제거되거나 만료되면 full 앱이 제거될 때와 마찬가지로 해당키가 무효화 된다.
@@ -238,6 +344,11 @@ App Clip이 수동으로 제거되거나 만료되면 full 앱이 제거될 때�
 - 네트워크 재생공격(replay attack)을 방지하기 위해 Flow에 일회성 서버 챌린지를 적용한다.
 - isSupported에서 false를 리턴받거나, ramp up중에 제한되어지는 것, 또는 일반적인 네트워크 오류와 같은 시나리오를 적절하게 처리한다. 
     - 그리고 위험평가에서 실패를 신호로 통합한다.
+
+<img width="600" alt="스크린샷 2023-05-18 오후 4 54 47" src="https://github.com/isGeekCode/TIL/assets/76529148/c5bd14cf-1ea5-4843-a8b5-89d0bee72012">
+-끝-
+
+
 
 ## 보안 키 쌍
 - 개인키는 앱네 secure Enclave에 보관되다가 App Attest 서비스와의 통신에 사용된다. 
