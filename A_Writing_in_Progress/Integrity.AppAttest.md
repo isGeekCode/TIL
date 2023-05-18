@@ -93,7 +93,147 @@ App Attest는 Secure Enclave가 있는 장치에서 지원되지만 isSupported�
 App Attest를 지원하는 장치의 비율이 갑자기 감소하면 수정되 냉ㅂ이 확인을 우회하려고 시도하는 신호일 수 있다.
 이제 App Attest키가 성공적으로 생성되었으므로 계속해서 키를 증명해보자
 
-중간자 공격 (MITM;man-in-the-middle Attack)
+
+1. 챌린지 발행
+중간자 공격 (MITM;man-in-the-middle Attack)이나 재생 공격(Replay Attack)을 방지하려면 일회성 서버 챌린지가 필요하다.
+그래서 서버에서 앱에 대한 챌린지를 발행한다.
+
+증명을 사용자 계정 ID 혹은 기타 값과 연결하기 위해서는, 해당하는 값을 챌린지와 함께 해시하여 clientDataHash를 만든다.
+
+```swift
+// Generate key attestation
+appAttesService.attestKey(keyId, clientDataHash: hash) { attestationObject, error in
+    guard error == nil else { /* Handle error and return. */ }
+
+    // Send the attestation object to your server for verification.
+}
+```
+앞서 만든 keyId와 함께 clientDataHash를 사용하여 이제 attestKey API를 호출할 수 있다.
+attestKey는 개인키를 사용하여 장치에 대한 하드웨어 증명 요청을 생성하고, 이를 확인하기 위해 request를  Apple Server로 제출한다.
+
+확인이 되면 Apple에서는 익명의 증명객체를 앱에 반환한다.
+확인을 위해 사용자 지정 페이로드와 함께 증명을 다시 커스텀 서버로 보낸다.
+이제 앱이 증명을 서버로 보냈기 때문에 확인을 시도해자
+
+증명(attestation)은 웹 인증 표준을 따르며 Apple에서 서명한 인증서 목록, 인증자 데이터 구조, 위험지표 수신(Risk metric receipt) 이렇게 세 부분으로 구성된다.
+
+그럼 확인 해야할 중요한 부분을 살펴보자.
+- Attestation
+    - Certificate
+    - Authenticator data
+    - Risk metric receipt
+    
+### Certificate 섹션
+인증서 섹션에는 리프(Leap certificate) 및 중간 인증서(intermediate cetrificate)가 포함된다.
+App Attest 루트인증서는 Apple Private PKI 레포지토리에서 사용할 수 있다.
+
+전체 인증서 체인의 유효성을 검사하면 장치가 정품 Apple 장치임을 알 수 있다.
+    
+`attestKey()`를 호출하면 nonce라고 하는 일회용 해시가 clientDataHash 및  기타 데이터에서 생성되었다. 해당 nonce는 리프인증서에 포함된다.
+
+그리고 변조를 방지하기 위해 서버에서 nonce를 재구성하고 일치하는지 확인한다.
+
+### Authenticator data 섹션
+인증자 데이터 블록에는 앱 ID의 해시를 포함하여 호출하는 앱인지 확인하는 데 사용할 수 있는 여러 속성이 포함되어있다.
+
+### Risk metric receipt 
+ 키증명에는 저장하고 나중에 Apple에 위험 메트릭을 요청하는데 사용할 수 있는 영수증도 포함되어 있다.
+이에 대한 자세한 내용은 뒤에 다루도록하자.
+
+만약 이 모든것이 확인되면, 이 App Attest Key는 정품이다.
+
+이제 후속요청을 확인하는데 사용할 클라이언트 데이터와 연결된 키를 저장한다.
+
+이때 모든 실패가 잘못된 증명으로 인한 것은 아니다. 
+isSupported에서 false를 리턴받거나, ramp up중에 제한되어지는 것, 또는 일반적인 네트워크 오류와 같은 시나리오를 적절하게 처리한다. 
+
+그런다음 전체 위험 평가(overall risk assessment)에서 오류를 신호로 통합할 수 있다.
+이러한 확인 구현에 대한 자세한 내용은 설명서를 참고 할 것
+
+### 대규모 설치
+attest-Key API를 호출하면 앱에서 App Attest 서비스로의 네트워크 호출이 생성된다. 이는 앱 인스턴스당 한 번만 발생한다. 그러나 대규모 설치 기반이 있는 경우 집합적으로 앱이 App Attest에 많은 요청을 보낼 수 있다.
+리소스를 관리하고 속도제한을 피하려면 전체 설치 기반에서 이 기능을 점진적으로 활성화해야한다.
+
+예를 들어 일일 활성 사용자가 백명이라면 아마 하루정도에 걸쳐 증가할 수 있다.
+만약 일일 활성 사용자가 10억명이라면 !! 한달 이상에 걸쳐 증가해야한다.
+
+
+
+증명된 키가 있으므로 이제 generateAssertion API호출을 이용하여 앱과 서버간의 민감한 통신을 보호할 수 있다.
+
+이제 어설션 흐름은 Apple서버가 더이상 관련되지않으므로 증명보다 간단해진다.
+키를 사용하는 모든 어설션은 장치(device)에서 생성되고 서버에서 검증된다.
+서버에서 고유한 챌린지를 요청하여 시작한다음 페이로드 다이제스트를  생성하고 generateAssertion을 호출한다.
+generateAssertion은 다이제스트를 사용하여 nonce를 계산하고 App Attest키로 서명한다.
+
+그러면 앱에서 페이로드와 어설션을 서버로 보낼 수 있게된다.
+
+```swift
+// Generate and verify assertions
+appAttestService.generateAssertion(keyId, clientDataHash: hash) { assertionObject, error in 
+    guard error == nil else {/*Handle error and return */}
+    
+    // Send assertion object with your server for verification
+}
+```
+마지막으로 서버에서 페이로드를 확인해야한다. 
+어설션의 페이로드에는 이 상위 수준 구조가 포함되어있다.
+- Assertion data
+    - Signature (서명)
+    - Authenticator data (인증자 데이터 섹션)
+서명의 유효성을 검사하려면 서버에서 nonce를 재구성하는 프로세스를 역순으로 수행한다.
+그 다음 공개키를 이용하여 서명을 확인한다. 
+서명이 유요하면 페이로드가 수정되지않았음을 신뢰할 수 있다.
+
+인증자 데이터 섹션에는 앱 ID 해시가 포함되어있다. 어설션이 정품앱에서 온 것인지 확인하려면 해시를 검증하자
+이 인증자 데이터에는 지속적으로 증가하는 카운터도 포함된다.
+
+재생공격 (Replay Attack)으로부터 보호하려면 카운터 값을 서버에 저장하고 후속 요청이 있을 때마다 값이 증가할 것으로 예상하자.
+
+키를 사용하면 이제 이 과정을 필요한 만큼 반복할 수 있다.
+어설션 생성은 Apple 서버를 호출하지 않지만 약간의 대기시간을 추가하는 암호화 작업이다.
+App Attest를 앱에 통합할 때 이 점을 앱 디자인에 고려해야한다.
+
+어설션은 중요하지만 빈도가 낮은 호출이나 추가 대기시간 및 필요한 계산을 처리할 수 있는 호출에 적합하다.
+빈번한 실시간 네트워크 명령의 경우 어설션이 적합하지않을 수있다.
+
+이렇게 하면 App Attest의 기본 구현이 완료됐다.
+여기까지의 구현만으로도 들어오는 서버 request를 원본 인지 수정된 것인지 분류하고, 이 사기 감지 신호를 비즈니스 로직에 합칠 수 있다.
+
+하지만 추가적으로 해야하는게 있다.
+공격자가 한 기기를 이용하여 많은 수의 App Attest키를 생성하고 이 기기를 이용하여 조작된 많은 앱과 서버간의 통신을 제공함으로서 App Attest를 우회하려고 시도할 수가 있다.
+이러한 동작을 감지하는데 도움이 되도록  Apple 에서는 기기에서 생성된 대략적인 키 수를 제공하는 App Attest Risk Metric Service라는 서비스를 제공한다.
+attestKey는 증명(attestation)과 위험 메트릭 영수증을 반환한다. 
+서버는 해당 영수증을 서비스에 제출하고 새 영수증으로 교환할 수 있다.
+
+이 새로운 영수증에는 위험지표(risk metric)가 포함된다.
+그래서 주기적으로 해당 앱/device 쌍에 대해 업데이트된 메트릭에 대한 최신 영수증을 사용할 수 있다.
+
+다음은 영수증 구조에 대한 개요다.
+ 
+Risk metric receipt
+- Payload
+- Certificate chain
+- Signature
+이건 PKCS7 컨테이너다. 더 자세한 내용은 DeviceCheck Framework 공식문서의 Assessing Fraud 아티클을 참조하자.
+
+## App Clips
+iOS15의 App Clip에 App Attest 지원이 추가되었다.
+App Clip에서 전체 앱으로의 원활한 업그레이드를 지원하기 위해 App Clip과 full app 은 App AttestContext에서 동일한 App ID를 공유한다.  
+서버측에서 앱 ID를 확인할 때 이 점을 명심하자.
+App Clip이 수동으로 제거되거나 만료되면 full 앱이 제거될 때와 마찬가지로 해당키가 무효화 된다.
+
+## Keys to success
+- Importance of server-side validation
+- One-time server challenges
+- Failures as signals
+이제 App Attest의 성공을 위한 핵심을 기억하자
+
+- device가 아닌 서버에서 유효성을 검사한다.
+    - Validation 코드를 비활성화 하도록 앱을 수정할 수 있다.
+- 네트워크 재생공격(replay attack)을 방지하기 위해 Flow에 일회성 서버 챌린지를 적용한다.
+- isSupported에서 false를 리턴받거나, ramp up중에 제한되어지는 것, 또는 일반적인 네트워크 오류와 같은 시나리오를 적절하게 처리한다. 
+    - 그리고 위험평가에서 실패를 신호로 통합한다.
 
 ## 보안 키 쌍
 - 개인키는 앱네 secure Enclave에 보관되다가 App Attest 서비스와의 통신에 사용된다. 
