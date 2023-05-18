@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_240 TILs and counting..._
+_241 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Integrity - 리플레이 공격(Replay attack)](Integrity/Integrity_replayAttack.md) - Thu May 18 13:33:39 2023 +0900
 - [Integrity - 중간자 공격(man-in-the-middle attack)](Integrity/Integrity_manInTheMiddleAttack.md) - Thu May 18 13:20:25 2023 +0900
 - [Integrity - Secure Enclave](A_Writing_in_Progress/Integrity_secureEnclave.md) - Thu May 18 09:45:48 2023 +0900
 - [Integrity - DeviceCheck](Integrity/Integrity_DeviceCheck.md) - Tue May 16 14:56:35 2023 +0900
 - [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md) - Tue May 16 14:54:47 2023 +0900
-- [NSObject_UIResponder_UIView_UIControl_UISwitch](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UISwitch.md) - Mon May 15 17:02:25 2023 +0900
 
 ### Categories
 
@@ -152,6 +152,7 @@ _240 TILs and counting..._
 - [Integrity - DeviceCheck](Integrity/Integrity_DeviceCheck.md)
 - [Integrity - UUID / UDID / IDFA / IDFV](Integrity/Integrity_UUID_UDID_IDFA.md)
 - [Integrity - 중간자 공격(man-in-the-middle attack)](Integrity/Integrity_manInTheMiddleAttack.md)
+- [Integrity - 리플레이 공격(Replay attack)](Integrity/Integrity_replayAttack.md)
 
 ### [Library](#Library)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](Library/About_A_iOS_Package.md)
