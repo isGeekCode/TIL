@@ -14,7 +14,11 @@ iOS App Attests는 앱의 신뢰성을 검증하기 위해 Apple이 제공하는
 - [wwdc2021 : AppAttest & DeviceCheck](https://developer.apple.com/videos/play/wwdc2021/10244/)  
 DeviceCheck API를 사용하게 되면 device unique 라서 앱을 삭제하거나, 심지어 폰 컨텐츠 리셋을 해도 남아 있는데, App Attest는 설치할 때마다 달라진다. 
 
-우리가 운영중인 서비스가 있다고 가정해보자. 이때 어떤 앱으로부터 request를 받으면 이 요청이 운영중인 앱에서 온건지 알기 어려울 수 있다.
+우리가 운영중인 서비스가 있다고 가정해보자. 
+<img width="800" alt="스크린샷 2023-05-18 오후 3 57 37" src="https://github.com/isGeekCode/TIL/assets/76529148/7c7a30ff-2860-4baa-81a1-b65716a2e4a4">
+
+
+이때 어떤 앱으로부터 request를 받으면 이 요청이 운영중인 앱에서 온건지 알기 어려울 수 있다.
 이때 App Attest를 사용하면 앱이 하드웨어 지원 어설션을 request의 일부로 첨부할 수 있다.
 그럼 서버에서는 이 어설션을 이용하여 request가 정품 Apple  app에서 온것인지 확인할 수 있다.
 
