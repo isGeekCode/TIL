@@ -181,14 +181,18 @@ App Attest를 지원하는 장치의 비율이 갑자기 감소하면 수정된 
   
 <img width="800" alt="스크린샷 2023-05-18 오후 4 01 35" src="https://github.com/isGeekCode/TIL/assets/76529148/4c3cfa14-1cbc-4bd9-9d23-1b19a7ae589c">
 
-### 1.2.1 챌린지 발행
+### 1.2.1 서버에서 챌린지 발행
 중간자 공격 (MITM;man-in-the-middle Attack)이나 재생 공격(Replay Attack)을 방지하려면 일회성 서버 챌린지가 필요하다.
 그래서 서버에서 앱에 대한 챌린지를 발행한다.
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 01 40" src="https://github.com/isGeekCode/TIL/assets/76529148/b4633c89-e6f9-47a5-9586-1b92a5ff192f">
 
-### 1.2.2 키 검증
-증명을 사용자 계정 ID 혹은 기타 값과 연결하기 위해서는, 그에 해당하는 값을 챌린지와 함께 해시하여 clientDataHash를 만든다.
+
+### 1.2.2 챌린지로 해시를 생성
+
+증명(Attestation)을 사용자 계정 혹은 기타 값과 연결하기 위해서는, 그에 해당하는 값을 챌린지와 함께 해시하여 clientDataHash를 만든다.
+
+앞서 만든 keyId와 함께 clientDataHash를 사용하여 이제 attestKey API를 호출할 수 있다.
 
 ```swift
 // Generate key attestation
@@ -197,71 +201,104 @@ appAttesService.attestKey(keyId, clientDataHash: hash) { attestationObject, erro
     // 검증을 위해 attestationObject를 서버로 전송처리
 }
 ```
-앞서 만든 keyId와 함께 clientDataHash를 사용하여 이제 attestKey API를 호출할 수 있다.
+
+### 1.2.3 attestKey API 호출
+
+attestKey는 개인키를 사용하여 device에 대한 하드웨어 검증 요청(Hardware attestation request)을 생성하고,
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 02 16" src="https://github.com/isGeekCode/TIL/assets/76529148/30ade3ca-02b3-4483-873f-b0c444f66a7c">  
 
-attestKey는 개인키를 사용하여 장치에 대한 하드웨어 증명 요청을 생성하고, 이를 확인하기 위해 request를  Apple Server로 제출한다.
-
-확인이 되면 Apple에서는 익명의 증명객체를 앱에 반환한다.
+이를 확인하기 위해 request를  Apple Server로 제출한다.  
+확인이 되면 Apple에서는 익명의 증명된 객체(AttestationObject)를 앱에 반환한다.
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 02 31" src="https://github.com/isGeekCode/TIL/assets/76529148/a78b0c56-8e6c-49e8-95f2-74f97d7793e9">
 
-확인을 위해 사용자 지정 페이로드와 함께 증명을 다시 커스텀 서버로 보낸다.
+
+### 1.2.4 서버로 사용자 정의 페이로드와 Attestation을 전송
+
+검증을 위해서 사용자 정의 페이로드와 함께, Attestation을 다시 서버로 전송.
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 02 39" src="https://github.com/isGeekCode/TIL/assets/76529148/deb03f70-8fa0-4af1-a46a-fbd9bae535c2">
 
 ## Verify Key attestation
 
-이제 앱이 증명을 서버로 보냈기 때문에 확인을 시도해자
+이제 앱에서 증명을 서버로 보냈으니 확인해보자
 
+증명(attestation)은 웹 인증 표준을 따르며 Apple에서 서명한 인증서 목록, 인증자 데이터 구조, 위험지표 수신(Risk metric receipt) 이렇게 세 부분으로 구성되어있다.
+  
+   
 <img width="800" alt="스크린샷 2023-05-18 오후 4 02 50" src="https://github.com/isGeekCode/TIL/assets/76529148/ccb585b7-9693-4297-8929-87200576c948">
 
 
-증명(attestation)은 웹 인증 표준을 따르며 Apple에서 서명한 인증서 목록, 인증자 데이터 구조, 위험지표 수신(Risk metric receipt) 이렇게 세 부분으로 구성된다.
-
 그럼 확인 해야할 중요한 부분을 살펴보자.
 - Attestation
-    - Certificate
-    - Authenticator data
-    - Risk metric receipt
+    - 인증서 (Certificate)
+    - 인증자 데이터 (Authenticator data)
+    - 위험측정지표 영수증(Risk metric receipt)
     
-### Certificate 섹션
+### 1. Certificate 섹션
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 03 05" src="https://github.com/isGeekCode/TIL/assets/76529148/261bff91-6a24-4566-97ae-5cbd19b07451">
 
-인증서 섹션에는 리프(Leap certificate) 및 중간 인증서(intermediate cetrificate)가 포함된다.
-App Attest 루트인증서는 Apple Private PKI 레포지토리에서 사용할 수 있다.
+인증서 섹션에는 리프(Leap certificate)와 중간 인증서(intermediate cetrificate)가 포함되어있다.
+App Attest 루트인증서는 Apple Private PKI 저장소(Repository)에서 사용할 수 있다.
 
-전체 인증서 체인의 유효성을 검사하면 장치가 정품 Apple 장치임을 알 수 있다.
+이렇게 전체 인증서 체인의 유효성을 검사하면 장치가 정품 Apple 장치임을 알 수 있다.
+
+
+### 인증서관련 용어 설명
+- 인증서 (Certificate)
+    - 인증서는 디지털 신원을 확인하고 신뢰할 수 있는 정보를 제공하는 디지털 문서. 암호화와 인증에 사용되며, 보통 공개키 인증서 형식으로 구성된다. 인증서는 개인 키와 해당 개인 키와 연결된 공개 키, 소유자(서브젝트)의 신원 정보 등을 포함한다.
+    
+- 리프 인증서 (Leaf Certificate)
+    - 리프 인증서는 인증 체인의 가장 하위에 있는 인증서로, 앱 attestation에 사용되는 인증서
+    - 앱의 디바이스 고유 식별자와 암호화된 페이로드를 포함하며, 서명되어 있다.
+
+- 중간 인증서 (Intermediate Certificate)
+    - 중간 인증서는 리프 인증서와 루트 인증서 사이에 있는 인증서
+    - 인증 체인에서 중간 단계의 신뢰를 구축하는 데 사용된다.
+    - 보통 루트 인증서로부터 서명된 상위 인증 기관에 의해 발급된다.
+    - 앱 attestation에서 중간 인증서는 리프 인증서의 유효성을 검증하고, 신뢰할 수 있는 소스로부터 받은 인증서인지 확인하는 데 사용된다.
+
+- 루트 인증서 (Root Certificate)
+    - App Attest 루트 인증서는 앱 attestation에서 사용되는 최상위 인증서.
+    - Apple Private PKI 저장소(Repository)에서 사용할 수 있는 인증서로, Apple이 제공하는 인증 기관에 의해 서명된다.
+    - 루트 인증서는 앱의 신원을 검증하고 유효성을 확인하여, 보안과 신뢰성을 제공하는 데 사용된다.
+
+- App Private PKI Repository
+    - Apple의 사설 공개 키 인프라(Private Key Infrastructure) 저장소.
+    - PKI는 암호화와 인증을 위한 키, 인증서 및 관련 서비스를 관리하는 시스템이다.
+    - Apple은 앱 attestation과 같은 보안 기능을 위해 독자적인 PKI 시스템을 운영하고 있습니다.
+    - Apple Private PKI 저장소는 Apple이 직접 관리하며, 인증서의 발급과 관리에 사용된다.
+    - Apple은 자체 인증 기관을 운영하고, 이를 통해 인증서를 발급하고 앱 attestation과 같은 서비스에서 사용할 수 있다.
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 03 17" src="https://github.com/isGeekCode/TIL/assets/76529148/7f3d4dc5-d7bd-4de7-b2ab-88254c1a40d5">
 
-`attestKey()`를 호출하면 nonce라고 하는 일회용 해시가 clientDataHash 및  기타 데이터에서 생성되었다. 해당 nonce는 리프인증서에 포함된다.
+`attestKey()`를 호출하면 clientDataHash 및 기타 데이터에서 nonce라고 하는 일회용 해시가 생성되고, 
 
-그리고 변조를 방지하기 위해 서버에서 nonce를 재구성하고 일치하는지 확인한다.
+이 nonce는 리프인증서에 포함된다.
+
+그리고 변조를 방지하기 위해 nonce를 서버에서 재구성하고, 일치하는지 확인한다.
 
 ### Authenticator data 섹션
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 03 33" src="https://github.com/isGeekCode/TIL/assets/76529148/17dc9b84-dd60-40b4-98ab-23fc199a879f">  
 
-인증자 데이터 블록에는 앱 ID의 해시를 포함하여 호출하는 앱인지 확인하는 데 사용할 수 있는 여러 속성이 포함되어있다.
+인증자 데이터 섹션에는 순정 앱으로의 요청인지 식별에 사용할 수 있는 앱 ID 해시값과 그밖의 여러 속성이 포함되어 있다.
 
 ### Risk metric receipt 
- 키증명에는 저장하고 나중에 Apple에 위험 메트릭을 요청하는데 사용할 수 있는 영수증도 포함되어 있다.
-이에 대한 자세한 내용은 뒤에 다루도록하자.
+마지막 Key Attestation의 섹션에는 저장하고, 나중에 Apple에 위험 메트릭을 요청하는데 사용할 수 있는 영수증도 포함되어 있다. 이에 대한 자세한 내용은 뒤에 다루도록하자.
 
-만약 이 모든것이 확인되면, 이 App Attest Key는 정품이다.
+여기까지 이 모든것이 확인되면, 이 App Attest Key가 정품인 것이 증명됐다.
+그다음엔 후속요청을 확인하는데 사용할 클라이언트 데이터와 연결된 키를 저장한다.
 
-이제 후속요청을 확인하는데 사용할 클라이언트 데이터와 연결된 키를 저장한다.
-
-이때 모든 실패가 잘못된 증명으로 인한 것은 아니다. 
-isSupported에서 false를 리턴받거나, ramp up중에 제한되어지는 것, 또는 일반적인 네트워크 오류와 같은 시나리오를 적절하게 처리한다. 
+그런데 여기까지 발생할 수 있는 모든 실패가 잘못된 증명으로 인한 것은 아니다. 
+isSupported에서 false를 리턴받거나 ramp up중에 제한되는 경우, 일반적인 네트워크 오류와 같은 시나리오를 적절하게 처리한다. 
 
 그런다음 전체 위험 평가(overall risk assessment)에서 오류를 신호로 통합할 수 있다.
 이러한 확인 구현에 대한 자세한 내용은 설명서를 참고 할 것
 
-### 대규모 설치
+### 대규모 설치에 관하여
 
 ![스크린샷 2023-05-18 오후 4 38 00](https://github.com/isGeekCode/TIL/assets/76529148/79c4f2c9-43bd-4519-b710-676130d7dbbc)
 
@@ -271,6 +308,8 @@ attest-Key API를 호출하면 앱에서 App Attest 서비스로의 네트워크
 예를 들어 일일 활성 사용자가 백명이라면 아마 하루정도에 걸쳐 증가할 수 있다.
 만약 일일 활성 사용자가 10억명이라면 !! 한달 이상에 걸쳐 증가해야한다.
 
+  
+## 3. Generate and verify assertion : 어설션 생성 및 확인
 
 
 ```swift
@@ -282,6 +321,7 @@ appAttestService.generateAssertion(keyId, clientDataHash: hash) { assertionObjec
 }
 ```
 
+### 3.1 Generate assertion
 ![스크린샷 2023-05-18 오후 4 39 23](https://github.com/isGeekCode/TIL/assets/76529148/9fa8e097-176f-4c09-8a1a-b021462c5eb1)
 
 증명된 키가 있으므로 이제 generateAssertion API호출을 이용하여 앱과 서버간의 민감한 통신을 보호할 수 있다.
