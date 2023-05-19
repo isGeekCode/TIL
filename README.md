@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_241 TILs and counting..._
+_242 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [개념 - 페이로드(Payload)](Networking/Concept_payload.md) - Fri May 19 09:49:20 2023 +0900
 - [Integrity - 리플레이 공격(Replay attack)](Integrity/Integrity_replayAttack.md) - Thu May 18 13:33:39 2023 +0900
 - [Integrity - 중간자 공격(man-in-the-middle attack)](Integrity/Integrity_manInTheMiddleAttack.md) - Thu May 18 13:20:25 2023 +0900
 - [Integrity - Secure Enclave](A_Writing_in_Progress/Integrity_secureEnclave.md) - Thu May 18 09:45:48 2023 +0900
 - [Integrity - DeviceCheck](Integrity/Integrity_DeviceCheck.md) - Tue May 16 14:56:35 2023 +0900
-- [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md) - Tue May 16 14:54:47 2023 +0900
 
 ### Categories
 
@@ -255,6 +255,7 @@ _241 TILs and counting..._
 
 ### [Networking](#Networking)
 - [Notifications - IOS에서 사용하는 알림의 종류](Networking/Apple_Notification.md)
+- [개념 - 페이로드(Payload)](Networking/Concept_payload.md)
 - [Cookie - ios에서 쿠키 다루기](Networking/Cookie_AdjustCookie.md)
 - [Cookie - WKProcessPool를 사용해 여러 웹뷰에서 쿠키 공유하기](Networking/Cookie_Cookie_sharing.md)
 - [WebView - WKWebsiteDataStore 사용하여 웹뷰의 데이터관리하기](Networking/Cookie_WebView_WKWebsiteDataStore.md)
