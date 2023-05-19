@@ -177,22 +177,25 @@ App Attest를 지원하는 장치의 비율이 갑자기 감소하면 수정된 
   
 이제 App Attest키가 성공적으로 생성되었으므로 계속해서 키를 증명해보자
   
-### 1.2 생성된 키 증명하기
+  
+## 2. Attest and verify key : 키 증명 및 확인
+
+### 2.1 생성된 키 증명하기
   
 <img width="800" alt="스크린샷 2023-05-18 오후 4 01 35" src="https://github.com/isGeekCode/TIL/assets/76529148/4c3cfa14-1cbc-4bd9-9d23-1b19a7ae589c">
 
-### 1.2.1 서버에서 챌린지 발행
+### 2.1.1 서버에서 챌린지 발행
 중간자 공격 (MITM;man-in-the-middle Attack)이나 재생 공격(Replay Attack)을 방지하려면 일회성 서버 챌린지가 필요하다.
 그렇기 때문에 서버에서 앱에 대한 챌린지를 발행한다.
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 01 40" src="https://github.com/isGeekCode/TIL/assets/76529148/b4633c89-e6f9-47a5-9586-1b92a5ff192f">
 
 
-### 1.2.2 챌린지로 해시를 생성
+### 2.1.2 챌린지로 해시를 생성
 
 증명(Attestation)을 사용자 계정 혹은 기타 값과 연결하기 위해서는, 그에 해당하는 값을 챌린지와 함께 해시하여 clientDataHash를 만든다.
 
-### 1.2.3 attestKey API 호출
+### 2.1.3 attestKey API 호출
 
 앞서 만든 keyId와 함께 clientDataHash를 사용하여 이제 attestKey API를 호출할 수 있다.
 
@@ -214,13 +217,13 @@ attestKey는 개인키를 사용하여 device에 대한 하드웨어 검증 요�
 <img width="800" alt="스크린샷 2023-05-18 오후 4 02 31" src="https://github.com/isGeekCode/TIL/assets/76529148/a78b0c56-8e6c-49e8-95f2-74f97d7793e9">
 
 
-### 1.2.4 서버로 사용자 정의 페이로드와 Attestation을 전송
+### 2.1.4 서버로 사용자 정의 페이로드와 Attestation을 전송
 
 검증을 위해서 사용자 정의 페이로드와 함께, Attestation을 다시 서버로 전송.
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 02 39" src="https://github.com/isGeekCode/TIL/assets/76529148/deb03f70-8fa0-4af1-a46a-fbd9bae535c2">
 
-## Verify Key attestation
+## 2.2 Verify Key attestation
 
 이제 앱에서 증명을 서버로 보냈으니 확인해보자
 
@@ -280,13 +283,13 @@ App Attest 루트인증서는 Apple Private PKI 저장소(Repository)에서 사�
 
 그리고 변조를 방지하기 위해 nonce를 서버에서 재구성하고, 일치하는지 확인한다.
 
-### Authenticator data 섹션
+### 2. Authenticator data 섹션
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 03 33" src="https://github.com/isGeekCode/TIL/assets/76529148/17dc9b84-dd60-40b4-98ab-23fc199a879f">  
 
 인증자 데이터 섹션에는 `순정 앱에서 보낸 요청인지 식별하는 데`에 사용할 수 있는 앱 ID 해시값과 그밖의 여러 속성이 포함되어 있다.
 
-### Risk metric receipt 
+### 3. Risk metric receipt 
 Key Attestation의 마지막 섹션에는 Risk metric receipt이 포함되어있다.
 
 이는 한번 저장한 다음, 나중에 Apple에 위험 메트릭을 요청하는데 사용할 수 있는 영수증이다. 이에 대한 자세한 내용은 뒤에 다루도록하자.
@@ -300,7 +303,7 @@ isSupported에서 false를 리턴받거나 ramp up중에 제한되는 경우, �
 그런다음 전체 위험 평가(overall risk assessment)에서 오류를 신호로 통합할 수 있다.
 이러한 확인 구현에 대한 자세한 내용은 설명서를 참고 할 것
 
-### 대규모 설치에 관하여
+## 대규모 설치에 관하여
 
 ![스크린샷 2023-05-18 오후 4 38 00](https://github.com/isGeekCode/TIL/assets/76529148/79c4f2c9-43bd-4519-b710-676130d7dbbc)
 
