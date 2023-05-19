@@ -177,13 +177,13 @@ App Attest를 지원하는 장치의 비율이 갑자기 감소하면 수정된 
   
 이제 App Attest키가 성공적으로 생성되었으므로 계속해서 키를 증명해보자
   
-### 1.2 키 증명하기
+### 1.2 생성된 키 증명하기
   
 <img width="800" alt="스크린샷 2023-05-18 오후 4 01 35" src="https://github.com/isGeekCode/TIL/assets/76529148/4c3cfa14-1cbc-4bd9-9d23-1b19a7ae589c">
 
 ### 1.2.1 서버에서 챌린지 발행
 중간자 공격 (MITM;man-in-the-middle Attack)이나 재생 공격(Replay Attack)을 방지하려면 일회성 서버 챌린지가 필요하다.
-그래서 서버에서 앱에 대한 챌린지를 발행한다.
+그렇기 때문에 서버에서 앱에 대한 챌린지를 발행한다.
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 01 40" src="https://github.com/isGeekCode/TIL/assets/76529148/b4633c89-e6f9-47a5-9586-1b92a5ff192f">
 
@@ -191,6 +191,8 @@ App Attest를 지원하는 장치의 비율이 갑자기 감소하면 수정된 
 ### 1.2.2 챌린지로 해시를 생성
 
 증명(Attestation)을 사용자 계정 혹은 기타 값과 연결하기 위해서는, 그에 해당하는 값을 챌린지와 함께 해시하여 clientDataHash를 만든다.
+
+### 1.2.3 attestKey API 호출
 
 앞서 만든 keyId와 함께 clientDataHash를 사용하여 이제 attestKey API를 호출할 수 있다.
 
@@ -201,8 +203,6 @@ appAttesService.attestKey(keyId, clientDataHash: hash) { attestationObject, erro
     // 검증을 위해 attestationObject를 서버로 전송처리
 }
 ```
-
-### 1.2.3 attestKey API 호출
 
 attestKey는 개인키를 사용하여 device에 대한 하드웨어 검증 요청(Hardware attestation request)을 생성하고,
 
@@ -284,10 +284,12 @@ App Attest 루트인증서는 Apple Private PKI 저장소(Repository)에서 사�
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 03 33" src="https://github.com/isGeekCode/TIL/assets/76529148/17dc9b84-dd60-40b4-98ab-23fc199a879f">  
 
-인증자 데이터 섹션에는 순정 앱으로의 요청인지 식별에 사용할 수 있는 앱 ID 해시값과 그밖의 여러 속성이 포함되어 있다.
+인증자 데이터 섹션에는 `순정 앱에서 보낸 요청인지 식별하는 데`에 사용할 수 있는 앱 ID 해시값과 그밖의 여러 속성이 포함되어 있다.
 
 ### Risk metric receipt 
-마지막 Key Attestation의 섹션에는 저장하고, 나중에 Apple에 위험 메트릭을 요청하는데 사용할 수 있는 영수증도 포함되어 있다. 이에 대한 자세한 내용은 뒤에 다루도록하자.
+Key Attestation의 마지막 섹션에는 Risk metric receipt이 포함되어있다.
+
+이는 한번 저장한 다음, 나중에 Apple에 위험 메트릭을 요청하는데 사용할 수 있는 영수증이다. 이에 대한 자세한 내용은 뒤에 다루도록하자.
 
 여기까지 이 모든것이 확인되면, 이 App Attest Key가 정품인 것이 증명됐다.
 그다음엔 후속요청을 확인하는데 사용할 클라이언트 데이터와 연결된 키를 저장한다.
