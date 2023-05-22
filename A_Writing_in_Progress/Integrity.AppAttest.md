@@ -74,7 +74,7 @@ Apple기기에서 앱을 실행하기 위해서는 서명이 필요하다. 그�
 
 <img width="800" alt="스크린샷 2023-05-18 오후 3 59 35" src="https://github.com/isGeekCode/TIL/assets/76529148/4092346c-5f88-4fa8-9ed5-f39417578478">
 
-증명(Attestation)에는 앱 ID의 해시이 포함되어있다. 그래서 이 앱ID를 증명에 포함된 App ID와 비교해 사용자가 수정된 버전을 사용하고 있는지 확인할 수 있다.
+증명(Attestation)에는 App ID의 해시가 포함되어있다. 그래서 이 App ID를 증명에 포함된 App ID와 비교해 사용자가 수정된 버전을 사용하고 있는지 확인할 수 있다.
 
 <img width="800" alt="스크린샷 2023-05-18 오후 3 59 41" src="https://github.com/isGeekCode/TIL/assets/76529148/6e07e96f-7c45-4f7a-af24-28360adb4921">
   
@@ -129,13 +129,13 @@ Apple에서는 Privacy가 건강한 앱 생태계의 필수 기반이라고 믿�
   
 ### 인증키는 설치당 고유값을 가진다.
 
-App Attest키는 앱 설치마다 고유하다. 즉, App Attest키는 앱 재설치 후에 유지되지않고 백업되지 않으며 기기간에 동기화 되지 않는다는 말이다.  
+App Attest키는 앱 설치마다 고유한 값을 가진다. 이 말은 App Attest키는 앱 재설치 후에 유지되지않고 백업되지 않으며 기기간에 동기화 되지 않는다는 말이다.  
 그래서 앱 개발자는 앱을 구축할 떄 이 점을 염두해야한다.
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 00 35" src="https://github.com/isGeekCode/TIL/assets/76529148/bf86fff2-c26f-4f1c-8737-4298c8caf5d8">
 
 
-## 앱에 세팅하는 절차
+## 세팅 절차
  
 **App Attest를 앱에 세팅하는 단계**
  1. Create an App Attest Key : App Attest 키 생성
@@ -165,13 +165,15 @@ App Attest는 Secure Enclave가 있는 장치에서 지원되지만 isSupported�
 때문에 앱에서는 이러한 경우를 정상적으로 처리해야한다. ( isSupported의 else 부분 )
 액세스를 곧바로 차단하는 대신에 실패를 위험신호(risk signal)로 사용해야 한다. 8:32
 
-### IsSupported가 false인 것에 대하여
+### IsSupported가 false인 경우에 대하여
 - 위험 평가를 위한 신호로 사용 (risk assessment)
 - 모니터링에서 지원하지않는 기기가 급증하는 반응
 
-먼저 호출자(caller)를 신뢰할 수 없는 것(untrusted)으로 분류한다.
+방법1. 신뢰할 수 없는 기기 여부
+호출자(caller)를 신뢰할 수 없는 것(untrusted)으로 분류한다.
 그다음 위험평가 논리(risk assessment logic)에 따라 클라이언트가 중요한 기능을 사용하도록 허용할 지의 여부를 평가한다. 위험평가 논리.... 는 다른 글 참고해보기..
 
+방법2. 모니터링
 또다른 접근 방식은 서비스를 호출할 때 App Attest를 지원하지 않는다고 주장하는 장치의 갑작스러운 증가를 모니터링을 하는 것이다.
 App Attest를 지원하는 장치의 비율이 갑자기 감소하면 수정된 앱이 확인을 우회하려고 시도하는 신호일 수 있다.
   
@@ -186,7 +188,9 @@ App Attest를 지원하는 장치의 비율이 갑자기 감소하면 수정된 
 
 ### 2.1.1 서버에서 챌린지 발행
 중간자 공격 (MITM;man-in-the-middle Attack)이나 재생 공격(Replay Attack)을 방지하려면 일회성 서버 챌린지가 필요하다.
-그렇기 때문에 서버에서 앱에 대한 챌린지를 발행한다.
+그렇기 때문에 서버에서 앱에 대한 챌린지를 발행한다. 
+  
+이 챌린지 값은 임의 문자열 또는 UUID이면 충분하다. 서버에서는 이 챌린지 값을 클라이언트(앱)로 보내기전에 저장을 하고 후에 다시 사용한다. 
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 01 40" src="https://github.com/isGeekCode/TIL/assets/76529148/b4633c89-e6f9-47a5-9586-1b92a5ff192f">
 
@@ -195,31 +199,39 @@ App Attest를 지원하는 장치의 비율이 갑자기 감소하면 수정된 
 
 증명(Attestation)을 사용자 계정 혹은 기타 값과 연결하기 위해서는, 그에 해당하는 값을 챌린지와 함께 해시하여 clientDataHash를 만든다.
 
+```swift
+// 음.. 요청값(계정) + 타임스탬프?  이렇게 하면 해당값 지정이 가능할까??
+let challenge = "textString" //  Challenge string from your server
+
+guard let challengeData = challenge.data(using: .utf8) else { return }
+let hash = Data(SHA256.hash(data: challengeData))
+```
+
 ### 2.1.3 attestKey API 호출
 
-앞서 만든 keyId와 함께 clientDataHash를 사용하여 이제 attestKey API를 호출할 수 있다.
+이제 이전 단계에서 만든 keyId와 clientDataHash를 사용하여 attestKey API를 호출할 수 있다.
 
 ```swift
 // Generate key attestation
 appAttesService.attestKey(keyId, clientDataHash: hash) { attestationObject, error in
     guard error == nil else { /* Handle error and return. */ }
-    // 검증을 위해 attestationObject를 서버로 전송처리
+    // 검증을 위해 attestationObject를 서비스서버로 전송
 }
 ```
 
-attestKey는 개인키를 사용하여 device에 대한 하드웨어 검증 요청(Hardware attestation request)을 생성하고,
+attestKey함수를 사용하면, 개인키를 사용하여 device에 대한 하드웨어 검증 요청(Hardware attestation request)을 생성한다.
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 02 16" src="https://github.com/isGeekCode/TIL/assets/76529148/30ade3ca-02b3-4483-873f-b0c444f66a7c">  
 
-이를 확인하기 위해 request를  Apple Server로 제출한다.  
-확인이 되면 Apple에서는 익명의 증명된 객체(AttestationObject)를 앱에 반환한다.
+생성된 request를 확인하기 위해 Apple Server로 제출한다.  
+확인이 되면 Apple에서는 익명의 증명 객체(AttestationObject)를 앱으로 반환한다.
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 02 31" src="https://github.com/isGeekCode/TIL/assets/76529148/a78b0c56-8e6c-49e8-95f2-74f97d7793e9">
 
 
-### 2.1.4 서버로 사용자 정의 페이로드와 Attestation을 전송
+### 2.1.4 리턴받은 Attestation과 사용자 정의 페이로드를 서비스 서버로 전송
 
-검증을 위해서 사용자 정의 페이로드와 함께, Attestation을 다시 서버로 전송.
+검증을 위해서 Attestation과 사용자 정의 페이로드를 서비스 서버로 전송.
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 02 39" src="https://github.com/isGeekCode/TIL/assets/76529148/deb03f70-8fa0-4af1-a46a-fbd9bae535c2">
 
@@ -277,7 +289,7 @@ App Attest 루트인증서는 Apple Private PKI 저장소(Repository)에서 사�
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 03 17" src="https://github.com/isGeekCode/TIL/assets/76529148/7f3d4dc5-d7bd-4de7-b2ab-88254c1a40d5">
 
-`attestKey()`를 호출하면 clientDataHash 및 기타 데이터에서 nonce라고 하는 일회용 해시가 생성되고, 
+이전단계 2.1.3 에서 `attestKey()`를 호출하면 clientDataHash 및 기타 데이터에서 nonce라고 하는 일회용 해시가 생성되고, 
 
 이 nonce는 리프인증서에 포함된다.
 
@@ -313,6 +325,7 @@ attest-Key API를 호출하면 앱에서 App Attest 서비스로의 네트워크
 예를 들어 일일 활성 사용자가 백명이라면 아마 하루정도에 걸쳐 증가할 수 있다.
 만약 일일 활성 사용자가 10억명이라면 !! 한달 이상에 걸쳐 증가해야한다.
 
+!! 이말은 아마 기간적이나 양적이나 애플에서 추가할 수 있는 양이 정해져 있다는 말인 것 같다.
   
 ## 3. Generate and verify assertion : 어설션 생성 및 확인
 
