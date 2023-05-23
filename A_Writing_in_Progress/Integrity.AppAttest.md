@@ -13,6 +13,8 @@ iOS App Attests는 앱의 신뢰성을 검증하기 위해 Apple이 제공하는
 
 ## WWDC21 - AppAttest & DeviceCheck (번역) 
 - [wwdc2021 : AppAttest & DeviceCheck](https://developer.apple.com/videos/play/wwdc2021/10244/)  
+
+### 서문
 DeviceCheck API를 사용하게 되면 device unique 라서 앱을 삭제하거나, 심지어 폰 컨텐츠 리셋을 해도 남아 있는데, App Attest는 설치할 때마다 달라진다. 
 
 <img width="800" alt="스크린샷 2023-05-18 오후 3 57 37" src="https://github.com/isGeekCode/TIL/assets/76529148/7c7a30ff-2860-4baa-81a1-b65716a2e4a4">  
@@ -23,14 +25,16 @@ DeviceCheck API를 사용하게 되면 device unique 라서 앱을 삭제하거�
 
 
 <img width="800" alt="스크린샷 2023-05-18 오후 3 57 46" src="https://github.com/isGeekCode/TIL/assets/76529148/985f484e-3078-413a-8264-939b31e60f50">  
-그럼 서버에서는 이 어설션을 이용하여 request가 정품 Apple  app에서 온것인지 확인할 수 있다.
+그럼 서버에서는 이 assertion을 이용하여 request가 정품 Apple app에서 온것인지 확인할 수 있다.
 
 
-## 변조된 앱
+### 변조된 앱
 
 몇가지 변조된 앱의 사례를 살펴보자.
 
 여행 중에 수집품을 발견하도록 장려하는 아름다운 앱을 디자인했는데 수정된 앱으로 집을 떠나지 않고도 모든 것을 수집할 수 있다는 것을 알게 된 경우
+
+<img width="800" alt="스크린샷 2023-05-18 오후 3 57 37" src="https://github.com/isGeekCode/TIL/assets/76529148/15395163-07c6-48cf-bd2c-b7cf92431e12">  
   
 또는 경쟁적인 멀티플레이어 레이싱 게임에서 치트를 사용하여 무제한 부스트를 얻어 다른 사람들이 순위표에서 경쟁하는 경우
 
