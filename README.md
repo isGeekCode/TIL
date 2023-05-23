@@ -78,7 +78,7 @@ _243 TILs and counting..._
 - [AppStore - 긴급 심사 요청(Request Expedited Review)](AppStore/AppStore_expeditedReview.md)
 - [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](AppStore/AppStore_missing_Compliance.md)
 - [리젝사유 - 2. Performance(성능)](AppStore/Reject_2_App_Completeness.md)
-- [리젝사유 - 5. Legal(성능)](AppStore/Reject_5_Legal.md)
+- [리젝사유 - 5. Legal(법률)](AppStore/Reject_5_Legal.md)
 - [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md)
 
 ### [ComputerScience](#ComputerScience)
