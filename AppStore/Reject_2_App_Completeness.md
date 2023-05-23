@@ -4,9 +4,9 @@
 
 ## Content
 - [2.1 Performance: App Completeness(앱 완전성)](#21-performance-app-completeness앱-완전성)
-    - [리젝사유(230409) - 훗타운app : 2.1 - Performance - App Completeness](#리젝사유230409---훗타운app--21---Performance---App-Completeness)
-    - [리젝사유(230409) - 훗타운app : 2.1 - Information Needed](#리젝사유230409---훗타운app--21---information-needed)
-    - [리젝사유(230510) - 라드씨엔에스app : 2.1 - Information Needed](#리젝사유230510---라드씨엔에스app--21---information-needed)
+    - [리젝사유(230409) - 훗타운app : 2.1 Performance - App Completeness](#리젝사유230409---훗타운app--21---Performance---App-Completeness)
+    - [리젝사유(230409) - 훗타운app : 2.1 Information Needed](#리젝사유230409---훗타운app--21-information-needed)
+    - [리젝사유(230510) - 라드씨엔에스app : 2.1 Information Needed](#리젝사유230510---라드씨엔에스app--21-information-needed)
 - [2.3 Performance - Accurate Metadata(정확한 메타데이터)](#23-performance---accurate-metadata정확한-메타데이터)  
     - [리젝사유(230409) - 훗타운app : 2.3 Performance - Accurate Metadata](#230409---훗타운app--23-performance---Accurate-metadata)
     - [2.3.3 (스크린샷)](#233-스크린샷)
@@ -22,7 +22,7 @@
 - 또한 앱심사를 소프트웨어 테스트용으로 사용하지 마세요. 
 - 충돌이 발생하거나 명백한 기술적 문제를 나타내는 불완전한 앱 번들 및 바이너리는 거부됩니다
 
-### 리젝사유(230409) - 훗타운app : 2.1 - Performance - App Completeness
+### 리젝사유(230409) - 훗타운app : 2.1 Performance - App Completeness
 ```
 We discovered one or more bugs in your app. 
 Specifically, “서비스 점검 안내” message was displayed in the Home. 
@@ -42,7 +42,7 @@ Additionally, an error message was displayed when we tapped on the Chat tab.
     - 심사중에 서비스 점검 안내 화면이 뜨지 않도록 조치
 
 
-### 리젝사유(230409) - 훗타운app : 2.1 - Information Needed
+### 리젝사유(230409) - 훗타운app : 2.1 Information Needed
 
 ```
 We’re looking forward to completing the review of your app, but we need more information to continue.
@@ -64,7 +64,7 @@ Please provide detailed answers to the following questions in your reply to this
     - 앱 내 차단기능의 동영상을 찍어서, 메모와 함께 제출
 
 
-### 리젝사유(230510) - 라드씨엔에스app : 2.1.0 - Information Needed
+### 리젝사유(230510) - 라드씨엔에스app : 2.1.0 Information Needed
 ```
 We’re looking forward to continuing our review, but we need more information about your business model and your users to help you find the best distribution option for your app. 
 
@@ -152,7 +152,7 @@ To help users understand your app’s functionality and value, your screenshots 
     - 2.3 정확한 메타데이터 번역
     - 2.3.3 스크린샷 번역
     - 리젝사유(230409) - 훗타운app : 2.3 Performance - Accurate Metadata
-    - 리젝사유(230409) - 훗타운app : 2.1 - Performance - App Completeness
-    - 리젝사유(230409) - 훗타운app : 2.1 - Information Needed
-    - 리젝사유(230510) - 라드씨엔에스app : 2.1 - Information Needed
+    - 리젝사유(230409) - 훗타운app : 2.1 Performance - App Completeness
+    - 리젝사유(230409) - 훗타운app : 2.1 Information Needed
+    - 리젝사유(230510) - 라드씨엔에스app : 2.1 Information Needed
 

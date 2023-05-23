@@ -2,13 +2,15 @@
 
 [AppStore Review GuideLine - 5. Legal 링크](https://developer.apple.com/app-store/review/guidelines/#legal)
 
-Apps must comply with all legal requirements in any location where you make them available (if you’re not sure, check with a lawyer). We know this stuff is complicated, but it is your responsibility to understand and make sure your app conforms with all local laws, not just the guidelines below. And of course, apps that solicit, promote, or encourage criminal or clearly reckless behavior will be rejected. In extreme cases, such as apps that are found to facilitate human trafficking and/or the exploitation of children, appropriate authorities will be notified.
+앱은 사용 가능한 모든 위치에서 모든 법적 요구 사항을 준수해야 합니다(잘 모를 경우 변호사에게 문의하십시오). 우리는 이것이 복잡하다는 것을 알고 있지만, 당신의 앱이 아래의 지침뿐만 아니라 모든 현지 법률을 준수하는지 이해하고 확인하는 것은 당신의 책임입니다. 그리고 물론 범죄 행위나 명백히 무모한 행동을 권유, 홍보 또는 장려하는 앱은 거부될 것입니다. 인신매매 및/또는 아동 착취를 용이하게 하는 것으로 밝혀진 앱과 같은 극단적인 경우에는 적절한 당국에 통보됩니다.
+
+> Apps must comply with all legal requirements in any location where you make them available (if you’re not sure, check with a lawyer). We know this stuff is complicated, but it is your responsibility to understand and make sure your app conforms with all local laws, not just the guidelines below. And of course, apps that solicit, promote, or encourage criminal or clearly reckless behavior will be rejected. In extreme cases, such as apps that are found to facilitate human trafficking and/or the exploitation of children, appropriate authorities will be notified.
 
 
 ## Content
 - [5.1 Privacy(민감성 정보)](#51-Privacy민감성-정보)
     - [5.1.1 Data Collection and Storage(데이터 수집 및 저장)](#511-Data-Collection-and-Storage데이터-수집-및-저장)
-        - [리젝사유(230409) - 훗타운app : 5.1.1 - Legal - Privacy - Data Collection and Storage](#리젝사유230409---훗타운app--511---Legal---Privacy---Data-Collection-and-Storage)
+        - [리젝사유(230409) - 훗타운app : 5.1.1 Legal - Privacy - Data Collection and Storage](#리젝사유230409---훗타운app--511-Legal---Privacy---Data-Collection-and-Storage)
 
 # 5.1 Privacy(민감성 정보)
 사용자 개인 정보 보호는 Apple ecosystem에서 가장 중요하며, 개인 데이터를 취급할 때는 고객의 기대는 물론 개인 정보 보호 모범 사례, 관련 법률 및 Apple Developer Program License Agreement의 조항을 준수하도록 *주의*해야 합니다.
@@ -39,9 +41,10 @@ Apps must comply with all legal requirements in any location where you make them
 - (ix) 규제가 심한 분야(예: 은행 및 금융 서비스, 의료, 도박, 합법적 대마초 사용 및 항공 여행)에서 서비스를 제공하거나 민감한 사용자 정보가 필요한 앱은 개별 개발자가 아니라 서비스를 제공하는 법인이 제출해야 합니다. 대마초의 합법적 판매를 촉진하는 앱은 해당 법적 관할 구역으로 지역 제한되어야 합니다.
 - (x) 앱은 사용자가 원하는 기본 연락처 정보(예: 이름 및 이메일 주소)를 요청할 수 있으며, 기능 및 서비스는 정보 제공을 조건으로 하지 않으며, 어린이로부터 정보를 수집하는 제한 사항을 포함하여 본 지침의 다른 모든 조항을 준수합니다.
 
-### 리젝사유(230409) - 훗타운app : 5.1.1 - Legal - Privacy - Data Collection and Storage
+### 리젝사유(230409) - 훗타운app : 5.1.1 Legal - Privacy - Data Collection and Storage
 
 ```
+# 원문
 Additionally, we noticed that your app requests the user’s consent to access the microphone, but doesn’t sufficiently explain the use of the microphone in the purpose string.
 
 To help users make informed decisions about how their data is used, permission request alerts need to explain and include an example of how your app will use the requested information.
@@ -89,4 +92,4 @@ Xcode의 속성 목록 편집기를 사용하여 앱의 Info.plist 파일을 수
 - 230510
     - 5.1 민감성 정보 번역
     - 5.1.1 데이터 수집 및 저장 번역
-    - 리젝사유(230409) - 리젝사유(230409) - 훗타운app : 5.1.1 - Legal - Privacy - Data Collection and Storage
+    - 리젝사유(230409) - 훗타운app : 5.1.1 Legal - Privacy - Data Collection and Storage
