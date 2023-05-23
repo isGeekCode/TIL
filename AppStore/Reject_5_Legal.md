@@ -1,4 +1,4 @@
-# 리젝사유 - 5. Legal(성능)
+# 리젝사유 - 5. Legal(법률)
 
 [AppStore Review GuideLine - 5. Legal 링크](https://developer.apple.com/app-store/review/guidelines/#legal)
 
@@ -8,6 +8,7 @@
 
 
 ## Content
+- [5. Legal(법률)](#5-Legal법률)
 - [5.1 Privacy(민감성 정보)](#51-Privacy민감성-정보)
     - [5.1.1 Data Collection and Storage(데이터 수집 및 저장)](#511-Data-Collection-and-Storage데이터-수집-및-저장)
         - [리젝사유(230409) - 훗타운app : 5.1.1 Legal - Privacy - Data Collection and Storage](#리젝사유230409---훗타운app--511-Legal---Privacy---Data-Collection-and-Storage)
@@ -90,6 +91,9 @@ Xcode의 속성 목록 편집기를 사용하여 앱의 Info.plist 파일을 수
 
 # History
 - 230510
-    - 5.1 민감성 정보 번역
-    - 5.1.1 데이터 수집 및 저장 번역
+    - 5.1 `민감성 정보` 번역
+    - 5.1.1 `데이터 수집 및 저장` 번역
     - 리젝사유(230409) - 훗타운app : 5.1.1 Legal - Privacy - Data Collection and Storage
+- 230524
+    - 5. `법률` 번역
+    - 기존 리젝 정보 주석추가
