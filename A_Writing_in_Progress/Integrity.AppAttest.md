@@ -15,7 +15,7 @@ iOS App Attests는 앱의 신뢰성을 검증하기 위해 Apple이 제공하는
 - [wwdc2021 : AppAttest & DeviceCheck](https://developer.apple.com/videos/play/wwdc2021/10244/)  
 
 ### 서문
-DeviceCheck API를 사용하게 되면 device unique 라서 앱을 삭제하거나, 심지어 폰 컨텐츠 리셋을 해도 남아 있는데, App Attest는 설치할 때마다 달라진다. 
+DeviceCheck API를 사용하게 되면 device의 고유값을 애플 서버에 저장하는 것이라 앱을 삭제하거나, 심지어 폰 컨텐츠 리셋을 해도 남아 있는데, App Attest는 설치할 때마다 달라진다. 
 
 <img width="800" alt="스크린샷 2023-05-18 오후 3 57 37" src="https://github.com/isGeekCode/TIL/assets/76529148/7c7a30ff-2860-4baa-81a1-b65716a2e4a4">  
 
@@ -33,7 +33,7 @@ request의 일부로 첨부할 수 있다.
 
 ### 변조된 앱
 
-몇가지 변조된 앱의 사례를 살펴보자.
+몇 가지 변조된 앱의 사례를 살펴보자.
 
 1. 여행 중에 특정 아이템을 발견하고 수집하는 위치기반 앱을 디자인했는데 수정된 앱으로 집을 떠나지 않고도 모든 것을 수집할 수 있다는 것을 알게 된 경우
 
@@ -43,11 +43,11 @@ request의 일부로 첨부할 수 있다.
 
 <img width="800" alt="스크린샷 2023-05-18 오후 3 57 58" src="https://github.com/isGeekCode/TIL/assets/76529148/97475c1f-d921-49b1-9b4c-2b20672109ac">
   
-3.  토요일에 일어나보니 서버에서 엄청나게 많은 요청을 수신한 것을 보았지만, 조사해보니 앱에서 호출이 전혀 오지 않는다는 것을 알게 된 경우
+3. 서버에서 엄청나게 많은 request를 수신한 것을 보았지만, 조사해보니 앱에서는 전혀 호출을 보내지 않았다는 것을 알게 된 경우
 
 <img width="800" alt="스크린샷 2023-05-18 오후 3 58 06" src="https://github.com/isGeekCode/TIL/assets/76529148/c9c03ba7-b1b8-49c8-87a4-f68817326367">
 
-App Attest 서비스에서는 이런식으로 수정된 버전을 앱의 정품 버전과 식별하여 앱 경험과 비즈니스를 보호할 수 있도록 도와준다.  
+App Attest 서비스에서는 이런 식으로 변조된 앱을 앱의 정품 버전과 식별하여 앱 경험과 비즈니스를 보호할 수 있도록 도와준다.  
 
 ## App Attest 서비스의 3가지 특징
 App Attest는 개발자와 개발자의 고객을 보호하기위해 아래 3가지의 중요한 포인트를 제공해준다.
@@ -66,15 +66,24 @@ App Attest는 개발자와 개발자의 고객을 보호하기위해 아래 3가
   
 ### 1. 정품 애플 기기 여부 (Genuine Apple device)
 - App Attest의 핵심
-    - Key pair : 보안키 쌍
+    - Key pair : 비대칭 공개/비밀 암호화 키 쌍
     - 애플증명서 : 이 키 쌍이 정품 Apple 기기에서 발생했다는 걸 서명한 애플증명서
   
 <img width="800" alt="스크린샷 2023-05-18 오후 3 59 12" src="https://github.com/isGeekCode/TIL/assets/76529148/b84e9c5d-f065-4f61-8800-3a00efbdae60">
   
-그리고 발급된 키 쌍 중, 개인 키는 App Attest API를 이용하는 Secure Enclave를 통해서만 접근 / 저장 할 수 있다.
+발급된 키 쌍 중, 개인 키는 App Attest API를 이용하는 Secure Enclave를 통해서만 접근 / 저장 할 수 있다.
 
 이제 앱에서 서버로 보낼 request에 이 키를 사용하여 서명할 수 있게 되고, 
 서버에서는 서명을 통해 받은 request가 정품기기에서 생성된 것인지 확인할 수 있게 된다.
+
+그런데 서버로 보낼 request에 서명하려면 해당 서명을 확인할 수 있는 방법을 서버에 제공해야한다.
+
+가장 단순한 방법은 request를 생성할 때, 공개키를 파라미터로 담아서 보내는 방법이다.
+하지만 이 방법은 해커가 요청을 가로채서 자신의 키를 주입하는 것이 쉬워지기 때문에, 내용을 보장할 수가 없다.
+이를 위해 Apple에서 제시한 해결책은 무결한 App으로부터 비롯된 키임을 증명하도록 요청하는 것이다.
+
+- 사용 메서드
+    - DCAppAttestService.shared.generateKey
 
 ### 2. 인증된 앱 ID 여부 (Authentic application identity)
   
@@ -83,6 +92,7 @@ App Attest는 개발자와 개발자의 고객을 보호하기위해 아래 3가
 Apple기기에서 앱을 실행하기 위해서는 앱에 서명이 필요하다. 그리고 앱을 수정하는 사람은 자신이 제어하는 ID로 다시 앱에 서명해야 한다.
 그렇게 되면 반드시 App ID는 수정이 된다. 
 
+
 <img width="800" alt="스크린샷 2023-05-18 오후 3 59 35" src="https://github.com/isGeekCode/TIL/assets/76529148/4092346c-5f88-4fa8-9ed5-f39417578478">
 
 증명(Attestation)에는 App ID의 해시가 포함되어있다. 
@@ -90,6 +100,8 @@ Apple기기에서 앱을 실행하기 위해서는 앱에 서명이 필요하다
 
 <img width="800" alt="스크린샷 2023-05-18 오후 3 59 41" src="https://github.com/isGeekCode/TIL/assets/76529148/6e07e96f-7c45-4f7a-af24-28360adb4921">
   
+- 사용 메서드
+    - DCAppAttestService.shared.attestKey(keyID: hash:)
 
 이렇게 Request가 정품기기 && 정품앱에서 온 것을 확인했으니 request의 페이로드에 대해 이야기 해보자
 
@@ -124,12 +136,12 @@ generate assertion : App Attest에 증명된 키 + 페이로드 요약(digest) �
 서버에서 페이로드에 대한 assertion을 확인하면, 페이로드가 전송 중에 변조되지않았다는 것을 신뢰할 수 있다.
 
 여기까지 App Attest 서비스의 3가지 특징 및 간단한 로직을 설명해 보았다.
+이제 프라이버시에 대해 이야기해보자
 
 ## Privacy
-  
+
 - 증명은 익명이다.
 - 인증키는 설치당 고유값을 가진다.
-이제 프라이버시에 대해 이야기해보자
 
   
 <img width="800" alt="스크린샷 2023-05-18 오후 4 00 07" src="https://github.com/isGeekCode/TIL/assets/76529148/d32350ff-d6d1-4e05-b4b0-eacf2ef6406b">
@@ -161,7 +173,8 @@ App Attest키는 앱 설치마다 고유한 값을 가진다. 이 말은 App Att
 **App Attest를 앱에 세팅하는 단계 : App-Side**
  1. Create an App Attest Key : App Attest 키 생성
  2. Attest and verify key : 키 증명 및 확인
- 3. Generate and verify assertion : 어설션 생성 및 확인
+ 3. Generate and verify assertion : 어설션 생성 및 확인 (선택사항)
+ 4. App Attest를 서버에 세팅 : Server-Side
 
 ## 1. Create an App Attest Key
 
@@ -219,7 +232,8 @@ App Attest를 지원하는 장치의 비율이 갑자기 감소하면 수정된 
 ### 2.1.2 챌린지로 해시를 생성
 
 증명(Attestation)을 사용자 계정 혹은 기타 값과 연결하기 위해서는, 그에 해당하는 값을 챌린지와 함께 해시하여 clientDataHash를 만든다.
-
+이 챌린지를 통해서 만든 hash 변수는 증명 프로세스 자체와는 관련이 없지만 이를 안전하게 만드는 데 매우 중요하다.
+예상되는 토큰을 attestation의 요청에 넣어주면 Apple은 이걸 최종객체에 포함하고 서버에서 이를 추출하는 방법을 제공한다. 이를 통해 해커가 사용하지못하도록 만들 수 있다.
 ```swift
 // 음.. 요청값(계정) + 타임스탬프?  이렇게 하면 해당값 지정이 가능할까??
 let challenge = "textString" //  Challenge string from your server
@@ -232,6 +246,7 @@ let hash = Data(SHA256.hash(data: challengeData))
 
 이제 이전 단계에서 만든 keyId와 clientDataHash를 사용하여 attestKey API를 호출할 수 있다.
 
+
 ```swift
 // Generate key attestation
 appAttesService.attestKey(keyId, clientDataHash: hash) { attestationObject, error in
@@ -240,12 +255,13 @@ appAttesService.attestKey(keyId, clientDataHash: hash) { attestationObject, erro
 }
 ```
 
-attestKey함수를 사용하면, 개인키를 사용하여 device에 대한 하드웨어 검증 요청(Hardware attestation request)을 생성한다.
-
 <img width="800" alt="스크린샷 2023-05-18 오후 4 02 16" src="https://github.com/isGeekCode/TIL/assets/76529148/30ade3ca-02b3-4483-873f-b0c444f66a7c">  
 
-생성된 request를 확인하기 위해 Apple Server로 제출한다.  
-확인이 되면 Apple에서는 익명의 증명 객체(AttestationObject)를 앱으로 반환한다.
+
+> attestKey함수를 사용하면, 공개 키뿐만 아니라 이전에 생성된 키가 가짜가 아니라는 Apple의 진술 역할을 하는 앱에 대한 수많은 정보를 포함하는 익명의 증명(Attestation) 객체를 리턴받는다.  
+> 이 객체를 받으면 서비스 서버로 보내야하고, 변경되지않았음을 확인 할 수 있도록 몇가지 유효성 검사를 수행해야한다.   
+> 증명객체가 성공적으로 검증되면, 서비스 서버에서 공개키를 안전하게 추출할 수 있다.
+
 
 <img width="800" alt="스크린샷 2023-05-18 오후 4 02 31" src="https://github.com/isGeekCode/TIL/assets/76529148/a78b0c56-8e6c-49e8-95f2-74f97d7793e9">
 
@@ -348,7 +364,7 @@ attest-Key API를 호출하면 앱에서 App Attest 서비스로의 네트워크
 
 !! 이말은 아마 기간적이나 양적이나 애플에서 추가할 수 있는 양이 정해져 있다는 말인 것 같다.
   
-## 3. Generate and verify assertion : 어설션 생성 및 확인
+## 3. Generate and verify assertion : 어설션 생성 및 확인 (선택사항)
 
 
 ```swift
@@ -451,6 +467,10 @@ attestKey는 증명(attestation)과 위험 메트릭 영수증을 반환한다.
  <img width="800" alt="스크린샷 2023-05-18 오후 4 08 29" src="https://github.com/isGeekCode/TIL/assets/76529148/eac09339-018e-4788-99b5-79eb5f390551">
 
 이건 PKCS7 컨테이너다. 더 자세한 내용은 DeviceCheck Framework 공식문서의 Assessing Fraud 아티클을 참조하자.
+
+# 4. 서버측 검증 
+
+
 
 ## App Clips
 <img width="800" alt="스크린샷 2023-05-18 오후 4 08 36" src="https://github.com/isGeekCode/TIL/assets/76529148/c6abdb1d-f67b-44a0-a3f6-962852c7175f">
@@ -704,6 +724,113 @@ func fetchChallenge(completion: @escaping (Data?, Error?) -> Void) {
         
         completion(data, nil)
     }.resume()
+}
+
+```
+
+### Server-side
+```csharp
+using System;
+using System.Net.Http;
+using System.Web.Http;
+using System.Text;
+using System.Collections;
+using System.Data;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using LeadonNet.Models;
+using LeadonNet.App_Code;
+using System.Net.Mail;
+using System.Security.Cryptography;
+
+
+public static class HashUtility
+{
+    public static string ComputeSHA256(string input)
+    {
+        using (SHA256 sha256 = SHA256.Create())
+        {
+            byte[] inputBytes = Encoding.UTF8.GetBytes(input);
+            byte[] hashBytes = sha256.ComputeHash(inputBytes);
+            return ToHexString(hashBytes);
+        }
+    }
+
+    private static string ToHexString(byte[] bytes)
+    {
+        StringBuilder builder = new StringBuilder(bytes.Length * 2);
+        foreach (byte b in bytes)
+        {
+            builder.AppendFormat("{0:x2}", b);
+        }
+        return builder.ToString();
+    }
+
+
+}
+
+
+namespace LeadonNet.Controllers
+{
+
+    [RoutePrefix("Api/Employee")]
+    public class EmployeeController : ApiController
+    {
+    
+        #region App Attest
+        [HttpPost]
+        [Route("appAttest")]
+        public IHttpActionResult VerifyAttestation(JObject attestationObject)
+        {
+            try
+            {
+                // attestationObject 검증 로직 구현
+
+                // 1. attestationObject의 구조와 필드 유효성 확인
+                if (attestationObject["fmt"]?.ToString() != "apple-appattest")
+                {
+                    throw new Exception("Invalid attestationObject format");
+                }
+
+                JObject attStmt = attestationObject["attStmt"] as JObject;
+                if (attStmt == null)
+                {
+                    throw new Exception("Invalid attestation statement");
+                }
+
+                // 2. 인증서 체인 검증
+                JArray x5c = attStmt["x5c"] as JArray;
+                if (x5c == null || x5c.Count == 0)
+                {
+                    throw new Exception("No certificate chain found");
+                }
+
+                // 인증서 체인 검증 로직을 구현해야 합니다.
+                // attStmt["x5c"] 배열에 포함된 인증서들을 가져와서 검증합니다.
+
+
+                // 3. RP ID 및 App ID 확인
+                // attestationObject에서 RP ID 및 App ID 값을 가져옵니다.
+                string rpIdHash = attestationObject["authData"].ToString().Substring(0, 64);
+                string appIdHash = HashUtility.ComputeSHA256("your_app_id");
+                if (rpIdHash != appIdHash)
+                {
+                    throw new Exception("Invalid RP ID or App ID");
+                }
+
+
+                // 검증이 성공적으로 완료되면 attestationObject를 신뢰할 수 있습니다.
+
+                // 모든 검증이 성공한 경우
+                return Ok("OK");
+            }
+            catch (Exception)
+            {
+                return BadRequest("Invalid request");
+            }
+        }
+        #endregion
+    }
 }
 
 ```
