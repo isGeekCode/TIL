@@ -12,6 +12,8 @@
     - [2.3.3 (스크린샷)](#233-스크린샷)
         - [리젝사유(230407) - 훗타운app : 2.3.3 Screenshots should show the app in use(스크린샷 사용)](#리젝사유230407---훗타운app--233-screenshots-should-show-the-app-in-use스크린샷-사용)
 
+[Top](#)
+
 # 2.1 Performance: App Completeness(앱 완전성)
 - 사전 주문할 수 있도록 만든 앱을 포함하여 App Review에 제출하는 것은 필요한 모든 메타데이터와 완벽하게 작동하는 URL이 포함된 최종 버전이어야 합니다.
 - 앱을 제출하기 전에 placeholder 텍스트, 빈 웹 사이트 및 기타 임시 콘텐츠를 제거해야 합니다.
