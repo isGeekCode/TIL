@@ -61,6 +61,6 @@ Resources
 
 # History
 - 230524
-    - 4. 디자인 번역
+    - 4 디자인 번역
     - 4.8 애플로그인 번역
     - 리젝사유(230524) - MyNB앱 : 4.8 Design: Sign in with Apple
