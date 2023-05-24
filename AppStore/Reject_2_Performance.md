@@ -4,7 +4,7 @@
 
 ## Content
 - [2.1 Performance: App Completeness(앱 완전성)](#21-performance-app-completeness앱-완전성)
-    - [리젝사유(230409) - 훗타운app : 2.1 Performance - App Completeness](#리젝사유230409---훗타운app--21---Performance---App-Completeness)
+    - [리젝사유(230409) - 훗타운app : 2.1 Performance - App Completeness](#리젝사유230409---훗타운app--21-Performance---App-Completeness)
     - [리젝사유(230409) - 훗타운app : 2.1 Information Needed](#리젝사유230409---훗타운app--21-information-needed)
     - [리젝사유(230510) - 라드씨엔에스app : 2.1 Information Needed](#리젝사유230510---라드씨엔에스app--21-information-needed)
 - [2.3 Performance - Accurate Metadata(정확한 메타데이터)](#23-performance---accurate-metadata정확한-메타데이터)  
@@ -64,7 +64,7 @@ Please provide detailed answers to the following questions in your reply to this
     - 앱 내 차단기능의 동영상을 찍어서, 메모와 함께 제출
 
 
-### 리젝사유(230510) - 라드씨엔에스app : 2.1.0 Information Needed
+### 리젝사유(230510) - 라드씨엔에스app : 2.1 Information Needed
 ```
 We’re looking forward to continuing our review, but we need more information about your business model and your users to help you find the best distribution option for your app. 
 
