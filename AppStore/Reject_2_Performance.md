@@ -63,7 +63,7 @@ Please provide detailed answers to the following questions in your reply to this
 
 - 대응  
     - 앱 내 차단기능의 동영상을 찍어서, 메모와 함께 제출
-
+[Top](#)
 
 ### 리젝사유(230510) - 라드씨엔에스app : 2.1 Information Needed
 ```
@@ -104,7 +104,7 @@ Please review the following questions and provide as much detailed information a
         - 앱에 유료기능이 없기 때문에 콘텐츠 비용이 존재하지 않습니다.  
     ```
 
-
+[Top](#)
 
 # 2.3 Performance - Accurate Metadata(정확한 메타데이터)
 - 사용자가 앱을 다운로드하거나 구입할 때, 앱에 대하여 명확히 알 수 있도록 민감성 정보, 앱 설명, 스크린샷 및 미리보기를 포함한 모든 앱 메타데이터를 표기해야합니다. 그래서 앱의 핵심 경험을 정확하게 반영하고 새 버전으로 최신 상태로 유지해야 합니다.
