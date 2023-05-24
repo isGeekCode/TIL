@@ -22,7 +22,7 @@
 - 귀하의 은은 특정 타사 서비스의 클라이언트이며 사용자는 자신의 콘텐츠에 액세스하려면 메일, 소셜 미디어 또는 다른 타사 계정에 직접 로그인해야 합니다.
 
 
-### 리젝사유(230524) - MyNB앱 : 4.8.0 Design: Sign in with Apple
+### 리젝사유(230524) - MyNB앱 : 4.8 Design: Sign in with Apple
 
 ```
 # 원문
@@ -63,4 +63,4 @@ Resources
 - 230524
     - 4. 디자인 번역
     - 4.8 애플로그인 번역
-    - 리젝사유(230524) - MyNB앱 : 4.8.0 Design: Sign in with Apple
+    - 리젝사유(230524) - MyNB앱 : 4.8 Design: Sign in with Apple
