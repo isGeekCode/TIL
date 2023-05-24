@@ -9,7 +9,7 @@
 
 ## Content
 - [4.8 Sign in with Apple(애플 로그인)](#48-Sign-in-with-Apple애플-로그인)
-    - [리젝사유(230524) - MyNB앱 : 4.8 Design: Sign in with Apple](#리젝사유230524---MyNB앱--48-Legal---Privacy---Data-Collection-and-Storage)
+    - [리젝사유(230524) - MyNB앱 : 4.8 Design: Sign in with Apple](#리젝사유230524---MyNB앱--48-Design-Sign-in-with-Apple)
 
 # 4.8 Sign in with Apple(애플 로그인)
 타사 또는 소셜 로그인 서비스(Facebook Login, Google Sign-In, Twitter로 로그인, LinkedIn으로 로그인, Amazon으로 로그인 또는 WeChat Login)를 사용하여 사용자의 기본 계정을 설정하거나 인증하는 앱도 동등한 옵션으로 Apple로 로그인을 제공해야 합니다. 사용자의 기본 계정은 사용자를 식별하고 로그인하고 사용자의 기능 및 관련 서비스에 액세스할 목적으로 사용자가 사용자의 앱에 설정한 계정입니다.
