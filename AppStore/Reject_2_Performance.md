@@ -22,6 +22,8 @@
 - 또한 앱심사를 소프트웨어 테스트용으로 사용하지 마세요. 
 - 충돌이 발생하거나 명백한 기술적 문제를 나타내는 불완전한 앱 번들 및 바이너리는 거부됩니다
 
+[Top](#)
+
 ### 리젝사유(230409) - 훗타운app : 2.1 Performance - App Completeness
 ```
 We discovered one or more bugs in your app. 
@@ -41,9 +43,9 @@ Additionally, an error message was displayed when we tapped on the Chat tab.
 - 대응
     - 심사중에 서비스 점검 안내 화면이 뜨지 않도록 조치
 
+[Top](#)
 
 ### 리젝사유(230409) - 훗타운app : 2.1 Information Needed
-[Top](#)
   
 ```
 We’re looking forward to completing the review of your app, but we need more information to continue.
@@ -63,6 +65,7 @@ Please provide detailed answers to the following questions in your reply to this
 
 - 대응  
     - 앱 내 차단기능의 동영상을 찍어서, 메모와 함께 제출
+
 [Top](#)
 
 ### 리젝사유(230510) - 라드씨엔에스app : 2.1 Information Needed
@@ -127,6 +130,7 @@ We noticed that your app's metadata includes the following information, which is
 - 대응
     - 해당 내용에는 대응 하지않았음
 
+[Top](#)
 
 ## 2.3.3 (스크린샷)
 - 스크린샷에는 제목 아트, 로그인 페이지 또는 시작 화면뿐만 아니라 사용 중인 앱이 표시되어야 합니다. 또한 텍스트 및 이미지 오버레이(예: 애니메이션 터치 포인트 또는 Apple Pencil 등의 입력 메커니즘을 시연하기 위한 것)를 포함하고 터치 바와 같은 장치에서 확장된 기능을 표시할 수 있습니다
@@ -145,6 +149,9 @@ To help users understand your app’s functionality and value, your screenshots 
 - 대응
     - 이곳에 4형 디스플레이와, 3.5형 디스플레이 이미지가 있었기 떄문에 삭제하며 상황 종료
 
+
+[Top](#)
+
 # History
 - 230407
     - 리젝사유(230407) - 훗타운app : 2.3.3 Screenshots should show the app in use(스크린샷 사용)
@@ -156,4 +163,7 @@ To help users understand your app’s functionality and value, your screenshots 
     - 리젝사유(230409) - 훗타운app : 2.1 Performance - App Completeness
     - 리젝사유(230409) - 훗타운app : 2.1 Information Needed
     - 리젝사유(230510) - 라드씨엔에스app : 2.1 Information Needed
+
+
+[Top](#)
 
