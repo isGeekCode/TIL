@@ -43,7 +43,8 @@ Additionally, an error message was displayed when we tapped on the Chat tab.
 
 
 ### 리젝사유(230409) - 훗타운app : 2.1 Information Needed
-
+[Top](#)
+  
 ```
 We’re looking forward to completing the review of your app, but we need more information to continue.
 
