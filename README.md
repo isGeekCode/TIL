@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_243 TILs and counting..._
+_244 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [리젝사유 - 2. Performance(성능)](AppStore/Reject_2_Performance.md) - Wed May 24 09:01:24 2023 +0900
+- [리젝사유 - 4. Design(디자인)](AppStore/Reject_4_Design.md) - Wed May 24 09:01:24 2023 +0900
 - [Flutter Error - Entrypoint doesn't contain...](About-Error/zFlutterError_EntryPoint.md) - Sun May 21 20:47:27 2023 +0900
 - [개념 - 페이로드(Payload)](Networking/Concept_payload.md) - Fri May 19 09:49:20 2023 +0900
 - [Integrity - 리플레이 공격(Replay attack)](Integrity/Integrity_replayAttack.md) - Thu May 18 13:33:39 2023 +0900
-- [Integrity - 중간자 공격(man-in-the-middle attack)](Integrity/Integrity_manInTheMiddleAttack.md) - Thu May 18 13:20:25 2023 +0900
-- [Integrity - Secure Enclave](A_Writing_in_Progress/Integrity_secureEnclave.md) - Thu May 18 09:45:48 2023 +0900
 
 ### Categories
 
@@ -77,7 +77,8 @@ _243 TILs and counting..._
 - [기존 배포되어있는 앱을 다른 앱으로 바꾸기](AppStore/AppStore_ChangeBundleId.md)
 - [AppStore - 긴급 심사 요청(Request Expedited Review)](AppStore/AppStore_expeditedReview.md)
 - [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](AppStore/AppStore_missing_Compliance.md)
-- [리젝사유 - 2. Performance(성능)](AppStore/Reject_2_App_Completeness.md)
+- [리젝사유 - 2. Performance(성능)](AppStore/Reject_2_Performance.md)
+- [리젝사유 - 4. Design(디자인)](AppStore/Reject_4_Design.md)
 - [리젝사유 - 5. Legal(법률)](AppStore/Reject_5_Legal.md)
 - [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md)
 
