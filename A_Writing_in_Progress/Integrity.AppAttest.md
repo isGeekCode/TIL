@@ -469,8 +469,96 @@ attestKey는 증명(attestation)과 위험 메트릭 영수증을 반환한다.
 이건 PKCS7 컨테이너다. 더 자세한 내용은 DeviceCheck Framework 공식문서의 Assessing Fraud 아티클을 참조하자.
 
 # 4. 서버측 검증 
+[Apple문서 : Validating Apps That Connect to Your Server ](https://developer.apple.com/documentation/devicecheck/validating_apps_that_connect_to_your_server)
+앱에서는 DCAppAttestService.shared 인스턴스를 사용하여 암호화키를 생성하고 이 키의 유효성을 증명한다.
+그러면 해당 키 식별자와 함께 앱이 서버에 전달하는 AttestationObject(증명개체)가 생성된다.
+
+이제 서버에서는 이 증명개체를 확인한다음에 포함된 공개키 및 기타정보를 추출한다. 
+그러면 서버에서는 키를 사용해서 앱 수명주기의 중요한 시점에 앱에서 보내는 Assertion개체를 확인 할 수 있게 된다.
+- 예 : 사용자가 프리미엄 콘텐츠를 다운로드 하려고 하는 경우 등
+
+<img width="600" alt="스크린샷 2023-05-24 오전 10 45 05" src="https://github.com/isGeekCode/TIL/assets/76529148/6cedbaec-cdcc-45da-a2ce-c5fa04966966">
+  
 
 
+## Provide a Challenge : 챌린지 제공 기능
+앱이 Attestation 데이터를 서버에 전달해야할 때마다 먼저 서버로 일회성 챌린지를 요청한다. 이를 통해 공격자가 재생공격을 구현하기가 어려워진다.
+
+앱에서 챌린지를 요청하면 무작위의 데이터 값을 제공하고, 클라이언트가 보내는 해당 증명 Attestation 또는 Assertion 개체를 확인할 때 사용할 수 있도록 기억한다. 챌린지 데이터를 사용하는 방법은 유효성 검사를 해야하는 개체의 종류에 다라 달라진다. 
+
+
+
+## Verify the Attestation
+
+앱 증명 서비스는 웹 인증 규격에 따라 인증자 데이터와 증명문으로 구성된 증명 개체를 만든다.
+앱 증명에서 특히 중요한 인증자 필드는 다음과 같다.
+- RP ID : 32byte
+    - 10자리 팀 식별자, 마침표 및 앱 값을 연결한 앱 앱 ID의 해시. App Clip이 생성하는 증명은 App Clip의 식별자가 아닌 전체 앱의 식별자를 사용한다.
+- counter : 4byte
+    - 앱이 assertion에 서명하기 위해 증명된 키를 사용한 횟수를 보고하는 값이다.
+- aaguid : 16byte
+    - 증명된 키가 개발 또는 프로덕션  환뭘ㄹ경에 속하는지 나타내는 App Attest관련 상수이다. 
+    - 앱은 
+- credentialId : 32byte
+    - 증명된 암호화 키 쌍의 공개 키 부분 해시
+
+증명문은 다음 구문과 함께 사용자 지정 Apple 증명문 형식을 사용한다.
+```
+$$attStmtType //= (
+                      fmt: "apple-appattest",
+                      attStmt: StmtFormat
+                  )
+
+StmtFormat =      {
+                      x5c: [ credCert: bytes, * (caCert: bytes) ],
+                      receipt: bytes,
+                  }
+```
+
+증명 개체를 확인하고 디코딩 하려면 예상구문을 사용하는 CBOR 데이터 형식이 있는지 확인한다.  
+[참고 링크 : CBOR(Concise Binary Object Representation)](https://datatracker.ietf.org/doc/html/rfc7049)
+디코딩된 개체는 아래와 같다.
+
+```swift
+{
+  fmt: 'apple-appattest',
+  attStmt: {
+    x5c: [
+      <Buffer 30 82 02 cc ... >,
+      <Buffer 30 82 02 36 ... >
+    ],
+    receipt: <Buffer 30 80 06 09 ... >
+  },
+  authData: <Buffer 21 c9 9e 00 ... >
+}
+```
+앱이 보내는 키 식별자와 함께 디코딩된 개체를 사용하여 아래 단계를 수행한다. 
+
+
+1. x5c 배열이 App Attest의 중간 및 리프 인증서를 포함하고 있는지 확인합니다. 이 배열은 인증서 체인의 첫 번째 데이터 버퍼인 credcert에서부터 시작해야 합니다. Apple의 App Attest 루트 인증서를 사용하여 인증서의 유효성을 검증합니다.
+
+2. clientDataHash를 서버에서 앱으로 보내는 일회용 챌린지의 SHA256 해시로 생성하고, 이 해시를 인증자 데이터(authData)의 끝에 추가합니다.
+
+3. 논스를 생성하기 위해 합성 항목(composite item)의 SHA256 해시를 생성합니다.
+
+4. credCert의 OID 1.2.840.113635.100.8.2에 있는 credCert 확장(extension)의 값을 가져옵니다. 이 값은 DER 인코딩된 ASN.1 시퀀스로, 시퀀스를 디코드하고 포함된 단일 옥텟 문자열을 추출합니다. 이 문자열이 논스와 일치하는지 확인합니다.
+
+5. credCert의 공개 키의 SHA256 해시를 생성하고, 이 해시가 앱에서 보내는 키 식별자와 일치하는지 확인합니다.
+
+6. 앱의 App ID의 SHA256 해시를 계산하고, 이 해시가 인증자 데이터의 RP ID 해시와 동일한지 확인합니다.
+
+7.  인증자 데이터의 counter 필드가 0인지 확인합니다.
+
+8. 인증자 데이터의 aaguid 필드가 개발 환경에서는 "appattestdevelop"이거나 제품 환경에서는 "appattest" 다음에 0x00으로 이루어진 7바이트인지 확인합니다.
+
+9. 인증자 데이터의 credentialId 필드가 키 식별자와 동일한지 확인합니다.
+
+위의 단계를 성공적으로 완료하면, attestation 객체를 신뢰할 수 있습니다.
+
+## Store the Public Key and Receipt
+## Verify the Assertion
+
+# Assessing Fraud Risk
 
 ## App Clips
 <img width="800" alt="스크린샷 2023-05-18 오후 4 08 36" src="https://github.com/isGeekCode/TIL/assets/76529148/c6abdb1d-f67b-44a0-a3f6-962852c7175f">
