@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_245 TILs and counting..._
+_246 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [22년 5월 피드백 / 6월 목표](Self-Review/review_220530May.md) - Fri May 26 16:01:19 2023 +0900
+- [어떻게 리뷰할 것인가](Self-Review/aboutReview.md) - Fri May 26 16:01:19 2023 +0900
+- [23년 4월 피드백 / 5월 목표](Self-Review/review_230428April.md) - Fri May 26 16:01:19 2023 +0900
+- [# 23년 5월 피드백 / 6월 목표](Self-Review/review_230526May.md) - Fri May 26 16:01:19 2023 +0900
 - [Tip - 셀 클릭시 높이가 변경되는 테이블뷰 만들기](Mobile-IOS/zTip_flexibleTableView.md) - Fri May 26 14:06:55 2023 +0900
-- [리젝사유 - 4. Design(디자인)](AppStore/Reject_4_Design.md) - Wed May 24 09:01:24 2023 +0900
-- [리젝사유 - 2. Performance(성능)](AppStore/Reject_2_Performance.md) - Wed May 24 09:01:24 2023 +0900
-- [Flutter Error - Entrypoint doesn't contain...](About-Error/zFlutterError_EntryPoint.md) - Sun May 21 20:47:27 2023 +0900
-- [개념 - 페이로드(Payload)](Networking/Concept_payload.md) - Fri May 19 09:49:20 2023 +0900
 
 ### Categories
 
@@ -295,9 +295,10 @@ _245 TILs and counting..._
 - [Ruby - 버전관리 : RVM, Rbenv 사용법](Ruby/ManageRuby.md)
 
 ### [Self-Review](#Self-Review)
-- [리뷰에 관하여](Self-Review/230424_Spring.md)
-- [23년 4월 피드백 / 5월 목표](Self-Review/230428April.md)
-- [# 22년 05월 리뷰](Self-Review/TIL220530_MayReview.md)
+- [어떻게 리뷰할 것인가](Self-Review/aboutReview.md)
+- [22년 5월 피드백 / 6월 목표](Self-Review/review_220530May.md)
+- [23년 4월 피드백 / 5월 목표](Self-Review/review_230428April.md)
+- [# 23년 5월 피드백 / 6월 목표](Self-Review/review_230526May.md)
 
 ### [SwitchingScreens](#SwitchingScreens)
 - [present - CodeUI to StoryBoard](SwitchingScreens/moveToStoryboard.md)
