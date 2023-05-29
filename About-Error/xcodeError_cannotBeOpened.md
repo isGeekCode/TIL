@@ -1,4 +1,4 @@
-# Xcode - Cannot be opened because it is in a future Xcode project file format.
+# Xcode Error - Cannot be opened because it is in a future Xcode project file format.
 
 xcode 14.0에서 생성한 프로젝트가 xcode 13.1에서 열리지 않았다
 
