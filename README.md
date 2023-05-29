@@ -61,7 +61,7 @@ _249 TILs and counting..._
 - [Xcode Error - Launching _AppName_ is taking longer than expected](About-Error/xcodeError_Launching_is_taking_longer_than.md)
 - [Xcode Error - Unknown class @@ in Interface Builder file.](About-Error/xcodeError_UnknownClassInInterface.md)
 - [Xcode Error - Assistant가 작동하지 않을때 체크해야할 것](About-Error/xcodeError_XcodeAssistant.md)
-- [Xcode - Cannot be opened because it is in a future Xcode project file format.](About-Error/xcodeError_cannotBeOpened.md)
+- [Xcode Error - Cannot be opened because it is in a future Xcode project file format.](About-Error/xcodeError_cannotBeOpened.md)
 - [Xcode Error - iPhone is busy: Making Apple Watch ready for development](About-Error/xcodeError_makingAppleWatch.md)
 - [Xcode Error - maximumViewportInset cannot be larger than frame](About-Error/xcodeError_viewResizing.md)
 - [Xcode Error - warning: libobjc.A.dylib is being read from process memory...](About-Error/xcodeError_warningLibObjc.md)
