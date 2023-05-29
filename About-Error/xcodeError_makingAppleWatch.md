@@ -1,4 +1,4 @@
-# Xcode - iPhone is busy: Making Apple Watch ready for development
+# Xcode Error - iPhone is busy: Making Apple Watch ready for development
 
 디바이스 목록에 들어가보면 내 기기정보에 이런 메세지가 있는 경우가 있다. 
 ```

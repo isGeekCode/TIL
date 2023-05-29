@@ -1,4 +1,4 @@
-iOS - Unknown class @@ in Interface Builder file.
+# Xcode Error - Unknown class @@ in Interface Builder file.
 
 [Storyboard] Unknown class in Interface Builder file.
 

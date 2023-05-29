@@ -1,4 +1,4 @@
-# Git - command line tools are already installed (사실 git 에러 아님)
+# Git Error - command line tools are already installed (사실 git 에러 아님)
 
 ## 발견
 

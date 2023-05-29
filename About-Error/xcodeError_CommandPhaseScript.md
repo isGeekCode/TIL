@@ -1,4 +1,4 @@
-# Xcode - Command PhaseScriptExecution failed with a nonzero exit code
+# Xcode Error - Command PhaseScriptExecution failed with a nonzero exit code
 
 ## 발견
 

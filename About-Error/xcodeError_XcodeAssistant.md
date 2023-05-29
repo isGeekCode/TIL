@@ -1,4 +1,4 @@
-# Xcode Assistant가 작동하지 않을때 체크해야할 것
+# Xcode Error - Assistant가 작동하지 않을때 체크해야할 것
 
 보통 스토리보드와 소스와의 연결이나 모델, 뷰모델 을 함께 보기위해 우측에 Assistant를 통해 스플릿뷰를 사용합니다.
 

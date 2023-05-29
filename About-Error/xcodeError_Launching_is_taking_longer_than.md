@@ -1,4 +1,4 @@
-Xcode - Launching _AppName_ is taking longer than expected
+# Xcode Error - Launching _AppName_ is taking longer than expected
 
 앱을 실행하는 데 매우 오래 걸리며(2분 이상) 스플래시 화면에 2~3분 더 표시된다.
 

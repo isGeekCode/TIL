@@ -1,4 +1,4 @@
-# maximumViewportInset cannot be larger than frame
+# Xcode Error - maximumViewportInset cannot be larger than frame
 
 [ViewportSizing] maximumViewportInset cannot be larger than frame
 
