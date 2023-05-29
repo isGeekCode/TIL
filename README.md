@@ -6,15 +6,15 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_248 TILs and counting..._
+_249 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Xcode - Command PhaseScriptExecution failed with a nonzero exit code](About-Error/xcodeError_CommandPhaseScript.md) - Tue May 30 08:49:12 2023 +0900
 - [Flutter - Toggle Switch](Flutter/Flutter_ToggleSwitch.md) - Mon May 29 22:45:42 2023 +0900
 - [22년 7월 회고 / 8월 목표](Self-Review/review_220806July.md) - Fri May 26 16:06:28 2023 +0900
-- [23년 5월 회고 / 6월 목표](Self-Review/review_230526May.md) - Fri May 26 16:01:19 2023 +0900
 - [23년 4월 회고 / 5월 목표](Self-Review/review_230428April.md) - Fri May 26 16:01:19 2023 +0900
 - [어떻게 리뷰할 것인가](Self-Review/aboutReview.md) - Fri May 26 16:01:19 2023 +0900
 
@@ -60,6 +60,7 @@ _248 TILs and counting..._
 - [Xcode Assistant가 작동하지 않을때 체크해야할 것](About-Error/TIL_220531_XcodeAssistant.md)
 - [터미널에러 - xcrun: error: active developer path...](About-Error/terminalError_xcrun230410.md)
 - [Git - command line tools are already installed (사실 git 에러 아님)](About-Error/xcodeError_CommandLineTool.md)
+- [Xcode - Command PhaseScriptExecution failed with a nonzero exit code](About-Error/xcodeError_CommandPhaseScript.md)
 - [Xcode - Launching _AppName_ is taking longer than expected](About-Error/xcodeError_Launching_is_taking_longer_than.md)
 - [Xcode - cannot be opened because it is in a future Xcode project file format.](About-Error/xcodeError_cannotBeOpened.md)
 - [Xcode - iPhone is busy: Making Apple Watch ready for development](About-Error/xcodeError_makingAppleWatch.md)
