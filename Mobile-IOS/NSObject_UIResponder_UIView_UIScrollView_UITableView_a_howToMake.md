@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UITableView_만들기
+# NSObject_UIResponder_UIView_UITableView : 레이아웃
 
 ## Step1. TableView 선언
 
