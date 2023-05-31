@@ -1,4 +1,4 @@
-# UIKit - UITableViewCell : accessoryType
+# NSObject_UIResponder_UIView_UITableViewCell : accessoryType
 
 애플문서
 
