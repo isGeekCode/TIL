@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UITableView : 셀 클릭시 높이가 변경되는 테이블뷰
+# NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 클릭시 높이가 변경되는 테이블뷰
 
 
 
