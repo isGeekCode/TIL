@@ -1,4 +1,4 @@
-# UIKit - UITableView
+# UIKit - UITableView : 셀 경계선 없애기
 
 
 ## 셀경계선 없애기
