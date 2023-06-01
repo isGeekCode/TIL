@@ -43,7 +43,7 @@ UIViewController에서 한번 ViewDidLoad를 통해 View가 Load되면 이후로
 
 아래는 개발자가 조작할 수 있는 부분만 나타낸 흐름도이다.
 ### 그림(1)  
-  <img width="300" alt="img1 daumcdn-4" src="https://github.com/isGeekCode/TIL/assets/76529148/23d9c401-415f-4bca-93e3-744f06224a29">  
+  <img width="500" alt="img1 daumcdn-4" src="https://github.com/isGeekCode/TIL/assets/76529148/23d9c401-415f-4bca-93e3-744f06224a29">  
 
 ### 그림(2)  
   <img width="600" alt="1_jb1Y17gwQCRi2XCKy7_QHQ" src="https://github.com/isGeekCode/TIL/assets/76529148/73d9eb10-f7f8-409c-8ace-913b9c785f29">  

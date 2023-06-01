@@ -80,7 +80,81 @@ class MyTableViewController: UITableViewController {
 ```
 
 ## UIViewController에서 UITableViewController를 추가하는 방법
+특별히 UIViewController에서 UITableViewController를 관리하기 위해 `addChild`로 추가하고 `tableViewController.didMove(toParent: self)`로 추가해서 사용할 수 있다.
+
+- 키워드
+    - addChild()
+    - didMove(toParent:)
+
+### addChild()
+아래 예시 처럼 부모 클래스 내부에서 addChild(자녀클래스)의 형태로 선언한다.
 ```swift
+class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        addChild(tableViewController)
+}
+```
+### didMove(toParent:)
+아래 전체코드 예시처럼 부모 클래스 내부에서 원하는 객체를 만들어서 해당객체.didMove(toParent: self)의 형태로 선언한다.
+
+### 전체코드
+```swift
+class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        addChild(tableViewController)
+}
+```
+
+```swift
+class MyTableViewController: UITableViewController {
+    var selectedRowIndex: Int?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+    }
+    
+    // 선택
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("didSelectRowAt: \(indexPath.row)")
+    }
+    
+    // 필수 : 셀을 얼마나 보여줄 것인지 정의
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    // 필수 : 셀을 어떻게 보여줄 것인지 정의
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = "Row \(indexPath.row + 1)"
+        return cell
+    }
+}
+
+class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tableViewController = MyTableViewController()
+        tableViewController.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        addChild(tableViewController)
+        view.addSubview(tableViewController.tableView)
+        tableViewController.tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableViewController.tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableViewController.tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableViewController.tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableViewController.tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        tableViewController.didMove(toParent: self)
+    }
+}
 
 ```
 ### 구동화면

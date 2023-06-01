@@ -23,10 +23,12 @@ UIViewController는 iOS 앱의 핵심 구성 요소 중 하나로, 사용자 인
 - View
 
 ## 주요 함수
+워낙 iOS앱의 핵심 구성 요소이기 때문에 많은 함수가 존재한다.
+### 생성자 소멸자 함수 (init / deinit)
+
 
 ### 생명주기 함수
-[]()
-워낙 iOS앱의 핵심 구성 요소이기 때문에 많은 함수가 존재한다.
+- [TIL : UIViewController의 생명주기 함수](https://github.com/isGeekCode/TIL/blob/main/Mobile-IOS/NSObject_UIResponder_UIViewController_lifeCycle.md)
 
 초기화(initialization) 과정:
 
