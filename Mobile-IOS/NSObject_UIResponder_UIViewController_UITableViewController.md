@@ -80,8 +80,7 @@ class MyTableViewController: UITableViewController {
 ```
 
 ### 구동화면
-![IMG_0839](https://github.com/isGeekCode/TIL/assets/76529148/c550dd46-1970-4298-b5f5-883e2261ec92)
-  
+  <img width="300" alt="IMG_0839" src="https://github.com/isGeekCode/TIL/assets/76529148/c550dd46-1970-4298-b5f5-883e2261ec92">  
 
 ### History
 - 230601 : 생성
