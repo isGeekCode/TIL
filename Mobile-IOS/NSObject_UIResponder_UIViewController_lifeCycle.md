@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIViewController : View의 생명주기 (View's Life-cycle)
+# NSObject_UIResponder_UIViewController : UIViewController의 생명주기 (UIVC's Life-cycle)
 
 
 - Life-Cycle Method

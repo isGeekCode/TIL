@@ -115,27 +115,6 @@ ViewController는 두가지 타입이 존재한다.
 - ViewController사이에서는 전환이 가능하고 이전 ViewController의 View가 유지가 될수도 , 안될 수도 있다.
 - 그 해당시점을 이벤트화하여 생명주기에 따른 메서드를 지정할 수 있다.
 
-## LifeCycle Method
-
-- ViewDidLoad()
-- viewWillAppear()
-- viewDidAppear()
-- viewWillDisAppear()
-- viewDidDisappear()
-
-- ViewDidLoad()
-  1.  뷰컨트롤러의 `var view: UIView!`프로퍼티는 지연로딩된다. view가 필요로 될 때 view가 nil이면 `loadView()` 메소드를 호출하여 view를 로드
-  2.  **`loadView()`직후**에 호출되는 콜백메소드
-- viewWillAppear()
-  뷰컨트롤러의 root view 가 로드된 이후에 **window 의 뷰 계층으로 더해지기 직전** 호출되는 메소드이다.
-- viewDidAppear()
-  window 의 root view가 **뷰 계층으로 더해진 직 후** 호출되는 메소드이다.
-- viewWillDisAppear()
-  window 의 root view가 **뷰 계층에서 제거되기 직 전** 호출되는 메소드이다.
-- viewDidDisappear()
-  window 의 root view가 **뷰 계층에서 제거된 직 후** 호출되는 메소드이다.
-
-![스크린샷 2022-03-15 오후 4.06.36.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aa2b4970-3545-421d-9a86-89c677f9d9a2/스크린샷_2022-03-15_오후_4.06.36.png)
 
 정리
 
