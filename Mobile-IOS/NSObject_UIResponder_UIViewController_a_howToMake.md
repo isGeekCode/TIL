@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIViewController : 생성하기
+# NSObject_UIResponder_UIViewController : 생성자
 
 UIViewController 클래스를 살펴보면 init과 관련하여 2가지를 확인할 수 있고, 추가적으로 팩토리 메소드 패턴인 instantiateViewController를 통하여도 생성할 수 있다.
 
@@ -77,7 +77,7 @@ UIViewController의 인스턴스를 초기화하는 메소드다. 이 메소드�
     - 번들 : 해당 nib 파일이 위치한 번들
 
 아래 코드에서 "MyViewController"는 nib 파일의 이름이다. 이 파일은 프로젝트의 메인 번들에 위치해야 한다.
-```
+```swift
 let myViewController = MyViewController(nibName: "MyViewController", bundle: nil)
 ```
 
@@ -91,7 +91,7 @@ let myViewController = MyViewController(nibName: "MyViewController", bundle: nil
 
 스토리보드에서 특정 뷰 컨트롤러를 로드하려면, UIStoryboard의 instantiateViewController(withIdentifier:) 메소드를 사용할 수 있다. 이 메소드는 스토리보드 파일에서 식별자에 해당하는 뷰 컨트롤러를 로드하고 인스턴스화한다.
 
-```
+```swift
 let storyboard = UIStoryboard(name: "Main", bundle: nil)
 let viewController = storyboard.instantiateViewController(withIdentifier: "MyViewController") as! MyViewController
 
