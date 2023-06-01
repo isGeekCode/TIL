@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIScrollView_UITableView : 레이아웃
+# NSObject_UIResponder_UIView_UIScrollView_UITableView : 사용법
 
 ## Step1. TableView 선언
 
