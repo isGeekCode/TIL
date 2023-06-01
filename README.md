@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_252 TILs and counting..._
+_253 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
 - [NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 사용법](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UICollectionView_a_howToMake.md) - Wed May 31 15:33:11 2023 +0900
-- [NSObject_UIResponder_UIView_UITableViewCell : ContentView](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_ContentView.md) - Wed May 31 15:16:08 2023 +0900
+- [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 클릭시 높이가 변경되는 테이블뷰](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_z_FlexibleTableViewCell.md) - Wed May 31 15:16:08 2023 +0900
 - [NSObject_UIResponder_UIView_UITableViewCell : accessoryType](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_Delegate_AccessoryType.md) - Wed May 31 15:16:08 2023 +0900
 - [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 경계선없는 테이블뷰](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_excludeOutline.md) - Wed May 31 15:16:08 2023 +0900
-- [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 클릭시 높이가 변경되는 테이블뷰](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_z_FlexibleTableViewCell.md) - Wed May 31 15:16:08 2023 +0900
+- [NSObject_UIResponder_UIView_UITableViewCell : ContentView](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_ContentView.md) - Wed May 31 15:16:08 2023 +0900
 
 ### Categories
 
@@ -224,7 +224,8 @@ _252 TILs and counting..._
 - [NSObject_UIResponder : Responder Chain 리스폰더 체인에 대하여](Mobile-IOS/NSObject_UIResponder_.md)
 - [NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기 기능](Mobile-IOS/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
 - [NSObject_UIResponder_UIViewController_UITableViewController : 테이블뷰 전용 ViewController](Mobile-IOS/NSObject_UIResponder_UIViewController_UITableViewController.md)
-- [NSObject_UIResponder_UIViewController : View의 생명주기 (View's Life-cycle)](Mobile-IOS/NSObject_UIResponder_UIViewController_lifeCycle.md)
+- [NSObject_UIResponder_UIViewController : 사용법](Mobile-IOS/NSObject_UIResponder_UIViewController_a_Functions.md)
+- [NSObject_UIResponder_UIViewController : UIViewController의 생명주기 (UIVC's Life-cycle)](Mobile-IOS/NSObject_UIResponder_UIViewController_lifeCycle.md)
 - [NSObject_UIResponder_UIView_UIControl_UIButton](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UIButton.md)
 - [NSObject_UIResponder_UIView_UIControl_UISwitch](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UISwitch.md)
 - [NSObject_UIResponder_UIView_UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](Mobile-IOS/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
