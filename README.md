@@ -6,15 +6,15 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_250 TILs and counting..._
+_251 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 레이아웃](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UICollectionView_a_howToMake.md) - Wed May 31 15:33:11 2023 +0900
-- [NSObject_UIResponder_UIView_UITableViewCell : accessoryType](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_Delegate_AccessoryType.md) - Wed May 31 15:16:08 2023 +0900
+- [NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 사용법](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UICollectionView_a_howToMake.md) - Wed May 31 15:33:11 2023 +0900
 - [NSObject_UIResponder_UIView_UITableViewCell : ContentView](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_ContentView.md) - Wed May 31 15:16:08 2023 +0900
+- [NSObject_UIResponder_UIView_UITableViewCell : accessoryType](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_Delegate_AccessoryType.md) - Wed May 31 15:16:08 2023 +0900
 - [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 경계선없는 테이블뷰](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_excludeOutline.md) - Wed May 31 15:16:08 2023 +0900
 - [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 클릭시 높이가 변경되는 테이블뷰](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_z_FlexibleTableViewCell.md) - Wed May 31 15:16:08 2023 +0900
 
@@ -223,18 +223,19 @@ _250 TILs and counting..._
 - [NSObject - UIFont](Mobile-IOS/NSObject_UIFont.md)
 - [NSObject_UIResponder : Responder Chain 리스폰더 체인에 대하여](Mobile-IOS/NSObject_UIResponder_.md)
 - [NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기 기능](Mobile-IOS/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
+- [NSObject_UIResponder_UIViewController_UITableViewController : 테이블뷰 전용 ViewController](Mobile-IOS/NSObject_UIResponder_UIViewController_UITableViewController.md)
 - [NSObject_UIResponder_UIView_UIControl_UIButton](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UIButton.md)
 - [NSObject_UIResponder_UIView_UIControl_UISwitch](Mobile-IOS/NSObject_UIResponder_UIView_UIControl_UISwitch.md)
 - [NSObject_UIResponder_UIView_UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](Mobile-IOS/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
 - [NSObject_UIResponder_UIView_UIProgressView](Mobile-IOS/NSObject_UIResponder_UIView_UIProgressView.md)
 - [NSObject_UIResponder_UIView_UIScrollView](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView.md)
-- [NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 레이아웃](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UICollectionView_a_howToMake.md)
-- [NSObject_UIResponder_UIView_UIScrollView_UITableView : 레이아웃](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_a_howToMake.md)
+- [NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 사용법](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UICollectionView_a_howToMake.md)
+- [NSObject_UIResponder_UIView_UIScrollView_UITableView : 사용법](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_a_howToMake.md)
 - [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 경계선없는 테이블뷰](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_excludeOutline.md)
 - [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 클릭시 높이가 변경되는 테이블뷰](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_z_FlexibleTableViewCell.md)
 - [NSObject_UIResponder_UIView_UITableViewCell : ContentView](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_ContentView.md)
 - [NSObject_UIResponder_UIView_UITableViewCell : accessoryType](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_Delegate_AccessoryType.md)
-- [NSObject_UIResponder_UIView_UIActivityIndicatorView : 레이아웃](Mobile-IOS/NsObject_UIResponder_UIView_UIActivityIndicatorView.md)
+- [NSObject_UIResponder_UIView_UIActivityIndicatorView : 사용법](Mobile-IOS/NsObject_UIResponder_UIView_UIActivityIndicatorView.md)
 - [소켓이란](Mobile-IOS/TIL220420_socket.md)
 - [타임스탬프 구현하기](Mobile-IOS/TIL220914_TimeStamp.md)
 - [AudioToolbox - 롱프레스와 햅틱진동 구현하기 (Feat.Long press)](Mobile-IOS/Third_AudioToolBox_HapticAndLongpress.md)
