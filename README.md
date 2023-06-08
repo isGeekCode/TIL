@@ -44,7 +44,7 @@ _254 TILs and counting..._
 - [Self-Review](#Self-Review)
 - [SwitchingScreens](#SwitchingScreens)
 - [Xcode](#Xcode)
-- [swift](#swift)
+- [Swift](#Swift)
 
 ### [A_Writing_in_Progress](#A_Writing_in_Progress)
 - [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md)
@@ -322,7 +322,7 @@ _254 TILs and counting..._
 - [Scheme - Debug / Release 빌드 분리하기](Xcode/Scheme_Separate_BuildSet.md)
 - [iOS DeviceSupport - 테스트 디바이스 iOS 수동 업데이트](Xcode/iOSDeviceSupport_Manually_update.md)
 
-### [swift](#swift)
+### [Swift](#Swift)
 - [Do - Try - Catch](swift/DoTryCatch.md)
 - [Swift문법 기초](swift/Swift1.md)
 - [random함수를 이용해 Random한 숫자 뽑아내기](swift/Swift_random_in_array.md)
