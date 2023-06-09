@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_255 TILs and counting..._
+_256 TILs and counting..._
 
 ---
 
@@ -346,10 +346,11 @@ _255 TILs and counting..._
 - [고차함수 - Higher Order Function : Map, Filter, Reduce, Sort, FlatMap](swift/higherOrderFuction.md)
 - [Splite과 Component](swift/splite_component_map.md)
 - [Swift - 스위프트에서 사용하는 패턴들](swift/swift_a_swift_patterns.md)
+- [case let : for case let 익숙해지기](swift/swift_caseLet_for.md)
+- [Switch case let, If case let, guard case let](swift/swift_caseLet_switch_if_guard.md)
 - [Closure 톺아보기](swift/swift_firstClassClosureMaster.md)
 - [1급 객체](swift/swift_firstClassObject.md)
 - [Array의 특정값을 포함한 IndexPath찾고 값 바꾸기](swift/swift_replacingArrayIndexValue..md)
-- [Switch case let, If case let, guard case let](swift/switchCaseLet_IfCaseLet_GuardCaseLet.md)
 
 [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 [2]: https://github.com/jbranchaud/til
