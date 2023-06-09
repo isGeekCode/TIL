@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_256 TILs and counting..._
+_257 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
 - [NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 사용법](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UICollectionView_a_howToMake.md) - Wed May 31 15:33:11 2023 +0900
-- [NSObject_UIResponder_UIView_UITableViewCell : ContentView](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_ContentView.md) - Wed May 31 15:16:08 2023 +0900
 - [NSObject_UIResponder_UIView_UITableViewCell : accessoryType](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_Delegate_AccessoryType.md) - Wed May 31 15:16:08 2023 +0900
 - [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 클릭시 높이가 변경되는 테이블뷰](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_z_FlexibleTableViewCell.md) - Wed May 31 15:16:08 2023 +0900
 - [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 경계선없는 테이블뷰](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_excludeOutline.md) - Wed May 31 15:16:08 2023 +0900
+- [NSObject_UIResponder_UIView_UITableViewCell : ContentView](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_ContentView.md) - Wed May 31 15:16:08 2023 +0900
 
 ### Categories
 
@@ -54,6 +54,7 @@ _256 TILs and counting..._
 
 ### [About-Error](#About-Error)
 - [Git Error - command line tools are already installed (사실 git 에러 아님)](About-Error/gitError_CommandLineTool.md)
+- [Git Error - RPC failed; curl 18 transfer closed with...](About-Error/gitError_RPCfailed.md)
 - [SourceTree Error - 시도때도 없이 꺼지는 현상](About-Error/sourceTreeError_fatalError.md)
 - [Terminal Error - xcrun: error: active developer path...](About-Error/terminalError_xcrunError.md)
 - [Xcode Error - Presenting view controllers on detached view controllers is discouraged.](About-Error/xcodeError_Alert_In_UIViewController_Init.md)
