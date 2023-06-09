@@ -6,16 +6,16 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_254 TILs and counting..._
+_255 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
 - [NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 사용법](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UICollectionView_a_howToMake.md) - Wed May 31 15:33:11 2023 +0900
-- [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 클릭시 높이가 변경되는 테이블뷰](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_z_FlexibleTableViewCell.md) - Wed May 31 15:16:08 2023 +0900
-- [NSObject_UIResponder_UIView_UITableViewCell : accessoryType](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_Delegate_AccessoryType.md) - Wed May 31 15:16:08 2023 +0900
 - [NSObject_UIResponder_UIView_UITableViewCell : ContentView](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_ContentView.md) - Wed May 31 15:16:08 2023 +0900
+- [NSObject_UIResponder_UIView_UITableViewCell : accessoryType](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_Delegate_AccessoryType.md) - Wed May 31 15:16:08 2023 +0900
+- [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 클릭시 높이가 변경되는 테이블뷰](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_z_FlexibleTableViewCell.md) - Wed May 31 15:16:08 2023 +0900
 - [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 경계선없는 테이블뷰](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_excludeOutline.md) - Wed May 31 15:16:08 2023 +0900
 
 ### Categories
@@ -44,7 +44,7 @@ _254 TILs and counting..._
 - [Self-Review](#Self-Review)
 - [SwitchingScreens](#SwitchingScreens)
 - [Xcode](#Xcode)
-- [Swift](#Swift)
+- [swift](#swift)
 
 ### [A_Writing_in_Progress](#A_Writing_in_Progress)
 - [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md)
@@ -322,7 +322,7 @@ _254 TILs and counting..._
 - [Scheme - Debug / Release 빌드 분리하기](Xcode/Scheme_Separate_BuildSet.md)
 - [iOS DeviceSupport - 테스트 디바이스 iOS 수동 업데이트](Xcode/iOSDeviceSupport_Manually_update.md)
 
-### [Swift](#Swift)
+### [swift](#swift)
 - [Do - Try - Catch](swift/DoTryCatch.md)
 - [Swift문법 기초](swift/Swift1.md)
 - [random함수를 이용해 Random한 숫자 뽑아내기](swift/Swift_random_in_array.md)
@@ -345,6 +345,7 @@ _254 TILs and counting..._
 - [파일경로 String으로에서 확장자 추출하기](swift/bringToExtensionName.md)
 - [고차함수 - Higher Order Function : Map, Filter, Reduce, Sort, FlatMap](swift/higherOrderFuction.md)
 - [Splite과 Component](swift/splite_component_map.md)
+- [Swift - 스위프트에서 사용하는 패턴들](swift/swift_a_swift_patterns.md)
 - [Closure 톺아보기](swift/swift_firstClassClosureMaster.md)
 - [1급 객체](swift/swift_firstClassObject.md)
 - [Array의 특정값을 포함한 IndexPath찾고 값 바꾸기](swift/swift_replacingArrayIndexValue..md)
