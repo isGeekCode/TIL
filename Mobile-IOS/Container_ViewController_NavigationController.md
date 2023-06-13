@@ -15,19 +15,19 @@ ViewController는 두가지 타입이 존재한다.
 
 아래 그림은 iOS에서 정말 많이 사용하는 인터페이스이다. 주로 계층적 구조의 화면전환을 위해 사용되는 드릴다운 인터페이스이다.
 
-![스크린샷 2022-03-22 오후 1.32.04.png](assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-03-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.32.04.png)
+<img width="829" alt="스크린샷 2022-03-22 오후 1 32 04" src="https://github.com/isGeekCode/TIL/assets/76529148/e2947994-f48f-4bb8-a3a7-9a2429b41122">
 
 네비게이션 인터페이스를 구현하기위해서는 네비게이션 컨트롤러가 필요하다.
 
 네비게이션 컨트롤러는 2개의 뷰를 나타낸다. 하나는 네비게이션 바( 혹은 툴바)이고 다른 하나는 **네비게이션 스택**에 쌓일 컨텐츠뷰이다.
 
-![스크린샷 2022-03-22 오후 1.40.48.png](assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-03-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.40.48.png)
+<img width="382" alt="스크린샷 2022-03-22 오후 1 40 48" src="https://github.com/isGeekCode/TIL/assets/76529148/87eefccd-c9c2-4dd5-ba8f-38cf249a68bc">
 
 StoryBoard의 라이브러리에서 NavigationController를 선택하여 사용하고
 
 기존의 ViewController를 사용하려면 editor - embed In 을 보면 Navigation / Tab Bar를 선택할 수 있다.
 
-![스크린샷 2022-03-22 오후 1.41.33.png](assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-03-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.41.33.png)
+<img width="356" alt="스크린샷 2022-03-22 오후 1 41 33" src="https://github.com/isGeekCode/TIL/assets/76529148/31b16b0f-b1bc-4efc-8659-7e289efbb02a">
 
 Navigation컨트롤러를 이용하여 View를 이동하면 네이게이션 스택에 쌓이게된다.
 
@@ -119,7 +119,7 @@ func popToViewController(_ viewController: UIViewController,
 
 **양옆**: 네비게이션 아이템
 
-![스크린샷 2022-03-22 오후 1.51.41.png](assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-03-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.51.41.png)
+<img width="741" alt="스크린샷 2022-03-22 오후 1 51 41" src="https://github.com/isGeekCode/TIL/assets/76529148/2f628846-d43a-4af5-9591-f1b48065e8e2">
 
 ### **UINavigationController Class**
 
@@ -219,7 +219,7 @@ v.addSubView(label)
 1. 스토리보드의 네비게이션 컨트롤러 클릭
 2. 우측 Attributes Inspector에서 Shows Navigation Bar 해제
 
-![스크린샷 2022-03-22 오후 2.00.07.png](assets/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-03-22_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_2.00.07.png)
+<img width="279" alt="스크린샷 2022-03-22 오후 2 00 07" src="https://github.com/isGeekCode/TIL/assets/76529148/b8e2cda3-dd0a-4451-ab4e-a927f14a4a41">
 
 코드이용하기
 
