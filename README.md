@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_259 TILs and counting..._
+_260 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [MVVM 구현해보며 익히기](IOS-Architecture/MVVM_what.md) - Fri Jun 16 17:00:41 2023 +0900
 - [GitLab SSH키 생성하기](Git/Git_SSHKey_INIT.md) - Mon Jun 12 14:50:21 2023 +0900
 - [Flutter - 삼각형 View 그리기](Flutter/Flutter_View_shape_triangle.md) - Sun Jun 11 00:19:25 2023 +0900
 - [NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 사용법](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UICollectionView_a_howToMake.md) - Wed May 31 15:33:11 2023 +0900
-- [NSObject_UIResponder_UIView_UITableViewCell : accessoryType](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_Delegate_AccessoryType.md) - Wed May 31 15:16:08 2023 +0900
-- [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 클릭시 높이가 변경되는 테이블뷰](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UITableView_z_FlexibleTableViewCell.md) - Wed May 31 15:16:08 2023 +0900
+- [NSObject_UIResponder_UIView_UITableViewCell : ContentView](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_ContentView.md) - Wed May 31 15:16:08 2023 +0900
 
 ### Categories
 
@@ -144,6 +144,7 @@ _259 TILs and counting..._
 - [Architecture - IOS MVC의 한계](IOS-Architecture/MVC_Massive.md)
 - [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](IOS-Architecture/MVC_traditional.md)
 - [Architecture - 간단한 MVVM구조 예제](IOS-Architecture/MVVM_simpleExample.md)
+- [MVVM 구현해보며 익히기](IOS-Architecture/MVVM_what.md)
 - [ReactorKit - 예제: CountApp](IOS-Architecture/RxSwift_ReactorKit_CountApp.md)
 - [Architecture - 비즈니스 로직이란](IOS-Architecture/aboutBusinessLogic.md)
 
