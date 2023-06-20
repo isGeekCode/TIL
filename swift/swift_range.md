@@ -1,4 +1,4 @@
-Swift - Range 함수 사용하기
+# Swift - Range 함수 사용하기
 
 
 range 함수는 Swift에서 문자열 내에서 특정 부분을 찾을 때 사용된다.
