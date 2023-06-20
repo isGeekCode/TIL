@@ -150,5 +150,30 @@ if let range = str.range(of: "o", options: .caseInsensitive, range: range1) {
 
 ```
 
+
+## 사용예시
+### 230620 카카오링크 이동처리
+
+```
+// 카카오 앱클릭시 들어온 링크
+kakao8c364cb8bb46ab6f01c0e9cdbe4e5c3c://kakaolink?url=https://dev-m.lloydgift.com/productDetail/searchProductDetail?styleNo=PR202305180017069&brandCd=LL
+```
+- kakaolink? 여부 체크
+- url= 의 범위 체크
+- 위 범위보다 큰 index의 텍스트값 가져오기
+- String으로 캐스팅
+    - URL을 이용할땐, 반드시  String값을 가지고 캐스팅 해야한다. 
+```
+// Configs.URL.kakaoLink = "kakaolink?"
+if urlString.contains(Configs.URL.kakaoLink), let urlLinkRange = urlString.range(of: "url=") {
+    let urlSubstring = urlString[urlLinkRange.upperBound...]
+    targetString = String(urlSubstring)
+    
+    //URL 이동처리 로직 실행
+}
+```
+
+
+
 ## History
 - 230620 : 초안작성
