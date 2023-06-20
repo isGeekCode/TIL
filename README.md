@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_260 TILs and counting..._
+_261 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [MVVM 구현해보며 익히기](IOS-Architecture/MVVM_what.md) - Fri Jun 16 17:00:41 2023 +0900
+- [MVC to MVVM : 02. TableVC 클릭시 텍스트 변경](IOS-Architecture/MVCToMVVM_02_Task.md) - Mon Jun 19 09:25:57 2023 +0900
+- [MVC to MVVM : 01. UTC 오늘, 현재, 내일 시간보기](IOS-Architecture/MVCToMVVM_01_UTC.md) - Mon Jun 19 09:25:57 2023 +0900
 - [GitLab SSH키 생성하기](Git/Git_SSHKey_INIT.md) - Mon Jun 12 14:50:21 2023 +0900
 - [Flutter - 삼각형 View 그리기](Flutter/Flutter_View_shape_triangle.md) - Sun Jun 11 00:19:25 2023 +0900
 - [NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 사용법](Mobile-IOS/NSObject_UIResponder_UIView_UIScrollView_UICollectionView_a_howToMake.md) - Wed May 31 15:33:11 2023 +0900
-- [NSObject_UIResponder_UIView_UITableViewCell : ContentView](Mobile-IOS/NSObject_UIResponder_UIView_UITableViewCell_ContentView.md) - Wed May 31 15:16:08 2023 +0900
 
 ### Categories
 
@@ -141,10 +141,11 @@ _260 TILs and counting..._
 - [디자인패턴이란](IOS-Architecture/About_Design_MVX_Init.md)
 - [Cocoa Design Pattern - Delegate 델리게이트 패턴](IOS-Architecture/CocoaDesignPattern_Delegate.md)
 - [Cocoa Design Pattern - Singleton (싱글톤 패턴)](IOS-Architecture/CocoaDesignPattern_Singleton.md)
+- [MVC to MVVM : 01. UTC 오늘, 현재, 내일 시간보기](IOS-Architecture/MVCToMVVM_01_UTC.md)
+- [MVC to MVVM : 02. TableVC 클릭시 텍스트 변경](IOS-Architecture/MVCToMVVM_02_Task.md)
 - [Architecture - IOS MVC의 한계](IOS-Architecture/MVC_Massive.md)
 - [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](IOS-Architecture/MVC_traditional.md)
 - [Architecture - 간단한 MVVM구조 예제](IOS-Architecture/MVVM_simpleExample.md)
-- [MVVM 구현해보며 익히기](IOS-Architecture/MVVM_what.md)
 - [ReactorKit - 예제: CountApp](IOS-Architecture/RxSwift_ReactorKit_CountApp.md)
 - [Architecture - 비즈니스 로직이란](IOS-Architecture/aboutBusinessLogic.md)
 
