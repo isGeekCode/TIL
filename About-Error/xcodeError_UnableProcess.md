@@ -23,6 +23,8 @@ You currently don't have access to this membership resource. To resolve this iss
 마스터 계정에서 해당 내용을 승인하면 된다. 
 하지만.. 사업체로서 이걸 요청하는 구조라면 얼른 연락해서 승인받도록하자...
 
+### 관련링크
+[https://zosolution.tistory.com/95](https://zosolution.tistory.com/95)
 
 ## History
 - 230620 : 초안작성
