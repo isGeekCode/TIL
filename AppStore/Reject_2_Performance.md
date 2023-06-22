@@ -156,7 +156,11 @@ Resources
   
 - 대응  
     - 해당 권한팝업의 스크린샷과 경로를 설명하여 회신함
-  
+
+- 관련링크
+    - [TIL 페이지 정리: Privacy - 여러가지 접근권한 요청](https://github.com/isGeekCode/TIL/blob/main/Xcode/PrivercyPermission_various.md#%EC%95%B1-%EC%B6%94%EC%A0%81-%ED%88%AC%EB%AA%85%EC%84%B1)
+
+
 [Top](#)
 
 
