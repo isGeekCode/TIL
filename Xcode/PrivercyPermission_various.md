@@ -78,4 +78,67 @@ iOS 14.5부터 ATT프레임워크가 추가되면서 사용자에게 명시적�
 Info.plist의 NSUserTrackingUsageDescription 키 (Privacy - Tracking Usage Description)에 추적 권한이 필요한 이유를 기재하면 된다, 
 다음 스크린샷에서 보는 것처럼 권한 요청 다이얼로그에 문구가 표시되는 것을 확인할 수 있다.
 
-<img width="471" alt="IMG_3880" src="https://github.com/isGeekCode/TIL/assets/76529148/3ae77e89-d19f-42f2-9969-46b91c3db338">
+### 코드
+
+
+
+```
+import AppTrackingTransparency
+
+
+// 실행위치 예 1. AppDelegate
+// iOS14 때에는 didFinishLaunchingWithOptions 함수에 넣었지만 iOS15.0.1이후론 아래와 같이 바뀌었다. (기존위치에선 실행이 되다가 닫혀버린다)
+
+class AppDelegate {
+  func applicationDidBecomeActive(_ application: UIApplication) { 
+    requestTrackingAuthorization()
+  }
+}
+// 실행위치 예 2. ViewController 생명주기
+
+// 실행위치 예 3. buttonAction 
+
+
+
+// 추적 접근 요청 메서드
+private func requestTrackingAuthorization() {
+    if #available(iOS 14, *) {
+      if ATTrackingManager.trackingAuthorizationStatus == .notDetermined {
+        ATTrackingManager.requestTrackingAuthorization(completionHandler: { _ in
+            // switch status {
+            //     case .authorized:
+            //     case .denied:
+            //     case .notDetermined:
+            //     case .restricted
+            // }
+    })
+      }
+    }
+}
+```
+
+### SwiftUI 코드
+
+세부내용은 위와 동일
+```
+import AppTrackingTransparency
+import SwiftUI
+
+struct ContentView: View {
+  var body: some View {
+    VStack {
+      Text("Hello, world!")../Xcode/PrivercyPermission_various.md
+        .padding()
+    }
+    .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+      ATTrackingManager.requestTrackingAuthorization(completionHandler: { _ in
+      })
+    }
+  }
+}
+
+```
+  
+### 스크린샷
+    
+<img width="300" alt="IMG_3880" src="https://github.com/isGeekCode/TIL/assets/76529148/3ae77e89-d19f-42f2-9969-46b91c3db338">
