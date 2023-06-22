@@ -7,6 +7,7 @@
     - [리젝사유(230409) - 훗타운app : 2.1 Performance - App Completeness](#리젝사유230409---훗타운app--21-Performance---App-Completeness)
     - [리젝사유(230409) - 훗타운app : 2.1 Information Needed](#리젝사유230409---훗타운app--21-information-needed)
     - [리젝사유(230510) - 라드씨엔에스app : 2.1 Information Needed](#리젝사유230510---라드씨엔에스app--21-information-needed)
+    - [리젝사유(230622) - MyNBapp : 2.1 Information Needed](#리젝사유230622---MyNBapp--21-information-needed)
 - [2.3 Performance - Accurate Metadata(정확한 메타데이터)](#23-performance---accurate-metadata정확한-메타데이터)  
     - [리젝사유(230409) - 훗타운app : 2.3 Performance - Accurate Metadata](#230409---훗타운app--23-performance---Accurate-metadata)
     - [2.3.3 (스크린샷)](#233-스크린샷)
@@ -110,6 +111,54 @@ Please review the following questions and provide as much detailed information a
     ```
 
 [Top](#)
+
+### 리젝사유(230622) - MyNBapp : 2.1 Information Needed
+```
+We're looking forward to completing our review, but we need more information to continue. Your app uses the AppTrackingTransparency framework, but we are unable to locate the App Tracking Transparency permission request when reviewed on iOS 16.5.
+
+Next Steps
+
+Please explain where we can find the App Tracking Transparency permission request in your app. The request should appear before any data is collected that could be used to track the user.
+
+If you've implemented App Tracking Transparency but the permission request is not appearing on devices running the latest OS, please review the available documentation and confirm App Tracking Transparency has been correctly implemented.
+
+If your app does not track users, update your app privacy information in App Store Connect to not declare tracking. You must have the Account Holder or Admin role to update app privacy information.
+
+Resources 
+
+- Tracking is linking data collected from your app with third-party data for advertising purposes, or sharing the collected data with a data broker. Learn more about tracking. 
+- See Frequently Asked Questions about the requirements for apps that track users.
+- Review developer documentation for App Tracking Transparency.
+
+# 번역
+
+검토를 완료하기를 고대하고 있지만 계속하려면 더 많은 정보가 필요합니다. 앱에서 앱 추적 투명성 프레임워크를 사용하지만 iOS 16.5에서 검토할 때 앱 추적 투명성 권한 요청을 찾을 수 없습니다.
+
+당신의 앱에서 앱 추적 투명성 권한 요청을 어디서 찾을 수 있는지 설명해 주세요. 사용자를 추적하는 데 사용할 수 있는 데이터를 수집하기 전에 요청이 나타나야 합니다.
+
+앱 추적 투명성을 구현했지만 최신 OS를 실행하는 장치에 권한 요청이 나타나지 않는 경우 사용 가능한 설명서를 검토하고 앱 추적 투명성이 올바르게 구현되었는지 확인하십시오.
+
+앱이 사용자를 추적하지 않는 경우 앱 스토어 연결의 앱 개인 정보를 업데이트하여 추적을 선언하지 마십시오. 앱 개인 정보를 업데이트하려면 계정 소유자 또는 관리자 역할이 있어야 합니다.
+
+
+- 추적은 앱에서 수집한 데이터를 광고 목적으로 타사 데이터와 연결하거나 수집한 데이터를 데이터 브로커와 공유하는 것입니다. 추적에 대해 자세히 알아봅니다. 
+- 사용자를 추적하는 앱에 대한 요구 사항은 자주 묻는 질문을 참조하십시오.
+- 앱 추적 투명성에 대한 개발자 문서를 검토합니다.
+```
+
+- Apple 제공 링크
+    - [추적 : 앱 수집 데이터를 광고목적으로 공유하는 것에 대하여](https://developer.apple.com/documentation/apptrackingtransparency/attrackingmanager/3547037-requesttrackingauthorization)
+    - [사용자를 추적하는 앱에 대한 요구 사항](https://developer.apple.com/app-store/user-privacy-and-data-use/#permission-to-track)  
+    - [앱 추적 투명성에 대한 개발자 문서](https://developer.apple.com/documentation/apptrackingtransparency)  
+  
+- 상황  
+    - 사실상 앱내 해당 내용이 들어가있지만 심사관이 해당 내용을 확인하지 못한 상황.
+  
+- 대응  
+    - 해당 권한팝업의 스크린샷과 경로를 설명하여 회신함
+  
+[Top](#)
+
 
 # 2.3 Performance - Accurate Metadata(정확한 메타데이터)
 - 사용자가 앱을 다운로드하거나 구입할 때, 앱에 대하여 명확히 알 수 있도록 민감성 정보, 앱 설명, 스크린샷 및 미리보기를 포함한 모든 앱 메타데이터를 표기해야합니다. 그래서 앱의 핵심 경험을 정확하게 반영하고 새 버전으로 최신 상태로 유지해야 합니다.
