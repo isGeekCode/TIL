@@ -228,6 +228,6 @@ v.addSubView(label)
 self.navigationController?.isNavigationBarHidden = true
 ```
 
-### **Navigation View Conversion**
+### Navigation View Conversion
 
 UINavigationController 클래스의 method 또는 세그(segue)를 사용하여 스택의 뷰 컨트롤러를 추가(push) / 삭제(pop) 할 수 있습니다.
