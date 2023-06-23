@@ -24,8 +24,8 @@ You currently don't have access to this membership resource. To resolve this iss
 하지만.. 사업체로서 이걸 요청하는 구조라면 얼른 연락해서 승인받도록하자...
 
 ### 관련링크
-[https://zosolution.tistory.com/95](https://zosolution.tistory.com/95)
-[승인 관련 포스팅](https://sapjilkingios.tistory.com/276)
+- [https://zosolution.tistory.com/95](https://zosolution.tistory.com/95)
+- [승인 관련 포스팅](https://sapjilkingios.tistory.com/276)
 
 ## History
 - 230620 : 초안작성
