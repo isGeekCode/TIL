@@ -3,8 +3,8 @@
 DispatchGroup은 비동기 작업을 그룹화하고, 해당 그룹 내에서 모든 작업이 완료될 때까지 기다릴 수 있는 도구이다. 주로 여러 개의 비동기 작업을 추적하고, 모든 작업이 완료된 후에 추가적인 동작을 수행할 때 사용된다.
 
 ## 간단한 예시
-s
-### task
+
+### 예시 1: task
 performAsyncTask1과 performAsyncTask2라는 두 개의 비동기 작업을 수행한다. group.enter()를 호출하여 각 작업이 시작됨을 알린다. 작업이 완료되면 group.leave()를 호출하여 작업이 완료되었음을 알린다.
 
 group.notify(queue:)는 모든 작업이 완료된 후에 실행되는 클로저를 정의. 이 클로저는 모든 작업이 완료된 후에 호출되므로, "All tasks completed"라는 메시지를 출력한다.
