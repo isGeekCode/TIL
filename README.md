@@ -6,16 +6,16 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_264 TILs and counting..._
+_265 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [](Mobile-IOS/GCD_DispatchGroup.md) - Mon Jun 26 16:26:19 2023 +0900
 - [GitLab Error - You won't be able to pull or push project code via SSH until ...](About-Error/gitLabError_SSHKey.md) - Fri Jun 23 12:35:56 2023 +0900
 - [Xcode Error - Unable to process request - PLA Update available](About-Error/xcodeError_UnableProcess.md) - Tue Jun 20 15:02:31 2023 +0900
 - [Swift - Range 함수 사용하기](swift/swift_range.md) - Tue Jun 20 12:31:50 2023 +0900
-- [MVC to MVVM : 02. TableVC 클릭시 텍스트 변경](IOS-Architecture/MVCToMVVM_02_Task.md) - Mon Jun 19 09:25:57 2023 +0900
 - [MVC to MVVM : 01. UTC 오늘, 현재, 내일 시간보기](IOS-Architecture/MVCToMVVM_01_UTC.md) - Mon Jun 19 09:25:57 2023 +0900
 
 ### Categories
@@ -192,6 +192,7 @@ _264 TILs and counting..._
 - [External Link (외부링크) - 커스텀 앱스키마 만들기, 사용하기](Mobile-IOS/ExternalLink_CustomScheme.md)
 - [FileManager - 파일 다운로드하기](Mobile-IOS/FileManager_fileDownload.md)
 - [FileManager - 사용하기](Mobile-IOS/FileManager_introduce.md)
+- [](Mobile-IOS/GCD_DispatchGroup.md)
 - [GCD - DispatchWorkItem](Mobile-IOS/GCD_DispatchWorkItem.md)
 - [GCD 톺아보기](Mobile-IOS/GCD_Total.md)
 - [Gesture Recognizer - Long Press](Mobile-IOS/GestureRecognizer_LongPress.md)
