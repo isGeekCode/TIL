@@ -8,10 +8,63 @@
 
 
 ## Content
+- [4.0 디자인](#)
+    - [리젝사유(230627) - 로이드앱 : 4.0 Design: 로그인 버튼](#리젝사유230627---로이드앱--40-Design-로그인-버튼)
 - [4.8 Sign in with Apple(애플 로그인)](#48-Sign-in-with-Apple애플-로그인)
     - [리젝사유(230524) - MyNB앱 : 4.8 Design: Sign in with Apple](#리젝사유230524---MyNB앱--48-Design-Sign-in-with-Apple)
 
 [Top](#)
+
+
+### 리젝사유(230627) - 로이드앱 : 4.0 Design: 로그인 버튼
+```
+# 원문
+Your app offers Sign in with Apple as a login option but does not follow the design and user experience requirements for Sign in with Apple. Specifically:
+
+- There should be no text associated with the buttons for any login option if your app uses the Apple logo as a button for Sign in with Apple.
+
+These requirements provide the consistent experience users expect when using Sign In with Apple to authenticate or log in to an account.
+
+Next Steps
+
+Please revise the Sign in with Apple experience in your app to address the issues we identified above. 
+
+Resources 
+- To learn more about App Store design requirements, see App Store Review Guideline 4 - Design. 
+- For an overview of design and formatting recommendations for Sign in with Apple, review the Human Interface Guidelines.
+
+# 번역
+
+ 귀하의 앱은 로그인 옵션으로 Apple로 로그인을 제공하지만 Apple로 로그인에 대한 디자인 및 사용자 경험 요구 사항을 따르지 않습니다. 구체적으로: 
+
+- 앱이 Apple 로고를 Apple로 로그인 버튼으로 사용하는 경우 로그인 옵션 버튼과 연결된 텍스트가 없어야 합니다. 
+
+이러한 요구 사항은 Apple로 로그인을 사용하여 계정을 인증하거나 로그인할 때 사용자가 기대하는 일관된 경험을 제공합니다. 
+
+위에서 확인한 문제를 해결하려면 앱에서 Apple로 로그인 환경을 수정하십시오. 
+
+리소스 
+ - App Store 디자인 요구 사항에 대해 자세히 알아보려면 App Store 검토 지침 4 - 디자인을 참조하십시오 .
+- Sign in with Apple에 대한 디자인 및 형식 권장 사항에 대한 개요는 휴먼 인터페이스 지침을 검토하십시오 . 
+
+```
+- 레퍼런스
+    - [애플로그인관련 서문](https://developer.apple.com/sign-in-with-apple/)  
+    - [애플로그인관련 휴먼인터페이스 가이드라인 : 원형로고](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple#Custom-logo-only-buttons)  
+    - [애플로그인관련 휴먼인터페이스 가이드라인 : 커스텀로고](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple#Creating-a-custom-Sign-in-with-Apple-button)  
+
+- 상황  
+    - SNS로그인을 원형로고 버튼으로 구현하였으나, 로고전용버튼하단에 텍스트가 있어서 리젝된 상황 
+
+- 대응  
+    - 해당 화면은 웹뷰에서 구현된 내용이라 로이드웹 개발팀, 기획팀에 전달하였고, 웹배포 이후 리젝회신하기로 함.
+    
+- 심사관 첨부 사진  
+<img width="400" alt="스크린샷 2023-05-18 오후 3 57 46" src="Screenshot-0623-110046](https://github.com/isGeekCode/TIL/assets/76529148/88db3773-fcc1-4faf-af74-48188d3c40a0">  
+  
+    
+[Top](#)
+
 
 # 4.8 Sign in with Apple(애플 로그인)
 타사 또는 소셜 로그인 서비스(Facebook Login, Google Sign-In, Twitter로 로그인, LinkedIn으로 로그인, Amazon으로 로그인 또는 WeChat Login)를 사용하여 사용자의 기본 계정을 설정하거나 인증하는 앱도 동등한 옵션으로 Apple로 로그인을 제공해야 합니다. 사용자의 기본 계정은 사용자를 식별하고 로그인하고 사용자의 기능 및 관련 서비스에 액세스할 목적으로 사용자가 사용자의 앱에 설정한 계정입니다.
@@ -69,6 +122,7 @@ Resources
     - 4 디자인 번역
     - 4.8 애플로그인 번역
     - 리젝사유(230524) - MyNB앱 : 4.8 Design: Sign in with Apple
+- 230627: 리젝사유(230627) - 로이드앱 : 4.0 Design: 로그인 버튼
 
 [Top](#)
 
