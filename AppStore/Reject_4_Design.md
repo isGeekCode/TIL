@@ -60,7 +60,7 @@ Resources
     - 해당 화면은 웹뷰에서 구현된 내용이라 로이드웹 개발팀, 기획팀에 전달하였고, 웹배포 이후 리젝회신하기로 함.
     
 - 심사관 첨부 사진  
-<img width="400" alt="스크린샷 2023-05-18 오후 3 57 46" src="Screenshot-0623-110046](https://github.com/isGeekCode/TIL/assets/76529148/88db3773-fcc1-4faf-af74-48188d3c40a0">  
+<img width="400" alt="Screenshot-0623-110046" src="https://github.com/isGeekCode/TIL/assets/76529148/88db3773-fcc1-4faf-af74-48188d3c40a0">  
   
     
 [Top](#)
