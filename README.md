@@ -110,7 +110,7 @@ _266 TILs and counting..._
 ### [Docs](#Docs)
 - [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md)
 - [마크다운 - 이미지 사이즈 세팅하기](Docs/MarkDown_Image.md)
-- [MardDown - TOC기능 만들기 (Table Of Contents)](Docs/MarkDown_TOC.md)
+- [마크다운 - TOC기능 만들기 (Table Of Contents)](Docs/MarkDown_TOC.md)
 
 ### [Extensions](#Extensions)
 - [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md)
