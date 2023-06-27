@@ -44,3 +44,7 @@ Markdown은 HTML의 대체품이 아니며, 매우 작은 일부 HTML 태그에 
 
 ## 참고문서
 - [Markdown Guide](https://www.markdownguide.org/extended-syntax/#html)
+
+
+## 이미지를 사이즈로 세팅하기
+- [TIL페이지 ](https://github.com/isGeekCode/TIL/blob/main/Docs/MarkDown_Image.md)
