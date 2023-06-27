@@ -60,7 +60,7 @@ Resources
     - 해당 화면은 웹뷰에서 구현된 내용이라 로이드웹 개발팀, 기획팀에 전달하였고, 웹배포 이후 리젝회신하기로 함.
     
 - 심사관 첨부 사진  
-<img width="400" alt="Screenshot-0623-110046" src="https://github.com/isGeekCode/TIL/assets/76529148/88db3773-fcc1-4faf-af74-48188d3c40a0">  
+    <img width="400" alt="Screenshot-0623-110046" src="https://github.com/isGeekCode/TIL/assets/76529148/88db3773-fcc1-4faf-af74-48188d3c40a0">  
   
     
 [Top](#)
@@ -114,7 +114,8 @@ Resources
 - 대응  
     - 기존 Apple 로그인 관련 프로젝트 세팅은 되어있으나, 현재 기획을 맡고있는 사업부, 개발부서에는 해당 내용이 기획되어있지않아서 애플로그인 관련 추가 정책 수립 및 개발작업 필요
     - 사업부 답변후 개발작업하기로 함(230524 기준)
-
+- 심사관 첨부 사진  
+    <img width="400" alt="Screenshot-0523-045044" src="https://github.com/isGeekCode/TIL/assets/76529148/7b9577b8-474e-4244-8911-506746be2c73">  
 [Top](#)
 
 # History
