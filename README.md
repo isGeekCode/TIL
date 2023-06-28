@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_266 TILs and counting..._
+_268 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [](Term_about_IT/mm.md) - Wed Jun 28 17:01:29 2023 +0900
+- [Swift - Mirror 사용하기](swift/swift_mirror.md) - Wed Jun 28 17:01:29 2023 +0900
 - [마크다운 - 이미지 사이즈 세팅하기](Docs/MarkDown_Image.md) - Tue Jun 27 09:43:40 2023 +0900
 - [GCD - DispatchGroup](Mobile-IOS/GCD_DispatchGroup.md) - Mon Jun 26 16:26:19 2023 +0900
 - [GitLab Error - You won't be able to pull or push project code via SSH until ...](About-Error/gitLabError_SSHKey.md) - Fri Jun 23 12:35:56 2023 +0900
-- [Xcode Error - Unable to process request - PLA Update available](About-Error/xcodeError_UnableProcess.md) - Tue Jun 20 15:02:31 2023 +0900
-- [Swift - Range 함수 사용하기](swift/swift_range.md) - Tue Jun 20 12:31:50 2023 +0900
 
 ### Categories
 
@@ -43,6 +43,7 @@ _266 TILs and counting..._
 - [Ruby](#Ruby)
 - [Self-Review](#Self-Review)
 - [SwitchingScreens](#SwitchingScreens)
+- [Term_about_IT](#Term_about_IT)
 - [Xcode](#Xcode)
 - [swift](#swift)
 
@@ -320,6 +321,9 @@ _266 TILs and counting..._
 ### [SwitchingScreens](#SwitchingScreens)
 - [present - CodeUI to StoryBoard](SwitchingScreens/moveToStoryboard.md)
 
+### [Term_about_IT](#Term_about_IT)
+- [](Term_about_IT/mm.md)
+
 ### [Xcode](#Xcode)
 - [.ipa 파일 만들기](Xcode/How_to.make_ipa.md)
 - [How to Set - 세로모드 고정 (Potrait)](Xcode/How_to_set_potrait_mode.md)
@@ -359,6 +363,7 @@ _266 TILs and counting..._
 - [Switch case let, If case let, guard case let](swift/swift_caseLet_switch_if_guard.md)
 - [Closure 톺아보기](swift/swift_firstClassClosureMaster.md)
 - [1급 객체](swift/swift_firstClassObject.md)
+- [Swift - Mirror 사용하기](swift/swift_mirror.md)
 - [Swift - Range 함수 사용하기](swift/swift_range.md)
 - [Array의 특정값을 포함한 IndexPath찾고 값 바꾸기](swift/swift_replacingArrayIndexValue..md)
 
