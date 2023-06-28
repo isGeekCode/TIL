@@ -25,7 +25,7 @@ You currently don't have access to this membership resource. To resolve this iss
 
 ### 관련링크
 - [https://zosolution.tistory.com/95](https://zosolution.tistory.com/95)
-- [승인 관련 포스팅](https://sapjilkingios.tistory.com/276)
+- [솔루션 포스팅](https://jeong9216.tistory.com/206)
 
 ## History
 - 230620 : 초안작성
