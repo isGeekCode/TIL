@@ -14,7 +14,7 @@ _269 TILs and counting..._
 
 - [요즘 핫한 GPT로 앱만들어보기](About-AI/MVVM_ReactorKit_Snapkit_RxSwift.md) - Fri Jun 30 13:38:46 2023 +0900
 - [언어모델이란](About-AI/chatGPT.md) - Fri Jun 30 13:38:46 2023 +0900
-- [IT용어 - 공수, mm , m/m](About-IT/mm.md) - Fri Jun 30 13:38:46 2023 +0900
+- [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md) - Fri Jun 30 13:38:46 2023 +0900
 - [딥러닝이란](About-AI/DeepLearning.md) - Fri Jun 30 13:38:46 2023 +0900
 - [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md) - Fri Jun 30 13:38:46 2023 +0900
 
@@ -78,7 +78,7 @@ _269 TILs and counting..._
 - [Flutter Error - Entrypoint doesn't contain...](About-Error/zFlutterError_EntryPoint.md)
 
 ### [About-IT](#About-IT)
-- [IT용어 - 공수, mm , m/m](About-IT/mm.md)
+- [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md)
 
 ### [AppStore](#AppStore)
 - [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](AppStore/AppStore_AppDismiss.md)
