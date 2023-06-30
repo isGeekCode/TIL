@@ -12,17 +12,18 @@ _269 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [Calendar - 캘린더로 두 개의 날짜 비교하기](Mobile-IOS/Calendar_getDateInterval.md) - Thu Jun 29 15:15:26 2023 +0900
-- [](Term_about_IT/mm.md) - Wed Jun 28 17:01:29 2023 +0900
-- [Swift - Mirror 사용하기](swift/swift_mirror.md) - Wed Jun 28 17:01:29 2023 +0900
-- [마크다운 - 이미지 사이즈 세팅하기](Docs/MarkDown_Image.md) - Tue Jun 27 09:43:40 2023 +0900
-- [GCD - DispatchGroup](Mobile-IOS/GCD_DispatchGroup.md) - Mon Jun 26 16:26:19 2023 +0900
+- [요즘 핫한 GPT로 앱만들어보기](About-AI/MVVM_ReactorKit_Snapkit_RxSwift.md) - Fri Jun 30 13:38:46 2023 +0900
+- [언어모델이란](About-AI/chatGPT.md) - Fri Jun 30 13:38:46 2023 +0900
+- [IT용어 - 공수, mm , m/m](About-IT/mm.md) - Fri Jun 30 13:38:46 2023 +0900
+- [딥러닝이란](About-AI/DeepLearning.md) - Fri Jun 30 13:38:46 2023 +0900
+- [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md) - Fri Jun 30 13:38:46 2023 +0900
 
 ### Categories
 
 - [A_Writing_in_Progress](#A_Writing_in_Progress)
+- [About-AI](#About-AI)
 - [About-Error](#About-Error)
-- [AboutAI](#AboutAI)
+- [About-IT](#About-IT)
 - [AppStore](#AppStore)
 - [ComputerScience](#ComputerScience)
 - [Conference](#Conference)
@@ -43,7 +44,6 @@ _269 TILs and counting..._
 - [Ruby](#Ruby)
 - [Self-Review](#Self-Review)
 - [SwitchingScreens](#SwitchingScreens)
-- [Term_about_IT](#Term_about_IT)
 - [Xcode](#Xcode)
 - [swift](#swift)
 
@@ -52,6 +52,12 @@ _269 TILs and counting..._
 - [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](A_Writing_in_Progress/Integrity_Certificate_Provisioning.md)
 - [Integrity - KeyChain](A_Writing_in_Progress/Integrity_KeyChain.md)
 - [Integrity - Secure Enclave](A_Writing_in_Progress/Integrity_secureEnclave.md)
+
+### [About-AI](#About-AI)
+- [딥러닝이란](About-AI/DeepLearning.md)
+- [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md)
+- [요즘 핫한 GPT로 앱만들어보기](About-AI/MVVM_ReactorKit_Snapkit_RxSwift.md)
+- [언어모델이란](About-AI/chatGPT.md)
 
 ### [About-Error](#About-Error)
 - [Git Error - command line tools are already installed (사실 git 에러 아님)](About-Error/gitError_CommandLineTool.md)
@@ -71,11 +77,8 @@ _269 TILs and counting..._
 - [Xcode Error - warning: libobjc.A.dylib is being read from process memory...](About-Error/xcodeError_warningLibObjc.md)
 - [Flutter Error - Entrypoint doesn't contain...](About-Error/zFlutterError_EntryPoint.md)
 
-### [AboutAI](#AboutAI)
-- [딥러닝이란](AboutAI/DeepLearning.md)
-- [딥러닝 - 신경망으로 숫자에서 패턴찾기](AboutAI/DeepLearning_Neural.md)
-- [요즘 핫한 GPT로 앱만들어보기](AboutAI/MVVM_ReactorKit_Snapkit_RxSwift.md)
-- [언어모델이란](AboutAI/chatGPT.md)
+### [About-IT](#About-IT)
+- [IT용어 - 공수, mm , m/m](About-IT/mm.md)
 
 ### [AppStore](#AppStore)
 - [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](AppStore/AppStore_AppDismiss.md)
@@ -321,9 +324,6 @@ _269 TILs and counting..._
 
 ### [SwitchingScreens](#SwitchingScreens)
 - [present - CodeUI to StoryBoard](SwitchingScreens/moveToStoryboard.md)
-
-### [Term_about_IT](#Term_about_IT)
-- [](Term_about_IT/mm.md)
 
 ### [Xcode](#Xcode)
 - [.ipa 파일 만들기](Xcode/How_to.make_ipa.md)
