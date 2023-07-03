@@ -6,7 +6,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_270 TILs and counting..._
+_271 TILs and counting..._
 
 ---
 
@@ -364,6 +364,7 @@ _270 TILs and counting..._
 - [Switch case let, If case let, guard case let](swift/swift_caseLet_switch_if_guard.md)
 - [Closure 톺아보기](swift/swift_firstClassClosureMaster.md)
 - [1급 객체](swift/swift_firstClassObject.md)
+- [Swift - 키워드 defer](swift/swift_keywordDefer.md)
 - [Swift - 키워드 inout](swift/swift_keywordInout.md)
 - [Swift - Mirror 사용하기](swift/swift_mirror.md)
 - [Swift - Range 함수 사용하기](swift/swift_range.md)
