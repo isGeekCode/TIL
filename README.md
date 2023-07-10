@@ -6,15 +6,15 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_271 TILs and counting..._
+_272 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [요즘 핫한 GPT로 앱만들어보기](About-AI/MVVM_ReactorKit_Snapkit_RxSwift.md) - Fri Jun 30 13:38:46 2023 +0900
-- [언어모델이란](About-AI/chatGPT.md) - Fri Jun 30 13:38:46 2023 +0900
+- [Git - 브랜치 삭제하기](Git/Git_branch_Delete.md) - Mon Jul 10 17:25:00 2023 +0900
 - [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md) - Fri Jun 30 13:38:46 2023 +0900
+- [언어모델이란](About-AI/chatGPT.md) - Fri Jun 30 13:38:46 2023 +0900
 - [딥러닝이란](About-AI/DeepLearning.md) - Fri Jun 30 13:38:46 2023 +0900
 - [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md) - Fri Jun 30 13:38:46 2023 +0900
 
@@ -132,6 +132,7 @@ _271 TILs and counting..._
 - [Git Actions - Permission to ....git denied to github-actions](Git/GitAction_tokenError.md)
 - [GitHub - Various APIs](Git/Git_ContributionGraph.md)
 - [GitLab SSH키 생성하기](Git/Git_SSHKey_INIT.md)
+- [Git - 브랜치 삭제하기](Git/Git_branch_Delete.md)
 - [푸시 에러 : 원격 저장소와 커밋 기록이 다른 경우](Git/Git_pushError_OtherCommit.md)
 - [Git - 푸시한 커밋의 Author 변경하기(username과 user email 수정하기)](Git/Git_tutorial_changeUsername.md)
 - [Git - 튜토리얼 : 브랜치 생성하기. 리스트 확인, 브랜치 체크아웃](Git/Git_tutorial_checkout.md)
