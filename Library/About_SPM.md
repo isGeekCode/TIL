@@ -66,6 +66,9 @@ Thread 1: "Cannot create an NSPersistentStoreCoordinator with a nil model"
 스레드 1: "모델이 없는 NSPersistentStoreCoordinator를 만들 수 없습니다."
 ```
 
+이때 파일을 새로 생성해서 복사하는게 아니라 참조하자. 
+추가적으로 아래 항목처럼 다른 타겟에서 추가할경우 copy Bundle에 새로운 파일을 추가하지말고, 기존 추가했던 파일을 클릭하면나오는 우측 패널에서 타겟을 추가하자.
+
 ### 추가적인 Target에서 SPM을 추가하는 경우 
 한 프로젝트 내에서 해당 라이브러리를 이미 설치한 경우, 이미 설치되어있다는 메세지가 등장할 수 있다.
 그런 경우에는 이미 추가된 파일을 직접 추가한다.
@@ -77,3 +80,7 @@ Thread 1: "Cannot create an NSPersistentStoreCoordinator with a nil model"
 이미 SPM이 추가된 라이브러리라면 프로젝트 네비게이터의 하단에 있는 Package Dependencies (왼쪽 하단) 에 추가된 라이브러리를 볼 수 있다. 이 라이브러리의 폴더위치로 이동해서 xcframework 파일을 갖고 있는 폴더를 찾는다.
 
 Add files 에서는 이 xcframework를 담고 있는 폴더를 추가하면 다시 선택했을 때, 라이브러리 아이콘이 생성된다. 
+
+
+## History
+- 230712 : SPM 수동 번들 가져오기 내용 추가
