@@ -47,6 +47,9 @@ class ViewController: UIViewController, MyDelegate {
 
 
 ```
+
+여기까지만 해도되는데 아래처럼 연결하는 경우가 있다.
+
 ### 4. Delegate 객체와 MyClass 인스턴스 연결하기
 
 ```swift
