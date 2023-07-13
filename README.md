@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_272 TILs and counting..._
+_273 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Xcode Error - Build input file cannot be found:](About-Error/xcodeError_BuildInputFile.md) - Wed Jul 12 10:15:01 2023 +0900
 - [Git - 브랜치 삭제하기](Git/Git_branch_Delete.md) - Mon Jul 10 17:25:00 2023 +0900
-- [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md) - Fri Jun 30 13:38:46 2023 +0900
 - [언어모델이란](About-AI/chatGPT.md) - Fri Jun 30 13:38:46 2023 +0900
+- [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md) - Fri Jun 30 13:38:46 2023 +0900
 - [딥러닝이란](About-AI/DeepLearning.md) - Fri Jun 30 13:38:46 2023 +0900
-- [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md) - Fri Jun 30 13:38:46 2023 +0900
 
 ### Categories
 
@@ -66,6 +66,7 @@ _272 TILs and counting..._
 - [SourceTree Error - 시도때도 없이 꺼지는 현상](About-Error/sourceTreeError_fatalError.md)
 - [Terminal Error - xcrun: error: active developer path...](About-Error/terminalError_xcrunError.md)
 - [Xcode Error - Presenting view controllers on detached view controllers is discouraged.](About-Error/xcodeError_Alert_In_UIViewController_Init.md)
+- [Xcode Error - Build input file cannot be found:](About-Error/xcodeError_BuildInputFile.md)
 - [Xcode Error - Command PhaseScriptExecution failed with a nonzero exit code](About-Error/xcodeError_CommandPhaseScript.md)
 - [Xcode Error - Launching _AppName_ is taking longer than expected](About-Error/xcodeError_Launching_is_taking_longer_than.md)
 - [Xcode Error - Unable to process request - PLA Update available](About-Error/xcodeError_UnableProcess.md)
