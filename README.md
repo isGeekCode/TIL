@@ -20,7 +20,7 @@ _274 TILs and counting..._
 
 ### Categories
 
-- [A_Writing_in_Progress](#A_Writing_in_Progress)
+- [A_Writing_in_Progress](#a-writing-in-progress)
 - [About-AI](#About-AI)
 - [About-Error](#About-Error)
 - [About-IT](#About-IT)
@@ -47,7 +47,7 @@ _274 TILs and counting..._
 - [Xcode](#Xcode)
 - [swift](#swift)
 
-### [A_Writing_in_Progress](#A_Writing_in_Progress)
+### [A_Writing_in_Progress](#a-writing-in-progress)
 - [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md)
 - [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](A_Writing_in_Progress/Integrity_Certificate_Provisioning.md)
 - [Integrity - KeyChain](A_Writing_in_Progress/Integrity_KeyChain.md)
