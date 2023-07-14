@@ -12,7 +12,7 @@ _274 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [AppStore - 여러가지 버전관리정책](ComputerScience/Versioning.md) - Fri Jul 14 09:17:31 2023 +0900
+- [AppStore - 여러가지 버전관리정책](ComputerScience/AppStore_VersionLint.md) - Fri Jul 14 09:29:39 2023 +0900
 - [Xcode Error - Build input file cannot be found:](About-Error/xcodeError_BuildInputFile.md) - Wed Jul 12 10:15:01 2023 +0900
 - [Git - 브랜치 삭제하기](Git/Git_branch_Delete.md) - Mon Jul 10 17:25:00 2023 +0900
 - [딥러닝이란](About-AI/DeepLearning.md) - Fri Jun 30 13:38:46 2023 +0900
@@ -20,7 +20,7 @@ _274 TILs and counting..._
 
 ### Categories
 
-- [A_Writing_in_Progress](#a-writing-in-progress)
+- [A_Writing_in_Progress](#A_Writing_in_Progress)
 - [About-AI](#About-AI)
 - [About-Error](#About-Error)
 - [About-IT](#About-IT)
@@ -47,7 +47,7 @@ _274 TILs and counting..._
 - [Xcode](#Xcode)
 - [swift](#swift)
 
-### [A_Writing_in_Progress](#a-writing-in-progress)
+### [A_Writing_in_Progress](#A_Writing_in_Progress)
 - [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md)
 - [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](A_Writing_in_Progress/Integrity_Certificate_Provisioning.md)
 - [Integrity - KeyChain](A_Writing_in_Progress/Integrity_KeyChain.md)
@@ -94,9 +94,9 @@ _274 TILs and counting..._
 ### [ComputerScience](#ComputerScience)
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
+- [AppStore - 여러가지 버전관리정책](ComputerScience/AppStore_VersionLint.md)
 - [MVP: Minimum Viable Product](ComputerScience/MVP.md)
 - [Terminal 기초 사용법](ComputerScience/Terminal.md)
-- [AppStore - 여러가지 버전관리정책](ComputerScience/Versioning.md)
 - [iOS의 Virtual Memory에 대하여](ComputerScience/VirtualMemory.md)
 - [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
 - [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
