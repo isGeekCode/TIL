@@ -47,13 +47,13 @@ _274 TILs and counting..._
 - [Xcode](#Xcode)
 - [swift](#swift)
 
-### [A_Writing_in_Progress](#A_Writing_in_Progress)
+### A_Writing_in_Progress
 - [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md)
 - [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](A_Writing_in_Progress/Integrity_Certificate_Provisioning.md)
 - [Integrity - KeyChain](A_Writing_in_Progress/Integrity_KeyChain.md)
 - [Integrity - Secure Enclave](A_Writing_in_Progress/Integrity_secureEnclave.md)
 
-### [About-AI](#About-AI)
+### About-AI
 - [딥러닝이란](About-AI/DeepLearning.md)
 - [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md)
 - [요즘 핫한 GPT로 앱만들어보기](About-AI/MVVM_ReactorKit_Snapkit_RxSwift.md)
