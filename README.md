@@ -6,49 +6,48 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_274 TILs and counting..._
+_275 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [AppStore - 버전정보 수정하기](AppStore/AppStore_ChangeVersionInfo.md) - Fri Jul 14 16:27:20 2023 +0900
 - [AppStore - 여러가지 버전관리정책](ComputerScience/AppStore_VersionLint.md) - Fri Jul 14 09:29:39 2023 +0900
 - [Xcode Error - Build input file cannot be found:](About-Error/xcodeError_BuildInputFile.md) - Wed Jul 12 10:15:01 2023 +0900
 - [Git - 브랜치 삭제하기](Git/Git_branch_Delete.md) - Mon Jul 10 17:25:00 2023 +0900
-- [딥러닝이란](About-AI/DeepLearning.md) - Fri Jun 30 13:38:46 2023 +0900
-- [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md) - Fri Jun 30 13:38:46 2023 +0900
+- [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md) - Fri Jun 30 13:38:46 2023 +0900
 
 ### Categories
 
-- [A_Writing_in_Progress](#a_writing_in_progress)
-- [About-AI](#about-ai)
-- [About-Error](#about-error)
-- [About-IT](#about-it)
-- [AppStore](#appstore)
-- [ComputerScience](#computerscience)
-- [Conference](#conference)
-- [Docs](#docs)
-- [Extensions](#extensions)
-- [Flutter](#flutter)
-- [Git](#git)
-- [IOS-Architecture](#ios-architecture)
-- [Insight](#insight)
-- [Integrity](#integrity)
-- [Library](#library)
-- [Mobile-Android](#mobile-android)
-- [Mobile-IOS](#mobile-ios)
-- [Mobile-iOS-Hierachy](#mobile-ios-hierachy)
-- [Networking](#networking)
-- [Objective-C](#objective-c)
-- [RelatedImage](#relatedimage)
-- [Ruby](#ruby)
-- [Self-Review](#self-review)
-- [SwitchingScreens](#switchingscreens)
-- [Xcode](#xcode)
-- [Swift](#swift)
+- [A_Writing_in_Progress](#A_Writing_in_Progress)
+- [About-AI](#About-AI)
+- [About-Error](#About-Error)
+- [About-IT](#About-IT)
+- [AppStore](#AppStore)
+- [ComputerScience](#ComputerScience)
+- [Conference](#Conference)
+- [Docs](#Docs)
+- [Extensions](#Extensions)
+- [Flutter](#Flutter)
+- [Git](#Git)
+- [IOS-Architecture](#IOS-Architecture)
+- [Insight](#Insight)
+- [Integrity](#Integrity)
+- [Library](#Library)
+- [Mobile-Android](#Mobile-Android)
+- [Mobile-IOS](#Mobile-IOS)
+- [Mobile-iOS-Hierachy](#Mobile-iOS-Hierachy)
+- [Networking](#Networking)
+- [Objective-C](#Objective-C)
+- [RelatedImage](#RelatedImage)
+- [Ruby](#Ruby)
+- [Self-Review](#Self-Review)
+- [SwitchingScreens](#SwitchingScreens)
+- [Xcode](#Xcode)
+- [swift](#swift)
 
-
-### [A_Writing_in_Progress](#a_writing_in_progress)
+### [A_Writing_in_Progress](#A_Writing_in_Progress)
 - [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md)
 - [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](A_Writing_in_Progress/Integrity_Certificate_Provisioning.md)
 - [Integrity - KeyChain](A_Writing_in_Progress/Integrity_KeyChain.md)
@@ -85,6 +84,7 @@ _274 TILs and counting..._
 ### [AppStore](#AppStore)
 - [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](AppStore/AppStore_AppDismiss.md)
 - [기존 배포되어있는 앱을 다른 앱으로 바꾸기](AppStore/AppStore_ChangeBundleId.md)
+- [AppStore - 버전정보 수정하기](AppStore/AppStore_ChangeVersionInfo.md)
 - [AppStore - 긴급 심사 요청(Request Expedited Review)](AppStore/AppStore_expeditedReview.md)
 - [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](AppStore/AppStore_missing_Compliance.md)
 - [리젝사유 - 2. Performance(성능)](AppStore/Reject_2_Performance.md)
