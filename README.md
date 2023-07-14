@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_273 TILs and counting..._
+_274 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [AppStore - 여러가지 버전관리정책](ComputerScience/Versioning.md) - Fri Jul 14 09:17:31 2023 +0900
 - [Xcode Error - Build input file cannot be found:](About-Error/xcodeError_BuildInputFile.md) - Wed Jul 12 10:15:01 2023 +0900
 - [Git - 브랜치 삭제하기](Git/Git_branch_Delete.md) - Mon Jul 10 17:25:00 2023 +0900
-- [언어모델이란](About-AI/chatGPT.md) - Fri Jun 30 13:38:46 2023 +0900
-- [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md) - Fri Jun 30 13:38:46 2023 +0900
 - [딥러닝이란](About-AI/DeepLearning.md) - Fri Jun 30 13:38:46 2023 +0900
+- [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md) - Fri Jun 30 13:38:46 2023 +0900
 
 ### Categories
 
@@ -96,6 +96,7 @@ _273 TILs and counting..._
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
 - [MVP: Minimum Viable Product](ComputerScience/MVP.md)
 - [Terminal 기초 사용법](ComputerScience/Terminal.md)
+- [AppStore - 여러가지 버전관리정책](ComputerScience/Versioning.md)
 - [iOS의 Virtual Memory에 대하여](ComputerScience/VirtualMemory.md)
 - [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
 - [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
