@@ -21,7 +21,7 @@ _274 TILs and counting..._
 ### Categories
 
 - [A_Writing_in_Progress](#A_Writing_in_Progress)
-- [About-AI](#About-AI)
+- [About-AI](#About---AI)
 - [About-Error](#About-Error)
 - [About-IT](#About-IT)
 - [AppStore](#AppStore)
