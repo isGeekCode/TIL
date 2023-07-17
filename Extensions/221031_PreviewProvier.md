@@ -15,13 +15,14 @@
 UIView 여러개를 다중으로 사용하는 것도 가능하지만 몇 가지 더 써넣어야하고, 어차피 나는 대부분 UIViewController만 확인하면 되기때문에 비교적 간단한 UIViewController에 적용하는 것만 소개하려고 한다. 다중사용에 대한 링크는 참고링크를 확인.
 
 ![img](https://user-images.githubusercontent.com/76529148/198916009-892d1701-944e-4fcd-b5a6-0321256476f7.gif)
+<p align="center">
+    <a href="https://ios-development.tistory.com/488" style="text-align: center;">이미지 출처 : 김종권의 iOS 앱 개발 알아가기</a>
+</p>
 
 ### 📌 참고링크
 
 - 애플문서: [https://developer.apple.com/documentation/swiftui/previewprovider](https://developer.apple.com/documentation/swiftui/previewprovider)
 - 다중사용: [https://ios-development.tistory.com/488](https://ios-development.tistory.com/488)
-- 이미지 출처 : [김종권의 iOS 앱 개발 알아가기 ](https://ios-development.tistory.com/488)
-
 ### 📌 지원
 
 - iOS 13.0+
@@ -78,8 +79,10 @@ extension UIView {
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 
+// 이 부분은 아무 이름이나 넣어도 상관없다.
 struct <#ViewController#>Preview: PreviewProvider {
 
+    // 이 부분은 내가 사용하려는 ViewController / View 객체를 생성한다.
     static var previews: some View {
         <#ViewController#>().toPreview()
     }
@@ -93,6 +96,48 @@ struct <#ViewController#>Preview: PreviewProvider {
 
 ![img1 daumcdn-6](https://user-images.githubusercontent.com/76529148/198916117-109d460e-9b22-475b-8d7c-60263d868421.png)
 
+
+## 👍  Tip: 다중 기기 확인하기
+기존에는 여러 기기를 세로로 동시에 볼 수 있었지만 업데이트 된 이후, 기기마다 클릭해서 확인 할 수 있다.
+다만, 이것도 최초 클릭시에는 약간의 시간이 걸린다.
+
+
+```swift
+#if DEBUG
+import SwiftUI
+
+@available(iOS 13.0, *)
+struct <#ViewController#>Preview: PreviewProvider {
+        // Device 배열로 여러 개의 디바이스에 적용된 모습을 같이 확인할 수 있다.
+    static var devices = ["iPhone 14 Pro Max", "iPhone 14 Pro", "iPhone SE (2nd generation)"]
+
+    static var previews: some View {
+
+        ForEach(devices, id: \.self) { deviceName in
+            MainViewController()  // 스토리보드 대신 ViewController의 인스턴스를 직접 생성합니다.
+//            UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ViewController")
+                .toPreview()
+                .previewDevice(PreviewDevice(rawValue: deviceName))
+                .previewDisplayName(deviceName)
+        }
+    }
+}
+#endif
+```
+
+### 적용 이미지
+<img width="400" alt="스크린샷 2023-07-17 오후 3 08 34" src="https://github.com/isGeekCode/TIL/assets/76529148/cba74268-c446-43b1-915f-453c780b4e27">
+
+
+
+
 ## 👍  Tip: Snippet에 넣어서 사용하기
 
 <img width="848" alt="스크린샷 2022-10-13 오후 12 56 51" src="https://user-images.githubusercontent.com/76529148/198915921-4b07d3b8-197e-4371-beea-4cd8fd169582.png">
+
+
+
+
+## History
+- 221031 : 초안작성
+- 230717 : 다중 기기 적용화면 세팅방법 추가
