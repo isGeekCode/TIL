@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_275 TILs and counting..._
+_276 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [CLLocation - 위치정보 사용하기](Mobile-IOS/CLLocation_a_howToUse.md) - Mon Jul 17 16:49:06 2023 +0900
 - [AppStore - 버전정보 수정하기](AppStore/AppStore_ChangeVersionInfo.md) - Fri Jul 14 16:27:20 2023 +0900
 - [AppStore - 여러가지 버전관리정책](ComputerScience/AppStore_VersionLint.md) - Fri Jul 14 09:29:39 2023 +0900
 - [Xcode Error - Build input file cannot be found:](About-Error/xcodeError_BuildInputFile.md) - Wed Jul 12 10:15:01 2023 +0900
 - [Git - 브랜치 삭제하기](Git/Git_branch_Delete.md) - Mon Jul 10 17:25:00 2023 +0900
-- [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md) - Fri Jun 30 13:38:46 2023 +0900
 
 ### Categories
 
@@ -195,6 +195,7 @@ _275 TILs and counting..._
 ### [Mobile-IOS](#Mobile-IOS)
 - [AVPlayer 사용하기](Mobile-IOS/AboutAVPlayer.md)
 - [userDefault](Mobile-IOS/AboutUserDefualt.md)
+- [CLLocation - 위치정보 사용하기](Mobile-IOS/CLLocation_a_howToUse.md)
 - [Calendar - 캘린더로 두 개의 날짜 비교하기](Mobile-IOS/Calendar_getDateInterval.md)
 - [Codable](Mobile-IOS/Codable.md)
 - [Container ViewController Type - Navigation Controller](Mobile-IOS/Container_ViewController_NavigationController.md)
