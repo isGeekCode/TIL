@@ -3,6 +3,12 @@
 iOS에서 현재 위치의 위도와 경도를 가져오려면 Core Location 프레임워크를 사용할 수 있다. 
 
 Core Location은 위치 관련 서비스를 제공하는 프레임워크로, GPS, Wi-Fi, 셀룰러 네트워크 등을 사용하여 사용자의 현재 위치를 결정할 수 있다.
+
+
+`CLLocationManager.location` 의 값을 통해 최초에 호출한 위치값을 가져올 수 가 있다.
+만약 지속적으로 업데이트를 해서 정보를 가져오고 싶다면 아래와 같이 구현하여 가져올 수 있다.
+
+
 놀랍게도 CLLocationManagerDelegate 프로토콜은 모든 함수가 옵셔널로 처리되어있어서 자동으로 생성되지않는다.
 
 아마 어떤 기능을 사용할 지 자율성을 보장하기 위해서가 아닐까?
@@ -15,11 +21,11 @@ CLLocation을 사용하면서 중요한 것은 위치접근 권한을 설정해�
 
 - 1. CLLocationManager init
 - 2. CLLocationManagerDelegate 를 누가 처리할지 선언
-- 3. CLLocationManagerDelegate 프로톸콜 구현
-  - 3-1. didUpdateLocations(:) 구현
-  - 3-2. didChangeAuthorization(:) 구현
+- 3. CLLocationManagerDelegate 프로톸콜 구현 
+  - 3-1.(선택) didUpdateLocations(:) 구현
+  - 3-2.(선택) didChangeAuthorization(:) 구현
 - 4. startUpdatingLocation : 위치 업데이트 시작
-- 5. Info.plist 구현(필수)
+- 5. (필수) Info.plist 구현
 
 ```
 // info.plist 
