@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_278 TILs and counting..._
+_279 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [화면전환 - NavigationController 이해하기](SwitchingScreens/navigationController.md) - Thu Jul 20 17:27:08 2023 +0900
 - [WebView - 네비게이션컨트롤러 목록으로 웹뷰 관리하는 방법](Networking/WebView_catchNavigation.md) - Thu Jul 20 16:33:01 2023 +0900
 - [CLLocation - 비콘 조회하기](Mobile-IOS/CLLocation_beacon.md) - Wed Jul 19 17:04:52 2023 +0900
 - [CLLocation - 위치정보 사용하기](Mobile-IOS/CLLocation_a_howToUse.md) - Mon Jul 17 16:49:06 2023 +0900
 - [AppStore - 버전정보 수정하기](AppStore/AppStore_ChangeVersionInfo.md) - Fri Jul 14 16:27:20 2023 +0900
-- [AppStore - 여러가지 버전관리정책](ComputerScience/AppStore_VersionLint.md) - Fri Jul 14 09:29:39 2023 +0900
 
 ### Categories
 
@@ -331,6 +331,7 @@ _278 TILs and counting..._
 
 ### [SwitchingScreens](#SwitchingScreens)
 - [present - CodeUI to StoryBoard](SwitchingScreens/moveToStoryboard.md)
+- [화면전환 - NavigationController 이해하기](SwitchingScreens/navigationController.md)
 
 ### [Xcode](#Xcode)
 - [.ipa 파일 만들기](Xcode/How_to.make_ipa.md)
