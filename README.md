@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_277 TILs and counting..._
+_278 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [WebView - 네비게이션컨트롤러 목록으로 웹뷰 관리하는 방법](Networking/WebView_catchNavigation.md) - Thu Jul 20 16:33:01 2023 +0900
 - [CLLocation - 비콘 조회하기](Mobile-IOS/CLLocation_beacon.md) - Wed Jul 19 17:04:52 2023 +0900
 - [CLLocation - 위치정보 사용하기](Mobile-IOS/CLLocation_a_howToUse.md) - Mon Jul 17 16:49:06 2023 +0900
 - [AppStore - 버전정보 수정하기](AppStore/AppStore_ChangeVersionInfo.md) - Fri Jul 14 16:27:20 2023 +0900
 - [AppStore - 여러가지 버전관리정책](ComputerScience/AppStore_VersionLint.md) - Fri Jul 14 09:29:39 2023 +0900
-- [Xcode Error - Build input file cannot be found:](About-Error/xcodeError_BuildInputFile.md) - Wed Jul 12 10:15:01 2023 +0900
 
 ### Categories
 
@@ -301,6 +301,7 @@ _277 TILs and counting..._
 - [WebView - 앱에서 웹으로 JavaScript보내기](Networking/WebView_Sending_JS.md)
 - [WebView - URLSession 사용하기](Networking/WebView_aboutURLSession.md)
 - [WebView - App에서 웹페이지를 여는 3가지 방법](Networking/WebView_basic_use.md)
+- [WebView - 네비게이션컨트롤러 목록으로 웹뷰 관리하는 방법](Networking/WebView_catchNavigation.md)
 - [WebView - Safari로 웹뷰 디버깅하는 방법](Networking/WebView_commute_with_Web.md)
 - [WebView - 자주 사용하는 메서드](Networking/WebView_often_use_delegate_method.md)
 - [WebView - 스와이프로 리프레시 세팅](Networking/WebView_swipe_refresh.md)
