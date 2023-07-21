@@ -6,17 +6,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_282 TILs and counting..._
+_283 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [CI/CD - GitHub Action 사용하기 : 초기 구현하기](CI_CD/GithubAction_A_tutorial00.md) - Fri Jul 21 13:18:58 2023 +0900
+- [test - test test](Xcode/test.md) - Fri Jul 21 13:27:53 2023 +0900
 - [CI/CD - GitHub Action 사용하기2 : on 섹션 수정하기](CI_CD/GithubAction_A_tutorial01.md) - Fri Jul 21 13:18:58 2023 +0900
+- [CI/CD - GitHub Action 사용하기 : 초기 구현하기](CI_CD/GithubAction_A_tutorial00.md) - Fri Jul 21 13:18:58 2023 +0900
 - [CI/CD - GitHub Action 사용하기3 : 실행할 스크립트 짜보기](CI_CD/GithubAction_A_tutorial02.md) - Fri Jul 21 13:18:58 2023 +0900
 - [화면전환 - NavigationController 이해하기](SwitchingScreens/navigationController.md) - Thu Jul 20 17:27:08 2023 +0900
-- [WebView - 네비게이션컨트롤러 목록으로 웹뷰 관리하는 방법](Networking/WebView_catchNavigation.md) - Thu Jul 20 16:33:01 2023 +0900
 
 ### Categories
 
@@ -349,6 +349,7 @@ _282 TILs and counting..._
 - [Privacy - 여러가지 접근권한요청](Xcode/PrivercyPermission_various.md)
 - [Scheme - Debug / Release 빌드 분리하기](Xcode/Scheme_Separate_BuildSet.md)
 - [iOS DeviceSupport - 테스트 디바이스 iOS 수동 업데이트](Xcode/iOSDeviceSupport_Manually_update.md)
+- [test - test test](Xcode/test.md)
 
 ### [swift](#swift)
 - [Do - Try - Catch](swift/DoTryCatch.md)
