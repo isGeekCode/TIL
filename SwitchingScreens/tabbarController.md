@@ -1,4 +1,4 @@
-# 화면전환 - TabBarController 이해하기
+# 화면전환 - UITabBarController 이해하기
 
 탭 바 컨트롤러(Tab Bar Controller)는 네비게이션 컨트롤러와 비슷한 방식으로 동작하지만, 하단에 여러 탭으로 구성되어 있는 인터페이스를 제공하는 컨트롤러다. 각 탭은 하나의 뷰 컨트롤러를 대응시키며, 사용자는 하단 탭 바를 터치하여 다른 뷰 컨트롤러로 전환할 수 있다.
 
@@ -67,8 +67,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 }
 ```
-
-
 ### 별도의 UITabBarController 클래스를 구현하고, SceneDelegate에서는 호출만 하는 경우
 
 ```swift
@@ -119,8 +117,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 ### 1. 탭바를 따로 구현
 
-```
-// MARK: 1. 탭바를 따로 구현
+```swift
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -193,7 +190,7 @@ class ViewControllerD: UIViewController {
 
 
 ### 2. 탭바를 SceneDelegate에서 탭바를 직접 구현
-```
+```swift
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -255,3 +252,6 @@ class ViewControllerD: UIViewController {
 }
 
 ```
+
+## History
+- 230721 : 초안작성

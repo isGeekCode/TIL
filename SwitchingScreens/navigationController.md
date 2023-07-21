@@ -1,4 +1,4 @@
-# 화면전환 - NavigationController 이해하기
+# 화면전환 - UINavigationController 이해하기
 
 아래 예시 코드를 통해 iOS 네비게이션 컨트롤러(Navigation Controller)의 작동 방식과 주요 메서드들에 대해 알아보자.
 
