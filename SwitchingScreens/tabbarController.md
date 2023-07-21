@@ -4,7 +4,7 @@
 
 ### 적용화면
   
-![ezgif-2-f9eb56c33e](https://github.com/isGeekCode/TIL/assets/76529148/fc6f3ba2-f24b-494a-9686-c0092b3b7f39)
+![ezgif-4-05ae2c1872](https://github.com/isGeekCode/TIL/assets/76529148/3cafd1c0-8cd7-4268-9341-d7f6a9ee5bff)
   
 ## TabBar Controller의 구조
 
@@ -63,6 +63,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 탭 바 컨트롤러를 생성하고 탭에 대응되는 뷰 컨트롤러들을 설정합니다.
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [viewControllerA, viewControllerB, viewControllerC, viewControllerD]
+        // TabBar의 background 색상
+        tabBarController.tabBar.backgroundColor = .lightGray
 
         // 탭 바 컨트롤러를 루트 뷰 컨트롤러로 설정합니다.
         window = UIWindow(windowScene: windowScene)
@@ -157,6 +159,7 @@ class MainTabBarController: UITabBarController {
         viewControllerD.tabBarItem = UITabBarItem(title: "D", image: UIImage(systemName: "gear"), selectedImage: nil)
 
         self.viewControllers = [viewControllerA, viewControllerB, viewControllerC, viewControllerD]
+        self.tabBar.backgroundColor = .lightGray
     }
 }
 
@@ -218,6 +221,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 탭 바 컨트롤러를 생성하고 탭에 대응되는 뷰 컨트롤러들을 설정합니다.
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [viewControllerA, viewControllerB, viewControllerC, viewControllerD]
+        // TabBar의 background 색상
+        tabBarController.tabBar.backgroundColor = .lightGray
 
         // 탭 바 컨트롤러를 루트 뷰 컨트롤러로 설정합니다.
         window = UIWindow(windowScene: windowScene)
