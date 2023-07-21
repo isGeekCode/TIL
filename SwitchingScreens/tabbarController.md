@@ -6,9 +6,13 @@
   
 ![ezgif-2-f9eb56c33e](https://github.com/isGeekCode/TIL/assets/76529148/fc6f3ba2-f24b-494a-9686-c0092b3b7f39)
   
-  
 ## TabBar Controller의 구조
 
+![img1 daumcdn-13](https://github.com/isGeekCode/TIL/assets/76529148/b069b799-1345-4b90-b500-8c22dfdfed7b)
+
+![img1 daumcdn-14](https://github.com/isGeekCode/TIL/assets/76529148/27719c83-0c21-4d23-9016-d2b99e2fb329)
+
+  
 탭 바 컨트롤러의 구조는 네비게이션 컨트롤러와 유사하게 스택(stack) 자료 구조를 사용한다.
 
 탭 바 컨트롤러의 탭들은 일종의 스택으로 생각할 수 있다.
