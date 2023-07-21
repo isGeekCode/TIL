@@ -6,45 +6,46 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_279 TILs and counting..._
+_282 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [CI/CD - GitHub Action 사용하기 : 초기 구현하기](CI_CD/GithubAction_A_tutorial00.md) - Fri Jul 21 13:18:58 2023 +0900
+- [CI/CD - GitHub Action 사용하기2 : on 섹션 수정하기](CI_CD/GithubAction_A_tutorial01.md) - Fri Jul 21 13:18:58 2023 +0900
+- [CI/CD - GitHub Action 사용하기3 : 실행할 스크립트 짜보기](CI_CD/GithubAction_A_tutorial02.md) - Fri Jul 21 13:18:58 2023 +0900
 - [화면전환 - NavigationController 이해하기](SwitchingScreens/navigationController.md) - Thu Jul 20 17:27:08 2023 +0900
 - [WebView - 네비게이션컨트롤러 목록으로 웹뷰 관리하는 방법](Networking/WebView_catchNavigation.md) - Thu Jul 20 16:33:01 2023 +0900
-- [CLLocation - 비콘 조회하기](Mobile-IOS/CLLocation_beacon.md) - Wed Jul 19 17:04:52 2023 +0900
-- [CLLocation - 위치정보 사용하기](Mobile-IOS/CLLocation_a_howToUse.md) - Mon Jul 17 16:49:06 2023 +0900
-- [AppStore - 버전정보 수정하기](AppStore/AppStore_ChangeVersionInfo.md) - Fri Jul 14 16:27:20 2023 +0900
 
 ### Categories
 
-- [A_Writing_in_Progress](#a_writing_in_progress)
-- [About-AI](#about-ai)
-- [About-Error](#about-error)
-- [About-IT](#about-it)
-- [AppStore](#appstore)
-- [ComputerScience](#computerscience)
-- [Conference](#conference)
-- [Docs](#docs)
-- [Extensions](#extensions)
-- [Flutter](#flutter)
-- [Git](#git)
-- [IOS-Architecture](#ios-architecture)
-- [Insight](#insight)
-- [Integrity](#integrity)
-- [Library](#library)
-- [Mobile-Android](#mobile-android)
-- [Mobile-IOS](#mobile-ios)
-- [Mobile-iOS-Hierachy](#mobile-ios-hierachy)
-- [Networking](#networking)
-- [Objective-C](#objective-c)
-- [RelatedImage](#relatedimage)
-- [Ruby](#ruby)
-- [Self-Review](#self-review)
-- [SwitchingScreens](#switchingscreens)
-- [Xcode](#xcode)
+- [A_Writing_in_Progress](#A_Writing_in_Progress)
+- [About-AI](#About-AI)
+- [About-Error](#About-Error)
+- [About-IT](#About-IT)
+- [AppStore](#AppStore)
+- [CI_CD](#CI_CD)
+- [ComputerScience](#ComputerScience)
+- [Conference](#Conference)
+- [Docs](#Docs)
+- [Extensions](#Extensions)
+- [Flutter](#Flutter)
+- [Git](#Git)
+- [IOS-Architecture](#IOS-Architecture)
+- [Insight](#Insight)
+- [Integrity](#Integrity)
+- [Library](#Library)
+- [Mobile-Android](#Mobile-Android)
+- [Mobile-IOS](#Mobile-IOS)
+- [Mobile-iOS-Hierachy](#Mobile-iOS-Hierachy)
+- [Networking](#Networking)
+- [Objective-C](#Objective-C)
+- [RelatedImage](#RelatedImage)
+- [Ruby](#Ruby)
+- [Self-Review](#Self-Review)
+- [SwitchingScreens](#SwitchingScreens)
+- [Xcode](#Xcode)
 - [swift](#swift)
 
 ### [A_Writing_in_Progress](#A_Writing_in_Progress)
@@ -91,6 +92,11 @@ _279 TILs and counting..._
 - [리젝사유 - 4. Design(디자인)](AppStore/Reject_4_Design.md)
 - [리젝사유 - 5. Legal(법률)](AppStore/Reject_5_Legal.md)
 - [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md)
+
+### [CI_CD](#CI_CD)
+- [CI/CD - GitHub Action 사용하기 : 초기 구현하기](CI_CD/GithubAction_A_tutorial00.md)
+- [CI/CD - GitHub Action 사용하기2 : on 섹션 수정하기](CI_CD/GithubAction_A_tutorial01.md)
+- [CI/CD - GitHub Action 사용하기3 : 실행할 스크립트 짜보기](CI_CD/GithubAction_A_tutorial02.md)
 
 ### [ComputerScience](#ComputerScience)
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
