@@ -25,7 +25,7 @@ SceneDelegate에서 네비게이션 컨트롤러는 ViewControllerA 인스턴스
 
 ### 적용화면
   
-<img width="500" alt="ezgif-3-acab1a77c5" src="https://github.com/isGeekCode/TIL/assets/76529148/a7294acc-ae8a-48c6-bfab-244083181301">    
+<img width="300" alt="ezgif-3-acab1a77c5" src="https://github.com/isGeekCode/TIL/assets/76529148/a7294acc-ae8a-48c6-bfab-244083181301">    
 
 ## Navigation Bar
 네비게이션 컨트롤러는 각 뷰 컨트롤러의 상단에 네비게이션 바(Navigation Bar)를 표시한다. 이 네비게이션 바에는 현재 뷰 컨트롤러의 제목이 표시되며, 이는 각 뷰 컨트롤러의 'navigationItem.title' 속성으로 설정된다.

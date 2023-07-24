@@ -4,7 +4,7 @@
 
 ### 적용화면
   
-<img width="500" alt="ezgif-4-05ae2c1872" src="https://github.com/isGeekCode/TIL/assets/76529148/3cafd1c0-8cd7-4268-9341-d7f6a9ee5bff">    
+<img width="300" alt="ezgif-4-05ae2c1872" src="https://github.com/isGeekCode/TIL/assets/76529148/3cafd1c0-8cd7-4268-9341-d7f6a9ee5bff">    
   
 ## TabBar Controller의 구조
 
