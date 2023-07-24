@@ -4,13 +4,17 @@
 
 ### 적용화면
   
-![ezgif-4-05ae2c1872](https://github.com/isGeekCode/TIL/assets/76529148/3cafd1c0-8cd7-4268-9341-d7f6a9ee5bff)
+<img width="500" alt="ezgif-4-05ae2c1872" src="https://github.com/isGeekCode/TIL/assets/76529148/3cafd1c0-8cd7-4268-9341-d7f6a9ee5bff">    
   
 ## TabBar Controller의 구조
 
-![img1 daumcdn-13](https://github.com/isGeekCode/TIL/assets/76529148/b069b799-1345-4b90-b500-8c22dfdfed7b)
+<img width="600" alt="img1 daumcdn-13" src="https://github.com/isGeekCode/TIL/assets/76529148/b069b799-1345-4b90-b500-8c22dfdfed7b">    
 
-![img1 daumcdn-14](https://github.com/isGeekCode/TIL/assets/76529148/27719c83-0c21-4d23-9016-d2b99e2fb329)
+  
+  
+<img width="600" alt="img1 daumcdn-14" src="https://github.com/isGeekCode/TIL/assets/76529148/27719c83-0c21-4d23-9016-d2b99e2fb329">    
+  
+  
 
   
 탭 바 컨트롤러의 구조는 네비게이션 컨트롤러와 유사하게 스택(stack) 자료 구조를 사용한다.
