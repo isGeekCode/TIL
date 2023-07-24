@@ -8,17 +8,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_284 TILs and counting..._
+_285 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Segue를 이용한 화면이동](SwitchingScreens/segue.md) - Mon Jul 24 17:04:06 2023 +0900
 - [NSObject_UIResponder_UIView_UITabBar](Mobile-IOS/NSObject_UIResponder_UIView_UITabBar.md) - Fri Jul 21 16:30:12 2023 +0900
 - [화면전환 - UITabBarController 이해하기](SwitchingScreens/tabbarController.md) - Fri Jul 21 15:12:35 2023 +0900
-- [CI/CD - GitHub Action 사용하기3 : 실행할 스크립트 짜보기](CI_CD/GithubAction_A_tutorial02.md) - Fri Jul 21 13:18:58 2023 +0900
-- [CI/CD - GitHub Action 사용하기2 : on 섹션 수정하기](CI_CD/GithubAction_A_tutorial01.md) - Fri Jul 21 13:18:58 2023 +0900
 - [CI/CD - GitHub Action 사용하기 : 초기 구현하기](CI_CD/GithubAction_A_tutorial00.md) - Fri Jul 21 13:18:58 2023 +0900
+- [CI/CD - GitHub Action 사용하기3 : 실행할 스크립트 짜보기](CI_CD/GithubAction_A_tutorial02.md) - Fri Jul 21 13:18:58 2023 +0900
 
 ### Categories
 
@@ -341,6 +341,7 @@ _284 TILs and counting..._
 ### [SwitchingScreens](#SwitchingScreens)
 - [present - CodeUI to StoryBoard](SwitchingScreens/moveToStoryboard.md)
 - [화면전환 - UINavigationController 이해하기](SwitchingScreens/navigationController.md)
+- [Segue를 이용한 화면이동](SwitchingScreens/segue.md)
 - [화면전환 - UITabBarController 이해하기](SwitchingScreens/tabbarController.md)
 
 ### [Xcode](#Xcode)
