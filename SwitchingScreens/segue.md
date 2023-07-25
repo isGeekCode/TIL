@@ -65,12 +65,15 @@ ViewControllerA의 트리거(버튼)을 클릭하고 Control버튼을 누른 상
 2. 어떤 방식으로 전환할 지 선택
 그러면 아래와 같이 선택을 위한 창이 생겨난다. 
 가장 일반적으로 사용하는 것은 `Present Modally`. 이걸 선택해준다.
+<img width="200" alt="스크린샷 2023-07-25 오후 4 23 46" src="https://github.com/isGeekCode/TIL/assets/76529148/67c7fed0-0f1d-4e07-81b8-42f82d21e03a">
 
 3. 연결된 화면
 <img width="500" alt="스크린샷 2023-07-25 오후 4 21 46" src="https://github.com/isGeekCode/TIL/assets/76529148/47c9b7e0-2df1-48c8-8db1-46b4ee2e4b97">
   
 4. 동작 화면
 <img width="300" alt="ezgif-3-d5a07d300a" src="https://github.com/isGeekCode/TIL/assets/76529148/b8cdcbb0-f14b-457f-b870-ea5c7352c7fc">
+
+
 
 
 
