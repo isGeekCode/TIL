@@ -1,4 +1,4 @@
-# Layout - SwiftUI: TabBar
+# Layout - SwiftUI: TabView
 
 ContentView는 SwiftUI View 구조체를 나타낸다. body 속성은 TabView를 반환하며, TabView의 각 탭은 Text 뷰를 사용하여 표시한다. 
 각 탭에는 Image(systemName:)과 Text() 함수를 사용하여 아이콘과 텍스트를 추가한다.
