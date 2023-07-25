@@ -1,4 +1,4 @@
-# iOS에서의 화면관리 및 전환
+# 정리 : iOS에서의 화면관리 및 전환
 
 iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지만 상황에 따라 여러 개의 화면이 필요해진다. 
 
@@ -9,7 +9,6 @@ iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지
 사용할 수 있는 방법은 아래와 같다.
 
 - NavigationController를 이용한 화면이동
-    - [NavigationController는 Container ViewController 타입이다.](https://github.com/isGeekCode/TIL/blob/main/Mobile-IOS/Container_ViewController_NavigationController.md)
 - TabBarController를 이용한 화면이동
 - Segue를 이용한 화면이동
 - Code Programming : Present ViewController
@@ -25,7 +24,6 @@ iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지
 - RIBs 패턴
 
 아래는 관련 정리 링크들이다. 
-
 
 ## UIKit 기반의 화면 전환 방식
 - [TIL : 기본적인 iOS앱의 계층구조](https://github.com/isGeekCode/TIL/blob/main/Mobile-IOS/UIApplication_AppDelegate_AppLifeCycle.md)
@@ -44,6 +42,8 @@ iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지
 
 
 ### Segue를 이용한 화면이동
+- [TIL : Segue를 이용한 화면이동](https://github.com/isGeekCode/TIL/blob/main/SwitchingScreens/segue.md)
+
 ### Code Programming : Present ViewController
 ### Code Programming : PopOver ViewController
 ### Code Programming : ViewController Container 사용하기
