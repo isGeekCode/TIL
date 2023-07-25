@@ -14,7 +14,7 @@ _286 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [iOS에서의 화면관리 및 전환](SwitchingScreens/A_Various_switchingScene.md) - Tue Jul 25 09:36:54 2023 +0900
+- [정리 : iOS에서의 화면관리 및 전환](SwitchingScreens/A_Various_switchingScene.md) - Tue Jul 25 09:36:54 2023 +0900
 - [Layout - SwiftUI: TabView](Mobile-IOS/Layout_SwiftUI_TabView.md) - Tue Jul 25 09:36:54 2023 +0900
 - [Segue를 이용한 화면이동](SwitchingScreens/segue.md) - Mon Jul 24 17:04:06 2023 +0900
 - [NSObject_UIResponder_UIView_UITabBar](Mobile-IOS/NSObject_UIResponder_UIView_UITabBar.md) - Fri Jul 21 16:30:12 2023 +0900
@@ -339,7 +339,7 @@ _286 TILs and counting..._
 - [23년 5월 회고 / 6월 목표](Self-Review/review_230526May.md)
 
 ### [SwitchingScreens](#SwitchingScreens)
-- [iOS에서의 화면관리 및 전환](SwitchingScreens/A_Various_switchingScene.md)
+- [정리 : iOS에서의 화면관리 및 전환](SwitchingScreens/A_Various_switchingScene.md)
 - [present - CodeUI to StoryBoard](SwitchingScreens/moveToStoryboard.md)
 - [화면전환 - UINavigationController 이해하기](SwitchingScreens/navigationController.md)
 - [Segue를 이용한 화면이동](SwitchingScreens/segue.md)
