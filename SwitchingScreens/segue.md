@@ -7,8 +7,8 @@ iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지
 이 글에서는 Segue를 통하여 화면 이동을 하는 방법을 소개하고자 한다.
 - [TIL : iOS에서의 화면관리 및 전환](https://github.com/isGeekCode/TIL/blob/main/SwitchingScreens/A_Various_switchingScene.md)  
 
-
-
+<br>
+<br>
 ## 📌 Segue
 
 Segue는 한 뷰 컨트롤러에서 다른 뷰 컨트롤러로 전환을 수행하기위한 수단이다. 
@@ -30,18 +30,19 @@ Segue에서 특별한 점을 소개하자면 아래와 같다.
 - (modal일 경우)
     - modalPresentationStyle
     - modalTransitionStyle
-  
-  
+    
+<br>
+<br>
 ### 🍊 출발지와 도착지
 Segue는 전 화면과 후 화면을 부드럽게 전환을 해야하기 때문에, 당연하게도 출발지와 목적지가 필요하다.
 Segue는 스토리보드와 함께 사용하기 때문에 스토리보드에서 출발지와 도착지를 링크하면 된다.
-  
-  
+<br>
+<br>
 ### 🍊 identifier
 한 화면에서 여러 개의 Segue가 존재할 수도 있고, 각 Segue에 따른 데이터가 필요할 수 있다.
 이를 구별하기위해 사용하는 것이 identifier다.
-  
-  
+<br>
+<br>
 ### 🍊 Modal방식
 
 modal방식이란, 현재의 화면을 보존하면서 사용자의 주의를 새로운 작업에 집중시키기위해 전체 화면을 차지하는 방식을 말한다. 
@@ -51,9 +52,9 @@ modal방식이란, 현재의 화면을 보존하면서 사용자의 주의를 �
 이런 경우에 새로운 뷰가 현재 뷰를 완전히 가릴 수 있다.
 
 
-  
-    
-    
+<br>
+<br>
+<br>
 ## 📌 Segue 만들기
 
 스토리보드에서 이동 전 화면에서 이동 후 화면으로 Segue를 만들어보자.
