@@ -287,7 +287,7 @@ A로 돌아가는 segue는
 화면B와 화면C에 중복으로 세팅이 가능하다.
 <br><br>
 
-<img width="700" alt="스크린샷 2023-07-26 오후 3 41 19" src="https://github.com/isGeekCode/TIL/assets/76529148/d57f9fff-925a-4921-9de2-d3c13c2fd2cc">
+<img width="700" alt="스크린샷 2023-07-26 오후 3 41 19" src="https://github.com/isGeekCode/TIL/assets/76529148/413baeed-e0c1-4dd8-a17d-e6adfc7b3237">
 
 <br><br>
 
