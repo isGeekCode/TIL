@@ -217,7 +217,7 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
     
         <img width="700" alt="스크린샷 2023-07-26 오후 3 04 11" src="https://github.com/isGeekCode/TIL/assets/76529148/49976b7c-eb7f-4a47-9d5e-da4c917fd600">
         
-    - 그러면 보이는 Segue를 선택해서 트리거가 될 버튼으로 연결한다.
+    - 그러면 보이는 Segue를 선택해서 트리거가 될 버튼으로 연결한다.  
       `이때 현재 프로젝트에 활성화 되어있는 UIStoryboardSegue가 여러 개 보일 수 있다.`  
       원하는 Segue를 확인하자.
     
@@ -231,7 +231,8 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
 <br><br>
         
 - ⭐️ 4. 동작화면
-<img width="300" alt="스크린샷 2023-07-25 오후 5 05 12" src="https://github.com/isGeekCode/TIL/assets/76529148/57c819d1-f86e-407d-b423-533e78872121">
+
+<img width="300" alt="스크린샷 2023-07-25 오후 5 05 12" src="https://github.com/isGeekCode/TIL/assets/76529148/5140cc59-ce8e-402c-90d6-c34aacf9c7aa">
 
 
 <br><br><br>
