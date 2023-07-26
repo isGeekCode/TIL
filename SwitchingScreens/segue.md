@@ -109,7 +109,7 @@ identifier를 설정하지 않아도 작동한다. 지금은 세팅하지않는�
 <br>
 <br>
 
-###   🍊 4. 동작 화면
+### 🍊 4. 동작 화면
 노란화면 (화면A)에서 버튼을 누르면 파란화면 (화면B)로 이동하는 것을 확인할 수 있다.  
   
 <img width="300" alt="ezgif-3-d5a07d300a" src="https://github.com/isGeekCode/TIL/assets/76529148/b8cdcbb0-f14b-457f-b870-ea5c7352c7fc">
@@ -122,19 +122,21 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
 
 이걸 구현하는 방법은 두 가지가 있다.
 
-- 1. B화면에서 `dismiss(animated:)` 메서드 실행시키기
-- 2. A화면에 `Unwind Segue` 구현하기
+- B화면에서 `dismiss(animated:)` 메서드 실행시키기
+- A화면에 `Unwind Segue` 구현하기
 
-두 방법 모두 IBAction을 구현해야한다.
+두 방법 모두 `@IBAction`을 구현해야한다.
 
+<br><br><br>
 
-### 첫번째 방법 : B화면에서 `dismiss(animated:)` 메서드 실행시키기  
+---
+### 🍊 첫번째 방법 : B화면에서 `dismiss(animated:)` 메서드 실행시키기  
 
+- 1. B화면에서 트리거로 사용할 버튼을 만든다.
 
-- ** 1. B화면에서 트리거로 사용할 버튼을 만든다.
+<br><br>
 
-
-- ** 2-1. 스토리보드를 통해 IBAction 코드를 만든다.
+- 2-1. 스토리보드를 통해 IBAction 코드를 만든다.
 
     - 스토리보드에서 트리거가 될 버튼을 클릭하고 Control 버튼을 누른상태에서 코드 부분으로 드래그앤드랍한다.
     <img width="600" alt="스크린샷 2023-07-25 오후 4 55 44" src="https://github.com/isGeekCode/TIL/assets/76529148/3a73c6be-66f5-49f6-a223-c82066227b42">
@@ -144,21 +146,21 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
   
     - 연결된 화면
     <img width="600" alt="스크린샷 2023-07-25 오후 4 59 01" src="https://github.com/isGeekCode/TIL/assets/76529148/4068640f-2913-4d8c-b765-9f233a15ea60">
+<br><br>
   
-  
-- ** 2-2. B화면의 ViewController 내부에서 IBAction 코드를 만든다.
+- 2-2. B화면의 ViewController 내부에서 IBAction 코드를 만든다.
 
     - 아래처럼 구현하면 `@`좌측에 빈 원이 하나 생긴다.
-    ```swift
-    @IBAction func dismissToA(_ sender: Any) {
+        ```swift
+        @IBAction func dismissToA(_ sender: Any) {
 
-    }
-    ```
+        }
+        ```
     - IBAction 좌측의 빈 원을 스토리보드의 트리거 버튼으로 드래그앤드랍한다. 그러면 링크된다.
     <img width="600" alt="스크린샷 2023-07-25 오후 5 05 12" src="https://github.com/isGeekCode/TIL/assets/76529148/d46d3385-cd33-46cc-946a-d64abca8a0fe">
   
   
-- ** 3. dismiss 메서드 구현**
+- 3. dismiss 메서드 구현
 
 ```swift
 @IBAction func dismissToA(_ sender: Any) {
