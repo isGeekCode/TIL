@@ -232,7 +232,7 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
         
 - ⭐️ 4. 동작화면
 
-<img width="300" alt="스크린샷 2023-07-25 오후 5 05 12" src="https://github.com/isGeekCode/TIL/assets/76529148/5140cc59-ce8e-402c-90d6-c34aacf9c7aa">
+<img width="300" alt="스크린샷 2023-07-25 오후 5 05 12" src="https://github.com/isGeekCode/TIL/assets/76529148/81d4d932-4506-4fa2-aeea-53b5fac89976">
 
 
 <br><br><br>
