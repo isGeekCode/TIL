@@ -402,9 +402,11 @@ class ViewControllerB: UIViewController {
 <br><br>
 
 - ⭐️ 6. 동작화면
-<img width="300" alt="ezgif-2-7dcf375596" src="ezgif-2-7dcf375596](https://github.com/isGeekCode/TIL/assets/76529148/87ff5925-9d8b-470a-974e-eb6732d89d5f">
+<img width="300" alt="name" src="https://github.com/isGeekCode/TIL/assets/76529148/e61bbdf0-1c90-4a45-b30d-54d2d0666ec5">
+
 
 <br><br><br>
+
 
 ## 📌 Segue의 Source와 Destination 이용하기
 내일하자!
