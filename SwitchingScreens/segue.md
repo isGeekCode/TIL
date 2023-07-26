@@ -10,13 +10,6 @@ iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지
 <br>
 <br>
 
-<div style="background-color: #f0f0f0; padding: 10px;">
-    <h1>📌 Segue가 뭔가요</h1>
-</div>
-<div style="background-color: #f0f0f0; padding: 10px;">
-    <h2>📌 Segue가 뭔가요</h2>
-    <p>Segue는 iOS 애플리케이션에서 화면 전환을 관리하는 방법 중 하나입니다.</p>
-</div>
 
 ## 📌 Segue가 뭔가요
 
