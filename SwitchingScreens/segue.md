@@ -5,10 +5,10 @@ iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지
 이 때, 화면을 전환하기 위해 여러가지 방법이 있는데, 전체적인 소개는 아래 링크를 참고하자.
 
 이 글에서는 Segue를 통하여 화면 이동을 하는 방법을 소개하고자 한다.
-- [TIL : iOS에서의 화면관리 및 전환](https://github.com/isGeekCode/TIL/blob/main/SwitchingScreens/A_Various_switchingScene.md)
+- [TIL : iOS에서의 화면관리 및 전환](https://github.com/isGeekCode/TIL/blob/main/SwitchingScreens/A_Various_switchingScene.md)  
 
-  
-    
+
+
 ## 📌 Segue
 
 Segue는 한 뷰 컨트롤러에서 다른 뷰 컨트롤러로 전환을 수행하기위한 수단이다. 
@@ -96,12 +96,12 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
 두 방법 모두 IBAction을 구현해야한다.
 
 
-### 첫번째 방법 : B화면에서 `dismiss(animated:)` 메서드 실행시키기
-  
-  
+### 첫번째 방법 : B화면에서 `dismiss(animated:)` 메서드 실행시키기  
+
+
 - ** 1. B화면에서 트리거로 사용할 버튼을 만든다.
-  
-  
+
+
 - ** 2-1. 스토리보드를 통해 IBAction 코드를 만든다.
 
     - 스토리보드에서 트리거가 될 버튼을 클릭하고 Control 버튼을 누른상태에서 코드 부분으로 드래그앤드랍한다.
