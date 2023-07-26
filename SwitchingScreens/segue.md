@@ -75,14 +75,14 @@ A 화면에서 버튼을 누르면 B 화면으로 이동하는 것이다.
 <br>
 
 - 시나리오
-    - ViewControllerA(노랑)
+    - 화면A(노랑)
     - 버튼 클릭
-    - ViewControllerB(파랑)로 전환
+    - 화면B(파랑)로 전환
 <br>
 
 ### 🍊 1. segue 시작점, 끝점 선언
 
-ViewControllerA의 트리거(버튼)을 클릭하고 Control버튼을 누른 상태에서 B로 드래그앤드랍 한다.
+화면A(노랑)의 트리거(버튼)을 클릭하고 Control버튼을 누른 상태에서 화면B(파랑)로 드래그앤드랍 한다.
 
 <img width="600" alt="스크린샷 2023-07-25 오후 4 24 23" src="https://github.com/isGeekCode/TIL/assets/76529148/f0b8b2e1-4b46-4ef6-ade4-4af67fb074ca">
 
@@ -122,15 +122,15 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
 
 이걸 구현하는 방법은 두 가지가 있다.
 
-- B화면에서 `dismiss(animated:)` 메서드 실행시키기
-- A화면에 `Unwind Segue` 구현하기
+- B화면에서 `dismiss(animated:)` 메서드를 통해 돌아가기
+- A화면으로 돌아올 `Unwind Segue` 구현하기
 
 두 방법 모두 `@IBAction`을 구현해야한다.
 
 <br><br><br>
 
 ---
-### 🍊 첫번째 방법 : B화면에서 `dismiss(animated:)` 메서드 실행시키기  
+### 🍊 첫번째 방법 : B화면에서 `dismiss(animated:)` 메서드를 통해 돌아가기 
 
 - ⭐️ 1. B화면에서 트리거로 사용할 버튼을 만든다.
     - 스토리보드에서 Button 생성하기
@@ -154,7 +154,7 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
     - 3번과정을 진행한다.
 <br><br>
   
-- ⭐️ 2-2. B화면의 ViewController 내부에서 `@IBAction` 코드를 만든다.
+- ⭐️ 2-2. B화면의 ViewController 내부에서 `@IBAction` 메서드를 만든다.
 
     - 아래처럼 구현하면 `@`좌측에 빈 원이 하나 생긴다.
         ```swift
@@ -178,6 +178,7 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
   
 > 모달로 표시된 화면에서는 `self.dismiss()`메서드를 이용하여 이전 화면으로 돌아갈 수 있다.
 > navigationController를 이용한 화면이라면 `popViewController()`메서드를 사용하여 이전 화면으로 돌아갈 수 있다.
+
 <br><br>
 
 - ⭐️ 4. 동작화면
@@ -185,6 +186,64 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
 
 
 <br><br><br>
+
+
+---
+### 🍊 두번째 방법 : A화면으로 돌아올 `Unwind Segue` 구현하기
+
+- ⭐️ 1. B화면에서 트리거로 사용할 버튼을 만든다.
+    - 스토리보드에서 Button 생성하기
+
+<br>
+
+- ⭐️ 2. 도착할 화면인 화면A(노랑)의 ViewController 내부에 `@IBAction` 메서드를 만든다.
+    unwind segue를 사용할 때는 구현한 메서드 내부에는 따로 dismiss()메서드를 구현할 필요가 없다. 자체가 현재 화면으로 돌아올 통로를 만들어주는 과정이기 떄문이다.
+    
+    - 파라미터를 `segue: UIStoryboardSegue`로 세팅한다.
+        ```swift
+        @IBAction func unwindToA(segue: UIStoryboardSegue) {
+            
+        }
+        ```
+
+    - 메서드 내부에는 돌아올 때, 구현하고 싶은 동작을 구현할 수 있다.
+        completion() 처럼 사용하는 것이다. 
+        
+        
+- ⭐️ 3. 스토리보드에서 unwind segue를 연결한다.
+        
+    - 돌아오기 시작할 화면B의 상단의 exit 버튼을 마우스 우클릭한다.
+    
+        <img width="700" alt="스크린샷 2023-07-26 오후 3 04 11" src="https://github.com/isGeekCode/TIL/assets/76529148/49976b7c-eb7f-4a47-9d5e-da4c917fd600">
+        
+    - 그러면 보이는 Segue를 선택해서 트리거가 될 버튼으로 연결한다.
+      이때 현재 프로젝트에 활성화 되어있는 UIStoryboardSegue가 여러 개 보일 수 있다 원하는 Segue를 확인하자.
+    
+        <img width="700" alt="스크린샷 2023-07-26 오후 3 04 20" src="https://github.com/isGeekCode/TIL/assets/76529148/38b0d449-7097-4802-b2ce-792724f0ab52">
+
+        
+    - 연결을 하면 팝업이 뜰텐데 action을 선택하자.
+    
+        <img width="700" alt="스크린샷 2023-07-26 오후 3 04 35" src="https://github.com/isGeekCode/TIL/assets/76529148/dbebf9b5-b714-4999-a775-c189088550fe">
+
+<br><br>
+        
+- ⭐️ 4. 동작화면
+<img width="300" alt="스크린샷 2023-07-25 오후 5 05 12" src="https://github.com/isGeekCode/TIL/assets/76529148/57c819d1-f86e-407d-b423-533e78872121">
+
+
+<br><br><br>
+---
+### 🍊 두 방법의 차이
+
+첫번째 방법은 화면A의 상단에 생성된 화면B에서 `self.dismiss()`메서드를 실행하는 것이다.
+
+두번째 방법은 화면 A로 돌아갈 길을 만들기 위해 화면A의 내부 코드블럭에 `unwind segue`를 구현했다.
+
+
+> 즉, 첫번째는 돌아오기 시작하려는 곳에서 실행하는 것이라면 두번째는 돌아올 도착지에서 실행하는 것이다. 
+
+
     
 ```swift
 import UIKit
