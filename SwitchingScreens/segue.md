@@ -7,7 +7,9 @@ iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지
 이 글에서는 Segue를 통하여 화면 이동을 하는 방법을 소개하고자 한다.
 - [TIL : iOS에서의 화면관리 및 전환](https://github.com/isGeekCode/TIL/blob/main/SwitchingScreens/A_Various_switchingScene.md)
 
-## Segue
+  
+    
+## 📌 Segue
 
 Segue는 한 뷰 컨트롤러에서 다른 뷰 컨트롤러로 전환을 수행하기위한 수단이다. 
 
@@ -28,16 +30,19 @@ Segue에서 특별한 점을 소개하자면 아래와 같다.
 - (modal일 경우)
     - modalPresentationStyle
     - modalTransitionStyle
-
-### 출발지와 도착지
+  
+  
+### 🍊 출발지와 도착지
 Segue는 전 화면과 후 화면을 부드럽게 전환을 해야하기 때문에, 당연하게도 출발지와 목적지가 필요하다.
 Segue는 스토리보드와 함께 사용하기 때문에 스토리보드에서 출발지와 도착지를 링크하면 된다.
-
-### identifier
+  
+  
+### 🍊 identifier
 한 화면에서 여러 개의 Segue가 존재할 수도 있고, 각 Segue에 따른 데이터가 필요할 수 있다.
 이를 구별하기위해 사용하는 것이 identifier다.
-
-### Modal방식
+  
+  
+### 🍊 Modal방식
 
 modal방식이란, 현재의 화면을 보존하면서 사용자의 주의를 새로운 작업에 집중시키기위해 전체 화면을 차지하는 방식을 말한다. 
 
@@ -45,7 +50,11 @@ modal방식이란, 현재의 화면을 보존하면서 사용자의 주의를 �
 
 이런 경우에 새로운 뷰가 현재 뷰를 완전히 가릴 수 있다.
 
-## Segue 만들기
+
+  
+    
+    
+## 📌 Segue 만들기
 
 스토리보드에서 이동 전 화면에서 이동 후 화면으로 Segue를 만들어보자.
 
@@ -72,27 +81,30 @@ ViewControllerA의 트리거(버튼)을 클릭하고 Control버튼을 누른 상
   
 4. 동작 화면
 <img width="300" alt="ezgif-3-d5a07d300a" src="https://github.com/isGeekCode/TIL/assets/76529148/b8cdcbb0-f14b-457f-b870-ea5c7352c7fc">
-
-
-## Segue로 이동한 화면에서 되돌아가기
+  
+  
+  
+## 📌 Segue로 이동한 화면에서 되돌아가기
 A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
 작업을 마치고 이제 다시 A화면으로 돌아가는 방법을 알아보자.
 
 이걸 구현하는 방법은 두 가지가 있다.
 
-- B화면에서 `dismiss(animated:)` 메서드 실행시키기
-- A화면에 Unwind Segue 구현하기
+- 1. B화면에서 `dismiss(animated:)` 메서드 실행시키기
+- 2. A화면에 `Unwind Segue` 구현하기
 
 두 방법 모두 IBAction을 구현해야한다.
 
 
 ### 첫번째 방법 : B화면에서 `dismiss(animated:)` 메서드 실행시키기
   
-- 1. B화면에서 트리거로 사용할 버튼을 만든다.
   
-- 2-1. 스토리보드를 통해 IBAction 코드를 만든다.
+- ** 1. B화면에서 트리거로 사용할 버튼을 만든다.
+  
+  
+- ** 2-1. 스토리보드를 통해 IBAction 코드를 만든다.
 
-    - 스토리보드에서 트리거가 될 버튼을 클릭하고 Control 버튼을 누른상태에서 코드 부분으로 드래그앤드랍
+    - 스토리보드에서 트리거가 될 버튼을 클릭하고 Control 버튼을 누른상태에서 코드 부분으로 드래그앤드랍한다.
     <img width="600" alt="스크린샷 2023-07-25 오후 4 55 44" src="https://github.com/isGeekCode/TIL/assets/76529148/3a73c6be-66f5-49f6-a223-c82066227b42">
  
     - Action을 선택, 메서드명 입력, touchUpInside 를 선택하고 Connect
@@ -101,9 +113,10 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
     - 연결된 화면
     <img width="600" alt="스크린샷 2023-07-25 오후 4 59 01" src="https://github.com/isGeekCode/TIL/assets/76529148/4068640f-2913-4d8c-b765-9f233a15ea60">
   
-- 2-2. B화면의 ViewController 내부에서 IBAction 코드를 만든다.
+  
+- ** 2-2. B화면의 ViewController 내부에서 IBAction 코드를 만든다.
 
-    - 아래처럼 구현하면 @ 좌측에 빈 원이 하나 생긴다.
+    - 아래처럼 구현하면 `@`좌측에 빈 원이 하나 생긴다.
     ```swift
     @IBAction func dismissToA(_ sender: Any) {
 
@@ -112,7 +125,8 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
     - IBAction 좌측의 빈 원을 스토리보드의 트리거 버튼으로 드래그앤드랍한다. 그러면 링크된다.
     <img width="600" alt="스크린샷 2023-07-25 오후 5 05 12" src="https://github.com/isGeekCode/TIL/assets/76529148/d46d3385-cd33-46cc-946a-d64abca8a0fe">
   
-- 3. dismiss 메서드 구현
+  
+- ** 3. dismiss 메서드 구현
 ```swift
 @IBAction func dismissToA(_ sender: Any) {
     self.dismiss(animated: true)
