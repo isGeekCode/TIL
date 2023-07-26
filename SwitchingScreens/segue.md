@@ -311,9 +311,10 @@ A로 돌아가는 segue는
 
 <br><br>
 
-- ⭐️ 1. 최초화면
-    이번엔 트리거가 될 버튼 조차 없다. 
-    구현하려는 목표는 화면 B가 됐을 때, 2초 뒤에 Unwind Segue가 실행되는 거다.
+- ⭐️ 1. 최초화면  
+    이번엔 트리거가 될 버튼 조차 없다. <br>
+    구현하려는 목표는 화면 B가 됐을 때, <br>
+    2초 뒤에 Unwind Segue가 실행되는 거다.
 
     <img width="700" alt="스크린샷 2023-07-26 오후 4 46 26" src="https://github.com/isGeekCode/TIL/assets/76529148/ea254fe6-de13-4558-8198-042bfecb04be">
 
@@ -322,7 +323,7 @@ A로 돌아가는 segue는
 
 
 
-- ⭐️ 2. Unwind Segue 구현
+- ⭐️ 2. Unwind Segue 구현  
 ViewControllerA(노랑)화면으로 돌아갈 거라서 이곳에 구현한다
 
 ```Swift
@@ -337,7 +338,7 @@ class ViewControllerB: UIViewController { }
 
 <br><br>
 
-- ⭐️ 3. Unwind Segue 링크시키기
+- ⭐️ 3. Unwind Segue 링크시키기  
 이전에는 버튼에 Unwind Segue를 링크시켰는데, 이번엔 화면 자체에 링크시킨다.
 
 <img width="764" alt="스크린샷 2023-07-26 오후 4 46 52" src="https://github.com/isGeekCode/TIL/assets/76529148/90c3c21f-9ec3-4643-8ccc-330be0ae426b">
@@ -351,11 +352,13 @@ class ViewControllerB: UIViewController { }
 <br><br>
 
 
-- ⭐️ 4. Unwind Segue `ID`값 세팅하기
+- ⭐️ 4. Unwind Segue `ID`값 세팅하기  
 
 그러면 스토리보드 좌측 Document Outline 패널에 Unwind segue가 나온다.  
 이부분을 클릭한다.  
-그러면 우측 Attribute 패널이 활성화 되는데 이곳에 Storyboard Unwind Segue라는 부분이 보인다.  
+<br>
+그러면 우측 Attribute 패널이 활성화 되는데 이곳에 Storyboard Unwind Segue라는 부분이 보인다.
+<br>  
 이곳의 Identifier부분에 사용할 ID값을 넣어주자.  
 여기선 `unwindToA`라는 값을 넣었다.  
 
@@ -403,6 +406,8 @@ class ViewControllerB: UIViewController {
 
 <br><br><br>
 
+## 📌 Segue의 Source와 Destination 이용하기
+내일하자!
 
     
 ```swift
