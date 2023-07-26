@@ -176,8 +176,13 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
     ```
 <br><br>
   
-    > 모달로 표시된 화면에서는 `self.dismiss()`메서드를 이용하여 이전 화면으로 돌아갈 수 있다.
-    > navigationController를 이용한 화면이라면 `popViewController()`메서드를 사용하여 이전 화면으로 돌아갈 수 있다.
+> 모달로 표시된 화면에서는 `self.dismiss()`메서드를 이용하여 이전 화면으로 돌아갈 수 있다.
+> navigationController를 이용한 화면이라면 `popViewController()`메서드를 사용하여 이전 화면으로 돌아갈 수 있다.
+<br><br>
+
+- ⭐️ 4. 동작화면
+<img width="300" alt="스크린샷 2023-07-25 오후 5 05 12" src="https://github.com/isGeekCode/TIL/assets/76529148/0dd0c1bf-f409-428c-be4c-ce251237e495">
+
 
 <br><br><br>
     
