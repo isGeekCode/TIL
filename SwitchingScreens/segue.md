@@ -10,7 +10,10 @@ iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지
 <br>
 <br>
 
-## 📌 Segue가 뭔가요
+<div style="background-color: #f0f0f0; padding: 10px;">
+    <h1>📌 Segue가 뭔가요</h1>
+</div>
+<!--## 📌 Segue가 뭔가요-->
 
 Segue는 한 뷰 컨트롤러에서 다른 뷰 컨트롤러로 전환을 수행하기위한 수단이다. 
 
@@ -145,6 +148,7 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
   
   
 - ** 3. dismiss 메서드 구현**
+
 ```swift
 @IBAction func dismissToA(_ sender: Any) {
     self.dismiss(animated: true)
