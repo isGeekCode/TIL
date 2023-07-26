@@ -295,8 +295,114 @@ A로 돌아가는 segue는
 <img width="300" alt="스크린샷 2023-07-25 오후 5 05 12" src="https://github.com/isGeekCode/TIL/assets/76529148/48f1d255-5cea-414b-b310-b7ed48db76bf">
 
 
+<br><br><br>
+
+
+## 📌 Unwind Segue 응용하기2 : 트리거 커스텀하기
+위에서는 unwind seuge를 버튼에 링크해줬다.
+
+그런데 필요에 따라 버튼을 누르고 화면을 종료하는게 아니라
+
+특정 API에 대한 성공시점이나 웹으로부터 다운로드가 완료되는 시점 처럼
+
+특별한 시점에 Unwind segue를 실행할 수도 있지않을까? 해서 찾아봤는데 된다!!
+
+일단 구현한 화면을 보자 
+
+<br><br>
+
+- ⭐️ 1. 최초화면
+    이번엔 트리거가 될 버튼 조차 없다. 
+    구현하려는 목표는 화면 B가 됐을 때, 2초 뒤에 Unwind Segue가 실행되는 거다.
+
+    <img width="700" alt="스크린샷 2023-07-26 오후 4 46 26" src="https://github.com/isGeekCode/TIL/assets/76529148/ea254fe6-de13-4558-8198-042bfecb04be">
+
+
+<br><br>
+
+
+
+- ⭐️ 2. Unwind Segue 구현
+ViewControllerA(노랑)화면으로 돌아갈 거라서 이곳에 구현한다
+
+```Swift
+import UIKit
+
+class ViewControllerA: UIViewController {
+    @IBAction func unwindToA(segue: UIStoryboardSegue) { }
+}
+
+class ViewControllerB: UIViewController { }
+```
+
+<br><br>
+
+- ⭐️ 3. Unwind Segue 링크시키기
+이전에는 버튼에 Unwind Segue를 링크시켰는데, 이번엔 화면 자체에 링크시킨다.
+
+<img width="764" alt="스크린샷 2023-07-26 오후 4 46 52" src="https://github.com/isGeekCode/TIL/assets/76529148/90c3c21f-9ec3-4643-8ccc-330be0ae426b">
+
+<br><br>
+
+그리고 이번엔 mannual을 선택한다.
+
+<img width="823" alt="스크린샷 2023-07-26 오후 4 46 58" src="https://github.com/isGeekCode/TIL/assets/76529148/71b6d2eb-1293-42f8-b13a-baba4f9de2c5">
+
+<br><br>
+
+
+- ⭐️ 4. Unwind Segue `ID`값 세팅하기
+
+그러면 스토리보드 좌측 Document Outline 패널에 Unwind segue가 나온다.  
+이부분을 클릭한다.  
+그러면 우측 Attribute 패널이 활성화 되는데 이곳에 Storyboard Unwind Segue라는 부분이 보인다.  
+이곳의 Identifier부분에 사용할 ID값을 넣어주자.  
+여기선 `unwindToA`라는 값을 넣었다.  
+
+<br><br>
+
+<img width="700" alt="스크린샷 2023-07-26 오후 4 48 43" src="https://github.com/isGeekCode/TIL/assets/76529148/f0b18f05-93f6-4a41-a02c-7fb510aac2d5">
+
+<br><br>
+
+
+- ⭐️ 5. Unwind Segue 를 실행할 함수를 구현한다.
+Unwind Segue가 아니더라도 Segue를 실행할 때는 아래 메서드를 이용한다.
+```Swift
+performSegue(withIdentifier: "unwindToA", sender: nil)
+```
+이 함수를 특정 시점에 구현하자.
+
+아래 코드는 ViewControllerB가 실행되자마자 2초 뒤에 performSegue가 실행되는 코드이다.
+
+```Swift
+import UIKit
+
+class ViewControllerA: UIViewController {
+
+    @IBAction func unwindToA(segue: UIStoryboardSegue) {}
+}
+
+class ViewControllerB: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.performSegue(withIdentifier: "unwindToA", sender: nil)
+        }
+    }
+}
+```
+
+
+<br><br>
+
+- ⭐️ 6. 동작화면
+<img width="300" alt="스크린샷 2023-07-25 오후 5 05 12" src="ezgif-2-7dcf375596](https://github.com/isGeekCode/TIL/assets/76529148/17963041-8184-47d4-8b70-c31c2e6815ef">
 
 <br><br><br>
+
 
     
 ```swift
@@ -399,3 +505,9 @@ class ViewControllerC: ViewController {
 }
 
 ```
+
+
+## History
+- 230724 : 초안작성
+- 230725 : Unwind Segue 구현하기
+- 230726 : Unwind Seuge 트리거 커스텀하기
