@@ -300,7 +300,7 @@ A로 돌아가는 segue는
 
 
 ## 📌 Unwind Segue 응용하기2 : 트리거 커스텀하기
-위에서는 unwind seuge를 버튼에 링크해줬다.
+위에서는 unwind segue를 버튼에 링크해줬다.
 
 그런데 필요에 따라 버튼을 누르고 화면을 종료하는게 아니라
 
@@ -314,8 +314,7 @@ A로 돌아가는 segue는
 
 - ⭐️ 1. 최초화면  
     이번엔 트리거가 될 버튼 조차 없다. <br>
-    구현하려는 목표는 화면 B가 됐을 때, <br>
-    2초 뒤에 Unwind Segue가 실행되는 거다.
+    구현하려는 목표는 화면 B가 됐을 때, 2초 뒤에 Unwind Segue가 실행되는 거다.
 
     <img width="700" alt="스크린샷 2023-07-26 오후 4 46 26" src="https://github.com/isGeekCode/TIL/assets/76529148/ea254fe6-de13-4558-8198-042bfecb04be">
 
@@ -403,7 +402,7 @@ class ViewControllerB: UIViewController {
 <br><br>
 
 - ⭐️ 6. 동작화면
-<img width="300" alt="스크린샷 2023-07-25 오후 5 05 12" src="ezgif-2-7dcf375596](https://github.com/isGeekCode/TIL/assets/76529148/17963041-8184-47d4-8b70-c31c2e6815ef">
+<img width="300" alt="ezgif-2-7dcf375596" src="ezgif-2-7dcf375596](https://github.com/isGeekCode/TIL/assets/76529148/87ff5925-9d8b-470a-974e-eb6732d89d5f">
 
 <br><br><br>
 
