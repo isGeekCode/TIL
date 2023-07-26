@@ -140,11 +140,18 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
 - ⭐️ 2-1. 스토리보드를 통해 `@IBAction` 코드를 만든다.
 
     - 스토리보드에서 트리거가 될 버튼을 클릭하고 Control 버튼을 누른상태에서 코드 부분으로 드래그앤드랍한다.
+    
         <img width="700" alt="스크린샷 2023-07-25 오후 4 55 44" src="https://github.com/isGeekCode/TIL/assets/76529148/3a73c6be-66f5-49f6-a223-c82066227b42">
+        
     - Action을 선택, 메서드명 입력, touchUpInside 를 선택하고 Connect
+    
         <img width="400" alt="스크린샷 2023-07-25 오후 4 56 33" src="https://github.com/isGeekCode/TIL/assets/76529148/a3aed7e7-5f16-4d53-904a-0a296d7c9b3d">
+        
     - 연결된 화면
+    
         <img width="700" alt="스크린샷 2023-07-25 오후 4 59 01" src="https://github.com/isGeekCode/TIL/assets/76529148/4068640f-2913-4d8c-b765-9f233a15ea60">
+        
+    - 3번과정을 진행한다.
 <br><br>
   
 - ⭐️ 2-2. B화면의 ViewController 내부에서 `@IBAction` 코드를 만든다.
@@ -158,6 +165,7 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
 <br>
 
     - IBAction 좌측의 빈 원을 스토리보드의 트리거 버튼으로 드래그앤드랍한다. 그러면 링크된다.
+    
         <img width="700" alt="스크린샷 2023-07-25 오후 5 05 12" src="https://github.com/isGeekCode/TIL/assets/76529148/d46d3385-cd33-46cc-946a-d64abca8a0fe">
 <br><br>
   
