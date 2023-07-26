@@ -84,10 +84,7 @@ A 화면에서 버튼을 누르면 B 화면으로 이동하는 것이다.
 
 ViewControllerA의 트리거(버튼)을 클릭하고 Control버튼을 누른 상태에서 B로 드래그앤드랍 한다.
 
-<!--<img width="600" alt="스크린샷 2023-07-25 오후 4 24 23" src="https://github.com/isGeekCode/TIL/assets/76529148/f0b8b2e1-4b46-4ef6-ade4-4af67fb074ca">-->
-<div style="display: flex; justify-content: center;">
-  <img width="600" alt="Image" src="https://github.com/isGeekCode/TIL/assets/76529148/f0b8b2e1-4b46-4ef6-ade4-4af67fb074ca">
-</div>
+<img width="600" alt="스크린샷 2023-07-25 오후 4 24 23" src="https://github.com/isGeekCode/TIL/assets/76529148/f0b8b2e1-4b46-4ef6-ade4-4af67fb074ca">
 
 <br>
 <br>
@@ -96,12 +93,16 @@ ViewControllerA의 트리거(버튼)을 클릭하고 Control버튼을 누른 상
 
 그러면 아래와 같이 선택을 위한 창이 생겨난다. 
 가장 일반적으로 사용하는 것은 `Present Modally`. 이걸 선택해준다.  
+  
 <img width="200" alt="스크린샷 2023-07-25 오후 4 23 46" src="https://github.com/isGeekCode/TIL/assets/76529148/67c7fed0-0f1d-4e07-81b8-42f82d21e03a">
 
 <br>
 <br>
 
 ### 🍊 3. 연결된 화면
+그러면 두 화면 사이에 줄이 생기고 줄을 클릭하면 우측 Attribute Pannel에서 identifier를 지정할 수도 있게 된다.
+
+identifier를 설정하지 않아도 작동한다. 지금은 세팅하지않는다.
 
 <img width="600" alt="스크린샷 2023-07-25 오후 4 21 46" src="https://github.com/isGeekCode/TIL/assets/76529148/47c9b7e0-2df1-48c8-8db1-46b4ee2e4b97">
     
@@ -109,6 +110,7 @@ ViewControllerA의 트리거(버튼)을 클릭하고 Control버튼을 누른 상
 <br>
 
 ###   🍊 4. 동작 화면
+노란화면 (화면A)에서 버튼을 누르면 파란화면 (화면B)로 이동하는 것을 확인할 수 있다.  
   
 <img width="300" alt="ezgif-3-d5a07d300a" src="https://github.com/isGeekCode/TIL/assets/76529148/b8cdcbb0-f14b-457f-b870-ea5c7352c7fc">
     
