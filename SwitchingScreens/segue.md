@@ -135,18 +135,16 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
 - ⭐️ 1. B화면에서 트리거로 사용할 버튼을 만든다.
     - 스토리보드에서 Button 생성하기
 
-<br><br>
+<br>
 
 - ⭐️ 2-1. 스토리보드를 통해 `@IBAction` 코드를 만든다.
 
     - 스토리보드에서 트리거가 될 버튼을 클릭하고 Control 버튼을 누른상태에서 코드 부분으로 드래그앤드랍한다.
         <img width="700" alt="스크린샷 2023-07-25 오후 4 55 44" src="https://github.com/isGeekCode/TIL/assets/76529148/3a73c6be-66f5-49f6-a223-c82066227b42">
 <br>
-
     - Action을 선택, 메서드명 입력, touchUpInside 를 선택하고 Connect
         <img width="400" alt="스크린샷 2023-07-25 오후 4 56 33" src="https://github.com/isGeekCode/TIL/assets/76529148/a3aed7e7-5f16-4d53-904a-0a296d7c9b3d">
 <br>
-
     - 연결된 화면
         <img width="700" alt="스크린샷 2023-07-25 오후 4 59 01" src="https://github.com/isGeekCode/TIL/assets/76529148/4068640f-2913-4d8c-b765-9f233a15ea60">
 <br><br>
