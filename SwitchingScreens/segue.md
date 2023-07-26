@@ -79,25 +79,26 @@ A 화면에서 버튼을 누르면 B 화면으로 이동하는 것이다.
     - ViewControllerB(파랑)로 전환
 <br>
 
-- **1. segue 시작점, 끝점 선언
+**1. segue 시작점, 끝점 선언
 
 ViewControllerA의 트리거(버튼)을 클릭하고 Control버튼을 누른 상태에서 B로 드래그앤드랍
     <img width="500" alt="스크린샷 2023-07-25 오후 4 24 23" src="https://github.com/isGeekCode/TIL/assets/76529148/f0b8b2e1-4b46-4ef6-ade4-4af67fb074ca">
 <br>
 
-- **2. 어떤 방식으로 전환할 지 선택
+**2. 어떤 방식으로 전환할 지 선택
 
 그러면 아래와 같이 선택을 위한 창이 생겨난다. 
 가장 일반적으로 사용하는 것은 `Present Modally`. 이걸 선택해준다.  
     <img width="200" alt="스크린샷 2023-07-25 오후 4 23 46" src="https://github.com/isGeekCode/TIL/assets/76529148/67c7fed0-0f1d-4e07-81b8-42f82d21e03a">
 <br>
 
-- ** 3. 연결된 화면  
+**3. 연결된 화면  
 
     <img width="500" alt="스크린샷 2023-07-25 오후 4 21 46" src="https://github.com/isGeekCode/TIL/assets/76529148/47c9b7e0-2df1-48c8-8db1-46b4ee2e4b97">
 <br>
 
-- **4. 동작 화면
+**4. 동작 화면
+  
     <img width="300" alt="ezgif-3-d5a07d300a" src="https://github.com/isGeekCode/TIL/assets/76529148/b8cdcbb0-f14b-457f-b870-ea5c7352c7fc">
 <br><br><br>
   
