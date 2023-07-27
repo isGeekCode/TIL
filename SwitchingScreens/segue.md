@@ -81,6 +81,7 @@ modal방식이란,
 
 이런 경우에는 새로운 뷰가 현재 뷰를 완전히 가릴 수 있다.
  
+[Top](#순서)
 <br>
 <br>
 <br>
@@ -134,7 +135,8 @@ identifier를 설정하지 않아도 작동한다. 지금은 세팅하지않는�
 노란화면 (화면A)에서 버튼을 누르면 파란화면 (화면B)로 이동하는 것을 확인할 수 있다.  
   
 <img width="300" alt="ezgif-3-d5a07d300a" src="https://github.com/isGeekCode/TIL/assets/76529148/b8cdcbb0-f14b-457f-b870-ea5c7352c7fc">
-    
+<br>
+[Top](#순서)   
 <br><br><br>
 
 
@@ -229,6 +231,8 @@ class ViewControllerA: UIViewController {
 이렇게 사용하면 좋은 점은  
   
 `API통신의 성공시점`이나, `뭔가를 다운로드 완료한 시점` 등 내가 원하는 상황에 `performSegue()`메서드만 선언하기만 하면 된다는 것이다. 
+<br>
+[Top](#순서)   
 <br><br><br>
   
 ## 📌 Segue로 이동한 화면에서 되돌아가기
@@ -363,7 +367,8 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
 
 > 즉, 첫번째는 돌아오기 시작하려는 곳에서 실행하는 것이라면 두번째는 돌아올 도착지에서 실행하는 것이다. 
 
-
+<br>
+[Top](#순서)   
 <br><br><br>
 
 
@@ -410,7 +415,8 @@ A로 돌아가는 segue는
 - ⭐️ 4. 동작화면
 <img width="300" alt="스크린샷 2023-07-25 오후 5 05 12" src="https://github.com/isGeekCode/TIL/assets/76529148/48f1d255-5cea-414b-b310-b7ed48db76bf">
 
-
+<br>
+[Top](#순서)   
 <br><br><br>
 
 
@@ -519,7 +525,8 @@ class ViewControllerB: UIViewController {
 - ⭐️ 6. 동작화면
 <img width="300" alt="name" src="https://github.com/isGeekCode/TIL/assets/76529148/e61bbdf0-1c90-4a45-b30d-54d2d0666ec5">
 
-
+<br>
+[Top](#순서)   
 <br><br><br>
 
 
@@ -634,3 +641,4 @@ class ViewControllerC: ViewController {
 - 230725 : Unwind Segue 구현하기
 - 230726 : Unwind Seuge 트리거 커스텀하기
 - 230727 : Segue의 identifier를 선언하는 방법
+- 230727 : toc기능 구현
