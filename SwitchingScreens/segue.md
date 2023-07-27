@@ -115,6 +115,100 @@ identifier를 설정하지 않아도 작동한다. 지금은 세팅하지않는�
 <img width="300" alt="ezgif-3-d5a07d300a" src="https://github.com/isGeekCode/TIL/assets/76529148/b8cdcbb0-f14b-457f-b870-ea5c7352c7fc">
     
 <br><br><br>
+
+
+## 📌 identifier를 이용해 유연하게 Segue 사용하기
+위 방법에서 Segue를 만들 때, 버튼을 다음화면으로 드래그하면서 Segue를 만들었다.  
+이렇게 하면 버튼을 눌렀을 때, 이동을 할수 있었다.  
+
+하지만 위 방법은 트리거가 될 버튼을 클릭했을 때, 곧장 이동을 하도록 되었기 때문에 좀더 디테일한 과정을 수행하기가 어렵다.   
+(물론 디테일한 부분을 보완할 수 있는 방법은 있다)  
+
+<br>
+
+그러면 좀더 내가 원하는 시점에 Segue를 사용하려면 어떻게 해야할까?
+
+아래는 `performSegue(withIdentifier:sender:)`메서드를 이용하는 방법이다.
+
+이번에도 노란화면(화면A)에서 파란화면(화면B)로 이동하는 상황이다.
+이번엔 화면A의 버튼에 대한 IBAction을 ViewControllerA에 구현한 상태이다.
+
+IBAction을 선언하고 링크하는 방법은 [Storyboard - IBOutlet, IBAction]() 글을 참고하자
+
+<br><br>
+
+- 시작전 상황
+
+<img width="700" alt="스크린샷 2023-07-27 오전 8 38 43" src="https://github.com/isGeekCode/TIL/assets/76529148/e58f55a1-e463-427a-b47d-6c81ec76acb4">
+
+
+<br><br>
+
+- ⭐️ 1. A화면에서 B화면으로 Segue를 생성한다.
+
+    - 화면A와 화면B를 연결
+        버튼에서 화면B으로 드래그 했던 방법과 달리,  
+        이번엔 화면A 상단의 아이콘중 가장 왼쪽아이콘를 option키를 누른상태에서 화면B로 드래그앤드랍 한다.
+        
+      <img width="600" alt="스크린샷 2023-07-27 오전 8 38 53" src="https://github.com/isGeekCode/TIL/assets/76529148/1ef4de9d-7f89-47de-a440-902eaf65a669">
+
+    - Present Modally 선택  
+      <img width="600" alt="스크린샷 2023-07-27 오전 8 39 02" src="https://github.com/isGeekCode/TIL/assets/76529148/b35e9a23-0458-4607-b5d7-2778259c831b">
+
+    
+<br><br>
+- ⭐️ 2. 생성된 Segue를 클릭하고 우측 상단에서 `identifier`를 정의한다.
+    여기선 `goToB`라고 지정했다.
+    <img width="600" alt="스크린샷 2023-07-27 오전 8 40 07" src="https://github.com/isGeekCode/TIL/assets/76529148/06fd0dd9-9268-4c2d-b392-bb19b72fe082">
+    
+<br><br>
+
+- ⭐️ 3. 원하는 시점에 `performSegue(withIdentifier:sender:)`메서드 선언
+    이제 아래처럼 identifier를 적어서 performSegue메서드를 사용하자.
+```swift
+performSegue(withIdentifier: "goToB", sender: nil)
+```
+하지만 좀더 유연하게 시간이 흐르는 걸 시각적으로 나타내기 위해 아래와 같이 수정하였다.  
+주석에 설명한 것처럼, 변하는지 살펴보자.
+1초뒤 : 배경이 빨강색으로  
+2초뒤 : 배경이 초록색으로  
+3초뒤 : 화면B로 이동  
+ 
+```swift
+class ViewControllerA: UIViewController {
+
+    /// 버튼액션
+    @IBAction func btnAction(_ sender: Any) {
+    
+        // 1초뒤 배경을 빨강으로 변경
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.view.backgroundColor = .systemRed
+        }
+
+        // 2초뒤 배경을 빨강으로 변경
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.view.backgroundColor = .systemGreen
+        }
+
+        // 3초뒤 화면B로 이동
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.performSegue(withIdentifier:   "goToB", sender: nil)
+        }
+    }
+}
+```
+<br><br>
+
+### 🍊 5. 동작 화면
+노란화면 (화면A)에서 버튼을 누르면 파란화면 (화면B)로 이동하는 것을 확인할 수 있다.  
+  
+<img width="300" alt="ezgif-5-0a9db8de37" src="https://github.com/isGeekCode/TIL/assets/76529148/376c7091-560c-408b-ba31-4d32474592b3">
+    
+<br><br>
+이렇게 사용하면 좋은 점은  
+  
+`API통신의 성공시점`이나, `뭔가를 다운로드 완료한 시점` 등 내가 원하는 상황에 `performSegue()`메서드만 선언하기만 하면 된다는 것이다. 
+<br><br><br>
   
 ## 📌 Segue로 이동한 화면에서 되돌아가기
 A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
@@ -518,3 +612,4 @@ class ViewControllerC: ViewController {
 - 230724 : 초안작성
 - 230725 : Unwind Segue 구현하기
 - 230726 : Unwind Seuge 트리거 커스텀하기
+- 230727 : Segue의 identifier를 선언하는 방법
