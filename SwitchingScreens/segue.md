@@ -11,21 +11,22 @@ iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지
 <br>
 
 ## 순서
-- [📌 Segue가 뭔가요](#segue가-뭔가요)
-  - [🍊 출발지 / 도착지](#출발지--도착지)
-  - [🍊 identifier](#identifier)
-  - [🍊 Modal방식](#modal방식)
 
-- [📌 Segue 만들기](#segue-만들기)
-- [📌 identifier를 이용해 유연하게 Segue 사용하기](#identifier를-이용해-유연하게-segue-사용하기)
+- [📌 Segue가 뭔가요](#-segue가-뭔가요)
+  - [🍊 출발지 / 도착지](#-출발지--도착지)
+  - [🍊 identifier](#-identifier)
+  - [🍊 Modal방식](#-modal방식)
 
-- [📌 Segue로 이동한 화면에서 되돌아가기](#segue로-이동한-화면에서-되돌아가기)
-  - [🍊 첫번째 방법 : B화면에서 `dismiss(animated:)` 메서드를 통해 돌아가기](#첫번째-방법--b화면에서-dismissanimated-메서드를-통해-돌아가기)
-  - [🍊 두번째 방법 : A화면으로 돌아올 `Unwind Segue` 구현하기](#두번째-방법--a화면으로-돌아올-unwind-segue-구현하기)
-  - [🍊 두 방법의 차이](#두-방법의-차이)
+- [📌 Segue 만들기](#-segue-만들기)
+- [📌 identifier를 이용해 유연하게 Segue 사용하기](#-identifier를-이용해-유연하게-segue-사용하기)
 
-- [📌 Unwind Segue를 여러 곳에서 사용하기](#unwind-segue를-여러-곳에서-사용하기)
-- [📌 Unwind Segue에 identifier를 이용해 유연하게 사용하기](#unwind-segue에-identifier를-이용해-유연하게-사용하기)
+- [📌 Segue로 이동한 화면에서 되돌아가기](#-segue로-이동한-화면에서-되돌아가기)
+  - [🍊 첫번째 방법 : B화면에서 `dismiss(animated:)` 메서드를 통해 돌아가기](#-첫번째-방법--b화면에서-dismissanimated-메서드를-통해-돌아가기)
+  - [🍊 두번째 방법 : A화면으로 돌아올 `Unwind Segue` 구현하기](#-두번째-방법--a화면으로-돌아올-unwind-segue-구현하기)
+  - [🍊 두 방법의 차이](#-두-방법의-차이)
+
+- [📌 Unwind Segue를 여러 곳에서 사용하기](#-unwind-segue를-여러-곳에서-사용하기)
+- [📌 Unwind Segue에 identifier를 이용해 유연하게 사용하기](#-unwind-segue에-identifier를-이용해-유연하게-사용하기)
 
 <br>
 <br>
