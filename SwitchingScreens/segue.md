@@ -28,7 +28,7 @@ iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지
 - [📌 Unwind Segue를 여러 곳에서 사용하기](#-unwind-segue를-여러-곳에서-사용하기)
 - [📌 Unwind Segue에 identifier를 이용해 유연하게 사용하기](#-unwind-segue에-identifier를-이용해-유연하게-사용하기)
 - [📌 Segue의 Destination으로 데이터 넘기기](#-segue의-destination으로-데이터-넘기기)
-- [📌 PerformSegue()의 Sender로 추가 정보 전달하기](#-performSegue의-sender로-추가-정보-전달하기)
+- [📌 PerformSegue()의 Sender로 추가 정보 전달하기](#-performsegue의-sender로-추가-정보-전달하기)
 
 
 <br>
@@ -608,7 +608,8 @@ class ViewControllerC: UIViewController {
 ```
 <br>
 <br>
-- ⭐️ 3. 동작화면
+
+- ⭐️ 3. 동작화면  
 
 <img width="300" alt="ezgif-3-a27b4eb5b5" src="https://github.com/isGeekCode/TIL/assets/76529148/781cf1c0-7a29-46d5-83de-4a19b866ad83">
   
