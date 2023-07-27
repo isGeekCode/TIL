@@ -10,6 +10,26 @@ iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지
 <br>
 <br>
 
+## 순서
+- [📌 Segue가 뭔가요](#segue가-뭔가요)
+  - [🍊 출발지 / 도착지](#출발지--도착지)
+  - [🍊 identifier](#identifier)
+  - [🍊 Modal방식](#modal방식)
+
+- [📌 Segue 만들기](#segue-만들기)
+- [📌 identifier를 이용해 유연하게 Segue 사용하기](#identifier를-이용해-유연하게-segue-사용하기)
+
+- [📌 Segue로 이동한 화면에서 되돌아가기](#segue로-이동한-화면에서-되돌아가기)
+  - [🍊 첫번째 방법 : B화면에서 `dismiss(animated:)` 메서드를 통해 돌아가기](#첫번째-방법--b화면에서-dismissanimated-메서드를-통해-돌아가기)
+  - [🍊 두번째 방법 : A화면으로 돌아올 `Unwind Segue` 구현하기](#두번째-방법--a화면으로-돌아올-unwind-segue-구현하기)
+  - [🍊 두 방법의 차이](#두-방법의-차이)
+
+- [📌 Unwind Segue를 여러 곳에서 사용하기](#unwind-segue를-여러-곳에서-사용하기)
+- [📌 Unwind Segue에 identifier를 이용해 유연하게 사용하기](#unwind-segue에-identifier를-이용해-유연하게-사용하기)
+
+<br>
+<br>
+<br>
 
 ## 📌 Segue가 뭔가요
 
@@ -169,10 +189,10 @@ IBAction을 선언하고 링크하는 방법은 [Storyboard - IBOutlet, IBAction
 performSegue(withIdentifier: "goToB", sender: nil)
 ```
 하지만 좀더 유연하게 시간이 흐르는 걸 시각적으로 나타내기 위해 아래와 같이 수정하였다.  
-주석에 설명한 것처럼, 변하는지 살펴보자.
-1초뒤 : 배경이 빨강색으로  
-2초뒤 : 배경이 초록색으로  
-3초뒤 : 화면B로 이동  
+주석에 설명한 것처럼, 변하는지 살펴보자.  
+- 1초뒤 : 배경이 빨강색으로  
+- 2초뒤 : 배경이 초록색으로  
+- 3초뒤 : 화면B로 이동  
  
 ```swift
 class ViewControllerA: UIViewController {
@@ -346,7 +366,7 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
 <br><br><br>
 
 
-## 📌 Unwind Segue 응용하기
+## 📌 Unwind Segue를 여러 곳에서 사용하기
 
 위에서 구현한 unwind의 장점은 돌아오려는 도착화면에서 지점을 만들어주는 방식이기 때문에
 여러 화면에서 재사용이 가능하다.
@@ -393,7 +413,7 @@ A로 돌아가는 segue는
 <br><br><br>
 
 
-## 📌 Unwind Segue 응용하기2 : 트리거 커스텀하기
+## 📌 Unwind Segue에 identifier를 이용해 유연하게 사용하기
 위에서는 unwind segue를 버튼에 링크해줬다.
 
 그런데 필요에 따라 버튼을 누르고 화면을 종료하는게 아니라
