@@ -81,7 +81,7 @@ modal방식이란,
 
 이런 경우에는 새로운 뷰가 현재 뷰를 완전히 가릴 수 있다.
  
-[Top](#순서)
+[[Top]](#순서)
 <br>
 <br>
 <br>
@@ -136,8 +136,11 @@ identifier를 설정하지 않아도 작동한다. 지금은 세팅하지않는�
   
 <img width="300" alt="ezgif-3-d5a07d300a" src="https://github.com/isGeekCode/TIL/assets/76529148/b8cdcbb0-f14b-457f-b870-ea5c7352c7fc">
 <br>
-[Top](#순서)   
-<br><br><br>
+
+[[Top]](#순서)
+<br>
+<br>
+<br>
 
 
 ## 📌 identifier를 이용해 유연하게 Segue 사용하기
@@ -230,10 +233,11 @@ class ViewControllerA: UIViewController {
 <br><br>
 이렇게 사용하면 좋은 점은  
   
-`API통신의 성공시점`이나, `뭔가를 다운로드 완료한 시점` 등 내가 원하는 상황에 `performSegue()`메서드만 선언하기만 하면 된다는 것이다. 
+`API통신의 성공시점`이나, `뭔가를 다운로드 완료한 시점` 등 내가 원하는 상황에 `performSegue()`메서드만 선언하기만 하면 된다는 것이다.  
+[[Top]](#순서)
 <br>
-[Top](#순서)   
-<br><br><br>
+<br>
+<br>
   
 ## 📌 Segue로 이동한 화면에서 되돌아가기
 A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
@@ -246,7 +250,10 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
 
 두 방법 모두 `@IBAction`을 구현해야한다.
 
-<br><br><br>
+[[Top]](#순서)
+<br>
+<br>
+<br>
 
 ---
 ### 🍊 첫번째 방법 : B화면에서 `dismiss(animated:)` 메서드를 통해 돌아가기 
@@ -303,8 +310,11 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
 - ⭐️ 4. 동작화면
 <img width="300" alt="스크린샷 2023-07-25 오후 5 05 12" src="https://github.com/isGeekCode/TIL/assets/76529148/0dd0c1bf-f409-428c-be4c-ce251237e495">
 
-
-<br><br><br>
+  
+[[Top]](#순서)
+<br>
+<br>
+<br>
 
 
 ---
@@ -353,8 +363,11 @@ A화면에서 B화면으로 Segue를 통해 화면을 띄웠다.
 
 <img width="300" alt="스크린샷 2023-07-25 오후 5 05 12" src="https://github.com/isGeekCode/TIL/assets/76529148/81d4d932-4506-4fa2-aeea-53b5fac89976">
 
-
-<br><br><br>
+  
+[[Top]](#순서)
+<br>
+<br>
+<br>
 ---
 ### 🍊 두 방법의 차이
 
@@ -414,10 +427,11 @@ A로 돌아가는 segue는
 
 - ⭐️ 4. 동작화면
 <img width="300" alt="스크린샷 2023-07-25 오후 5 05 12" src="https://github.com/isGeekCode/TIL/assets/76529148/48f1d255-5cea-414b-b310-b7ed48db76bf">
-
+  
+[[Top]](#순서)
 <br>
-[Top](#순서)   
-<br><br><br>
+<br>
+<br>
 
 
 ## 📌 Unwind Segue에 identifier를 이용해 유연하게 사용하기
@@ -524,10 +538,11 @@ class ViewControllerB: UIViewController {
 
 - ⭐️ 6. 동작화면
 <img width="300" alt="name" src="https://github.com/isGeekCode/TIL/assets/76529148/e61bbdf0-1c90-4a45-b30d-54d2d0666ec5">
-
+  
+[[Top]](#순서)
 <br>
-[Top](#순서)   
-<br><br><br>
+<br>
+<br>
 
 
 ## 📌 Segue의 Source와 Destination 이용하기
