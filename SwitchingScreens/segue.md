@@ -544,110 +544,75 @@ class ViewControllerB: UIViewController {
 <br>
 
 
-## 📌 Segue의 Source와 Destination 이용하기
-내일하자!
+## 📌 Segue의 Destination으로 데이터 넘기기
+화면이동을 할때, 다음 화면에서 화면을 그리기 전에 정보가 필요한 경우가 있다.
 
-    
+아래 화면A(노랑), 화면B(초록), 화면C(파랑)이 있다.  
+A에서 C로 바로 갈 수도 있고, B를 거쳐서 C로 갈 수도 있다.
+이 때, 어느 화면에서 왔는지 화면C에서 확인이 가능하다. 
+<br>
+<br>
+
+- ⭐️ 1. 스토리보드 모습
+
+<img width="600" alt="스크린샷 2023-07-27 오전 10 58 36" src="https://github.com/isGeekCode/TIL/assets/76529148/343f7bcc-413f-479f-b4f8-1a7ca128a9a7">
+
+<br>
+<br>
+
+- ⭐️ 2. 코드 부분
+Segue를 실행하게 되면 먼저 보내는 ViewController에서 prepare 메서드가 실행된다.   
+이때, 파라미터 segue는 `source`라는 시작지점, `destination`라는 도착지점을 알려주는 변수를 가지고 있다.  
+source와 destination의 타입은 `UIViewController`다.
+
 ```swift
 import UIKit
 
-class ViewController: UIViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    func createButton(title: String, action: Selector, yPos: CGFloat) {
-        let screenWidth = UIScreen.main.bounds.width
-        let buttonWidth: CGFloat = 200
-        let xPos = (screenWidth - buttonWidth) / 2
+class ViewControllerA: UIViewController {
 
-        let button = UIButton(frame: CGRect(x: xPos, y: yPos, width: buttonWidth, height: 50))
-        button.setTitle(title, for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .darkGray
-        button.addTarget(self, action: action, for: .touchUpInside)
-        view.addSubview(button)
-    }
-}
-
-class ViewControllerA: ViewController {
-
-//    @IBAction func unwindToA(_ segue: UIStoryboardSegue) {
-//        print("unwind")
-//    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-}
-
-class ViewControllerB: ViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        createButton(title: "Dismiss", action: #selector(dismissViewController), yPos: 100)
-    }
-    
-    @objc func dismissViewController() {
-        self.dismiss(animated: true)
-    }
-
-    @objc func popViewController() {
-        self.dismiss(animated: true)
-    }
-}
-
-extension UIApplication {
-    class func topViewController() -> UIViewController? {
-        if #available(iOS 13.0, *) {
-            return shared.windows.first { $0.isKeyWindow }?.rootViewController?.topViewController
-        } else {
-            return shared.keyWindow?.rootViewController?.topViewController
-        }
-    }
-}
-
-extension UIViewController {
-    var topViewController: UIViewController? {
-        if let presentedViewController = presentedViewController {
-            return presentedViewController.topViewController
-        }
-        if let navigationController = self as? UINavigationController {
-            return navigationController.visibleViewController?.topViewController
-        }
-        if let tabBarController = self as? UITabBarController {
-            return tabBarController.selectedViewController?.topViewController
-        }
-        return self
-    }
-}
-
-class ViewControllerC: ViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        createButton(title: "Dismiss", action: #selector(dismissViewController), yPos: 100)
-        createButton(title: "DismissToBlue", action: #selector(DismissToBlue), yPos: 200)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destVC = segue.destination as? ViewControllerA
+        if let destinationVC = segue.destination as? ViewControllerC {
+            destinationVC.textString = "A에서 왔어요"
+        }
     }
-    
-    
-    @objc func dismissViewController() {
-        self.dismiss(animated: true)
+    @IBAction func unwindToA(segue: UIStoryboardSegue) { }
+}
+
+class ViewControllerB: UIViewController {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? ViewControllerC {
+            destinationVC.textString = "B에서 왔어요"
+        }
     }
+}
+
+
+class ViewControllerC: UIViewController {
+    var textString: String?
+    @IBOutlet weak var dataLabel: UILabel!
     
-    @objc func DismissToBlue() {
-        self.dismiss(animated: true) {
-            if let topViewController = UIApplication.topViewController() {
-                topViewController.dismiss(animated: true)
-            }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let source = textString {
+            dataLabel.text = source
+        } else {
+            dataLabel.text = "데이터 없음"
         }
     }
 }
 
 ```
+<br>
+<br>
+- ⭐️ 3. 동작화면
+
+<img width="700" alt="ezgif-3-a27b4eb5b5" src="https://github.com/isGeekCode/TIL/assets/76529148/781cf1c0-7a29-46d5-83de-4a19b866ad83">
+  
+[[Top]](#순서)
+<br>
+<br>
+<br>
 
 
 ## History
