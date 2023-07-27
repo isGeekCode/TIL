@@ -27,6 +27,9 @@ iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지
 
 - [📌 Unwind Segue를 여러 곳에서 사용하기](#-unwind-segue를-여러-곳에서-사용하기)
 - [📌 Unwind Segue에 identifier를 이용해 유연하게 사용하기](#-unwind-segue에-identifier를-이용해-유연하게-사용하기)
+- [📌 Segue의 Destination으로 데이터 넘기기](#-segue의-destination으로-데이터-넘기기)
+- [📌 `PerformSegue()`의 Sender로 추가 정보 전달하기](#-performSegue의-sender로-추가-정보-전달하기)
+
 
 <br>
 <br>
@@ -614,10 +617,123 @@ class ViewControllerC: UIViewController {
 <br>
 <br>
 
+## 📌 performSegue의 Sender로 추가 정보 전달하기
+이제 유연하게 동작을 위해서는 `performSegue(withIdentifier:sender:)`메서드를 사용한다는 알았다.  
+
+그런데 performSegue를 실행할 때 보통 sender파라미터에는 nil을 넣는 걸 볼 수 있다.  
+
+이건 뭔데 사용하지않는 걸까?  
+
+아래 사례는 화면 A에서 과일이름이 적힌 칸을 눌렀을 때, sender에 값을 담아서 화면B로 보내는 방법이다.
+
+
+<br>
+<br>
+
+- ⭐️ 1. 스토리보드 모습
+
+<img width="600" alt="스크린샷 2023-07-27 오후 1 53 00" src="https://github.com/isGeekCode/TIL/assets/76529148/62a78f3a-ef56-4b64-86a6-773e88f610ce">
+
+<br>
+<br>
+
+- ⭐️ 2. 코드 부분
+이번엔 코드가 길어서 약간의 설명이 필요하다.  
+구현되어있는 것을 몇가지 짚어보자.  
+
+    - tableView에 들어갈 data배열
+    - tableView 세팅
+    - Unwind Segue
+    - prepare메서드 내부에서 어떤 과일을 선택했는지 확인하고 전달
+
+이번 상황에서는 performSegue가 테이블뷰의 셀을 클릭하는 시점에 실행된다.  
+tableView의 didSelecteRowAt에서 선택한 셀의 IndexPath를 가져와서   
+data중 몇번째 값인지를 가져온다.  
+
+그리고 마지막으로는 segue의 destination을 통해 도착화면 ViewController의 변수에 할당한다.
+
+```swift
+import UIKit
+
+class ViewControllerA: UIViewController {
+    // 테이블뷰의 데이터 배열
+    var data = ["Apple", "Banana", "Orange"]
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    @IBAction func unwindToA(segue: UIStoryboardSegue) { }
+}
+
+extension ViewControllerA: UITableViewDataSource, UITableViewDelegate {
+
+    // MARK: - UITableViewDataSource
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = data[indexPath.row]
+        return cell
+    }
+
+    // MARK: - UITableViewDelegate
+
+    // 테이블뷰 셀 선택 시 호출되는 메서드
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 선택된 셀의 인덱스 패스를 Segue 실행 시 sender로 활용하여 전달
+        performSegue(withIdentifier: "goToB", sender: indexPath)
+    }
+    
+    // Segue를 수행하기 전에 ViewControllerC의 델리게이트로 자신을 설정
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? ViewControllerB {
+            if let indexPath = sender as? IndexPath {
+                // 선택된 테이블뷰 셀의 인덱스를 데이터로 전달
+                destinationVC.textString = "선택된 과일: \(data[indexPath.row])"
+            }
+        }
+    }
+    
+}
+
+ class ViewControllerB: UIViewController {
+    var textString: String?
+
+    @IBOutlet weak var fruitLabel: UILabel!
+
+    override func viewDidLoad(ㅁㅁㅁ) {
+        super.viewDidLoad()
+        
+        fruitLabel.text = textString ?? "데이터 없음"
+    }
+}
+```
+<br>
+<br>
+- ⭐️ 3. 동작화면
+
+<img width="300" alt="ezgif-3-35bd1e6fe4" src="https://github.com/isGeekCode/TIL/assets/76529148/c813a6be-880a-4bd7-b6e5-a59ecbdf3a71">
+   
+[[Top]](#순서)
+<br>
+<br>
+<br>
 
 ## History
 - 230724 : 초안작성
-- 230725 : Unwind Segue 구현하기
-- 230726 : Unwind Seuge 트리거 커스텀하기
+- 230725 : Unwind Segue 구현하기ㄴㅁ
+- 230726 : Unwind Segue 트리거 커스텀하기
 - 230727 : Segue의 identifier를 선언하는 방법
 - 230727 : toc기능 구현
+- 230727 : rformSegue의 Sender로 추가 정보 전달하
