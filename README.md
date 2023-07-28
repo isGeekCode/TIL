@@ -8,17 +8,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_286 TILs and counting..._
+_288 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [정리 : iOS에서의 화면관리 및 전환](SwitchingScreens/A_Various_switchingScene.md) - Tue Jul 25 09:36:54 2023 +0900
+- [Cocoa Design Pattern - Observer 옵저버 패턴](IOS-Architecture/CocoaDesignPattern_Observer.md) - Fri Jul 28 11:20:19 2023 +0900
+- [sample App - 투두리스트](Sample-App-List/sample_todoList.md) - Fri Jul 28 11:20:19 2023 +0900
 - [Layout - SwiftUI: TabView](Mobile-IOS/Layout_SwiftUI_TabView.md) - Tue Jul 25 09:36:54 2023 +0900
+- [정리 : iOS에서의 화면관리 및 전환](SwitchingScreens/A_Various_switchingScene.md) - Tue Jul 25 09:36:54 2023 +0900
 - [Segue를 이용한 화면이동](SwitchingScreens/segue.md) - Mon Jul 24 17:04:06 2023 +0900
-- [NSObject_UIResponder_UIView_UITabBar](Mobile-IOS/NSObject_UIResponder_UIView_UITabBar.md) - Fri Jul 21 16:30:12 2023 +0900
-- [화면전환 - UITabBarController 이해하기](SwitchingScreens/tabbarController.md) - Fri Jul 21 15:12:35 2023 +0900
 
 ### Categories
 
@@ -45,6 +45,7 @@ _286 TILs and counting..._
 - [Objective-C](#Objective-C)
 - [RelatedImage](#RelatedImage)
 - [Ruby](#Ruby)
+- [Sample-App-List](#Sample-App-List)
 - [Self-Review](#Self-Review)
 - [SwitchingScreens](#SwitchingScreens)
 - [Xcode](#Xcode)
@@ -159,6 +160,7 @@ _286 TILs and counting..._
 ### [IOS-Architecture](#IOS-Architecture)
 - [디자인패턴이란](IOS-Architecture/About_Design_MVX_Init.md)
 - [Cocoa Design Pattern - Delegate 델리게이트 패턴](IOS-Architecture/CocoaDesignPattern_Delegate.md)
+- [Cocoa Design Pattern - Observer 옵저버 패턴](IOS-Architecture/CocoaDesignPattern_Observer.md)
 - [Cocoa Design Pattern - Singleton (싱글톤 패턴)](IOS-Architecture/CocoaDesignPattern_Singleton.md)
 - [MVC to MVVM : 01. UTC 오늘, 현재, 내일 시간보기](IOS-Architecture/MVCToMVVM_01_UTC.md)
 - [MVC to MVVM : 02. TableVC 클릭시 텍스트 변경](IOS-Architecture/MVCToMVVM_02_Task.md)
@@ -330,6 +332,9 @@ _286 TILs and counting..._
 - [Installation: Ruby](Ruby/Installation_Ruby.md)
 - [RubyGems - Package Manager :　gem 관리하기](Ruby/ManageGem.md)
 - [Ruby - 버전관리 : RVM, Rbenv 사용법](Ruby/ManageRuby.md)
+
+### [Sample-App-List](#Sample-App-List)
+- [sample App - 투두리스트](Sample-App-List/sample_todoList.md)
 
 ### [Self-Review](#Self-Review)
 - [어떻게 리뷰할 것인가](Self-Review/aboutReview.md)
