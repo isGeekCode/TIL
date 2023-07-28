@@ -8,17 +8,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_288 TILs and counting..._
+_289 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [데이터 바인딩이란](Data-Binding/Data_Binding_about.md) - Fri Jul 28 14:39:53 2023 +0900
 - [Cocoa Design Pattern - Observer 옵저버 패턴](IOS-Architecture/CocoaDesignPattern_Observer.md) - Fri Jul 28 11:20:19 2023 +0900
 - [sample App - 투두리스트](Sample-App-List/sample_todoList.md) - Fri Jul 28 11:20:19 2023 +0900
 - [Layout - SwiftUI: TabView](Mobile-IOS/Layout_SwiftUI_TabView.md) - Tue Jul 25 09:36:54 2023 +0900
 - [정리 : iOS에서의 화면관리 및 전환](SwitchingScreens/A_Various_switchingScene.md) - Tue Jul 25 09:36:54 2023 +0900
-- [Segue를 이용한 화면이동](SwitchingScreens/segue.md) - Mon Jul 24 17:04:06 2023 +0900
 
 ### Categories
 
@@ -30,6 +30,7 @@ _288 TILs and counting..._
 - [CI_CD](#CI_CD)
 - [ComputerScience](#ComputerScience)
 - [Conference](#Conference)
+- [Data-Binding](#Data-Binding)
 - [Docs](#Docs)
 - [Extensions](#Extensions)
 - [Flutter](#Flutter)
@@ -122,6 +123,9 @@ _288 TILs and counting..._
 - [Let us: Go! 2022 가을 - 221105(미참석)](Conference/Conference2022_LetUsGo2022_3Fall.md)
 - [iOS Daejeon Club - 230325(참석)](Conference/Conference2023_IOSDaejonCodingClub_230325.md)
 - [Let us: Go! 2023 봄 - 2304(미참석)](Conference/Conference2023_LetUSGo2023_1Spring.md)
+
+### [Data-Binding](#Data-Binding)
+- [데이터 바인딩이란](Data-Binding/Data_Binding_about.md)
 
 ### [Docs](#Docs)
 - [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md)
