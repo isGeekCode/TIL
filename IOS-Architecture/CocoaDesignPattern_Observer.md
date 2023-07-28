@@ -13,17 +13,66 @@
 
 - 친구들(옵저버들)은 파티 주최자에게 구독(subscribe)하여 알림을 받기 원하는 의사를 표현한다.
 
-- 파티 주최자는 친구들을 등록한다 : `addObserver()`, 
+- 파티 주최자는 친구들을 등록한다 : `addObserver()`
 
-- 파티가 시작되었을 때 등록된 친구들에게 알림을 보낸다 : `notifyObservers()`.
+- 파티가 시작되었을 때 등록된 친구들에게 알림을 보낸다 : `notifyObservers()`
 
 이렇게 옵저버 패턴을 사용하면 파티 주최자와 친구들 사이의 관계를 유연하게 만들 수 있고, 파티가 시작되었다는 알림을 받고 싶은 친구들은 주체(파티 주최자)와 의사소통하여 원하는 알림을 받을 수 있다.
 
 ## 사용법
+```swift
 
+// 옵저버(Observer) 프로토콜
+protocol Observer: AnyObject {
+    func update(temperature: Double)
+}
+
+// 구독할(Display) 클래스 - 옵저버(Observer) 역할
+class Display: Observer {
+    func update() {
+        // update동작 구현
+    }
+}
+
+
+// 주체(Subject) 프로토콜
+protocol Subject {
+    var observers: [Observer] { get set }
+    func add(observer: Observer)
+    func remove(observer: Observer)
+    func notifyObservers()
+}
+
+class Thermometer: Subject {
+    var observers: [Observer] = []
+    var temperature: Double = 0.0 {
+        didSet {
+            notifyObservers()
+        }
+    }
+
+    func add(observer: Observer) {
+        observers.append(observer)
+    }
+
+    func remove(observer: Observer) {
+        if let index = observers.firstIndex(where: { $0 === observer }) {
+            observers.remove(at: index)
+        }
+    }
+
+    func notifyObservers() {
+        for observer in observers {
+            observer.update(temperature: temperature)
+        }
+    }
+}
+```
 
 
 ## Observer패턴의 흐름
+
+
 
 ## Observer패턴의 한계성
 
