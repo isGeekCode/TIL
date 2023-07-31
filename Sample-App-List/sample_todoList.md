@@ -114,8 +114,11 @@ extension ToDoListViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 ```
-<br><br><br>
+<br><br>
+
 [[top]](#-sample-app---투두리스트)
+
+<br><br><br>
 
 
 ## History
