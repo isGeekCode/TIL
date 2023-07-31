@@ -8,17 +8,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_290 TILs and counting..._
+_291 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [UIKit에서 SwiftUI처럼 만들어 사용하기](iOS-Extensions/likeSwiftUI.md) - Mon Jul 31 12:58:02 2023 +0900
 - [ReactorKit - 예제: CountApp](iOS-Architecture/RxSwift_ReactorKit_CountApp.md) - Mon Jul 31 10:49:28 2023 +0900
-- [디자인패턴이란](iOS-Architecture/About_Design_MVX_Init.md) - Mon Jul 31 10:49:28 2023 +0900
+- [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](iOS-Architecture/MVC_traditional.md) - Mon Jul 31 10:49:28 2023 +0900
 - [Cocoa Design Pattern - Delegate 델리게이트 패턴](iOS-Architecture/CocoaDesignPattern_Delegate.md) - Mon Jul 31 10:49:28 2023 +0900
 - [Cocoa Design Pattern - Observer 옵저버 패턴](iOS-Architecture/CocoaDesignPattern_Observer.md) - Mon Jul 31 10:49:28 2023 +0900
-- [Cocoa Design Pattern - Singleton (싱글톤 패턴)](iOS-Architecture/CocoaDesignPattern_Singleton.md) - Mon Jul 31 10:49:28 2023 +0900
 
 ### Categories
 
@@ -264,6 +264,7 @@ _290 TILs and counting..._
 ### [iOS-Extensions](#iOS-Extensions)
 - [UIKit에서 SwiftUI의 Preview를 사용하는 방법](iOS-Extensions/221031_PreviewProvier.md)
 - [hex값을 UIcolor로 변환하는 방법](iOS-Extensions/TIL221025_convertHexToUIColor.md)
+- [UIKit에서 SwiftUI처럼 만들어 사용하기](iOS-Extensions/likeSwiftUI.md)
 
 ### [iOS-Foundation](#iOS-Foundation)
 - [AVPlayer 사용하기](iOS-Foundation/AboutAVPlayer.md)
