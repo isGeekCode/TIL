@@ -14,11 +14,11 @@ _290 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [Array의 특정값을 포함한 IndexPath찾고 값 바꾸기](iOS-Swift/swift_replacingArrayIndexValue..md) - Mon Jul 31 10:46:48 2023 +0900
-- [Integrity - 리플레이 공격(Replay attack)](iOS-Integrity/Integrity_replayAttack.md) - Mon Jul 31 10:46:48 2023 +0900
-- [Integrity - 중간자 공격(man-in-the-middle attack)](iOS-Integrity/Integrity_manInTheMiddleAttack.md) - Mon Jul 31 10:46:48 2023 +0900
-- [Integrity - UUID / UDID / IDFA / IDFV](iOS-Integrity/Integrity_UUID_UDID_IDFA.md) - Mon Jul 31 10:46:48 2023 +0900
-- [Integrity - DeviceCheck](iOS-Integrity/Integrity_DeviceCheck.md) - Mon Jul 31 10:46:48 2023 +0900
+- [디자인패턴이란](zArchitecture/About_Design_MVX_Init.md) - Mon Jul 31 10:48:35 2023 +0900
+- [ReactorKit - 예제: CountApp](zArchitecture/RxSwift_ReactorKit_CountApp.md) - Mon Jul 31 10:48:35 2023 +0900
+- [Architecture - 간단한 MVVM구조 예제](zArchitecture/MVVM_simpleExample.md) - Mon Jul 31 10:48:35 2023 +0900
+- [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](zArchitecture/MVC_traditional.md) - Mon Jul 31 10:48:35 2023 +0900
+- [Architecture - 비즈니스 로직이란](zArchitecture/aboutBusinessLogic.md) - Mon Jul 31 10:48:35 2023 +0900
 
 ### Categories
 
@@ -32,7 +32,6 @@ _290 TILs and counting..._
 - [Docs](#Docs)
 - [Flutter](#Flutter)
 - [Git](#Git)
-- [IOS-Architecture](#IOS-Architecture)
 - [Insight](#Insight)
 - [Library](#Library)
 - [Mobile-Android](#Mobile-Android)
@@ -57,6 +56,7 @@ _290 TILs and counting..._
 - [iOS-Swift](#iOS-Swift)
 - [iOS-SwiftUI](#iOS-SwiftUI)
 - [iOS-UIKit](#iOS-UIKit)
+- [zArchitecture](#zArchitecture)
 
 ### [A_Writing_in_Progress](#A_Writing_in_Progress)
 - [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md)
@@ -150,19 +150,6 @@ _290 TILs and counting..._
 - [Git - 깃 리모트 변경 하기](Git/gitRemoteChange.md)
 - [Commit Template - 소스트리](Git/how_to_make_SourceTree_Commit_Template.md)
 - [XcodeError - UserInterfaceState.xcuserState가 자꾸 뜰 때](Git/what_is_UserInterfaceState.md)
-
-### [IOS-Architecture](#IOS-Architecture)
-- [디자인패턴이란](IOS-Architecture/About_Design_MVX_Init.md)
-- [Cocoa Design Pattern - Delegate 델리게이트 패턴](IOS-Architecture/CocoaDesignPattern_Delegate.md)
-- [Cocoa Design Pattern - Observer 옵저버 패턴](IOS-Architecture/CocoaDesignPattern_Observer.md)
-- [Cocoa Design Pattern - Singleton (싱글톤 패턴)](IOS-Architecture/CocoaDesignPattern_Singleton.md)
-- [MVC to MVVM : 01. UTC 오늘, 현재, 내일 시간보기](IOS-Architecture/MVCToMVVM_01_UTC.md)
-- [MVC to MVVM : 02. TableVC 클릭시 텍스트 변경](IOS-Architecture/MVCToMVVM_02_Task.md)
-- [Architecture - IOS MVC의 한계](IOS-Architecture/MVC_Massive.md)
-- [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](IOS-Architecture/MVC_traditional.md)
-- [Architecture - 간단한 MVVM구조 예제](IOS-Architecture/MVVM_simpleExample.md)
-- [ReactorKit - 예제: CountApp](IOS-Architecture/RxSwift_ReactorKit_CountApp.md)
-- [Architecture - 비즈니스 로직이란](IOS-Architecture/aboutBusinessLogic.md)
 
 ### [Insight](#Insight)
 - [백만장자의 시크릿](Insight/220604_BookReview_Millionaire_Secret.md)
@@ -417,6 +404,19 @@ _290 TILs and counting..._
 - [UIKit - UITextField](iOS-UIKit/UIKit_UITextField.md)
 - [UIKit - UISearchBar](iOS-UIKit/UIKit_UITextField_UISearchBar.md)
 - [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS-UIKit/ios_CollectionViewCell.md)
+
+### [zArchitecture](#zArchitecture)
+- [디자인패턴이란](zArchitecture/About_Design_MVX_Init.md)
+- [Cocoa Design Pattern - Delegate 델리게이트 패턴](zArchitecture/CocoaDesignPattern_Delegate.md)
+- [Cocoa Design Pattern - Observer 옵저버 패턴](zArchitecture/CocoaDesignPattern_Observer.md)
+- [Cocoa Design Pattern - Singleton (싱글톤 패턴)](zArchitecture/CocoaDesignPattern_Singleton.md)
+- [MVC to MVVM : 01. UTC 오늘, 현재, 내일 시간보기](zArchitecture/MVCToMVVM_01_UTC.md)
+- [MVC to MVVM : 02. TableVC 클릭시 텍스트 변경](zArchitecture/MVCToMVVM_02_Task.md)
+- [Architecture - IOS MVC의 한계](zArchitecture/MVC_Massive.md)
+- [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](zArchitecture/MVC_traditional.md)
+- [Architecture - 간단한 MVVM구조 예제](zArchitecture/MVVM_simpleExample.md)
+- [ReactorKit - 예제: CountApp](zArchitecture/RxSwift_ReactorKit_CountApp.md)
+- [Architecture - 비즈니스 로직이란](zArchitecture/aboutBusinessLogic.md)
 
 [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 [2]: https://github.com/jbranchaud/til
