@@ -8,17 +8,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_294 TILs and counting..._
+_295 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [sample App - 그림판앱](Sample-App-List/sample_001pictureApp.md) - Mon Jul 31 17:11:44 2023 +0900
 - [sample App - 투두리스트](Sample-App-List/sample_000todoList.md) - Mon Jul 31 17:11:44 2023 +0900
-- [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md) - Mon Jul 31 14:56:36 2023 +0900
+- [sample App - 그림판앱](Sample-App-List/sample_001pictureApp.md) - Mon Jul 31 17:11:44 2023 +0900
 - [화면캡처 - 특정화면을 이미지로 저장하기](iOS-RelatedImage/imageSave.md) - Mon Jul 31 14:56:36 2023 +0900
 - [Responder Chain에 대하여](iOS-Development/ResponderChain.md) - Mon Jul 31 14:56:36 2023 +0900
+- [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md) - Mon Jul 31 14:56:36 2023 +0900
 
 ### Categories
 
@@ -196,6 +196,7 @@ _294 TILs and counting..._
 - [22년 7월 회고 / 8월 목표](Self-Review/review_220806July.md)
 - [23년 4월 회고 / 5월 목표](Self-Review/review_230428April.md)
 - [23년 5월 회고 / 6월 목표](Self-Review/review_230526May.md)
+- [23년 6월 회고 / 7월 목표](Self-Review/review_230625June.md)
 
 ### [iOS-AppLaunching](#iOS-AppLaunching)
 - [앱의 구동에 관하여](iOS-AppLaunching/AppLaunching_About.md)
