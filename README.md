@@ -14,11 +14,11 @@ _290 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [앱의 구동에 관하여](iOS-AppLaunching/AppLaunching_About.md) - Mon Jul 31 10:43:40 2023 +0900
-- [Codable](swift/Codable.md) - Mon Jul 31 10:43:40 2023 +0900
-- [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS-UIKit/ios_CollectionViewCell.md) - Mon Jul 31 10:43:40 2023 +0900
-- [UIKit - UISearchBar](iOS-UIKit/UIKit_UITextField_UISearchBar.md) - Mon Jul 31 10:43:40 2023 +0900
-- [소켓이란](A_Writing_in_Progress/TIL220420_socket.md) - Mon Jul 31 10:43:40 2023 +0900
+- [Array의 특정값을 포함한 IndexPath찾고 값 바꾸기](iOS-Swift/swift_replacingArrayIndexValue..md) - Mon Jul 31 10:46:48 2023 +0900
+- [Integrity - 리플레이 공격(Replay attack)](iOS-Integrity/Integrity_replayAttack.md) - Mon Jul 31 10:46:48 2023 +0900
+- [Integrity - 중간자 공격(man-in-the-middle attack)](iOS-Integrity/Integrity_manInTheMiddleAttack.md) - Mon Jul 31 10:46:48 2023 +0900
+- [Integrity - UUID / UDID / IDFA / IDFV](iOS-Integrity/Integrity_UUID_UDID_IDFA.md) - Mon Jul 31 10:46:48 2023 +0900
+- [Integrity - DeviceCheck](iOS-Integrity/Integrity_DeviceCheck.md) - Mon Jul 31 10:46:48 2023 +0900
 
 ### Categories
 
@@ -26,18 +26,14 @@ _290 TILs and counting..._
 - [About-AI](#About-AI)
 - [About-Error](#About-Error)
 - [About-IT](#About-IT)
-- [AppStore](#AppStore)
 - [CI_CD](#CI_CD)
 - [ComputerScience](#ComputerScience)
 - [Conference](#Conference)
-- [Data-Binding](#Data-Binding)
 - [Docs](#Docs)
-- [Extensions](#Extensions)
 - [Flutter](#Flutter)
 - [Git](#Git)
 - [IOS-Architecture](#IOS-Architecture)
 - [Insight](#Insight)
-- [Integrity](#Integrity)
 - [Library](#Library)
 - [Mobile-Android](#Mobile-Android)
 - [Objective-C](#Objective-C)
@@ -46,17 +42,21 @@ _290 TILs and counting..._
 - [Sample-App-List](#Sample-App-List)
 - [Self-Review](#Self-Review)
 - [iOS-AppLaunching](#iOS-AppLaunching)
+- [iOS-AppStore](#iOS-AppStore)
 - [iOS-Concurrency](#iOS-Concurrency)
 - [iOS-CustomLogic](#iOS-CustomLogic)
+- [iOS-DataBinding](#iOS-DataBinding)
 - [iOS-Development](#iOS-Development)
 - [iOS-Environment](#iOS-Environment)
+- [iOS-Extensions](#iOS-Extensions)
 - [iOS-Foundation](#iOS-Foundation)
 - [iOS-Hierachy](#iOS-Hierachy)
+- [iOS-Integrity](#iOS-Integrity)
 - [iOS-Networking](#iOS-Networking)
 - [iOS-ScreenTranport](#iOS-ScreenTranport)
+- [iOS-Swift](#iOS-Swift)
 - [iOS-SwiftUI](#iOS-SwiftUI)
 - [iOS-UIKit](#iOS-UIKit)
-- [swift](#swift)
 
 ### [A_Writing_in_Progress](#A_Writing_in_Progress)
 - [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md)
@@ -94,17 +94,6 @@ _290 TILs and counting..._
 - [써드파티(Third party)](About-IT/Third_party.md)
 - [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md)
 
-### [AppStore](#AppStore)
-- [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](AppStore/AppStore_AppDismiss.md)
-- [기존 배포되어있는 앱을 다른 앱으로 바꾸기](AppStore/AppStore_ChangeBundleId.md)
-- [AppStore - 버전정보 수정하기](AppStore/AppStore_ChangeVersionInfo.md)
-- [AppStore - 긴급 심사 요청(Request Expedited Review)](AppStore/AppStore_expeditedReview.md)
-- [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](AppStore/AppStore_missing_Compliance.md)
-- [리젝사유 - 2. Performance(성능)](AppStore/Reject_2_Performance.md)
-- [리젝사유 - 4. Design(디자인)](AppStore/Reject_4_Design.md)
-- [리젝사유 - 5. Legal(법률)](AppStore/Reject_5_Legal.md)
-- [테스트플라잇 - 외부 테스팅 (External Testing)](AppStore/TestFlight_externalTester.md)
-
 ### [CI_CD](#CI_CD)
 - [CI/CD - GitHub Action 사용하기 : 초기 구현하기](CI_CD/GithubAction_A_tutorial00.md)
 - [CI/CD - GitHub Action 사용하기2 : on 섹션 수정하기](CI_CD/GithubAction_A_tutorial01.md)
@@ -132,17 +121,10 @@ _290 TILs and counting..._
 - [iOS Daejeon Club - 230325(참석)](Conference/Conference2023_IOSDaejonCodingClub_230325.md)
 - [Let us: Go! 2023 봄 - 2304(미참석)](Conference/Conference2023_LetUSGo2023_1Spring.md)
 
-### [Data-Binding](#Data-Binding)
-- [데이터 바인딩이란](Data-Binding/Data_Binding_about.md)
-
 ### [Docs](#Docs)
 - [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md)
 - [마크다운 - 이미지 사이즈 세팅하기](Docs/MarkDown_Image.md)
 - [마크다운 - TOC기능 만들기 (Table Of Contents)](Docs/MarkDown_TOC.md)
-
-### [Extensions](#Extensions)
-- [UIKit에서 SwiftUI의 Preview를 사용하는 방법](Extensions/221031_PreviewProvier.md)
-- [hex값을 UIcolor로 변환하는 방법](Extensions/TIL221025_convertHexToUIColor.md)
 
 ### [Flutter](#Flutter)
 - [Flutter - 기본 4가지 위젯](Flutter/Flutter_Basic_Widget.md)
@@ -187,14 +169,6 @@ _290 TILs and counting..._
 - [나에게 TIL이란](Insight/230408_About_TIL.md)
 - [부의 추월차선: The Millionaire Fastlane](Insight/Economics_TheMillionaireFastlane.md)
 - [부모님의 정원](Insight/TIL_220601_parentsGarden.md)
-
-### [Integrity](#Integrity)
-- [Integrity - 앱 설치환경 체크](Integrity/Integrity_Build_Environment.md)
-- [Integrity - 인증서(.p8, .p12 / Development, Distribution / Producation SSL, Development SSL)](Integrity/Integrity_Certificate.md)
-- [Integrity - DeviceCheck](Integrity/Integrity_DeviceCheck.md)
-- [Integrity - UUID / UDID / IDFA / IDFV](Integrity/Integrity_UUID_UDID_IDFA.md)
-- [Integrity - 중간자 공격(man-in-the-middle attack)](Integrity/Integrity_manInTheMiddleAttack.md)
-- [Integrity - 리플레이 공격(Replay attack)](Integrity/Integrity_replayAttack.md)
 
 ### [Library](#Library)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](Library/About_A_iOS_Package.md)
@@ -242,6 +216,17 @@ _290 TILs and counting..._
 ### [iOS-AppLaunching](#iOS-AppLaunching)
 - [앱의 구동에 관하여](iOS-AppLaunching/AppLaunching_About.md)
 
+### [iOS-AppStore](#iOS-AppStore)
+- [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](iOS-AppStore/AppStore_AppDismiss.md)
+- [기존 배포되어있는 앱을 다른 앱으로 바꾸기](iOS-AppStore/AppStore_ChangeBundleId.md)
+- [AppStore - 버전정보 수정하기](iOS-AppStore/AppStore_ChangeVersionInfo.md)
+- [AppStore - 긴급 심사 요청(Request Expedited Review)](iOS-AppStore/AppStore_expeditedReview.md)
+- [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](iOS-AppStore/AppStore_missing_Compliance.md)
+- [리젝사유 - 2. Performance(성능)](iOS-AppStore/Reject_2_Performance.md)
+- [리젝사유 - 4. Design(디자인)](iOS-AppStore/Reject_4_Design.md)
+- [리젝사유 - 5. Legal(법률)](iOS-AppStore/Reject_5_Legal.md)
+- [테스트플라잇 - 외부 테스팅 (External Testing)](iOS-AppStore/TestFlight_externalTester.md)
+
 ### [iOS-Concurrency](#iOS-Concurrency)
 - [GCD - DispatchGroup](iOS-Concurrency/GCD_DispatchGroup.md)
 - [GCD - DispatchWorkItem](iOS-Concurrency/GCD_DispatchWorkItem.md)
@@ -250,6 +235,9 @@ _290 TILs and counting..._
 ### [iOS-CustomLogic](#iOS-CustomLogic)
 - [Login Logic (feat. UserDefault)](iOS-CustomLogic/Login_Logic.md)
 - [DynamicSplash 세팅하기](iOS-CustomLogic/splash_dynamicSplash.md)
+
+### [iOS-DataBinding](#iOS-DataBinding)
+- [데이터 바인딩이란](iOS-DataBinding/Data_Binding_about.md)
 
 ### [iOS-Development](#iOS-Development)
 - [CLLocation - 위치정보 사용하기](iOS-Development/CLLocation_a_howToUse.md)
@@ -273,6 +261,10 @@ _290 TILs and counting..._
 - [Scheme - Debug / Release 빌드 분리하기](iOS-Environment/Scheme_Separate_BuildSet.md)
 - [iOS DeviceSupport - 테스트 디바이스 iOS 수동 업데이트](iOS-Environment/iOSDeviceSupport_Manually_update.md)
 
+### [iOS-Extensions](#iOS-Extensions)
+- [UIKit에서 SwiftUI의 Preview를 사용하는 방법](iOS-Extensions/221031_PreviewProvier.md)
+- [hex값을 UIcolor로 변환하는 방법](iOS-Extensions/TIL221025_convertHexToUIColor.md)
+
 ### [iOS-Foundation](#iOS-Foundation)
 - [AVPlayer 사용하기](iOS-Foundation/AboutAVPlayer.md)
 - [userDefault](iOS-Foundation/AboutUserDefualt.md)
@@ -284,6 +276,14 @@ _290 TILs and counting..._
 
 ### [iOS-Hierachy](#iOS-Hierachy)
 - [iOS_Hierachy - UIKit](iOS-Hierachy/IOS_Hierachy_UIKit.md)
+
+### [iOS-Integrity](#iOS-Integrity)
+- [Integrity - 앱 설치환경 체크](iOS-Integrity/Integrity_Build_Environment.md)
+- [Integrity - 인증서(.p8, .p12 / Development, Distribution / Producation SSL, Development SSL)](iOS-Integrity/Integrity_Certificate.md)
+- [Integrity - DeviceCheck](iOS-Integrity/Integrity_DeviceCheck.md)
+- [Integrity - UUID / UDID / IDFA / IDFV](iOS-Integrity/Integrity_UUID_UDID_IDFA.md)
+- [Integrity - 중간자 공격(man-in-the-middle attack)](iOS-Integrity/Integrity_manInTheMiddleAttack.md)
+- [Integrity - 리플레이 공격(Replay attack)](iOS-Integrity/Integrity_replayAttack.md)
 
 ### [iOS-Networking](#iOS-Networking)
 - [Notifications - IOS에서 사용하는 알림의 종류](iOS-Networking/Apple_Notification.md)
@@ -315,6 +315,41 @@ _290 TILs and counting..._
 - [화면전환 - UINavigationController 이해하기](iOS-ScreenTranport/navigationController.md)
 - [Segue를 이용한 화면이동](iOS-ScreenTranport/segue.md)
 - [화면전환 - UITabBarController 이해하기](iOS-ScreenTranport/tabbarController.md)
+
+### [iOS-Swift](#iOS-Swift)
+- [Codable](iOS-Swift/Codable.md)
+- [Do - Try - Catch](iOS-Swift/DoTryCatch.md)
+- [Swift문법 기초](iOS-Swift/Swift1.md)
+- [random함수를 이용해 Random한 숫자 뽑아내기](iOS-Swift/Swift_random_in_array.md)
+- [안전하게 배열에 접근하는 방법](iOS-Swift/TIL220310_contactArraySafely.md)
+- [[Common Method] 로그 관련 함수](iOS-Swift/TIL220318_aboutLogMethod.md)
+- [# 여러개의 Action을 한번에 추가하기](iOS-Swift/TIL220404_forEach.md)
+- [mutating 과 구조체](iOS-Swift/TIL220413_mutating.md)
+- [텍스트인코딩에 관하여](iOS-Swift/TIL220517_aboutTextEncoding.md)
+- [배열안에 담긴 url 유효성 검사](iOS-Swift/TIL220520_aboutCheckArrayComponent.md)
+- [이미지의 형태](iOS-Swift/TIL220915_KindsOfImageFormats.md)
+- [Xcode 디버깅으로 변수변화 캐치하기](iOS-Swift/TIL221026_howToDebugging.md)
+- [Special Literal](iOS-Swift/TIL_220527_specialLiteral.md)
+- [Understanding Closures in Swift : 클로저 톺아보기](iOS-Swift/UnderstandingClosures.md)
+- [enum 사용법](iOS-Swift/aboutEnum.md)
+- [저장프로퍼티 - 프로퍼티(1)](iOS-Swift/aboutProperty1.md)
+- [연산프로퍼티 - 프로퍼티(2)](iOS-Swift/aboutProperty2.md)
+- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](iOS-Swift/aboutProperty205.md)
+- [타입프로퍼티(static) - 프로퍼티(3)](iOS-Swift/aboutProperty3.md)
+- [Array - 빠르게 **빈 배열 만들기**](iOS-Swift/array_fastInit.md)
+- [파일경로 String으로에서 확장자 추출하기](iOS-Swift/bringToExtensionName.md)
+- [고차함수 - Higher Order Function : Map, Filter, Reduce, Sort, FlatMap](iOS-Swift/higherOrderFuction.md)
+- [Splite과 Component](iOS-Swift/splite_component_map.md)
+- [Swift - 스위프트에서 사용하는 패턴들](iOS-Swift/swift_a_swift_patterns.md)
+- [case let : for case let 익숙해지기](iOS-Swift/swift_caseLet_for.md)
+- [Switch case let, If case let, guard case let](iOS-Swift/swift_caseLet_switch_if_guard.md)
+- [Closure 톺아보기](iOS-Swift/swift_firstClassClosureMaster.md)
+- [1급 객체](iOS-Swift/swift_firstClassObject.md)
+- [Swift - 키워드 defer](iOS-Swift/swift_keywordDefer.md)
+- [Swift - 키워드 inout](iOS-Swift/swift_keywordInout.md)
+- [Swift - Mirror 사용하기](iOS-Swift/swift_mirror.md)
+- [Swift - Range 함수 사용하기](iOS-Swift/swift_range.md)
+- [Array의 특정값을 포함한 IndexPath찾고 값 바꾸기](iOS-Swift/swift_replacingArrayIndexValue..md)
 
 ### [iOS-SwiftUI](#iOS-SwiftUI)
 - [Layout - SwiftUI: Color](iOS-SwiftUI/Layout_SwiftUI_Color.md)
@@ -382,41 +417,6 @@ _290 TILs and counting..._
 - [UIKit - UITextField](iOS-UIKit/UIKit_UITextField.md)
 - [UIKit - UISearchBar](iOS-UIKit/UIKit_UITextField_UISearchBar.md)
 - [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS-UIKit/ios_CollectionViewCell.md)
-
-### [swift](#swift)
-- [Codable](swift/Codable.md)
-- [Do - Try - Catch](swift/DoTryCatch.md)
-- [Swift문법 기초](swift/Swift1.md)
-- [random함수를 이용해 Random한 숫자 뽑아내기](swift/Swift_random_in_array.md)
-- [안전하게 배열에 접근하는 방법](swift/TIL220310_contactArraySafely.md)
-- [[Common Method] 로그 관련 함수](swift/TIL220318_aboutLogMethod.md)
-- [# 여러개의 Action을 한번에 추가하기](swift/TIL220404_forEach.md)
-- [mutating 과 구조체](swift/TIL220413_mutating.md)
-- [텍스트인코딩에 관하여](swift/TIL220517_aboutTextEncoding.md)
-- [배열안에 담긴 url 유효성 검사](swift/TIL220520_aboutCheckArrayComponent.md)
-- [이미지의 형태](swift/TIL220915_KindsOfImageFormats.md)
-- [Xcode 디버깅으로 변수변화 캐치하기](swift/TIL221026_howToDebugging.md)
-- [Special Literal](swift/TIL_220527_specialLiteral.md)
-- [Understanding Closures in Swift : 클로저 톺아보기](swift/UnderstandingClosures.md)
-- [enum 사용법](swift/aboutEnum.md)
-- [저장프로퍼티 - 프로퍼티(1)](swift/aboutProperty1.md)
-- [연산프로퍼티 - 프로퍼티(2)](swift/aboutProperty2.md)
-- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](swift/aboutProperty205.md)
-- [타입프로퍼티(static) - 프로퍼티(3)](swift/aboutProperty3.md)
-- [Array - 빠르게 **빈 배열 만들기**](swift/array_fastInit.md)
-- [파일경로 String으로에서 확장자 추출하기](swift/bringToExtensionName.md)
-- [고차함수 - Higher Order Function : Map, Filter, Reduce, Sort, FlatMap](swift/higherOrderFuction.md)
-- [Splite과 Component](swift/splite_component_map.md)
-- [Swift - 스위프트에서 사용하는 패턴들](swift/swift_a_swift_patterns.md)
-- [case let : for case let 익숙해지기](swift/swift_caseLet_for.md)
-- [Switch case let, If case let, guard case let](swift/swift_caseLet_switch_if_guard.md)
-- [Closure 톺아보기](swift/swift_firstClassClosureMaster.md)
-- [1급 객체](swift/swift_firstClassObject.md)
-- [Swift - 키워드 defer](swift/swift_keywordDefer.md)
-- [Swift - 키워드 inout](swift/swift_keywordInout.md)
-- [Swift - Mirror 사용하기](swift/swift_mirror.md)
-- [Swift - Range 함수 사용하기](swift/swift_range.md)
-- [Array의 특정값을 포함한 IndexPath찾고 값 바꾸기](swift/swift_replacingArrayIndexValue..md)
 
 [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 [2]: https://github.com/jbranchaud/til
