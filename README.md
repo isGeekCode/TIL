@@ -8,17 +8,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_291 TILs and counting..._
+_294 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [UIKit에서 SwiftUI처럼 만들어 사용하기](iOS-Extensions/likeSwiftUI.md) - Mon Jul 31 12:58:02 2023 +0900
-- [ReactorKit - 예제: CountApp](iOS-Architecture/RxSwift_ReactorKit_CountApp.md) - Mon Jul 31 10:49:28 2023 +0900
-- [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](iOS-Architecture/MVC_traditional.md) - Mon Jul 31 10:49:28 2023 +0900
-- [Cocoa Design Pattern - Delegate 델리게이트 패턴](iOS-Architecture/CocoaDesignPattern_Delegate.md) - Mon Jul 31 10:49:28 2023 +0900
-- [Cocoa Design Pattern - Observer 옵저버 패턴](iOS-Architecture/CocoaDesignPattern_Observer.md) - Mon Jul 31 10:49:28 2023 +0900
+- [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md) - Mon Jul 31 14:56:36 2023 +0900
+- [Responder Chain에 대하여](iOS-Development/ResponderChain.md) - Mon Jul 31 14:56:36 2023 +0900
+- [sample App - 그림판앱](Sample-App-List/sample_pictureApp.md) - Mon Jul 31 14:56:36 2023 +0900
+- [PNG와 JPG에 대하여](iOS-RelatedImage/png_jpg.md) - Mon Jul 31 14:56:36 2023 +0900
+- [화면캡처 - 특정화면을 이미지로 저장하기](iOS-RelatedImage/imageSave.md) - Mon Jul 31 14:56:36 2023 +0900
 
 ### Categories
 
@@ -36,7 +36,6 @@ _291 TILs and counting..._
 - [Library](#Library)
 - [Mobile-Android](#Mobile-Android)
 - [Objective-C](#Objective-C)
-- [RelatedImage](#RelatedImage)
 - [Ruby](#Ruby)
 - [Sample-App-List](#Sample-App-List)
 - [Self-Review](#Self-Review)
@@ -53,6 +52,7 @@ _291 TILs and counting..._
 - [iOS-Hierachy](#iOS-Hierachy)
 - [iOS-Integrity](#iOS-Integrity)
 - [iOS-Networking](#iOS-Networking)
+- [iOS-RelatedImage](#iOS-RelatedImage)
 - [iOS-ScreenTranport](#iOS-ScreenTranport)
 - [iOS-Swift](#iOS-Swift)
 - [iOS-SwiftUI](#iOS-SwiftUI)
@@ -181,16 +181,13 @@ _291 TILs and counting..._
 - [Objc - 로그찍기](Objective-C/Objc_Log.md)
 - [Objc - c언어와 objective-c의 차이, 발전](Objective-C/TIL220421_aboutObjectiveC.md)
 
-### [RelatedImage](#RelatedImage)
-- [dp와 pt에 대하여 (Feat. 포인트란)](RelatedImage/DP_PT.md)
-- [PNG와 JPG에 대하여](RelatedImage/png_jpg.md)
-
 ### [Ruby](#Ruby)
 - [Installation: Ruby](Ruby/Installation_Ruby.md)
 - [RubyGems - Package Manager :　gem 관리하기](Ruby/ManageGem.md)
 - [Ruby - 버전관리 : RVM, Rbenv 사용법](Ruby/ManageRuby.md)
 
 ### [Sample-App-List](#Sample-App-List)
+- [sample App - 그림판앱](Sample-App-List/sample_pictureApp.md)
 - [sample App - 투두리스트](Sample-App-List/sample_todoList.md)
 
 ### [Self-Review](#Self-Review)
@@ -246,6 +243,7 @@ _291 TILs and counting..._
 - [External Link (외부링크) - 커스텀 앱스키마 만들기, 사용하기](iOS-Development/ExternalLink_CustomScheme.md)
 - [KVC와 KVO](iOS-Development/KVC_KVO.md)
 - [로컬라이징](iOS-Development/Localization.md)
+- [Responder Chain에 대하여](iOS-Development/ResponderChain.md)
 - [AudioToolbox - 롱프레스와 햅틱진동 구현하기 (Feat.Long press)](iOS-Development/Third_AudioToolBox_HapticAndLongpress.md)
 - [IOS에 있어서 Caching](iOS-Development/ios_caching.md)
 
@@ -309,6 +307,11 @@ _291 TILs and counting..._
 - [WebView - 자주 사용하는 메서드](iOS-Networking/WebView_often_use_delegate_method.md)
 - [WebView - 스와이프로 리프레시 세팅](iOS-Networking/WebView_swipe_refresh.md)
 - [webview - 바운스 효과 제거하기](iOS-Networking/Webview_how_to_stop_bounce.md)
+
+### [iOS-RelatedImage](#iOS-RelatedImage)
+- [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md)
+- [화면캡처 - 특정화면을 이미지로 저장하기](iOS-RelatedImage/imageSave.md)
+- [PNG와 JPG에 대하여](iOS-RelatedImage/png_jpg.md)
 
 ### [iOS-ScreenTranport](#iOS-ScreenTranport)
 - [정리 : iOS에서의 화면관리 및 전환](iOS-ScreenTranport/A_Various_switchingScene.md)
