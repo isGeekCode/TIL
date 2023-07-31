@@ -11,7 +11,7 @@
 <br>
 아래처럼 사용이 가능하다.
 
-``swift
+```swift
 let view = UIView()
     .backgroundColor(.systemRed)
     .clipsToBounds(true)
