@@ -14,11 +14,11 @@ _290 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [디자인패턴이란](zArchitecture/About_Design_MVX_Init.md) - Mon Jul 31 10:48:35 2023 +0900
-- [ReactorKit - 예제: CountApp](zArchitecture/RxSwift_ReactorKit_CountApp.md) - Mon Jul 31 10:48:35 2023 +0900
-- [Architecture - 간단한 MVVM구조 예제](zArchitecture/MVVM_simpleExample.md) - Mon Jul 31 10:48:35 2023 +0900
-- [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](zArchitecture/MVC_traditional.md) - Mon Jul 31 10:48:35 2023 +0900
-- [Architecture - 비즈니스 로직이란](zArchitecture/aboutBusinessLogic.md) - Mon Jul 31 10:48:35 2023 +0900
+- [ReactorKit - 예제: CountApp](iOS-Architecture/RxSwift_ReactorKit_CountApp.md) - Mon Jul 31 10:49:28 2023 +0900
+- [디자인패턴이란](iOS-Architecture/About_Design_MVX_Init.md) - Mon Jul 31 10:49:28 2023 +0900
+- [Cocoa Design Pattern - Delegate 델리게이트 패턴](iOS-Architecture/CocoaDesignPattern_Delegate.md) - Mon Jul 31 10:49:28 2023 +0900
+- [Cocoa Design Pattern - Observer 옵저버 패턴](iOS-Architecture/CocoaDesignPattern_Observer.md) - Mon Jul 31 10:49:28 2023 +0900
+- [Cocoa Design Pattern - Singleton (싱글톤 패턴)](iOS-Architecture/CocoaDesignPattern_Singleton.md) - Mon Jul 31 10:49:28 2023 +0900
 
 ### Categories
 
@@ -42,6 +42,7 @@ _290 TILs and counting..._
 - [Self-Review](#Self-Review)
 - [iOS-AppLaunching](#iOS-AppLaunching)
 - [iOS-AppStore](#iOS-AppStore)
+- [iOS-Architecture](#iOS-Architecture)
 - [iOS-Concurrency](#iOS-Concurrency)
 - [iOS-CustomLogic](#iOS-CustomLogic)
 - [iOS-DataBinding](#iOS-DataBinding)
@@ -56,7 +57,6 @@ _290 TILs and counting..._
 - [iOS-Swift](#iOS-Swift)
 - [iOS-SwiftUI](#iOS-SwiftUI)
 - [iOS-UIKit](#iOS-UIKit)
-- [zArchitecture](#zArchitecture)
 
 ### [A_Writing_in_Progress](#A_Writing_in_Progress)
 - [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md)
@@ -213,6 +213,19 @@ _290 TILs and counting..._
 - [리젝사유 - 4. Design(디자인)](iOS-AppStore/Reject_4_Design.md)
 - [리젝사유 - 5. Legal(법률)](iOS-AppStore/Reject_5_Legal.md)
 - [테스트플라잇 - 외부 테스팅 (External Testing)](iOS-AppStore/TestFlight_externalTester.md)
+
+### [iOS-Architecture](#iOS-Architecture)
+- [디자인패턴이란](iOS-Architecture/About_Design_MVX_Init.md)
+- [Cocoa Design Pattern - Delegate 델리게이트 패턴](iOS-Architecture/CocoaDesignPattern_Delegate.md)
+- [Cocoa Design Pattern - Observer 옵저버 패턴](iOS-Architecture/CocoaDesignPattern_Observer.md)
+- [Cocoa Design Pattern - Singleton (싱글톤 패턴)](iOS-Architecture/CocoaDesignPattern_Singleton.md)
+- [MVC to MVVM : 01. UTC 오늘, 현재, 내일 시간보기](iOS-Architecture/MVCToMVVM_01_UTC.md)
+- [MVC to MVVM : 02. TableVC 클릭시 텍스트 변경](iOS-Architecture/MVCToMVVM_02_Task.md)
+- [Architecture - IOS MVC의 한계](iOS-Architecture/MVC_Massive.md)
+- [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](iOS-Architecture/MVC_traditional.md)
+- [Architecture - 간단한 MVVM구조 예제](iOS-Architecture/MVVM_simpleExample.md)
+- [ReactorKit - 예제: CountApp](iOS-Architecture/RxSwift_ReactorKit_CountApp.md)
+- [Architecture - 비즈니스 로직이란](iOS-Architecture/aboutBusinessLogic.md)
 
 ### [iOS-Concurrency](#iOS-Concurrency)
 - [GCD - DispatchGroup](iOS-Concurrency/GCD_DispatchGroup.md)
@@ -404,19 +417,6 @@ _290 TILs and counting..._
 - [UIKit - UITextField](iOS-UIKit/UIKit_UITextField.md)
 - [UIKit - UISearchBar](iOS-UIKit/UIKit_UITextField_UISearchBar.md)
 - [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS-UIKit/ios_CollectionViewCell.md)
-
-### [zArchitecture](#zArchitecture)
-- [디자인패턴이란](zArchitecture/About_Design_MVX_Init.md)
-- [Cocoa Design Pattern - Delegate 델리게이트 패턴](zArchitecture/CocoaDesignPattern_Delegate.md)
-- [Cocoa Design Pattern - Observer 옵저버 패턴](zArchitecture/CocoaDesignPattern_Observer.md)
-- [Cocoa Design Pattern - Singleton (싱글톤 패턴)](zArchitecture/CocoaDesignPattern_Singleton.md)
-- [MVC to MVVM : 01. UTC 오늘, 현재, 내일 시간보기](zArchitecture/MVCToMVVM_01_UTC.md)
-- [MVC to MVVM : 02. TableVC 클릭시 텍스트 변경](zArchitecture/MVCToMVVM_02_Task.md)
-- [Architecture - IOS MVC의 한계](zArchitecture/MVC_Massive.md)
-- [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](zArchitecture/MVC_traditional.md)
-- [Architecture - 간단한 MVVM구조 예제](zArchitecture/MVVM_simpleExample.md)
-- [ReactorKit - 예제: CountApp](zArchitecture/RxSwift_ReactorKit_CountApp.md)
-- [Architecture - 비즈니스 로직이란](zArchitecture/aboutBusinessLogic.md)
 
 [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 [2]: https://github.com/jbranchaud/til
