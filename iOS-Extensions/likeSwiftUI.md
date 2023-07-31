@@ -5,13 +5,13 @@
 <br>
 점점 UIKit을 사용하는 쪽에서 SwiftUI를 위한 환경이 많이 나오고 있다.
 
-다만 이렇게 사용하려면 몇가지는 선언을 해주어야만한다.
+다만 이렇게 사용하려면 몇가지는 선언을 해주어야만 한다.
 
 
 <br>
 아래처럼 사용이 가능하다.
 
-```
+``swift
 let view = UIView()
     .backgroundColor(.systemRed)
     .clipsToBounds(true)
