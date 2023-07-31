@@ -14,11 +14,11 @@ _294 TILs and counting..._
 
 ### 5 most recent TILs
 
+- [sample App - 그림판앱](Sample-App-List/sample_001pictureApp.md) - Mon Jul 31 17:11:44 2023 +0900
+- [sample App - 투두리스트](Sample-App-List/sample_000todoList.md) - Mon Jul 31 17:11:44 2023 +0900
 - [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md) - Mon Jul 31 14:56:36 2023 +0900
-- [Responder Chain에 대하여](iOS-Development/ResponderChain.md) - Mon Jul 31 14:56:36 2023 +0900
-- [sample App - 그림판앱](Sample-App-List/sample_pictureApp.md) - Mon Jul 31 14:56:36 2023 +0900
-- [PNG와 JPG에 대하여](iOS-RelatedImage/png_jpg.md) - Mon Jul 31 14:56:36 2023 +0900
 - [화면캡처 - 특정화면을 이미지로 저장하기](iOS-RelatedImage/imageSave.md) - Mon Jul 31 14:56:36 2023 +0900
+- [Responder Chain에 대하여](iOS-Development/ResponderChain.md) - Mon Jul 31 14:56:36 2023 +0900
 
 ### Categories
 
@@ -187,8 +187,8 @@ _294 TILs and counting..._
 - [Ruby - 버전관리 : RVM, Rbenv 사용법](Ruby/ManageRuby.md)
 
 ### [Sample-App-List](#Sample-App-List)
-- [sample App - 그림판앱](Sample-App-List/sample_pictureApp.md)
-- [sample App - 투두리스트](Sample-App-List/sample_todoList.md)
+- [sample App - 투두리스트](Sample-App-List/sample_000todoList.md)
+- [sample App - 그림판앱](Sample-App-List/sample_001pictureApp.md)
 
 ### [Self-Review](#Self-Review)
 - [어떻게 리뷰할 것인가](Self-Review/aboutReview.md)
