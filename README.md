@@ -17,7 +17,7 @@ _295 TILs and counting..._
 - [sample App - 투두리스트](Sample-App-List/sample_000todoList.md) - Mon Jul 31 17:11:44 2023 +0900
 - [sample App - 그림판앱](Sample-App-List/sample_001pictureApp.md) - Mon Jul 31 17:11:44 2023 +0900
 - [화면캡처 - 특정화면을 이미지로 저장하기](iOS-RelatedImage/imageSave.md) - Mon Jul 31 14:56:36 2023 +0900
-- [Responder Chain에 대하여](iOS-Development/ResponderChain.md) - Mon Jul 31 14:56:36 2023 +0900
+- [Responder Chain이란](iOS-Development/ResponderChain.md) - Mon Jul 31 14:56:36 2023 +0900
 - [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md) - Mon Jul 31 14:56:36 2023 +0900
 
 ### Categories
@@ -244,7 +244,7 @@ _295 TILs and counting..._
 - [External Link (외부링크) - 커스텀 앱스키마 만들기, 사용하기](iOS-Development/ExternalLink_CustomScheme.md)
 - [KVC와 KVO](iOS-Development/KVC_KVO.md)
 - [로컬라이징](iOS-Development/Localization.md)
-- [Responder Chain에 대하여](iOS-Development/ResponderChain.md)
+- [Responder Chain이란](iOS-Development/ResponderChain.md)
 - [AudioToolbox - 롱프레스와 햅틱진동 구현하기 (Feat.Long press)](iOS-Development/Third_AudioToolBox_HapticAndLongpress.md)
 - [IOS에 있어서 Caching](iOS-Development/ios_caching.md)
 
