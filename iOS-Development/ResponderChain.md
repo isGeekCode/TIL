@@ -1,4 +1,4 @@
-Responder Chain에 대하여
+# Responder Chain이란
 
 iOS에서의 Responder Chain은 이벤트 처리시스템의 일부로, <br>
 
@@ -15,7 +15,7 @@ Responder Chain은 말그대로 반응할 수 있는 객체들이 사슬처럼 �
 
 <br><br>
 
-일단 기본적인 Reponder Chain의 로직을 살펴보자
+일단 기본적인 Reponder Chain의 로직을 살펴보자.  
 
 ## Responder Chain의 흐름
 
@@ -84,13 +84,13 @@ myTextField.becomeFirstResponder()
 이 밖에도 
 
 - canBecomeFirstResponder
-    - 객체가 First Responder가 될 수 있는지 여부를 결정하는 데 사용된다.
-    - 이 속성을 오버라이드하여 특정 조건에서만 First Responder가 되도록 할 수 있다.
+    - 객체가 First Responder가 될 수 있는지 여부를 결정하는 데 사용된다.  
+    - 이 속성을 오버라이드하여 특정 조건에서만 First Responder가 되도록 할 수 있다.   
 - canResignFirstResponder
-    - 객체가 First Responder를 그만둘 수 있는지 여부를 결정하는 데 사용된다.
-    - 이 속성을 오버라이드하여 특정 조건에서만 실행되도록 할 수 있다.
+    - 객체가 First Responder를 그만둘 수 있는지 여부를 결정하는 데 사용된다.  
+    - 이 속성을 오버라이드하여 특정 조건에서만 실행되도록 할 수 있다.  
 - isFirstResponder
-    - 객체가 현재 First Responder인지 확인하는 데 사용된다.
+    - 객체가 현재 First Responder인지 확인하는 데 사용된다.  
 
 
 <br><br>
@@ -120,10 +120,17 @@ Responder chain의 일반적인 순서는 아래와 같다.
 Responder chain은 뷰의 시각적인 배열과는 상관없이 뷰 계층의 구조에 기반한다는 것이다.  
 
 - 사례 : UIViewController - UIView - Button
-
-보통 Button의 addTarget에 동작할 메서드를 추가하는데, responder chain을 위해선 아래 코드를 세팅한다.
+  
+보통 Button의 addTarget에 동작할 메서드를 추가하는데, responder chain을 위해선 아래 코드를 세팅한다.  
 
 <br><br>
+
+> UIResponder를 상속하는 객체는 모두 이 메서드가 존재한다.  
+> 기본적으로 이벤트가 들어오면 Reponder Chain에 의해 실행되는 메서드이고.  
+> super.touchBegan이 이어서 들어오도록 세팅되어있다.  
+
+<br>
+
 ```Swift
 override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     print("@@@@의 touchesBegan 호출")
@@ -133,7 +140,9 @@ override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 ```
 <br><br>
 
-또한 Button은 특별하게도 touchesBegan()메서드가 존재하면 super.touchesBegan(touches, with: event)메서드가 있어야 addTarget된 메서드가 실행이 된다.  
+> Button은 특별하게도 `override touchesBegan()`메서드를 구현하면  
+> 내부에 `super.touchesBegan(touches, with: event)`메서드가 있어야
+> `addTarget`된 메서드가 실행이 된다.  
 <br>
 <br>
 만약 Button에서 View로 responder를 넘기고 싶다면 버튼의 유저상호작용을 false로 처리하면된다.  
@@ -142,6 +151,9 @@ button.isUserInteractionEnabled  = false
 ```
 이렇게 하면 button 자체는 first Responder가 되지만 이벤트 처리를 상위 응답자로 넘기게 된다.
 
+button이 특정 View에 속해 있다면,  
+
+다음 responder는 이 특정View가 된다. 
 
 
 ```swift
@@ -200,7 +212,6 @@ class ViewController: ParentViewController {
 }
 ```
 
-
 <br><br>
 
 ## 이벤트 처리
@@ -211,15 +222,9 @@ class ViewController: ParentViewController {
 
 ## 이벤트 미처리
 
+이벤트를 어떤 곳에서도 처리하지 않으면 이벤트는 사라진다.
 
 <br><br>
-
-
-
-
-
-
-
 
 
 <br><br><br>
