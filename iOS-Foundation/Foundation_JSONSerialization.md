@@ -24,7 +24,7 @@ JSON 데이터를 파싱하고 JSON객체를 Swift에서 사용할 수 있는 �
     - [Dictionary / Array를 혼합하여 JSONData만들기](#Dictionary--Array-를-혼합하여-JSONData만들기)
 - [역직렬화하기](#역직렬화하기)
     - [Dictionary구조의 JSONData를 역직렬화하기](#Dictionary구조의-JSONData를-역직렬화-하기)
-    - [Array구조의 JSONData를 역직렬화 하기](#Array구조의-JSONData를-역직렬화-하기)
+    - [Array구조의 JSONData를 역직렬화하기](#Array구조의-JSONData를-역직렬화-하기)
     - [Dictionary/Array가 혼합된 JSONData를 역직렬화하기](#DictionaryArray가-혼합된-JSONData를-역직렬화-하기)
     - [Dictionary/Array가 혼합, 더 복잡한 JSONData를 역직렬화하기](#DictionaryArray가-혼합-더-복잡한-JSONData를-역직렬화-하기)
     - [Codable이용하여 역직렬화하기](#-Codable이용하여-역직렬화-하기)
@@ -75,7 +75,7 @@ jsonString:
 ```  
 <br>
 
-[[Top]](#순서)
+- [[Top]](#순서)
 
 
 <br><br>
@@ -161,7 +161,7 @@ jsonString:
 
 <br>
 
-[[Top]](#순서)
+- [[Top]](#순서)
 
 <br><br><br>
 
@@ -199,11 +199,11 @@ Codable을 이용하면 얘기가 다르다.
 
 <br>
 
-[[Top]](#순서)
+- [[Top]](#순서)
 
 <br><br>
 
-### Dictionary구조의 JSONData를 역직렬화 하기
+### Dictionary구조의 JSONData를 역직렬화하기
 
 
 ```swift
@@ -253,13 +253,13 @@ func deserializationWithDictionary() {
 
 <br>
 
-[[Top]](#순서)
+- [[Top]](#순서)
 
 <br><br>
 
 
 
-### Array구조의 JSONData를 역직렬화 하기
+### Array구조의 JSONData를 역직렬화하기
 name, age, email의 값을 가지고 있는 element가 두 개 들어있다.  
 
 
@@ -327,12 +327,12 @@ func deserializationWithArray() {
 
 <br>
 
-[[Top]](#순서)
+- [[Top]](#순서)
 
 <br><br>
 
 
-### Dictionary/Array가 혼합된 JSONData를 역직렬화 하기
+### Dictionary/Array가 혼합된 JSONData를 역직렬화하기
 딕셔너리의 한 value 값으로 Array가 들어갔다.  
 
 ```swift
@@ -391,11 +391,11 @@ func deserializationWithDictionaryAndArray() {
 
 <br>
 
-[[Top]](#순서)
+- [[Top]](#순서)
 
 <br><br>
 
-### Dictionary/Array가 혼합, 더 복잡한 JSONData를 역직렬화 하기
+### Dictionary/Array가 혼합, 더 복잡한 JSONData를 역직렬화하기
 이번 JSON형태를 보면, Dictionary형태에서 한 value값이  Array 형태를 갖고 있는데 그 내부에 또 Dictionary형태다.
 
 이런 형태인거다.
@@ -503,7 +503,7 @@ func deserializationMoreComplex() {
 
 <br>
 
-[[Top]](#순서)
+- [[Top]](#순서)
 
 <br><br><br>
 
@@ -514,7 +514,7 @@ func deserializationMoreComplex() {
 
 아래 내용을 소개해본다. 
 
-### Codable이용하여 역직렬화 하기
+### Codable이용하여 역직렬화하기
 위 방법에서는 역직렬화를 모두 한다음 구현한 객체를 만들어줬다.  
 
 Codable은 Codable 프로토콜을 struct에 채택하고,  
@@ -603,7 +603,7 @@ func deserializationWithCodable() {
 
 <br>
 
-[[Top]](#순서)
+- [[Top]](#순서)  
 
 <br><br><br>
 
