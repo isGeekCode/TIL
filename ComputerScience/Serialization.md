@@ -1,4 +1,9 @@
 # 직렬화(Serialization)
+
+- 참고링크
+    - [TIL: 직렬화(Serialization)](https://github.com/isGeekCode/TIL/blob/main/ComputerScience/Serialization.md)
+    - [TIL: JSONSerialization으로  직렬화하기](https://github.com/isGeekCode/TIL/blob/main/iOS-Foundation/Foundation_JSONSerialization.md)
+
 직렬화란 데이터를 일련의 바이트나 비트열로 변환하는 과정을 말한다.  
 
 컴퓨터에서는 데이터를 메모리에 저장하거나 파일에 쓰거나,   

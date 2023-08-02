@@ -1,11 +1,14 @@
 # Foundation - JSONSerialization 직렬화하기
-- [TIL: 직렬화(Serialization)](https://github.com/isGeekCode/TIL/blob/main/ComputerScience/Serialization.md)
-- [TIL: Codable 사용하기](#)
+
+- 참고링크
+    - [TIL: 직렬화(Serialization)](https://github.com/isGeekCode/TIL/blob/main/ComputerScience/Serialization.md)
+    - [TIL: Codable 사용하기](#)
 
 iOS의 Foundation 프레임워크에서 제공하는 클래스다.   
 JSON 데이터를 파싱하고 JSON객체를 Swift에서 사용할 수 있는 형식으로 변환하는 기능을 제공한다.  
 
 주로 아래와 같은 두가지 주요기능을 수행한다.
+
 
 - Serialization : Dictionary or Array -> JSON Data
 - Deserialization : JSON Data -> Dictionary or Array
@@ -13,10 +16,18 @@ JSON 데이터를 파싱하고 JSON객체를 Swift에서 사용할 수 있는 �
 간단하게 말해서, 직렬화와 역직렬화를 수행해주는 클래스이다.
 
 일단 직렬화 방법은 아래처럼 세가지의 방법이 있다.
+## 순서
+- [직렬화하기](#-직렬화하기)
+    - [Dictionary 타입으로 JSONData만들기](#-Dictionay로-JSONData만들기)
+    - [Array 타입으로 JSONData만들기](#-Array-타입으로-JSONData만들기)
+    - [Dictionary / Array를 혼합하여 JSONData만들기](Dictionary--Array-를-혼합하여-JSONData만들기)
+- [역직렬화하기](#-역직렬화하기)
+    - [Dictionary구조의 JSONData를 역직렬화 하기](#-Dictionary구조의-JSONData를-역직렬화하기)
+    - [Array구조의 JSONData를 역직렬화 하기](#-Array구조의-JSONData를-역직렬화하기)
+    - [Dictionary/Array가 혼합된 JSONData를 역직렬화 하기](#-DictionaryArray가-혼합된-JSONData를-역직렬화하기)
+    - [Dictionary/Array가 혼합, 더 복잡한 JSONData를 역직렬화 하기](#-DictionaryArray가-혼합-더-복잡한-JSONData를-역직렬화하기)
+    - [Codable이용하여 역직렬화 하기](#-Codable이용하여-역직렬화-하기)
 
-- Dictionary 타입으로 JSONData만들기
-- Array 타입으로 JSONData만들기
-- Dictionary / Array 를 혼합하여 JSONData만들기
 
 <br><br>
 
@@ -61,7 +72,8 @@ jsonString:
 }
 */
 ```  
-[TOP](#-Foundation---JSONSerialization-직렬화하기)  
+<br>
+[[Top]](#순서)
 
 
 <br><br>
@@ -97,7 +109,8 @@ jsonString:
 */
 ```
 
-
+<br>
+[[Top]](#순서)
 
 <br><br>
 
@@ -143,6 +156,9 @@ jsonString:
 
 ```
 
+<br>
+[[Top]](#순서)
+
 <br><br><br>
 ## 역직렬화하기
 이것도 마찬가지로 3가지 사례를 보여주려고 한다.
@@ -176,7 +192,8 @@ Codable을 이용하면 얘기가 다르다.
 - [Codable이용하여 역직렬화 하기](#-Codable이용하여-역직렬화-하기)
 
 
-
+<br>
+[[Top]](#순서)
 <br><br>
 ### Dictionary구조의 JSONData를 역직렬화 하기
 ```swift
@@ -222,7 +239,8 @@ func deserializationWithDictionary() {
 
 ```
 
-
+<br>
+[[Top]](#순서)
 <br><br>
 
 ### Array구조의 JSONData를 역직렬화 하기
@@ -287,6 +305,8 @@ func deserializationWithArray() {
  Name: Jane Smith, Age: 28, Email: janesmith@example.com
  */
 ```
+<br>
+[[Top]](#순서)
 <br><br>
 ### Dictionary/Array가 혼합된 JSONData를 역직렬화 하기
 딕셔너리의 한 value 값으로 Array가 들어갔다.  
@@ -343,6 +363,8 @@ func deserializationWithDictionaryAndArray() {
  */
 
 ```
+<br>
+[[Top]](#순서)
 <br><br>
 ### Dictionary/Array가 혼합, 더 복잡한 JSONData를 역직렬화 하기
 이번 JSON형태를 보면, Dictionary형태에서 한 value값이  Array 형태를 갖고 있는데 그 내부에 또 Dictionary형태다.
@@ -446,6 +468,9 @@ func deserializationMoreComplex() {
  */
 
 ```
+
+<br>
+[[Top]](#순서)
 <br><br><br>
 
 위에서는 역직렬화 이후 정보를 처리하는게 급격히 복잡해졌다.
@@ -540,7 +565,12 @@ func deserializationWithCodable() {
  */
 
 ```
+
+<br>
+[[Top]](#순서)
 <br><br><br>
+
+
 ## History
 - 230802 : 초안작성
 - 230802 : Codable 사용법 추가
