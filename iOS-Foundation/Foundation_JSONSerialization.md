@@ -16,17 +16,18 @@ JSON 데이터를 파싱하고 JSON객체를 Swift에서 사용할 수 있는 �
 간단하게 말해서, 직렬화와 역직렬화를 수행해주는 클래스이다.
 
 일단 직렬화 방법은 아래처럼 세가지의 방법이 있다.
+
 ## 순서
 - [직렬화하기](#직렬화하기)
-    - [Dictionary 타입으로 JSONData만들기](#Dictionay로-JSONData만들기)
+    - [Dictionary 타입으로 JSONData만들기](#Dictionay-타입으로-JSONData만들기)
     - [Array 타입으로 JSONData만들기](#Array-타입으로-JSONData만들기)
     - [Dictionary / Array를 혼합하여 JSONData만들기](#Dictionary--Array-를-혼합하여-JSONData만들기)
 - [역직렬화하기](#역직렬화하기)
-    - [Dictionary구조의 JSONData를 역직렬화 하기](#Dictionary구조의-JSONData를-역직렬화하기)
-    - [Array구조의 JSONData를 역직렬화 하기](#Array구조의-JSONData를-역직렬화하기)
-    - [Dictionary/Array가 혼합된 JSONData를 역직렬화 하기](#DictionaryArray가-혼합된-JSONData를-역직렬화하기)
-    - [Dictionary/Array가 혼합, 더 복잡한 JSONData를 역직렬화 하기](#DictionaryArray가-혼합-더-복잡한-JSONData를-역직렬화하기)
-    - [Codable이용하여 역직렬화 하기](#-Codable이용하여-역직렬화하기)
+    - [Dictionary구조의 JSONData를 역직렬화하기](#Dictionary구조의-JSONData를-역직렬화-하기)
+    - [Array구조의 JSONData를 역직렬화 하기](#Array구조의-JSONData를-역직렬화-하기)
+    - [Dictionary/Array가 혼합된 JSONData를 역직렬화하기](#DictionaryArray가-혼합된-JSONData를-역직렬화-하기)
+    - [Dictionary/Array가 혼합, 더 복잡한 JSONData를 역직렬화하기](#DictionaryArray가-혼합-더-복잡한-JSONData를-역직렬화-하기)
+    - [Codable이용하여 역직렬화하기](#-Codable이용하여-역직렬화-하기)
 
 
 <br><br>
@@ -73,6 +74,7 @@ jsonString:
 */
 ```  
 <br>
+
 [[Top]](#순서)
 
 
@@ -110,6 +112,7 @@ jsonString:
 ```
 
 <br>
+
 [[Top]](#순서)
 
 <br><br>
@@ -157,17 +160,19 @@ jsonString:
 ```
 
 <br>
+
 [[Top]](#순서)
 
 <br><br><br>
-## 역직렬화하기
-이것도 마찬가지로 3가지 사례를 보여주려고 한다.
 
-- [Dictionary구조의 JSONData를 역직렬화 하기](#-Dictionary구조의-JSONData를-역직렬화하기)
-- [Array구조의 JSONData를 역직렬화 하기](#-Array구조의-JSONData를-역직렬화하기)
-- [Dictionary/Array가 혼합된 JSONData를 역직렬화 하기](#-DictionaryArray가-혼합된-JSONData를-역직렬화하기)
-- [Dictionary/Array가 혼합, 더 복잡한 JSONData를 역직렬화 하기](#-DictionaryArray가-혼합-더-복잡한-JSONData를-역직렬화하기)
-- [Codable이용하여 역직렬화 하기](#-Codable이용하여-역직렬화-하기)
+## 역직렬화하기
+이것도 마찬가지로 5가지 사례를 보여주려고 한다.
+
+- [Dictionary구조의 JSONData를 역직렬화하기](#Dictionary구조의-JSONData를-역직렬화-하기)
+- [Array구조의 JSONData를 역직렬화 하기](#Array구조의-JSONData를-역직렬화-하기)
+- [Dictionary/Array가 혼합된 JSONData를 역직렬화하기](#DictionaryArray가-혼합된-JSONData를-역직렬화-하기)
+- [Dictionary/Array가 혼합, 더 복잡한 JSONData를 역직렬화하기](#DictionaryArray가-혼합-더-복잡한-JSONData를-역직렬화-하기)
+- [Codable이용하여 역직렬화하기](#-Codable이용하여-역직렬화-하기)
 
 각각의 예제에는 JSONData를 먼저 생성하고 있다.  
 
@@ -189,11 +194,13 @@ JSONSerialization을 이용하여 역직렬화(Deserialization)할 때에는 하
 Codable을 이용하면 얘기가 다르다.  
 
 그거부터 보고 싶다면 클릭해서 아래로 이동  
-- [Codable이용하여 역직렬화 하기](#-Codable이용하여-역직렬화-하기)
+- [Codable이용하여 역직렬화하기](#-Codable이용하여-역직렬화-하기)
 
 
 <br>
+
 [[Top]](#순서)
+
 <br><br>
 
 ### Dictionary구조의 JSONData를 역직렬화 하기
@@ -245,7 +252,9 @@ func deserializationWithDictionary() {
 
 
 <br>
+
 [[Top]](#순서)
+
 <br><br>
 
 
@@ -317,6 +326,7 @@ func deserializationWithArray() {
 
 
 <br>
+
 [[Top]](#순서)
 
 <br><br>
@@ -380,6 +390,7 @@ func deserializationWithDictionaryAndArray() {
 
 
 <br>
+
 [[Top]](#순서)
 
 <br><br>
@@ -393,8 +404,10 @@ func deserializationWithDictionaryAndArray() {
         - Dictionary
 
 <br>
-이번엔 역직렬화를 마치고 struct에 담아보자.   
+이번엔 역직렬화를 마치고 struct에 담아보자.  
+ 
 <br>
+
 ```swift
 
 // MARK: JSONData Deserialization(4) - Dictionary and Array more Complex
@@ -489,7 +502,9 @@ func deserializationMoreComplex() {
 
 
 <br>
+
 [[Top]](#순서)
+
 <br><br><br>
 
 
