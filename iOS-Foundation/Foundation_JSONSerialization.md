@@ -17,16 +17,16 @@ JSON 데이터를 파싱하고 JSON객체를 Swift에서 사용할 수 있는 �
 
 일단 직렬화 방법은 아래처럼 세가지의 방법이 있다.
 ## 순서
-- [직렬화하기](#-직렬화하기)
-    - [Dictionary 타입으로 JSONData만들기](#-Dictionay로-JSONData만들기)
-    - [Array 타입으로 JSONData만들기](#-Array-타입으로-JSONData만들기)
-    - [Dictionary / Array를 혼합하여 JSONData만들기](Dictionary--Array-를-혼합하여-JSONData만들기)
-- [역직렬화하기](#-역직렬화하기)
-    - [Dictionary구조의 JSONData를 역직렬화 하기](#-Dictionary구조의-JSONData를-역직렬화하기)
-    - [Array구조의 JSONData를 역직렬화 하기](#-Array구조의-JSONData를-역직렬화하기)
-    - [Dictionary/Array가 혼합된 JSONData를 역직렬화 하기](#-DictionaryArray가-혼합된-JSONData를-역직렬화하기)
-    - [Dictionary/Array가 혼합, 더 복잡한 JSONData를 역직렬화 하기](#-DictionaryArray가-혼합-더-복잡한-JSONData를-역직렬화하기)
-    - [Codable이용하여 역직렬화 하기](#-Codable이용하여-역직렬화-하기)
+- [직렬화하기](#직렬화하기)
+    - [Dictionary 타입으로 JSONData만들기](#Dictionay로-JSONData만들기)
+    - [Array 타입으로 JSONData만들기](#Array-타입으로-JSONData만들기)
+    - [Dictionary / Array를 혼합하여 JSONData만들기](#Dictionary--Array-를-혼합하여-JSONData만들기)
+- [역직렬화하기](#역직렬화하기)
+    - [Dictionary구조의 JSONData를 역직렬화 하기](#Dictionary구조의-JSONData를-역직렬화하기)
+    - [Array구조의 JSONData를 역직렬화 하기](#Array구조의-JSONData를-역직렬화하기)
+    - [Dictionary/Array가 혼합된 JSONData를 역직렬화 하기](#DictionaryArray가-혼합된-JSONData를-역직렬화하기)
+    - [Dictionary/Array가 혼합, 더 복잡한 JSONData를 역직렬화 하기](#DictionaryArray가-혼합-더-복잡한-JSONData를-역직렬화하기)
+    - [Codable이용하여 역직렬화 하기](#-Codable이용하여-역직렬화하기)
 
 
 <br><br>
