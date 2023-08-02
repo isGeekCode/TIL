@@ -195,7 +195,10 @@ Codable을 이용하면 얘기가 다르다.
 <br>
 [[Top]](#순서)
 <br><br>
+
 ### Dictionary구조의 JSONData를 역직렬화 하기
+
+
 ```swift
 // MARK: JSONData Deserialization(1) - Dictionary
 func deserializationWithDictionary() {
@@ -233,18 +236,24 @@ func deserializationWithDictionary() {
     }
 
 }
+
 /*
  Name: John Doe, Age: 30, Email: johndoe@example.com
  */
 
 ```
 
+
 <br>
 [[Top]](#순서)
 <br><br>
 
+
+
 ### Array구조의 JSONData를 역직렬화 하기
-name, age, email의 값을 가지고 있는 element가 두 개 들어있다.
+name, age, email의 값을 가지고 있는 element가 두 개 들어있다.  
+
+
 
 ```swift
 // MARK: JSONData Deserialization(2) - Array
@@ -305,9 +314,14 @@ func deserializationWithArray() {
  Name: Jane Smith, Age: 28, Email: janesmith@example.com
  */
 ```
+
+
 <br>
 [[Top]](#순서)
+
 <br><br>
+
+
 ### Dictionary/Array가 혼합된 JSONData를 역직렬화 하기
 딕셔너리의 한 value 값으로 Array가 들어갔다.  
 
@@ -363,9 +377,13 @@ func deserializationWithDictionaryAndArray() {
  */
 
 ```
+
+
 <br>
 [[Top]](#순서)
+
 <br><br>
+
 ### Dictionary/Array가 혼합, 더 복잡한 JSONData를 역직렬화 하기
 이번 JSON형태를 보면, Dictionary형태에서 한 value값이  Array 형태를 갖고 있는데 그 내부에 또 Dictionary형태다.
 
@@ -469,9 +487,11 @@ func deserializationMoreComplex() {
 
 ```
 
+
 <br>
 [[Top]](#순서)
 <br><br><br>
+
 
 위에서는 역직렬화 이후 정보를 처리하는게 급격히 복잡해졌다.
 
@@ -567,7 +587,9 @@ func deserializationWithCodable() {
 ```
 
 <br>
+
 [[Top]](#순서)
+
 <br><br><br>
 
 
