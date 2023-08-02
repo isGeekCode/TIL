@@ -1,8 +1,8 @@
 # iOS에서 직렬화하기 : iOS JSONSerialization
 - 참고링크
-    - [TIL: 직렬화(Serialization)](https://github.com/isGeekCode/TIL/blob/main/ComputerScience/Serialization.md)
+    - [TIL: 직렬화(Serialization)란](https://github.com/isGeekCode/TIL/blob/main/ComputerScience/Serialization.md)
     - [TIL: JSONSerialization으로  직렬화하기](https://github.com/isGeekCode/TIL/blob/main/iOS-Foundation/Foundation_JSONSerialization.md)
-    - [TIL: Codable로 직렬화하기]()
+    - [TIL: Codable로 직렬화하기](https://github.com/isGeekCode/TIL/blob/main/iOS-Swift/Codable.md)
 
 
 주로 아래와 같은 두가지 주요기능을 수행한다.
