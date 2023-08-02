@@ -8,7 +8,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_298 TILs and counting..._
+_299 TILs and counting..._
 
 ---
 
@@ -247,6 +247,7 @@ _298 TILs and counting..._
 - [로컬라이징](iOS-Development/Localization.md)
 - [Responder Chain이란](iOS-Development/ResponderChain.md)
 - [AudioToolbox - 롱프레스와 햅틱진동 구현하기 (Feat.Long press)](iOS-Development/Third_AudioToolBox_HapticAndLongpress.md)
+- [iOS에서 직렬화하기 : iOS JSONSerialization](iOS-Development/iOS_JSONSerializationMethod.md)
 - [IOS에 있어서 Caching](iOS-Development/ios_caching.md)
 
 ### [iOS-Environment](#iOS-Environment)
