@@ -8,7 +8,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_297 TILs and counting..._
+_298 TILs and counting..._
 
 ---
 
@@ -16,9 +16,9 @@ _297 TILs and counting..._
 
 - [sample App - 투두리스트](Sample-App-List/sample_000todoList.md) - Mon Jul 31 17:11:44 2023 +0900
 - [sample App - 그림판앱](Sample-App-List/sample_001pictureApp.md) - Mon Jul 31 17:11:44 2023 +0900
-- [PNG와 JPG에 대하여](iOS-RelatedImage/png_jpg.md) - Mon Jul 31 14:56:36 2023 +0900
 - [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md) - Mon Jul 31 14:56:36 2023 +0900
 - [Responder Chain이란](iOS-Development/ResponderChain.md) - Mon Jul 31 14:56:36 2023 +0900
+- [화면캡처 - 특정화면을 이미지로 저장하기](iOS-RelatedImage/imageSave.md) - Mon Jul 31 14:56:36 2023 +0900
 
 ### Categories
 
@@ -102,10 +102,10 @@ _297 TILs and counting..._
 ### [ComputerScience](#ComputerScience)
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
-- [AppStore - 여러가지 버전관리정책](ComputerScience/AppStore_VersionLint.md)
 - [MVP: Minimum Viable Product](ComputerScience/MVP.md)
 - [직렬화(Serialization)](ComputerScience/Serialization.md)
 - [Terminal 기초 사용법](ComputerScience/Terminal.md)
+- [여러가지 버전관리정책](ComputerScience/VersionLint.md)
 - [iOS의 Virtual Memory에 대하여](ComputerScience/VirtualMemory.md)
 - [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
 - [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
@@ -272,6 +272,7 @@ _297 TILs and counting..._
 - [Calendar - 캘린더로 두 개의 날짜 비교하기](iOS-Foundation/Calendar_getDateInterval.md)
 - [FileManager - 파일 다운로드하기](iOS-Foundation/FileManager_fileDownload.md)
 - [FileManager - 사용하기](iOS-Foundation/FileManager_introduce.md)
+- [Foundation - JSONSerialization 직렬화하기](iOS-Foundation/Foundation_JSONSerialization.md)
 - [타임스탬프 구현하기](iOS-Foundation/TIL220914_TimeStamp.md)
 - [CMTime](iOS-Foundation/cmtime.md)
 
