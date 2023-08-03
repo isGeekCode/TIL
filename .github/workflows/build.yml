@@ -41,8 +41,6 @@ jobs:
 
       - name: Fix Readme Links
         if: steps.autoformat.outcome == 'success'
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
           python .github/workflows/fix_readme_links.py
           git config user.name "isgeekcode"
