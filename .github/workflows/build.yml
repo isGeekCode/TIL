@@ -31,7 +31,6 @@ jobs:
 
       # Autoformat 작업 이후에 실행되도록 함
       - name: Run Python Script
-        if: steps.autoformat.outcome == 'success'
         run: |
           python .github/workflows/fix_readme_links.py
           git diff
