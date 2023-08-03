@@ -36,10 +36,12 @@ jobs:
       # 추가된 부분: Autoformat 작업의 성공 여부에 따라 Fix 작업을 실행합니다.
       - name: Fix Readme Links
         if: steps.autoformat.outcome == 'success'
+        uses: actions/checkout@v2  # 필요한 경우, 레포지토리를 체크아웃합니다.
+        with:
+            repo-token: ${{ secrets.TOKEN }}  # Secrets에 등록한 토큰을 사용합니다.
         run: |
             python .github/workflows/fix_readme_links.py
             git config user.name "isgeekcode"
             git config user.email "ptuguitar@naver.com"
             git add README.md
-            git commit --message "Fix README links"
-            git push
+            git commit -m "Fix README links"
