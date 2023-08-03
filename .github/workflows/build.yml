@@ -33,16 +33,20 @@ jobs:
           list_most_recent: 5 # optional, lists most recent TILS below description
           date_format: '2020 Jan 15:04' # optional, must align to https://golang.org/pkg/time/#Time.Format
 
-      # 추가된 부분: Autoformat 작업의 성공 여부에 따라 Fix 작업을 실행합니다.
+      - name: Checkout code again
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.TOKEN }}
+ㅎ
       - name: Fix Readme Links
         if: steps.autoformat.outcome == 'success'
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
-            which git
-        run: python .github/workflows/fix_readme_links.py && \
-             git config user.name "isgeekcode" && \
-             git config user.email "ptuguitar@naver.com" && \
-             git add README.md && \
-             git commit -m "Fix README links" && \
-             git push
+          python .github/workflows/fix_readme_links.py
+          git config user.name "isgeekcode"
+          git config user.email "ptuguitar@naver.com"
+          git add README.md
+          git commit -m "Fix README links"
+          git push
