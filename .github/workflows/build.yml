@@ -41,6 +41,5 @@ jobs:
             git config user.name "isgeekcode"
             git config user.email "ptuguitar@naver.com"
             git add README.md
-            
-            git commit -m "Fix README links" --no-edit
+            git commit --message "Fix README links"
             git push
