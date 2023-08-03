@@ -38,6 +38,8 @@ jobs:
         if: steps.autoformat.outcome == 'success'
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        run: |
+            which git
         run: python .github/workflows/fix_readme_links.py && \
              git config user.name "isgeekcode" && \
              git config user.email "ptuguitar@naver.com" && \
