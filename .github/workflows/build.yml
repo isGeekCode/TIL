@@ -36,8 +36,8 @@ jobs:
       # 추가된 부분: Autoformat 작업의 성공 여부에 따라 Fix 작업을 실행합니다.
       - name: Fix Readme Links
         if: steps.autoformat.outcome == 'success'
-        with:
-            repo-token: ${{ secrets.TOKEN }}  # Secrets에 등록한 토큰을 사용합니다.
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
             python .github/workflows/fix_readme_links.py
             git config user.name "isgeekcode"
