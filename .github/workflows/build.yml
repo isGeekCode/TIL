@@ -16,6 +16,8 @@ jobs:
         with:
           # necessary for github-action-til-autoformat-readme
           fetch-depth: 0
+          token: ${{ secrets.TOKEN }}  # use the PAT
+
 
       - name: Autoformat README
         id: autoformat
@@ -43,9 +45,10 @@ jobs:
         if: steps.autoformat.outcome == 'success'
         run: |
           python .github/workflows/fix_readme_links.py
+          git diff
           git config user.name "isGeekCode"
           git config user.email "ptuguitar@naver.com"
           git add README.md
-          git commit -m "Fix README links"
+          git commit -m "Fix README links"  -a || exit 0
           git push
 #test
