@@ -29,7 +29,18 @@ jobs:
           list_most_recent: 5 # optional, lists most recent TILS below description
           date_format: '2020 Jan 15:04' # optional, must align to https://golang.org/pkg/time/#Time.Format
 
-      # Autoformat 작업 이후에 실행되도록 함
+      # Autoformat 작업 이후 30초 대기
+      - name: Wait for 30 seconds
+        run: |
+          sleep 30
+
+      # 30초 후에 README 파일 다시 조회
+      - name: Check out repo again
+        uses: actions/checkout@v3.5.3
+        with:
+          fetch-depth: 0
+
+      # README 파일 수정을 위한 스크립트 실행
       - name: Run Python Script
         run: |
           python .github/workflows/fix_readme_links.py
