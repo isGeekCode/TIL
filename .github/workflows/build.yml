@@ -37,9 +37,11 @@ jobs:
       - name: Fix Readme Links
         if: steps.autoformat.outcome == 'success'
         run: |
-          python .github/workflows/fix_readme_links.py
-          git config user.name "isgeekcode"
-          git config user.email "ptuguitar@gmail.com"
-          git add README.md
-          git commit -m "Fix README links"
-          git push
+            python .github/workflows/fix_readme_links.py
+            git config user.name "isgeekcode"
+            git config user.email "ptuguitar@gmail.com"
+
+            # 커밋 메시지를 생성하는 부분에서 사용자 권한으로 생성하도록 수정합니다.
+            echo "Fix README links" | git commit --file -
+            git push
+
