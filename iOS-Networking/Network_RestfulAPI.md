@@ -6,6 +6,23 @@ RESTful API란,
 
 주로 HTTP 프로토콜을 사용하여 대이털르 요청하고 응답하는 방식으로 동작한다.  
 
+
+## 순서
+- [알아야할 키워드](#알아야할-키워드)
+    - [엔드포인트](#엔드포인트)
+    - [HTTP메서드](#HTTP메서드)
+    - [Request](#Request)
+    - [Response](#Response)
+- [사용법](#사용법)
+- [API 요청하기](#API-요청하기)
+    - [기본적인 단계](#기본적인-단계)
+    - [GET형식](#GET형식)
+    - [POST형식](#POST형식)
+- [API 응답하기](#API-응답하기)
+    - [JSONSerialization을 사용하는 방법](#JSONSerialization을 사용하는 방법)
+    - [Codable을 사용하는 방법](#Codable을-사용하는-방법)
+
+
 <br><br>
 
 ## 알아야할 키워드
@@ -63,13 +80,16 @@ RESTful API는 주로 HTTP메서드를 사용한다고 했다. 대표적인 메�
 
 - URL: `https://api.example.com/users`
 - Body(JSON형식):
+
     ```swift
+    
     {
       "name": "John Doe",
       "email": "johndoe@example.com",
       "age": 30
     }
     ```
+    
 <br><br><br>   
 
 ### Response
@@ -83,10 +103,212 @@ Header와 Body의 형태를 가지고 있다.
     - 주로 JSON, XML, HTML, 텍스트 등의 형식으로 포함된다.
 
 <br><br><br> 
-   
-## iOS에서 사용하는 실제 코드
 
-단계는 아래와 같다.  
+
+## 간단한 흐름
+
+- 데이터 가공할 객체생성
+- 네트워킹 메서드 구현
+    - GET형식의 경우
+    - POST형식의 경우
+- 통신 완료시 데이터 가공처리
+- completion에서 받아 원하는 곳에서 사용
+
+## 사용법
+
+** 데이터 가공할 객체생성 **
+```swift
+struct User: Codable {
+    let name: String
+    let age: Int
+    let email: String
+}
+
+/*
+Codable 사용하는 경우 Codable 프로토콜 채택
+struct User: Codable {
+    let name: String
+    let age: Int
+    let email: String
+}
+*/
+
+```
+
+** 네트워킹 메서드 구현 **
+
+GET형식의 경우
+```swift
+import Foundation
+
+func fetchUserData(completion: @escaping (Result<User, Error>) -> Void) {
+    // 실제 API URL로 바꿔주세요
+    let url = URL(string: "https://api.example.com/users")!
+
+    // URLSession 생성
+    let session = URLSession.shared
+
+    // 데이터 태스크를 사용하여 API로부터 데이터를 가져옵니다
+    let task = session.dataTask(with: url) { data, response, error in
+        // 에러 체크
+        if let error = error {
+            completion(.failure(error))
+            return
+        }
+
+        // 데이터가 있는지 확인
+        guard let data = data else {
+            completion(.failure(NSError(domain: "com.example.app", code: -1, userInfo: nil)))
+            return
+        }
+
+        // Codable을 사용하여 데이터를 파싱합니다
+        do {
+            let decoder = JSONDecoder()
+            let user = try decoder.decode(User.self, from: data)
+            completion(.success(user))
+        } catch {
+            completion(.failure(error))
+        }
+    }
+
+    // 데이터 태스크 시작
+    task.resume()
+}
+
+```
+
+** POST형식인 경우 **
+
+```swift
+import Foundation
+
+func postUserData(user: UserRequest, completion: @escaping (Result<User, Error>) -> Void) {
+    // 실제 API URL로 바꿔주세요
+    let url = URL(string: "https://api.example.com/users")!
+
+    // URLRequest 생성
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST"
+
+    // HTTPBody에 보낼 데이터를 JSON으로 변환
+    do {
+        let encoder = JSONEncoder()
+        
+        // httpBody 값에 Data를 넣어준다. Data를 만드는 방식은 뭐든 상관 없다.
+        request.httpBody = try encoder.encode(user)
+    } catch {
+        completion(.failure(error))
+        return
+    }
+
+    // URLSession 생성
+    let session = URLSession.shared
+
+    // 데이터 태스크를 사용하여 POST 요청을 보냅니다
+    let task = session.dataTask(with: request) { data, response, error in
+        // 에러 체크
+        if let error = error {
+            completion(.failure(error))
+            return
+        }
+
+        // 데이터가 있는지 확인
+        guard let data = data else {
+            completion(.failure(NSError(domain: "com.example.app", code: -1, userInfo: nil)))
+            return
+        }
+
+        // Codable을 사용하여 데이터를 파싱합니다
+        do {
+            let decoder = JSONDecoder()
+            let user = try decoder.decode(User.self, from: data)
+            completion(.success(user))
+        } catch {
+            completion(.failure(error))
+        }
+    }
+
+    // 데이터 태스크 시작
+    task.resume()
+}
+
+```
+
+
+** 통신 완료시 데이터 가공처리 **
+`session.dataTask(with:)메서드` 내부 구현하기
+
+가공이 완료되면 Completion 에 담아준다. 
+
+```swift
+
+    let task = session.dataTask(with: request) { data, response, error in
+        // 에러 체크
+        if let error = error {
+            completion(.failure(error))
+            return
+        }
+
+        // 데이터가 있는지 확인
+        guard let data = data else {
+            completion(.failure(NSError(domain: "com.example.app", code: -1, userInfo: nil)))
+            return
+        }
+
+        // Codable을 사용하여 데이터를 파싱합니다
+        do {
+            let decoder = JSONDecoder()
+            let user = try decoder.decode(User.self, from: data)
+            completion(.success(user))
+        } catch {
+            completion(.failure(error))
+        }
+    }
+
+```
+
+** completion에서 받아 원하는 곳에서 사용 ** 
+
+```swift
+
+// GET 형식인경우
+
+fetchUserData { result in
+    switch result {
+    case .success(let user):
+        // 'user' 객체를 사용합니다 (예: 사용자 데이터로 UI 업데이트)
+        print("사용자 이름: \(user.name), 나이: \(user.age), 이메일: \(user.email)")
+    case .failure(let error):
+        // 에러를 처리합니다 (예: 에러 메시지를 표시)
+        print("사용자 데이터 가져오기 에러: \(error)")
+    }
+}
+
+
+// POST 형식인경우 
+let userToPost = UserRequest(name: "John Doe", age: 30, email: "johndoe@example.com")
+
+postUserData(user: userToPost) { result in
+    switch result {
+    case .success(let user):
+        // 'user' 객체를 사용합니다 (예: 사용자 데이터로 UI 업데이트)
+        print("사용자 이름: \(user.name), 나이: \(user.age), 이메일: \(user.email)")
+    case .failure(let error):
+        // 에러를 처리합니다 (예: 에러 메시지를 표시)
+        print("사용자 데이터 POST 에러: \(error)")
+    }
+}
+
+
+```
+
+
+   
+## API 요청하기
+
+
+### 기본적인 단계
 - 요청 URL 생성
 - URLSession 객체 생성
 - 데이터 요청을 생성
@@ -153,6 +375,9 @@ func fetchPosts() {
 
 ### POST형식
 GET과 달리 Requst바디에 넣을 데이터를 생성해야한다.
+
+httpBody부분에 넣어줄 Data를 생성하는 방법은 상단링크 참고
+- [[TOP]](#순서)
 
 ```swift
 import Foundation
@@ -223,10 +448,11 @@ func createNewUser() {
 
 <br><br><br>
 
-## API응답 처리하기
+## API 응답하기
 응답을 받게 되면 해당 결과 값을 보고 내가 사용할 방식에 맞게 데이터를 처리해줘야한다.  
 
 iOS에서 사용하는 대표적인 처리방법으로는 JSONSerialization을 사용하는 방법, Codable프로토콜을 이용한 방법이 있다.    
+
 한번 살펴보자.  
 
 
@@ -240,7 +466,7 @@ JSON파싱은 `JSONSerialization`클래스를 이용하여 JSON데이터를 파�
 - [TIL: 직렬화(Serialization)란](https://github.com/isGeekCode/TIL/blob/main/ComputerScience/Serialization.md) 
 - [TIL: JSONSerialization으로  직렬화하기](https://github.com/isGeekCode/TIL/blob/main/iOS-Foundation/Foundation_JSONSerialization.md)  
 - [TIL: iOS에서의 직렬화(Serialization하기)](https://github.com/isGeekCode/TIL/blob/main/iOS-Development/iOS_JSONSerializationMethod.md)  
-- [TIL: Codable로 직렬화하기](https://github.com/isGeekCode/TIL/blob/main/iOS-Swift/Codable.md)
+
   
 
 - 장점
@@ -252,7 +478,19 @@ JSON파싱은 `JSONSerialization`클래스를 이용하여 JSON데이터를 파�
     
 <br><br>
 
+### Codable을 사용하는 방법
 
+- [TIL: iOS에서 JSON다루기(2): Decode JSONData](https://github.com/isGeekCode/TIL/blob/main/iOS-Development/iOS_JSONSerialization_Decode.md)
+
+
+- 장점
+    - Codable 프로토콜을 채택한 모델 객체를 정의하면, JSON 데이터를 Swift 객체로 변환하는 코드가 간소화된다.  
+    - 자동으로 키와 프로퍼티 이름을 매핑하므로, JSON 데이터 구조가 복잡하더라도 상대적으로 쉽게 처리할 수 있다.
+    - 코드의 가독성이 높아진다.
+
+- 단점
+- Codable 프로토콜을 사용하려면, 모델 객체에 JSON 데이터와 매칭되는 프로퍼티들을 선언해주어야 한다.
+- 기본적으로 Codable 프로토콜은 사용하기 쉽지만, 커스텀 로직이 필요한 경우에는 일부 구현이 복잡할 수 있다.
 
 <br><br><br>
 
