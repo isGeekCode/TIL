@@ -34,7 +34,7 @@ jobs:
           date_format: '2020 Jan 15:04' # optional, must align to https://golang.org/pkg/time/#Time.Format
 
       - name: Checkout code again
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.5.3
         with:
           fetch-depth: 0
           token: ${{ secrets.TOKEN }}
