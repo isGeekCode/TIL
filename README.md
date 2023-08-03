@@ -8,7 +8,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_300 TILs and counting..._
+_301 TILs and counting..._
 
 ---
 
@@ -16,47 +16,48 @@ _300 TILs and counting..._
 
 - [sample App - 투두리스트](Sample-App-List/sample_000todoList.md) - Mon Jul 31 17:11:44 2023 +0900
 - [sample App - 그림판앱](Sample-App-List/sample_001pictureApp.md) - Mon Jul 31 17:11:44 2023 +0900
-- [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md) - Mon Jul 31 14:56:36 2023 +0900
+- [PNG와 JPG에 대하여](iOS-RelatedImage/png_jpg.md) - Mon Jul 31 14:56:36 2023 +0900
 - [Responder Chain이란](iOS-Development/ResponderChain.md) - Mon Jul 31 14:56:36 2023 +0900
 - [화면캡처 - 특정화면을 이미지로 저장하기](iOS-RelatedImage/imageSave.md) - Mon Jul 31 14:56:36 2023 +0900
 
 ### Categories
 
-- [A_Writing_in_Progress](#a_writing_in_progress)
-- [About-AI](#about-ai)
-- [About-Error](#about-error)
-- [About-IT](#about-it)
-- [CI_CD](#ci_cd)
-- [ComputerScience](#computerscience)
-- [Conference](#conference)
-- [Docs](#docs)
-- [Flutter](#flutter)
-- [Git](#git)
-- [Insight](#insight)
-- [Library](#library)
-- [Mobile-Android](#mobile-android)
-- [Objective-C](#objective-c)
-- [Ruby](#ruby)
-- [Sample-App-List](#sample-app-list)
-- [Self-Review](#self-review)
-- [IOS-AppLaunching](#ios-applaunching)
-- [IOS-AppStore](#ios-appstore)
-- [IOS-Architecture](#ios-architecture)
-- [IOS-Concurrency](#ios-concurrency)
-- [IOS-CustomLogic](#ios-customlogic)
-- [IOS-DataBinding](#ios-databinding)
-- [IOS-Development](#ios-development)
-- [IOS-Environment](#ios-environment)
-- [IOS-Extensions](#ios-extensions)
-- [IOS-Foundation](#ios-foundation)
-- [IOS-Hierachy](#ios-hierachy)
-- [IOS-Integrity](#ios-integrity)
-- [IOS-Networking](#ios-networking)
-- [IOS-RelatedImage](#ios-relatedimage)
-- [IOS-ScreenTransport](#ios-screentransport)
-- [IOS-Swift](#ios-swift)
-- [IOS-SwiftUI](#ios-swiftui)
-- [IOS-UIKit](#ios-uikit)
+- [A_Writing_in_Progress](#A_Writing_in_Progress)
+- [About-AI](#About-AI)
+- [About-Error](#About-Error)
+- [About-IT](#About-IT)
+- [CI_CD](#CI_CD)
+- [ComputerScience](#ComputerScience)
+- [Conference](#Conference)
+- [Docs](#Docs)
+- [Flutter](#Flutter)
+- [Git](#Git)
+- [Insight](#Insight)
+- [Library](#Library)
+- [Mobile-Android](#Mobile-Android)
+- [Objective-C](#Objective-C)
+- [Ruby](#Ruby)
+- [Sample-App-List](#Sample-App-List)
+- [Self-Review](#Self-Review)
+- [ZZZZZ](#ZZZZZ)
+- [iOS-AppLaunching](#iOS-AppLaunching)
+- [iOS-AppStore](#iOS-AppStore)
+- [iOS-Architecture](#iOS-Architecture)
+- [iOS-Concurrency](#iOS-Concurrency)
+- [iOS-CustomLogic](#iOS-CustomLogic)
+- [iOS-DataBinding](#iOS-DataBinding)
+- [iOS-Development](#iOS-Development)
+- [iOS-Environment](#iOS-Environment)
+- [iOS-Extensions](#iOS-Extensions)
+- [iOS-Foundation](#iOS-Foundation)
+- [iOS-Hierachy](#iOS-Hierachy)
+- [iOS-Integrity](#iOS-Integrity)
+- [iOS-Networking](#iOS-Networking)
+- [iOS-RelatedImage](#iOS-RelatedImage)
+- [iOS-ScreenTranport](#iOS-ScreenTranport)
+- [iOS-Swift](#iOS-Swift)
+- [iOS-SwiftUI](#iOS-SwiftUI)
+- [iOS-UIKit](#iOS-UIKit)
 
 ### [A_Writing_in_Progress](#A_Writing_in_Progress)
 - [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md)
@@ -198,6 +199,9 @@ _300 TILs and counting..._
 - [23년 4월 회고 / 5월 목표](Self-Review/review_230428April.md)
 - [23년 5월 회고 / 6월 목표](Self-Review/review_230526May.md)
 - [23년 6월 회고 / 7월 목표](Self-Review/review_230625June.md)
+
+### [ZZZZZ](#ZZZZZ)
+- [test](ZZZZZ/test.md)
 
 ### [iOS-AppLaunching](#iOS-AppLaunching)
 - [앱의 구동에 관하여](iOS-AppLaunching/AppLaunching_About.md)
