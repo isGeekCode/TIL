@@ -1,12 +1,14 @@
-name: Build README
+name: Build and Fix README
+
 on:
   push:
     branches:
       - main
     paths-ignore:
       - README.md
+
 jobs:
-  build:
+  build-and-fix:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
@@ -14,7 +16,9 @@ jobs:
         with:
           # necessary for github-action-til-autoformat-readme
           fetch-depth: 0
+
       - name: Autoformat README
+        id: autoformat
         uses: isGeekCode/github-action-til-autoformat-readme@1.2.1
         with:
           description: |
@@ -29,3 +33,13 @@ jobs:
           list_most_recent: 5 # optional, lists most recent TILS below description
           date_format: '2020 Jan 15:04' # optional, must align to https://golang.org/pkg/time/#Time.Format
 
+      # 추가된 부분: Autoformat 작업의 성공 여부에 따라 Fix 작업을 실행합니다.
+      - name: Fix Readme Links
+        if: steps.autoformat.outcome == 'success'
+        run: |
+          python fix_readme_links.py  # fix_readme_links.py는 위에서 작성한 Python 스크립트 파일의 이름입니다.
+          git config user.name "Your Name"
+          git config user.email "your_email@example.com"
+          git add README.md
+          git commit -m "Fix README links"
+          git push
