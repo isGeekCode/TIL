@@ -37,7 +37,7 @@ jobs:
       - name: Fix Readme Links
         if: steps.autoformat.outcome == 'success'
         run: |
-          python fix_readme_links.py
+          python .github/workflows/fix_readme_links.py
           git config user.name "isgeekcode"
           git config user.email "ptuguitar@gmail.com"
           git add README.md
