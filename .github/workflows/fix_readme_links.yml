@@ -1,4 +1,4 @@
-name: Fix README Links
+name: Trigger Repository A Workflow
 
 on:
   push:
@@ -6,20 +6,13 @@ on:
       - main
 
 jobs:
-  fix_links:
+  trigger_repository_a_workflow:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repo
-        uses: actions/checkout@v3.5.3
-
-      - name: Run Python Script
-        if: "contains(github.event.head_commit.message, 'Updated README')"
+      - name: Trigger Repository A Workflow
         run: |
-          python .github/workflows/fix_readme_links.py
-          git diff
-          git config user.name "isGeekCode"
-          git config user.email "ptuguitar@naver.com"
-          git add README.md
-          git commit -m "Fix README links"  -a || exit 0
-          git push
-
+          curl -X POST \
+            -H "Authorization: token YOUR_GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/OWNER_A/REPO_A/actions/workflows/WORKFLOW_A/dispatches \
+            -d '{"ref": "main"}'
