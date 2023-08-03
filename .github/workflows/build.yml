@@ -8,7 +8,7 @@ on:
       - README.md
 
 jobs:
-  build-and-fix:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
@@ -37,9 +37,9 @@ jobs:
       - name: Fix Readme Links
         if: steps.autoformat.outcome == 'success'
         run: |
-          python fix_readme_links.py  # fix_readme_links.py는 위에서 작성한 Python 스크립트 파일의 이름입니다.
-          git config user.name "Your Name"
-          git config user.email "your_email@example.com"
+          python fix_readme_links.py
+          git config user.name "isgeekcode"
+          git config user.email "ptuguitar@gmail.com"
           git add README.md
           git commit -m "Fix README links"
           git push
