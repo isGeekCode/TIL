@@ -8,7 +8,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_299 TILs and counting..._
+_300 TILs and counting..._
 
 ---
 
@@ -246,7 +246,7 @@ _299 TILs and counting..._
 - [로컬라이징](iOS-Development/Localization.md)
 - [Responder Chain이란](iOS-Development/ResponderChain.md)
 - [AudioToolbox - 롱프레스와 햅틱진동 구현하기 (Feat.Long press)](iOS-Development/Third_AudioToolBox_HapticAndLongpress.md)
-- [iOS에서 직렬화하기 : iOS JSONSerialization](iOS-Development/iOS_JSONSerializationMethod.md)
+- [iOS에서 JSON다루기(1): Encode JSONData](iOS-Development/iOS_JSONSerialization_Encode.md)
 - [IOS에 있어서 Caching](iOS-Development/ios_caching.md)
 
 ### [iOS-Environment](#iOS-Environment)
@@ -273,6 +273,7 @@ _299 TILs and counting..._
 - [FileManager - 파일 다운로드하기](iOS-Foundation/FileManager_fileDownload.md)
 - [FileManager - 사용하기](iOS-Foundation/FileManager_introduce.md)
 - [Foundation - JSONSerialization 직렬화하기](iOS-Foundation/Foundation_JSONSerialization.md)
+- [String Protocol - String to Data](iOS-Foundation/StringProtocol_stringToData.md)
 - [타임스탬프 구현하기](iOS-Foundation/TIL220914_TimeStamp.md)
 - [CMTime](iOS-Foundation/cmtime.md)
 
