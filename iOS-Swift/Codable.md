@@ -1,4 +1,4 @@
-# Codable
+# Swift - Codable 다루기
 
 Serialize / Deserialize
 
@@ -13,7 +13,7 @@ Codable은 Serialize / Deserialize 과 대응하는 Encodable / Decodable을 가
 
 아래와 같은 구조의 JSON을 만들기 위해서는 구조체 혹은 클래스로 형성된 모델이 필요하다.
 
-```bash
+```swift
 {   "name" : "Park",   "age" : "100"}
 ```
 
@@ -52,7 +52,7 @@ struct Person : Codable {
 
 ## 상위계층
 
-만약 여러개의 모델을 한꺼번에 사용한다면 상위계층이 필요할 것이다. 각각 Person객체가 들어간 구조를 추가한다면 아래와 같다.
+만약 여러개의 모델을 한꺼번에 사용한다면 상위계층이 만들어야 할때가 있다. 각각 Person객체가 들어간 구조를 추가한다면 아래와 같다.
 
 ### struct일경우
 
