@@ -29,3 +29,14 @@ jobs:
           list_most_recent: 5 # optional, lists most recent TILS below description
           date_format: '2020 Jan 15:04' # optional, must align to https://golang.org/pkg/time/#Time.Format
 
+      # Autoformat 작업 이후에 실행되도록 함
+      - name: Run Python Script
+        if: steps.autoformat.outcome == 'success'
+        run: |
+          python .github/workflows/fix_readme_links.py
+          git diff
+          git config user.name "isGeekCode"
+          git config user.email "ptuguitar@naver.com"
+          git add README.md
+          git commit -m "Fix README links" -a || exit 0
+          git push
