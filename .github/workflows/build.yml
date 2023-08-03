@@ -38,10 +38,9 @@ jobs:
         if: steps.autoformat.outcome == 'success'
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-        run: |
-            python .github/workflows/fix_readme_links.py
-            git config user.name "isgeekcode"
-            git config user.email "ptuguitar@naver.com"
-            git add README.md
-            git commit -m "Fix README links"
-            git push
+        run: python .github/workflows/fix_readme_links.py && \
+             git config user.name "isgeekcode" && \
+             git config user.email "ptuguitar@naver.com" && \
+             git add README.md && \
+             git commit -m "Fix README links" && \
+             git push
