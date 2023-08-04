@@ -1,6 +1,6 @@
-# UIKit으로 구현된 화면에 SwiftUI View를 추가하기
+# UIKit으로 구현된 화면에 SwiftUI View를 추가하기 : UIHostingController
 
-이 글은 SwiftUI의 UIHostingController 사용법을 설명한 글이다. 
+> 이 글은 SwiftUI의 UIHostingController 사용법을 설명한 글이다. 
 
 viewController가 있다고 가정하자.
 
@@ -171,10 +171,10 @@ struct MyViewControllerWrapper_Previews: PreviewProvider {
 ```
 
 
-### 제약조건 더 추가한 예제
+### 제약조건을 더 추가한 예제
+이건 위 사례에 hostingController를 앵커로 잡아서 UILabel을 추가한 사례이다. 
 
-
-```
+```swift
 import UIKit
 import SwiftUI
 
@@ -254,7 +254,7 @@ struct MyViewControllerWrapper_Previews: PreviewProvider {
 ```
   
   
-### Preview 모습
+### 실행화면
 
 <img width="500" alt="스크린샷 2023-08-04 오후 2 21 25" src="https://github.com/isGeekCode/TIL/assets/76529148/cd9307c5-371d-49a4-a69a-c8a4c732e41d">
 
@@ -402,3 +402,7 @@ struct MyViewControllerWrapper_Previews: PreviewProvider {
     }
 }
 ```
+
+
+## History
+- 230804: 초안작성
