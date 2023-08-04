@@ -8,7 +8,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_305 TILs and counting..._
+_306 TILs and counting..._
 
 ---
 
@@ -335,6 +335,7 @@ _305 TILs and counting..._
 - [화면전환 - UITabBarController 이해하기](iOS-ScreenTranport/tabbarController.md)
 
 ### [iOS-Swift](#ios-swift)
+- [](iOS-Swift/Attribute_frozen.md)
 - [Swift - Codable 다루기](iOS-Swift/Codable.md)
 - [Do - Try - Catch](iOS-Swift/DoTryCatch.md)
 - [Swift문법 기초](iOS-Swift/Swift1.md)
