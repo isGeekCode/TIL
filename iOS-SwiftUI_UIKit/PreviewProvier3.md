@@ -1,4 +1,10 @@
-# UIKit에서 SwiftUI의 Preview를 사용하는 방법
+# UIKit에서 SwiftUI의 Preview관련 함수 만들어 사용하기
+
+개념이 헷갈릴 수 있으니 [TIL : UIKit에서 SwiftUI의 Preview 사용하기](https://github.com/isGeekCode/TIL/blob/main/iOS-SwiftUI_UIKit/PreviewProvier.md) 이 글을 먼저 읽는 것을 추천한다.  
+그 글이 가장 쉽고 단순한 방법이다. 
+
+<br>
+<br>
 
 앱개발을 하는 중 UI작업을 할 때, 시각적으로 확인을 해야하는 경우가 생긴다. 물론 소규모의 앱이나 작업에서는 매번 빌드하는 것이 나쁘지않지만,
 
