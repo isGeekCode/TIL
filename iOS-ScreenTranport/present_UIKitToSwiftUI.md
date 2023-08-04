@@ -9,6 +9,7 @@ UIHostingController를 사용하면 UIKit내부에서 SwiftUI를 ViewController�
 
 이 글에서 다룰 내용은 아래와 같다.
 
+## 순서
 - [1. UIKit에서 SwiftUI를 present하기](#UIKit에서-SwiftUI를-present하기)
 - [2. SwiftUI dismiss하기](#SwiftUI-dismiss하기)
     - [2.1. 클로저로 dismiss하기](#클로저로-dismiss하기)
@@ -19,6 +20,12 @@ UIHostingController를 사용하면 UIKit내부에서 SwiftUI를 ViewController�
 모두 동일한 결과 화면을 보인다.  
 
 <img width="300" alt="ezgif-5-a9cfe89f2d" src="https://github.com/isGeekCode/TIL/assets/76529148/5916aa41-6746-4bb4-b94f-542898e63460">
+
+<br>
+
+- [[TOP]](#순서)
+
+<br><br><br>
 
 
 ## UIKit에서 SwiftUI를 present하기
@@ -101,7 +108,11 @@ struct MyViewControllerWrapper_Previews: PreviewProvider {
 
 ```
     
+<br>
 
+- [[TOP]](#순서)
+
+<br><br><br>
 
 
 ## SwiftUI dismiss하기
@@ -190,6 +201,11 @@ struct MyViewControllerWrapper_Previews: PreviewProvider {
 
 ```
 
+<br>
+
+- [[TOP]](#순서)
+
+<br><br><br>
 
 ### delegate함수를 이용해 dismiss하기
 
@@ -197,7 +213,7 @@ struct MyViewControllerWrapper_Previews: PreviewProvider {
 
   
 
-```
+```swift
 // 프로토콜 생성
 protocol SwiftUIViewDelegate: AnyObject {
     // 생성한 SwiftUI View를 닫기위한 방법
@@ -266,6 +282,11 @@ struct SwiftUIView: View {
 
 ```
 
+<br>
+
+- [[TOP]](#순서)
+
+<br><br><br>
 
 ### SwiftUI presentationMode를 이용해 dismiss하기
 
@@ -323,6 +344,11 @@ SwiftUIView가 present된 상태에서 모달을 닫기 위해 사용되는 환�
 
 presentationMode 속성을 사용하여 모달을 닫기 위해 `self.presentationMode.wrappedValue.dismiss()`를 호출한다.  
 
+<br>
+
+- [[TOP]](#순서)
+
+<br><br><br>
 
 ## History
 - 230804: 초안작성
