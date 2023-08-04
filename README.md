@@ -8,7 +8,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_304 TILs and counting..._
+_305 TILs and counting..._
 
 ---
 
@@ -16,8 +16,8 @@ _304 TILs and counting..._
 
 - [sample App - 투두리스트](Sample-App-List/sample_000todoList.md) - Mon Jul 31 17:11:44 2023 +0900
 - [sample App - 그림판앱](Sample-App-List/sample_001pictureApp.md) - Mon Jul 31 17:11:44 2023 +0900
-- [PNG와 JPG에 대하여](iOS-RelatedImage/png_jpg.md) - Mon Jul 31 14:56:36 2023 +0900
 - [Responder Chain이란](iOS-Development/ResponderChain.md) - Mon Jul 31 14:56:36 2023 +0900
+- [PNG와 JPG에 대하여](iOS-RelatedImage/png_jpg.md) - Mon Jul 31 14:56:36 2023 +0900
 - [화면캡처 - 특정화면을 이미지로 저장하기](iOS-RelatedImage/imageSave.md) - Mon Jul 31 14:56:36 2023 +0900
 
 ### Categories
@@ -98,6 +98,7 @@ _304 TILs and counting..._
 ### [Algorithm](#algorithm)
 - [알고리즘이란](Algorithm/About_Algorithm.md)
 - [알고리즘 - 선택정렬 : Selection Sort](Algorithm/algorithm00_selectionSort.md)
+- [알고리즘 - 버블정렬 : Bubble Sort(작성중)](Algorithm/algorithm01_bubbleSort.md)
 
 ### [CI_CD](#ci_cd)
 - [CI/CD - GitHub Action 사용하기 : 초기 구현하기](CI_CD/GithubAction_A_tutorial00.md)
