@@ -390,7 +390,7 @@ _310 TILs and counting..._
 - [UIKit에서 SwiftUI의 Preview관련 함수 만들어 사용하기](iOS-SwiftUI_UIKit/PreviewProvier3.md)
 
 ### [iOS-UIKit](#ios-uikit)
-- [UIKit이란(작성중)](iOS-UIKit/About_UIKit.md)
+- [Apple Document - About App Development with UIKit](iOS-UIKit/About_UIKit.md)
 - [Container ViewController Type - Navigation Controller](iOS-UIKit/Container_ViewController_NavigationController.md)
 - [Gesture Recognizer - Long Press](iOS-UIKit/GestureRecognizer_LongPress.md)
 - [Layout - 오토레이아웃의 개념](iOS-UIKit/Layout_About_AutoLayout.md)
