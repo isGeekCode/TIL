@@ -1,4 +1,4 @@
-# AVPlayer 사용하기
+# AVFoundation - AVPlayer 사용하기
 
 Avplayer는 AVfoundation 을 import하여 사용한다. 
 
