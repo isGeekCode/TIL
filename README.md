@@ -8,7 +8,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_311 TILs and counting..._
+_312 TILs and counting..._
 
 ---
 
@@ -275,7 +275,8 @@ _311 TILs and counting..._
 - [UIKit에서 SwiftUI처럼 만들어 사용하기](iOS-Extensions/UIKitLikeSwiftUI.md)
 
 ### [iOS-Foundation](#ios-foundation)
-- [AVPlayer 사용하기](iOS-Foundation/AboutAVPlayer.md)
+- [AVFoundation - TTS : Text-To-Speech](iOS-Foundation/AVFoundation_AVSpeechSynthesizer.md)
+- [AVFoundation - AVPlayer 사용하기](iOS-Foundation/AboutAVPlayer.md)
 - [userDefault](iOS-Foundation/AboutUserDefualt.md)
 - [Calendar - 캘린더로 두 개의 날짜 비교하기](iOS-Foundation/Calendar_getDateInterval.md)
 - [FileManager - 파일 다운로드하기](iOS-Foundation/FileManager_fileDownload.md)
