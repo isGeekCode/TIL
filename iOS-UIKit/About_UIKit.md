@@ -19,6 +19,8 @@ UIKit은 SwiftUI와도 원활한 작동이 가능해서 두 프레임워크간 �
 > 예를 들어, UIKit 뷰와 뷰 컨트롤러를 SwiftUI 뷰 안에 배치할 수 있으며 그 반대도 가능하다.
 - [TIL: UIKit으로 구현된 화면에 SwiftUI View를 추가하기](https://github.com/isGeekCode/TIL/blob/main/iOS-SwiftUI_UIKit/PreviewProvider_UIHostingController.md)
  
+<br><br>
+
 
 ## 특히 기억해야할것
 UIKit을 설명하는 공식문서에 아래와 같이 나와있다.  
@@ -35,9 +37,9 @@ that involve manipulating your app’s user interface in any way.
 
 오직 앱의 Main Thread나 Main Dispatch queue를 사용하라는 말이다. 
 
-특히 UIResponder에서 파생되거나 앱의 사용자 인터페이스 조작과 관련된 클래스는 엄격히 `Main Thread`에서 사용해야한다. 
+특히 UIResponder에서 파생되거나 앱의 사용자 인터페이스 조작과 관련된 클래스는 엄격히 `Main Thread`에서 사용해야한다.  
 
-
+<br><br>
 
 ## UIKit App의 코드구조
 
@@ -69,9 +71,11 @@ UIKit 앱의 구조는 객체가 목적에 따라 분할되는 MVC(Model-View-Co
 - Controller
 ViewController와 Application Delegate는 Data 개체와 UIKit의 View 간의 데이터 교환을 컨트롤한다.  
   
-<img width="600" alt="ff7aa08f-4857-44ce-88d5-7dacbef84509" src="https://github.com/isGeekCode/TIL/assets/76529148/81fe0c63-c11f-4199-a59b-427bbc024136">
+<br>
+  
+<img width="600" alt="ff7aa08f-4857-44ce-88d5-7dacbef84509" src="https://github.com/isGeekCode/TIL/assets/76529148/81fe0c63-c11f-4199-a59b-427bbc024136">  
 
-<br>  
+<br><br>
 
 UIKit과 Foundation 프레임워크는 앱의 모델 개체를 정의하는 데 필요한 기본 타입들을 제공한다.  
 
