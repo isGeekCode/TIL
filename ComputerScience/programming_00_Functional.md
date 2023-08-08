@@ -6,7 +6,7 @@
 
 
 
-서론 : 기존의 교육
+## 서론 : 기존의 교육
 
 - Immutable Data
 - First Class Functions
@@ -19,13 +19,16 @@
 - Parallelization
 - Lazy Evaluation
 
-
+<br><br>
 
 ### Immutable Data
 불변의 데이터를 만들고 바꾸지말아라. 그러면 병행처리에 도움이 된다.
 ```SWIFT
 let foo = "bar"
 ```
+
+<br><br>
+
 ### 순수함수
 같은 input에 대해서 동일한 output을 가져오는 함수를 말한다.
 
@@ -37,6 +40,8 @@ func Log(_name: String) {
     print("Hello: \(name))
 }
 ```
+
+<br><br>
 
 ### 1급객체로 취급
 함수 자체를 받을 수 있다.
@@ -51,6 +56,8 @@ func  twice() -> (Int) -> Int {
 
 
 ```
+
+<br><br>
 
 ### 평가를 뒤로 늦출 수 있다.
 
@@ -79,6 +86,9 @@ Log(heavyJob)
 
 ```
 
+
+<br><br>
+
 ### 고차함수
 
 ```swift
@@ -95,10 +105,13 @@ func LazyLog(_ message: () -> String {
 ```
 우리가 자주 사용하는데 이미.. 하고 있는건가?
 
-FP에서는 필요해 따라( 효율을 위해) 재귀함수를 사용하기도 한다.
 
+<br><br>
 
 ### Recursing : Tail Call Optimization
+
+FP에서는 필요해 따라( 효율을 위해) 재귀함수를 사용하기도 한다.
+
 
 ```swift
 func sum(_ numbers: [Int]) -> Int {
@@ -109,6 +122,8 @@ func sum(_ numbers: [Int]) -> Int {
     return head + sum(rest) 
 }
 ```
+
+<br><br>
 
 ###  Currying
 
@@ -146,28 +161,38 @@ print(double(15)) // 출력: 30
 print(double(20)) // 출력: 40
 ```
 
+<br><br><br>
 
 보통 이정도만 설명하고 이런게 함수형 프로그래밍이라고 말하고 입문이 끝난다.
 
-Language Features
+그러면 위에서 알아본 이 개념들을 나열하고 타이틀을 적어보자.
+
+<br><br>
+
+- Language Features
 어떻게 할수 있는게 없다. 언어의 기능이다.
-- Immutable Data
-- First Class Functions
-- Tail Call Optimization
+    - Immutable Data
+    - First Class Functions
+    - Tail Call Optimization
 
-Programming Techniques
+-  Programming Techniques
 FP가 아니더라도 쓸 수 있는 프로그래밍 기법이다.
-- Pure Function
-- Higher-Order Function
-- Recursing, Currying
+    - Pure Function
+    - Higher-Order Function
+    - Recursing, Currying
 
-Advantages of FP
+- Advantages of FP
 이것들은 위에 있는 것들을 사용하다보면 얻을 수 있는 이득이다.
-- Parallelization : 병행처리
-- Lazy Evaluation : 늦은 평가
+    - Parallelization : 병행처리
+    - Lazy Evaluation : 늦은 평가
 
-그렇다면 저걸 다하면 FP를 하는 것인가?
+그렇다면 저걸 다하면 FP를 할 줄 아는 것인가?
 
+<br><br>
+
+---
+
+<br><br>
 
 ## What is Functional Programming
  
@@ -177,6 +202,8 @@ Advantages of FP
 - Declarative Programming
 
 위 세가지 요소를 한 단어로 표현하려면 본질은 `No Side-Effect` 이다.
+
+<br><br>
 
 ### Function: 함수를 사용한다는 것
 기존에 사용하는 것은 object에 그가 소유하고있는 메소드를 호출하는 방식으로 사용했다.
@@ -191,6 +218,8 @@ user.logic()
 deposit(account)
 user(User)
 ```
+
+<br><br>
 
 ### No Side-Effect: Mudularzation / Stateless
 
@@ -212,7 +241,9 @@ Object하나가 스스로 State를 가지고 있다는 뜻이 된다.
 - Object
     - State : 멤버변수
     - Method() : 메서드
-    
+
+<br><br>
+
 2. FP
 함수는 Input과 Output이 있고,
 그 Input에 대한 Output이 서로 연결되어서 
@@ -232,12 +263,16 @@ Object하나가 스스로 State를 가지고 있다는 뜻이 된다.
     - 어떤 경우 하나에 대해서만 정확하게 나오는지에 대해서만 확인하면된다. 
     - 검증된 Function으로 구성된 프로그램은 잘 돌아갈 것이다. 
 
+<br>
+
 > 결국 차이점은 State의 유무이다. 
 
 State가 없도록 프로그래밍하는 것이 FP의 본질이고,
 
 그걸 Side-Effect가 없다고 표현할 수 있다.
 
+
+<br><br>
 
 ## Imperative VS Declarative 
 
@@ -256,6 +291,7 @@ moveForward()
 gotIt()
 ```
 
+<br><br><br>
 
 ## 예제: FizzBuzz
 
@@ -280,6 +316,8 @@ while i <= 100 {
 - 선언형으로 
   
   
+  <br><br>
+  
 ### 사이드이펙트 없애기
 여기선 i = 1 이라는 State를 가지고 있다. 이거부터 없애보자. 
 ```swift
@@ -296,6 +334,7 @@ while i <= 100 {
 }
 ```
  
+ <br><br>
  
 ### 함수를 이용하기
 그다음 함수형프로그래밍이니까 함수를 사용해보자.
