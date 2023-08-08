@@ -1,9 +1,5 @@
-함수형 프로그래밍이란
+# 프로그래밍 패러다임 - 함수형 프로그래밍(FP)
 - [](https://www.youtube.com/watch?v=HZkqMiwT-5A&t=2s/)
-
-
-
-
 
 
 ## 서론 : 기존의 교육
@@ -410,7 +406,8 @@ let output = { print($0) }
 기술이라기 보단 개념에 대한 용어다.
 뭔가를 하나로 감쌌다는 개념이다. 
 Swift의 대표적인 모나드는 Optional이다. 
-옵셔널은 value가 있거나 null이거나 두가지의 상태를 가지고 있는데 Optional이라는 하나로 감쌌다.
+옵셔널은 value가 있거나 null이거나 두가지의 상태를 가지고 있는데  Optional이라는 하나로 감쌌다.
+
 
 ```swift
 func + (_ s1: String?, _ s2: String?) -> (String?) {
@@ -419,32 +416,150 @@ func + (_ s1: String?, _ s2: String?) -> (String?) {
     if s1 == nil, s2 != nil { return s2 }
     return s1! + s2!
 
-let fizz = { $0 % 3 == 0 ? "fizz" : "" }
-let buzz = { $0 % 5 == 0 ? "buzz" : "" }
+// 이부분에 옵셔널이라는 개념을 도입하여 (nil Coalescing) 값이 있으면, 없으면 이라는 로직으로 수정되었다. 간단해졌다. 
+let fizz = { $0 % 3 == 0 ? "fizz" : nil }
+let buzz = { $0 % 5 == 0 ? "buzz" : nil }
 
 let fizzBuzz = { i in fizz(i) + buzz(i) ?? "\(i)" }
 let output = { print($0 ?? "") }
+(1...100).map(fizzBuzz).forEach(output)
 
 }
 
 ```
 
+<br>
+
+이번엔 "\(i)" 문자열 처리를 하는것도 수정해보자.
+
 ```swift
+func + (_ s1: String?, _ s2: String?) -> (String?) {
+    if s1 == nil, s2 == nil { return nil }
+    if s1 != nil, s2 == nil { return s1 }
+    if s1 == nil, s2 != nil { return s2 }
+    return s1! + s2!
+    
+// 문자열 처리 함수 추가
+let i2s: (Int) -> String = { "\(i)" }
+
+let fizz = { $0 % 3 == 0 ? "fizz" : nil }
+let buzz = { $0 % 5 == 0 ? "buzz" : nil }
+let fizzBuzz = { i in fizz(i) + buzz(i) ?? i2s(i) }
+let output = { print($0 ?? "") }
+
+(1...100).map(fizzBuzz).forEach(output)
+
+```
+
+이번엔 for문을 돌리는 것도 수정해보자
+
+앞에서는 어레이를 받았고, 뒤에는 함수를 하나 받는 메서드를 만들었다. 
+
+i가 들어가면 fizzBuzz에 i가 들어가서 나온 걸 output의 파라미터로 들어가는 것이다. 
+```swift
+func iterate<A>(_ arr: [A], _ f: ((A) -> ())) {
+    arr.forEach({ f($0) })
+}
+
+iterate(Array(1...100), { i in output(fizzBuzz(i)) })
+```
+
+근데 이렇게 되면 우리가 읽을땐 output이 있고 fizzBuzz가 있는데,
+
+실제는 fizzBuzz가 먼저 수행되고 그게 output에 들어가기 때문에 이걸 바꿔보자.
+
+pipe라는 함수를 만들어서 A -> B, B -> C 두함수를 주면 A -> C 함수를 만들어주는 합성함수를 만들어주는 메서드다.
+
+```swift
+func pipe <A, B, C>(_ f: @escaping (A) -> B,
+                    _ g: @escaping (B) -> C) -> (A) -> C {
+    return { a in g(f(a)) }
+}
+
+iterate(Array(1...100), pipe(fizzBuzz, output)
+```
+
+한번더..
+
+pipe라는 이름을 ~> 로 바꿨다.
+
+```swift
+precedencegroup Action {
+    associativity: left
+}
+infix operator ~>: Action
+
+func ~> <A, B, C>(_ f: @escaping (A) -> B,
+                  _ g: @escaping (B) -> C) -> (A) -> C {
+    return { a in g(f(a)) }
+}
+
+iterate(Array(1...100), fizzBuzz ~> output)
+
 ```
 
 
-```swift
-```
-
-
-```swift
-```
-
+마지막..
+첫글자를 대문자로 만들어주는 함수를 만들었다.
 
 ```swift
+let cap: (String?) -> String? = { $0.capitalized }
+
+iterate(Array(1...100), fizzBuzz ~> cap ~> output)
+
+// iterate(Array(1...100), pipe(pipe(fizzBuzz, cap), output))
+
 ```
 
-History
+결국은 실제 처리하는 구현체는 아래 4줄이다.
+실제 fizzbuzz에 관련된 함수는 아래 4줄 뿐이다. 
+
+실제 구현체는 아래 한줄이다
+구현체는 선언형으로 이루어져있다.
+
+```swift
+precedencegroup Action {
+    associativity: left
+}
+infix operator ~>: Action
+
+func ~> <A, B, C>(_ f: @escaping (A) -> B,
+                  _ g: @escaping (B) -> C) -> (A) -> C {
+    return { a in g(f(a)) }
+}
+
+func + (_ s1: String?, _ s2: String?) -> (String?) {
+    if s1 == nil, s2 == nil { return nil }
+    if s1 != nil, s2 == nil { return s1 }
+    if s1 == nil, s2 != nil { return s2 }
+    return s1! + s2!
+    
+func iterate<A>(_ arr: [A], _ f: ((A) -> ())) {
+    arr.forEach({ f($0) })
+}
+
+let i2s: (Int) -> String = { "\(i)" }
+let cap: (String?) -> String? = { $0.capitalized }
+let output = { print($0 ?? "") }
+
+
+// -----------------------------------------
+
+let fizz = { $0 % 3 == 0 ? "fizz" : nil }
+let buzz = { $0 % 5 == 0 ? "buzz" : nil }
+let fizzBuzz = { i in fizz(i) + buzz(i) ?? i2s(i) }
+
+iterate(Array(1...100), fizzBuzz ~> cap ~> output)
+
+```
+
+위에 있는 나머지 로직들은 제네릭으로 이루어져있기도 하다.
+그러면 여기 나머지 로직들을 모아서 나중에 재사용이 가능하다. 
+
+아주작은 단위로 만든 함수는 버그가 생길 확률이 적다.
+
+
+## History
 - 230807: 초안작성
-
+- 230808: 구현부 추가
 
