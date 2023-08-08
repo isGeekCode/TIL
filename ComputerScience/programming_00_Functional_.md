@@ -169,23 +169,24 @@ print(double(20)) // 출력: 40
 
 <br><br>
 
-- Language Features
+- Language Features →  
 어떻게 할수 있는게 없다. 언어의 기능이다.
     - Immutable Data
     - First Class Functions
     - Tail Call Optimization
 
--  Programming Techniques
+-  Programming Techniques → 
 FP가 아니더라도 쓸 수 있는 프로그래밍 기법이다.
     - Pure Function
     - Higher-Order Function
     - Recursing, Currying
 
-- Advantages of FP
+- Advantages of FP → 
 이것들은 위에 있는 것들을 사용하다보면 얻을 수 있는 이득이다.
     - Parallelization : 병행처리
     - Lazy Evaluation : 늦은 평가
-
+  
+  
 그렇다면 저걸 다하면 FP를 할 줄 아는 것인가?
 
 <br><br>
@@ -201,11 +202,11 @@ FP가 아니더라도 쓸 수 있는 프로그래밍 기법이다.
 - No Side-Effect
 - Declarative Programming
 
-위 세가지 요소를 한 단어로 표현하려면 본질은 `No Side-Effect` 이다.
+위 세가지 요소를 한 단어로 표현하는 본질은 `No Side-Effect` 이다.
 
 <br><br>
 
-### Function: 함수를 사용한다는 것
+### 📌 Function : 함수를 사용한다는 것
 기존에 사용하는 것은 object에 그가 소유하고있는 메소드를 호출하는 방식으로 사용했다.
 
 그런데 FP는 함수를 먼저 쓰고 데이터를 집어 넣는 느낌이라고 보면된다. 
@@ -221,7 +222,7 @@ user(User)
 
 <br><br>
 
-### No Side-Effect: Mudularzation / Stateless
+### 📌 No Side-Effect : Mudularzation / Stateless
 
 1. OOP
 
@@ -274,7 +275,7 @@ State가 없도록 프로그래밍하는 것이 FP의 본질이고,
 
 <br><br>
 
-## Imperative VS Declarative 
+## 📌 Imperative VS Declarative 
 
 - 명령형 : HOW
 어떻게 원하는 결과를 얻어낼지 과정을 프로그래밍 
@@ -310,7 +311,7 @@ while i <= 100 {
     i += 1
 }
 ```
-위와 같은 코드가 있다. 이걸 FP로변형해보자
+위와 같은 코드가 있다. 이걸 FP로변형해보자. 아까 강조했던 FP의 3개 키워드를 다시 보자.
 - 함수이용
 - 사이드이펙없고
 - 선언형으로 
@@ -333,12 +334,18 @@ while i <= 100 {
     }
 }
 ```
- 
+이렇게 수정하면 외부에 있던 변수가 사라져서 외부의 i가 다른 값이 들어올 수가 없다.   
+
+
  <br><br>
  
 ### 함수를 이용하기
 그다음 함수형프로그래밍이니까 함수를 사용해보자.
 fizz와 buzz를 확인하는 함수를 만들자.
+
+fizz와 buzz라는 문자열을 리턴하는 함수이다.  
+하지만 여전히 구현부는 명령형으로 만들어져있다.
+
  
 ```swift
 let fizz: (Int) -> String = { i in i % 3 == 0 ? "fizz" : "" }
@@ -351,13 +358,91 @@ let buzz: (Int) -> String = { i in i % 5 == 0 ? "buzz" : "" }
 }
 ```
 
+함수 2개를 새로 생성
+- 출력하는 함수 생성
+- fizz buzz 비교했던 부분을 함수로 분리
+
+과정은 모르지만 원하는 것은 이거다.
+`(1...100).map(fizzBuzz).forEach(log)`
+
 
 ```swift
+let fizz: (Int) -> String = { i in i % 3 == 0 ? "fizz" : "" }
+let buzz: (Int) -> String = { i in i % 5 == 0 ? "buzz" : "" }
+
+let fizzBuzz: (Int) -> String = { i in { s in s.isEmpty ? "\(i)" : s }(fizz(i) + buzz(i)) }
+
+let log: (String) ->  () = { print($0) }
+
+// 프로그램
+(1...100).map(fizzBuzz).forEach(log)
+
+/*
+// fizzBuzz부분 개행처리
+let fizzBuzz: (Int) -> String = { i in
+    { s in
+        s.isEmpty ? "\(i)" : s
+    } (fizz(i) + buzz(i))
+}
+*/
+```
+
+
+좀더 코드를 정리해보자.
+타입이 명확한 부분은 타입추론을 할 수가 있기 때문에 생략가능하다.
+ ```swift
+let fizz = { $0 % 3 == 0 ? "fizz" : "" }
+let buzz = { $0 % 5 == 0 ? "buzz" : "" }
+
+let fizzBuzz = 
+    { i in { s in s.isEmpty ? "\(i)" : s }(fizz(i) + buzz(i)) }
+
+let output = { print($0) }
+
+// 프로그램
+(1...100).map(fizzBuzz).forEach(output)
+
+```
+
+- One more Step
+
+### Monade
+기술이라기 보단 개념에 대한 용어다.
+뭔가를 하나로 감쌌다는 개념이다. 
+Swift의 대표적인 모나드는 Optional이다. 
+옵셔널은 value가 있거나 null이거나 두가지의 상태를 가지고 있는데 Optional이라는 하나로 감쌌다.
+
+```swift
+func + (_ s1: String?, _ s2: String?) -> (String?) {
+    if s1 == nil, s2 == nil { return nil }
+    if s1 != nil, s2 == nil { return s1 }
+    if s1 == nil, s2 != nil { return s2 }
+    return s1! + s2!
+
+let fizz = { $0 % 3 == 0 ? "fizz" : "" }
+let buzz = { $0 % 5 == 0 ? "buzz" : "" }
+
+let fizzBuzz = { i in fizz(i) + buzz(i) ?? "\(i)" }
+let output = { print($0 ?? "") }
+
+}
+
 ```
 
 ```swift
 ```
 
+
+```swift
+```
+
+
+```swift
+```
+
+
+```swift
+```
 
 History
 - 230807: 초안작성
