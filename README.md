@@ -8,7 +8,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_316 TILs and counting..._
+_317 TILs and counting..._
 
 ---
 
@@ -437,6 +437,7 @@ _316 TILs and counting..._
 - [NSObject_UIResponder_UIView_UITableViewCell : ContentView](iOS-UIKit/NSObject_UIResponder_UIView_UITableViewCell_ContentView.md)
 - [NSObject_UIResponder_UIView_UITableViewCell : accessoryType](iOS-UIKit/NSObject_UIResponder_UIView_UITableViewCell_Delegate_AccessoryType.md)
 - [NSObject_UIResponder_UIView_UIActivityIndicatorView : 사용법](iOS-UIKit/NsObject_UIResponder_UIView_UIActivityIndicatorView.md)
+- [UIKit에서 RootViewController 찾기](iOS-UIKit/SearchingRootVC.md)
 - [UIApplication_AppDelegate - 헷갈릴수 있는 두 함수(didReceive형제)](iOS-UIKit/UIApplication_AppDelegate-DifferenceNotification.md)
 - [UIApplication_AppDelegate - 탭바컨트롤러 / 네비게이션컨트롤러 / 기본적인 ios 앱의 계층구조](iOS-UIKit/UIApplication_AppDelegate_AppLifeCycle.md)
 - [UIApplication_AppDelegate - userNotificationCenter](iOS-UIKit/UIApplication_AppDelegate_userNotificationCenter.md)
