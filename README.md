@@ -122,7 +122,7 @@ _315 TILs and counting..._
 - [OSI 7 Layer - 1.5 여러 컴퓨터간 통신](ComputerScience/osi_7layer_011_internet.md)
 - [OSI 7 Layer - 2. Data Link Layer(데이터 링크 계층)](ComputerScience/osi_7layer_020.DataLink.md)
 - [OSI 7 Layer - 3. Network Layer(네트워크 계층)](ComputerScience/osi_7layer_030.Network.md)
-- [함수형 프로그래밍이란](ComputerScience/programming_00_Functional_.md)
+- [프로그래밍 패러다임 - 함수형 프로그래밍(FP)](ComputerScience/programming_00_Functional_.md)
 - [FP - 모나드 이해하기](ComputerScience/programming_00_Functional_Monade.md)
 - [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
