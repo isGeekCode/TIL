@@ -9,7 +9,8 @@
 iOS앱이 실행될 때, 앱의 중앙에서 제어하기위한 지점이다.
 
 ```SWIFT
-class UIApplication : UIResponder
+@available(iOS 2.0, *)
+@MainActor open class UIApplication : UIResponder {
 ```
 
 ---
