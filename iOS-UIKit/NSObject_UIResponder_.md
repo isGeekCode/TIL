@@ -218,8 +218,10 @@ override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 > Button은 특별하게도 `override touchesBegan()`메서드를 구현하면  
 > 내부에 `super.touchesBegan(touches, with: event)`메서드가 있어야
 > `addTarget`된 메서드가 실행이 된다.  
+
 <br>
 <br>
+
 만약 Button에서 View로 responder를 넘기고 싶다면 버튼의 유저상호작용을 false로 처리하면된다.  
 ```swift
 button.isUserInteractionEnabled  = false

@@ -1,4 +1,4 @@
-# [Apple Document] - UIApplicationMain
+# [Apple Document] - UIApplicationMain(::::)
 
 
 - [Apple Doc : UIApplicationMain(::::)](https://developer.apple.com/documentation/uikit/1622933-uiapplicationmain)
