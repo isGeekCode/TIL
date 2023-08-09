@@ -8,7 +8,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_315 TILs and counting..._
+_316 TILs and counting..._
 
 ---
 
@@ -394,8 +394,9 @@ _315 TILs and counting..._
 - [UIKit에서 SwiftUI의 Preview관련 함수 만들어 사용하기](iOS-SwiftUI_UIKit/PreviewProvier3.md)
 
 ### [iOS-UIKit](#ios-uikit)
-- [[Apple Document] - UIApplication](iOS-UIKit/About_UIApplication.md)
-- [[Apple Document] - About App Development with UIKit](iOS-UIKit/About_UIKit.md)
+- [[Apple Document] - About App Development with UIKit](iOS-UIKit/About_UIKit_.md)
+- [[Apple Document] - UIApplication](iOS-UIKit/About_UIKit_000UIApplication.md)
+- [[Apple Document] - UIApplicationMain](iOS-UIKit/About_UIKit_001UIApplicationMain.md)
 - [Container ViewController Type - Navigation Controller](iOS-UIKit/Container_ViewController_NavigationController.md)
 - [Gesture Recognizer - Long Press](iOS-UIKit/GestureRecognizer_LongPress.md)
 - [Layout - 오토레이아웃의 개념](iOS-UIKit/Layout_About_AutoLayout.md)
