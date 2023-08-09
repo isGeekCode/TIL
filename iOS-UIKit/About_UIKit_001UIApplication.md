@@ -1,8 +1,8 @@
-# [Apple Document] - UIApplication
+# [Apple Document] - UIApplication 싱글턴 객체
 
 
 ## 참고링크
-- [원문: UIApplication](https://developer.apple.com/documentation/uikit/uiapplication)
+- [Apple Doc : UIApplication객체](https://developer.apple.com/documentation/uikit/uiapplication)
 
 <br><br>
 

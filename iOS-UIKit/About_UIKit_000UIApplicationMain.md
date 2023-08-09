@@ -1,7 +1,7 @@
 # [Apple Document] - UIApplicationMain
 
 
-- [원문 : Apple Document](https://developer.apple.com/documentation/uikit/uiapplicationdelegate)
+- [Apple Doc : UIApplicationMain(::::)](https://developer.apple.com/documentation/uikit/1622933-uiapplicationmain)
 
 <br><br>
 
@@ -9,7 +9,7 @@ UIApplicationMain(::::)은 iOS앱이 시작되기위한 핵심적인 메서드�
 
 이 메서드로 UIApplication 싱글턴 객체와 Delegate객체를 만들고, info.plist에서 필요한 nib 파일을 로드하고 메인 이벤트 루프를 실행시킨다.
 
-아주 예전엔 @UIApplication 이었고, swift 5.3부터 @main이라는 attribute를 통해서 UIApplicationMain(::::)을 호출하고 앱을 실행했다. 
+아주 예전엔 `@UIApplication` 이었고, swift 5.3부터 `@main`이라는 attribute를 통해서  `UIApplicationMain(::::)`을 호출하고 앱을 실행했다. 
 
 이 attribute가 없다면 아래처럼 컴파일 에러가 발생한다.
 
