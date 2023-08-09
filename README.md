@@ -394,7 +394,7 @@ _315 TILs and counting..._
 
 ### [iOS-UIKit](#ios-uikit)
 - [[Apple Document] - About App Development with UIKit](iOS-UIKit/About_UIKit_.md)
-- [[Apple Document] - UIApplicationMain](iOS-UIKit/About_UIKit_000UIApplicationMain.md)
+- [[Apple Document] - UIApplicationMain(::::)](iOS-UIKit/About_UIKit_000UIApplicationMain.md)
 - [[Apple Document] - UIApplication 싱글턴 객체](iOS-UIKit/About_UIKit_001UIApplication.md)
 - [Container ViewController Type - Navigation Controller](iOS-UIKit/Container_ViewController_NavigationController.md)
 - [Gesture Recognizer - Long Press](iOS-UIKit/GestureRecognizer_LongPress.md)
