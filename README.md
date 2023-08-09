@@ -8,14 +8,14 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_317 TILs and counting..._
+_319 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [sample App - 투두리스트](Sample-App-List/sample_000todoList.md) - Mon Jul 31 17:11:44 2023 +0900
 - [sample App - 그림판앱](Sample-App-List/sample_001pictureApp.md) - Mon Jul 31 17:11:44 2023 +0900
+- [sample App - 투두리스트](Sample-App-List/sample_000todoList.md) - Mon Jul 31 17:11:44 2023 +0900
 - [PNG와 JPG에 대하여](iOS-RelatedImage/png_jpg.md) - Mon Jul 31 14:56:36 2023 +0900
 - [화면캡처 - 특정화면을 이미지로 저장하기](iOS-RelatedImage/imageSave.md) - Mon Jul 31 14:56:36 2023 +0900
 - [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md) - Mon Jul 31 14:56:36 2023 +0900
@@ -109,6 +109,7 @@ _317 TILs and counting..._
 ### [ComputerScience](#computerscience)
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
+- [Data Structure - 다양한 데이터 구조, iOS에서 사용하는 데이터 구조](ComputerScience/DataStructure.md)
 - [MVP: Minimum Viable Product](ComputerScience/MVP.md)
 - [직렬화(Serialization)](ComputerScience/Serialization.md)
 - [Terminal 기초 사용법](ComputerScience/Terminal.md)
@@ -396,7 +397,8 @@ _317 TILs and counting..._
 - [[Apple Document] - About App Development with UIKit](iOS-UIKit/About_UIKit_.md)
 - [[Apple Document] - UIApplicationMain(::::)](iOS-UIKit/About_UIKit_000UIApplicationMain.md)
 - [[Apple Document] - UIApplication 싱글턴 객체](iOS-UIKit/About_UIKit_001UIApplication.md)
-- [[Apple Document] - AppDelegate, UIApplicationDelegate](iOS-UIKit/About_UIKit_002UIApplicationDelegate.md)
+- [[Apple Document] - AppDelegate, UIApplicationDelegate 프로토콜](iOS-UIKit/About_UIKit_002UIApplicationDelegate.md)
+- [[Apple Document] - AppDelegate, UIApplicationDelegate](iOS-UIKit/About_UIKit_003AppLifeCycle.md)
 - [Container ViewController Type - Navigation Controller](iOS-UIKit/Container_ViewController_NavigationController.md)
 - [Gesture Recognizer - Long Press](iOS-UIKit/GestureRecognizer_LongPress.md)
 - [Layout - 오토레이아웃의 개념](iOS-UIKit/Layout_About_AutoLayout.md)
