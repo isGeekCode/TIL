@@ -123,10 +123,10 @@ UIApplicationDelegate 객체를 사용하여 이러한 이벤트 대부분을 �
 <br><br>
 
 | Event                             | Description                                                                         | 참고링크             |
-|:----------------------------------|-------------------------------------------------------------------------------------|:------------------:|
-| Memory Warnings                   | 앱이 메모리 사용량이 너무 높을때 수신됩니다. 앱에서 사용하는 메모리 양을 줄인다.                         | - [Responding to memory warnings](https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle/responding_to_memory_warnings) |
-| Protected data becomes<br>available/unavailable       | 사용자가 기기를 잠그거나 잠금 해제할때 수신된다. | - [applicationProtectedDataDidBecomeAvaiable(_:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623044-applicationprotecteddatadidbecom) <br>
-  - [applicationProtectedDataWillBecomeUnavailable(_:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623019-applicationprotecteddatawillbeco) |  
+|:----------------------------------|-------------------------------------------------------------------------------------|:-------------------|
+| Memory Warnings                   | 앱이 메모리 사용량이 너무 높을때 수신된다. 앱에서 사용하는 메모리 양을 줄인다.                          | - [Responding to memory warnings](https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle/responding_to_memory_warnings) |
+| Protected data becomes<br>available/unavailable       | 사용자가 기기를 잠그거나 잠금 해제할때 수신된다. | - [applicationProtectedDataDidBecomeAvaiable(_:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623044-applicationprotecteddatadidbecom)  |
+|                                   |                                                                                     | - [applicationProtectedDataWillBecomeUnavailable(_:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623019-applicationprotecteddatawillbeco) |  
   
 | Handoff Tasks                     | [NSUserActivity](https://developer.apple.com/documentation/foundation/nsuseractivity) 객체를 처리해야 할 때 수신된다.                         | - [application(_:didUpdate:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622963-application) |
 | Time Changes                      | 전화 통신사가 시간 업데이트를 보내는 경우와 같이 여러가지 다른 시간 변경에 대해 수신된다.  | - [applicationSignificantTimeChange(_:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622992-applicationsignificanttimechange) |
