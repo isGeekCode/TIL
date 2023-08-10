@@ -100,16 +100,16 @@ iOS 12이전 버전과 Scene을 지원하지 않는 앱에서 UIKit은 모든 Li
   
 앱 전환을 사용하여 다음 작업을 수행할 수 있다.
 
-- 앱 실행 시, 앱의 데이터 구조와 UI를 초기화합니다. 
-    - [Responding to the Launch of Your App](https://developer.apple.com/documentation/uikit/app_and_environment/responding_to_the_launch_of_your_app) 문서를 참고
-- 앱이 활성화 되었을때 UI구성을 오나료하고 사용자와 상호 작용할 준비를 합니다. 
-    - [Preparing Your UI to Run in the Foreground](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_foreground) 문서를 참고
-- 비활성화되면 데이터를 저장하고 앱 동작을 조용하게 합니다.
-    - [Preparing Your UI to Run in the Background](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background) 문서를 참고하
-- background 상태로 들어가자마자 중요한 작업을 완료하고 가능한 많은 메모리를 확보한 후 앱 스냅샷을 준비합니다.
-    - [Preparing Your UI to Run in the Background](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background) 문서를 참고
-- 종료 시 모든 작업을 즉시 중지하고 공유 리소스를 해제합니다. 
-    - [applicationWillTerminate(:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623111-applicationwillterminate) 문서를 참고
+- 앱 실행 시, 앱의 데이터 구조와 UI를 초기화한다. 
+    - [참고링크 : Responding to the Launch of Your App](https://developer.apple.com/documentation/uikit/app_and_environment/responding_to_the_launch_of_your_app)
+- 앱이 활성화 되었을때 UI구성을 오나료하고 사용자와 상호 작용할 준비한다. 
+    - [참고링크 : Preparing Your UI to Run in the Foreground](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_foreground)
+- 비활성화되면 데이터를 저장하고 앱 동작을 조용하게 한다.
+    - [참고링크 : Preparing Your UI to Run in the Background](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background) 
+- background 상태로 들어가자마자 중요한 작업을 완료하고 가능한 많은 메모리를 확보한 후 앱 스냅샷을 준비한다.
+    - [참고링크 : Preparing Your UI to Run in the Background](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background)
+- 종료 시 모든 작업을 즉시 중지하고 공유 리소스를 해제한다. 
+    - [참고링크 : applicationWillTerminate(:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623111-applicationwillterminate)
 
 <br><br><br>
 
