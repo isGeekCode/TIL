@@ -30,7 +30,10 @@ jobs:
 
       - name: Run Python Script
         run: |
-          python .github/workflows/fix_readme_links.py
+#          python .github/workflows/fix_readme_links.py
+          
+          pip install -r requirements.txt
+          python .github/workflows/update_readme.py
           git diff
           git config user.name "isGeekCode"
           git config user.email "ptuguitar@naver.com"
