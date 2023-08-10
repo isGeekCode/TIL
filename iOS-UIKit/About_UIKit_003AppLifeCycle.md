@@ -136,7 +136,8 @@ UIApplicationDelegate 객체를 사용하여 이러한 이벤트 대부분을 �
     - 전화 통신사가 시간 업데이트를 보내는 경우와 같이 여러가지 다른 시간 변경에 대해 수신된다.  
     - [참고링크 : applicationSignificantTimeChange(_:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622992-applicationsignificanttimechange)
 - Open URLs                         
-    - 앱에서 리소스를 열어야 할 때 수신된다.                                     
+    - 앱에서 리소스를 열어야 할 때 수신된다.
+    - ex: sns 외부 링크를 처리할 때도 이곳에서 수신한다.
     - [참고링크 : application(_:open:options:)](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623112-application)
 
 
