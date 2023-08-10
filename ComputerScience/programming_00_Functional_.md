@@ -557,9 +557,311 @@ iterate(Array(1...100), fizzBuzz ~> cap ~> output)
 그러면 여기 나머지 로직들을 모아서 나중에 재사용이 가능하다. 
 
 아주작은 단위로 만든 함수는 버그가 생길 확률이 적다.
+그래서 함수를 최대한 짧게 만들고 작고 신뢰도가 높은 함수들로 구성하여 만들면 
+결국 신뢰도가 높아진다.   
 
+1. 명령형 : Imperative
+```swift
+var i = 1
+while i <= 100 {
+    if i % 3 == 0 && i % 5 == 0 {
+        print("fizzbuzz")
+    } else if i % 3 == 0 {
+        print("fizz")
+    } else if i % 5 == 0 {
+        print("buzz")
+    } else {
+        print("\(i)")
+    }
+    i += 1
+}
+```
+
+2. 선언형 : Declarative 
+```swift
+let fizz = { $0 % 3 == 0 ? "fizz" : nil }
+let buzz = { $0 % 5 == 0 ? "buzz" : nil }
+let fizzBuzz = { i in fizz(i) + buzz(i) ?? i2s(i) }
+
+iterate(Array(1...100), fizzBuzz ~> cap ~> output)
+```
+
+
+3. 두 유형의 비교
+명령형으로 짠 코드에서는 코드를 읽는 사람이 i값이 어떻게 변하는지 따라가면서 예측해야한다.  
+하지만 선언형으로 쓰인 함수형 코드는 어떤 결과가 나오는지 한줄로 표현이 되어있기 때문에 빠르게 예측이 가능하다.
+
+## 두번째 예제 : UITagView
+
+<br>
+
+<img width="300" alt="IMG_4877" src="https://github.com/isGeekCode/TIL/assets/76529148/08875b2e-613a-4c51-97d3-c7b0289ddabc">
+
+<br><br>
+
+
+위 그림과 같이 화면에 tagView라는 노랑색 배경의 View를 띄우고,   
+
+그 위에 Button을 20개 생성하려고 한다.  각 버튼의 크기는 랜덤하게 생성된다.  
+
+<br><br>
+
+
+```swift
+class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tagView: UITagView = {
+           let v = UITagView()
+            self.view.addSubview(v)
+            v.backgroundColor = .systemYellow
+            v.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                v.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+                v.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+                v.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+                v.heightAnchor.constraint(equalToConstant: 320)
+            ])
+            return v
+        }()
+
+
+        (0..<20).map({ createButton("Button \($0)")}).forEach(tagView.addSubview(_:))
+
+    }
+
+    func createButton(_ title: String) -> UIButton {
+        let button = UIButton()
+        
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: CGFloat(arc4random() % 20 + 10))
+        button.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 4,
+                                                                      leading: 8,
+                                                                      bottom: 4,
+                                                                      trailing: 8)
+
+        button.backgroundColor = .lightGray
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8        
+        return button
+    }
+}
+
+class UITagView: UIView {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let spacing = UIOffset(horizontal: 4, vertical: 4)
+        var currentX: CGFloat = 0
+        var currentY: CGFloat = 0
+        var lineHeight: CGFloat = 0
+        
+        for s in subviews {
+            let size = s.intrinsicContentSize
+            if currentX + size.width > bounds.width {
+                currentX = 0
+                currentY += lineHeight + spacing.vertical
+                lineHeight = 0
+            }
+            s.frame = CGRect(origin: CGPoint(x: currentX, y: currentY), size: size)
+            lineHeight = max(lineHeight, size.height)
+            currentX += size.width + spacing.horizontal
+        }
+    }
+}
+
+```
+
+<br>
+
+위 코드에서는 사실상 중요한 부분이 UITagView 커스텀클래스의 layoutSubviews() 메서드가 관건이다. 
+
+subView들의 사이즈를 얻어서 오른쪽으로 배치하다가 가로길이보다 커지면 다음줄로 넘기는 방식이다. 
+```swift
+let spacing = UIOffset(horizontal: 4, vertical: 4)
+var currentX: CGFloat = 0
+var currentY: CGFloat = 0
+var lineHeight: CGFloat = 0
+
+for s in subviews {
+    let size = s.intrinsicContentSize
+    if currentX + size.width > bounds.width {
+        currentX = 0
+        currentY += lineHeight + spacing.vertical
+        lineHeight = 0
+    }
+    s.frame = CGRect(origin: CGPoint(x: currentX, y: currentY), size: size)
+    lineHeight = max(lineHeight, size.height)
+    currentX += size.width + spacing.horizontal
+}
+
+```
+이걸 함수형으로 고쳐보자. fp에선 함수를 만드는 것으로 시작하는 거기 때문에 함수로 일단 분리해보자.
+
+원래는 subview의 가로길이가 필요했기 때문에 파라미터로 최대사이즈를 받게 했다.
+그리고 forEach라는 고차함수에 함수를 넣었다. 
+그래서 forEach를 통해 리턴되는 것은 View다. 그 View를 subview하는거다. 
+
+원래 subviews를 for문으로 돌렸던걸 덜어냈다. 
+
+
+
+```swift
+class UITagView: UIView {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        let flower = flowLayout(bounds.size) // flower는 함수다.
+        subviews.forEach(flower)
+    }
+    
+    // 함수를 리턴하는 함수
+    func flowLayout(_ container: CGSize) -> (UIView) -> () {
+        let spacing = UIOffset(horizontal: 4, vertical: 4)
+        var current = CGPoint.zero
+        var lineHeight: CGFloat = 0
+
+        return { v in
+            let size = v.intrinsicContentSize
+            if current.x + size.width > container.width {
+                current.x = 0
+                current.y += lineHeight + spacing.vertical
+                lineHeight = 0
+            }
+            v.frame = CGRect(origin: CGPoint(x: current.x, y: current.y), size: size)
+            lineHeight = max(lineHeight, size.height)
+            current.x += size.width + spacing.horizontal
+        }
+    }
+}
+```
+새로 생성한 `func flowLayout(_ container: CGSize) -> (UIView) -> () { }` 
+이 함수를 보면
+
+flowLayout(container:) 의 리턴타입은 `(UIView) -> ()` 으로
+
+이 메서드는 View를 인풋으로 하는 함수를 리턴하는 메서드가 되었다.
+
+이렇게 사용하는 것이 커링이다. 
+
+근데 다시 한번 자세히 살펴보자. 
+```swift
+/* 전체코드
+func flowLayout(_ container: CGSize) -> (UIView) -> () {
+    let spacing = UIOffset(horizontal: 4, vertical: 4)
+    var current = CGPoint.zero
+    var lineHeight: CGFloat = 0
+
+    return { v in
+        let size = v.intrinsicContentSize
+        if current.x + size.width > container.width {
+            current.x = 0
+            current.y += lineHeight + spacing.vertical
+            lineHeight = 0
+        }
+        v.frame = CGRect(origin: CGPoint(x: current.x, y: current.y), size: size)
+        lineHeight = max(lineHeight, size.height)
+        current.x += size.width + spacing.horizontal
+    }
+}
+*/
+
+// 바뀌는 요소만 보기
+func flowLayout(_ container: CGSize) -> (UIView) -> () {
+
+    return { v in
+        // Side - Effect
+        v.frame = CGRect(origin: CGPoint(x: current.x, y: current.y), size: size)
+    }
+}
+
+```
+
+UIView를 파라미터 받는 메서드를 리턴한 flowLayout은 결국 UIView라는 외부 요인에 영향을 받는 메서드인 상태이다. UIView에 따라 frame도 달라지기 때문이다. 이렇게 외부에 따라 매번 달라지면 안된다. 
+그리고 사실 flowLayout이라는 메서드는 위치를 계산하는 역할이지 위치를 직접 바꿔주는 함수는 아니다. 
+그래서 View를 직접 받는것이 아니라 View의 사이즈만 받고 그걸로 계산한 Rect를 리턴하도록 바꿔보자
+위치만 계산하는 메서드로!!
+
+```swift
+class UITagView: UIView {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let flower = flowLayout(bounds.size)
+        subviews.forEach { $0.frame = flower($0.intrinsicContentSize)}
+    }
+    
+    func flowLayout(_ container: CGSize,
+                    _ spacing: UIOffset = UIOffset(horizontal: 4, vertical: 4)) -> (CGSize) -> CGRect {
+        var current = CGPoint.zero
+        var lineHeight: CGFloat = 0
+
+        return { size in
+            if current.x + size.width > container.width {
+                current.x = 0
+                current.y += lineHeight + spacing.vertical
+                lineHeight = 0
+            }
+            
+            defer {
+                lineHeight = max(lineHeight, size.height)
+                current.x += size.width + spacing.horizontal
+            }
+
+            return CGRect(origin: current, size: size)
+        }
+    }
+}
+```
+spacing은 파라미터에 고정값으로 이동했다. 그리고 `let flower = flowLayout(bounds.size)`를 통해 만든  
+
+flower는 `(UIView) -> ()`가 아니라 `(CGSize) -> CGRect` 로 변경되었다.
+그래서 layoutSubviews에서 내부의 subviews들을 forEach 고차함수를 통해 각각의 View인 $0의 frame을 선언해주는 부분으로 수정됐다.    
+
+이 frame에는 flower의 리턴값인 CGRect로 선언해주게 되었다. 
+
+flower의 파라미터는 CGSize이다. View를 뜻하는 $0의 intrinsicContentSize를 파라미터로 넣어주면 올바르게 동작한다. 
+
+```전체코드
+override func layoutSubviews() {
+    super.layoutSubviews()
+    
+    let flower = flowLayout(bounds.size)
+    subviews.forEach { $0.frame = flower($0.intrinsicContentSize)}
+}
+
+func flowLayout(_ container: CGSize,
+                _ spacing: UIOffset = UIOffset(horizontal: 4, vertical: 4)) -> (CGSize) -> CGRect {
+    var current = CGPoint.zero
+    var lineHeight: CGFloat = 0
+
+    return { size in
+        if current.x + size.width > container.width {
+            current.x = 0
+            current.y += lineHeight + spacing.vertical
+            lineHeight = 0
+        }
+        
+        defer {
+            lineHeight = max(lineHeight, size.height)
+            current.x += size.width + spacing.horizontal
+        }
+        return CGRect(origin: current, size: size)
+    }
+}
+
+```
+
+
+
+<br><br><br>
 
 ## History
 - 230807: 초안작성
 - 230808: 구현부 추가
+- 230809: 예시1 추가
+- 230810: 예시2 추가
 
