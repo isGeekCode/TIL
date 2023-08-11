@@ -1,4 +1,4 @@
-# 프로그래밍 패러다임 - 함수형 프로그래밍(FP)
+# 프로그래밍 패러다임 - Functional Programming(함수형 프로그래밍)
 - [](https://www.youtube.com/watch?v=HZkqMiwT-5A&t=2s/)
 
 
@@ -330,10 +330,12 @@ while i <= 100 {
     }
 }
 ```
+
+<br><br>
+
 이렇게 수정하면 외부에 있던 변수가 사라져서 외부의 i가 다른 값이 들어올 수가 없다.   
 
-
- <br><br>
+<br><br>
  
 ### 함수를 이용하기
 그다음 함수형프로그래밍이니까 함수를 사용해보자.
@@ -342,6 +344,7 @@ fizz와 buzz를 확인하는 함수를 만들자.
 fizz와 buzz라는 문자열을 리턴하는 함수이다.  
 하지만 여전히 구현부는 명령형으로 만들어져있다.
 
+ <br><br>
  
 ```swift
 let fizz: (Int) -> String = { i in i % 3 == 0 ? "fizz" : "" }
@@ -353,6 +356,8 @@ let buzz: (Int) -> String = { i in i % 5 == 0 ? "buzz" : "" }
     print(output)
 }
 ```
+
+<br><br>
 
 함수 2개를 새로 생성
 - 출력하는 함수 생성
@@ -383,7 +388,7 @@ let fizzBuzz: (Int) -> String = { i in
 */
 ```
 
-
+<br><br>
 좀더 코드를 정리해보자.
 타입이 명확한 부분은 타입추론을 할 수가 있기 때문에 생략가능하다.
  ```swift
@@ -399,6 +404,8 @@ let output = { print($0) }
 (1...100).map(fizzBuzz).forEach(output)
 
 ```
+
+<br><br>
 
 - One more Step
 
@@ -428,7 +435,7 @@ let output = { print($0 ?? "") }
 
 ```
 
-<br>
+<br><br>
 
 이번엔 "\(i)" 문자열 처리를 하는것도 수정해보자.
 
@@ -450,6 +457,8 @@ let output = { print($0 ?? "") }
 (1...100).map(fizzBuzz).forEach(output)
 
 ```
+
+<br><br>
 
 이번엔 for문을 돌리는 것도 수정해보자
 
@@ -479,6 +488,8 @@ func pipe <A, B, C>(_ f: @escaping (A) -> B,
 iterate(Array(1...100), pipe(fizzBuzz, output)
 ```
 
+<br><br>
+
 한번더..
 
 pipe라는 이름을 ~> 로 바꿨다.
@@ -498,6 +509,7 @@ iterate(Array(1...100), fizzBuzz ~> output)
 
 ```
 
+<br><br>
 
 마지막..
 첫글자를 대문자로 만들어주는 함수를 만들었다.
@@ -510,6 +522,8 @@ iterate(Array(1...100), fizzBuzz ~> cap ~> output)
 // iterate(Array(1...100), pipe(pipe(fizzBuzz, cap), output))
 
 ```
+
+<br><br>
 
 결국은 실제 처리하는 구현체는 아래 4줄이다.
 실제 fizzbuzz에 관련된 함수는 아래 4줄 뿐이다. 
@@ -553,12 +567,16 @@ iterate(Array(1...100), fizzBuzz ~> cap ~> output)
 
 ```
 
+<br><br>
+
 위에 있는 나머지 로직들은 제네릭으로 이루어져있기도 하다.
 그러면 여기 나머지 로직들을 모아서 나중에 재사용이 가능하다. 
 
 아주작은 단위로 만든 함수는 버그가 생길 확률이 적다.
 그래서 함수를 최대한 짧게 만들고 작고 신뢰도가 높은 함수들로 구성하여 만들면 
 결국 신뢰도가 높아진다.   
+
+<br><br>
 
 1. 명령형 : Imperative
 ```swift
@@ -590,6 +608,8 @@ iterate(Array(1...100), fizzBuzz ~> cap ~> output)
 3. 두 유형의 비교
 명령형으로 짠 코드에서는 코드를 읽는 사람이 i값이 어떻게 변하는지 따라가면서 예측해야한다.  
 하지만 선언형으로 쓰인 함수형 코드는 어떤 결과가 나오는지 한줄로 표현이 되어있기 때문에 빠르게 예측이 가능하다.
+
+<br><br><br>
 
 ## 두번째 예제 : UITagView
 
@@ -629,7 +649,6 @@ class ViewController: UIViewController {
 
 
         (0..<20).map({ createButton("Button \($0)")}).forEach(tagView.addSubview(_:))
-
     }
 
     func createButton(_ title: String) -> UIButton {
@@ -675,7 +694,7 @@ class UITagView: UIView {
 
 ```
 
-<br>
+<br><br>
 
 위 코드에서는 사실상 중요한 부분이 UITagView 커스텀클래스의 layoutSubviews() 메서드가 관건이다. 
 
@@ -699,6 +718,9 @@ for s in subviews {
 }
 
 ```
+
+<br><br>
+
 이걸 함수형으로 고쳐보자. fp에선 함수를 만드는 것으로 시작하는 거기 때문에 함수로 일단 분리해보자.
 
 원래는 subview의 가로길이가 필요했기 때문에 파라미터로 최대사이즈를 받게 했다.
@@ -707,7 +729,7 @@ for s in subviews {
 
 원래 subviews를 for문으로 돌렸던걸 덜어냈다. 
 
-
+<br><br>
 
 ```swift
 class UITagView: UIView {
@@ -738,6 +760,9 @@ class UITagView: UIView {
     }
 }
 ```
+
+<br><br>
+
 새로 생성한 `func flowLayout(_ container: CGSize) -> (UIView) -> () { }` 
 이 함수를 보면
 
@@ -748,6 +773,9 @@ flowLayout(container:) 의 리턴타입은 `(UIView) -> ()` 으로
 이렇게 사용하는 것이 커링이다. 
 
 근데 다시 한번 자세히 살펴보자. 
+
+<br><br>
+
 ```swift
 /* 전체코드
 func flowLayout(_ container: CGSize) -> (UIView) -> () {
@@ -780,10 +808,18 @@ func flowLayout(_ container: CGSize) -> (UIView) -> () {
 
 ```
 
-UIView를 파라미터 받는 메서드를 리턴한 flowLayout은 결국 UIView라는 외부 요인에 영향을 받는 메서드인 상태이다. UIView에 따라 frame도 달라지기 때문이다. 이렇게 외부에 따라 매번 달라지면 안된다. 
-그리고 사실 flowLayout이라는 메서드는 위치를 계산하는 역할이지 위치를 직접 바꿔주는 함수는 아니다. 
-그래서 View를 직접 받는것이 아니라 View의 사이즈만 받고 그걸로 계산한 Rect를 리턴하도록 바꿔보자
+<br><br>
+
+UIView를 파라미터 받는 메서드를 리턴한 flowLayout은 결국 UIView라는 외부 요인에 영향을 받는 메서드인 상태이다. 
+
+UIView에 따라 frame도 달라지기 때문이다. 이렇게 외부에 따라 매번 달라지면 안된다.  
+
+그리고 사실 flowLayout이라는 메서드는 위치를 계산하는 역할이지 위치를 직접 바꿔주는 함수는 아니다.  
+
+그래서 View를 직접 받는것이 아니라 View의 사이즈만 받고 그걸로 계산한 Rect를 리턴하도록 바꿔보자  
 위치만 계산하는 메서드로!!
+
+<br><br>
 
 ```swift
 class UITagView: UIView {
@@ -816,6 +852,9 @@ class UITagView: UIView {
     }
 }
 ```
+
+<br><br>
+
 spacing은 파라미터에 고정값으로 이동했다. 그리고 `let flower = flowLayout(bounds.size)`를 통해 만든  
 
 flower는 `(UIView) -> ()`가 아니라 `(CGSize) -> CGRect` 로 변경되었다.
@@ -854,7 +893,6 @@ func flowLayout(_ container: CGSize,
 }
 
 ```
-
 
 
 <br><br><br>

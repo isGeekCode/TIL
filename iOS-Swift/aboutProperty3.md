@@ -7,9 +7,9 @@
 
 **프로퍼티 시리즈**
 
-- [저장프로퍼티(feat.클래스와 구조체) - 프로퍼티(1)](https://github.com/isGeekCode/TIL/blob/main/swift/aboutProperty1.md)
-- [연산프로퍼티(Getter/Setter) - 프로퍼티(2)](https://github.com/isGeekCode/TIL/blob/main/swift/aboutProperty2.md)
-- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](https://github.com/isGeekCode/TIL/blob/main/swift/aboutProperty205.md)
+- [저장프로퍼티(feat.클래스와 구조체) - 프로퍼티(1)](https://github.com/isGeekCode/TIL/blob/main/iOS-Swift/aboutProperty1.md)
+- [연산프로퍼티(Getter/Setter) - 프로퍼티(2)](https://github.com/isGeekCode/TIL/blob/main/iOS-Swift/aboutProperty2.md)
+- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](https://github.com/isGeekCode/TIL/blob/main/iOS-Swift/aboutProperty205.md)
 - **🍊 타입프로퍼티(static) - 프로퍼티(3)**
 
 
