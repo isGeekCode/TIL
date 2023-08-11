@@ -29,9 +29,14 @@
     - 인스턴스화할 수 있고 구체적인 메서드를 가질 수 있는 클래스
     - 정의한 모든 연산에 대한 구현을 가지고 있는 완전한 클래스이다. 
 - 영영 : A class that cannot be instantiated and may have abstract method.
-    - 문장 : The UIView class is a concrete class that you can instantiate and use to display a fixed background color.
 - 반대 : [abstract class](#abstract-class)
 - 연관 : [OOP](#OOP)
+- 출처:
+    - 문장 : The UIView class is a concrete class that you can instantiate and use to display a fixed background color.
+    - 링크 : [UIView](https://developer.apple.com/documentation/uikit/uiview)
+
+
+
 
 ### abstract class
 - 영한 : 추상 클래스
@@ -55,6 +60,29 @@
     - Protocol Oriented Programming
     - 프로토콜 중심의 프로그래밍으로서 확장을 통한 수평 구조로 타입을 확장하는 방식으로 다형성을 구현하는 방식
     - 프로토콜에 정의된 인터페이스를 직접 구현하기 때문에 필요치 않은 프로퍼티나 메서드를 구현하지 않을 수 있다.
-
-
 - 연관 : [OOP](#oop)
+
+### POP
+- 영한 : Protocol 지향 프로그래밍
+    - Protocol Oriented Programming
+    - 프로토콜 중심의 프로그래밍으로서 확장을 통한 수평 구조로 타입을 확장하는 방식으로 다형성을 구현하는 방식
+    - 프로토콜에 정의된 인터페이스를 직접 구현하기 때문에 필요치 않은 프로퍼티나 메서드를 구현하지 않을 수 있다.
+- 연관 : [OOP](#oop)
+
+
+### define your own
+- 영한 : 커스텀하다. 사용자 정의하다.
+- 출처
+    - 문장 : To display labels, images, buttons, and other interface elements commonly found in apps, use the view subclasses that the UIKit framework provides rather than trying to define your own.
+    - 링크 : [UIView](https://developer.apple.com/documentation/uikit/uiview#1652765)
+
+### geometry
+- 영한 : (기계 장치 등의) 외형, 구조, 기하학, 도형, 
+- 출처
+    - 문장 : The frame and bounds properties define the geometry of each view    - 링크 : [UIView](https://developer.apple.com/documentation/uikit/uiview#1652765)
+
+### dimension
+- 영한 : 공간의 크기, (길이·넓이·두께의) 치수
+- 출처
+    - 문장 : The frame and bounds properties define the geometry of each view    - 링크 : [UIView](https://developer.apple.com/documentation/uikit/uiview#1652765)
+
