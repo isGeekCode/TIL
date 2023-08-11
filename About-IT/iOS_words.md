@@ -79,10 +79,12 @@
 ### geometry
 - 영한 : (기계 장치 등의) 외형, 구조, 기하학, 도형, 
 - 출처
-    - 문장 : The frame and bounds properties define the geometry of each view    - 링크 : [UIView](https://developer.apple.com/documentation/uikit/uiview#1652765)
+    - 문장 : The frame and bounds properties define the geometry of each view
+    - 링크 : [UIView](https://developer.apple.com/documentation/uikit/uiview#1652765)
 
 ### dimension
 - 영한 : 공간의 크기, (길이·넓이·두께의) 치수
 - 출처
-    - 문장 : The frame and bounds properties define the geometry of each view    - 링크 : [UIView](https://developer.apple.com/documentation/uikit/uiview#1652765)
+    - 문장 : The bounds property defines the internal dimensions of the view as it sees them, and its use is almost exclusive to custom drawing code.
+    - 링크 : [UIView](https://developer.apple.com/documentation/uikit/uiview#1652765)
 

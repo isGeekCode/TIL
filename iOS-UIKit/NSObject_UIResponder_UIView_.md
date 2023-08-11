@@ -71,22 +71,48 @@ UIView 클래스의 사용 방법에 대한 자세한 내용은 [iOS용 프로�
 
 일반적으로는 View를 생성할 때, 생성하려는 View의 크기와 Superview 위치상의 위치를 지정한다.  
 
-예를 들어, 아래 예제에서는 View를 생성하고 superview의 좌표계에 엤는 점(10,10)에 생성하려는 View의 왼쪽 상단 모서리를 배치한다.  
+예를 들어, 아래 예제에서는 View를 생성하고 superview의 좌표계에 있는 점(10,10)에 생성하려는 View의 왼쪽 상단 모서리를 배치한다.  
 
-<br><br>
+<br>
 
 ```swift
 let rect = CGRect(x: 10, y: 10, width: 100, height: 100)
 let myView = UIView(frame: rect)
 ```
 
-<br><br>
+<br>
 
 다른 View에 subview를 추가하려면, superview에서 [addSubview(_:)](https://developer.apple.com/documentation/uikit/uiview/1622616-addsubview)메서드를 호출하면된다.  
 
 View에 subviews는 원하는 만큼 추가할 수 있고, iOS에서는 문제없이 형제뷰(sibling view)가 서로 겹칠 수 있다.  
 
-   
+`addSubview(_:)`메서드를 호출 할 때마다 새로운 View는 다른 형제View들의 상단에 배치된다.  
+
+[insertSubview(_:aboveSubview:)](https://developer.apple.com/documentation/uikit/uiview/1622570-insertsubview)메서드와  [subview(_:belowSubview:)](https://developer.apple.com/documentation/uikit/uiview/1622598-insertsubview)메서드를 통하여 subview간의 z축상 순서를 지정 수 있다.   
+
+또한 [exchangeSubview(at:withSubviewAt:)](https://developer.apple.com/documentation/uikit/uiview/1622448-exchangesubview)메서드를 사용하여 이미 추가된 subview들간의 위치를 서로 교환할 수 있다.  
+
+뷰를 생성하고나면, 나머지 뷰 계층의 변경에 대응하여 뷰의 크기와 위치가 어떻게 변화하는지를 제어하기 위해 Auto Layout 규칙을 만든다.
+
+자세한 내용은 [Auto Layout 가이드](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html#//apple_ref/doc/uid/TP40010853)를 참고하자. 
+
+
+## Draw views
+
+View 생성은 필요에 따라 발생한다.  
+
+View가 처음 보여질때, 혹은 레이아웃의 변경으로 전체 또는 일부가 보여질 때에 System에서는 View의 Content를 그리길 요청한다.  
+
+UIKit이나 Core Graphics를 사용하는 Custom 컨텐츠가 포함된 View의 경우는, 시스템에서 해당 View의 [draw(_:)](https://developer.apple.com/documentation/uikit/uiview/1622529-draw)메서드를 호출한다.  
+
+
+이 메서드의 구현은 뷰의 내용을 현재의 그래픽 컨텍스트에 그리는 역할을 맡는다. 이 그래픽 컨텍스트는 시스템에 의해 이 메서드를 호출하기 전에 자동으로 설정된다. 
+
+> 개발자가 미리 `draw(_:) 메서드`를 구현하면, 시스템이 해당 메서드를 호출하고 화면에 표시된다. 
+
+
+
+
 
 
 ### var subviews
@@ -98,15 +124,8 @@ UIView와 그 하위 클래스들에서 제공되는 프로퍼티로, 해당 뷰
   
 주로 사용되는 UIView의 서브클래스에서 intrinsicContentSize를 오버라이딩하여 내용물의 크기를 계산하도록 구현할 수 있다. 이렇게 하면 Auto Layout 시스템이 해당 뷰의 크기를 결정할 때 intrinsicContentSize 값을 참고하여 자동으로 크기를 조정할 수 있다.  
 
-`addSubview(_:)`메서드를 호출 할 때마다 새로운 View는 다른 형제View들의 상단에 배치된다.  
-
-[insertSubview(_:aboveSubview:)](https://developer.apple.com/documentation/uikit/uiview/1622570-insertsubview)메서드와  [subview(_:belowSubview:)](https://developer.apple.com/documentation/uikit/uiview/1622598-insertsubview)메서드를 통하여 subview간의 z축상 순서를 지정 수 있다.   
-
-또한 [exchangeSubview(at:withSubviewAt:)](https://developer.apple.com/documentation/uikit/uiview/1622448-exchangesubview)메서드를 사용하여 이미 추가된 subview들간의 위치를 서로 교환할 수 있다.  
-
-뷰를 생성하고나면, 나머지 뷰 계층의 변경에 대응하여 뷰의 크기와 위치가 어떻게 변화하는지를 제어하기 위해 Auto Layout 규칙을 만든다.
-
-자세한 내용은 [Auto Layout 가이드](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html#//apple_ref/doc/uid/TP40010853)를 참고하자. 
+> `draw(_:)` 메서드를 구현할 때에는 성능에 주의해야 하며, 가능하면 최소한의 그림 그리기만 수행하는 것이 좋다.
+> 이유는 이 메서드가 호출될 때마다 해당 View 전체를 다시 그리기 때문에 불필요한 그리기 작업이 많으면 성능 저하가 발생할 수 있기 때문이다.
 
 
 ## History
