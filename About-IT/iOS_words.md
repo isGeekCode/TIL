@@ -88,3 +88,8 @@
     - 문장 : The bounds property defines the internal dimensions of the view as it sees them, and its use is almost exclusive to custom drawing code.
     - 링크 : [UIView](https://developer.apple.com/documentation/uikit/uiview#1652765)
 
+### drive
+- 영한 : 몰다, 제어하다. 
+- 출처
+    - 문장 : You can pause a property-based animator that’s currently running to interrupt the animation and drive it interactively.
+    - 링크 : [UIView](https://developer.apple.com/documentation/uikit/uiview#1652798)
