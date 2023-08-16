@@ -8,7 +8,8 @@ class UIView : UIResponder
 ```
 
 <br><br><br>
-https://github.com/isGeekCode/TIL/tree/main#ios-swiftui
+
+
 ## Overview
 
 뷰는 앱 UI의 기본 구성요소이고, UIView클래스는 모든 View들에 공통되는 동작을 정의한다.  
@@ -97,6 +98,8 @@ View에 subviews는 원하는 만큼 추가할 수 있고, iOS에서는 문제�
 자세한 내용은 [Auto Layout 가이드](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html#//apple_ref/doc/uid/TP40010853)를 참고하자. 
 
 
+<br><br><br>
+
 ## Draw views
 
 View 생성은 필요에 따라 발생한다.  
@@ -106,14 +109,58 @@ View가 처음 보여질때, 혹은 레이아웃의 변경으로 전체 또는 �
 UIKit이나 Core Graphics를 사용하는 Custom 컨텐츠가 포함된 View의 경우는, 시스템에서 해당 View의 [draw(_:)](https://developer.apple.com/documentation/uikit/uiview/1622529-draw)메서드를 호출한다.  
 
 
-이 메서드의 구현은 뷰의 내용을 현재의 그래픽 컨텍스트에 그리는 역할을 맡는다. 이 그래픽 컨텍스트는 시스템에 의해 이 메서드를 호출하기 전에 자동으로 설정된다. 
+이 메서드를 구현하면 뷰의 내용을 현재 graphic context에 그릴 수 있고. 이 그래픽 컨텍스트는 시스템에 의해 이 메서드를 호출하기 전에 자동으로 설정된다.
+
+이로써 뷰의 내용의 정적 시각적 표현이 생성되며, 이것은 화면에 표시될 수 있다.
 
 > 개발자가 미리 `draw(_:) 메서드`를 구현하면, 시스템이 해당 메서드를 호출하고 화면에 표시된다. 
 > `draw(_:)` 메서드를 구현할 때에는 성능에 주의해야 하며, 가능하면 최소한의 그림 그리기만 수행하는 것이 좋다.
 > 이유는 이 메서드가 호출될 때마다 해당 View 전체를 다시 그리기 때문에 불필요한 그리기 작업이 많으면 성능 저하가 발생할 수 있기 때문이다.
 
+뷰의 실제 내용이 변경되면, 해당 뷰를 다시 그려야 함을 시스템에게 알려야 한다.  
+
+이를 위해 뷰의 [setNeedsDisplay()](https://developer.apple.com/documentation/uikit/uiview/1622437-setneedsdisplay) 또는 [setNeedsDisplay(_:)](https://developer.apple.com/documentation/uikit/uiview/1622587-setneedsdisplay) 메서드를 호출해야 한다.  
+
+이러한 메서드는 시스템에게 다음 Drawing Cycle동안 뷰를 업데이트해야 함을 알려준다.  
+
+다음 Drawing Cycle까지 업데이트를 기다리기 때문에, 이러한 메서드를 여러 뷰에 동시에 호출하여 동시에 업데이트할 수 있다.  
 
 
+> 이 메소드를 호출하는 즉시 view의 컨텐츠를 업데이트 하는 것이 아니다.  
+> 다음 드로잉 사이클이 올때까지 기다렸다가 변화된 내용들을 한번에 업데이트 한다.  
+> 따라서 호출하는 시점과 변경되는 시점의 차이가 생긴다.  
+
+
+<br><br><br>
+
+## Animate views
+
+View의 여러 property(속성값)들을 변경하여 애니메이션화할 수 있다.   
+
+즉, 프로퍼티를 변경하면 현재 값에서 시작해 새로 지정한 값에 끝나는 애니메이션을 생성한다. 
+
+아래 UIView 클래스의 프로퍼티들을 통해 애니메이션화할 수 있다.  
+
+- frame
+- bounds
+- center
+- transform
+- alpha
+- backgroundColor 
+
+변경된 내용을 애니메이션 처리하려면,  
+
+[UIViewPropertyAnimator](https://developer.apple.com/documentation/uikit/uiviewpropertyanimator)객체를 만들고, 이 메서드의 handler block을 통해 변경할 View의 프로퍼티를 변경한다.  
+
+`UIViewPropertyAnimator`클래스를 사용하면 애니메이션의 지속시간과 타이밍을 지정할 수 있도록 해준다.  
+
+하지만 실제 애니메이션을 수행하는 것은 이 클래스가 담당한다.  
+
+현재 실행 중인 프로퍼티 기반의 애니메이터를 일시중지해서 애니메이션을 중단하고 상호작용하돌고 제어할 수도 있다.  
+ 
+
+
+ 하지만 실제 애니메이션을 수행하는 것은 이 클래스가 담당합니다. 현재 실행 중인 속성 기반 애니메이터를 일시 중지하여 애니메이션을 중단하고 상호작용적으로 제어할 수도 있습니다. 더 자세한 내용은 UIViewPropertyAnimator를 참조하십시오.
 
 ### var subviews
 
