@@ -193,64 +193,120 @@ UIView는 정말 다양하게 설정 가능한 클래스이기 때문에 커스�
 
 아래 목록에는 UIView 하위클래스에서 고려해볼 수 있는 메서드 목록이 포함되어 있다  
 
+<br><br>
+
 ### Initializaion(초기화)
 - `init(frame:)`
+    - 초기화를 할때는 이 메서드를 구현하는 것이 좋다. 
+    - 또한 이 메소드를 커스텀하여 초기화 메소드를 구현할 수 있다.
 - `init(coder:)`
+    - 스토리보드나 Nib파일을 통해 View를 로드하고, View에 커스텀 init이 필요한 경우 사용하자.
 - `layerClass`
+    - View의 뒤에 다른 Core Animation Layer를 사용하여 배경 공간을 생성할 때 사용한다.
+    - 예를 들어, 스크롤 가능한 넓은 영역을 표시하기 위해 타일링을 사용하는 경우, 이속성을 CATiledLayer클래스로 설정할 수 있다.  
+    - 자세한 내용은 [TIL : Layer에 대하여](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit/NSObject_UIResponder_UIView_layer.md) 참고 
 
-- 상세설명
-    - `init(frame:)`
-        - 초기화를 할때는 이 메서드를 구현하는 것이 좋다. 
-        - 또한 이 메소드를 커스텀하여 초기화 메소드를 구현할 수 있다.
-    - `init(coder:)`
-        - 스토리보드나 Nib파일을 통해 View를 로드하고, View에 커스텀 init이 필요한 경우 사용하자.
-    - `layerClass`
-        - View의 뒤에 다른 Core Animation Layer를 사용하여 배경 공간을 생성할 때 사용한다.
-        - 예를 들어, 스크롤 가능한 넓은 영역을 표시하기 위해 타일링을 사용하는 경우, 이속성을 CATiledLayer클래스로 설정할 수 있다.  
-        - 자세한 내용은 [Layer에 대하여]()참고 
+<br><br>
+
+### Drawing and Printing
 
 
-layerClass - 이 속성을 사용하려면 뷰가 다른 Core Animation 레이어를 사용하여 배경 저장소를 생성하도록 할 때 사용합니다. 예를 들어, 큰 스크롤 가능한 영역을 표시하기 위해 타일링을 사용하는 경우 이 속성을 CATiledLayer 클래스로 설정할 수 있습니다.
+- `draw(_:)`
+    - 이 메서드를 구현하여 뷰가 custom 콘텐츠를 그릴 수 있다.
+    - 만약 커스텀으로 그릴 것이 없다면, 이 메서드를 재정의하지 말자.
 
-그리기와 인쇄:
+- `draw(_:for:)`
+    - 이 메서드는 뷰의 콘텐츠를 printing 중에 다르게 그릴 경우에만 구현한다.
 
-draw(_:) - 이 메서드를 구현하여 뷰가 커스텀 콘텐츠를 그릴 수 있습니다. 만약 뷰가 커스텀 그리기를 하지 않는다면, 이 메서드를 재정의하지 않도록 합니다.
+<br><br>
 
-draw(_:for:) - 이 메서드는 뷰의 콘텐츠를 인쇄 중에 다르게 그릴 경우에만 구현합니다.
+### Layout and Constraints
 
-레이아웃과 제약:
+- `requiresConstraintBasedLayout`
+    - view클래스가 제대로 작동하기 위해 제약조건이 필요한 경우, 이 속성을 사용한다.
 
-requiresConstraintBasedLayout - 이 속성을 사용하려면 뷰 클래스가 제약조건을 정상적으로 사용하려는 경우에 사용합니다.
+- `updateConstraints()` 
+    - 뷰와 하위 뷰 간의 커스텀 제약조건 생성이 필요한 경우, 이 메소드를 사용한다.
 
-updateConstraints() - 이 메서드를 구현하여 서브뷰 간에 커스텀 제약조건을 만들어야 하는 경우에 사용합니다.
+- `alignmentRect(forFrame:)`, `frame(forAlignmentRect:)` 
+    - 여러 뷰에 대한 정렬 방식을 재정의할 수 있다.
 
-alignmentRect(forFrame:), frame(forAlignmentRect:) - 이 메서드를 구현하여 다른 뷰에 대한 정렬 방식을 재정의할 수 있습니다.
+- `didAddSubview(:)`, `willRemoveSubview(:)` 
+    - 하위뷰 추가 및 제거를 추적하려면 이 메서드를 구현한다.
 
-didAddSubview(:), willRemoveSubview(:) - 서브뷰의 추가 및 제거를 추적하는 데 필요한 경우 이 메서드를 구현합니다.
+- `willMove(toSuperview:)`, `didMoveToSuperview()`
+    - 현재 뷰의 계층 구조에서 뷰의 이동을 추적하기 위해 필요한 경우 이 메서드를 구현한다.
 
-willMove(toSuperview:), didMoveToSuperview() - 현재 뷰의 계층 구조에서 뷰의 이동을 추적하기 위해 필요한 경우 이 메서드를 구현합니다.
 
-이벤트 처리:
+<br><br>
 
-gestureRecognizerShouldBegin(_:) - 이 메서드를 구현하여 뷰가 터치 이벤트를 직접 처리하고 연결된 제스처 인식기가 추가 동작을 트리거하는 것을 방지하려는 경우에 사용합니다.
+### Event Handling(이벤트 처리)
 
-touchesBegan(:with:), touchesMoved(:with:), touchesEnded(:with:), touchesCancelled(:with:) - 이 메서드를 구현하여 터치 이벤트를 직접 처리해야 하는 경우에 사용합니다. (제스처 기반 입력의 경우 제스처 인식기를 사용합니다.)
+- `gestureRecognizerShouldBegin(_:)`
+    - 이 메서드를 구현하여 뷰가 터치 이벤트를 직접 처리하고, 연결된 gesture recognizer가 추가 동작을 트리거하는 것을 방지하려는 경우에 구현한다.
 
-위의 내용은 UIView 하위클래스에서 고려해볼 수 있는 메서드들로, 이러한 메서드들을 재정의함으로써 뷰의 동작과 모양을 사용자 정의할 수 있습니다.
+- `touchesBegan(:with:)`, `touchesMoved(:with:)`, `touchesEnded(:with:)`, `touchesCancelled(:with:)` 
+    - 터치 이벤트를 직접 처리해야 하는 경우에 사용한다. (제스처 기반 입력의 경우 gesture recognizer를 사용한다.)
+
+
+
+<br><br>
+
+### Alternatives to Subclassing(이벤트 처리)
+
+많은 뷰 동작들은 서브클래싱 없이도 설정할 수 있다.  
+
+메서드를 override하기 전에 아래 내용을 수정하면 필요한 동작들을 제공할 수 있는지 고려해보자.
+
+
+
+
+- `addConstraint(_:)` 
+    - 뷰와 그 하위 뷰에 대한 Autolayout 동작을 정의한다.
+
+- `autoresizingMask`
+    - 슈퍼뷰의 프레임이 변경될 때 Autolayout 동작을 제공한다.
+    - 이러한 동작은 constraints들과 결합하여 사용할 수 있다.
+
+- `contentMode` 
+    - 뷰의 프레임이 아닌 뷰의 콘텐츠에 대한 레이아웃 동작을 제공한다.
+    - 이 속성은 또한 콘텐츠가 뷰에 맞도록 축소/확대되거나 캐시되거나 다시 그려지는 방식에 영향을 미친다.
+
+- `isHidden` 또는 `alpha `
+    - 뷰 전체의 투명도를 변경한다.
+    
+- `backgroundColor` 
+    - 해당 뷰의 색상을 설정한다.
+
+- `Subviews` 
+    - `draw(_:)`메서드를 사용하여 콘텐츠를 그리는 대신 이미지 및 레이블 서브뷰를 삽입하여 표시하려는 내용을 포함한 image나  albel의 하위 뷰를 포함한다.
+
+- `Gesture recognizers` 
+    - 들어오는 터치 이벤트를 직접 가로채고 처리하기 위해 gesture recognizer를 사용하여 액션을 타겟 객체로 보낼 수 있다.
+
+- `Animations` 
+    - 변경 사항을 직접 애니메이션처리하지 않고 내장된 애니메이션 support를 사용한다. `Core Animation`이 제공하는 애니메이션 지원은 빠르고 쉽게 사용할 수 있다.
+
+- `Image-based backgrounds`
+    - 정적인 콘텐츠를 표시하는 뷰의 경우, 이미지를 직접 그리는 대신 gesture recognizer와 함께 UIImageView 객체를 사용하는 것이 더 좋다.
+    - 또는 일반적인 UIView 객체를 사용하고 이미지를 뷰의 CALayer 객체의 콘텐츠로 할당할 수도 있다.
+
 
 
 
 <br><br><br>
 
-### var subviews
+# TOPIC
+필요한 경우에만 내용 추가중
+
 
 ### var intrinsicContentSize
+
 UIView와 그 하위 클래스들에서 제공되는 프로퍼티로, 해당 뷰의 내용(content)에 기반하여 자동으로 계산된 적절한 크기를 나타낸다. 이 프로퍼티는 주로 뷰의 내용물의 크기가 알려져 있을 때 사용되며, Auto Layout과 같은 레이아웃 시스템에서 뷰의 크기를 결정하는 데 활용된다.  
   
 예를 들어, UILabel이나 UIButton과 같은 뷰들은 내용물의 텍스트나 이미지에 따라 크기가 동적으로 변할 수 있습니다. 이런 경우 intrinsicContentSize를 사용하여 뷰의 내용물에 맞는 적절한 크기를 자동으로 계산할 수 있다.  
   
 주로 사용되는 UIView의 서브클래스에서 intrinsicContentSize를 오버라이딩하여 내용물의 크기를 계산하도록 구현할 수 있다. 이렇게 하면 Auto Layout 시스템이 해당 뷰의 크기를 결정할 때 intrinsicContentSize 값을 참고하여 자동으로 크기를 조정할 수 있다.  
-
 
 
 ## History
