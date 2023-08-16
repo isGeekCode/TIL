@@ -159,8 +159,88 @@ View의 여러 property(속성값)들을 변경하여 애니메이션화할 수 
 현재 실행 중인 프로퍼티 기반의 애니메이터를 일시중지해서 애니메이션을 중단하고 상호작용하돌고 제어할 수도 있다.  
  
 
+<br><br><br>
 
- 하지만 실제 애니메이션을 수행하는 것은 이 클래스가 담당합니다. 현재 실행 중인 속성 기반 애니메이터를 일시 중지하여 애니메이션을 중단하고 상호작용적으로 제어할 수도 있습니다. 더 자세한 내용은 UIViewPropertyAnimator를 참조하십시오.
+## Threading considerations(Threading 고려사항)
+
+앱의 UI(User Interface) 조작은 주 스레드(Main thread)에서 이루어져야 한다.  
+
+따라서 UIView 클래스의 메서드를 호출할 때는 항상 앱의 메인 스레드에서 실행 중인 코드에 호출을 해야한다.  
+
+유일하게 View 객체를 생성하는 경우에만 메인 스레딩을 하지않아도 된다. 
+
+
+<br><br><br>
+
+
+## Subclassing notes(Subclassing 주의 사항)
+
+UIView클래스는 시각적 컨텐츠와 사용자 상호작용이 모두 필요한 상속지점이다.  
+
+UIView를 상속받는 이유는 여러가지가 있지만, 따라서 기본 UIView가 제공하지 않는 것이 있을 때만  UIView를 상속받아 구현하는 것이 좋다. 
+
+
+<br><br><br>
+
+## Methods to Override(Override하는 메서드)
+UIView를 서브클래싱할 때, Override(재정의)해야하는 매서드가 몇개 있고,  
+필요한 경우에만 Override해도 되는 메서드가 있다.  
+
+UIView는 정말 다양하게 설정 가능한 클래스이기 때문에 커스텀 메서드를 재정의하지 않고도, 정교하게 View 동작을 구현하는 다양한 방법이 있다. 
+
+이에 대한 설명은 [Altanatives to subclassing](https://developer.apple.com/documentation/uikit/uiview#1652896) 섹션에서 살펴보자.  
+
+
+아래 목록에는 UIView 하위클래스에서 고려해볼 수 있는 메서드 목록이 포함되어 있다  
+
+### Initializaion(초기화)
+- `init(frame:)`
+- `init(coder:)`
+- `layerClass`
+
+- 상세설명
+    - `init(frame:)`
+        - 초기화를 할때는 이 메서드를 구현하는 것이 좋다. 
+        - 또한 이 메소드를 커스텀하여 초기화 메소드를 구현할 수 있다.
+    - `init(coder:)`
+        - 스토리보드나 Nib파일을 통해 View를 로드하고, View에 커스텀 init이 필요한 경우 사용하자.
+    - `layerClass`
+        - View의 뒤에 다른 Core Animation Layer를 사용하여 배경 공간을 생성할 때 사용한다.
+        - 예를 들어, 스크롤 가능한 넓은 영역을 표시하기 위해 타일링을 사용하는 경우, 이속성을 CATiledLayer클래스로 설정할 수 있다.  
+        - 자세한 내용은 [Layer에 대하여]()참고 
+
+
+layerClass - 이 속성을 사용하려면 뷰가 다른 Core Animation 레이어를 사용하여 배경 저장소를 생성하도록 할 때 사용합니다. 예를 들어, 큰 스크롤 가능한 영역을 표시하기 위해 타일링을 사용하는 경우 이 속성을 CATiledLayer 클래스로 설정할 수 있습니다.
+
+그리기와 인쇄:
+
+draw(_:) - 이 메서드를 구현하여 뷰가 커스텀 콘텐츠를 그릴 수 있습니다. 만약 뷰가 커스텀 그리기를 하지 않는다면, 이 메서드를 재정의하지 않도록 합니다.
+
+draw(_:for:) - 이 메서드는 뷰의 콘텐츠를 인쇄 중에 다르게 그릴 경우에만 구현합니다.
+
+레이아웃과 제약:
+
+requiresConstraintBasedLayout - 이 속성을 사용하려면 뷰 클래스가 제약조건을 정상적으로 사용하려는 경우에 사용합니다.
+
+updateConstraints() - 이 메서드를 구현하여 서브뷰 간에 커스텀 제약조건을 만들어야 하는 경우에 사용합니다.
+
+alignmentRect(forFrame:), frame(forAlignmentRect:) - 이 메서드를 구현하여 다른 뷰에 대한 정렬 방식을 재정의할 수 있습니다.
+
+didAddSubview(:), willRemoveSubview(:) - 서브뷰의 추가 및 제거를 추적하는 데 필요한 경우 이 메서드를 구현합니다.
+
+willMove(toSuperview:), didMoveToSuperview() - 현재 뷰의 계층 구조에서 뷰의 이동을 추적하기 위해 필요한 경우 이 메서드를 구현합니다.
+
+이벤트 처리:
+
+gestureRecognizerShouldBegin(_:) - 이 메서드를 구현하여 뷰가 터치 이벤트를 직접 처리하고 연결된 제스처 인식기가 추가 동작을 트리거하는 것을 방지하려는 경우에 사용합니다.
+
+touchesBegan(:with:), touchesMoved(:with:), touchesEnded(:with:), touchesCancelled(:with:) - 이 메서드를 구현하여 터치 이벤트를 직접 처리해야 하는 경우에 사용합니다. (제스처 기반 입력의 경우 제스처 인식기를 사용합니다.)
+
+위의 내용은 UIView 하위클래스에서 고려해볼 수 있는 메서드들로, 이러한 메서드들을 재정의함으로써 뷰의 동작과 모양을 사용자 정의할 수 있습니다.
+
+
+
+<br><br><br>
 
 ### var subviews
 

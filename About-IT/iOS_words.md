@@ -94,3 +94,16 @@
     - 문장 : You can pause a property-based animator that’s currently running to interrupt the animation and drive it interactively.
     - 링크 : [UIView](https://developer.apple.com/documentation/uikit/uiview#1652798)
 
+
+### configurable
+- 영한 : 설정가능한
+- 출처
+    - 문장 : Because UIView is a highly configurable class, there are also many ways to implement sophisticated view behaviors without overriding custom methods, which are discussed in the Alternatives to Subclassing section. In the meantime, the following list includes the methods you might consider overriding in your UIView subclasses.
+    - 링크 : [UIView](https://developer.apple.com/documentation/uikit/uiview#1652798)
+
+### implement
+- 영한 : 구현하다
+- 출처
+    - 문장 : Because UIView is a highly configurable class, there are also many ways to implement sophisticated view behaviors without overriding custom methods, which are discussed in the Alternatives to Subclassing section. In the meantime, the following list includes the methods you might consider overriding in your UIView subclasses.
+    - 링크 : [UIView](https://developer.apple.com/documentation/uikit/uiview#1652798)
+
