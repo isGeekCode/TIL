@@ -31,7 +31,7 @@ iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지
 ### NavigationController를 이용한 화면이동
 - [TIL : NavigationController는 Container ViewController 타입이다.](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit/Container_ViewController_NavigationController.md)
 - [TIL : 화면전환 - UINavigationController 이해하기](https://github.com/isGeekCode/TIL/blob/main/iOS-ScreenTranport/navigationController.md)
-- [TIL : NSObject_UIBarItem: 네비게이션바, 툴바, 탭바를 표시하는 아이템](https://github.com/isGeekCode/TIL/blob/main/iOS-UIKit/NSObject_UIBarItem.md)
+- [TIL : NSObject_UIBarItem: 네비게이션바, 툴바, 탭바를 표시하는 아이템](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit/NSObject_UIBarItem.md)
 - [TIL : WebView - 네비게이션컨트롤러 목록으로 웹뷰 관리하는 방법](https://github.com/isGeekCode/TIL/blob/main/iOS-Networking/WebView_catchNavigation.md)
 
 
@@ -50,7 +50,7 @@ iOS를 하게 되면 가장 처음엔 하나의 화면으로만 앱을 만들지
 
 
 ## SwiftUI 기반의 화면 전환 방식
-### TabView를 이요한 화면이동
+### TabView를 이용한 화면이동
 - [TIL : Layout - SwiftUI: TabView](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-SwiftUI/Layout_SwiftUI_TabView.md)
 
 
