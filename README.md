@@ -535,47 +535,8 @@ _338 TILs and counting..._
 
 [[top]](#)
 
-[[top]](#)
 
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)
-
-[[top]](#)[About-IT](#About-IT)
+[About-IT](#About-IT)
 - [써드파티(Third party)](About-IT/Third_party.md)
 - [Apple Document Words - 단어장](About-IT/iOS_words.md)
 - [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md)
