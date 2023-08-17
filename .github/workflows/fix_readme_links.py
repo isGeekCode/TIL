@@ -26,34 +26,3 @@ try:
 except Exception as e:
     print("스크립트 실행 중 오류가 발생했습니다:", e)
 
-
-
-# fix_readme_links.py
-
-#import re
-#
-#def fix_readme_links(readme_content):
-#    categories = re.findall(r'###\s*(.*?)\s*', readme_content)  # 카테고리 제목들을 추출
-#
-#    for category in categories:
-#        category_link = category.lower().replace(" ", "-")  # 카테고리 이름을 링크 형식으로 변환
-#        category_link = re.sub(r'[^\w\s-]', '', category_link)  # 비알파벳 문자 제거
-#
-#        # 첫 번째 카테고리 제목 위에 링크를 추가
-#        category_link_section = f"[[top]](#{category_link})"
-#        readme_content = readme_content.replace(f"### {category}", f"### {category}\n\n{category_link_section}", 1)
-#
-#    return readme_content
-#
-#try:
-#    with open("README.md", "r") as file:
-#        readme_content = file.read()
-#
-#    fixed_content = fix_readme_links(readme_content)
-#
-#    with open("README.md", "w") as file:
-#        file.write(fixed_content)
-#
-#    print("README 파일이 성공적으로 수정되었습니다.")
-#except Exception as e:
-#    print("스크립트 실행 중 오류가 발생했습니다:", e)
