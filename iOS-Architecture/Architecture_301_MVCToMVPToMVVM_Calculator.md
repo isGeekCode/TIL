@@ -755,12 +755,252 @@ MVC를 제대로 만드는 경험을 해보자.
 
 <img width="600" alt="스크린샷 2023-08-17 오후 3 00 38" src="https://github.com/isGeekCode/TIL/assets/76529148/50673476-cabc-448b-8f62-9aebc640e60f">
 
+최근에는 위 이미지가 아래처럼 변경되었다.  
+
+<img width="600" alt="스크린샷 2023-08-17 오후 1 57 54" src="https://github.com/isGeekCode/TIL/assets/76529148/44b31f21-be12-4637-ba60-5689b92121d2">
+
+이와 관련해서 스탠퍼드 강좌에서 정말 잘 표현한 그림이 있다.  
+
+<img width="600" alt="스크린샷 2023-08-17 오후 4 00 06" src="https://github.com/isGeekCode/TIL/assets/76529148/38130ea2-8911-4c39-a6a0-d812ee132e40">
+
+위 그림에서 살펴보면 Controller는 중간 다리역할만 한다.  
+
+- View와 Model사이에는 노란색의 중앙선이 있다.
+    - View와 Model은 서로 알 수 없다. 
+- Model과 Controller 사이에 Controlelr쪽만 점선이다.
+    - Model은 Controller를 모른다.
+- View와 Controller 사이에 Controlelr쪽만 점선이다.
+    - View는 Controller를 모른다.
 
 
+## MVP
+MVC가 너무 Massive해진다고 해서 시도한 패턴은 MVP패턴이다.
+ 
+> Model - View - Presenter
 
-그래서 결국 MVVM
+<img width="600" alt="_mvvm_in_practice _017" src="https://github.com/isGeekCode/TIL/assets/76529148/2870e4e2-0261-49f1-b9bd-5df8569e6ece">
+
+MVP는 MVC에서 파생된 패턴이다.  
+
+MVC와 다른점은 Presenter가 로직을 다 가져간다는 것이다.  
+
+아래 도표를 보자.  
+
+<img width="600" alt="[_mvvm_in_practice _018" src="https://github.com/isGeekCode/TIL/assets/76529148/2870e4e2-0261-49f1-b9bd-5df8569e6ece](https://github.com/isGeekCode/TIL/assets/76529148/01efbbc7-3420-467c-b788-6039c842fcb0">
+
+View는 보이는 것처럼 수동적(Passive)이다.  
+
+근데 가만히 보면 Apple이 소개한 cocoa MVC와 비슷하다는 느낌을 받는다.  
+
+하지만 MVC와 MVP의 큰 차이가 있다.  
+
+MVP는 View와 Presenter가 1:1의 관계가 있다. 
+
+Presenter는 View마다 존재하게 되어있다.  
+
+서로를 알고 있다. 손을 맞잡고 있는 형태이다.  
+
+다만 이럴경우, BoilerPlate 코드가 굉장히 많아진다. 
+
+그럼 MVP로 한번 작업해보자. 
+
+Presenter를 생성해보자. 
+
+### Presenter 생성
+
+- 이제 MVC의 Controller 역할을 하던 ViewController는 View취급을 한다. 
+- Model은 Presenter로 이동한다. 
+- Presenter View 1:1 매칭하기
+    - Presenter에는 View가 self로 선언할 옵셔널 변수를 만들고 init 메서드를 구현한다. 
+    - View에서 Presenter를 init 하여 view를 자신으로 선언한다.  
+
+ 
+```swift
+
+// MARK: - PRESENTER
+class Presenter {
+    // Controller역할을 하던 ViewControlelr에서 가져왔다.
+    private let model: Calculator = Calculator()
+    
+    // View가 self로 선언할 변수
+    let view: ViewController?
+    
+    // MARK: Presenter와 View 매칭
+    init(view: ViewController?) {
+        self.view = view
+    }
+}
 
 
+// MARK: - VIEW
+class ViewController: UIViewController {
+    
+    // MARK: Presenter와 View 매칭
+    lazy var presenter: Presenter = Presenter(view: self)
+    // MODEL은 Presenter로 이동
+//    private let model: Calculator = Calculator()
+
+}
+
+```
+
+
+### 프로토콜도 Presenter가 수행한다. 
+
+```swift
+// MARK: - PRESENTER
+
+class Presenter {
+
+    private let model: Calculator = Calculator()
+    let view: ViewController?
+    
+    init(view: ViewController?) {
+        self.view = view
+    }
+}
+
+extension Presenter : CalculatorViewDelegate {
+
+    // MARK: 유저 Input : View -> Presenter
+    func didChangeTokenText(_ calculatorView: CalculatorView, token: String) {
+        // MARK: updates Model : Presenter -> Model
+        model.token = token
+    }
+    
+    // MARK: 유저 Input : View -> Presenter
+    func didChangeInputText(_ calculatorView: CalculatorView, input: String) {
+        
+        // MARK: updates Model & state change events : Presenter -> Model -> Presenter
+        let sum: Int = model.calculate(with: input)
+        // MARK: - updates View : Presenter -> View
+        calculatorView.setResultText(String(describing: sum))
+    }
+}
+
+// MARK: - VIEW
+class ViewController: UIViewController {
+    
+    lazy var presenter: Presenter = Presenter(view: self)
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // MARK: 유저 Input : View -> Presenter
+        calculatorView.delegate = presenter
+}
+```
+
+이렇게 하면 정상 작동한다.  
+
+- 기존의 Model이 갖고있던 비즈니스로직은 그대로 가져간다. 
+- Presenter가 View의 Delegate패턴을 가져간다. 
+    - 변경 전 MVC 동작 : View ~> `Delegate패턴` ~> Controller -> Model 동작
+    - 변경 후 MVP 동작 : View(ViewController) ~> `Delegate패턴` ~> Presenter -> Model
+
+
+### 전체코드
+```
+// MARK: - MODEL
+
+class Calculator {
+    // MARK: 변하는 Value자체를 Model에서 소유
+    var token: String = ""
+    
+    // MARK: Model에 접근하여 Business Logic을 처리할 수 있도록 메서드 구현
+    func calculate(with input: String) -> Int {
+        input.components(separatedBy:CharacterSet(charactersIn: token))
+            .compactMap { Int($0) }
+            .reduce(0, +)
+    }
+}
+
+// MARK: - PRESENTER
+
+class Presenter {
+    
+    private let model: Calculator = Calculator()
+    let view: ViewController?
+    
+    // MARK: Presenter와 View 매칭
+    init(view: ViewController?) {
+        self.view = view
+    }
+}
+
+extension Presenter : CalculatorViewDelegate {
+
+    // MARK: 유저 Input : View -> Presenter
+    func didChangeTokenText(_ calculatorView: CalculatorView, token: String) {
+        // MARK: updates Model : Presenter -> Model
+        model.token = token
+    }
+    
+    // MARK: 유저 Input : View -> Presenter
+    func didChangeInputText(_ calculatorView: CalculatorView, input: String) {
+        
+        // MARK: updates Model & state change events : Presenter -> Model -> Presenter
+        let sum: Int = model.calculate(with: input)
+        // MARK: - updates View : Presenter -> View
+        calculatorView.setResultText(String(describing: sum))
+    }
+}
+
+// MARK: - VIEW
+class ViewController: UIViewController {
+    
+    // MARK: Presenter와 View 매칭
+    lazy var presenter: Presenter = Presenter(view: self)
+
+    private let calculatorView: CalculatorView = CalculatorView(frame: .zero)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // MARK: 유저 Input : View -> Presenter
+        calculatorView.delegate = presenter
+
+        calculatorView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(calculatorView)
+
+        NSLayoutConstraint.activate([
+            calculatorView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            calculatorView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            calculatorView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            calculatorView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+        ])
+    }
+}
+```
+
+## TEST환경
+
+MVC자체가 단점이 없는것은 아니다. 
+
+다만 MVC패턴을 이용할때,  
+
+Model은 테스트하기 어렵지않은데  
+
+Controller를 테스트하기가 정말 어렵다.  
+
+특히 그냥 Controller 말고 ViewController객체에 있어서는 테스트하기가 정말 불리하다.   
+
+MVP의 경우 Presenter는 테스트하기가 정말 용이해지기때문에 TEST환경을 구축할 수 있다.  
+
+그래서 MVP를 선호하는 경향이 있다.  
+
+다만 문제는 View마다 Presenter가 생성되기 때문에 BolierPlate 코드가 많아지게 된다. 
+> 보일러플레이트 코드는 애플리케이션의 핵심 로직과는 직접적인 연관이 없지만 필요한 설정, 초기화, 기본 구조 등을 구현하는 코드를 말한다. 
+
+
+```swift
+```
+```swift
+```
+```swift
+```
+```swift
+```
 ```swift
 ```
 ```swift
