@@ -39,10 +39,9 @@ def fix_readme_links(readme_content):
         category_link = category.lower().replace(" ", "-")  # 카테고리 이름을 링크 형식으로 변환
         category_link = re.sub(r'[^\w\s-]', '', category_link)  # 비알파벳 문자 제거
         
-        # 각 카테고리 제목 위에 링크를 추가
+        # 첫 번째 카테고리 제목 위에 링크를 추가
         category_link_section = f"[[top]](#{category_link})"
-        category_heading = f"### {category}\n\n{category_link_section}"
-        readme_content = readme_content.replace(f"### {category}", category_heading)
+        readme_content = readme_content.replace(f"### {category}", f"### {category}\n\n{category_link_section}", 1)
     
     return readme_content
 
