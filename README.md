@@ -8,17 +8,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_334 TILs and counting..._
+_336 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [GCD - performSelector를 이용한 비동기 작업](iOS-Concurrency/performSelector.md) - Wed Aug 16 17:03:07 2023 +0900
-- [GCD - OperationQueue를 이용한 비동기 작업](iOS-Concurrency/operationQueue.md) - Wed Aug 16 17:03:07 2023 +0900
-- [[Apple Document] - About the app launch sequence : 앱의 실행되는 순서에 관하여](iOS-Framework-UIKit/About_UIKit_005AppLaunchSequnce.md) - Wed Aug 16 16:12:23 2023 +0900
-- [UIView - Layer란 무엇인가(작성중)](iOS-Framework-UIKit/NSObject_UIResponder_UIView_layer.md) - Wed Aug 16 10:38:58 2023 +0900
-- [Core Animation 프레임워크(작성중)](iOS-Framework-CoreAnimation/About_CA_000_.md) - Wed Aug 16 10:31:07 2023 +0900
+- [Attribute - @frozen](iOS-Swift/Attribute_frozen.md) - Thu Aug 17 09:44:13 2023 +0900
+- [](iOS-Architecture/MVCToMVPToMVVM_Calculator.md) - Thu Aug 17 09:44:13 2023 +0900
+- [Swift - Range 함수 사용하기](iOS-Swift/swift_range.md) - Thu Aug 17 09:44:13 2023 +0900
+- [Swift - Mirror 사용하기](iOS-Swift/swift_mirror.md) - Thu Aug 17 09:44:13 2023 +0900
+- [Swift - 키워드 inout](iOS-Swift/swift_keywordInout.md) - Thu Aug 17 09:44:13 2023 +0900
 
 ### Categories
 
@@ -50,7 +50,6 @@ _334 TILs and counting..._
 - [iOS-Foundation](#ios-foundation)
 - [iOS-Framework-CoreAnimation](#ios-framework-coreanimation)
 - [iOS-Framework-Objective-C](#ios-framework-objective-c)
-- [iOS-Framework-Swift](#ios-framework-swift)
 - [iOS-Framework-SwiftUI](#ios-framework-swiftui)
 - [iOS-Framework-SwiftUI_UIKit](#ios-framework-swiftui_uikit)
 - [iOS-Framework-UIKit](#ios-framework-uikit)
@@ -60,6 +59,7 @@ _334 TILs and counting..._
 - [iOS-Networking](#ios-networking)
 - [iOS-RelatedImage](#ios-relatedimage)
 - [iOS-ScreenTranport](#ios-screentranport)
+- [iOS-Swift](#ios-swift)
 
 ### [A_Writing_in_Progress](#a_writing_in_progress)
 - [[Apple Documentation Archive] Auto Layout Guide(작성중)](A_Writing_in_Progress/Devpedia_AutolayoutGuide.md)
@@ -216,6 +216,7 @@ _334 TILs and counting..._
 - [Cocoa Design Pattern - Delegate 델리게이트 패턴](iOS-Architecture/CocoaDesignPattern_Delegate.md)
 - [Cocoa Design Pattern - Observer 옵저버 패턴](iOS-Architecture/CocoaDesignPattern_Observer.md)
 - [Cocoa Design Pattern - Singleton (싱글톤 패턴)](iOS-Architecture/CocoaDesignPattern_Singleton.md)
+- [](iOS-Architecture/MVCToMVPToMVVM_Calculator.md)
 - [MVC to MVVM : 01. UTC 오늘, 현재, 내일 시간보기](iOS-Architecture/MVCToMVVM_01_UTC.md)
 - [MVC to MVVM : 02. TableVC 클릭시 텍스트 변경](iOS-Architecture/MVCToMVVM_02_Task.md)
 - [Architecture - IOS MVC의 한계](iOS-Architecture/MVC_Massive.md)
@@ -286,43 +287,6 @@ _334 TILs and counting..._
 - [Objc - 라이브러리 : 직접 파일삽입된 라이브러리 제거작업](iOS-Framework-Objective-C/Objc_DeleteFramework.md)
 - [Objc - 로그찍기](iOS-Framework-Objective-C/Objc_Log.md)
 - [Objc - c언어와 objective-c의 차이, 발전](iOS-Framework-Objective-C/TIL220421_aboutObjectiveC.md)
-
-### [iOS-Framework-Swift](#ios-framework-swift)
-- [Swift](iOS-Framework-Swift/About_Swift.md)
-- [Attribute - @frozen](iOS-Framework-Swift/Attribute_frozen.md)
-- [Swift - Codable 다루기](iOS-Framework-Swift/Codable.md)
-- [Do - Try - Catch](iOS-Framework-Swift/DoTryCatch.md)
-- [Swift문법 기초](iOS-Framework-Swift/Swift1.md)
-- [random함수를 이용해 Random한 숫자 뽑아내기](iOS-Framework-Swift/Swift_random_in_array.md)
-- [안전하게 배열에 접근하는 방법](iOS-Framework-Swift/TIL220310_contactArraySafely.md)
-- [[Common Method] 로그 관련 함수](iOS-Framework-Swift/TIL220318_aboutLogMethod.md)
-- [# 여러개의 Action을 한번에 추가하기](iOS-Framework-Swift/TIL220404_forEach.md)
-- [mutating 과 구조체](iOS-Framework-Swift/TIL220413_mutating.md)
-- [텍스트인코딩에 관하여](iOS-Framework-Swift/TIL220517_aboutTextEncoding.md)
-- [배열안에 담긴 url 유효성 검사](iOS-Framework-Swift/TIL220520_aboutCheckArrayComponent.md)
-- [이미지의 형태](iOS-Framework-Swift/TIL220915_KindsOfImageFormats.md)
-- [Xcode 디버깅으로 변수변화 캐치하기](iOS-Framework-Swift/TIL221026_howToDebugging.md)
-- [Special Literal](iOS-Framework-Swift/TIL_220527_specialLiteral.md)
-- [Understanding Closures in Swift : 클로저 톺아보기](iOS-Framework-Swift/UnderstandingClosures.md)
-- [enum 사용법](iOS-Framework-Swift/aboutEnum.md)
-- [저장프로퍼티 - 프로퍼티(1)](iOS-Framework-Swift/aboutProperty1.md)
-- [연산프로퍼티 - 프로퍼티(2)](iOS-Framework-Swift/aboutProperty2.md)
-- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](iOS-Framework-Swift/aboutProperty205.md)
-- [타입프로퍼티(static) - 프로퍼티(3)](iOS-Framework-Swift/aboutProperty3.md)
-- [Array - 빠르게 **빈 배열 만들기**](iOS-Framework-Swift/array_fastInit.md)
-- [파일경로 String으로에서 확장자 추출하기](iOS-Framework-Swift/bringToExtensionName.md)
-- [고차함수 - Higher Order Function : Map, Filter, Reduce, Sort, FlatMap](iOS-Framework-Swift/higherOrderFuction.md)
-- [Splite과 Component](iOS-Framework-Swift/splite_component_map.md)
-- [Swift - 스위프트에서 사용하는 패턴들](iOS-Framework-Swift/swift_a_swift_patterns.md)
-- [case let : for case let 익숙해지기](iOS-Framework-Swift/swift_caseLet_for.md)
-- [Switch case let, If case let, guard case let](iOS-Framework-Swift/swift_caseLet_switch_if_guard.md)
-- [Closure 톺아보기](iOS-Framework-Swift/swift_firstClassClosureMaster.md)
-- [1급 객체](iOS-Framework-Swift/swift_firstClassObject.md)
-- [Swift - 키워드 defer](iOS-Framework-Swift/swift_keywordDefer.md)
-- [Swift - 키워드 inout](iOS-Framework-Swift/swift_keywordInout.md)
-- [Swift - Mirror 사용하기](iOS-Framework-Swift/swift_mirror.md)
-- [Swift - Range 함수 사용하기](iOS-Framework-Swift/swift_range.md)
-- [Array의 특정값을 포함한 IndexPath찾고 값 바꾸기](iOS-Framework-Swift/swift_replacingArrayIndexValue..md)
 
 ### [iOS-Framework-SwiftUI](#ios-framework-swiftui)
 - [Layout - SwiftUI: Color](iOS-Framework-SwiftUI/Layout_SwiftUI_Color.md)
@@ -470,6 +434,44 @@ _334 TILs and counting..._
 - [present - UIKit to SwiftUI](iOS-ScreenTranport/present_UIKitToSwiftUI.md)
 - [Segue를 이용한 화면이동](iOS-ScreenTranport/segue.md)
 - [화면전환 - UITabBarController 이해하기](iOS-ScreenTranport/tabbarController.md)
+
+### [iOS-Swift](#ios-swift)
+- [Swift](iOS-Swift/About_Swift000Intro_.md)
+- [Attribute - @frozen](iOS-Swift/Attribute_frozen.md)
+- [Swift - Codable 다루기](iOS-Swift/Codable.md)
+- [Do - Try - Catch](iOS-Swift/DoTryCatch.md)
+- [Swift문법 기초](iOS-Swift/Swift1.md)
+- [random함수를 이용해 Random한 숫자 뽑아내기](iOS-Swift/Swift_random_in_array.md)
+- [안전하게 배열에 접근하는 방법](iOS-Swift/TIL220310_contactArraySafely.md)
+- [[Common Method] 로그 관련 함수](iOS-Swift/TIL220318_aboutLogMethod.md)
+- [# 여러개의 Action을 한번에 추가하기](iOS-Swift/TIL220404_forEach.md)
+- [mutating 과 구조체](iOS-Swift/TIL220413_mutating.md)
+- [텍스트인코딩에 관하여](iOS-Swift/TIL220517_aboutTextEncoding.md)
+- [배열안에 담긴 url 유효성 검사](iOS-Swift/TIL220520_aboutCheckArrayComponent.md)
+- [이미지의 형태](iOS-Swift/TIL220915_KindsOfImageFormats.md)
+- [Xcode 디버깅으로 변수변화 캐치하기](iOS-Swift/TIL221026_howToDebugging.md)
+- [Special Literal](iOS-Swift/TIL_220527_specialLiteral.md)
+- [Understanding Closures in Swift : 클로저 톺아보기](iOS-Swift/UnderstandingClosures.md)
+- [enum 사용법](iOS-Swift/aboutEnum.md)
+- [저장프로퍼티 - 프로퍼티(1)](iOS-Swift/aboutProperty1.md)
+- [연산프로퍼티 - 프로퍼티(2)](iOS-Swift/aboutProperty2.md)
+- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](iOS-Swift/aboutProperty205.md)
+- [타입프로퍼티(static) - 프로퍼티(3)](iOS-Swift/aboutProperty3.md)
+- [Swift - Initialization에 대해 알아보기](iOS-Swift/about_Swift002Init.md)
+- [Array - 빠르게 **빈 배열 만들기**](iOS-Swift/array_fastInit.md)
+- [파일경로 String으로에서 확장자 추출하기](iOS-Swift/bringToExtensionName.md)
+- [고차함수 - Higher Order Function : Map, Filter, Reduce, Sort, FlatMap](iOS-Swift/higherOrderFuction.md)
+- [Splite과 Component](iOS-Swift/splite_component_map.md)
+- [Swift - 스위프트에서 사용하는 패턴들](iOS-Swift/swift_a_swift_patterns.md)
+- [case let : for case let 익숙해지기](iOS-Swift/swift_caseLet_for.md)
+- [Switch case let, If case let, guard case let](iOS-Swift/swift_caseLet_switch_if_guard.md)
+- [Closure 톺아보기](iOS-Swift/swift_firstClassClosureMaster.md)
+- [1급 객체](iOS-Swift/swift_firstClassObject.md)
+- [Swift - 키워드 defer](iOS-Swift/swift_keywordDefer.md)
+- [Swift - 키워드 inout](iOS-Swift/swift_keywordInout.md)
+- [Swift - Mirror 사용하기](iOS-Swift/swift_mirror.md)
+- [Swift - Range 함수 사용하기](iOS-Swift/swift_range.md)
+- [Array의 특정값을 포함한 IndexPath찾고 값 바꾸기](iOS-Swift/swift_replacingArrayIndexValue..md)
 
 [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 [2]: https://github.com/jbranchaud/til
