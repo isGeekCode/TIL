@@ -94,6 +94,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 위 설정을 위해서 NaverThirdPartyConstantForApp.h 파일로 이동한다.
 
+- 해당 위치에서 이 값들을 수정한다. 
+
 <img width="600" alt="N7" src="https://github.com/isGeekCode/TIL/assets/76529148/4d23af2f-ad55-4301-90f7-799c5f59bd60">
 
 ## AppDelegate만 지원하는 경우
@@ -190,3 +192,7 @@ extension ViewController: NaverThirdPartyLoginConnectionDelegate {
     }  
 }
 ```
+
+
+## History
+- 230813 : 초안작성

@@ -813,7 +813,7 @@ Presenter를 생성해보자.
 - Presenter View 1:1 매칭하기
     - Presenter에는 View가 self로 선언할 옵셔널 변수를 만들고 init 메서드를 구현한다. 
     - View에서 Presenter를 init 하여 view를 자신으로 선언한다.  
-
+- 이 때, presenter와 View는 `약한 참조`를 위해 weak 으로 선언한다. 
  
 ```swift
 
@@ -823,7 +823,7 @@ class Presenter {
     private let model: Calculator = Calculator()
     
     // View가 self로 선언할 변수
-    let view: ViewController?
+    private weak var view: ViewController?
     
     // MARK: Presenter와 View 매칭
     init(view: ViewController?) {
@@ -836,7 +836,7 @@ class Presenter {
 class ViewController: UIViewController {
     
     // MARK: Presenter와 View 매칭
-    lazy var presenter: Presenter = Presenter(view: self)
+    private lazy var presenter: Presenter = Presenter(view: self)
     // MODEL은 Presenter로 이동
 //    private let model: Calculator = Calculator()
 
@@ -920,7 +920,7 @@ class Calculator {
 class Presenter {
     
     private let model: Calculator = Calculator()
-    let view: ViewController?
+    private weak var view: ViewController?
     
     // MARK: Presenter와 View 매칭
     init(view: ViewController?) {
@@ -947,11 +947,11 @@ extension Presenter : CalculatorViewDelegate {
 }
 
 // MARK: - VIEW
+
 class ViewController: UIViewController {
     
     // MARK: Presenter와 View 매칭
-    lazy var presenter: Presenter = Presenter(view: self)
-
+    private lazy var presenter: Presenter = Presenter(view: self)
     private let calculatorView: CalculatorView = CalculatorView(frame: .zero)
     
     override func viewDidLoad() {
@@ -969,6 +969,91 @@ class ViewController: UIViewController {
             calculatorView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             calculatorView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         ])
+    }
+}
+
+// MARK: 유저 Input : View -> Presenter
+protocol CalculatorViewDelegate: AnyObject {
+    func didChangeTokenText(_ calculatorView: CalculatorView, token: String)
+    func didChangeInputText(_ calculatorView: CalculatorView, input: String)
+}
+
+class CalculatorView: UIView {
+    
+    // MARK: 유저 Input : View -> Presenter
+    weak var delegate: CalculatorViewDelegate?
+    
+    private lazy var tokenTextField: UITextField = {
+        let field = UITextField()
+        field.font = .preferredFont(forTextStyle: .body)
+        field.borderStyle = .roundedRect
+        field.backgroundColor = .secondarySystemBackground
+        field.addTarget(self, action: #selector(didChangeTokenText), for: .editingChanged)
+        field.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        return field
+    }()
+    
+    private lazy var inputTextField: UITextField = {
+        let field = UITextField()
+        field.font = .preferredFont(forTextStyle: .headline)
+        field.borderStyle = .roundedRect
+        field.backgroundColor = .secondarySystemBackground
+        field.addTarget(self, action: #selector(didChangeInputText), for: .editingChanged)
+        field.setContentHuggingPriority(.required, for: .vertical)
+        return field
+    }()
+    
+    private lazy var resultLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = .preferredFont(forTextStyle: .largeTitle)
+        return label
+    }()
+    
+    private lazy var stackView: UIStackView = {
+        let vStack = UIStackView(arrangedSubviews: [tokenTextField, inputTextField, resultLabel])
+        vStack.translatesAutoresizingMaskIntoConstraints = false
+        vStack.axis = .vertical
+        vStack.spacing = 16
+        vStack.alignment = .fill
+        vStack.distribution = .fill
+        return vStack
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        addSubview(stackView)
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+        ])
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+}
+
+
+extension CalculatorView {
+    
+    // MARK: 유저 Input : View -> Presenter
+    @objc private func didChangeTokenText(_ field: UITextField) {
+        delegate?.didChangeTokenText(self,
+                                     token: field.text ?? " ")
+    }
+    // MARK: 유저 Input : View -> Presenter
+    @objc private func didChangeInputText(_ field: UITextField) {
+        delegate?.didChangeInputText(self,
+                                     input: field.text ?? "")
+    }
+    
+    // MARK: View에 접근하여 update할 수 있도록 메서드 구현
+    func setResultText(_ result: String) {
+        resultLabel.text = result
     }
 }
 ```
@@ -991,6 +1076,10 @@ MVP의 경우 Presenter는 테스트하기가 정말 용이해지기때문에 TE
 
 다만 문제는 View마다 Presenter가 생성되기 때문에 BolierPlate 코드가 많아지게 된다. 
 > 보일러플레이트 코드는 애플리케이션의 핵심 로직과는 직접적인 연관이 없지만 필요한 설정, 초기화, 기본 구조 등을 구현하는 코드를 말한다. 
+
+그래서 이제 MVVM을 언급하기 시작했다.  
+
+## MVVM
 
 
 ```swift
