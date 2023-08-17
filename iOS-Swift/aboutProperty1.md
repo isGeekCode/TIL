@@ -6,9 +6,9 @@
 **프로퍼티 시리즈**
 
 - **🍊  저장프로퍼티(feat.클래스와 구조체) - 프로퍼티(1)**
-- [연산프로퍼티(Getter/Setter) - 프로퍼티(2)](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-Swift/aboutProperty2.md)
-- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-Swift/aboutProperty205.md)
-- [타입프로퍼티(static) - 프로퍼티(3)](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-Swift/aboutProperty3.md)
+- [연산프로퍼티(Getter/Setter) - 프로퍼티(2)](https://github.com/isGeekCode/TIL/blob/main/iOS-Swift/aboutProperty2.md)
+- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](https://github.com/isGeekCode/TIL/blob/main/iOS-Swift/aboutProperty205.md)
+- [타입프로퍼티(static) - 프로퍼티(3)](https://github.com/isGeekCode/TIL/blob/main/iOS-Swift/aboutProperty3.md)
 
 
 Property는 저장프로퍼티와 연산프로퍼티, 타입프로퍼티 가 있다.
