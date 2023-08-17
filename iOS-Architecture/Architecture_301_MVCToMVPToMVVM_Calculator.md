@@ -1081,6 +1081,329 @@ MVP의 경우 Presenter는 테스트하기가 정말 용이해지기때문에 TE
 
 ## MVVM
 
+<img width="600" alt="_mvvm_in_practice _020" src="https://github.com/isGeekCode/TIL/assets/76529148/922a4845-180f-4010-9b9a-bb467e8facbe">
+
+
+그렇다면 Model과 ViewModel은 어떻게 구분할 것인가??
+
+- View 로직 : 디스플레이 로직
+- 데이터 로직 : 백엔드 로직
+
+로직이 들어가는 걸 보니까 Model이다.  
+
+아래 그림을 보자.  
+
+<img width="600" alt="_mvvm_in_practice _022" src="https://github.com/isGeekCode/TIL/assets/76529148/11293228-a643-41d5-bc0f-d6631d1434ae">
+
+여기에서 가장 중요한 것은 Binding이다.  
+
+- Model과 ViewModel은 서로 Notification을 주고 받고 있다.
+- View와 ViewModel은 서로 Binding이 되어있다. 
+
+<img width="600" alt="_mvvm_in_practice _023" src="https://github.com/isGeekCode/TIL/assets/76529148/d59dbe22-7167-4185-a2d2-c99f23cd747e">
+
+그래서 MVVM에서 핵심은 아래와 같다.  
+
+- View로직, 비즈니스 로직의 분리
+- 데이터 바인딩
+
+
+### Data Binding 을 하는 방법
+데이터를 서로 동기화를 성취하기만 하면된다.  
+먼저 라이브러리보다는 iOS의 기본 방법들을 익히는 게 좋다.
+- Property Observers
+- KVO : Key - Value Observing
+- Notification Center
+- Delegation
+- (RxSwift)
+- (Combine)
+
+
+## 예제 MVVM으로 변경하기
+
+- 먼저 ViewModel 클래스를 생성한다. 
+- Presenter가 갖고 있던 로직들을 ViewModel이 가져간다. 
+
+
+```swift
+
+// MARK: - VIEW
+class ViewController: UIViewController {
+    
+    // Presenter를 없애고 ViewModel 생성
+    private let viewModel: ViewModel = ViewModel()
+//    private lazy var presenter: Presenter = Presenter(view: self)
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // MARK: 유저 Input : View -> ViewModel
+        calculatorView.delegate = viewModel
+    }
+}
+
+```
+
+- presenter가 맡았던 View의 input을 옮기기 위해 delegate을 ViewModel에서 처리한다. 
+
+```swift
+
+
+class ViewModel {
+
+    private let model: Calculator = Calculator()
+
+}
+
+extension ViewModel : CalculatorViewDelegate {
+
+    // MARK: 유저 Input : View -> ViewModel
+    func didChangeTokenText(_ calculatorView: CalculatorView, token: String) {
+        // MARK: updates Model : ViewModel -> Model
+        model.token = token
+    }
+    
+    // MARK: 유저 Input : View -> ViewModel
+    func didChangeInputText(_ calculatorView: CalculatorView, input: String) {
+        
+        // MARK: updates Model & state change events : ViewModel -> Model -> ViewModel
+        let sum: Int = model.calculate(with: input)
+        // MARK: - updates View : ViewModel -> View
+        calculatorView.setResultText(String(describing: sum))
+    }
+}
+
+
+```
+
+
+ViewModel은 View에 필요한 정보를 담고 있다. 
+- inputText
+- token
+- result
+
+
+```swift
+class ViewModel {
+    
+    private let model: Calculator = Calculator()
+    var inputText: String = ""
+    var token: String = " "
+    var result: Int = 0
+}
+
+```
+그리고  ViewModel의 result가 바뀔때마다 View에 동기화가 되야한다. 
+
+여기서는 KVO를 사용해보자.  
+
+
+- ViewModel에 NSObject 상속
+- ViewModel에서 추적할 result에 키워드를 붙인다. 
+- View에 변수 NSKeyValueObservation 선언
+- "result" keypath를 이용해서 calculatorView에 업데이트 처리
+    - NSKeyValueObservation객체에 `viewModel.observe`메서드를 선언
+
+```swift
+class ViewModel: NSObject {
+    
+    private let model: Calculator = Calculator()
+    var inputText: String = ""
+    var token: String = " "
+    @objc dynamic var result: Int = 0
+}
+
+
+class ViewController: UIViewController {
+
+    private let viewModel: ViewModel = ViewModel()
+    
+    private var observation: NSKeyValueObservation?
+    
+    override func viewDidLoad() {
+    super.viewDidLoad()
+
+    // "result" keypath를 이용해서 calculatorView에 업데이트 처리
+    observation = viewModel.observe(\.result) { ViewModel, changes in
+        self.calculatorView.setResultText(String(describing: changes.newValue))
+    }
+
+}
+```
+
+### 전체코드
+
+```swift
+
+// MARK: MODEL
+
+class Calculator {
+    // MARK: 변하는 Value자체를 Model에서 소유
+    var token: String = ""
+    
+    // MARK: Model에 접근하여 Business Logic을 처리할 수 있도록 메서드 구현
+    func calculate(with input: String) -> Int {
+        input.components(separatedBy:CharacterSet(charactersIn: token))
+            .compactMap { Int($0) }
+            .reduce(0, +)
+    }
+}
+
+
+
+//MARK: - VIEW MODEL
+class ViewModel: NSObject {
+    
+    private let model: Calculator = Calculator()
+
+    var inputText: String = ""
+    var token: String = " "
+    @objc dynamic var result: Int = 0
+}
+
+
+extension ViewModel : CalculatorViewDelegate {
+
+    // MARK: 유저 Input : View -> ViewModel
+    func didChangeTokenText(_ calculatorView: CalculatorView, token: String) {
+        // MARK: updates Model : ViewModel -> Model
+        model.token = token
+    }
+    
+    // MARK: 유저 Input : View -> ViewModel
+    func didChangeInputText(_ calculatorView: CalculatorView, input: String) {
+        
+        // MARK: updates Model & state change events : ViewModel -> Model -> ViewModel
+        let sum: Int = model.calculate(with: input)
+        // MARK: - updates View : ViewModel -> View
+        calculatorView.setResultText(String(describing: sum))
+    }
+}
+
+
+// MARK: - VIEW
+class ViewController: UIViewController {
+    
+    private let calculatorView: CalculatorView = CalculatorView(frame: .zero)
+
+    private let viewModel: ViewModel = ViewModel()
+    
+    private var observation: NSKeyValueObservation?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // "result" keypath를 이용해서 calculatorView에 업데이트 처리
+        observation = viewModel.observe(\.result) { ViewModel, changes in
+            self.calculatorView.setResultText(String(describing: changes.newValue))
+        }
+        
+        // MARK: 유저 Input : View -> ViewModel
+        calculatorView.delegate = viewModel
+
+        calculatorView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(calculatorView)
+
+        NSLayoutConstraint.activate([
+            calculatorView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            calculatorView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            calculatorView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            calculatorView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+        ])
+    }
+}
+
+
+// MARK: 유저 Input : View -> ViewModel
+protocol CalculatorViewDelegate: AnyObject {
+    func didChangeTokenText(_ calculatorView: CalculatorView, token: String)
+    func didChangeInputText(_ calculatorView: CalculatorView, input: String)
+}
+
+class CalculatorView: UIView {
+    
+    // MARK: 유저 Input : View -> ViewModel
+    weak var delegate: CalculatorViewDelegate?
+    
+    private lazy var tokenTextField: UITextField = {
+        let field = UITextField()
+        field.font = .preferredFont(forTextStyle: .body)
+        field.borderStyle = .roundedRect
+        field.backgroundColor = .secondarySystemBackground
+        field.addTarget(self, action: #selector(didChangeTokenText), for: .editingChanged)
+        field.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        return field
+    }()
+    
+    private lazy var inputTextField: UITextField = {
+        let field = UITextField()
+        field.font = .preferredFont(forTextStyle: .headline)
+        field.borderStyle = .roundedRect
+        field.backgroundColor = .secondarySystemBackground
+        field.addTarget(self, action: #selector(didChangeInputText), for: .editingChanged)
+        field.setContentHuggingPriority(.required, for: .vertical)
+        return field
+    }()
+    
+    private lazy var resultLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = .preferredFont(forTextStyle: .largeTitle)
+        return label
+    }()
+    
+    private lazy var stackView: UIStackView = {
+        let vStack = UIStackView(arrangedSubviews: [tokenTextField, inputTextField, resultLabel])
+        vStack.translatesAutoresizingMaskIntoConstraints = false
+        vStack.axis = .vertical
+        vStack.spacing = 16
+        vStack.alignment = .fill
+        vStack.distribution = .fill
+        return vStack
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        addSubview(stackView)
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+        ])
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+}
+
+
+extension CalculatorView {
+    
+    // MARK: 유저 Input : View -> ViewModel
+    @objc private func didChangeTokenText(_ field: UITextField) {
+        delegate?.didChangeTokenText(self,
+                                     token: field.text ?? " ")
+    }
+    // MARK: 유저 Input : View -> ViewModel
+    @objc private func didChangeInputText(_ field: UITextField) {
+        delegate?.didChangeInputText(self,
+                                     input: field.text ?? "")
+    }
+    
+    // MARK: View에 접근하여 update할 수 있도록 메서드 구현
+    func setResultText(_ result: String) {
+        resultLabel.text = result
+    }
+}
+
+```
+
+
+
+
 
 ```swift
 ```
@@ -1090,7 +1413,8 @@ MVP의 경우 Presenter는 테스트하기가 정말 용이해지기때문에 TE
 ```
 ```swift
 ```
-```swift
-```
-```swift
-```
+
+
+
+![_mvvm_in_practice _026](https://github.com/isGeekCode/TIL/assets/76529148/5ecd01b8-097b-44f4-98d9-47afc7b24c9f)
+![_mvvm_in_practice _030](https://github.com/isGeekCode/TIL/assets/76529148/f0ee5332-2b85-4b81-8ed4-1c893aaf5e18)
