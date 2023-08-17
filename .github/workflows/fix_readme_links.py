@@ -40,8 +40,9 @@ def fix_readme_links(readme_content):
         category_link = re.sub(r'[^\w\s-]', '', category_link)  # 비알파벳 문자 제거
         
         # 각 카테고리 제목 위에 링크를 추가
-        category_link_section = f"[{category}](#{category_link})"
-        readme_content = readme_content.replace(f"### {category}", f"{category_link_section}\n\n### {category}")
+        category_link_section = f"[[top]](#{category_link})"
+        category_heading = f"### {category}\n\n{category_link_section}"
+        readme_content = readme_content.replace(f"### {category}", category_heading)
     
     return readme_content
 
@@ -57,4 +58,3 @@ try:
     print("README 파일이 성공적으로 수정되었습니다.")
 except Exception as e:
     print("스크립트 실행 중 오류가 발생했습니다:", e)
-
