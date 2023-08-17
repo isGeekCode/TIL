@@ -478,3 +478,195 @@ _338 TILs and counting..._
 [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
 [2]: https://github.com/jbranchaud/til
 
+
+
+
+
+현재 git  README의 형식은 이래 "# TIL
+> Today I Learned
+
+개발자로서 성장하는 하루하루를 기록하기위해 만든 공간입니다.
+
+  2단계를 통해 학습, 복습하고 있습니다 ✨
+  1단계. GitHub에 메모 ✨
+  2단계. 블로그에 정리해서 게시 ✨
+
+
+_338 TILs and counting..._
+
+---
+
+### 5 most recent TILs
+
+- [Swift - Class와 Struct](iOS-Swift/about_Swift001Class.md) - Thu Aug 17 10:55:09 2023 +0900
+- [ReactorKit - 예제: CountApp](iOS-Architecture/Architecture_301_RxSwift_ReactorKit_CountApp.md) - Thu Aug 17 10:55:09 2023 +0900
+- [Cocoa Design Pattern - Observer 옵저버 패턴](iOS-Architecture/Architecture_101_De_CocoaDesignPattern_Observer.md) - Thu Aug 17 10:55:09 2023 +0900
+- [](iOS-Architecture/Architecture_301_MVCToMVPToMVVM_Calculator.md) - Thu Aug 17 10:55:09 2023 +0900
+- [MVC to MVVM : 01. UTC 오늘, 현재, 내일 시간보기](iOS-Architecture/Architecture_301_MVCToMVVM_01_UTC.md) - Thu Aug 17 10:55:09 2023 +0900
+
+### Categories
+
+- [A_Writing_in_Progress](#a_writing_in_progress)
+- [About-AI](#about-ai)
+- [About-Error](#about-error)
+- [About-IT](#about-it)
+- [Algorithm](#algorithm)
+- [CI_CD](#ci_cd)
+- [ComputerScience](#computerscience)
+- [Conference](#conference)
+- [Docs](#docs)
+
+
+### [A_Writing_in_Progress](#a_writing_in_progress)
+- [[Apple Documentation Archive] Auto Layout Guide(작성중)](A_Writing_in_Progress/Devpedia_AutolayoutGuide.md)
+- [[Apple Documentation Archive] Coordinate System : View의 좌표계(작성중)](A_Writing_in_Progress/Devpedia_coordinateSystem.md)
+- [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md)
+- [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile)](A_Writing_in_Progress/Integrity_Certificate_Provisioning.md)
+- [Integrity - KeyChain](A_Writing_in_Progress/Integrity_KeyChain.md)
+- [Integrity - Secure Enclave](A_Writing_in_Progress/Integrity_secureEnclave.md)
+- [소켓이란](A_Writing_in_Progress/TIL220420_socket.md)
+
+### [About-AI](#about-ai)
+- [딥러닝이란](About-AI/DeepLearning.md)
+- [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md)
+- [요즘 핫한 GPT로 앱만들어보기](About-AI/MVVM_ReactorKit_Snapkit_RxSwift.md)
+- [언어모델이란](About-AI/chatGPT.md)
+
+### [About-Error](#about-error)
+- [Git Error - command line tools are already installed (사실 git 에러 아님)](About-Error/gitError_CommandLineTool.md)
+- [Git Error - RPC failed; curl 18 transfer closed with...](About-Error/gitError_RPCfailed.md)
+- [GitLab Error - You won't be able to pull or push project code via SSH until ...](About-Error/gitLabError_SSHKey.md)
+- [SourceTree Error - 시도때도 없이 꺼지는 현상](About-Error/sourceTreeError_fatalError.md)
+- [Terminal Error - xcrun: error: active developer path...](About-Error/terminalError_xcrunError.md)
+- [Xcode Error - Presenting view controllers on detached view controllers is discouraged.](About-Error/xcodeError_Alert_In_UIViewController_Init.md)
+- [Xcode Error - Build input file cannot be found:](About-Error/xcodeError_BuildInputFile.md)
+- [Xcode Error - Command PhaseScriptExecution failed with a nonzero exit code](About-Error/xcodeError_CommandPhaseScript.md)
+- [Xcode Error - Launching _AppName_ is taking longer than expected](About-Error/xcodeError_Launching_is_taking_longer_than.md)
+- [Xcode Error - Unable to process request - PLA Update available](About-Error/xcodeError_UnableProcess.md)
+- [Xcode Error - Unknown class @@ in Interface Builder file.](About-Error/xcodeError_UnknownClassInInterface.md)
+- [Xcode Error - Assistant가 작동하지 않을때 체크해야할 것](About-Error/xcodeError_XcodeAssistant.md)
+- [Xcode Error - Cannot be opened because it is in a future Xcode project file format.](About-Error/xcodeError_cannotBeOpened.md)
+- [Xcode Error - iPhone is busy: Making Apple Watch ready for development](About-Error/xcodeError_makingAppleWatch.md)
+- [Xcode Error - maximumViewportInset cannot be larger than frame](About-Error/xcodeError_viewResizing.md)
+- [Xcode Error - warning: libobjc.A.dylib is being read from process memory...](About-Error/xcodeError_warningLibObjc.md)
+- [Flutter Error - Entrypoint doesn't contain...](About-Error/zFlutterError_EntryPoint.md)
+
+### [About-IT](#about-it)
+- [써드파티(Third party)](About-IT/Third_party.md)
+- [Apple Document Words - 단어장](About-IT/iOS_words.md)
+- [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md)
+
+### [Algorithm](#algorithm)
+- [알고리즘이란](Algorithm/About_Algorithm.md)
+- [알고리즘 - 선택정렬 : Selection Sort](Algorithm/algorithm00_selectionSort.md)
+- [알고리즘 - 버블정렬 : Bubble Sort(작성중)](Algorithm/algorithm01_bubbleSort.md)
+
+### [CI_CD](#ci_cd)
+- [CI/CD - GitHub Action 사용하기 : 초기 구현하기](CI_CD/GithubAction_A_tutorial00.md)
+- [CI/CD - GitHub Action 사용하기2 : on 섹션 수정하기](CI_CD/GithubAction_A_tutorial01.md)
+- [CI/CD - GitHub Action 사용하기3 : 실행할 스크립트 짜보기](CI_CD/GithubAction_A_tutorial02.md)
+
+### [ComputerScience](#computerscience)
+- [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
+- [트랜지스터의 원리](ComputerScience/221024_transister.md)
+- [Data Structure - 다양한 데이터 구조, iOS에서 사용하는 데이터 구조](ComputerScience/DataStructure.md)
+- [MVP: Minimum Viable Product](ComputerScience/MVP.md)
+- [직렬화(Serialization)](ComputerScience/Serialization.md)
+- [Terminal 기초 사용법](ComputerScience/Terminal.md)
+- [여러가지 버전관리정책](ComputerScience/VersionLint.md)
+- [iOS의 Virtual Memory에 대하여](ComputerScience/VirtualMemory.md)
+- [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
+- [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
+- [iOS와 HTTP/2에 대하여](ComputerScience/http_2.md)
+- [OSI 7 Layer](ComputerScience/osi_7layer.md)
+- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md)
+- [OSI 7 Layer - 1.5 여러 컴퓨터간 통신](ComputerScience/osi_7layer_011_internet.md)
+- [OSI 7 Layer - 2. Data Link Layer(데이터 링크 계층)](ComputerScience/osi_7layer_020.DataLink.md)
+- [OSI 7 Layer - 3. Network Layer(네트워크 계층)](ComputerScience/osi_7layer_030.Network.md)
+- [프로그래밍 패러다임 - Functional Programming(함수형 프로그래밍)](ComputerScience/programming_00_Functional_.md)
+- [Functional Programming - 모나드 이해하기](ComputerScience/programming_00_Functional_Monade.md)
+- [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
+
+### [Conference](#conference)
+- [Let us: Go! 2022 가을 - 221105(미참석)](Conference/Conference2022_LetUsGo2022_3Fall.md)
+- [iOS Daejeon Club - 230325(참석)](Conference/Conference2023_IOSDaejonCodingClub_230325.md)
+- [Let us: Go! 2023 봄 - 2304(미참석)](Conference/Conference2023_LetUSGo2023_1Spring.md)
+
+### [Docs](#docs)
+- [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md)
+- [마크다운 - 이미지 사이즈 세팅하기](Docs/MarkDown_Image.md)
+- [마크다운 - TOC기능 만들기 (Table Of Contents)](Docs/MarkDown_TOC.md)
+- [마크다운 - 표 만들기 (Table)](Docs/MarkDown_Table.md)
+
+
+[1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
+[2]: https://github.com/jbranchaud/til
+
+" 그런데 현재 Git Action 동작은 아래와 같아 "name: Fix README Links
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  fix_links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v3.5.3
+        
+      # Autoformat 작업 이후 30초 대기
+      - name: Wait for 30 seconds
+        run: |
+          sleep 30
+
+      # 30초 후에 README 파일 다시 조회
+      - name: Check out repo again
+        uses: actions/checkout@v3.5.3
+        with:
+          fetch-depth: 0
+
+      # 원격 저장소의 변경 사항 통합
+      - name: Pull latest changes
+        run: |
+          git pull origin main
+
+      - name: Run Python Script
+        run: |
+          python .github/workflows/fix_readme_links.py
+          git diff
+          git config user.name "isGeekCode"
+          git config user.email "ptuguitar@naver.com"
+          git add README.md
+          git commit -m "Fix README links"  -a || exit 0
+          git push
+
+"그리고 파이썬으로 "# fix_readme_links.py
+
+# Python 스크립트 코드를 작성하여 README 파일을 수정하는 작업을 수행합니다.
+# 아래는 예시 코드입니다. README 파일을 수정하는 작업을 여기에 추가하세요.
+
+# 예시: README 파일의 링크들을 소문자로 변경
+import re
+
+def fix_readme_links(readme_content):
+    fixed_content = re.sub(r'\[(.*?)\]\(#(.*?)\)', lambda x: f"[{x.group(1)}](#{x.group(2).lower()})", readme_content)
+    return fixed_content
+
+try:
+    # README 파일의 내용을 읽어옴
+    with open("README.md", "r") as file:
+        readme_content = file.read()
+
+    # 링크 수정
+    fixed_content = fix_readme_links(readme_content)
+
+    # 수정된 내용을 README 파일에 다시 씀
+    with open("README.md", "w") as file:
+        file.write(fixed_content)
+
+    print("README 파일이 성공적으로 수정되었습니다.")
+except Exception as e:
+    print("스크립트 실행 중 오류가 발생했습니다:", e)
+"이렇게 실행되어있거든 .. 이제 README의 카테고리의 ### 처리된 각 타이틀 의 가장밑부분마다 "### Categories" 로 이동할 수 있는 링크를 달고 싶어 파이썬 파일을 수정해줘
