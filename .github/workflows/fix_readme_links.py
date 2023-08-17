@@ -1,9 +1,9 @@
 # fix_readme_links.py
 
- Python 스크립트 코드를 작성하여 README 파일을 수정하는 작업을 수행합니다.
- 아래는 예시 코드입니다. README 파일을 수정하는 작업을 여기에 추가하세요.
-
- 예시: README 파일의 링크들을 소문자로 변경
+# Python 스크립트 코드를 작성하여 README 파일을 수정하는 작업을 수행합니다.
+# 아래는 예시 코드입니다. README 파일을 수정하는 작업을 여기에 추가하세요.
+#
+# 예시: README 파일의 링크들을 소문자로 변경
 import re
 
 def fix_readme_links(readme_content):
