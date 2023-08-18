@@ -8,17 +8,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_344 TILs and counting..._
+_345 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [데이터 바인딩이란](iOS-Architecture/Data_Binding_about.md) - Fri Aug 18 11:19:05 2023 +0900
+- [23년 7월 회고 / 8월 목표](Self-Review/review_230730July.md) - Fri Aug 18 11:18:48 2023 +0900
 - [SNS Login - Kakao](iOS-Library/SNSLogin_kakao.md) - Thu Aug 17 23:05:27 2023 +0900
-- [Design Pattern - Composite 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Composite.md) - Thu Aug 17 15:35:57 2023 +0900
 - [Design Pattern - Factory method 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Factory.md) - Thu Aug 17 15:35:57 2023 +0900
 - [Design Pattern - Mediator 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Mediator.md) - Thu Aug 17 15:35:57 2023 +0900
-- [Design Pattern - Strategy 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Strategy.md) - Thu Aug 17 15:35:57 2023 +0900
 
 ### Categories
 
@@ -43,7 +43,6 @@ _344 TILs and counting..._
 - [iOS-Architecture](#ios-architecture)
 - [iOS-Concurrency](#ios-concurrency)
 - [iOS-CustomLogic](#ios-customlogic)
-- [iOS-DataBinding](#ios-databinding)
 - [iOS-Development](#ios-development)
 - [iOS-Environment](#ios-environment)
 - [iOS-Extensions](#ios-extensions)
@@ -201,6 +200,7 @@ _344 TILs and counting..._
 - [23년 4월 회고 / 5월 목표](Self-Review/review_230428April.md)
 - [23년 5월 회고 / 6월 목표](Self-Review/review_230526May.md)
 - [23년 6월 회고 / 7월 목표](Self-Review/review_230625June.md)
+- [23년 7월 회고 / 8월 목표](Self-Review/review_230730July.md)
 
 ### [iOS-AppLaunching](#ios-applaunching)
 - [앱의 구동에 관하여](iOS-AppLaunching/AppLaunching_About.md)
@@ -229,6 +229,7 @@ _344 TILs and counting..._
 - [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](iOS-Architecture/Architecture_301_MVC_traditional.md)
 - [Architecture - 간단한 MVVM구조 예제](iOS-Architecture/Architecture_301_MVVM_simpleExample.md)
 - [ReactorKit - 예제: CountApp](iOS-Architecture/Architecture_301_RxSwift_ReactorKit_CountApp.md)
+- [데이터 바인딩이란](iOS-Architecture/Data_Binding_about.md)
 - [Architecture - 비즈니스 로직이란](iOS-Architecture/aboutBusinessLogic.md)
 
 ### [iOS-Concurrency](#ios-concurrency)
@@ -241,9 +242,6 @@ _344 TILs and counting..._
 ### [iOS-CustomLogic](#ios-customlogic)
 - [Login Logic (feat. UserDefault)](iOS-CustomLogic/Login_Logic.md)
 - [DynamicSplash 세팅하기](iOS-CustomLogic/splash_dynamicSplash.md)
-
-### [iOS-DataBinding](#ios-databinding)
-- [데이터 바인딩이란](iOS-DataBinding/Data_Binding_about.md)
 
 ### [iOS-Development](#ios-development)
 - [CLLocation - 위치정보 사용하기](iOS-Development/CLLocation_a_howToUse.md)
