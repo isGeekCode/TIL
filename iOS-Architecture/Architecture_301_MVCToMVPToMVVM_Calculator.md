@@ -1414,7 +1414,11 @@ extension CalculatorView {
 ```swift
 ```
 
-
-
 ![_mvvm_in_practice _026](https://github.com/isGeekCode/TIL/assets/76529148/5ecd01b8-097b-44f4-98d9-47afc7b24c9f)
 ![_mvvm_in_practice _030](https://github.com/isGeekCode/TIL/assets/76529148/f0ee5332-2b85-4b81-8ed4-1c893aaf5e18)
+
+
+## History
+- 230816: MVC 패턴 작성
+- 230817: MVP 패턴 작성
+

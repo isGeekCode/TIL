@@ -1,4 +1,4 @@
-데이터 바인딩이란
+# 데이터 바인딩이란
 
 
 프로그래밍에서 사용되는 여러 기술과 패턴 중 하나로,  
@@ -39,36 +39,38 @@
 
 예를 들어, 버튼 클릭 이벤트를 핸들링하여 특정동작을 수행하는 경우를 들 수 있다.  
 
-
+<br><br>
 
 ## iOS에서 데이터 바인딩을 위해 사용할 수 있는 기술들
-- Native구현
+- Native
     - KVC(Key-Value Coding)
     - KVO(Key-Value Observing)
+    - 델리게이트 패턴
     - 프로퍼티 옵저버(Property Observer)
     - 옵저버 패턴
-    - NotificationCenter 
+        - NotificationCenter 
 
-- 추가사항
-    - RxSwift / RxCocoa
+- 프레임워크
+    - RxSwift
+        - RxCocoa
+        - ReactoreKit
     - Combine
-    - SwiftUI Binding
-    - ReactoreKit
 
 각각의 내용은 TIL페이지에서의 포스팅을 하는대로 업로드하려고 한다.
+
+<br><br>   
+
 - Native구현
     - KVC(Key-Value Coding)
     - KVO(Key-Value Observing)
+    
 <br><br>   
-### 프로퍼티 옵저버
-[TIL : 프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](https://github.com/isGeekCode/TIL/blob/main/swift/aboutProperty205.md)
-<br><br>
-### 옵저버 패턴
-[TIL : Cocoa Design Pattern - Observer 옵저버 패턴](https://github.com/isGeekCode/TIL/blob/main/IOS-Architecture/CocoaDesignPattern_Observer.md)
-    - NotificationCenter 
 
-- 추가사항
-    - RxSwift / RxCocoa
-    - Combine
-    - SwiftUI Binding
-    - ReactoreKit
+### 프로퍼티 옵저버
+[TIL : 프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](https://github.com/isGeekCode/TIL/tree/main/#ios-swift)
+
+<br><br>
+
+### 옵저버 패턴
+[TIL : Cocoa Design Pattern - Observer 옵저버 패턴](https://github.com/isGeekCode/TIL/tree/main/#ios-architecture)
+    - NotificationCenter 
