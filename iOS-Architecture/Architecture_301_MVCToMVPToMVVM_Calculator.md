@@ -786,25 +786,33 @@ MVC와 다른점은 Presenter가 로직을 다 가져간다는 것이다.
 
 아래 도표를 보자.  
 
-<img width="600" alt="[_mvvm_in_practice _018" src="https://github.com/isGeekCode/TIL/assets/76529148/2870e4e2-0261-49f1-b9bd-5df8569e6ece](https://github.com/isGeekCode/TIL/assets/76529148/01efbbc7-3420-467c-b788-6039c842fcb0">
+<img width="600" alt="[_mvvm_in_practice _018" src="https://github.com/isGeekCode/TIL/assets/76529148/b28410f9-6b74-4d3c-814f-0df708658f7e">
+
+<br><br>
 
 View는 보이는 것처럼 수동적(Passive)이다.  
 
 근데 가만히 보면 Apple이 소개한 cocoa MVC와 비슷하다는 느낌을 받는다.  
 
-하지만 MVC와 MVP의 큰 차이가 있다.  
+<br>
 
-MVP는 View와 Presenter가 1:1의 관계가 있다. 
+하지만 MVC와 MVP는 큰 차이가 있다.  
+
+MVP는 `View와 Presenter가 1:1의 관계로 되어있다`는 것이다. 
 
 Presenter는 View마다 존재하게 되어있다.  
 
-서로를 알고 있다. 손을 맞잡고 있는 형태이다.  
+그래서 이 둘은 서로를 알고 있다. 손을 맞잡고 있는 형태이다.  
+
+<br>
 
 다만 이럴경우, BoilerPlate 코드가 굉장히 많아진다. 
 
 그럼 MVP로 한번 작업해보자. 
 
 Presenter를 생성해보자. 
+
+<br><br>
 
 ### Presenter 생성
 
@@ -843,6 +851,8 @@ class ViewController: UIViewController {
 }
 
 ```
+
+<br><br>
 
 
 ### 프로토콜도 Presenter가 수행한다. 
@@ -891,6 +901,9 @@ class ViewController: UIViewController {
 }
 ```
 
+
+<br><br>
+
 이렇게 하면 정상 작동한다.  
 
 - 기존의 Model이 갖고있던 비즈니스로직은 그대로 가져간다. 
@@ -899,8 +912,10 @@ class ViewController: UIViewController {
     - 변경 후 MVP 동작 : View(ViewController) ~> `Delegate패턴` ~> Presenter -> Model
 
 
+<br><br>
+
 ### 전체코드
-```
+```swift
 // MARK: - MODEL
 
 class Calculator {
@@ -1058,6 +1073,8 @@ extension CalculatorView {
 }
 ```
 
+<br><br><br>
+
 ## TEST환경
 
 MVC자체가 단점이 없는것은 아니다. 
@@ -1079,10 +1096,14 @@ MVP의 경우 Presenter는 테스트하기가 정말 용이해지기때문에 TE
 
 그래서 이제 MVVM을 언급하기 시작했다.  
 
+<br><br>
+
 ## MVVM
 
 <img width="600" alt="_mvvm_in_practice _020" src="https://github.com/isGeekCode/TIL/assets/76529148/922a4845-180f-4010-9b9a-bb467e8facbe">
 
+
+<br><br>
 
 그렇다면 Model과 ViewModel은 어떻게 구분할 것인가??
 
@@ -1090,6 +1111,8 @@ MVP의 경우 Presenter는 테스트하기가 정말 용이해지기때문에 TE
 - 데이터 로직 : 백엔드 로직
 
 로직이 들어가는 걸 보니까 Model이다.  
+
+<br><br>
 
 아래 그림을 보자.  
 
@@ -1100,13 +1123,19 @@ MVP의 경우 Presenter는 테스트하기가 정말 용이해지기때문에 TE
 - Model과 ViewModel은 서로 Notification을 주고 받고 있다.
 - View와 ViewModel은 서로 Binding이 되어있다. 
 
+
+<br><br>
+
 <img width="600" alt="_mvvm_in_practice _023" src="https://github.com/isGeekCode/TIL/assets/76529148/d59dbe22-7167-4185-a2d2-c99f23cd747e">
+
+<br>
 
 그래서 MVVM에서 핵심은 아래와 같다.  
 
 - View로직, 비즈니스 로직의 분리
 - 데이터 바인딩
 
+<br><br>
 
 ### Data Binding 을 하는 방법
 데이터를 서로 동기화를 성취하기만 하면된다.  
@@ -1119,7 +1148,9 @@ MVP의 경우 Presenter는 테스트하기가 정말 용이해지기때문에 TE
 - (Combine)
 
 
-## 예제 MVVM으로 변경하기
+<br><br>
+
+## 예제를 MVVM으로 변경하기
 
 - 먼저 ViewModel 클래스를 생성한다. 
 - Presenter가 갖고 있던 로직들을 ViewModel이 가져간다. 
@@ -1143,6 +1174,8 @@ class ViewController: UIViewController {
 }
 
 ```
+
+<br><br>
 
 - presenter가 맡았던 View의 input을 옮기기 위해 delegate을 ViewModel에서 처리한다. 
 
@@ -1176,6 +1209,7 @@ extension ViewModel : CalculatorViewDelegate {
 
 ```
 
+<br><br>
 
 ViewModel은 View에 필요한 정보를 담고 있다. 
 - inputText
@@ -1193,6 +1227,9 @@ class ViewModel {
 }
 
 ```
+
+<br><br>
+
 그리고  ViewModel의 result가 바뀔때마다 View에 동기화가 되야한다. 
 
 여기서는 KVO를 사용해보자.  
@@ -1203,15 +1240,37 @@ class ViewModel {
 - View에 변수 NSKeyValueObservation 선언
 - "result" keypath를 이용해서 calculatorView에 업데이트 처리
     - NSKeyValueObservation객체에 `viewModel.observe`메서드를 선언
+    
+<br><br>
 
 ```swift
 class ViewModel: NSObject {
     
     private let model: Calculator = Calculator()
-    var inputText: String = ""
-    var token: String = " "
     @objc dynamic var result: Int = 0
 }
+
+
+extension ViewModel : CalculatorViewDelegate {
+
+    // MARK: 유저 Input : View -> ViewModel
+    func didChangeTokenText(_ calculatorView: CalculatorView, token: String) {
+        
+        // MARK: updates Model : ViewModel -> Model
+        model.token = token
+    }
+    
+    // MARK: 유저 Input : View -> ViewModel
+    func didChangeInputText(_ calculatorView: CalculatorView, input: String) {
+        
+        // MARK: updates Model & state change events : ViewModel -> Model -> ViewModel
+        self.result = model.calculate(with: input)
+        
+//        // MARK: - updates View : ViewModel -> View
+//        calculatorView.setResultText(String(describing: sum))
+    }
+}
+
 
 
 class ViewController: UIViewController {
@@ -1222,14 +1281,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
     super.viewDidLoad()
-
+    
+    // MARK: - updates View : ViewModel -> View
     // "result" keypath를 이용해서 calculatorView에 업데이트 처리
-    observation = viewModel.observe(\.result) { ViewModel, changes in
-        self.calculatorView.setResultText(String(describing: changes.newValue))
+    observation = viewModel.observe(\.result, options: [.new]) { ViewModel, changes in
+        guard let newValue = changes.newValue else { return }
+        self.calculatorView.setResultText(String(describing: newValue))
     }
-
 }
 ```
+
+<br><br>
 
 ### 전체코드
 
@@ -1258,6 +1320,7 @@ class ViewModel: NSObject {
 
     var inputText: String = ""
     var token: String = " "
+    
     @objc dynamic var result: Int = 0
 }
 
@@ -1266,6 +1329,7 @@ extension ViewModel : CalculatorViewDelegate {
 
     // MARK: 유저 Input : View -> ViewModel
     func didChangeTokenText(_ calculatorView: CalculatorView, token: String) {
+        
         // MARK: updates Model : ViewModel -> Model
         model.token = token
     }
@@ -1274,9 +1338,7 @@ extension ViewModel : CalculatorViewDelegate {
     func didChangeInputText(_ calculatorView: CalculatorView, input: String) {
         
         // MARK: updates Model & state change events : ViewModel -> Model -> ViewModel
-        let sum: Int = model.calculate(with: input)
-        // MARK: - updates View : ViewModel -> View
-        calculatorView.setResultText(String(describing: sum))
+        self.result = model.calculate(with: input)
     }
 }
 
@@ -1293,11 +1355,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // MARK: - updates View : ViewModel -> View
         // "result" keypath를 이용해서 calculatorView에 업데이트 처리
-        observation = viewModel.observe(\.result) { ViewModel, changes in
-            self.calculatorView.setResultText(String(describing: changes.newValue))
+        observation = viewModel.observe(\.result, options: [.new]) { ViewModel, changes in
+            guard let newValue = changes.newValue else { return }
+            self.calculatorView.setResultText(String(describing: newValue))
         }
-        
+
         // MARK: 유저 Input : View -> ViewModel
         calculatorView.delegate = viewModel
 
@@ -1312,6 +1376,7 @@ class ViewController: UIViewController {
         ])
     }
 }
+
 
 
 // MARK: 유저 Input : View -> ViewModel
@@ -1401,24 +1466,352 @@ extension CalculatorView {
 
 ```
 
+<br><br>
 
+여기서는 근데 확실하게 하지않은 부분이 있다.  
+정확히는 2가지문제가 있다. 
 
+현재에는 아래와 같이 ViewModel과 Model이 구현되어있다.  
+
+- 첫번째 문제 : ViewModel에 구현한 변수들을 따로 사용하지않고 있다는 것
+- 두번째 문제 : ViewModel에서 model의 로직을 가져다 쓰고만 있다.
+    - 데이터와 비즈니스 로직은 Model내부에서 관리해야 한다. 
 
 
 ```swift
-```
-```swift
-```
-```swift
-```
-```swift
+//MARK: - VIEW MODEL
+class ViewModel: NSObject {
+    
+    private let model: Calculator = Calculator()
+    
+    // 실제로 쓰고 있지않는 데이터
+    var inputText: String = ""
+    var token: String = " "
+    
+    @objc dynamic var result: Int = 0
+}
+
+
+// MARK: MODEL
+
+class Calculator {
+    // MARK: 변하는 Value자체를 Model에서 소유
+    var token: String = ""
+    
+    // MARK: Model에 접근하여 Business Logic을 처리할 수 있도록 메서드 구현
+    func calculate(with input: String) -> Int {
+        input.components(separatedBy:CharacterSet(charactersIn: token))
+            .compactMap { Int($0) }
+            .reduce(0, +)
+    }
+}
 ```
 
-![_mvvm_in_practice _026](https://github.com/isGeekCode/TIL/assets/76529148/5ecd01b8-097b-44f4-98d9-47afc7b24c9f)
+
+
+MVVM에서는 ViewModel과 Model이 관계를 가질 때,  
+
+Model이 데이터를 (token 과 input, result) 모두 관리해야한다. 
+
+<br><br>
+
+ViewModel의 역할은 Model이 갖고있는 데이터 중,  
+
+View에게 할당될 데이터를 (View가 보여줄 데이터를)  
+
+View와 바인딩 해주는 것이다.   
+
+Model은  실질적으로 계산하고, 앱의 백엔드에서  관리하는 실질적인 raw데이터를 관리하는 역할이다.  
+
+MVVM에서는 ViewModel이 Model의 변화를 noti받아서 자신의 값을 View로 업데이트한다.  
+
+
+모델이 100 이라는 규모를 갖고 있을 때, View에 해당하는 일부분만 동기화해서 View와 바인딩 해두는게 ViewModel이다.  
+
+
+
+
+
+## MVVM : Model과 ViewModel 구분하기
+
+ViewModel에만 있던 값들을 Model 에도 만들어주자.
+
+이 데이터들을 Model에서 관리하는 것이다.  
+ 
+
+```swift
+// MARK: MODEL
+
+class Calculator {
+    // MARK: 변하는 Value자체를 Model에서 소유
+    var token: String = " "
+    var input: String = ""   // 추가
+    var result: Int = 0      // 추가
+    
+    // MARK: Model에 접근하여 Business Logic을 처리할 수 있도록 메서드 구현
+    func calculate(with input: String) -> Int {
+        input.components(separatedBy:CharacterSet(charactersIn: token))
+            .compactMap { Int($0) }
+            .reduce(0, +)
+    }
+}
+```
+
+
+그러면 천천히 연결해보자. 전체적인 흐름을 다시 보면 이렇게 진행된다. 
+
+View -> ViewModel -> Model  
+
+View <- ViewModel <- Model  
+
+
+
+일단 기존에 View에서는 ViewModel로 Delegate패턴을 이용해 정보를 전달했다.  
+
+기존에는 Delegate를 통해 바로 model의 프로퍼티와 메서드를 사용했다면,  
+
+이번엔 ViewModel 내부의 프로퍼티에 값을 부여한다.  
+  
+
+```swift
+
+class ViewModel: NSObject {
+    
+    private let model: Calculator = Calculator()
+    
+    var token: String = " " 
+
+    var inputText: String = "" 
+
+
+    // MARK: View-Binding : ViewModel ~> View
+    @objc dynamic var result: Int = 0
+}
+
+
+extension ViewModel : CalculatorViewDelegate {
+
+    // MARK: 유저 Input : View -> ViewModel
+    func didChangeTokenText(_ calculatorView: CalculatorView, token: String) {
+        
+        self.token = token
+//        model.token = token
+
+    }
+    
+    // MARK: 유저 Input : View -> ViewModel
+    func didChangeInputText(_ calculatorView: CalculatorView, input: String) {
+        
+        self.inputText = input
+//        let sum: Int = model.calculate(with: input)
+//        calculatorView.setResultText(String(describing: sum))
+    }
+}
+
+```
+
+<br><br><br>
+
+## ViewModel -> Model : notify
+
+View에서 ViewModel로 정보를 받았으니까,  
+
+이번엔 ViewModel에서 Model로 정보를 보내보자.  
+
+
+이번에는 프로퍼티 옵저버를 사용해보자.  
+
+- ViewModel의 프로퍼티에 프로퍼티 옵저버를 사용해서 model의 프로퍼티에 값을 부여한다. 
+
+```swift
+// MARK: - VIEW MODEL
+
+class ViewModel: NSObject {
+    
+    private let model: Calculator = Calculator()
+    
+    var inputText: String = "" {
+        didSet {
+            // MARK: updates Model : ViewModel -> Model
+            model.input = inputText
+        }
+        
+    }
+    
+    // MARK: 유저 Input : View -> ViewModel
+    var token: String = " " {
+        didSet {
+            // MARK: updates Model : ViewModel -> Model
+            model.token = token
+        }
+    }
+    
+    // MARK: View-Binding : ViewModel ~> View
+    @objc dynamic var result: Int = 0    
+}
+```
+
+<br><br>
+
+이제 Model에 값이 바뀌었을 때,  
+
+내부적으로 비즈니스 로직을 처리해보자.  
+
+
+아래는 기존의 Model이다. 
+
+```swift
+// MARK: MODEL
+
+class Calculator {
+    // MARK: 변하는 Value자체를 Model에서 소유
+    var token: String = ""
+    
+    // MARK: Model에 접근하여 Business Logic을 처리할 수 있도록 메서드 구현
+    func calculate(with input: String) -> Int {
+        input.components(separatedBy:CharacterSet(charactersIn: token))
+            .compactMap { Int($0) }
+            .reduce(0, +)
+    }
+}
+```
+
+이제 외부에서 Model의 값을 바꾸면, 역시 Property Observer를 이용해 내부적으로 비즈니스 로직이 실행되도록 해보자.  
+
+
+```swift
+// MARK: MODEL
+
+class Calculator {
+    // MARK: received value : ViewModel -> Model
+    var token: String = " "
+    var input: String = "" {
+        didSet {
+            result = calculate(with: input)
+        }
+    }
+    
+    var result: Int = 0 {
+        didSet {
+            // MARK: notify : Model -> ViewModel
+
+        }
+    }
+    
+    private func calculate(with input: String) -> Int {
+        input.components(separatedBy:CharacterSet(charactersIn: token))
+            .compactMap { Int($0) }
+            .reduce(0, +)
+    }
+}
+
+
+```
+
+<br><br>
+
+result라는 변수를 만들어서 비즈니스 로직의 결과값을 부여했다.  
+
+이 값은 이제 ViewModel로 보내지고, 다시 그에 따라 View를 업데이트 시켜야한다.  
+
+Model에서 ViewModel로 noti를 보내는 방법은 뭐가 있을까?  
+
+옵저버 패턴인 NotificationCenter를 이용해보자. 
+
+>Model의 result에 값이 선언되면,  
+>미리 ViewModel에 약속된 노티피케이션이 전송된다.  
+
+
+<br><br>
+
+```swift
+
+// MARK: - VIEW MODEL
+
+let didChangeResultNotification = Notification.Name("did result changed")
+
+class ViewModel: NSObject {
+
+    private let model: Calculator = Calculator()
+
+    @objc dynamic var result: Int = 0
+    
+    override init() {
+        super.init()
+        
+        // MARK: did recive Noti : Model -> ViewModel
+        let center = NotificationCenter.default
+        center.addObserver(forName: didChangeResultNotification,
+                           object: nil,
+                           queue: .main) { noti in
+            guard let result: Int = noti.userInfo?["result"] as? Int else { return }
+
+            self.result = result
+        }
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+}
+
+// MARK: MODEL
+
+class Calculator {
+    // MARK: received value : ViewModel -> Model
+    var token: String = " "
+    var input: String = "" {
+        didSet {
+            result = calculate(with: input)
+        }
+    }
+    
+    var result: Int = 0 {
+        didSet {
+            // MARK: notify : Model -> ViewModel
+            NotificationCenter.default.post(name: didChangeResultNotification,
+                                            object: nil,
+                                            userInfo: [ "result": result ])
+        }
+    }
+    
+    private func calculate(with input: String) -> Int {
+        input.components(separatedBy:CharacterSet(charactersIn: token))
+            .compactMap { Int($0) }
+            .reduce(0, +)
+    }
+}
+```
+
+이제 ViewModel로 데이터가 왔다.  
+
+이전에 KVO를 통해 ViewModel의 값에 따라  View 를 업데이트 했다.   
+
+이렇게 하면 MVVM구조가 완성됐다.  
+
+
+## MVVM을 Combine으로 바인딩하기
+
+요건 다음에 합시다!!
+
+
+## 패턴에 대하여
+
 ![_mvvm_in_practice _030](https://github.com/isGeekCode/TIL/assets/76529148/f0ee5332-2b85-4b81-8ed4-1c893aaf5e18)
+
+한 앱을 여러가지 디자인패턴으로 적용해 봤다.  
+
+여기서 기억해야할 것은 정답은 없다는 것과 MVC로도 얼마든지 코드 관리를 할 수 있다는 것을 기억하자는 것이다.  
+
+MVC를 잘 만드는 사람은 MVVM을 잘 다룬다는 것을 기억하자.   
+
+
+
+
 
 
 ## History
 - 230816: MVC 패턴 작성
 - 230817: MVP 패턴 작성
+- 230818: MVVM 패턴 작성
 
