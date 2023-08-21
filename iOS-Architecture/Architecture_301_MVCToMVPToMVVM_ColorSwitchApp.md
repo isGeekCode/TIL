@@ -11,7 +11,8 @@
 <br><br>
 
 
-# 단일 ViewController
+# 📌 단일 ViewController
+한 파일에서 전부 구현하였다.   
 
 
 
@@ -95,14 +96,15 @@ class ViewController: UIViewController {
 </details>
 
 
-<br><br><br>
+<br><br>
 
-# View + Controller
-
+# 📌 View + Controller
+MVC로 가기 위한 준비단계이다.  
 
 - 기존 동작에서 UI부분만 전부 View로 이동
 - 비즈니스 로직은 ViewController내부에 존재
 
+<br><br><br>
 
 ### 어려웠던 점
 
@@ -110,15 +112,26 @@ View로부터 완벽하게 비즈니스 로직을 분리하기 어려웠다.
 
 예를 들어,  
 
-View로부터 Toggle의 값을 가져오는데, 해당 각각의 값이 Green이나 Yellow를 결국 가져오는 로직이 필요했다.  
+View로부터 Toggle의 값을 가져오는데,  
+
+해당 각각의 값이 Green이나 Yellow를 결국 가져오는 로직이 필요했다.  
 
 그런데 사실상 greenSwitch나 yellowSwitch의 값을 체크해서 String으로 변환하는 작업 자체는 UI와 관련된 작업이 아니기때문에 어려웠다.  
 
-
 그래서 View에서 ViewController로 Delegate를 보낼때,  
 
+아래처럼 `Bool`타입 변수를 만드는 것으로 최소한의 작업만 진행했다.  
+
 ```swift
-// MARK: 유저 Input Delegation : View -> Controller
+
+// MARK: 유저 Input Delegation 
+
+// 프로토콜 정의하는 부분
+protocol SelectColorViewDelegate: AnyObject {
+    func didChangeSwitch(_ selectColorView: SelectColorView, isOn: Bool, isGreen: Bool)
+}
+
+// 프로토콜 메서드 구현하는 부분
 @objc private func setColorValue(_ sender: UISwitch) {
     let isGreen = sender == greenSwitch
     delegate?.didChangeSwitch(self, isOn: sender.isOn, isGreen: isGreen)
@@ -127,7 +140,6 @@ View로부터 Toggle의 값을 가져오는데, 해당 각각의 값이 Green이
 ```
 
 ## 전체코드
-
 
 <details><summary>예시 코드</summary>
 
