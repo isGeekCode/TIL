@@ -1,19 +1,45 @@
-# Array의 특정값을 포함한 IndexPath찾고 값 바꾸기
+# Array - 특정값이 동일하거나 포함한 경우 찾기 :  firstIndex()
 
 배열(Array)은 프로그래밍에서 가장 기본적인 자료 구조 중 하나이며, 데이터 요소(element)를 담는 용도로 사용된다.
 
 Swift에서 배열에서 특정 값이 포함된 요소의 인덱스를 찾으려면, firstIndex 메서드를 사용할 수 있다. firstIndex 메서드는 배열에서 첫 번째로 해당 값을 갖는 요소의 인덱스를 반환하며, 해당 값이 없는 경우 nil을 반환한다.
 
+
+## 포함한 경우찾기
 아래 예시는 배열에서 해당 값이 포함된 값을 찾아서 해당 위치에 다른 값을 할당하는 내용이다.
 ```swift
-let array = ["apple Aide", "banana juice", "orange punch"]
-let index = array.firstIndex(of: "juice")
-print(index) // Optional(1)
 
-array[index] = "pineApple IceCream"
-print(array) 
-// "apple Aide", "pineApple IceCream", "orange punch"
+let array = ["apple", "banana", "orange juice", "grape"]
+
+if let index = array.firstIndex(where: { $0.contains("juice") }) { 
+    print(array[index] : \(array[index]))
+}
 ```
+
+
+## 동일한 경우 찾기
+
+이때 firstIndex를 사용하는 방법은 두가지이다. 
+
+- of 파라미터를 사용하는 경우, 특정 index를 구한다. 
+- where 파라미터를 사용하는 경우, 특정 index를 찾아서 클로저를 리턴하여 메서드를 구현할 수 있다.  
+
+
+  
+```swift
+// 배열에 juice가 있는지 찾는 코드
+
+let array = ["apple", "banana", "orange juice", "grape", "juice"]
+
+let index = array.firstIndex(of: "juice")
+
+if let index = array.firstIndex(where: { $0 == "juice" }) {
+    print(array[index] : \(array[index]))
+}
+
+```
+
+
 
 ## 예제2. 
 이 방법은 IOS에서 웹뷰를 다룰때, 들어온 query를 가공할때 유용하다.
