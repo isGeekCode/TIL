@@ -15,12 +15,12 @@
 
 
 
-
 <br><br>
 
 ### 전체코드
 
 <details><summary>예시 코드</summary>
+
 ```swift
 
 import UIKit
@@ -117,7 +117,7 @@ View로부터 Toggle의 값을 가져오는데, 해당 각각의 값이 Green이
 
 그래서 View에서 ViewController로 Delegate를 보낼때,  
 
-```switch
+```swift
 // MARK: 유저 Input Delegation : View -> Controller
 @objc private func setColorValue(_ sender: UISwitch) {
     let isGreen = sender == greenSwitch
