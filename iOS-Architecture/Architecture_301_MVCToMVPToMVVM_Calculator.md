@@ -1,4 +1,4 @@
-# Caculator : MVC -> MVP -> MVVM
+# MVC -> MVP -> MVVM : Caculator
 
 
 MVC의 개념을 잘 다져보자.  
