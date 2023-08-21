@@ -8,16 +8,16 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_345 TILs and counting..._
+_346 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Clean Architecture(클린 아키텍쳐)](iOS-Architecture/Architecture_401_CleanArchitecture.md) - Sat Aug 19 02:40:17 2023 +0900
 - [데이터 바인딩이란](iOS-Architecture/Data_Binding_about.md) - Fri Aug 18 11:19:05 2023 +0900
 - [23년 7월 회고 / 8월 목표](Self-Review/review_230730July.md) - Fri Aug 18 11:18:48 2023 +0900
 - [SNS Login - Kakao](iOS-Library/SNSLogin_kakao.md) - Thu Aug 17 23:05:27 2023 +0900
-- [Design Pattern - Factory method 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Factory.md) - Thu Aug 17 15:35:57 2023 +0900
 - [Design Pattern - Mediator 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Mediator.md) - Thu Aug 17 15:35:57 2023 +0900
 
 ### Categories
@@ -229,6 +229,7 @@ _345 TILs and counting..._
 - [Architecture - MVC: 전통적인 MVC구조로 HTTP사용하기](iOS-Architecture/Architecture_301_MVC_traditional.md)
 - [Architecture - 간단한 MVVM구조 예제](iOS-Architecture/Architecture_301_MVVM_simpleExample.md)
 - [ReactorKit - 예제: CountApp](iOS-Architecture/Architecture_301_RxSwift_ReactorKit_CountApp.md)
+- [Clean Architecture(클린 아키텍쳐)](iOS-Architecture/Architecture_401_CleanArchitecture.md)
 - [데이터 바인딩이란](iOS-Architecture/Data_Binding_about.md)
 - [Architecture - 비즈니스 로직이란](iOS-Architecture/aboutBusinessLogic.md)
 
