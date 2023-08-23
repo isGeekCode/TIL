@@ -244,12 +244,12 @@ class ViewController: UIViewController {
 
         selectColorView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(selectColorView)
-        
+
         NSLayoutConstraint.activate([
             selectColorView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             selectColorView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             selectColorView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            selectColorView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor) 
+            selectColorView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
         
         // MARK: 유저 Input Delegation : View -> Controller
@@ -271,25 +271,26 @@ extension ViewController : SelectColorViewDelegate {
             }
         }
 
-        let newText = getAndValue(currentValueArray)
-        
+        let newText = getStringValue(currentValueArray)
+
         // MARK: 유저 Input : View -> Controller
         selectColorView.setResultText(newText)
     }
     
-    func getAndValue(_ arr: [String]) -> String {
-
-        if arr.count == 1 {
+    func getStringValue(_ arr: [String]) -> String {
+        
+        switch arr.count {
+        case 0:
+            return "Please choose a switch"
+        case 1:
             return arr[0]
-        } else {
+        default:
             let separator = " and "
             let joinedText = arr.joined(separator: separator)
             return joinedText
         }
     }
-    
 }
-
 
 ```
 
