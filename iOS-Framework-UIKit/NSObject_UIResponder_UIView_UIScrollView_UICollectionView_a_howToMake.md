@@ -31,8 +31,6 @@ TableView는 단순한 리스트 표시에 적합하고, CollectionView는 더 �
 
 ### 전체코드
 
-<details>
-  <summary><b>코드보기</b></summary>
 
 ```swift
 import UIKit
@@ -101,23 +99,18 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
 ```
 
-</details>
 
+<br><br>
 
 ## Cell 크기 세팅하기
 
-### 단일 셀 크기
-
-- 상단 인스턴스 변수로 설정하는 경우
+### 단일 셀 크기 - 상단 인스턴스 변수로 설정하는 경우
 
 `UICollectionViewFlowLayout` 객체의 속성으로 설정할 수 있다. 
 
 <br><br>
 
 ### 전체코드
-
-<details>
-  <summary><b>코드보기</b></summary>
 
 ```swift
     lazy var collectionView: UICollectionView = {
@@ -161,20 +154,15 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 }
 ```
 
-</details>
-
 <br><br>
 
-## collectionView 메서드로 설정하는 경우
+### 단일 셀 크기 - collectionView 메서드로 설정하는 경우
 
 UICollectionViewDelegateFlowLayout 프로토콜을 이용해 구현할 수 있다. 
 
 <br><br>
 
 ### 전체코드
-
-<details>
-  <summary><b>코드보기</b></summary>
 
 ```swift
 extension ViewController: UICollectionViewDelegateFlowLayout {
@@ -195,7 +183,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 }
 ```
 
-</details>
 
 <br><br>
 
@@ -203,9 +190,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 
 ### item의 값에 따라 크기가 다른 경우
 
-
-<details>
-  <summary><b>코드보기</b></summary>
   
 ```swift
 
@@ -225,15 +209,10 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 }
 ```
 
-</details>
 
 <br><br>
 
 ### item 개수에 따라 셀의 크기가 다른 경우
-
-
-<details>
-  <summary><b>코드보기</b></summary>
 
 
 ```swift
@@ -258,8 +237,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 ```
-</details>
-
 
 <br><br>
 
@@ -269,8 +246,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 <br><br>
 
 
-<details>
-  <summary><b>코드보기</b></summary>
 
 ```swift
 import UIKit
@@ -355,7 +330,6 @@ extension ViewController: UICollectionViewDelegate {
 
 ```
 
-</details>
 
 <br><br>
 
@@ -363,8 +337,6 @@ extension ViewController: UICollectionViewDelegate {
 
 <br><br>
 
-<details>
-  <summary><b>코드보기</b></summary>
 
 ```swift
 import UIKit
@@ -491,7 +463,6 @@ class YourCell: UICollectionViewCell {
 }
 ```
 
-</details>
 
 <br><br>
 
@@ -515,8 +486,6 @@ UICollectionViewFlowLayout을 통해 설정할 수 있다.
     }()
 
 ```
-
-</details>
 
 <br><br>
 
@@ -635,8 +604,6 @@ class MyCell: UICollectionViewCell {
 
 <br><br>
 
-<details>
-  <summary><b>코드보기</b></summary>
 
 ```swift
 lazy var collectionView: UICollectionView = {
@@ -660,7 +627,6 @@ lazy var collectionView: UICollectionView = {
 
 ```
 
-</details>
 
 <br><br>
 
@@ -953,17 +919,4 @@ class Cell: UICollectionViewCell {
 - 230701 : 초안작성
 - 230825 : Cell 크기별 코드 작성
 - 230825 : 세로형태 그리드 스타일 생성
-
-
-
-<br><br>
-
-<details>
-  <summary><b>코드보기</b></summary>
-
-```swift
-```
-
-</details>
-
-<br><br>
+- 230825 : 가로형태 그리드 스타일 생성
