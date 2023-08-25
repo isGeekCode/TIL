@@ -618,101 +618,6 @@ class YourCell: UICollectionViewCell {
 <br><br>
 
 
-### 전체코드 보기
-
-<details>
-  <summary><b>코드보기</b></summary>
-
-```swift
-import UIKit
-
-class ViewController: UIViewController, UICollectionViewDataSource {
-    lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 20
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.dataSource = self
-        cv.backgroundColor = .white
-        cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.register(MyCell.self, forCellWithReuseIdentifier: MyCell.reuseIdentifier)
-        return cv
-    }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupCollectionView()
-    }
-    
-    private func setupCollectionView() {
-        view.addSubview(collectionView)
-        
-        NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 100)
-        ])
-    }
-    
-    // MARK: UICollectionViewDataSource
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCell.reuseIdentifier, for: indexPath) as! MyCell
-        cell.titleLabel.text = "\(indexPath.item)"
-        
-        // 셀 배경색 설정
-        cell.backgroundColor = indexPath.item % 2 == 0 ? .lightGray : .gray
-        
-        return cell
-    }
-}
-
-class MyCell: UICollectionViewCell {
-    static let reuseIdentifier = "MyCell"
-    
-    var titleLabel: UILabel!
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupUI()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupUI()
-    }
-    
-    private func setupUI() {
-        titleLabel = UILabel()
-        titleLabel.textAlignment = .center
-        titleLabel.textColor = .black
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(titleLabel)
-        
-        NSLayoutConstraint.activate([
-            titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
-        ])
-    }
-}
-```
-
-</details>
-
-
-
-<br><br>
-
-[[TOP]](#)
-
-<br><br>
-
 # UICollectionView Methods
 
 
@@ -838,6 +743,11 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 
 # 가로로 스크롤하는 콜렉션뷰 만들기
 
+### 화면
+<img width="300" alt="ezgif-2-3785a1d479" src="https://github.com/isGeekCode/TIL/assets/76529148/6cae6949-1c11-4d4e-8bee-c75620d2944f">
+
+<br><br>
+
 UICollectionViewFlowLayout을 통해 설정할 수 있다. 
 ```swift
     lazy var collectionView: UICollectionView = {
@@ -856,7 +766,92 @@ UICollectionViewFlowLayout을 통해 설정할 수 있다.
 
 ```
 
+### 전체코드 보기
 
+<details>
+  <summary><b>코드보기</b></summary>
+
+```swift
+import UIKit
+
+class ViewController: UIViewController, UICollectionViewDataSource {
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 20
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.dataSource = self
+        cv.backgroundColor = .white
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.register(MyCell.self, forCellWithReuseIdentifier: MyCell.reuseIdentifier)
+        return cv
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupCollectionView()
+    }
+    
+    private func setupCollectionView() {
+        view.addSubview(collectionView)
+        
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.heightAnchor.constraint(equalToConstant: 100)
+        ])
+    }
+    
+    // MARK: UICollectionViewDataSource
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCell.reuseIdentifier, for: indexPath) as! MyCell
+        cell.titleLabel.text = "\(indexPath.item)"
+        
+        // 셀 배경색 설정
+        cell.backgroundColor = indexPath.item % 2 == 0 ? .lightGray : .gray
+        
+        return cell
+    }
+}
+
+class MyCell: UICollectionViewCell {
+    static let reuseIdentifier = "MyCell"
+    
+    var titleLabel: UILabel!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupUI()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupUI()
+    }
+    
+    private func setupUI() {
+        titleLabel = UILabel()
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = .black
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(titleLabel)
+        
+        NSLayoutConstraint.activate([
+            titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ])
+    }
+}
+```
+
+</details>
 <br><br>
 
 [[TOP]](#)
