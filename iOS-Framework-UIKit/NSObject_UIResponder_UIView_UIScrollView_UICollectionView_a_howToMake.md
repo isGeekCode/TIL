@@ -113,6 +113,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 ### 전체코드
 
 ```swift
+class ViewController {
+
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 100, height: 100) // 셀 크기 설정
@@ -128,6 +130,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         cv.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
         return cv
     }()
+    
+    
+    override func viewDidLoad {
+        super.viewDidLoad()
+        
+        // AutoLayout Codes..
+    }
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -350,6 +359,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cv.dataSource = self
         cv.backgroundColor = .white
         cv.translatesAutoresizingMaskIntoConstraints = false
+        // 여러 개의 셀 등록
         cv.register(MyCell.self, forCellWithReuseIdentifier: MyCell.reuseIdentifier)
         cv.register(YourCell.self, forCellWithReuseIdentifier: YourCell.reuseIdentifier)
         return cv
@@ -463,29 +473,6 @@ class YourCell: UICollectionViewCell {
 }
 ```
 
-
-<br><br>
-
-
-## 가로로 스크롤하는 콜렉션뷰 만들기
-
-UICollectionViewFlowLayout을 통해 설정할 수 있다. 
-```swift
-    lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        // 스크롤 방향설정
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 20
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.dataSource = self
-        cv.backgroundColor = .white
-        cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.register(MyCell.self, forCellWithReuseIdentifier: MyCell.reuseIdentifier)
-        return cv
-    }()
-
-```
 
 <br><br>
 
@@ -690,6 +677,29 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 
 <br><br>
 
+# 가로로 스크롤하는 콜렉션뷰 만들기
+
+UICollectionViewFlowLayout을 통해 설정할 수 있다. 
+```swift
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        // 스크롤 방향설정
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 20
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.dataSource = self
+        cv.backgroundColor = .white
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.register(MyCell.self, forCellWithReuseIdentifier: MyCell.reuseIdentifier)
+        return cv
+    }()
+
+```
+
+
+
+<br><br>
 
 # 그리드 형태의 콜렉션뷰
 
