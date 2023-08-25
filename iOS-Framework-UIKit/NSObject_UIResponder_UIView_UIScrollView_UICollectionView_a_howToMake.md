@@ -2,6 +2,28 @@
 
 CollectionView는 iOS에서 다양한 방식으로 데이터를 표시하는 컴포넌트로, TableView와 비슷한 역할을 한다. 하지만 TableView와는 몇 가지 중요한 차이점이 있다.
 
+## 색인
+- [CollectionView와 TableView의 차이점](#collectionview와-tableview의-차이점)
+- [공통된 특징](#공통된-특징)
+- [기본 사용법](#기본-사용법)
+- [Cell 크기 세팅하기](#cell-크기-세팅하기)
+    - [단일 셀 크기 - 상단 인스턴스 변수로 설정하는 경우](#단일-셀-크기---상단-인스턴스-변수로-설정하는-경우)
+    - [단일 셀 크기 - collectionView 메서드로 설정하는 경우](#단일-셀-크기---collectionview-메서드로-설정하는-경우)
+- [여러 셀 크기가 들어가는 경우](#여러-셀-크기가-들어가는-경우)
+    - [item의 값에 따라 크기가 다른 경우](#item의-값에-따라-크기가-다른-경우)
+    - [item 개수에 따라 셀의 크기가 다른 경우](#item-개수에-따라-셀의-크기가-다른-경우)
+- [UICollectionViewCell 등록해서 재사용하기](#uicollectionviewcell-등록해서-재사용하기)
+    - [여러개의 UICollectionViewCell을 사용하는 경우](#여러개의-uicollectionviewcell을-사용하는-경우)
+- [UICollectionView Methods](#uicollectionview-methods)
+    - [UICollectionViewDelegateFlowLayout](#uicollectionviewdelegateflowlayout)
+        - [상단 인스턴스 속성으로 세팅하는 경우](#상단-인스턴스-속성으로-세팅하는-경우)
+        - [Delegate 메서드로 세팅하는 경우](#delegate-메서드로-세팅하는-경우)
+- [가로로 스크롤하는 콜렉션뷰 만들기](#가로로-스크롤하는-콜렉션뷰-만들기)
+- [그리드 형태의 콜렉션뷰](#그리드-형태의-콜렉션뷰)
+- [3 * 3 횡스크롤 그리드](#3--3-횡스크롤-그리드)
+- [3 * n  종스크롤 그리드](#3--n--종스크롤-그리드)
+
+
 ## CollectionView와 TableView의 차이점
 
 - 다양한 레이아웃: TableView는 단일 열로 구성된 리스트를 표시하는 데 주로 사용된다. 하지만 CollectionView는 다양한 레이아웃을 가지고 있어 그리드, 스택, 플로우 레이아웃 등 다양한 형태로 데이터를 표현할 수 있다.
@@ -591,6 +613,8 @@ class MyCell: UICollectionViewCell {
 
 <br><br>
 
+### 상단 인스턴스 속성으로 세팅하는 경우
+
 
 ```swift
 lazy var collectionView: UICollectionView = {
@@ -702,6 +726,10 @@ UICollectionViewFlowLayout을 통해 설정할 수 있다.
 <br><br>
 
 # 그리드 형태의 콜렉션뷰
+
+그리드 스타일을 만들 때에는 고려해야할 요소들이 있다.
+- 콜렉션뷰 자체의 가로 세로 길이
+- 셀 가로 세로길이
 
 ## 3 * 3 횡스크롤 그리드
 
