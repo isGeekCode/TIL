@@ -24,6 +24,12 @@ CollectionView는 iOS에서 다양한 방식으로 데이터를 표시하는 컴
 - [3 * n  종스크롤 그리드](#3--n--종스크롤-그리드)
 
 
+<br><br>
+
+- [[TOP]](#)
+
+<br><br>
+
 ## CollectionView와 TableView의 차이점
 
 - 다양한 레이아웃: TableView는 단일 열로 구성된 리스트를 표시하는 데 주로 사용된다. 하지만 CollectionView는 다양한 레이아웃을 가지고 있어 그리드, 스택, 플로우 레이아웃 등 다양한 형태로 데이터를 표현할 수 있다.
@@ -32,6 +38,11 @@ CollectionView는 iOS에서 다양한 방식으로 데이터를 표시하는 컴
 
 - 다중 열 및 섹션: TableView는 주로 단일 열을 가지는 리스트를 표시하는 데 사용되지만, CollectionView는 다중 열을 가질 수 있다. 또한, 섹션을 사용하여 데이터를 그룹화하고 여러 열로 표시할 수도 있다.
 
+<br><br>
+
+- [[TOP]](#)
+
+<br><br>
 
 ## 공통된 특징
 
@@ -124,6 +135,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
 <br><br>
 
+- [[TOP]](#)
+
+<br><br>
+
 ## Cell 크기 세팅하기
 
 ### 단일 셀 크기 - 상단 인스턴스 변수로 설정하는 경우
@@ -187,6 +202,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
 <br><br>
 
+
+- [[TOP]](#)
+
+<br><br>
+
 ### 단일 셀 크기 - collectionView 메서드로 설정하는 경우
 
 UICollectionViewDelegateFlowLayout 프로토콜을 이용해 구현할 수 있다. 
@@ -243,6 +263,10 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 
 <br><br>
 
+- [[TOP]](#)
+
+<br><br>
+
 ### item 개수에 따라 셀의 크기가 다른 경우
 
 
@@ -271,6 +295,10 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 
 <br><br>
 
+
+- [[TOP]](#)
+
+<br><br>
 
 ## UICollectionViewCell 등록해서 재사용하기
 
@@ -361,6 +389,11 @@ extension ViewController: UICollectionViewDelegate {
 
 ```
 
+
+<br><br>
+
+
+- [[TOP]](#)
 
 <br><br>
 
@@ -498,6 +531,12 @@ class YourCell: UICollectionViewCell {
 
 <br><br>
 
+
+- [[TOP]](#)
+
+<br><br>
+
+
 ### 전체코드 보기
 
 <details>
@@ -589,6 +628,11 @@ class MyCell: UICollectionViewCell {
 <br><br>
 
 
+- [[TOP]](#)
+
+<br><br>
+
+
 # UICollectionView Methods
 
 
@@ -640,6 +684,13 @@ lazy var collectionView: UICollectionView = {
 
 
 <br><br>
+
+
+
+- [[TOP]](#)
+
+<br><br>
+
 
 
 ### Delegate 메서드로 세팅하는 경우
@@ -698,6 +749,11 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 ```
 
 </details>
+
+<br><br>
+
+
+- [[TOP]](#)
 
 <br><br>
 
@@ -833,6 +889,11 @@ class Cell: UICollectionViewCell {
 
 <br><br>
 
+
+- [[TOP]](#)
+
+<br><br>
+
 ## 3 * n  종스크롤 그리드
 
 인스타그램처럼 아래로 내려간다고 생각하면 된다.  
@@ -952,6 +1013,11 @@ class Cell: UICollectionViewCell {
 
 <br><br>
 
+
+
+- [[TOP]](#)
+
+<br><br>
 
 ## History
 - 230701 : 초안작성
