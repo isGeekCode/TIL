@@ -22,14 +22,14 @@ CollectionView는 iOS에서 다양한 방식으로 데이터를 표시하는 컴
 TableView는 단순한 리스트 표시에 적합하고, CollectionView는 더 복잡하고 다양한 데이터 표현에 유용하다.
 
 
-## 템플릿
+# 기본 사용법
 
-- 화면
+### 화면
 <img width="300" alt="스크린샷 2023-08-25 오후 1 20 04" src="https://github.com/isGeekCode/TIL/assets/76529148/d2f7cd19-51b7-4d62-ad07-4452cdd7ca99">
 
 <br>
 
-- 전체코드
+### 전체코드
 
 <details>
   <summary><b>코드보기</b></summary>
@@ -114,7 +114,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
 <br><br>
 
-- 전체코드
+### 전체코드
 
 <details>
   <summary><b>코드보기</b></summary>
@@ -165,13 +165,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
 <br><br>
 
-- collectionView 메서드로 설정하는 경우
+## collectionView 메서드로 설정하는 경우
 
 UICollectionViewDelegateFlowLayout 프로토콜을 이용해 구현할 수 있다. 
 
 <br><br>
 
-- 전체코드
+### 전체코드
 
 <details>
   <summary><b>코드보기</b></summary>
@@ -199,30 +199,37 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 
 <br><br>
 
-### 여러 셀 크기가 들어가는 경우
+## 여러 셀 크기가 들어가는 경우
 
-- item의 값에 따라 크기가 다른 경우
+### item의 값에 따라 크기가 다른 경우
 
 
 <details>
   <summary><b>코드보기</b></summary>
+  
 ```swift
-func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    // itemList의 각 항목에 따라 다른 셀 크기 설정
-    let item = itemList[indexPath.item]
-    if item == "Item 1" {
-        return CGSize(width: 100, height: 100)
-    } else if item == "Item 2" {
-        return CGSize(width: 150, height: 50)
-    } else {
-        return CGSize(width: 100, height: 120)
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // itemList의 각 항목에 따라 다른 셀 크기 설정
+        let item = itemList[indexPath.item]
+        if item == "Item 1" {
+            return CGSize(width: 100, height: 100)
+        } else if item == "Item 2" {
+            return CGSize(width: 150, height: 50)
+        } else {
+            return CGSize(width: 100, height: 120)
+        }
     }
+}
 ```
+
 </details>
 
 <br><br>
 
-- item 개수에 따라 셀의 크기가 다른 경우
+### item 개수에 따라 셀의 크기가 다른 경우
 
 
 <details>
@@ -352,7 +359,7 @@ extension ViewController: UICollectionViewDelegate {
 
 <br><br>
 
--  여러개의 UICollectionViewCell을 사용하는 경우
+###  여러개의 UICollectionViewCell을 사용하는 경우
 
 <br><br>
 
@@ -513,7 +520,7 @@ UICollectionViewFlowLayout을 통해 설정할 수 있다.
 
 <br><br>
 
-- 전체코드 보기
+### 전체코드 보기
 
 <details>
   <summary><b>코드보기</b></summary>
@@ -604,6 +611,8 @@ class MyCell: UICollectionViewCell {
 <br><br>
 
 
+# UICollectionView Methods
+
 
 ## UICollectionViewDelegateFlowLayout
 다양한 레이아웃 설정을 커스터마이즈할 수 있는 메서드를 제공한다. 
@@ -656,7 +665,7 @@ lazy var collectionView: UICollectionView = {
 <br><br>
 
 
-- Delegate 메서드로 세팅하는 경우
+### Delegate 메서드로 세팅하는 경우
 
 
 <br><br>
@@ -716,16 +725,16 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 <br><br>
 
 
-## 그리드 형태의 콜렉션뷰
+# 그리드 형태의 콜렉션뷰
 
-### 3 * 3 횡스크롤 그리드
+## 3 * 3 횡스크롤 그리드
 
 - 동작화면
 <img width="300" alt="ezgif-2-1df36bf8e6" src="https://github.com/isGeekCode/TIL/assets/76529148/a7b0c47e-336e-4ab7-aed6-8fde6cef4a22">
 
 <br><br>
 
-- 전체코드
+### 전체코드
 
 <details>
   <summary><b>코드보기</b></summary>
@@ -820,7 +829,7 @@ class Cell: UICollectionViewCell {
 
 <br><br>
 
-### 3 * n  종스크롤 그리드
+## 3 * n  종스크롤 그리드
 
 인스타그램처럼 아래로 내려간다고 생각하면 된다.  
 
@@ -831,13 +840,14 @@ class Cell: UICollectionViewCell {
  즉, 한 행에 3개의 셀이 있고 그 아래로 n행이 형성된다.  
 
 
-- 동작화면
+### 동작화면
+
 <img width="300" alt="ezgif-2-759074f266" src="https://github.com/isGeekCode/TIL/assets/76529148/388e40e0-274a-4892-8c4e-3c4b509bceee">
 
 
 <br><br>
 
-- 전체코드
+### 전체코드
 
 <details>
   <summary><b>코드보기</b></summary>
