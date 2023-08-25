@@ -324,7 +324,69 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 
 <br><br>
 
+Cell을 객체화 해서 사용하는 방법이 조금더 일반적이다.  
 
+셀은 좀더 커스텀하게 구현하기 때문이다. 
+
+셀을 사용하기위해서는 identifier를 사용하는데 두 가지 과정을 진행해야한다. 
+
+- 콜렉션 뷰자체에 해당 셀을 등록
+- 재사용 셀에 해당 셀을 등록
+
+<br><br>
+
+```swift
+class ViewController: UIViewController {
+    var collectionView = UICollectionView()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // 콜렉션 뷰자체에 해당 셀을 등록
+        collectionView.register(MyCell.self, forCellWithReuseIdentifier: "MyCell")
+    }
+}
+
+// 재사용 셀에 해당 셀을 등록
+extension ViewController: UICollectionViewDataSource {
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as! MyCell
+
+}
+```
+
+<br><br>
+
+위처럼 identifier를 하드코딩해도되지만 에러를 방지하기위해 아래처럼 UICollectionViewCell 내부에 identifier 변수를 하나 만들어서 사용하는 것이 좋다.  
+
+<br><br>
+
+```swift
+
+class MyCell: UICollectionViewCell {
+    static let reuseIdentifier = "MyCell"
+}
+
+class ViewController: UIViewController {
+    var collectionView = UICollectionView()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // 콜렉션 뷰자체에 해당 셀을 등록
+        collectionView.register(MyCell.self, forCellWithReuseIdentifier: MyCell.reuseIdentifier)
+    }
+}
+
+// 재사용 셀에 해당 셀을 등록
+extension ViewController: UICollectionViewDataSource {
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCell.reuseIdentifier, for: indexPath) as! MyCell
+
+}
+```
+
+전체 코드로 보자.  
 
 ```swift
 import UIKit
