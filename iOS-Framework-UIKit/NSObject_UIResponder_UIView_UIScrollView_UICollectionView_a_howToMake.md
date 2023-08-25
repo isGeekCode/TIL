@@ -486,7 +486,6 @@ extension ViewController: UICollectionViewDelegate {
 ```swift
 import UIKit
 
-
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -619,6 +618,92 @@ class YourCell: UICollectionViewCell {
 
 
 # UICollectionView Methods
+
+## UICollectionViewDataSource
+UICollectionViewDataSource 프로토콜은 UICollectionView의 데이터 소스를 관리하는 메서드들을 정의한다.  
+
+이 프로토콜을 구현하여 콜렉션 뷰의 셀과 섹션을 구성하는 데이터를 제공하는 것이다.  
+
+- collectionView(_:numberOfItemsInSection:): 섹션당 셀의 개수를 반환
+- collectionView(_:cellForItemAt:): 지정된 인덱스 경로에 해당하는 셀을 반환
+- numberOfSections(in:): 콜렉션 뷰 내의 섹션 개수를 반환 (선택사항)
+- collectionView(_:viewForSupplementaryElementOfKind:at:): 헤더나 푸터 뷰를 반환 (선택사항)
+- collectionView(_:canMoveItemAt:): 셀이 이동 가능한지 여부를 반환 (선택사항)
+- collectionView(_:moveItemAt:to:): 셀을 다른 위치로 이동 (선택사항)
+
+
+```
+
+extension ViewController: UICollectionViewDataSource {
+
+    // 예시: 섹션별로 배열이 있을 때 해당 섹션의 아이템 개수 반환
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataArray[section].count 
+    }
+
+
+    // 예시: 데이터 배열에서 해당 아이템을 가져와 셀에 설정
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellIdentifier", for: indexPath) as! CustomCollectionViewCell
+        
+        let item = dataArray[indexPath.section][indexPath.item]  
+        cell.configure(with: item)
+        
+        return cell
+    }
+
+    // 예시: 섹션 개수 반환
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return dataArray.count 
+    }
+
+     // 예시: 섹션 헤더 뷰에 타이틀 설정
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderIdentifier", for: indexPath) as! CustomHeaderView
+        
+        headerView.titleLabel.text = "Section \(indexPath.section)"
+        
+        return headerView
+    }
+
+    // 예시: 모든 셀을 이동 가능하게 설정
+    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
+        return true 
+    }
+
+    // 예시: 셀 이동시 데이터 배열의 아이템 위치 변경
+    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedItem = dataArray[sourceIndexPath.section].remove(at: sourceIndexPath.item)
+        dataArray[destinationIndexPath.section].insert(movedItem, at: destinationIndexPath.item)
+    }
+}
+```
+
+<br><br>
+
+[[TOP]](#)
+
+<br><br>
+
+## UICollectionViewDelegate
+
+UICollectionView에서 발생하는 이벤트와 동작을 관리하고 제어하는 메서드를 정의한다.  
+
+이를 통해 콜렉션 뷰 내에서 발생하는 사용자 상호작용 및 뷰 관련 동작을 처리할 수 있다.
+
+
+
+- collectionView(_:shouldSelectItemAt:): 셀이 선택될 때 호출되며 선택 가능 여부를 반환
+- collectionView(_:didSelectItemAt:): 셀이 선택되었을 때 호출되는 메서드
+- collectionView(_:shouldDeselectItemAt:): 셀의 선택 해제 가능 여부를 반환
+- collectionView(_:didDeselectItemAt:): 셀의 선택이 해제되었을 때 호출되는 메서드
+- collectionView(_:shouldHighlightItemAt:): 셀이 강조 표시될 때 호출되며 강조 표시 가능 여부를 반환
+- collectionView(_:didHighlightItemAt:): 셀이 강조 표시되었을 때 호출되는 메서드
+- collectionView(_:didUnhighlightItemAt:): 셀의 강조 표시가 해제되었을 때 호출되는 메서드
+
+
+예시 코드는 다시 찾아봐야겠다. 이해가 안간다.  
+
 
 
 ## UICollectionViewDelegateFlowLayout
