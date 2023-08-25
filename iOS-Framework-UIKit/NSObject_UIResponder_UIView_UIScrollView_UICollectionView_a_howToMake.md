@@ -40,7 +40,7 @@ CollectionView는 iOS에서 다양한 방식으로 데이터를 표시하는 컴
 
 <br><br>
 
-- [[TOP]](#)
+[[TOP]](#)
 
 <br><br>
 
@@ -55,12 +55,25 @@ CollectionView는 iOS에서 다양한 방식으로 데이터를 표시하는 컴
 TableView는 단순한 리스트 표시에 적합하고, CollectionView는 더 복잡하고 다양한 데이터 표현에 유용하다.
 
 
+
+<br><br>
+
+[[TOP]](#)
+
+<br><br>
+
+
 # 기본 사용법
 
 ### 화면
 <img width="300" alt="스크린샷 2023-08-25 오후 1 20 04" src="https://github.com/isGeekCode/TIL/assets/76529148/d2f7cd19-51b7-4d62-ad07-4452cdd7ca99">
 
-<br>
+
+<br><br>
+
+[[TOP]](#)
+
+<br><br>
 
 ### 전체코드
 
@@ -133,11 +146,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 ```
 
 
-<br><br>
-
-- [[TOP]](#)
 
 <br><br>
+
+[[TOP]](#)
+
+<br><br>
+
 
 ## Cell 크기 세팅하기
 
@@ -200,10 +215,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 }
 ```
 
+
 <br><br>
 
-
-- [[TOP]](#)
+[[TOP]](#)
 
 <br><br>
 
@@ -235,6 +250,11 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 ```
 
 
+
+<br><br>
+
+[[TOP]](#)
+
 <br><br>
 
 ## 여러 셀 크기가 들어가는 경우
@@ -261,9 +281,10 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 ```
 
 
+
 <br><br>
 
-- [[TOP]](#)
+[[TOP]](#)
 
 <br><br>
 
@@ -295,8 +316,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 
 <br><br>
 
-
-- [[TOP]](#)
+[[TOP]](#)
 
 <br><br>
 
@@ -392,8 +412,7 @@ extension ViewController: UICollectionViewDelegate {
 
 <br><br>
 
-
-- [[TOP]](#)
+[[TOP]](#)
 
 <br><br>
 
@@ -529,10 +548,10 @@ class YourCell: UICollectionViewCell {
 ```
 
 
+
 <br><br>
 
-
-- [[TOP]](#)
+[[TOP]](#)
 
 <br><br>
 
@@ -625,13 +644,12 @@ class MyCell: UICollectionViewCell {
 </details>
 
 
-<br><br>
-
-
-- [[TOP]](#)
 
 <br><br>
 
+[[TOP]](#)
+
+<br><br>
 
 # UICollectionView Methods
 
@@ -683,11 +701,10 @@ lazy var collectionView: UICollectionView = {
 ```
 
 
+
 <br><br>
 
-
-
-- [[TOP]](#)
+[[TOP]](#)
 
 <br><br>
 
@@ -750,10 +767,10 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 
 </details>
 
+
 <br><br>
 
-
-- [[TOP]](#)
+[[TOP]](#)
 
 <br><br>
 
@@ -778,6 +795,9 @@ UICollectionViewFlowLayout을 통해 설정할 수 있다.
 ```
 
 
+<br><br>
+
+[[TOP]](#)
 
 <br><br>
 
@@ -789,8 +809,13 @@ UICollectionViewFlowLayout을 통해 설정할 수 있다.
 
 ## 3 * 3 횡스크롤 그리드
 
-- 동작화면
+### 동작화면
 <img width="300" alt="ezgif-2-1df36bf8e6" src="https://github.com/isGeekCode/TIL/assets/76529148/a7b0c47e-336e-4ab7-aed6-8fde6cef4a22">
+
+
+<br><br>
+
+[[TOP]](#)
 
 <br><br>
 
@@ -887,10 +912,10 @@ class Cell: UICollectionViewCell {
 
 </details>
 
+
 <br><br>
 
-
-- [[TOP]](#)
+[[TOP]](#)
 
 <br><br>
 
@@ -909,6 +934,11 @@ class Cell: UICollectionViewCell {
 
 <img width="300" alt="ezgif-2-759074f266" src="https://github.com/isGeekCode/TIL/assets/76529148/388e40e0-274a-4892-8c4e-3c4b509bceee">
 
+
+
+<br><br>
+
+[[TOP]](#)
 
 <br><br>
 
@@ -1011,11 +1041,10 @@ class Cell: UICollectionViewCell {
 
 </details>
 
+
 <br><br>
 
-
-
-- [[TOP]](#)
+[[TOP]](#)
 
 <br><br>
 
