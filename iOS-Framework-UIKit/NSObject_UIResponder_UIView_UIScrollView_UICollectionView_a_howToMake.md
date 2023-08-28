@@ -20,9 +20,12 @@ CollectionView는 iOS에서 다양한 방식으로 데이터를 표시하는 컴
         - [Delegate 메서드로 세팅하는 경우](#delegate-메서드로-세팅하는-경우)
 - [가로로 스크롤하는 콜렉션뷰 만들기](#가로로-스크롤하는-콜렉션뷰-만들기)
 - [그리드 형태의 콜렉션뷰](#그리드-형태의-콜렉션뷰)
-- [3 * 3 횡스크롤 그리드](#3--3-횡스크롤-그리드)
-- [3 * n  종스크롤 그리드](#3--n--종스크롤-그리드)
-
+    - [3 * 3 횡스크롤 그리드](#3--3-횡스크롤-그리드)
+    - [3 * n  종스크롤 그리드](#3--n--종스크롤-그리드)
+- [터치에 따라 UI를 반영하는 CollectionView](#터치에 따라-UI를-반영하는-CollectionView)
+    - [isSelected 사용하기](#isSelected-사용하기)
+    - [Array에 선택된 셀정보를 담아서 보관하기](#Array에-선택된-셀정보를-담아서-보관하기)
+    - [Index를 가리키는 Int값 하나를 보관하는 방법](#Index를-가리키는-Int값-하나를-보관하는-방법)
 
 <br><br>
 
@@ -1183,6 +1186,468 @@ class Cell: UICollectionViewCell {
 
 </details>
 
+<br><br>
+
+## 터치에 따라 UI를 반영하는 CollectionView
+
+셀의 터치와 관련된 방법은 여러가지가 있다. 
+
+- isSelected : 셀 자체의 isSelected 값을 변경하는 방법
+- 임시값을 저장하는 방법
+
+그중 첫번째 isSelected에 대해 알아보자. 
+
+### isSelected 사용하기
+
+이 변수는 Cell이나 버튼에서 볼 수 있는 프로퍼티이다. 
+
+사용자가 특정 UI요소들을 선택하면 해당 요소의 선택상태값을 저장하고 있는 값이다.  
+
+그래서 선택과 관련된 이벤트 처리나 시각적인 처리를 담당할 수 있다.
+
+지금 소개하는 CollectionView에서 사용할 떄에는 셀을 클릭했을 때, 해당 셀이 갖고있는 isSelected 체크 하는 것이다.  
+그래서 각각의 셀들은 고유한 isSelected 프로퍼티를 가지고 있다.
+
+- `func collectionView(_ collectionView:didSelectItemAt indexPath:)` 메서드를 구현하지않더라도 셀 클래스 내부에 override var isSelected: Bool { } 를 구현해서 사용할 수 있다. 
+
+
+-  override isSelected { }가 여러번 호출되는 이유
+셀을 클릭하게 되면 최초에는 isSelected 를 한번 변경한다.  
+
+ 이후, 새로운 셀을 클릭하면 이전셀이 false되면서 한번, 새로운 셀이 true로 바뀌면서 한번 호출된다.  
+ 
+ 때문에 print()를 사용하면 총 두번 호출이 되고, 순식간에 true false이런식으로 두번 찍히게 된다. 
+ 
+ 위처럼 여러번 나오는 것을 방지하여 사용하려면 didSet을 이용하자.
+
+
+- 사용예
+
+```swift
+struct BuyableItem {
+    var name: String
+    var quantity: String
+}
+
+
+import UIKit
+
+class BuyableListCollectionViewCell: UICollectionViewCell {
+    static let reuseIdentifier = "BuyableListCollectionViewCell"
+    
+    override var isSelected: Bool {
+        didSet {
+            backgroundColor = isSelected ? .systemYellow : .white
+        }
+    }
+
+    let nameLabel: UILabel = {
+        let label = UILabel()
+        label.font = .boldSystemFont(ofSize: 16)
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        return label
+    }()
+    
+    let quantityLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
+        label.textColor = .gray
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        return label
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupUI() {
+        contentView.addSubview(nameLabel)
+        contentView.addSubview(quantityLabel)
+        
+        NSLayoutConstraint.activate([
+            nameLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            nameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: -10),
+            
+            quantityLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
+            quantityLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
+        ])
+
+    }
+    
+    func configure(with item: BuyableItem) {
+        nameLabel.text = item.name
+        quantityLabel.text = "Quantity: \(item.quantity)"
+    }
+}
+
+
+import UIKit
+
+class ViewController: UIViewController {
+    
+    var collectionView: UICollectionView!
+    
+    var buyableItems: [BuyableItem] = [
+        BuyableItem(name: "Product A", quantity: "5"),
+        BuyableItem(name: "Product B", quantity: "12"),
+        BuyableItem(name: "Product C", quantity: "5"),
+        BuyableItem(name: "Product D", quantity: "15"),
+        BuyableItem(name: "Product E", quantity: "18"),
+        BuyableItem(name: "Product F", quantity: "22"),
+        BuyableItem(name: "Product G", quantity: "5"),
+        BuyableItem(name: "Product H", quantity: "52"),
+    ]
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupCollectionView()
+    }
+    
+    func setupCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: view.frame.width - 20, height: 100)
+        layout.minimumInteritemSpacing = 10
+        
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(BuyableListCollectionViewCell.self, forCellWithReuseIdentifier: BuyableListCollectionViewCell.reuseIdentifier)
+        collectionView.backgroundColor = .white
+        view.addSubview(collectionView)
+    }
+}
+
+extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return buyableItems.count
+    }
+
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BuyableListCollectionViewCell.reuseIdentifier, for: indexPath) as! BuyableListCollectionViewCell
+        cell.configure(with: buyableItems[indexPath.item])
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {  }
+}
+
+```
+
+- 적용화면
+
+<img width="300" alt="무제" src="https://github.com/isGeekCode/TIL/assets/76529148/ba300282-6697-49b0-870e-84f955a23f20">
+
+
+- 이 방법의 한계
+이 방법은 동시에 여러 셀을 활성화하는 것은 어렵다. 셀마다 isSelected를 갖고는 있지만 이걸 중앙에서 처리하지않기 때문이다.  그래서 여러 셀을 활성화 하는것을 유지하려면 다른 방법들을 사용해야한다. 
+
+<br><br>
+
+### Array에 선택된 셀정보를 담아서 보관하기
+
+이번엔  `var selectedIndexPaths: [IndexPath] = []` 혹은 `var selectedIndexPaths: [Int] = []`를 가지고 처리하는 방법이다.  
+
+- 1. 빈배열을 가지고 있다.
+- 2. 클릭시 로직
+    - 배열에 있는지 체크
+        - 배열에 없다면 기존에 클릭하지않은것
+            - 배열에 추가  
+        - 배열에 있다면 기존에 클릭한 것
+            - 배열에서 삭제
+- 3. 새롭게 콜렉션뷰를 업데이트한다. 
+    - 배열에 있다면 @@한다
+    - 배열에 없다면 $$한다.
+
+
+```swift
+
+struct BuyableItem {
+    var name: String
+    var quantity: String
+}
+
+
+class ViewController: UIViewController {
+    
+    var collectionView: UICollectionView!
+    
+    // 추가: 선택된 셀의 인덱스 경로를 추적하는 배열
+    var selectedIndexPaths: [IndexPath] = []  
+    
+    var buyableItems: [BuyableItem] = [
+        BuyableItem(name: "Product A", quantity: "5"),
+        BuyableItem(name: "Product B", quantity: "12"),
+        BuyableItem(name: "Product C", quantity: "5"),
+        BuyableItem(name: "Product D", quantity: "15"),
+        BuyableItem(name: "Product E", quantity: "18"),
+        BuyableItem(name: "Product F", quantity: "22"),
+        BuyableItem(name: "Product G", quantity: "5"),
+        BuyableItem(name: "Product H", quantity: "52"),
+    ]
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupCollectionView()
+    }
+    
+    func setupCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: view.frame.width - 20, height: 100)
+        layout.minimumInteritemSpacing = 10
+        
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(BuyableListCollectionViewCell.self, forCellWithReuseIdentifier: BuyableListCollectionViewCell.reuseIdentifier)
+        collectionView.backgroundColor = .white
+        view.addSubview(collectionView)
+    }
+}
+
+extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return buyableItems.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let index = selectedIndexPaths.firstIndex(of: indexPath) {
+            selectedIndexPaths.remove(at: index)  // 선택 해제
+        } else {
+            selectedIndexPaths.append(indexPath)  // 선택
+        }
+        
+        collectionView.reloadItems(at: [indexPath])
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BuyableListCollectionViewCell.reuseIdentifier, for: indexPath) as! BuyableListCollectionViewCell
+        
+        if selectedIndexPaths.contains(indexPath) {
+            cell.backgroundColor = .systemYellow
+        } else {
+            cell.backgroundColor = .white
+        }
+        
+        cell.configure(with: buyableItems[indexPath.item])
+        return cell
+    }
+}
+
+class BuyableListCollectionViewCell: UICollectionViewCell {
+    static let reuseIdentifier = "BuyableListCollectionViewCell"
+
+    let nameLabel: UILabel = {
+        let label = UILabel()
+        label.font = .boldSystemFont(ofSize: 16)
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        return label
+    }()
+    
+    let quantityLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
+        label.textColor = .gray
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        return label
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupUI() {
+        contentView.addSubview(nameLabel)
+        contentView.addSubview(quantityLabel)
+        
+        NSLayoutConstraint.activate([
+            nameLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            nameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: -10),
+            
+            quantityLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
+            quantityLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
+        ])
+
+    }
+    
+    func configure(with item: BuyableItem) {
+        nameLabel.text = item.name
+        quantityLabel.text = "Quantity: \(item.quantity)"
+    }
+}
+```
+
+
+- 적용화면
+<img width="300" alt="화면 기록 2023-08-28 오후 3.42.39" src="https://github.com/isGeekCode/TIL/assets/76529148/946a4165-067f-4d30-a0a1-3efa8545773a">
+
+- 이 방법의 장점은 한번에 여러셀 정보를 Array에 담기 때문에 중앙에서 처리할 수 있다는 것이다.  심지어 애니메이션 효과가 된다!
+
+
+<br><br>
+
+### Index를 가리키는 Int값 하나를 보관하는 방법
+
+위 방법과 거의 동일하지만, 이번엔 nil체크 와 동일한지 체크를 한다. 
+
+```swift
+struct BuyableItem {
+    var name: String
+    var quantity: String
+}
+
+import UIKit
+
+class ViewController: UIViewController {
+    var collectionView: UICollectionView!
+
+    var selectedIndex: Int?  // 선택된 셀의 indexPath.item 값을 저장하는 변수
+    
+    var buyableItems: [BuyableItem] = [
+        BuyableItem(name: "Product A", quantity: "5"),
+        BuyableItem(name: "Product B", quantity: "12"),
+        BuyableItem(name: "Product C", quantity: "5"),
+        BuyableItem(name: "Product D", quantity: "15"),
+        BuyableItem(name: "Product E", quantity: "18"),
+        BuyableItem(name: "Product F", quantity: "22"),
+        BuyableItem(name: "Product G", quantity: "5"),
+        BuyableItem(name: "Product H", quantity: "52"),
+    ]    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupCollectionView()
+    }
+    
+    func setupCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: view.frame.width - 20, height: 100)
+        layout.minimumInteritemSpacing = 10
+        
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(BuyableListCollectionViewCell.self, forCellWithReuseIdentifier: BuyableListCollectionViewCell.reuseIdentifier)
+        collectionView.backgroundColor = .white
+        view.addSubview(collectionView)
+    }
+}
+
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return buyableItems.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if selectedIndex == indexPath.item {
+            selectedIndex = nil  // 선택 해제
+        } else {
+            selectedIndex = indexPath.item  // 선택
+        }
+        collectionView.reloadData()
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BuyableListCollectionViewCell.reuseIdentifier, for: indexPath) as! BuyableListCollectionViewCell
+
+        if let selectedIndex = selectedIndex, selectedIndex == indexPath.item {
+            cell.backgroundColor = .systemYellow
+        } else {
+            cell.backgroundColor = .white
+        }
+
+        cell.configure(with: buyableItems[indexPath.item])
+        return cell
+    }
+}
+
+class BuyableListCollectionViewCell: UICollectionViewCell {
+    static let reuseIdentifier = "BuyableListCollectionViewCell"
+
+    let nameLabel: UILabel = {
+        let label = UILabel()
+        label.font = .boldSystemFont(ofSize: 16)
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        return label
+    }()
+    
+    let quantityLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
+        label.textColor = .gray
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        return label
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupUI() {
+        contentView.addSubview(nameLabel)
+        contentView.addSubview(quantityLabel)
+        
+        NSLayoutConstraint.activate([
+            nameLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            nameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: -10),
+            
+            quantityLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
+            quantityLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
+        ])
+
+    }
+    
+    func configure(with item: BuyableItem) {
+        nameLabel.text = item.name
+        quantityLabel.text = "Quantity: \(item.quantity)"
+    }
+}
+
+```
+
+- 적용화면
+<img width="300" alt="화면 기록 2023-08-28 오후 3.44.45" src="https://github.com/isGeekCode/TIL/assets/76529148/2f47bd4c-94a0-4765-9013-473481b8c416">
+
+
+
+
+
+
+
+
+<br><br>
+
+[[TOP]](#)
+
+<br><br>
 
 <br><br>
 
@@ -1195,3 +1660,7 @@ class Cell: UICollectionViewCell {
 - 230825 : Cell 크기별 코드 작성
 - 230825 : 세로형태 그리드 스타일 생성
 - 230825 : 가로형태 그리드 스타일 생성
+- 230828 : 터치에 따라 UI를 반영하는 CollectionView
+    - isSelected 사용하기
+    - Array에 선택된 셀정보를 담아서 보관하기
+    - Index를 가리키는 Int값 하나를 보관하는 방법
