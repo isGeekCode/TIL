@@ -1347,7 +1347,7 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
 
 <img width="300" alt="무제" src="https://github.com/isGeekCode/TIL/assets/76529148/ba300282-6697-49b0-870e-84f955a23f20">
 
-
+  
 - 이 방법의 한계
 이 방법은 동시에 여러 셀을 활성화하는 것은 어렵다. 셀마다 isSelected를 갖고는 있지만 이걸 중앙에서 처리하지않기 때문이다.  그래서 여러 셀을 활성화 하는것을 유지하려면 다른 방법들을 사용해야한다. 
 
@@ -1498,8 +1498,9 @@ class BuyableListCollectionViewCell: UICollectionViewCell {
 
 
 - 적용화면
-<img width="300" alt="화면 기록 2023-08-28 오후 3.42.39" src="https://github.com/isGeekCode/TIL/assets/76529148/946a4165-067f-4d30-a0a1-3efa8545773a">
 
+<img width="300" alt="화면 기록 2023-08-28 오후 3.42.39" src="https://github.com/isGeekCode/TIL/assets/76529148/946a4165-067f-4d30-a0a1-3efa8545773a">
+  
 - 이 방법의 장점은 한번에 여러셀 정보를 Array에 담기 때문에 중앙에서 처리할 수 있다는 것이다.  심지어 애니메이션 효과가 된다!
 
 
@@ -1634,20 +1635,9 @@ class BuyableListCollectionViewCell: UICollectionViewCell {
 ```
 
 - 적용화면
+
 <img width="300" alt="화면 기록 2023-08-28 오후 3.44.45" src="https://github.com/isGeekCode/TIL/assets/76529148/2f47bd4c-94a0-4765-9013-473481b8c416">
-
-
-
-
-
-
-
-
-<br><br>
-
-[[TOP]](#)
-
-<br><br>
+  
 
 <br><br>
 
