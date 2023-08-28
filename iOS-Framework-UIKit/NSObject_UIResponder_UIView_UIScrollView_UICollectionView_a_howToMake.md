@@ -1345,7 +1345,7 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
 
 - 적용화면
 
-<img width="300" alt="무제" src="https://github.com/isGeekCode/TIL/assets/76529148/ba300282-6697-49b0-870e-84f955a23f20">
+<img width="300" alt="ezgif-2-f2fd60f9cd" src="https://github.com/isGeekCode/TIL/assets/76529148/fe27ab1f-be09-43de-a793-04b0eedb60f3">
 
   
 - 이 방법의 한계
@@ -1499,7 +1499,7 @@ class BuyableListCollectionViewCell: UICollectionViewCell {
 
 - 적용화면
 
-<img width="300" alt="화면 기록 2023-08-28 오후 3.42.39" src="https://github.com/isGeekCode/TIL/assets/76529148/946a4165-067f-4d30-a0a1-3efa8545773a">
+<img width="300" alt="ezgif-2-52b8925363" src="https://github.com/isGeekCode/TIL/assets/76529148/64c3a467-d13d-41f0-8a23-a8a0b78d7536">
   
 - 이 방법의 장점은 한번에 여러셀 정보를 Array에 담기 때문에 중앙에서 처리할 수 있다는 것이다.  심지어 애니메이션 효과가 된다!
 
@@ -1636,7 +1636,7 @@ class BuyableListCollectionViewCell: UICollectionViewCell {
 
 - 적용화면
 
-<img width="300" alt="화면 기록 2023-08-28 오후 3.44.45" src="https://github.com/isGeekCode/TIL/assets/76529148/2f47bd4c-94a0-4765-9013-473481b8c416">
+<img width="300" alt="ezgif-2-15a6319dc2" src="https://github.com/isGeekCode/TIL/assets/76529148/011db663-2d3e-40d4-8bf7-5b8e36628bad">
   
 
 <br><br>
