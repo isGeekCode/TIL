@@ -1348,8 +1348,15 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
 <img width="300" alt="ezgif-2-f2fd60f9cd" src="https://github.com/isGeekCode/TIL/assets/76529148/fe27ab1f-be09-43de-a793-04b0eedb60f3">
 
   
+<br>
+
+  
 - 이 방법의 한계
 이 방법은 동시에 여러 셀을 활성화하는 것은 어렵다. 셀마다 isSelected를 갖고는 있지만 이걸 중앙에서 처리하지않기 때문이다.  그래서 여러 셀을 활성화 하는것을 유지하려면 다른 방법들을 사용해야한다. 
+
+<br><br>
+
+[[TOP]](#)
 
 <br><br>
 
@@ -1505,6 +1512,11 @@ class BuyableListCollectionViewCell: UICollectionViewCell {
 
 
 <br><br>
+
+[[TOP]](#)
+
+<br><br>
+
 
 ### Index를 가리키는 Int값 하나를 보관하는 방법
 
