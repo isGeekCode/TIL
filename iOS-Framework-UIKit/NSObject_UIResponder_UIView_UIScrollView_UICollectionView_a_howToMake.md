@@ -22,7 +22,7 @@ CollectionView는 iOS에서 다양한 방식으로 데이터를 표시하는 컴
 - [그리드 형태의 콜렉션뷰](#그리드-형태의-콜렉션뷰)
     - [3 * 3 횡스크롤 그리드](#3--3-횡스크롤-그리드)
     - [3 * n  종스크롤 그리드](#3--n--종스크롤-그리드)
-- [터치에 따라 UI를 반영하는 CollectionView](#터치에 따라-UI를-반영하는-CollectionView)
+- [터치에 따라 UI를 반영하는 CollectionView](#터치에-따라-UI를-반영하는-CollectionView)
     - [isSelected 사용하기](#isSelected-사용하기)
     - [Array에 선택된 셀정보를 담아서 보관하기](#Array에-선택된-셀정보를-담아서-보관하기)
     - [Index를 가리키는 Int값 하나를 보관하는 방법](#Index를-가리키는-Int값-하나를-보관하는-방법)
