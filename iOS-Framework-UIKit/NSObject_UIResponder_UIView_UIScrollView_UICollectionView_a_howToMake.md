@@ -17,6 +17,7 @@ CollectionView는 iOS에서 다양한 방식으로 데이터를 표시하는 컴
 - [UICollectionView Methods](#uicollectionview-methods)
     - [UICollectionViewDelegateFlowLayout](#uicollectionviewdelegateflowlayout)
         - [상단 인스턴스 속성으로 세팅하는 경우](#상단-인스턴스-속성으로-세팅하는-경우)
+        - [ViewController 메서드 내부에서 세팅하는 경우](#ViewController-메서드-내부에서-세팅하는-경우)
         - [Delegate 메서드로 세팅하는 경우](#delegate-메서드로-세팅하는-경우)
 - [가로로 스크롤하는 콜렉션뷰 만들기](#가로로-스크롤하는-콜렉션뷰-만들기)
 - [그리드 형태의 콜렉션뷰](#그리드-형태의-콜렉션뷰)
@@ -763,6 +764,85 @@ lazy var collectionView: UICollectionView = {
 
 <br><br>
 
+
+### ViewController 메서드 내부에서 세팅하는 경우
+
+때로는 ViewController의 메서드 내부에서 생성을 해야하는 경우도 있다.
+
+이 때는 상단에 선언한 collectionView객체의 collectionViewLayout를 옵셔널 바인딩을 해서 사용한다. 
+
+```swift
+if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+    layout.minimumLineSpacing = 10
+    layout.minimumInteritemSpacing = 10
+    layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+}
+```
+
+옵셔널 바인딩으로 처리해야하는 몇가지 이유는 아래와 같다.
+
+- 옵셔널로 인한 타입 변환: collectionViewLayout은 실제로 UICollectionViewLayout 타입이지만, 이 프로퍼티에는 여러 종류의 레이아웃이 할당될 수 있다. 따라서 이를 특정 서브클래스 타입인 UICollectionViewFlowLayout로 변환하려면 옵셔널 다운캐스팅을 수행해야 한다.
+
+- CollectionView의 유무: 코드에서 collectionView의 유무와 연관이 있을 수 있다. collectionView가 없는 경우에는 collectionViewLayout도 사용할 수 없을 것이기 때문에, collectionView가 존재하는지 확인하고 그에 따른 조치를 취하는 것이 일반적이다.
+
+- 선택적인 레이아웃: 레이아웃이 선택적일 수도 있다. 즉, 앱의 레이아웃이 동적으로 변할 수 있으며, UICollectionViewFlowLayout이 한 종류의 레이아웃이지만 앱에서 다른 레이아웃을 사용하는 경우도 있을 수 있다.
+
+
+<br><br>
+
+
+- 전체코드
+
+```swift
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .white
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        return collectionView
+    }()
+
+    // 데이터 관련코드 생략...
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        setupLayout()
+    }
+
+    func setupLayout() {
+        view.addSubview(collectionView)
+
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        
+        // 레이아웃 세팅!!!!!!!!!!!
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.minimumLineSpacing = 10
+            layout.minimumInteritemSpacing = 10
+            layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        }
+    }
+    
+    // CollectionView Delegate 메서드 생략...
+}
+```
+
+
+
+<br><br>
+
+[[TOP]](#)
+
+<br><br>
 
 
 ### Delegate 메서드로 세팅하는 경우
