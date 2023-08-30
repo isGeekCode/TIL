@@ -1,4 +1,4 @@
-# Swift
+# Swift에 대한 소개
 - [Swift 공식 문서](https://www.swift.org/documentation/)
 
 swift에서 강조하는 특징은 3가지이다.

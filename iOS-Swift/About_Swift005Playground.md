@@ -89,7 +89,7 @@ PlaygroundPage.current.liveView = viewController
 
 UIBezierPath를 이용하면 선을 그려볼 수도 있다.  
 
-아래는 간단한 그래플르 그려본 예제이다.  
+아래는 간단한 그래프를 그려본 예제이다.  
 
 
 ```swift
