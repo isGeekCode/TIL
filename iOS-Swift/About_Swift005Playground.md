@@ -72,5 +72,85 @@ PlaygroundPage.current.liveView = viewController
 <img width="600" alt="스크린샷 2023-08-30 오전 9 19 39" src="https://github.com/isGeekCode/TIL/assets/76529148/70078ed5-59b3-4031-9892-809e38d3ab79">
 
 
+## 다양한 뷰를 보여줄 수 있다.
+조금더 다양한 코드도 구현해서 viewControler자체를 동일하게 빌드할 수 있다.
+
+심지어는 CollectionView 셀을 클릭했을 때, View가 변화하는 것도 볼 수 있다. 
+
+다만, 살짝 버벅거리는 것을 보니.. 너무 큰 작업은 무리가 아닐까 싶지만.. 이렇게도 가능하다는 것
+
+- [예시 코드](https://github.com/isGeekCode/TIL/blob/main/iOS-Architecture/iOS-Architecture/Architecture_301_MVC_CollectionView.md)
+
+<img width="600" alt="스크린샷 2023-08-30 오전 9 27 15" src="https://github.com/isGeekCode/TIL/assets/76529148/8070b382-8e60-4329-b18c-1d500178f89c">
+
+
+
+## 선 그리기
+
+UIBezierPath를 이용하면 선을 그려볼 수도 있다.  
+
+아래는 간단한 그래플르 그려본 예제이다.  
+
+
+```swift
+
+import UIKit
+import PlaygroundSupport
+
+class GraphView: UIView {
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        // 배경색 설정
+        UIColor.lightGray.setFill()
+        UIRectFill(rect)
+        
+        let path = UIBezierPath()
+        path.lineWidth = 2
+        
+        // x축 그리기
+        UIColor.black.setStroke()
+        path.move(to: CGPoint(x: 0, y: bounds.height / 2))
+        path.addLine(to: CGPoint(x: bounds.width, y: bounds.height / 2))
+        path.stroke()
+        
+        // y축 그리기
+        path.move(to: CGPoint(x: bounds.width / 2, y: 0))
+        path.addLine(to: CGPoint(x: bounds.width / 2, y: bounds.height))
+        path.stroke()
+        
+        // y = x 그래프 그리기 (빨간색)
+        let graphPath = UIBezierPath()
+        graphPath.lineWidth = 2
+        UIColor.red.setStroke()
+        
+        for x in 0...Int(bounds.width) {
+            let y = bounds.height - CGFloat(x)  // y = x 그래프의 식
+            if x == 0 {
+                graphPath.move(to: CGPoint(x: CGFloat(x), y: y))
+            } else {
+                graphPath.addLine(to: CGPoint(x: CGFloat(x), y: y))
+            }
+        }
+        
+        graphPath.stroke()
+    }
+}
+
+let viewController = UIViewController()
+let graphView = GraphView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+viewController.view.addSubview(graphView)
+PlaygroundPage.current.liveView = viewController
+
+```
+
+- 빌드화면
+
+<img width="400" alt="스크린샷 2023-08-30 오전 9 42 50" src="https://github.com/isGeekCode/TIL/assets/76529148/5b4ee062-a811-4450-ae69-e74bf9702850">
+
+
+
+
+
 ## History
 - 230830 : 초안작성
