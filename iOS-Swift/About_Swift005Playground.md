@@ -79,8 +79,7 @@ PlaygroundPage.current.liveView = viewController
 
 다만, 살짝 버벅거리는 것을 보니.. 너무 큰 작업은 무리가 아닐까 싶지만.. 이렇게도 가능하다는 것
 
-- [예시 코드](https://github.com/isGeekCode/TIL/blob/main/iOS-Architecture/iOS-Architecture/Architecture_301_MVC_CollectionView.md)
-
+- [예시 코드](https://github.com/isGeekCode/TIL/blob/main/iOS-Architecture/Architecture_301_MVC_CollectionView.md)
 <img width="600" alt="스크린샷 2023-08-30 오전 9 27 15" src="https://github.com/isGeekCode/TIL/assets/76529148/8070b382-8e60-4329-b18c-1d500178f89c">
 
 
