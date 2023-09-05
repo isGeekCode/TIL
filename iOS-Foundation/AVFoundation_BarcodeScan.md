@@ -119,10 +119,11 @@ extension BarCodeScanViewController: AVCaptureMetadataOutputObjectsDelegate {
     
     // 메타데이터 출력 델리게이트 메서드로 바코드 스캔 결과를 처리
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-        if let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject {
-            if let barcodeValue = metadataObject.stringValue {
-//                print("스캔한 바코드: \(barcodeValue)")
-            }
+        if let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
+            let barcodeValue = metadataObject.stringValue {
+            print("스캔한 바코드: \(barcodeValue)")
+            // 캡쳐 세션 종료
+            self.captureSession?.stopRunning()
         }
     }
 }
@@ -291,7 +292,7 @@ class BarCodeScanViewController: UIViewController {
         }
     }
     
-    /// 스캐너 생성 후  애니메이션 
+    /// 스캐너 생성 후 애니메이션 
     func animatePreviewLayerOpacity() {
         UIView.animate(withDuration: 0.5, animations: {
             self.videoPreviewLayer?.opacity = 1.0
@@ -310,9 +311,332 @@ class BarCodeScanViewController: UIViewController {
 ```
 
 
+- 전체코드
+
+```swift
+class BarCodeScanViewController: JwUIViewController, HelperProtocol {
+    
+    // AVCaptureSession은 카메라 세션을 관리하는 객체
+    var captureSession: AVCaptureSession?
+    // AVCaptureVideoPreviewLayer는 카메라 영상을 표시하는 레이어
+    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+
+    lazy var closeBarButtonItem: UIBarButtonItem = {
+        let imageSize = CGSize(width: 55, height: 55)
+        let normalImage = UIImage(named: "btn_close_n")?.imageWithSize(imageSize)
+        let rightBarButtonItem = UIBarButtonItem(image: normalImage,
+                                                 style: .plain,
+                                                 target: self,
+                                                 action: #selector(closeBtnTapped(_:)))
+        rightBarButtonItem.tintColor = .white
+        return rightBarButtonItem
+    }()
+    
+    @objc func closeBtnTapped(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = .clear
+        self.navigationItem.rightBarButtonItem = closeBarButtonItem
+        prepareTransitionAnimation()
+    }
+    
+    /// 스캐너 생성 전 애니메이션
+    func prepareTransitionAnimation() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.view.backgroundColor = .black  // 검정색으로 배경 변경
+        }) { _ in
+            // 캡쳐 세션 생성
+            self.setupCaptureSession()
+        }
+    }
+    
+    
+    /// 스캐너 생성 후 애니메이션 
+    func animatePreviewLayerOpacity() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.videoPreviewLayer?.opacity = 1.0
+        })
+    }
+
+    /// 캡쳐 세션 생성 메서드
+    func setupCaptureSession() {
+    
+        DispatchQueue.global(qos: .background).async {
+            
+            // AVCaptureSession 객체를 생성
+            self.captureSession = AVCaptureSession()
+            
+            // 기기의 기본 카메라를 호출
+            guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
+            
+            do {
+                // 카메라 입력을 설정
+                let input = try AVCaptureDeviceInput(device: captureDevice)
+                self.captureSession?.addInput(input)
+                
+                // 메타데이터 출력을 설정
+                let captureMetadataOutput = AVCaptureMetadataOutput()
+                self.captureSession?.addOutput(captureMetadataOutput)
+                
+                // 메타데이터 출력의 델리게이트를 설정하고 인식할 바코드 유형을 설정
+                captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+                captureMetadataOutput.metadataObjectTypes = [
+                    .qr, .upce, .code39, .code39Mod43, .ean13,
+                    .ean8, .code93, .code128, .pdf417, .aztec,
+                ]
+                
+                // 미리보기 레이어 생성
+                self.setupVideoPreviewLayer()
+                // 캡쳐 세션 시작
+                self.startCaptureSession()
+            } catch {
+                print(error)
+            }
+
+            // 스캔 세션이 시작된 후에 미리보기 레이어의 투명도를 조절
+            DispatchQueue.main.async {
+                self.animatePreviewLayerOpacity()
+            }
+        }
+    }
+    
+    /// 미리보기 레이어 생성 메서드
+    func setupVideoPreviewLayer() {
+        DispatchQueue.main.async {
+            // 바코드 스캔 영역을 정의
+            let scannerWidthMultiplier: CGFloat = 0.7
+            let scannerWidth = self.view.bounds.width * scannerWidthMultiplier
+            let scannerRectSize = CGSize(width: scannerWidth, height: scannerWidth)
+            let scannerRectOrigin = CGPoint(x: (self.view.bounds.width - scannerWidth) / 2,
+                                            y: (self.view.bounds.height - scannerWidth) / 2)
+            let scanFocusRect = CGRect(origin: scannerRectOrigin, size: scannerRectSize)
+
+            guard let captureSession = self.captureSession else { return }
+
+            // AVCaptureSession에서 나오는 비디오 스트림을 표시하기 위한 미리보기 레이어를 생성
+            self.videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+            // 비디오 스트림의 비율 설정
+            self.videoPreviewLayer?.videoGravity = .resizeAspectFill
+            
+            // 미리보기 레이어의 프레임을 설정
+            self.videoPreviewLayer?.frame = self.view.layer.bounds
+            // 현재 view의 레이어에 미리보기 레이어를 추가
+            self.view.layer.addSublayer(self.videoPreviewLayer!)
+            
+            // 딤 처리를 위한 shape Layer를 생성
+            let maskLayer = CAShapeLayer()
+            maskLayer.fillRule = .evenOdd
+            maskLayer.frame = self.view.layer.bounds
+            
+            // 딤 처리할 영역을 패스로 정의
+            let path = CGMutablePath()
+            path.addRect(maskLayer.bounds)
+            path.addRect(scanFocusRect)
+            maskLayer.path = path
+            
+            // 딤 처리 색상 및 배경 설정
+            maskLayer.fillColor = UIColor.black.withAlphaComponent(0.6).cgColor
+            maskLayer.backgroundColor = UIColor.clear.cgColor
+            
+            // 딤 처리 레이어를 미리보기 레이어에 추가
+            self.videoPreviewLayer?.addSublayer(maskLayer)
+
+            // opacity 설정으로 초기에 미리보기 영역을 숨김
+            self.videoPreviewLayer?.opacity = 0
+        }
+    }
+    
+    
+    /// 캡쳐 세션 시작 메서드
+    func startCaptureSession() {
+        DispatchQueue.global(qos: .background).async {
+            if let captureSession = self.captureSession,
+               !(captureSession.isRunning) {
+                captureSession.startRunning()
+            }
+        }
+    }
+}
+
+
+extension BarCodeScanViewController: AVCaptureMetadataOutputObjectsDelegate {
+    
+    // 메타데이터 출력 델리게이트 메서드로 바코드 스캔 결과를 처리합니다.
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        if let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
+           let barcodeValue = metadataObject.stringValue {
+            print("스캔한 바코드: \(barcodeValue)")
+            // 캡쳐 세션 종료
+            self.captureSession?.stopRunning()
+        }
+    }
+
+}
+
+```
+
 <br><br>
+
+## 스캐너 화면에 안내 Label추가하기
+
+위에서 스캔영역을 지정했기때문에 기준으로 삼을 `CGRect`가 있다.
+
+<br>
+
+```swift
+
+// 방법 1.
+guideLabel.frame = CGRect(x: scanFocusRect.minX,
+                          y: scanFocusRect.maxY + 65,
+                          width: scanFocusRect.width,
+                          height: 60)
+                          
+// 방법 2.
+guideLabel.sizeToFit()  // 텍스트 내용에 맞게 라벨 크기 조정
+guideLabel.center.x = scanFocusRect.midX  // 가로 중앙을 scanFocusRect의 가로 중앙에 맞춤
+guideLabel.frame.origin.y = scanFocusRect.maxY + 65  // Y 좌표 설정
+```
+
+위 두가지 방법으로 설정이 가능하다.   
+
+<br><br>
+
+```swift
+
+/// 미리보기 레이어 생성 메서드
+func setupVideoPreviewLayer() {
+    DispatchQueue.main.async {
+        // 바코드 스캔 영역을 정의
+        let scannerWidthMultiplier: CGFloat = 0.7
+        let scannerWidth = self.view.bounds.width * scannerWidthMultiplier
+        let scannerRectSize = CGSize(width: scannerWidth, height: scannerWidth)
+        let scannerRectOrigin = CGPoint(x: (self.view.bounds.width - scannerWidth) / 2,
+                                        y: (self.view.bounds.height - scannerWidth) / 2)
+        let scanFocusRect = CGRect(origin: scannerRectOrigin, size: scannerRectSize)
+
+
+        // 중간 생략..
+        
+        // 딤 처리할 영역을 패스로 정의
+        let path = CGMutablePath()
+        path.addRect(maskLayer.bounds)
+        path.addRect(scanFocusRect)
+        maskLayer.path = path
+        
+        // 생략..
+        
+        // opacity 설정으로 초기에 미리보기 영역을 숨김
+        self.videoPreviewLayer?.opacity = 0
+        
+        // 안내 텍스트를 생성하여 미리보기 레이어 위에 추가
+        let guideLabel = UILabel()
+        guideLabel.text = "Place the barcode within the square"
+        guideLabel.textColor = .white
+        guideLabel.font = UIFont.systemFont(ofSize: 16)
+        guideLabel.textAlignment = .center
+        guideLabel.numberOfLines = 0
+//            guideLabel.frame = CGRect(x: scanFocusRect.minX,
+//                                      y: scanFocusRect.maxY + 65,
+//                                      width: scanFocusRect.width,
+//                                      height: 60)
+        
+        guideLabel.sizeToFit()  // 텍스트 내용에 맞게 라벨 크기 조정
+        guideLabel.center.x = scanFocusRect.midX  // 가로 중앙을 scanFocusRect의 가로 중앙에 맞춤
+        guideLabel.frame.origin.y = scanFocusRect.maxY + 65  // Y 좌표 설정
+
+        
+        self.view.addSubview(guideLabel)
+    }
+}
+
+```
+
+## 안내선 이미지 추가하기
+
+enum에 정보를 담아준다.  
+CaseIterable 프로토콜을 사용하면 AllCases프로퍼티를 사용할 수 있다.
+```swift
+enum QRFocusPosition: CaseIterable {
+    case topLeft
+    case topRight
+    case bottomLeft
+    case bottomRight
+    
+    var imageName: String {
+        switch self {
+        case .topLeft:
+            return "qr-focus-top-left"
+        case .topRight:
+            return "qr-focus-top-right"
+        case .bottomLeft:
+            return "qr-focus-bottom-left"
+        case .bottomRight:
+            return "qr-focus-bottom-right"
+        }
+    }
+}
+```
+
+ 이제 네개의 모서리에 배치될 이미지를 올려준다.  
+이 때 FocusRect의 값을 넣어준다.  
+
+```swift
+    /// 미리보기 레이어 생성 메서드
+func setupVideoPreviewLayer() {
+    // 생략...
+
+    for position in QRFocusPosition.allCases {
+        let imageView = self.addQRFocusImages(scanFocusRect: scanFocusRect,
+                                              type: position)
+        self.view.addSubview(imageView)
+    }
+}
+
+func addQRFocusImages(scanFocusRect: CGRect, type: QRFocusPosition) -> UIImageView {
+    
+    let qrFocusImageWidth: CGFloat = 20
+    let qrFocusImageOffset: CGFloat = 3
+    guard let image = UIImage(named: type.imageName) else {
+        fatalError("Could not load image with name \(type.imageName)")
+    }
+
+    let imageView = UIImageView(image: image)
+    imageView.frame.size = CGSize(width: qrFocusImageWidth, height: qrFocusImageWidth)
+
+    switch type {
+    case .topLeft:
+        imageView.frame.origin = CGPoint(x: scanFocusRect.minX - qrFocusImageOffset,
+                                         y: scanFocusRect.minY - qrFocusImageOffset)
+    case .topRight:
+        imageView.frame.origin = CGPoint(x: scanFocusRect.maxX - qrFocusImageWidth + qrFocusImageOffset,
+                                         y: scanFocusRect.minY - qrFocusImageOffset)
+    case .bottomLeft:
+        imageView.frame.origin = CGPoint(x: scanFocusRect.minX - qrFocusImageOffset,
+                                         y: scanFocusRect.maxY - qrFocusImageWidth + qrFocusImageOffset)
+    case .bottomRight:
+        imageView.frame.origin = CGPoint(x: scanFocusRect.maxX - qrFocusImageWidth + qrFocusImageOffset,
+                                         y: scanFocusRect.maxY - qrFocusImageWidth + qrFocusImageOffset)
+    default:
+        break
+    }
+
+    return imageView
+}
+```
+
+### 적용화면
+
+<img src="https://github.com/isGeekCode/TIL/assets/76529148/03254bbe-2148-477c-96fd-ffb02a2010d2" width="300">
+
+<br><br>
+
 
 ## History
 - 230904 : 기본 사용법
 - 230905 : 바코드 스캔영역 외 Dim처리방법 추가
 - 230905 : 애니메이션 효과 추가
+- 230905 : 스캐너에 텍스트 추가
+- 230905 : 스캔영역 모서리에 이미지 추가하기
