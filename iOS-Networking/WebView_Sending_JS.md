@@ -1,4 +1,4 @@
-# WebView - 앱에서 웹으로 JavaScript보내기
+# WebView - 앱에서 웹소스의 JavaScript 메서드 호출하기 : evaluateJavaScript()
 
  웹뷰를 세팅할 때, 앱과 웹이 서로 소통하는 방법은 다양하다. 
  그중 웹에서 javascript를 세팅하고 그 함수를 앱에서 호출할 수가 있다.

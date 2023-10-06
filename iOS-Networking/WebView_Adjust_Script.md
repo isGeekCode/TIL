@@ -20,22 +20,22 @@ self.userContentController.addUserScript(cookieScript)
 ```
 
 
-## Evaluate JavaScript
-- [TIL : WebView - 앱에서 웹으로 JavaScript보내기 참고](https://github.com/isGeekCode/TIL/blob/main/Networking/WebView_Sending_JS.md)  
+## 2. Evaluate JavaScript
+- [TIL : WebView - 앱에서 웹소스의 JavaScript 메서드 호출하기 참고](https://github.com/isGeekCode/TIL/blob/main/iOS-Networking/WebView_Sending_JS.md)  
 
-evaluateJavaScript() 메서드를 사용하여 iOS 웹뷰에서 동적으로 스크립트를 실행할 수 있다.
+`evaluateJavaScript(javaScriptString:)` 메서드를 사용하여 iOS 웹뷰에서 동적으로 스크립트를 실행할 수 있다.
 
 이 방법은 웹 페이지가 로드될 때마다 스크립트를 실행할 수 있으며, WKUserContentController와는 달리 페이지가 변경될 때마다 추가하지 않아도 된다.
 
-evaluateJavaScript() 메서드는 첫 번째 인수로 실행할 스크립트 문자열을 받는다. 
+`evaluateJavaScript()` 메서드는 첫번째 파라미터로 실행할 스크립트 문자열을 받는다. 
 
-이 스크립트는 JavaScript 코드이며, iOS 웹뷰 내에서 실행된다.
-두 번째 매개 변수로는 완료 핸들러를 전달하여 스크립트 실행 후 결과를 처리할 수 있다.
+이 스크립트는 웹소스의 JavaScript 코드이며, iOS 웹뷰 내에서 실행된다.
+두 번째 파라미터로 completion 핸들러를 전달하여 스크립트 실행 후 결과를 처리할 수 있다.
 
 예를 들어, 쿠키를 추가하려면 JavaScript로 작성된 쿠키 생성 코드를 문자열로 작성하고 evaluateJavaScript()를 사용하여 해당 코드를 실행할 수 있습다.
 
 ```swift
-// wv는 WKWebView 객체.
+var mainWebView: WKWebView
 
 // 스크립트 실행 후 처리할 핸들러를 정의.
 let handler: (Any?, Error?) -> Void = { result, error in
@@ -53,7 +53,26 @@ let cookieScript = """
 """
 
 // evaluateJavaScript() 메서드를 사용하여 스크립트를 실행.
-wv.evaluateJavaScript(cookieScript, completionHandler: handler)
+mainWebView.evaluateJavaScript(cookieScript, completionHandler: handler)
+
+
+
+// 혹은 아래처럼 클로저를 한번에 구현할 수도 있다.
+
+mainWebView.evaluateJavaScript(cookieScript) { (result, error) in
+
+    print("evaluateJavaScript:: \(cookieScript)")
+    
+    if let error = error {
+    print("error :: \(error)")
+    }
+
+    if let result = result {
+        print("result :: \(result)")
+    }
+}
+
+
 
 ```
 
@@ -64,6 +83,3 @@ wv.evaluateJavaScript(cookieScript, completionHandler: handler)
 evaluateJavaScript()를 사용하는 경우, 웹 페이지가 로드될 때마다 스크립트가 실행된다.
  
 따라서 적용하는 스크립트의 성격과 목적에 따라 적절한 방법을 선택해야 한다.
-
-
-
