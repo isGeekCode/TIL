@@ -8,17 +8,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_356 TILs and counting..._
+_357 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Xcode - 빌드된 app파일은 어디에 있을까](iOS-Environment/Bundle_derivedData.md) - Tue Oct 10 10:51:33 2023 +0900
 - [[StoryBoard] - Unknown class ViewControllerC in Interface Builder file](iOS-Framework-UIKit/StoryBoard_InheritModuleFromTarget.md) - Thu Sep 21 16:22:11 2023 +0900
 - [NSObject_UIResponder_UIView_UIScrollView_UITableView : 편집스타일 설정하기 - editingStyle](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIScrollView_UITableView_editingStyle.md) - Fri Sep 15 17:00:52 2023 +0900
 - [Swift문법 기초](iOS-Swift/About_Swift001Basic_.md) - Wed Aug 30 17:04:21 2023 +0900
 - [Swift - Class와 Struct](iOS-Swift/About_Swift001ClassAndStruct.md) - Wed Aug 30 17:04:21 2023 +0900
-- [VC -> MVC : Custom UICollectionView](iOS-Architecture/Architecture_301_MVC_CollectionView.md) - Wed Aug 30 17:04:21 2023 +0900
 
 ### Categories
 
@@ -260,6 +260,7 @@ _356 TILs and counting..._
 - [IOS에 있어서 Caching](iOS-Development/ios_caching.md)
 
 ### [iOS-Environment](#ios-environment)
+- [Xcode - 빌드된 app파일은 어디에 있을까](iOS-Environment/Bundle_derivedData.md)
 - [appStoreReceiptURL](iOS-Environment/DetectingDeploymentEnvironment.md)
 - [.ipa 파일 만들기](iOS-Environment/How_to.make_ipa.md)
 - [How to Set - 세로모드 고정 (Potrait)](iOS-Environment/How_to_set_potrait_mode.md)
