@@ -90,7 +90,11 @@ pod install
 
 Product > Scheme > Edit Scheme > Arguments Tab에서 실행 명령어를 속성값으로 추가한다.
 
+실행하고 싶은 속성값의 왼쪽 체크부분을 활성화하여 빌드하면된다. 
+
 <img width="600" alt="스크린샷 2023-10-19 오전 9 50 24" src="https://github.com/isGeekCode/TIL/assets/76529148/2198998a-29d8-4e47-909c-f5d86c382178">
+
+
 
 비활성화 코드는 아래처럼 두가지 경우가 있으나 참고하자.
 
