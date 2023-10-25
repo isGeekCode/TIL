@@ -6,7 +6,7 @@ UIControl은 UIView를 상속한다.
 즉, UIControl은 형태를 보여주는 것 외에 여러가지 이벤트 처리가 추가된 클래스이다.
 
 
-<br>ㅍ
+<br><br>
 
 ## declaration
 
@@ -91,6 +91,8 @@ static var allEvents: UIControl.Event
 
 다양한 이벤트들이 있지만 주로 사용하는 이벤트는 몇가지 안된다.
 
+<br><br>
+
 ## 주로 사용하는 이벤트
 
 - .touchUpInside: 버튼을 눌렀다가 손을 뗄 때 발생하는 이벤트로, 주로 버튼을 클릭할 때 사용된다. 주로 버튼에 연결된 액션 메서드를 호출하여 사용자의 명령을 실행하는 데 사용된다.
@@ -105,6 +107,7 @@ static var allEvents: UIControl.Event
 
 - .touchDragInside 및 .touchDragOutside: 버튼 또는 다른 UIControl 요소를 터치한 상태에서 드래그하는 이벤트로, 드래그 관련 동작을 구현할 때 사용된다.
 
+<br><br>
 
 ## Comments
 생각보다 touch와 관련되어서 비슷하다고 느껴지는 동작이 생각보다 많았다. 
@@ -113,6 +116,7 @@ textField에 관련된 이벤트는 대부분 사용하지만, 나머지 이벤�
 
 
 
+<br><br>
 
 ## 테스트 코드
 ```swift
@@ -165,11 +169,14 @@ textField에 관련된 이벤트는 대부분 사용하지만, 나머지 이벤�
 
 <img width="300" alt="스크린샷 2023-10-25 오후 4 29 24" src="https://github.com/isGeekCode/TIL/assets/76529148/f73c14ec-bb76-41b8-b98c-54c2fc794ae7">
 
-<br>
+<br><br>
 
 스토리보드 파일을 SourceCode로 보기 형식으로 바꾸고 아래 코드로 수정하면 된다.
 
 그후, 다시 Interface Builder로 원복 시키면 스토리보드로 볼 수 있다.
+
+<br>
+
 <img width="600" alt="스크린샷 2023-10-25 오후 4 30 29" src="https://github.com/isGeekCode/TIL/assets/76529148/6e415755-d501-4b88-9c93-7e2eded781ec">
 
 <details>
