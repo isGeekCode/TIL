@@ -69,12 +69,16 @@ class SubclassSwiftMethod: SwiftMethod {
 
 더불어 반대로 상속이 불가능한 struct, enum에 class func를 정의해도 에러가 난다.  
 
+
+<br><br>
+
 ## final class func 와 static func
 
 static func 는 상속을 못받기 때문에,
 
 더이상의 상속을 막아주는 final 키워드를 이용하여 class func에 사용하면 동일한 결과를 가져온다. 
 
+```swift
 class SwiftMethod {
     class func myClassFunc() {}
     static func myStaticFunc() {}
@@ -89,8 +93,9 @@ class SubSwiftMethod1 : Sample {
 class SubSwiftMethod2 : Sample {
     override static func myClassFunc() {}
 }
+```
 
-
+<br><br>
 
 ## History
 
