@@ -216,3 +216,32 @@ print(wordLengths) // [5, 6, 6]
 
 ```
 이렇게 flatMap을 사용하여 배열의 요소를 변환하고, 새로운 배열을 만들 수 있다. flatMap은 이러한 방식으로, 배열의 요소를 변환하는 데에도 많이 사용된다.
+
+
+# Map 예제
+iOS UIKit DevTutorial에 있는 소스 참고 : CollectionView 생성부분
+
+- [Creating a list view
+](https://developer.apple.com/tutorials/app-dev-training/creating-a-list-view)
+
+
+
+
+```swift
+/*
+mutating func appendSections(_ identifiers: [SectionIdentifierType])
+*/
+        
+        var snapshot = Snapshot()
+        snapshot.appendSections([0])
+        
+        /*
+        var reminderTitles = [String]()
+        for reminder in Reminder.sampleData {
+            reminderTitles.append(reminder.title)
+        }
+        snapshot.appendItems(reminderTitles)
+        */
+        snapshot.appendItems(Reminder.sampleData.map { $0.title })
+
+```
