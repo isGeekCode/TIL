@@ -27,6 +27,9 @@ CollectionView는 iOS에서 다양한 방식으로 데이터를 표시하는 컴
     - [isSelected 사용하기](#isSelected-사용하기)
     - [Array에 선택된 셀정보를 담아서 보관하기](#Array에-선택된-셀정보를-담아서-보관하기)
     - [Index를 가리키는 Int값 하나를 보관하는 방법](#Index를-가리키는-Int값-하나를-보관하는-방법)
+-  [DiffableDataSource를 이용한 CollectionView 구현하기
+](#DiffableDataSource를-이용한-CollectionView-구현하기)
+
 
 <br><br>
 
@@ -1737,6 +1740,167 @@ class BuyableListCollectionViewCell: UICollectionViewCell {
 
 <br><br>
 
+
+## DiffableDataSource를 이용한 CollectionView 구현하기
+iOS13부터는 DiffableDataSource를 이용가능해졌다.
+
+
+- 간편한 데이터 업데이트: Diffable Data Source는 데이터를 업데이트하고 새로 고침하는 데 매우 간편하다. 데이터 변경 시 Diffable Data Source를 사용하면 데이터의 변경 사항을 쉽게 추적하고 효율적으로 화면에 반영할 수 있다.
+
+- 애니메이션 효과 추가: 데이터 변경 시 Diffable Data Source는 자동으로 애니메이션 효과를 제공한다. 데이터를 추가, 제거 또는 이동할 때 애니메이션을 사용하여 사용자 경험을 향상시킬 수 있다.
+
+- 효율적인 메모리 관리: Diffable Data Source는 필요한 데이터만 메모리에 로드하므로 메모리 관리가 효율적이다. 또한 스냅샷을 사용하여 이전 상태와 현재 상태를 비교하여 데이터 변경을 최소화한다.
+
+- 다중 섹션 및 복잡한 레이아웃 지원: Diffable Data Source는 다중 섹션과 복잡한 레이아웃을 지원한다. 다양한 데이터 구조를 처리하고 복잡한 UI를 쉽게 구현할 수 있다.
+
+- 코드의 가독성 향상: Diffable Data Source를 사용하면 데이터 소스 및 UI 업데이트 코드의 가독성이 향상된다. 코드가 더 간결하고 이해하기 쉽게 작성된다.
+
+- 유지 보수 및 확장 용이성: Diffable Data Source를 사용하면 앱의 유지 보수가 더 쉽고 확장이 용이해집니다. 데이터 소스 및 UI를 수정하고 확장하는 데 더 적은 노력이 필요하다.
+
+- UIKit 및 SwiftUI 호환성: Diffable Data Source는 UIKit과 SwiftUI와 호환되므로 두 가지 프레임워크를 혼합하여 사용할 수 있다.
+
+
+Diffable DataSource는 UICollectionView 외에도 UITableView에도 사용가능하다.
+
+
+`Snapshot`은 데이터 소스의 현재 상태를 캡처하고 나타내는 객체다.  
+iOS에서 "Diffable Data Source"를 사용할 때 `Snapshot`을 사용하여 데이터의 상태를 표현하고 관리한다.  
+또한 `Snapshot`은 이전 상태와 현재 상태의 데이터를 비교하고 변경 사항을 추적하는 데 사용된다.
+
+
+```swift
+//  ReminderListViewController.swift
+
+import UIKit
+
+class ReminderListViewController: UICollectionViewController {
+    typealias DataSource = UICollectionViewDiffableDataSource<Int, String>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
+
+
+    var dataSource: DataSource!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+
+        let listLayout = listLayout()
+        collectionView.collectionViewLayout = listLayout
+
+
+        let cellRegistration = UICollectionView.CellRegistration {
+            (cell: UICollectionViewListCell, indexPath: IndexPath, itemIdentifier: String) in
+            let reminder = Reminder.sampleData[indexPath.item]
+            var contentConfiguration = cell.defaultContentConfiguration()
+            contentConfiguration.text = reminder.title
+            cell.contentConfiguration = contentConfiguration
+        }
+
+
+        dataSource = DataSource(collectionView: collectionView) {
+            (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: String) in
+            return collectionView.dequeueConfiguredReusableCell(
+                using: cellRegistration, for: indexPath, item: itemIdentifier)
+        }
+
+        var snapshot = Snapshot()
+        snapshot.appendSections([0])
+        snapshot.appendItems(Reminder.sampleData.map { $0.title })
+        dataSource.apply(snapshot)
+        collectionView.dataSource = dataSource
+    }
+
+
+    private func listLayout() -> UICollectionViewCompositionalLayout {
+        var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
+        listConfiguration.showsSeparators = false
+        listConfiguration.backgroundColor = .clear
+        return UICollectionViewCompositionalLayout.list(using: listConfiguration)
+    }
+}
+
+
+// 데이터 세팅
+
+//  Reminder.swift
+
+import Foundation
+
+struct Reminder {
+    var title: String
+    var dueDate: Date
+    var notes: String? = nil
+    var isComplete: Bool = false
+}
+
+
+#if DEBUG
+extension Reminder {
+    
+    static var sampleData = [
+        Reminder(
+            title: "Submit reimbursement report",
+            dueDate: Date().addingTimeInterval(800.0),
+            notes: "Don't forget about taxi receipts"),
+        
+        Reminder(
+            title: "Code review",
+            dueDate: Date().addingTimeInterval(14000.0),
+            notes: "Check tech specs in shared folder",
+            isComplete: true),
+        
+        Reminder(
+            title: "Pick up new contacts",
+            dueDate: Date().addingTimeInterval(24000.0),
+            notes: "Optometrist closes at 6:00PM"),
+        
+        Reminder(
+            title: "Add notes to retrospective",
+            dueDate: Date().addingTimeInterval(3200.0),
+            notes: "Collaborate with project manager",
+            isComplete: true),
+        
+        Reminder(
+            title: "Interview new project manager candidate",
+            dueDate: Date().addingTimeInterval(60000.0),
+            notes: "Review portfolio"),
+        
+        Reminder(
+            title: "Mock up onboarding experience",
+            dueDate: Date().addingTimeInterval(72000.0),
+            notes: "Think different"),
+        
+        Reminder(
+            title: "Review usage analytics",
+            dueDate: Date().addingTimeInterval(83000.0),
+            notes: "Discuss trends with management"),
+        
+        Reminder(
+            title: "Confirm group reservation",
+            dueDate: Date().addingTimeInterval(92500.0),
+            notes: "Ask about space heaters"),
+        
+        Reminder(
+            title: "Add beta testers to TestFlight",
+            dueDate: Date().addingTimeInterval(101000.0),
+            notes: "v0.9 out on Friday")
+    ]
+
+}
+#endif
+
+
+
+
+```
+
+<br><br>
+
+[[TOP]](#)
+
+<br><br>
+
+
 ## History
 - 230701 : 초안작성
 - 230825 : Cell 크기별 코드 작성
@@ -1746,3 +1910,4 @@ class BuyableListCollectionViewCell: UICollectionViewCell {
     - isSelected 사용하기
     - Array에 선택된 셀정보를 담아서 보관하기
     - Index를 가리키는 Int값 하나를 보관하는 방법
+- 231103 : DiffableDataSource사용하여 생성하는 방법 추가
