@@ -469,3 +469,8 @@ class ReminderListViewController: UICollectionViewController {
     - Compositional Layout
     - Snapshot
 - 디버그모드에서 테스트코드 생성하기
+
+### 참고자료 : [WWDC 2020] Lists in UICollectionView
+- [Dev_Pingu 블로그](https://icksw.tistory.com/291)
+- [원본 WWDC 영상](https://developer.apple.com/videos/play/wwdc2020/10026/)
+
