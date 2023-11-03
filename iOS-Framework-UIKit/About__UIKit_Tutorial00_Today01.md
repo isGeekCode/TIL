@@ -170,7 +170,7 @@ Section은 item의 group을 둘러싼 Container View를 말한다.
 <br><br>
 
 
-- listLayout() : 이 메서드는 그룹화된 appearance가 적용된 새로운 list configuration   변수를 생성한다.
+- listLayout() : 이 메서드는 그룹화된 appearance가 적용된 새로운 list configuration 변수를 생성한다.
     - 리턴되는 `UICollectionViewCompositionalLayout`은  `UICollectionViewLayout` 타입이다.
     
 ```swift
@@ -220,12 +220,46 @@ class ReminderListViewController: UICollectionViewController {
 ## Section 5. Configure the data source
 데이터 소스 구현
 
+지금까지 Compositional Layout을 사용해 list Section을 만들어보았다.  
+이번 섹션에서는 CollectionView에 셀을 등록하고, 셀 모양을 정의하는 객체인 content configuration을 사용한다. 그리고 이렇게 만든 셀을 data source에 연결하려고 한다.  
+Diffable DataSource를 사용하면 데이터가 변경될 때, UI를 효과적으로 업데이트하고 애니메이션화하는 것이 가능하다. 
+
 - CollecitonView에 셀을 등록
-- content configuration을 사용하여 셀 모양 정의
+- content configuration을 사용하여 셀 모양을 정의
 - 셀을 데이터 소스에 연결
 - 데이터가 변경될때,  UI를 업데이트하고 애니메이션을 적용하는 diffable data source를 사용
 
+
 <img width="300" alt="스크린샷 2023-10-30 오전 9 34 03" src="https://github.com/isGeekCode/TIL/assets/76529148/b4c8791a-d3ad-4834-b522-93a07e1a38c6">
+
+<br><br>
+
+### Create a new cell registration.
+
+먼저 Cell 등록을 위해 UICollectionView.CellRegistration 메서드를 사용하자.
+여기서 cellRegistration은 셀의 모양을 구현하기 위한 메서드다.
+
+- `defaultContentConfiguration()` 메서드는 미리 정의된 시스템 스타일로 내용 구성(content configuration)을 생성한다.
+- contentConfiguration에는 `text: String?, image: UIImage?, secondaryText: String?`등의 프로퍼티가 있다. 여기에 샘플데이터를 넣어준다.
+- 샘플데이터가 들어간 contentConfiguration을 cell의 contentConfiguration에 선언한다. 
+
+<br><br>
+
+```swift
+
+let cellRegistration = UICollectionView.CellRegistration {
+    (cell: UICollectionViewListCell, indexPath: IndexPath, itemIdentifier: String) in
+    
+    var contentConfiguration = cell.defaultContentConfiguration()
+
+    // 샘플데이터 세팅
+    let reminder = Reminder.sampleData[indexPath.item]
+    contentConfiguration.text = reminder.title
+    
+    cell.contentConfiguration = contentConfiguration
+}
+
+```
 
 <br><br>
 
