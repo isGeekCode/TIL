@@ -328,7 +328,7 @@ _362 TILs and counting..._
 - [[Apple Document] - About the app launch sequence : 앱의 실행되는 순서에 관하여](iOS-Framework-UIKit/About_UIKit_005AppLaunchSequnce.md)
 - [UIKit기반 앱의 간단한 화면 인터페이스 구조](iOS-Framework-UIKit/About_UIKit_050WindowsAnsScreens_Screens_SimpleUIKitInterface.md)
 - [[iOS App Dev Tutorials] UIKit - Today앱 만들기(0) : Intro](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today00.md)
-- [[iOS App Dev Tutorials] UIKit - Today앱 만들기(1) : Intro](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today01.md)
+- [[iOS App Dev Tutorials] UIKit - Today앱 만들기(1) : Creating a list View](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today01.md)
 - [Container ViewController Type - Navigation Controller](iOS-Framework-UIKit/Container_ViewController_NavigationController.md)
 - [Gesture Recognizer - Long Press](iOS-Framework-UIKit/GestureRecognizer_LongPress.md)
 - [Layout - 오토레이아웃의 개념](iOS-Framework-UIKit/Layout_About_AutoLayout.md)
