@@ -1,6 +1,6 @@
 # 읽어야할 개발자 문서
 
-
+- ⭕️🟩🟥 [Model - View - Controller (1)](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html)
 <img src="https://img.shields.io/badge/정독필수-B32024?style=flat-squaree&logo=googledocs&logoColor=white"/> [Model - View - Controller (1)](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html)
 
 <img src="https://img.shields.io/badge/정독추천-209E17?style=flat-squaree&logo=googledocs&logoColor=white"/>
