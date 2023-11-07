@@ -11,7 +11,8 @@
 
 <font color="red">이 텍스트는 빨간색입니다.</font>
 
-
+<span style="color:blue">글자파란색</span>
+<span style="background-color: #f6f8fa">회색형광펜</span>
 
 
 <span style='background-color: #fff5b1'>노란형광펜</span>
