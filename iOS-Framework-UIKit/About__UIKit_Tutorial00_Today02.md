@@ -53,7 +53,7 @@ Diffable Data Source, Compositional Layout, cell configuration을 제공한다.
 CollectionView는 UI에서 항목들을 어떻게 배치하고 표시할지에 관하여 다루므로
 효과적으로 데이터 관리에 집중할 수 있다. 
 
-UICollectionViewDiffableDataSource 제네릭 클래스는 CollectionView 데이터의 업데이트를 효율적으로 관리하고 안전하게 제공하는 동작을 제공한다.
+UICollectionViewDiffableDataSource 제네릭 클래스는 CollectionView에 연동된 데이터의 업데이트를 효율적으로 관리하고 안전하게 제공하는 동작을 제공한다.
 
 이전 단계에서 아래처럼 typealias를 통해 별명을 만들어서 사용하였다.
 ```swift
@@ -208,7 +208,7 @@ UICollectionViewListCell은 아래처럼 3가지 configuration property를 갖�
 
 각 경우에, defaultContentConfiguration(기본 구성)으로 셀의 임시 구성 인스턴스를 요청하고,  
 
-변경하려는 속성에 새로우누 값을 설정한 다음, 
+변경하려는 속성에 새로운 값을 설정한 다음, 
 configuration을 다시 셀에 세팅한다.
 
 
@@ -256,12 +256,49 @@ default list Cell Configuration의 property는 대부분의 앱을 개발하는�
 
 ## Section 4. Generating data source snapshots
 
+CollectionView는 셀을 세팅하기 위해 앱 데이터에 대한 설명이 필요하다.  
+CollectionView와 연결된 DiffableDataSource는  NSDiffableDataSourceSnapshot 인스턴스를 사용하여 특정시간의 데이터 상태를 나타낸다.  
+CollectionView가 처음 로드될 때, 앱의 데이터가 변경될 때마다 새 snapshot을 생성한다.  
+
+아래 메서드는 알람 목록을 설명하는 snapshot을 생성하는 과정을 보여준다.  
+
+```swift
+func applyInitialSnapshots() {
+    // Define snapshot with same <section,item> types as the data source.
+    var initialSnapshot = NSDiffableDataSourceSnapshot<Int, ReminderItem>()
+    let reminderItems = reminderStore.reminders.map { reminder in
+        return ReminderItem(reminder: reminder)
+    }
+    
+    initialSnapshot.appendSections([0]) // There is only one section in this list.
+    initialSnapshot.appendItems(reminderItems, toSection: 0)
+    dataSource.apply(initialSnapshot, animatingDifferences: false)
+}
+
+```
+
+<br><br>
+
+업데이트 된 snapshot을 적용하면 시스템에서는 두 snapshot 간의 차이를 계산한다. 그리고 해당 셀에 변경 사항을 적용한다.  
+이 프로세스는 항상 현재 데이터의 상태를 UI에 반영시킨다.  
+
+
 
 <br><br>
 
 ## Section 5. Using modern collection views in Today
 
+Today 앱은 CollectionView를 이용해 목록에 정보를 표시한다.  
 
+ReminderListViewController 는 앱이 시작될 때, reminder 데이터 리스트를 CollectionView로 표시한다.  
+
+이 List를 보여주는 ViewController 는 데이터가 변경될때, snapshot을 적용하여 UI에 현재 reminder 데이터 리스트를 반영한다. 
+
+
+다음 튜토리얼에서는 사용자가 reminder 리스트를 누르면 생성되는  세부정보(제목, 마감일, 메모)를 보여줄 ReminderViewController 클래스를 만들 예정이다.  
+그래서 detailViewController는 reminder 세부정보가 바뀔 때마다 snapshot을 적용하여 항상 reminder 데이터 상태가 UI에 반영될 것이다.  
+
+ 
 <br><br>
 
 
