@@ -1,4 +1,4 @@
-# Layout - SwiftUI: UIButton
+# Layout - SwiftUI: Button
 
 ## UIButton Init
 Button은 보여질 내용과 해야할 Action으로 나뉘어진다.

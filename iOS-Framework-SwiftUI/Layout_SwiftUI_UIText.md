@@ -1,4 +1,4 @@
-# Layout - SwiftUI: UIText
+# Layout - SwiftUI: Text
 
 ## UIText Init
 

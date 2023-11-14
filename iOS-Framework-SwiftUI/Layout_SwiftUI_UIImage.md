@@ -1,4 +1,4 @@
-# Layout - SwiftUI: UIImage
+# Layout - SwiftUI: Image
 
 ## UIImage Init
 
