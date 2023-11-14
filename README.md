@@ -8,7 +8,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_364 TILs and counting..._
+_365 TILs and counting..._
 
 ---
 
@@ -331,6 +331,7 @@ _364 TILs and counting..._
 - [[iOS App Dev Tutorials] UIKit - Today앱 만들기(0) : Intro](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today00.md)
 - [[iOS App Dev Tutorials] UIKit - Today앱 만들기(1) : Creating a list View](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today01.md)
 - [[iOS App Dev Tutorials] UIKit - Today앱 만들기(2) : Adopting collection views](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today02.md)
+- [[iOS App Dev Tutorials] UIKit - Today앱 만들기(3) : Displaying cell info](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today03.md)
 - [Container ViewController Type - Navigation Controller](iOS-Framework-UIKit/Container_ViewController_NavigationController.md)
 - [Gesture Recognizer - Long Press](iOS-Framework-UIKit/GestureRecognizer_LongPress.md)
 - [Layout - 오토레이아웃의 개념](iOS-Framework-UIKit/Layout_About_AutoLayout.md)
