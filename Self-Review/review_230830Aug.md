@@ -129,3 +129,7 @@
     - [[TIL 링크]](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit/About_UIKit_050WindowsAnsScreens_Screens_SimpleUIKitInterface.md)
 
 
+## 9월 목표
+
+- UIKit 톺아보기
+    - 동작부터 구성 요소까지 개발자 문서를 쭉 따라가보기
