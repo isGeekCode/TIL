@@ -1,6 +1,4 @@
-# 주석사용법
-
-## Xcode 주석사용법
+# Xcode 주석사용법
 
 과거 Obejctive - C로 앱을 만들 때에는 `#pragma mark -` 라는 주석을 사용했어요.
 
