@@ -1,4 +1,4 @@
-# SwiftUI에서 UIKit 사용하기 : UIViewRepresentable
+# SwiftUI에서 UIKit 사용하기 : UIViewRepresentable, UILabel, WebView
 
 ## UIViewRepresentable
 
@@ -109,8 +109,63 @@ struct ContentView: View {
 <img width="300" alt="스크린샷 2023-11-16 오전 9 36 03" src="https://github.com/isGeekCode/TIL/assets/76529148/79d48696-92a3-493a-810c-89164b9b78be">
 
 
-- 참고링크 : [김종권 : 튜토리얼 - 13. SwiftUI에서 UIKit 사용 방법 (UIViewRepresentable, UIViewControllerRepresentable)](https://ios-development.tistory.com/1043)
+## UIViewRepresentable를 이용하여 SwiftUI에서 WebView 사용방법
 
+마찬가지로 makeUIView와 리턴객체, updateUIView를 구현했다.  
+
+잊지말아야할건 info.plist에 아래 코드가 삽입되어있어야한다. 
+
+```
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+```
+
+완성코드는 아래와 같다. 
+
+```
+struct ContentView: View {
+    var body: some View {
+        Webview(url: URL(string: "https://www.naver.com")!)
+    }
+}
+
+#Preview {
+    ContentView()
+}
+
+
+struct Webview: UIViewRepresentable {
+    
+    let url: URL
+    
+    func makeUIView(context: UIViewRepresentableContext<Webview>) -> WKWebView {
+        let webview = WKWebView()
+        
+        let request = URLRequest(url: self.url, cachePolicy: .returnCacheDataElseLoad)
+        webview.load(request)
+
+        return webview
+    }
+    
+    
+    func updateUIView(_ webview: WKWebView, context: UIViewRepresentableContext<Webview>) {
+        
+        let request = URLRequest(url: self.url, cachePolicy: .returnCacheDataElseLoad)
+        webview.load(request)
+    }
+}
+```
+
+웹뷰는 preview와 시뮬레이터에선 안나오니 참고하자.
+
+<br><br>
+
+## 참고링크
+    - [김종권 : 튜토리얼 - 13. SwiftUI에서 UIKit 사용 방법 (UIViewRepresentable, UIViewControllerRepresentable)](https://ios-development.tistory.com/1043)
+    - [SwiftUI(iOS) - Web View(웹뷰) 10분컷하기](https://aineraser.tistory.com/32) 
 
 
 ### History
