@@ -179,6 +179,17 @@ function cdtil() {
 
 이후 `source ~/.zshrc`를 통해  변경사항을 저장하고 터미널에서 `cdtil` 명령어를 실행하자.  
 
+### m1인경우
+
+아래와 같이 zshrc에 입력한다.
+
+
+```swift
+alias cdtil='cd /Users/hyeonseok/Documents/Developer/Project/MyProject/Profile/TIL'
+```
+
+이때 원하는 폴더를 그냥 드래그 하자. 이러면 끝!!
+
 
 
 ## HISTORY
