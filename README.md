@@ -14,7 +14,7 @@ _370 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [SwiftUI에서 UIKit 사용하기 : UIViewRepresentable](iOS-Framework-SwiftUI_UIKit/UIViewResentable_UIKit.md) - Thu Nov 16 09:54:39 2023 +0900
+- [SwiftUI에서 UIKit 사용하기 : UIViewRepresentable, UILabel, WebView](iOS-Framework-SwiftUI_UIKit/UIViewResentable_UIKit.md) - Thu Nov 16 09:54:39 2023 +0900
 - [23년 10월 회고 / 11월 목표](Self-Review/review_231031Oct.md) - Wed Nov 15 14:43:13 2023 +0900
 - [23년 9월 회고 / 10월 목표](Self-Review/review_230930Sep.md) - Wed Nov 15 13:45:23 2023 +0900
 - [23년 8월 회고 / 9월 목표](Self-Review/review_230830Aug.md) - Wed Nov 15 12:57:50 2023 +0900
@@ -321,7 +321,7 @@ _370 TILs and counting..._
 - [UIKit으로 구현된 화면에 SwiftUI View를 추가하기 : UIHostingController](iOS-Framework-SwiftUI_UIKit/PreviewProvider_UIHostingController.md)
 - [UIKit에서 SwiftUI의 Preview 사용하기](iOS-Framework-SwiftUI_UIKit/PreviewProvier.md)
 - [UIKit에서 SwiftUI의 Preview관련 함수 만들어 사용하기](iOS-Framework-SwiftUI_UIKit/PreviewProvier3.md)
-- [SwiftUI에서 UIKit 사용하기 : UIViewRepresentable](iOS-Framework-SwiftUI_UIKit/UIViewResentable_UIKit.md)
+- [SwiftUI에서 UIKit 사용하기 : UIViewRepresentable, UILabel, WebView](iOS-Framework-SwiftUI_UIKit/UIViewResentable_UIKit.md)
 
 ### [iOS-Framework-UIKit](#ios-framework-uikit)
 - [[Apple Document] - About App Development with UIKit](iOS-Framework-UIKit/About_UIKit_.md)
