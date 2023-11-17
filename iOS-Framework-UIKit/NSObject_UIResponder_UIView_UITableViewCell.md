@@ -39,9 +39,15 @@ UITableViewCell객체는 단일 테이블의 콘텐츠를 관리하는 UIView다
 - Accessory view가 함께 있는 경우
 - Edit mode(편집모드)
 
+
+<br><br>
+
 또한 content에는 세 가지 프로퍼티가 정의되어있다.
 
-<img width="500" alt="63b0c95b-bf2f-4798-9cca-8a5e77631679" src="https://github.com/isGeekCode/TIL/assets/76529148/09486e78-011e-4029-9a8e-55fa6b74c6ee">
+<img width="700" alt="63b0c95b-bf2f-4798-9cca-8a5e77631679" src="https://github.com/isGeekCode/TIL/assets/76529148/09486e78-011e-4029-9a8e-55fa6b74c6ee">
+
+<br>
+
 
 - textLabel: UILabel 타입으로 주제목이 들어가는 레이블
 - detailTextLabel: UILabel 타입으로 추가적인 세부사항이 들어가는 부제목 레이블
@@ -67,26 +73,38 @@ UITableViewCell객체는 단일 테이블의 콘텐츠를 관리하는 UIView다
 
 UITableViewCell의 Style이 default 인 경우, 위 경우들을 표시할 수 있다.
 
+<br><br>
+
+  
 이제 textLabel아래에 subtitle을 표시하려면 cell의 style을 .subtitle 로 세팅해야 선언이 가능하다.
 
-subtitle적용된 화면을 보자.
+subtitle이 적용된 화면을 보자.
 
-마찬가지로 disclosure는 설정을 해두었다.
+마찬가지로 disclosure는 설정을 해두었다.  
+
 <img width="300" alt="스크린샷 2023-11-17 오전 10 27 43" src="https://github.com/isGeekCode/TIL/assets/76529148/053569dd-ccce-4406-b75c-2bf6563c5b4d">
 
 <img width="300" alt="스크린샷 2023-11-17 오전 10 27 04" src="https://github.com/isGeekCode/TIL/assets/76529148/3179be94-45a7-494d-9995-279d4861adbf">
 
 
+<br><br>
+
 아이폰의 설정앱을 살펴보면 다양한 형태의 셀을 살펴보자. 
 
 <img width="300" alt="스크린샷 2023-11-17 오전 9 59 56" src="https://github.com/isGeekCode/TIL/assets/76529148/0acf74a3-5f5e-4e78-87f0-9910a7c58507">
+  
 <img width="300" alt="스크린샷 2023-11-17 오전 9 58 36" src="https://github.com/isGeekCode/TIL/assets/76529148/58b073f9-4d1d-4f93-b8cc-bbae06e3b81b">
+  
 <img width="300" alt="스크린샷 2023-11-17 오전 9 56 47" src="https://github.com/isGeekCode/TIL/assets/76529148/461e037f-4800-4f20-ba22-213cc79857dd">
+
+
+<br><br>
 
 또 편집모드로 진입하는 모습은 언어 설정에서 볼 수 있다.  
 
-<img width="300" alt="스크린샷 2023-11-17 오전 9 56 47" src="https://github.com/isGeekCode/TIL/assets/76529148/af1f5d44-faf5-4a6c-8f9f-22e99ffaea1b">
+<img width="300" alt="스크린샷 2023-11-17 오전 9 56 47" src="https://github.com/isGeekCode/TIL/assets/76529148/ac05ed1e-1d8c-4cb8-b4fc-756e40ca3699">
 
+<br><br>
 
 ### style을 설정하는 것에 대하여
 style을 설정하는 것은 설정페이지처럼 유동적인 데이터가 아닌 고정된 값을 영구적으로 보여주는 화면에서만 사용하는 것이 바람직하다고 생각한다.  
@@ -142,7 +160,7 @@ tableView는 UIScrollView를 상속받고 있기 때문에 많은 양의 데이�
 - tableView의 delegate메서드인 cellForRowAt에서 tableView의 dequeueReusableCell 메서드로 재사용할 cell의 identifier를 등록
 
 
-### 셀 등록
+### 1. 셀 등록
 
 
 ```swift
@@ -166,7 +184,7 @@ class MyTableViewCell : UITableViewCell {
 
 <br><br>
 
-### 셀 재사용 선언
+### 2. 셀 재사용 선언
 
 재사용을 위해서는 tableView의 `dequeueReusableCell(withIdentifier:for:)`메서드를 사용한다.  
 이때 메서드명을 보면 dequeue / reusable Cell 을 볼 수 있다. dequeue란 큐로부터 가져오는 것을 말한다.  
