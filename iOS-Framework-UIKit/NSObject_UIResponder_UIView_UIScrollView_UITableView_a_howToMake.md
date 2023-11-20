@@ -233,12 +233,12 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
 
 ## Step3. UITableViewCell생성하기
 - identifier 세팅하기
-  ```
+  ```swift
   static let identifier = "SettingTableViewCell"
 
   ```
 - swift파일 세팅
-  ```
+  ```swift
   import UIKit
 
   class SettingTableViewCell: UITableViewCell {
@@ -265,7 +265,7 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
   ```
 
 - ViewController에서 해당 TableViewCell 등록하기
-  ```
+  ```swift
   // Property
   private let tableView: UITableView = {
     let table = UITableView(frame: .zero, style: .grouped)
