@@ -211,9 +211,13 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 
 ## 재사용으로 인한 사이드이펙트
 
+
 일반적으로 UI가 변경되지않는 앱들은 문제가 생기지않겠지만,
 
 셀을 클릭할 때마다, 레이아웃이 변경되는 UI를 가진 테이블뷰라면 재사용에 대해 추가 작업을 진행해야한다.  
+
+
+### Cell 내부에서 재사용 초기화하기
 
 왜냐하면 이미 UI에 의해 레이아웃이 변경된 셀임에도, 스크롤을 하면 아직 변경되지 않아야할 셀이 변경되어있기도, 혹은 반대의 경우가 생기기 떄문이다.  짧게 말하면 이상하다.  
 
@@ -241,7 +245,32 @@ class MyTableViewCell: UITableViewCell {
 <br><br>
 
 
+### cellForRowAt에서 재사용 초기화하기
+위 방법보다 더 자주 사용가능한 방법으로, 조건문으로 분기처리하여 초기화메서드를 넣어주는 것이다.
+
+```swift
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+      
+        cell.thumbnailImageView?.image = UIImage(systemName: "heart.fill")
+            
+        if indexPath.row == 3 {
+            cell.thumbnailImageView.backgroundColor = .red
+        } else {
+            cell.thumbnailImageView.backgroundColor = .clear
+        }
+        
+        return cell
+  }
+
+```
+
+특별한 로직이 없는 경우, 이렇게만 넣어줘도 재사용으로 인한 사이드이펙트 처리가 가능하다.
+
+<br><br>
 
 ## History
 - 230125: contentView에 대해서만 다루어서 최초생성
 - 231117: contentView에서 내용 수정
+- 231121: cellForRowAt에서 재사용 초기화하기 추가
