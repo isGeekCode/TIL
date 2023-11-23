@@ -2126,7 +2126,7 @@ class DetailViewController: UIViewController {
 
 <br><br><br>
 
-### 적용화면_5
+### 적용화면_6
 
 <img width="300" alt="ezgif-5-9673968c41" src="https://github.com/isGeekCode/github-action-til-autoformat-readme/assets/76529148/55c4695d-6bfd-4940-92b2-8a4fffe602b5">
 
