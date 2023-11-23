@@ -1,3 +1,4 @@
+# Sample App : 설정앱 - SwiftUI
 
 
 
@@ -94,10 +95,10 @@ VStack {
 원하는 Row를 NavigationLink로 세팅하면 다음페이지로 세팅이 된다.  
 전체 구조는 아래와 같다. 
 
-> └ List
->     └ Section
->         └ NavigationLink
->             └ Text
+> └ List  
+>     └ Section  
+>         └ NavigationLink  
+>             └ Text  
        
 
 ```swift
