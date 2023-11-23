@@ -217,6 +217,7 @@ print(wordLengths) // [5, 6, 6]
 ```
 이렇게 flatMap을 사용하여 배열의 요소를 변환하고, 새로운 배열을 만들 수 있다. flatMap은 이러한 방식으로, 배열의 요소를 변환하는 데에도 많이 사용된다.
 
+<br><br>
 
 # Map 예제
 iOS UIKit DevTutorial에 있는 소스 참고 : CollectionView 생성부분
@@ -245,3 +246,42 @@ mutating func appendSections(_ identifiers: [SectionIdentifierType])
         snapshot.appendItems(Reminder.sampleData.map { $0.title })
 
 ```
+
+<br><br>
+
+
+## CompactMap
+
+고차함수로 배열을 전환하는 작업은 빈번하다.  
+
+이 변환 중에는 nil이 발생할 수가 있는데,  
+
+comapctMap은 map과 달리 nil을 자동으로 필터링한다.  
+
+두가지 사례를 보자 
+```swift
+// MARK: CompactMap
+let mixedValues = ["1", "two", "3", "four"]
+let numbers = mixedValues.compactMap { Int($0) }
+// 결과: [1, 3]
+
+
+// MARK: Map
+let mixedValues = ["1", "two", "3", "four"]
+let numbers = mixedValues.map { Int($0) }
+// 결과: [Optional(1), nil, Optional(3), nil]
+```
+
+
+## 고차함수로 데이터 배열만들기
+
+보통 테스트를 위해 더미데이터를 만드는 경우가 많다.  
+이 때, 중요한것은 반드시 인자가 $0로 들어가야한다는 것이다. 
+
+```swift
+
+```
+
+
+## History
+- 231123 : compactMap 추가
