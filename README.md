@@ -14,7 +14,7 @@ _374 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [](Sample-App-List/sample_002SettingApp_SwiftUI.md) - Fri Nov 24 08:20:40 2023 +0900
+- [Sample App : 설정앱 - SwiftUI](Sample-App-List/sample_002SettingApp_SwiftUI.md) - Fri Nov 24 08:20:40 2023 +0900
 - [Sample App : 설정앱 - UIKit(Code)](Sample-App-List/sample_002SettingApp_UIKit.md) - Thu Nov 23 15:21:33 2023 +0900
 - [배열안에 담긴 url 유효성 검사](iOS-Lang-Swift/TIL220520_aboutCheckArrayComponent.md) - Wed Nov 22 10:29:49 2023 +0900
 - [ObjC - NSDictionary to NSString](iOS-Lang-Objective-C/Objc_DicToStr.md) - Wed Nov 22 10:29:49 2023 +0900
@@ -194,7 +194,7 @@ _374 TILs and counting..._
 ### [Sample-App-List](#sample-app-list)
 - [sample App - 투두리스트](Sample-App-List/sample_000todoList.md)
 - [sample App - 그림판앱](Sample-App-List/sample_001pictureApp.md)
-- [](Sample-App-List/sample_002SettingApp_SwiftUI.md)
+- [Sample App : 설정앱 - SwiftUI](Sample-App-List/sample_002SettingApp_SwiftUI.md)
 - [Sample App : 설정앱 - UIKit(Code)](Sample-App-List/sample_002SettingApp_UIKit.md)
 
 ### [Self-Review](#self-review)
