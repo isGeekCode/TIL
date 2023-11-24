@@ -375,8 +375,8 @@ destination 부분이 이동후 보여줄 View
 label부분이 네비게이션 라벨이다.  
 
 ```swift
-// 사용할 파라미터
-NavigationLink(destination: <#T##() -> View#>, label: <#T##() -> View#>)
+// 사용할 이니셜라이져
+NavigationLink(destination:label:)
 
 NavigationLink { 
     Text("프로필 화면")
@@ -396,21 +396,22 @@ NavigationLink {
 } label: { 
     // 네비게이션 라벨 부분
     HStack {
-    Image(systemName: "person.crop.circle.fill")
-        .resizable()
-        .aspectRatio(contentMode: .fit)
-        .frame(width: 50,
-               height: 50)
-        .foregroundStyle(.gray)
-    
-    VStack(alignment: .leading) {
-        Text("방현석")
-            .font(.system(size: 24))
-            .fontWeight(.regular)
-        Text("Apple ID, iCloud+ 미디어 및 구입 항목")
-            .font(.system(size: 11))
+        // 아이콘 이미지
+        Image(systemName: "person.crop.circle.fill")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 50,
+                   height: 50)
+            .foregroundStyle(.gray)
+        
+        VStack(alignment: .leading) {
+            Text("방현석")
+                .font(.system(size: 24))
+                .fontWeight(.regular)
+            Text("Apple ID, iCloud+ 미디어 및 구입 항목")
+                .font(.system(size: 11))
+        }
     }
-}
 }
 ```
 
@@ -420,6 +421,99 @@ NavigationLink {
 <img width="300" alt="ezgif-2-4b906461ad" src="https://github.com/isGeekCode/TIL/assets/76529148/cde644f3-ff2c-4dcc-a8b1-364d2cbe0fdc">
 
 <br><br>
+
+
+## 셀 디테일
+
+### Toggle과 State
+에어플레인 같은 경우는 토글 스위치가 들어있다.  
+
+```swift
+Toggle(titleKey:isOn:)
+```
+
+isOn이라는 Bool타입 변수를 사용하려면 State를 알아야한다.  
+
+```swift
+
+struct ContentView: View {
+    
+    @State private var isAirplainModeOn: Bool = false
+    
+    var body: some View { }
+```
+
+State는 body밖에서 선언을 해줘야한다.  
+
+> SwiftUI의 View는 Struct로 되어있다.  
+> Struct는 어떤 값을 변경한다고 같이 딸려서 움직이는 것이 아니라,  
+> 하나의 인스턴스를 만들면 변경하기 힘들다.  
+> 한번 View를 그리고 State 변수가 바뀌면 View를 다시 그린다.  
+
+@State가 붙어있음으로 바라보고 있을 수 있게 한다.  
+
+이 값을 사용할 땐 아래처럼 이 State를 사용한 변수앞에 $를 같이 사용한다. 
+
+```swift
+Toggle("에어플레인 모드", isOn: $isAirplainModeOn)
+```
+
+
+
+<br><br>
+
+### Spacer
+
+Wi-fi화면 같은 경우는 기존의 Text 하나로 했던 구조와 달리,  
+Text와 Text 사이에 공백이 있다.  
+
+<img width="400" alt="스크린샷 2023-11-24 오후 1 33 38 2" src="https://github.com/isGeekCode/TIL/assets/76529148/caf37815-ce59-498b-b197-59dce9842c8a">
+
+이걸 구현하려면  HStack안에 Text Spacer Text 순으로 배치 되어야한다.  
+
+```swift
+HStack {
+    Text("Wi-Fi")
+    Spacer()
+    Text("SK_WKF4DJ7KD")
+        .foregroundStyle(.gray)
+}
+```
+
+<br><br>
+
+그리고 이 HStack은 기존의 NavigationLink의 Label이 된다.  
+
+```swift
+//    NavigationLink("Wi-Fi") { 
+//        Text("Wi-Fi")
+//    }
+
+NavigationLink { 
+    // destination 에 표시될 View
+    Text("Wi-Fi")
+} label: { 
+    // label로 표시될 View
+    HStack {
+        Text("Wi-Fi")
+        Spacer()
+        Text("SK_WKF4DJ7KD")
+            .foregroundStyle(.gray)
+    }
+}
+```
+
+<br><br>
+
+### 적용화면
+
+<img width="300" alt="스크린샷 2023-11-24 오후 1 45 08" src="https://github.com/isGeekCode/TIL/assets/76529148/89f8fa17-916f-4c65-9569-088d487b301b">
+
+<br><br>
+
+## 리팩토링
+여기까지 만드는 데 200줄이 넘는 코드를 만들었다.  
+
 
 
 ## History
