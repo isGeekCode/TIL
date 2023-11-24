@@ -169,7 +169,7 @@ _375 TILs and counting..._
 - [푸시 에러 : 원격 저장소와 커밋 기록이 다른 경우](Git/Git_pushError_OtherCommit.md)
 - [Git - 현재 깃폴더에 연동한 username 확인하고 변경하기](Git/Git_username.md)
 - [공동작업을 위한 Git 버전관리](Git/TIL220422_GitControl.md)
-- [git ignore 사용하기](Git/TIL221108_how_to_make_ignore.md)
+- [# git ignore 사용하기](Git/TIL221108_how_to_make_ignore.md)
 - [Git - Fork한 레포지토리 최신화 하기](Git/gitFork.md)
 - [Git - 갑자기 터미널이 한글로 나온다면](Git/gitKorean.md)
 - [Git - 깃 리모트 변경 하기](Git/gitRemoteChange.md)
