@@ -514,7 +514,640 @@ NavigationLink {
 ## 리팩토링
 여기까지 만드는 데 200줄이 넘는 코드를 만들었다.  
 
+<details>
+<summary>토글 접기/펼치기</summary>
+<div markdown="1">
 
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    
+    @State private var isAirplainModeOn: Bool = false
+    
+    var body: some View {
+        VStack {
+            NavigationView {
+                List {
+                    
+                    Section {
+                        NavigationLink { 
+                            // destination
+                            Text("프로필 화면")
+                        } label: { 
+                            // 네비게이션 라벨 부분
+                            HStack {
+                                Image(systemName: "person.crop.circle.fill")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 50,
+                                           height: 50)
+                                    .padding(.all, 4)
+                                    .foregroundStyle(.gray)
+                                
+                                VStack(alignment: .leading, spacing: 3) {
+                                    Text("방현석")
+                                        .font(.system(size: 24))
+                                        .fontWeight(.regular)
+                                    Text("Apple ID, iCloud+ 미디어 및 구입 항목")
+                                        .font(.system(size: 11))
+
+                                }
+                                .padding(.leading, 4)
+                            }
+                            .padding(.vertical, 10)
+                        }
+                    }
+                    
+                    Section {
+                        HStack {
+                            Image(systemName: "hourglass")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.indigo)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            
+                            NavigationLink("스크린타임") { 
+                                Text("스크린타임")
+                            }
+                        }
+                    }
+                    
+                    Section {
+                        HStack {
+                            Image(systemName: "airplane")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.orange)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            
+                            
+                            // 에어플레인                            
+                            Toggle("에어플레인 모드", isOn: $isAirplainModeOn)
+                        }
+                        
+                        HStack {
+                            Image(systemName: "wifi")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.blue)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            
+                            NavigationLink { 
+                                Text("Wi-Fi")
+                            } label: { 
+                                HStack {
+                                    Text("Wi-Fi")
+                                    Spacer()
+                                    Text("SK_WKF4DJ7KD")
+                                        .foregroundStyle(.gray)
+                                }
+                            }
+                        }
+                        
+                        HStack {
+                            Image(systemName: "antenna.radiowaves.left.and.right")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.green)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            
+                            NavigationLink("셀룰러") { 
+                                Text("셀룰러")
+                            }
+                        }
+                        
+                        HStack {
+                            Image(systemName: "personalhotspot")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.green)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            
+                            NavigationLink("개인용 핫스팟") { 
+                                Text("개인용 핫스팟")
+                            }
+                        }
+                        
+                    }
+                    
+                    Section {
+                        HStack {
+                            Image(systemName: "gear")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.gray)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            
+                            NavigationLink("일반") { 
+                                Text("일반")
+                            }
+                        }
+                        
+                        HStack {
+                            Image(systemName: "accessibility")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.blue)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            NavigationLink("손쉬운 사용") { 
+                                Text("손쉬운 사용")
+                            }
+                        }
+                        
+                        HStack {
+                            Image(systemName: "hand.raised.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.blue)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            NavigationLink("개인정보 보호 및 보안") { 
+                                Text("개인정보 보호 및 보안")
+                            }
+                        }
+                    }
+
+
+                    
+                    Section {
+                        HStack {
+                            Image(systemName: "key.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.gray)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            NavigationLink("암호") { 
+                                Text("암호")
+                            }
+                        }
+                        
+                        HStack {
+                            Image(systemName: "hammer.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.gray)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            
+                            NavigationLink("개발자") { 
+                                Text("개발자")
+                            }
+                        }
+                    }
+                }
+                .navigationTitle(Text("설정"))
+            }
+        }
+        .padding()
+    }
+}
+
+#Preview {
+    ContentView()
+}
+
+```
+
+</div>
+</details>
+
+<br><br><br>
+
+여기서 이제 겹치는 것들은 정리를 해주는 것이 좋다.  
+
+## ViewBuilder를 이용해 View분리하기
+
+일단 Profile Section 부터 시작해보자.   
+
+분리하는 방법은 
+body바깥에 `@ViewBuilder`라는 어노테이션을 이용해 View를 분리해 그려준다.  
+
+프로필 섹션을 그렸던  View를 주석처리해서 아래로 옮겨준다.  
+
+```swift
+// 프로필 섹션
+Section { 
+    NavigationLink { 
+        // destination
+        Text("프로필 화면")
+    } label: { 
+    
+        // 네비게이션 라벨 부분
+//            HStack {
+//                Image(systemName: "person.crop.circle.fill")
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
+//                    .frame(width: 50,
+//                           height: 50)
+//                    .padding(.all, 4)
+//                    .foregroundStyle(.gray)
+//                
+//                VStack(alignment: .leading, spacing: 3) {
+//                    Text("방현석")
+//                        .font(.system(size: 24))
+//                        .fontWeight(.regular)
+//                    Text("Apple ID, iCloud+ 미디어 및 구입 항목")
+//                        .font(.system(size: 11))
+//                }
+//                .padding(.leading, 4)
+//            }
+//            .padding(.vertical, 10)
+    }
+}
+
+    var body: some View { ... }
+    
+    @ViewBuilder
+    private func profileCell() -> some View {
+        HStack {
+            Image(systemName: "person.crop.circle.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 50,
+                       height: 50)
+                .padding(.all, 4)
+                .foregroundStyle(.gray)
+            
+            VStack(alignment: .leading, spacing: 3) {
+                Text("방현석")
+                    .font(.system(size: 24))
+                    .fontWeight(.regular)
+                Text("Apple ID, iCloud+ 미디어 및 구입 항목")
+                    .font(.system(size: 11))
+
+            }
+            .padding(.leading, 4)
+        }
+        .padding(.vertical, 10)
+    }
+```
+
+<br><br>
+
+ 이제 생성한 profileCell()라는 View를 리턴하는 ViewBuilder 메서드를 다시 원위치에 넣어준다.  
+ 
+ <br>
+ 
+ ```swift
+ // 프로필 섹션
+ Section {
+    NavigationLink { 
+        // destination
+        Text("프로필 화면")
+    } label: { 
+        // 네비게이션 라벨 부분
+        profileCell()
+    }
+}
+ ```
+
+<br><br>
+
+이러면 짧게 관리할 수 있다.  
+
+<br><br>
+
+## 셀의 타입별로 분리해보기
+전체적으로 살펴보면 이 UI는 크게 세가지로 나뉘어지는 것으로 보인다.  
+
+1. 일반 셀
+2. 토글이 있는 셀
+3. 설정내용이 보이는 셀
+
+<br>
+
+<img width="400" alt="스크린샷 2023-11-24 오후 1 33 38" src="https://github.com/isGeekCode/TIL/assets/76529148/77fbfe88-5a7b-45ed-bc47-6c26b27d5bb8">
+
+<br><br>
+
+2번과 3번인 토글셀과 설정내용이 보이는 셀은 한번씩 쓰이고,  
+
+일반 셀은 여러번 쓰는 것으로 보인다.  
+
+그래서 2,3 번은 그대로 사용하고,
+
+일반 셀은 파라미터로 이미지 이름, 배경색상, navigationLink의 라벨, destination에 넣을 View를 받아보자.  
+
+
+
+
+### 여기까지
+```swift
+//
+//  ContentView.swift
+//  SettingSwiftUI
+//
+//  Created by bang_hyeonseok on 2023/11/23.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    
+    @State private var isAirplainModeOn: Bool = false
+    
+    var body: some View {
+        VStack {
+            NavigationView {
+                List {
+                    
+                    Section {
+                        NavigationLink { 
+                            // destination
+                            Text("프로필 화면")
+                        } label: { 
+                            // 네비게이션 라벨 부분
+                            profileCell()
+                        }
+                    }
+                    
+                    Section {
+                        HStack {
+                            Image(systemName: "hourglass")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.indigo)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            
+                            NavigationLink("스크린타임") { 
+                                Text("스크린타임")
+                            }
+                        }
+                    }
+                    
+                    Section {
+
+                        toggleCell()
+                        detailCell()
+                                                
+                        HStack {
+                            Image(systemName: "antenna.radiowaves.left.and.right")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.green)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            
+                            NavigationLink("셀룰러") { 
+                                Text("셀룰러")
+                            }
+                        }
+                        
+                        HStack {
+                            Image(systemName: "personalhotspot")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.green)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            
+                            NavigationLink("개인용 핫스팟") { 
+                                Text("개인용 핫스팟")
+                            }
+                        }
+                        
+                    }
+                    
+                    Section {
+                        HStack {
+                            Image(systemName: "gear")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.gray)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            
+                            NavigationLink("일반") { 
+                                Text("일반")
+                            }
+                        }
+                        
+                        HStack {
+                            Image(systemName: "accessibility")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.blue)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            NavigationLink("손쉬운 사용") { 
+                                Text("손쉬운 사용")
+                            }
+                        }
+                        
+                        HStack {
+                            Image(systemName: "hand.raised.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.blue)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            NavigationLink("개인정보 보호 및 보안") { 
+                                Text("개인정보 보호 및 보안")
+                            }
+                        }
+                    }
+
+
+                    
+                    Section {
+                        HStack {
+                            Image(systemName: "key.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.gray)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            NavigationLink("암호") { 
+                                Text("암호")
+                            }
+                        }
+                        
+                        HStack {
+                            Image(systemName: "hammer.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20,
+                                       height: 20)
+                                .padding(.all, 5)
+                                .background(.gray)
+                                .foregroundStyle(.white)
+                                .cornerRadius(6)
+                            
+                            NavigationLink("개발자") { 
+                                Text("개발자")
+                            }
+                        }
+                    }
+                }
+                .navigationTitle(Text("설정"))
+            }
+        }
+        .padding()
+    }
+    
+    @ViewBuilder
+    private func profileCell() -> some View {
+        HStack {
+            Image(systemName: "person.crop.circle.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 50,
+                       height: 50)
+                .padding(.all, 4)
+                .foregroundStyle(.gray)
+            
+            VStack(alignment: .leading, spacing: 3) {
+                Text("방현석")
+                    .font(.system(size: 24))
+                    .fontWeight(.regular)
+                Text("Apple ID, iCloud+ 미디어 및 구입 항목")
+                    .font(.system(size: 11))
+
+            }
+            .padding(.leading, 4)
+        }
+        .padding(.vertical, 10)
+
+    }
+    
+    @ViewBuilder
+    private func toggleCell() -> some View {
+        HStack {
+            Image(systemName: "airplane")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 20,
+                       height: 20)
+                .padding(.all, 5)
+                .background(.orange)
+                .foregroundStyle(.white)
+                .cornerRadius(6)
+            
+            
+            // 에어플레인                            
+            Toggle("에어플레인 모드", isOn: $isAirplainModeOn)
+        }
+    }
+    
+    @ViewBuilder
+    private func detailCell() -> some View {
+        
+        HStack {
+            Image(systemName: "wifi")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 20,
+                       height: 20)
+                .padding(.all, 5)
+                .background(.blue)
+                .foregroundStyle(.white)
+                .cornerRadius(6)
+            
+            NavigationLink { 
+                Text("Wi-Fi")
+            } label: { 
+                HStack {
+                    Text("Wi-Fi")
+                    Spacer()
+                    Text("SK_WKF4DJ7KD")
+                        .foregroundStyle(.gray)
+                }
+            }
+        }
+
+        
+    }
+}
+
+#Preview {
+    ContentView()
+}
+
+
+
+
+/*
+ CustomIconImageView(systemName: "hourglass", backgroundColor: .indigo)
+ */
+struct CustomIconImageView: View {
+    var systemName: String
+    var backgroundColor: Color
+    
+    var body: some View {
+        Image(systemName: systemName).resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 20,
+                   height: 20)
+            .padding(.all, 5)
+            .background(backgroundColor)
+            .foregroundStyle(.white)
+            .cornerRadius(6)
+    }
+}
+
+
+```
 
 ## History
 - 231123: 네비게이션링크 적용하기

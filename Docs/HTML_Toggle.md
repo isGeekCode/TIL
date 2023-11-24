@@ -35,12 +35,12 @@
   
 그렇다면 코드블록도 가능한가??
 
-```
+```bash
 <details>
 <summary>토글 접기/펼치기</summary>
 <div markdown="1">
 
-```swift
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -51,7 +51,6 @@ class ViewController: UIViewController {
         print("Hello world!!")
     }
 }
-```
 
 </div>
 </details>
