@@ -1,4 +1,4 @@
-git ignore 사용하기
+## git ignore 사용하기
 
 보통 우리가 사용하는 프로젝트는 깃을 통해 버전관리를 할수가 있다.
 
@@ -23,7 +23,7 @@ git push를 하게 되면 Local에서 사용하는 프로젝트는 Remote에 저
 
 물론… 그것도 귀찮으니 가장 좋은 방법은 프로젝트를 올리기 전에 작업을 해주는 것이 좋다.
 
-# 📌 깃 푸시 순서
+## git ignore 파일 세팅하기
 
 1. **ignore 세팅**
 2. **init 프로젝트**
@@ -40,9 +40,12 @@ swift, xcode, cocoapods 키워드를 추천한다.
 
 이 내용을 복사한다.
 
-생성된 내용
+<br><br>
 
-- ignore처리 내용
+### 생성된 내용
+<details>
+<summary>토글 접기/펼치기</summary>
+<div markdown="1">
 
   ```bash
   # Created by https://www.gitignore.io/api/xcode,swift,cocoapods
@@ -158,6 +161,12 @@ swift, xcode, cocoapods 키워드를 추천한다.
   # End of https://www.gitignore.io/api/xcode,swift,cocoapods
   ```
 
+
+</div>
+</details>
+
+<br><br>
+
 ### 2. ignore파일 생성하기
 
 - terminal 창에 git repository 디렉토리로 간다.
@@ -169,3 +178,49 @@ swift, xcode, cocoapods 키워드를 추천한다.
 - git push
 
 이제 제외처리된 파일들은 변경되어도 추적되지않는다.
+
+<br><br>
+
+## 이미 올라간 파일 잡기
+
+예를 들어 .DS_Store 파일의 예를 들어보자.  
+
+Desktop Services Store의 약자로, 애플에서 정의한 파일 포맷이다.  
+
+이 파일은 맥에서 Finder로 폴더에 접근할 때, 자동으로 생기는 파일인데, 해당 폴더의 메타 데이터를 저장하는 파일이다.  
+
+> windows의 thumb.db와 비슷하다.  
+> 분석해보면 해당 디렉토리 크기, 아이콘의 위치, 폴더의 배경에 대한 정보 등을 얻을 수 있다.  
+
+이 파일은 mac OS 환경에서만 생성하고 사용되지만 파일을 공유하는 과정에서 함께 공유되는 경우가 있다.  
+
+프로젝트와 상관이 없고 git status에서만 확인되는 파일이니 git으로 넘기지말고 삭제해도 된다.  
+
+<br><br><br>
+
+### 저장소의 상위 디렉토리에서 현재 디렉토리 아래의 모든 .DS_Store파일들을 제거하기
+
+```
+find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+```
+
+만약 앞으로도 .DS_Store파일을 업로드 하지않을 거라면,  
+저장소 상위 디렉토리에 .gitignore 파일을 생성하고 이 파일을 추가한다. 
+
+```
+echo .DS_Store >> .gitignore
+```
+
+그리고 PUSH
+
+```
+git add --all
+git commit -m '.DS_Store removed'
+git push origin main
+```
+
+<br><br>
+
+## History
+- 221108 : 초안작성
+- 231124 : 올라간 파일 지우고 ignore 추가하기

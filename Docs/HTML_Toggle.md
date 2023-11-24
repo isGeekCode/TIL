@@ -35,6 +35,27 @@
   
 그렇다면 코드블록도 가능한가??
 
+```
+<details>
+<summary>토글 접기/펼치기</summary>
+<div markdown="1">
+
+```swift
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad {
+        super.viewDidLoad()
+        
+        print("Hello world!!")
+    }
+}
+```
+
+</div>
+</details>
+```
 
 <details>
 <summary>토글 접기/펼치기</summary>
@@ -53,9 +74,8 @@ class ViewController: UIViewController {
 }
 ```
 
-<details>
-<summary>토글 접기/펼치기</summary>
-<div markdown="1">
+</div>
+</details>
 
 
 <br><br><br>
