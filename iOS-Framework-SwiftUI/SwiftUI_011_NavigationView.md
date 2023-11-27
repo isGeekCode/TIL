@@ -156,7 +156,7 @@ struct ContentView: View {
 
 이런 이미지가 하나 있는데, 이 자체를 네비게이션 링크로 사용하려면 아래와 같이 사용한다. 
 
-```
+```swift
 //기존의 문자열만 가지고 사용하는 경우
 struct ContentView: View {
     var body: some View {
@@ -194,7 +194,8 @@ struct ContentView: View {
 
 이번에는 List 내부에 세팅을 해보자.
 이런 모양이 있다.  
-```
+  
+```swift
 struct ContentView: View {
     var body: some View {
         NavigationView {
