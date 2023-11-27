@@ -100,16 +100,17 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
-
 
 ### 세팅화면
 
 <img width="300" alt="스크린샷 2023-11-23 오전 9 56 24" src="https://github.com/isGeekCode/github-action-til-autoformat-readme/assets/76529148/beb4290d-85a5-4953-ad40-a993b3d5e78c">
 
-[Top](#contents)
+<br><br>
+
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -174,7 +175,7 @@ struct SettingModel {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -210,7 +211,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -221,7 +222,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -381,7 +382,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -415,7 +416,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -433,7 +434,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -517,7 +518,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -526,7 +527,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -689,7 +690,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -699,7 +700,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -859,7 +860,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -874,7 +875,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -1011,7 +1012,7 @@ class SettingViewController: UIViewController {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -1194,7 +1195,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -1204,7 +1205,7 @@ extension SettingViewController: UITableViewDataSource, UITableViewDelegate {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -1559,6 +1560,10 @@ class DetailViewController: UIViewController {
 
 <br><br>
 
+[[Top]](#contents)
+
+<br><br><br>
+
 ## MVC로 리팩토링
 
 현재 앱에서 가장 핵심 기능이라고 할 수 있는 것은 검색기능이라고 생각한다. 
@@ -1680,7 +1685,7 @@ class SettingViewController: UIViewController {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -2122,7 +2127,7 @@ class DetailViewController: UIViewController {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -2132,7 +2137,7 @@ class DetailViewController: UIViewController {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 

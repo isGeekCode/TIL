@@ -48,7 +48,7 @@
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -73,7 +73,7 @@ VStack {
 
 <br><br>
 
-[Top](#contents)
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -155,6 +155,10 @@ VStack {
 ```
 
 <br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
 
 ### NavigationLink
 
@@ -251,6 +255,10 @@ VStack {
 
 <br><br>
 
+[[Top]](#contents)
+
+<br><br><br>
+
 ## 이미지 추가
 
 이제 List의 Row별로 이미지를 만들어보자.  
@@ -329,6 +337,10 @@ ContentView
 
 <br><br>
 
+[[Top]](#contents)
+
+<br><br><br>
+
 ## 프로필 섹션 구현
 
 <img width="400" alt="스크린샷 2023-11-24 오전 9 20 06" src="https://github.com/isGeekCode/TIL/assets/76529148/85e938b4-c33d-44b4-bfb8-5c2509a3fc12">
@@ -351,6 +363,10 @@ ContentView
 ```
 
 <br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
 
 ### 프로필 섹션 UI
 
@@ -386,6 +402,10 @@ HStack {
 ```
 
 <br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
 
 ### 프로필섹션 padding 처리
 
@@ -430,6 +450,10 @@ HStack {
 ```
 
 <br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
 
 ### 프로필섹션 NavigationLink
  
@@ -490,6 +514,10 @@ NavigationLink {
 
 <br><br>
 
+[[Top]](#contents)
+
+<br><br><br>
+
 
 ## 셀 디테일
 
@@ -529,6 +557,10 @@ Toggle("에어플레인 모드", isOn: $isAirplainModeOn)
 
 
 <br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
 
 ### Spacer
 
@@ -582,6 +614,10 @@ NavigationLink {
 <img width="300" alt="스크린샷 2023-11-24 오후 1 45 08" src="https://github.com/isGeekCode/TIL/assets/76529148/89f8fa17-916f-4c65-9569-088d487b301b">
 
 <br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
 
 ## 리팩토링
 여기까지 만드는 데 200줄이 넘는 코드를 만들었다.  
@@ -822,13 +858,16 @@ struct ContentView: View {
 </div>
 </details>
 
-<br><br><br>
-
-여기서 이제 겹치는 것들은 정리를 해주는 것이 좋다.  
-
 <br><br>
 
+[[Top]](#contents)
+
+<br><br><br>
+
+
 ## ViewBuilder를 이용해 View분리하기
+
+여기서 이제 겹치는 것들은 정리를 해주는 것이 좋다.  
 
 일단 Profile Section 부터 시작해보자.   
 
@@ -921,6 +960,10 @@ Section {
 이러면 짧게 관리할 수 있다.  
 
 <br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
 
 ## 셀의 타입별로 분리해보기
 전체적으로 살펴보면 이 UI는 크게 세가지로 나뉘어지는 것으로 보인다.  
@@ -1069,6 +1112,10 @@ private func plainCell<V: View>(imageName: String,
 ```
 
 <br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
 
 ### escaping 적용하기
 
@@ -1439,6 +1486,10 @@ struct ContentView: View {
 
 ```
 
+<br><br>
+
+[[Top]](#contents)
+
 <br><br><br>
 
 ### 객체분리하기
@@ -1605,6 +1656,10 @@ Image를 리턴할 ViewBuilder 메서드를 만들어보자.
     
 ```
 
+
+<br><br>
+
+[[Top]](#contents)
 
 <br><br><br>
 
@@ -1792,6 +1847,10 @@ struct ContentView: View {
 }
 ```
 
+<br><br>
+
+[[Top]](#contents)
+
 <br><br><br>
 
 
@@ -1799,4 +1858,4 @@ struct ContentView: View {
 
 ## History
 - 231123: 네비게이션링크 적용하기
-- 231127: 리팩토링
+- 231127: 리팩토링, 색인추가, 탑버튼 추가
