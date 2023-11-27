@@ -1,6 +1,56 @@
 # Sample App : 설정앱 - SwiftUI
 
 
+<br>
+
+설정앱의 기능은 아래와 같다.
+
+- 최소기능
+    - 그려질 화면
+    - 섹션 분리
+    - 셀타입분기처리
+    - 디테일화면 이동
+
+<br><br>
+
+## Contents
+1. [최종화면](#최종화면)
+2. [Text나열](#Text나열)
+3. [Section 분리](#Section-분리)
+4. [Navigation 세팅하기](#Navigation-세팅하기)
+    - [NavigationTitle](#NavigationTitle)
+    - [NavigationLink](#NavigationLink)
+    - [적용화면_1](#적용화면_1)
+5.    [이미지 추가](#이미지-추가)
+    - [적용화면_2](#적용화면_2)
+6. [프로필 섹션 구현](#프로필-섹션-구현)
+    - [프로필 섹션 UI](#프로필-섹션-UI)
+    - [프로필섹션 padding 처리](#프로필섹션-padding-처리)
+    - [프로필섹션 NavigationLink](#프로필섹션-NavigationLink)
+    - [적용화면_3](#적용화면_3)
+7. [셀 디테일](#셀-디테일)
+    - [Toggle과 State](#Toggle과-State)
+    - [Spacer](#Spacer)
+    - [적용화면_4](#적용화면_4)
+8. [리팩토링](#리팩토링)
+    - [ViewBuilder를 이용해 View분리하기](#ViewBuilder를-이용해-View분리하기)
+    - [셀의 타입별로 분리해보기](#셀의-타입별로-분리해보기)
+        - [ViewBuilder를 이용해 View분리하기](#ViewBuilder를-이용해-View분리하기)
+        - [escaping 적용하기](#escaping-적용하기)
+        - [객체분리하기](#객체분리하기)
+9. [최종코드](#최종코드)
+
+
+<br><br>
+
+## 최종화면
+<img width="300" alt="ezgif-2-71860cf113" src="https://github.com/isGeekCode/TIL/assets/76529148/afd61568-a82d-4afa-a395-0462f2579851">
+
+<br><br>
+
+[Top](#contents)
+
+<br><br><br>
 
 ## Text나열
 ```swift
@@ -20,6 +70,12 @@ VStack {
 }
 
 ```
+
+<br><br>
+
+[Top](#contents)
+
+<br><br><br>
 
 ## Section 분리
 
@@ -56,6 +112,10 @@ VStack {
 ```
 
 <br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
 
 ## Navigation 세팅하기
 
@@ -273,6 +333,8 @@ ContentView
 
 <img width="400" alt="스크린샷 2023-11-24 오전 9 20 06" src="https://github.com/isGeekCode/TIL/assets/76529148/85e938b4-c33d-44b4-bfb8-5c2509a3fc12">
 
+<br><br>
+
 프로필 섹션 UI를 짜기 위해서는 아래 구조와 같이 된다.  
 ```
 ├ Section  // 프로필 섹션
@@ -288,6 +350,8 @@ ContentView
         └ Text("에어플레인 모드)
 ```
 
+<br><br>
+
 ### 프로필 섹션 UI
 
 프로필 이미지는 다른 섹션의 일반 아이콘 이미지와 달리 동그란 이미지를 가지고 있다.   
@@ -298,6 +362,8 @@ ContentView
 - 이미지 세부설정
 - VSatck 내부 폰트설정
 - VStack 내부를 왼쪽정렬처리
+
+<br><br>
 
 ```swift
 HStack {
@@ -318,6 +384,8 @@ HStack {
     }
 }
 ```
+
+<br><br>
 
 ### 프로필섹션 padding 처리
 
@@ -467,7 +535,11 @@ Toggle("에어플레인 모드", isOn: $isAirplainModeOn)
 Wi-fi화면 같은 경우는 기존의 Text 하나로 했던 구조와 달리,  
 Text와 Text 사이에 공백이 있다.  
 
+<br><br>
+
 <img width="400" alt="스크린샷 2023-11-24 오후 1 33 38 2" src="https://github.com/isGeekCode/TIL/assets/76529148/caf37815-ce59-498b-b197-59dce9842c8a">
+
+<br><br>
 
 이걸 구현하려면  HStack안에 Text Spacer Text 순으로 배치 되어야한다.  
 
@@ -754,6 +826,8 @@ struct ContentView: View {
 
 여기서 이제 겹치는 것들은 정리를 해주는 것이 좋다.  
 
+<br><br>
+
 ## ViewBuilder를 이용해 View분리하기
 
 일단 Profile Section 부터 시작해보자.   
@@ -762,6 +836,8 @@ struct ContentView: View {
 body바깥에 `@ViewBuilder`라는 어노테이션을 이용해 View를 분리해 그려준다.  
 
 프로필 섹션을 그렸던  View를 주석처리해서 아래로 옮겨준다.  
+
+<br><br>
 
 ```swift
 // 프로필 섹션
@@ -853,7 +929,7 @@ Section {
 2. 토글이 있는 셀
 3. 설정내용이 보이는 셀
 
-<br>
+<br><br>
 
 <img width="400" alt="스크린샷 2023-11-24 오후 1 33 38" src="https://github.com/isGeekCode/TIL/assets/76529148/77fbfe88-5a7b-45ed-bc47-6c26b27d5bb8">
 
@@ -868,17 +944,180 @@ Section {
 일반 셀은 파라미터로 이미지 이름, 배경색상, navigationLink의 라벨, destination에 넣을 View를 받아보자.  
 
 
+<br><br>
 
-
-### 여기까지
+2,3 번의 View는 프로필셀을 분리했던것처럼 메서드로 분리한다.  
 ```swift
-//
-//  ContentView.swift
-//  SettingSwiftUI
-//
-//  Created by bang_hyeonseok on 2023/11/23.
-//
 
+    @ViewBuilder
+    private func toggleCell() -> some View {
+        HStack {
+            Image(systemName: "airplane")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 20,
+                       height: 20)
+                .padding(.all, 5)
+                .background(.orange)
+                .foregroundStyle(.white)
+                .cornerRadius(6)
+            
+            
+            // 에어플레인                            
+            Toggle("에어플레인 모드", isOn: $isAirplainModeOn)
+        }
+    }
+    
+    @ViewBuilder
+    private func detailCell() -> some View {
+        
+        HStack {
+            Image(systemName: "wifi")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 20,
+                       height: 20)
+                .padding(.all, 5)
+                .background(.blue)
+                .foregroundStyle(.white)
+                .cornerRadius(6)
+            
+            NavigationLink { 
+                Text("Wi-Fi")
+            } label: { 
+                HStack {
+                    Text("Wi-Fi")
+                    Spacer()
+                    Text("SK_WKF4DJ7KD")
+                        .foregroundStyle(.gray)
+                }
+            }
+        }
+        
+        
+    }
+```
+
+<br><br>
+
+이제 여러번 사용할 일반셀을 보자.  
+
+재사용할 내용은 아래와 같다.  
+- 이미지 이름
+- 배경색
+- 네비게이션링크의 label View
+- 네비게이션링크의 destination View
+
+<br><br>
+
+```swift
+HStack {
+    Image(systemName: "accessibility")  // 재사용필요
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+        .frame(width: 20,
+               height: 20)
+        .padding(.all, 5)
+        .background(.blue)              // 재사용필요
+        .foregroundStyle(.white)
+        .cornerRadius(6)
+    NavigationLink("손쉬운 사용") {        // 재사용필요
+        Text("손쉬운 사용")                // 재사용필요
+    }
+}
+
+```
+
+<br><br>
+
+그래서 이 재사용할 것들은 인자로 수정해주자. 
+```swift
+@ViewBuilder
+private func plainCell(imageName: String,
+                       backgroudColor: Color,
+                       navigationLabelStr: String,
+                       destination: View) -> some View {
+    
+    HStack {
+        Image(systemName: imageName)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 20,
+                   height: 20)
+            .padding(.all, 5)
+            .background(backgroudColor)
+            .foregroundStyle(.white)
+            .cornerRadius(6)
+        NavigationLink(navigationLabelStr) { 
+            destination // Text("손쉬운 사용")    // ERROR!!!!!!
+        }
+    }
+}
+```
+
+<br><br>
+
+그런데 발생하는 문제가 있다.  View를 파라미터로 사용하려면 Generic타입으로만 사용가능하다.  
+
+그래서 destination의 View타입을 제네릭 타입으로 명시해준다.  
+
+```swift
+private func plainCell<V: View>(imageName: String,
+                       backgroudColor: Color,
+                       navigationLabelStr: String,
+                       destination: V) -> some View { }
+```
+
+<br><br>
+
+### escaping 적용하기
+
+마지막으로 한가지 더! 
+
+우리는 이걸 그냥 그대로 넣을 것이 아니라 escaping closure로 사용해야한다. 그래서
+
+탈출클로저의  형태로 수정하자.  
+
+<br><br>
+
+```swift
+// 변경 전
+private func plainCell<V: View>(imageName: String,
+                       backgroudColor: Color,
+                       navigationLabelStr: String,
+                       destination: V) -> some View { }
+
+// 변경 후
+    private func plainCell<V: View>(imageName: String,
+                           backgroudColor: Color,
+                           navigationLabelStr: String,
+                           destination: @escaping () -> V ) -> some View {
+        
+        HStack {
+            Image(systemName: imageName) 
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 20,
+                       height: 20)
+                .padding(.all, 5)
+                .background(backgroudColor)
+                .foregroundStyle(.white)
+                .cornerRadius(6)
+            NavigationLink(navigationLabelStr) { 
+                destination() // Text("손쉬운 사용")
+            }
+        }
+    }
+```
+
+이제 이걸 전체 적용해주자.   
+
+<br><br><br>
+
+### 전체코드
+
+
+```swift
 import SwiftUI
 
 struct ContentView: View {
@@ -889,7 +1128,7 @@ struct ContentView: View {
         VStack {
             NavigationView {
                 List {
-                    
+                    S
                     Section {
                         NavigationLink { 
                             // destination
@@ -901,142 +1140,65 @@ struct ContentView: View {
                     }
                     
                     Section {
-                        HStack {
-                            Image(systemName: "hourglass")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20,
-                                       height: 20)
-                                .padding(.all, 5)
-                                .background(.indigo)
-                                .foregroundStyle(.white)
-                                .cornerRadius(6)
-                            
-                            NavigationLink("스크린타임") { 
-                                Text("스크린타임")
-                            }
+                        plainCell(imageName: "hourglass",
+                                  backgroudColor: .indigo,
+                                  navigationLabelStr: "스크린타임") { 
+                            Text("스크린타임")
                         }
                     }
                     
                     Section {
-
+                        
                         toggleCell()
                         detailCell()
-                                                
-                        HStack {
-                            Image(systemName: "antenna.radiowaves.left.and.right")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20,
-                                       height: 20)
-                                .padding(.all, 5)
-                                .background(.green)
-                                .foregroundStyle(.white)
-                                .cornerRadius(6)
-                            
-                            NavigationLink("셀룰러") { 
-                                Text("셀룰러")
-                            }
+                        
+                        plainCell(imageName: "antenna.radiowaves.left.and.right",
+                                  backgroudColor: .green,
+                                  navigationLabelStr: "셀룰러") { 
+                            Text("셀룰러")
                         }
                         
-                        HStack {
-                            Image(systemName: "personalhotspot")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20,
-                                       height: 20)
-                                .padding(.all, 5)
-                                .background(.green)
-                                .foregroundStyle(.white)
-                                .cornerRadius(6)
-                            
-                            NavigationLink("개인용 핫스팟") { 
-                                Text("개인용 핫스팟")
-                            }
+                        plainCell(imageName: "personalhotspot",
+                                  backgroudColor: .green,
+                                  navigationLabelStr: "개인용 핫스팟") { 
+                            Text("개인용 핫스팟")
                         }
-                        
                     }
                     
                     Section {
-                        HStack {
-                            Image(systemName: "gear")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20,
-                                       height: 20)
-                                .padding(.all, 5)
-                                .background(.gray)
-                                .foregroundStyle(.white)
-                                .cornerRadius(6)
-                            
-                            NavigationLink("일반") { 
-                                Text("일반")
-                            }
+                        plainCell(imageName: "gear",
+                                  backgroudColor: .gray,
+                                  navigationLabelStr: "일반") { 
+                            Text("일반")
                         }
                         
-                        HStack {
-                            Image(systemName: "accessibility")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20,
-                                       height: 20)
-                                .padding(.all, 5)
-                                .background(.blue)
-                                .foregroundStyle(.white)
-                                .cornerRadius(6)
-                            NavigationLink("손쉬운 사용") { 
-                                Text("손쉬운 사용")
-                            }
+                        plainCell(imageName: "accessibility",
+                                  backgroudColor: .blue,
+                                  navigationLabelStr: "손쉬운 사용") { 
+                            Text("손쉬운 사용")
                         }
                         
-                        HStack {
-                            Image(systemName: "hand.raised.fill")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20,
-                                       height: 20)
-                                .padding(.all, 5)
-                                .background(.blue)
-                                .foregroundStyle(.white)
-                                .cornerRadius(6)
-                            NavigationLink("개인정보 보호 및 보안") { 
-                                Text("개인정보 보호 및 보안")
-                            }
+                        plainCell(imageName: "hand.raised.fill",
+                                  backgroudColor: .blue,
+                                  navigationLabelStr: "개인정보 보호 및 보안") { 
+                            Text("개인정보 보호 및 보안")
                         }
                     }
-
-
                     
                     Section {
-                        HStack {
-                            Image(systemName: "key.fill")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20,
-                                       height: 20)
-                                .padding(.all, 5)
-                                .background(.gray)
-                                .foregroundStyle(.white)
-                                .cornerRadius(6)
-                            NavigationLink("암호") { 
-                                Text("암호")
-                            }
-                        }
                         
-                        HStack {
-                            Image(systemName: "hammer.fill")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20,
-                                       height: 20)
-                                .padding(.all, 5)
-                                .background(.gray)
-                                .foregroundStyle(.white)
-                                .cornerRadius(6)
-                            
-                            NavigationLink("개발자") { 
-                                Text("개발자")
-                            }
+                        plainCell(imageName: "key.fill",
+                                  backgroudColor: .gray,
+                                  navigationLabelStr: "암호") { 
+                            Text("암호")
+
+                        }
+
+                        plainCell(imageName: "hammer.fill",
+                                  backgroudColor: .gray,
+                                  navigationLabelStr: "개발자") { 
+                            Text("개발자")
+
                         }
                     }
                 }
@@ -1063,12 +1225,12 @@ struct ContentView: View {
                     .fontWeight(.regular)
                 Text("Apple ID, iCloud+ 미디어 및 구입 항목")
                     .font(.system(size: 11))
-
+                
             }
             .padding(.leading, 4)
         }
         .padding(.vertical, 10)
-
+        
     }
     
     @ViewBuilder
@@ -1115,8 +1277,29 @@ struct ContentView: View {
                 }
             }
         }
-
         
+        
+    }
+    
+    @ViewBuilder
+    private func plainCell<V: View>(imageName: String,
+                           backgroudColor: Color,
+                           navigationLabelStr: String,
+                           destination: @escaping () -> V ) -> some View {
+        HStack {
+            Image(systemName: imageName) 
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 20,
+                       height: 20)
+                .padding(.all, 5)
+                .background(backgroudColor)
+                .foregroundStyle(.white)
+                .cornerRadius(6)
+            NavigationLink(navigationLabelStr) { 
+                destination() // Text("손쉬운 사용")
+            }
+        }
     }
 }
 
@@ -1124,52 +1307,496 @@ struct ContentView: View {
     ContentView()
 }
 
+```
 
+<br><br>
 
+이렇게 성격이 다른 UI를 메서드로 분리하는 작업을 해봤다.  
 
-/*
- CustomIconImageView(systemName: "hourglass", backgroundColor: .indigo)
- */
-struct CustomIconImageView: View {
-    var systemName: String
-    var backgroundColor: Color
+그런데 그럼에도 `1. 토글셀`, `2. 설정내용이 보이는 셀`, `3. 일반셀`에서 공통적으로 사용하는 부분이 많다.  
+
+2번과 3번을 하나로 합쳐보자.  
+
+```swift
+    @ViewBuilder
+    private func detailCell() -> some View {
+        
+        HStack {
+            Image(systemName: "wifi")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 20,
+                       height: 20)
+                .padding(.all, 5)
+                .background(.blue)
+                .foregroundStyle(.white)
+                .cornerRadius(6)
+            
+            NavigationLink { 
+                Text("Wi-Fi")
+            } label: { 
+                HStack {
+                    Text("Wi-Fi")
+                    Spacer()
+                    Text("SK_WKF4DJ7KD")
+                        .foregroundStyle(.gray)
+                }
+            }
+        }
+    }
     
-    var body: some View {
-        Image(systemName: systemName).resizable()
+    @ViewBuilder
+    private func plainCell<V: View>(imageName: String,
+                           backgroudColor: Color,
+                           navigationLabelStr: String,
+                           destination: @escaping () -> V ) -> some View {
+        HStack {
+            Image(systemName: imageName) 
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 20,
+                       height: 20)
+                .padding(.all, 5)
+                .background(backgroudColor)
+                .foregroundStyle(.white)
+                .cornerRadius(6)
+            NavigationLink(navigationLabelStr) { 
+                destination() // Text("손쉬운 사용")
+            }
+        }
+    }
+```
+
+<br><br>
+
+다른 부분은 naviationLink부분이다. 이때 detailCell메서드는 선택한 내용을 텍스트로 필요로 한다. 그럼 plainCell에 추가해보자.  
+
+ 이런건 detail 정보를 파라미터로 옵셔널 처리해주면, 그걸 받느냐 마느냐에 따라 처리가 가능하다. 
+
+<br><br>
+ 
+```swift
+    // 변경 전
+    @ViewBuilder
+    private func plainCell<V: View>(imageName: String,
+                           backgroudColor: Color,
+                           navigationLabelStr: String,
+                           destination: @escaping () -> V ) -> some View {
+        HStack {
+            Image(systemName: imageName) 
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 20,
+                       height: 20)
+                .padding(.all, 5)
+                .background(backgroudColor)
+                .foregroundStyle(.white)
+                .cornerRadius(6)
+            NavigationLink(navigationLabelStr) { 
+                destination() // Text("손쉬운 사용")
+            }
+        }
+    }
+    
+    // 변경 후
+    @ViewBuilder
+    private func plainCell<V: View>(imageName: String,
+                                    backgroudColor: Color,
+                                    detailStr: String? = nil,
+                                    navigationLabelStr: String,
+                                    destination: @escaping () -> V ) -> some View {
+        HStack {
+            Image(systemName: imageName) 
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 20,
+                       height: 20)
+                .padding(.all, 5)
+                .background(backgroudColor)
+                .foregroundStyle(.white)
+                .cornerRadius(6)
+            
+            if let detailStr = detailStr {
+                
+                NavigationLink { 
+                    destination()
+                } label: { 
+                    HStack {
+                        Text(navigationLabelStr)
+                        Spacer()
+                        Text(detailStr)
+                            .foregroundStyle(.gray)
+                    }
+                }
+                
+            } else {
+                NavigationLink(navigationLabelStr) { 
+                    destination()
+                }
+            }
+        }
+    }
+
+```
+
+<br><br><br>
+
+### 객체분리하기
+
+이제 전체 코드를 보면 총 세가지가 있다. 
+- profileCell
+- toggleCell
+- plainCell
+
+거의 마무리가 됐다.  
+
+리팩토링을 할 때, 기억해야할 것은 이 코드를 가지고 나중에 
+
+어떻게 유지보수를 할 것인지 고민해야한다는 것이다.  
+
+그러면 현재로서 섹션에 새로운 셀을 추가할 수 있을까? -> 할 수 있다.   
+
+그러면 디자인 수정이 필요하다면 용이할까?? 이건 좀 문제가 있다.  
+
+아이콘 이미지가 각각 따로 있어서 일일히 메서드마다 적용해줘야하는 문제가 있기때문에 공통된 것들은 분리해서 적용해주자.  
+
+Image에서 받아야할 것은 image이름, image 배경색이다. 
+
+Image를 리턴할 ViewBuilder 메서드를 만들어보자.  
+
+```swift
+    @ViewBuilder
+    private func iconImage(imageName: String, backgroudColor: Color) -> some View {
+        Image(systemName: imageName)
+            .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 20,
                    height: 20)
             .padding(.all, 5)
-            .background(backgroundColor)
+            .background(backgroudColor)
             .foregroundStyle(.white)
             .cornerRadius(6)
     }
+```
+
+자 이걸 아래 메서드에 적용할 거다.  
+
+
+
+```swift
+// 변경전
+    @ViewBuilder
+    private func toggleCell() -> some View {
+        HStack {
+            Image(systemName: "airplane")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 20,
+                       height: 20)
+                .padding(.all, 5)
+                .background(.orange)
+                .foregroundStyle(.white)
+                .cornerRadius(6)
+            
+            // 에어플레인                            
+            Toggle("에어플레인 모드", isOn: $isAirplainModeOn)
+        }
+    }
+
+    @ViewBuilder
+    private func plainCell<V: View>(imageName: String,
+                                    backgroudColor: Color,
+                                    detailStr: String? = nil,
+                                    navigationLabelStr: String,
+                                    destination: @escaping () -> V ) -> some View {
+        HStack {
+            Image(systemName: imageName) 
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 20,
+                       height: 20)
+                .padding(.all, 5)
+                .background(backgroudColor)
+                .foregroundStyle(.white)
+                .cornerRadius(6)
+            
+            if let detailStr = detailStr {
+                
+                NavigationLink { 
+                    destination()
+                } label: { 
+                    HStack {
+                        Text(navigationLabelStr)
+                        Spacer()
+                        Text(detailStr)
+                            .foregroundStyle(.gray)
+                    }
+                }
+                
+            } else {
+                NavigationLink(navigationLabelStr) { 
+                    destination()
+                }
+            }
+        }
+    }
+```
+
+이제 추가된 image를 적용시킨 메서드로 적용해보자.  
+
+```swift
+    @ViewBuilder
+    private func iconImage(imageName: String, backgroudColor: Color) -> some View {
+        Image(systemName: imageName)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 20,
+                   height: 20)
+            .padding(.all, 5)
+            .background(backgroudColor)
+            .foregroundStyle(.white)
+            .cornerRadius(6)
+    }
+    
+    
+    @ViewBuilder
+    private func toggleCell() -> some View {
+        HStack {
+            iconImage(imageName: "airplane",
+                      backgroudColor: .orange)
+            Toggle("에어플레인 모드", isOn: $isAirplainModeOn)
+        }
+    }
+
+    @ViewBuilder
+    private func plainCell<V: View>(imageName: String,
+                                    backgroudColor: Color,
+                                    detailStr: String? = nil,
+                                    navigationLabelStr: String,
+                                    destination: @escaping () -> V ) -> some View {
+        HStack {
+            
+            iconImage(imageName: imageName,
+                      backgroudColor: backgroudColor)
+            
+            if let detailStr = detailStr {
+                
+                NavigationLink { 
+                    destination()
+                } label: { 
+                    HStack {
+                        Text(navigationLabelStr)
+                        Spacer()
+                        Text(detailStr)
+                            .foregroundStyle(.gray)
+                    }
+                }
+                
+            } else {
+                NavigationLink(navigationLabelStr) { 
+                    destination()
+                }
+            }
+        }
+    }
 }
 
-
+    
+    
 ```
+
+
+<br><br><br>
+
+## 최종코드
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    
+    @State private var isAirplainModeOn: Bool = false
+    
+    var body: some View {
+        VStack {
+            NavigationView {
+                List {
+                    
+                    Section {
+                        NavigationLink { 
+                            // destination
+                            Text("프로필 화면")
+                        } label: { 
+                            // 네비게이션 라벨 부분
+                            profileCell()
+                        }
+                    }
+                    
+                    Section {
+                        plainCell(imageName: "hourglass",
+                                  backgroudColor: .indigo,
+                                  navigationLabelStr: "스크린타임") { 
+                            Text("스크린타임")
+                        }
+                    }
+                    
+                    Section {
+                        
+                        toggleCell()
+                        plainCell(imageName: "wifi", 
+                                  backgroudColor: .blue, 
+                                  detailStr: "SK_WKF4DJ7KD", 
+                                  navigationLabelStr: "Wi-Fi") { 
+                            Text("Wi-Fi")
+                        }
+                        plainCell(imageName: "antenna.radiowaves.left.and.right",
+                                  backgroudColor: .green,
+                                  navigationLabelStr: "셀룰러") { 
+                            Text("셀룰러")
+                        }
+                        
+                        plainCell(imageName: "personalhotspot",
+                                  backgroudColor: .green,
+                                  navigationLabelStr: "개인용 핫스팟") { 
+                            Text("개인용 핫스팟")
+                        }
+                    }
+                    
+                    Section {
+                        plainCell(imageName: "gear",
+                                  backgroudColor: .gray,
+                                  navigationLabelStr: "일반") { 
+                            Text("일반")
+                        }
+                        
+                        plainCell(imageName: "accessibility",
+                                  backgroudColor: .blue,
+                                  navigationLabelStr: "손쉬운 사용") { 
+                            Text("손쉬운 사용")
+                        }
+                        
+                        plainCell(imageName: "hand.raised.fill",
+                                  backgroudColor: .blue,
+                                  navigationLabelStr: "개인정보 보호 및 보안") { 
+                            Text("개인정보 보호 및 보안")
+                        }
+                    }
+                    
+                    Section {
+                        
+                        plainCell(imageName: "key.fill",
+                                  backgroudColor: .gray,
+                                  navigationLabelStr: "암호") { 
+                            Text("암호")
+
+                        }
+
+                        plainCell(imageName: "hammer.fill",
+                                  backgroudColor: .gray,
+                                  navigationLabelStr: "개발자") { 
+                            Text("개발자")
+
+                        }
+                    }
+                }
+                .navigationTitle(Text("설정"))
+            }
+        }
+        .padding()
+    }
+    
+    
+    @ViewBuilder
+    private func iconImage(imageName: String, backgroudColor: Color) -> some View {
+        Image(systemName: imageName)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 20,
+                   height: 20)
+            .padding(.all, 5)
+            .background(backgroudColor)
+            .foregroundStyle(.white)
+            .cornerRadius(6)
+    }
+
+    
+    @ViewBuilder
+    private func profileCell() -> some View {
+        HStack {
+            Image(systemName: "person.crop.circle.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 50,
+                       height: 50)
+                .padding(.all, 4)
+                .foregroundStyle(.gray)
+            
+            VStack(alignment: .leading, spacing: 3) {
+                Text("방현석")
+                    .font(.system(size: 24))
+                    .fontWeight(.regular)
+                Text("Apple ID, iCloud+ 미디어 및 구입 항목")
+                    .font(.system(size: 11))
+                
+            }
+            .padding(.leading, 4)
+        }
+        .padding(.vertical, 10)
+        
+    }
+    
+    @ViewBuilder
+    private func toggleCell() -> some View {
+        HStack {
+            iconImage(imageName: "airplane",
+                      backgroudColor: .orange)
+            Toggle("에어플레인 모드", isOn: $isAirplainModeOn)
+        }
+    }
+
+    @ViewBuilder
+    private func plainCell<V: View>(imageName: String,
+                                    backgroudColor: Color,
+                                    detailStr: String? = nil,
+                                    navigationLabelStr: String,
+                                    destination: @escaping () -> V ) -> some View {
+        HStack {
+            
+            iconImage(imageName: imageName,
+                      backgroudColor: backgroudColor)
+            
+            if let detailStr = detailStr {
+                
+                NavigationLink { 
+                    destination()
+                } label: { 
+                    HStack {
+                        Text(navigationLabelStr)
+                        Spacer()
+                        Text(detailStr)
+                            .foregroundStyle(.gray)
+                    }
+                }
+                
+            } else {
+                NavigationLink(navigationLabelStr) { 
+                    destination()
+                }
+            }
+        }
+    }
+}
+
+#Preview {
+    ContentView()
+}
+```
+
+<br><br><br>
+
+
+
 
 ## History
 - 231123: 네비게이션링크 적용하기
-
-
-
-
-```swift
-
-```
-
-```swift
-
-```
-```swift
-
-```
-
-```swift
-
-```
-
-```swift
-
-```
+- 231127: 리팩토링
