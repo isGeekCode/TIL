@@ -172,25 +172,27 @@ ContentView
             └ List  
                 ├ Section  
                 │   └ NavigationLink  
-                │       └ Text("스크린타임")
+                │       └ Text("스크린타임") //destination
                 └ Section  
                     └ NavigationLink  
-                        └ Text("에어플레인 모드)
+                        └ Text("에어플레인 모드) //destination
 ```
 
 네비게이션 링크는 아래와 같이 세팅한다.  
 NavigationLink() 괄호안에 들어가는 것이 트리거가 될 Text형태이고,
 
 클로저 내부에 있는 부분이 이동해서 보여줄 부분이다.  
+네비게이션링크 메서드는 사용방법이 여러개 있으니 여러 방법을 다 익혀두자.  
 
 ```swift
 Section {
-    NavigationLink("스크린타임") { 
-        Text("스크린타임")
+    NavigationLink("스크린타임") {  // label
+        Text("스크린타임") // destination
     }
 }
 
 ```
+
 
 이걸 전체 적용하면
 
@@ -302,8 +304,8 @@ Section {
             .foregroundStyle(.white)
             .cornerRadius(6)
 
-        NavigationLink("스크린타임") { 
-            Text("스크린타임")
+        NavigationLink("스크린타임") { //label
+            Text("스크린타임") //destination
         }
     }
 }
@@ -319,13 +321,15 @@ ContentView
       └ NavigationView  
             └ List  
                 ├ Section  
-                │   ├ Image
-                │   └ NavigationLink  
-                │       └ Text("스크린타임")
+                │   └ HStack
+                │       ├ Image
+                │       └ NavigationLink  
+                │           └ Text("스크린타임") //destination
                 └ Section
-                    ├ Image
-                    └ NavigationLink  
-                        └ Text("에어플레인 모드)
+                    └ HStack
+                        ├ Image
+                        └ NavigationLink  
+                            └ Text("스크린타임") //destination
 ```
 
 
@@ -357,9 +361,10 @@ ContentView
 │           └ Text("Apple ID, iCloud+ 미디어 및 구입 항목")
 │
 └ Section // 다른 일반 섹션
-    ├ Image
-    └ NavigationLink  
-        └ Text("에어플레인 모드)
+    └ HStack
+        ├ Image  // 아이콘 이미지
+        └ NavigationLink  
+            └ Text("에어플레인 모드) //destination
 ```
 
 <br><br>
