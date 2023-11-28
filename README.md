@@ -14,11 +14,11 @@ _376 TILs and counting..._
 
 ### 5 most recent TILs
 
+- [UIKit - UISearchBar](iOS-Framework-UIKit/UIKit_UITextField_UISearchBar.md) - Tue Nov 28 14:59:51 2023 +0900
 - [NSObject_UIResponder_UIView : UITabBar](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIPickerView.md) - Tue Nov 28 14:53:10 2023 +0900
 - [Layout - SwiftUI: NavigationView](iOS-Framework-SwiftUI/SwiftUI_011_NavigationView.md) - Mon Nov 27 14:40:45 2023 +0900
 - [Layout - SwiftUI: TabView](iOS-Framework-SwiftUI/SwiftUI_012_TabView.md) - Mon Nov 27 14:40:45 2023 +0900
 - [마크다운에서 Toggle(Expander control) 기능 사용하기](Docs/HTML_Toggle.md) - Fri Nov 24 13:56:19 2023 +0900
-- [Sample App : 설정앱 - SwiftUI](Sample-App-List/sample_002SettingApp_SwiftUI.md) - Fri Nov 24 08:20:40 2023 +0900
 
 ### Categories
 
@@ -385,16 +385,16 @@ _376 TILs and counting..._
 - [CGPoint, CGSize, CGRect](iOS-Framework-UIKit/UIKit_CGPoint_CGSize_CGRect.md)
 - [UIKit - UIAlertController : 장문의 얼럿 만들기](iOS-Framework-UIKit/UIKit_UIAlertController_NSMutableAttributedString.md)
 - [UIDevice](iOS-Framework-UIKit/UIKit_UIDevice.md)
+- [UIKit - UISearchBar](iOS-Framework-UIKit/UIKit_UITextField_UISearchBar.md)
 - [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS-Framework-UIKit/ios_CollectionViewCell.md)
 
 ### [iOS-Framework-UIKit-UIControl](#ios-framework-uikit-uicontrol)
 - [[Apple Document] - UIControl.Event 살펴보기](iOS-Framework-UIKit-UIControl/About_UIControl_030_event.md)
-- [NSObject_UIResponder_UIView_UIControl_UIButton](iOS-Framework-UIKit-UIControl/NSObject_UIResponder_UIView_UIControl_UIButton.md)
-- [NSObject_UIResponder_UIView_UIControl_UISwitch](iOS-Framework-UIKit-UIControl/NSObject_UIResponder_UIView_UIControl_UISwitch.md)
-- [DatePicker 설치하기](iOS-Framework-UIKit-UIControl/UIKit_UIDatePicker.md)
-- [UIKit - UIRefreshControl 사용하기](iOS-Framework-UIKit-UIControl/UIKit_UIRefreshControl.md)
-- [UIKit - UITextField](iOS-Framework-UIKit-UIControl/UIKit_UITextField.md)
-- [UIKit - UISearchBar](iOS-Framework-UIKit-UIControl/UIKit_UITextField_UISearchBar.md)
+- [NSObject_UIResponder_UIView_UIControl : UIButton](iOS-Framework-UIKit-UIControl/NSObject_UIResponder_UIView_UIControl_UIButton.md)
+- [NSObject_UIResponder_UIView_UIControl : UISwitch](iOS-Framework-UIKit-UIControl/NSObject_UIResponder_UIView_UIControl_UISwitch.md)
+- [NSObject_UIResponder_UIView_UIControl : UIDatePicker](iOS-Framework-UIKit-UIControl/UIKit_UIDatePicker.md)
+- [NSObject_UIResponder_UIView_UIControl : UIRefreshControl](iOS-Framework-UIKit-UIControl/UIKit_UIRefreshControl.md)
+- [NSObject_UIResponder_UIView_UIControl : UITextField](iOS-Framework-UIKit-UIControl/UIKit_UITextField.md)
 
 ### [iOS-Hierachy](#ios-hierachy)
 - [iOS_Hierachy - Foundation](iOS-Hierachy/IOS_Hierachy_Foundation.md)
