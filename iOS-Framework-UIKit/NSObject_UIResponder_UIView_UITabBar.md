@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UITabBar
+# NSObject_UIResponder_UIView : UITabBar
 
 ## UITabBar
 - 일반적으로 하단 모서리에 위치한다.
