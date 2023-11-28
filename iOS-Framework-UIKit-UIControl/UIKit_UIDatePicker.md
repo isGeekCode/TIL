@@ -1,4 +1,4 @@
-# DatePicker 설치하기
+# NSObject_UIResponder_UIView_UIControl : UIDatePicker
 
 ```swift
 func setDatePicker() {
