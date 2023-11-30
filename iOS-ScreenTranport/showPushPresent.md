@@ -26,7 +26,7 @@
 
 일반적으로 앱에서의 대주제는 탭바를 통해 들어가게 된다.  
 
-<img width="300" alt="스크린샷 2023-11-30 오후 2 10 02" src="https://github.com/isGeekCode/TIL/assets/76529148/ac9da53f-12b6-40fd-972d-268df6c68e55">
+<img width="700" alt="스크린샷 2023-11-30 오후 2 10 02" src="https://github.com/isGeekCode/TIL/assets/76529148/ac9da53f-12b6-40fd-972d-268df6c68e55">
 
 <br><br>
 
@@ -35,7 +35,7 @@
 
 <br><br>
 
-<img width="600" alt="뷰계층 1" src="https://github.com/isGeekCode/TIL/assets/76529148/f78d77c2-8b1f-4fd4-a162-081edfdb11f6">
+<img width="700" alt="뷰계층 1" src="https://github.com/isGeekCode/TIL/assets/76529148/f78d77c2-8b1f-4fd4-a162-081edfdb11f6">
 
 
 <br><br>
@@ -44,7 +44,7 @@
 
 네비게이션컨트롤러를 사용하는 경우는 네비게이션컨트롤러라는 컨테이너 안에 navigation Stack에서 ViewController를 관리한다.  
 
-<img width="600" alt="ezgif-3-1199988740" src="https://github.com/isGeekCode/TIL/assets/76529148/640dccf5-09d2-4e0f-bb04-8021cb3451de>
+<img width="600" alt="ezgif-3-1199988740" src="https://github.com/isGeekCode/TIL/assets/76529148/640dccf5-09d2-4e0f-bb04-8021cb3451de">
 
 이런식으로 Navigation Stack에 ViewController가 쌓이게된다.
 
@@ -99,7 +99,7 @@ self.navigationController?.popViewController(animated: true)
 - 입력 양식 : 사용자가 새로운 데이터를 입력하거나 기존 데이터를 편집할 때 사용되는 입력 양식이 모달로 표시
 - 상세 정보 보기: 목록에서 항목을 선택했을 때, 해당 항목의 상세 정보를 보여주는 뷰 컨트롤러를 모달로 표시하는 경우도 있다.
 
-<img width="600" alt="ezgif-3-009309e806" src="https://github.com/isGeekCode/TIL/assets/76529148/101871d2-e661-4539-9f66-3dd874ade88e>
+<img width="600" alt="ezgif-3-009309e806" src="https://github.com/isGeekCode/TIL/assets/76529148/101871d2-e661-4539-9f66-3dd874ade88e">
 
 <br><br>
 
