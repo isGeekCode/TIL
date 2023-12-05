@@ -947,7 +947,7 @@ DispatchQueue.global().async { [weak self] in
     
     
     
-## 색인
+## 다룰 내용
 - GCD란 무엇인가요?
 - GCD에서 사용되는 용어들
 - GCD의 기본 개념과 동작 방식
@@ -962,7 +962,7 @@ DispatchQueue.global().async { [weak self] in
 - DispatchBarrier 함수: 큐 내 작업 실행 순서 제어
     - dispatch_barrier_async, dispatch_barrier_sync
 - GCD의 타이머 기능: dispatch_source_t, dispatch_source_create, dispatch_source_set_timer
-- dispatchWorkItem 클래스: 작업 실행과 취소, 일시 중지, 재개, 결과값 가져오기 등
+- dispatchWorkItem 클래스: 작업 실행과 취소, 일시 중지, 재개, 결과값 가져오기 등  
 [TIL: GCD - dispatchWorkItem 정리내용](https://github.com/isGeekCode/TIL/commit/b64f10055c31d81e6249fa5f57a9f43a2b909816?short_path=ce70c04#diff-ce70c046c202de3bdcd893c84fae959478311b24ff7553d386fd19e12be98a81)
 
 ## GCD관련 주요 객체
@@ -975,4 +975,6 @@ DispatchQueue.global().async { [weak self] in
 
 ## History
 - 230308: 초안작성
-- 231204: GCD 톺아보기
+- 231203: GCD 톺아보기
+- 231204: GCD 사용시 주의사항
+
