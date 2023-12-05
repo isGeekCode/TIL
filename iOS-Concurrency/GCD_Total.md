@@ -1,8 +1,9 @@
 # 동시성 프로그래밍 : Concurrency 톺아보기
 
 
-전체적인 맥락은 아래와 같다.  
+## 전체적인 맥락
 1. 경유지인 Queue에 대한 설명
+    - Thread와 Queue
     - GCD와 Operation
 2. 출발지에서 경유지인 Queue로 보내는 방법
     - Sync / Async
@@ -11,7 +12,9 @@
     - Serial / Concurrent
 
 
-## 스레드와 Queue
+<br><br>
+
+## Thread와 Queue
 
 회사를 예를 들어 보자.  
 
@@ -34,10 +37,6 @@
 - Thread2
 - Thread3
 
-<br><br>
-
-//TODO
-UI는 왜 메인스레드에서 다뤄야만 하는가? 는 뒤에서 설명
 
 <br><br>
 
@@ -46,9 +45,9 @@ UI는 왜 메인스레드에서 다뤄야만 하는가? 는 뒤에서 설명
  
 즉, 별도의 처리를 안한다면 잉여 스레드가 많이 생기고 Main Thread가 과부하가 발생한다.  
 
-메인 스레드에 몰린 작업들을 다른 스레드에서도 동시에 작업 하도록 하는 것! 이게 동시성 프로그래밍이다.  
+메인 스레드에 몰린 작업들을 다른 스레드에서도 동시에 작업 하도록 하는 것! 이게 `동시성 프로그래밍`이다.  
 
-
+<br><br>
 
 iOS에서는 다행히도 작업을 한 곳에 보내기만 하면된다. 
 그러면 알아서 OS가 다른 스레드로 분산처리를 해준다.  
@@ -161,7 +160,7 @@ DispatchQueue.global().async {
 
 <br><br>
 
-코드에 나오는 부분을 다시 설명하자면 
+코드에 나오는 부분을 살펴보자.   
 - DispatchQueue : iOS에서 동시성 프로그래밍을 돕기위해 제공하는 Queue
 - global : DispatchQueue의 한 종류
 - async : 비동기
@@ -169,13 +168,14 @@ DispatchQueue.global().async {
 
 그렇다면 문장으로 해석해 보면, 이런 느낌의 명령이라는 걸 알 수 있다.   
 `Global`-`DispatchQueue`에 `비동기`로 `Task`를 보낸다.  
-
-
+  
+  
 다시 이 작업을 정리해서 말하면, 이런 의미가 될 수 있다.  
 > 원래 작업이 진행되고 있던 Main Thread에서
 > Global DispatchQueue로 Task를 보낸후,  
 > 해당 작업이 끝나길 기다리지않고 바로 다음 Task를 이어서 진행한다. 
-  
+
+<br><br>
   
 그러면 이런 작업이 있다고 생각해보자.  
 
@@ -303,7 +303,7 @@ Task 3 완료
 
 ## Sync
 
-- 1번 : 바로 쌓여있는 다음 일을 한다.  ->>> `비동기`
+- 1번 : 바로 쌓여있는 다음 일을 한다.  ->>> `Async(비동기)`
 - 2번 : Dispatch Queue에 보낸 일이 끝날때까지 기다린 후, 쌓여있는 다음 일을 한다.  
 
 아까 정의된 Main Thread의 행동 유형중 나머지 하나는 `동기`다. 
@@ -443,13 +443,16 @@ DispatchQueue.global().async { }
 
 <br><br>
 
-이제 Queue에는 task들이 쌓이게 되는데 이걸 이제 스레드에 분배해야한다.  
+Queue에는 task들이 쌓이게 될텐데,  
+이걸 실질적으로 수행할 스레드에 분배해야한다.  
 
 이걸 GCD 혹은 Operation에서 두가지 중 한 방법으로 분배를 하게 된다. 
 - 방법1 : 한 개의 스레드에 몰아 넣는다. 
 - 방법2 : 여러 개의 스레드에 나눈다.  
 
 이 둘 중 어떤 방식을 선택할 지는 Queue의 특성에 따라 결정된다.  
+
+<br><br>
 
 - Serial : 직렬
     - 만약 Serial Queue라면 (보통 메인스레드에서) 분산처리시킨 작업을 다른 한개의 스레드에서 처리하는 Queue
@@ -479,7 +482,7 @@ GCD와 관련하여 검색을 해보면 아래 네가지 개념이 주로 나온
 - Concurrent : 병렬(동시)
 
 사실 개념을 살펴봤을 때, 
-`Sync / Async` 이렇게 한세트
+`Sync / Async` 이렇게 한세트,  
 `Serial / Concurrent` 이렇게 한세트이지만 
 
 뭔가  `serial — sync` , `async — concurrent`
@@ -600,7 +603,7 @@ DispatchQueue.global(qos: .utility).async { }
 
 <br><br>
 
-그렇다면 QoS의 종류를 살펴보자. 
+그렇다면 우선도를 결정할 QoS의 종류를 살펴보자. 
 
 ### QoS의 종류
 - userInteractive
@@ -962,12 +965,12 @@ DispatchQueue.global().async { [weak self] in
 - dispatchWorkItem 클래스: 작업 실행과 취소, 일시 중지, 재개, 결과값 가져오기 등
 [TIL: GCD - dispatchWorkItem 정리내용](https://github.com/isGeekCode/TIL/commit/b64f10055c31d81e6249fa5f57a9f43a2b909816?short_path=ce70c04#diff-ce70c046c202de3bdcd893c84fae959478311b24ff7553d386fd19e12be98a81)
 
-## 주요 객체
-DispatchQueue 클래스: GCD 큐를 나타내며, 비동기 작업을 처리하는 데 사용된다.
-DispatchGroup 클래스: 여러 개의 작업을 그룹으로 묶어서 관리하고, 모든 작업이 완료될 때까지 기다릴 수 있다.
-DispatchSemaphore 클래스: 특정 작업의 실행 허용 개수를 제한하는 데 사용된다.
-DispatchSource 클래스: 타이머나 파일 디스크립터 등의 이벤트를 모니터링하고, 이벤트가 발생할 때마다 작업을 실행할 수 있다.
-DispatchBarrier 함수: 큐 내 작업의 실행 순서를 제어하는 데 사용된다.
+## GCD관련 주요 객체
+- DispatchQueue 클래스: GCD 큐를 나타내며, 비동기 작업을 처리하는 데 사용된다.
+- DispatchGroup 클래스: 여러 개의 작업을 그룹으로 묶어서 관리하고, 모든 작업이 완료될 때까지 기다릴 수 있다.
+- DispatchSemaphore 클래스: 특정 작업의 실행 허용 개수를 제한하는 데 사용된다.
+- DispatchSource 클래스: 타이머나 파일 디스크립터 등의 이벤트를 모니터링하고, 이벤트가 발생할 때마다 작업을 실행할 수 있다.
+- DispatchBarrier 함수: 큐 내 작업의 실행 순서를 제어하는 데 사용된다.
 
 
 ## History
