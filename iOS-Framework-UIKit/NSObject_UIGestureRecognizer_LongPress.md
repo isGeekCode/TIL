@@ -1,4 +1,4 @@
-# Gesture Recognizer - Long Press
+# NSObjcect_GestureRecognizer_UILongPressGestureRecognizer
 
 ## 서론
 
