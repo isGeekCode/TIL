@@ -953,3 +953,445 @@ class CustomCollectionViewCell: UICollectionViewCell {
 }
 
 ```
+
+
+```swift
+////
+////  ViewController.swift
+////  CollectionViewApp
+////
+////  Created by bang_hyeonseok on 12/5/23.
+////
+
+import UIKit
+
+// 1. 데이터 모델 정의
+struct Item: Hashable {
+    let id = UUID()
+    let title: String
+    
+    // Add this static property
+    static let initialData: [Item] = [
+        Item(title: "Block 1"),
+        Item(title: "Block 2"),
+    ]
+}
+
+enum Section {
+    case main
+}
+
+// MARK: - ViewController
+class MainViewController: UIViewController {
+    // 2. UICollectionView 및 DataSource 정의
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        let collectionView = UICollectionView(frame: .zero,
+                                              collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.delegate = self
+//        collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
+        collectionView.register(CustomCollectionViewListCell.self, forCellWithReuseIdentifier: CustomCollectionViewListCell.identifier)
+
+        return collectionView
+    }()
+    
+    lazy var dateLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        let today = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateStr = dateFormatter.string(from: today)
+        label.text = dateStr
+        
+        return label
+    }()
+    
+    lazy var plusBtn: UIButton = {
+        var config = UIButton.Configuration.plain()
+        // UIAction 생성
+        let action = UIAction { [weak self] _ in
+            // 버튼이 탭될 때 실행할 코드
+            guard let self else { return }
+            checkAddAction()
+        }
+        let symbolConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large) // 이미지의 크기와 스케일을 조정
+
+        config.image = UIImage(systemName: "plus", withConfiguration: symbolConfig)
+        
+        let button = UIButton(configuration: config, primaryAction: action)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    // 편집 버튼 추가
+    lazy var editButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(title: "Edit",
+                                     style: .plain,
+                                     target: self, action: #selector(toggleEditMode))
+        return button
+    }()
+
+    
+    lazy var minusBtn: UIButton = {
+        var config = UIButton.Configuration.plain()
+        // UIAction 생성
+        let action = UIAction { [weak self] _ in
+            // 버튼이 탭될 때 실행할 코드
+            guard let self else { return }
+            checkMinusAction()
+        }
+        let symbolConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large) // 이미지의 크기와 스케일을 조정
+
+        config.image = UIImage(systemName: "minus", withConfiguration: symbolConfig)
+        
+        let button = UIButton(configuration: config, primaryAction: action)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+
+    private var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
+    // 편집 모드 플래그
+    var isEditingMode = false
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        title = "Today"
+        navigationItem.rightBarButtonItem = editButton
+        setupCollectionView()
+    }
+    
+    private func setupCollectionView() {
+        
+        view.addSubview(dateLabel)
+        view.addSubview(plusBtn)
+        view.addSubview(collectionView)
+        NSLayoutConstraint.activate([
+            
+            dateLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            dateLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            
+            
+            plusBtn.heightAnchor.constraint(equalToConstant: 40),
+            plusBtn.widthAnchor.constraint(equalToConstant: 40),
+            plusBtn.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
+            plusBtn.centerYAnchor.constraint(equalTo: dateLabel.centerYAnchor),
+            
+            collectionView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 10),
+            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+        ])
+        
+        // 3. DataSource 및 기타 설정
+        configureDataSource()
+    }
+    
+    private func configureDataSource() {
+        // 5. DataSource 설정 및 셀 구성
+        dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView) {
+            (collectionView, indexPath, item) -> UICollectionViewListCell? in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewListCell.identifier, for: indexPath) as! CustomCollectionViewListCell
+            cell.configure(with: item.title)
+            return cell
+        }
+        
+        applyInitialSnapshots() // 초기 데이터 로드
+        
+    }
+    
+    private func applyInitialSnapshots() {
+        // 6. 초기 데이터 스냅샷 적용
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(Item.initialData)  // Use the static property
+        dataSource.apply(snapshot, animatingDifferences: false)
+    }
+    
+    @objc private func toggleEditMode() {
+        isEditingMode = !isEditingMode
+        collectionView.isEditing = isEditingMode
+        editButton.title = isEditingMode ? "Done" : "Edit"
+
+        collectionView.performBatchUpdates(nil)
+
+    }
+
+    private func toggleButtonColor(targetBtn: UIButton, _ value: Bool) {
+        if var config = targetBtn.configuration {
+            // 색상을 systemRed로 설정
+            let symbolConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large)
+            let imageName = targetBtn == plusBtn ? "plus" : "minus"
+            config.image = UIImage(systemName: imageName,
+                                   withConfiguration: symbolConfig)?
+                .withTintColor(value ? .systemBlue : .lightGray,
+                               renderingMode: .alwaysOriginal)
+            targetBtn.configuration = config
+        }
+    }
+
+    /// 마이너스 로직
+    private func checkMinusAction() {
+        print(#function)
+        // 현재 스냅샷의 아이템 수
+        let currentSnapshot = dataSource.snapshot()
+        let itemCount = currentSnapshot.numberOfItems
+
+        if itemCount >= 2 {
+            setDeleteAlert()
+        }         
+    }
+    
+    /// 마이너스 아이템 및 UI업데이트
+    private func minusItem() {
+        var currentSnapshot = dataSource.snapshot()
+
+        if !currentSnapshot.itemIdentifiers.isEmpty {
+            // Remove the last item
+            currentSnapshot.deleteItems([currentSnapshot.itemIdentifiers.last!])
+
+            // Apply the updated snapshot
+            dataSource.apply(currentSnapshot, animatingDifferences: true)
+
+            // Additional UI updates (if needed)
+            DispatchQueue.main.async {
+                let updatedItemCount = self.dataSource.snapshot().numberOfItems
+                if updatedItemCount == 1 {
+                    self.toggleButtonColor(targetBtn: self.minusBtn, false)
+                    self.minusBtn.isEnabled = false
+                } 
+                
+                self.toggleButtonColor(targetBtn: self.plusBtn, true)
+                self.plusBtn.isEnabled = true
+
+            }
+        }
+    }
+
+    
+    private func checkAddAction() {
+        
+        print(#function)
+        // 현재 스냅샷의 아이템 수
+        let currentSnapshot = dataSource.snapshot()
+        let itemCount = currentSnapshot.numberOfItems
+
+        if itemCount < 6 {
+            // 새로운 아이템 생성 (아이템 개수 + 1)
+            setTextAlert()
+        }         
+    }
+    
+    private func setTextAlert() {
+        
+        // Alert Controller 생성
+        let alertController = UIAlertController(title: "", message: "블록이름을 입력하세요", preferredStyle: .alert)
+
+        // TextField 추가
+        alertController.addTextField { textField in
+            textField.placeholder = "제목"
+        }
+
+        let addAction = UIAlertAction(title: "확인", style: .default) { [weak self, weak alertController] _ in
+            guard let self = self,
+                  let alertController = alertController,
+                  let textField = alertController.textFields?.first,
+                  let text = textField.text, !text.isEmpty else { return }
+
+            // 새 Item 생성 및 추가
+            let newItem = Item(title: text)
+            self.addNewItem(item: newItem)
+        }
+
+        // '취소' 액션
+        let cancelAction = UIAlertAction(title: "취소", style: .destructive)
+
+        alertController.addAction(cancelAction)
+        alertController.addAction(addAction)
+
+        // Alert 표시
+        
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true)
+        }
+    }
+    
+    private func setDeleteAlert() {
+        // Alert Controller 생성
+        let alertController = UIAlertController(title: "", message: "정말로 삭제하시겠습니까", preferredStyle: .alert)
+
+        let addAction = UIAlertAction(title: "확인", style: .default) { [weak self] _ in
+            guard let self else { return }
+            minusItem()
+        }
+
+        // '취소' 액션
+        let cancelAction = UIAlertAction(title: "취소", style: .destructive)
+
+        alertController.addAction(cancelAction)
+        alertController.addAction(addAction)
+
+        // Alert 표시
+        
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true)
+        }
+
+    }
+    
+    private func addNewItem(item: Item) {
+        // 현재 스냅샷의 아이템 수
+        let currentSnapshot = dataSource.snapshot()
+        // 새 스냅샷에 아이템 추가
+        var newSnapshot = currentSnapshot
+        newSnapshot.appendItems([item], toSection: .main)
+        dataSource.apply(newSnapshot, animatingDifferences: true) {
+            
+            DispatchQueue.main.async {
+                let currentSnapshot = self.dataSource.snapshot()
+                print("몇개야 :\(currentSnapshot.numberOfItems)")
+
+                if currentSnapshot.numberOfItems == 6 {
+                    self.toggleButtonColor(targetBtn: self.plusBtn, false)
+                    self.plusBtn.isEnabled = false
+                } 
+                
+                self.toggleButtonColor(targetBtn: self.minusBtn, true)
+                self.minusBtn.isEnabled = true
+
+            }
+
+        }
+    }
+}
+
+extension MainViewController: UICollectionViewDelegateFlowLayout {
+ 
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // 현재 스냅샷에서 전체 아이템의 수를 계산
+        let itemCount = dataSource.snapshot().numberOfItems
+        // 각 섹션의 높이를 계산
+        let sectionHeight = (collectionView.bounds.height - (2 * CGFloat(itemCount) * 5)) / CGFloat(itemCount)
+        // 셀의 크기 반환
+        return CGSize(width: collectionView.bounds.width, height: sectionHeight)
+    }
+}
+
+extension MainViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("indexPath: \(indexPath)")
+        if let cell = collectionView.cellForItem(at: indexPath) as? CustomCollectionViewListCell {
+//            cell.isSelected = false // 셀의 선택 상태 해제
+            print("cell.isSelected: \(cell.isSelected)")
+            cell.backgroundColor = .clear
+        }
+
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, canEditItemAt indexPath: IndexPath) -> Bool {
+        // 모든 셀이 편집 가능하게 설정
+        return true
+    }
+
+    func collectionView(_ collectionView: UICollectionView, commit editingStyle: UITableViewCell.EditingStyle, forItemAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // 셀 삭제 로직 구현
+            var snapshot = dataSource.snapshot()
+            if let item = dataSource.itemIdentifier(for: indexPath) {
+                snapshot.deleteItems([item])
+                dataSource.apply(snapshot)
+            }
+        }
+    }
+}
+
+
+
+class CustomCollectionViewListCell: UICollectionViewListCell {
+    static let identifier = "CustomCollectionViewListCell"
+
+    lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    lazy var containerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .systemGray5
+        view.layer.cornerRadius = 30
+        
+        return view
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = .clear
+        contentView.addSubview(containerView)
+        containerView.addSubview(titleLabel)
+        print("되는거야2")
+
+        NSLayoutConstraint.activate([
+
+            containerView.topAnchor.constraint(equalTo: self.contentView.topAnchor),
+            containerView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
+            containerView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10),
+            containerView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -10),
+            
+            titleLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            titleLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
+        ])
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        titleLabel.text = nil // 텍스트 초기화
+    }
+    
+    
+    func configure(with title: String) {
+        titleLabel.text = title
+    }
+    
+    override func updateConfiguration(using state: UICellConfigurationState) {
+        super.updateConfiguration(using: state)
+
+        // 편집 모드에 따라 액세서리 설정
+        if state.isEditing {
+            // 편집 모드일 때 삭제 버튼을 표시
+            accessories = [.delete(displayed: .whenEditing, actionHandler: { [weak self] in
+                // 삭제 로직 구현
+                self?.handleDeleteAction()
+            })]
+        } else {
+            // 편집 모드가 아닐 때는 액세서리 제거
+            accessories = []
+        }
+    }
+    
+    private func handleDeleteAction() {
+        
+        print(#function)
+        // 삭제 처리 로직
+    }
+
+
+}
+
+```
