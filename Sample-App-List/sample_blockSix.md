@@ -593,7 +593,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
 ## Item 제거 동작 구현 및 텍스트필드 입력단 추가
 
 
-<img width="300" alt="ezgif-5-9d3dea6d7b" src="https://github.com/isGeekCode/TIL/assets/76529148/24f44f89-f4aa-47f4-9c81-b86cb4c7313a">
+<img width="300" alt="ezgif-2-e99683b865" src="https://github.com/isGeekCode/TIL/assets/76529148/7f3feeee-e0db-4276-bd0d-09334e5505f5">
 
 
 ```swift
