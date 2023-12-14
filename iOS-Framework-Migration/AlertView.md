@@ -1,4 +1,4 @@
-# iOS10 UIAlertController - UIAlertView deprecated in iOS9 ->  UIAlertController
+# UIAlertView Deprecated in iOS 9, Replaced by UIAlertController in iOS 10.0
 
 ```
 'UIAlertView' is deprecated: first deprecated in iOS 9.0 - UIAlertView is deprecated. Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead
