@@ -141,13 +141,60 @@ let wifiSession = URLSession(configuration: wifiConfiguration)
 예를 들어, 백그라운드 세션을 사용하여 앱이 백그라운드 상태일 때도 데이터를 처리할 수 있다.  
 
 ```swift
-let backgroundConfiguration = URLSessionConfiguration.background(withIdentifier: "com.example.myapp.background")
-backgroundConfiguration.isDiscretionary = true // 시스템에 의해 최적의 시간에 실행
+class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("다운시작")
+        
+        let backgroundConfiguration = URLSessionConfiguration.background(withIdentifier: "com.example.myapp.background")
+        backgroundConfiguration.isDiscretionary = true // 시스템에 의해 최적의 시간에 실행
 
-let backgroundSession = URLSession(configuration: backgroundConfiguration)
+//        let backgroundSession = URLSession(configuration: backgroundConfiguration)
+        let backgroundSession = URLSession(configuration: backgroundConfiguration, delegate: self, delegateQueue: OperationQueue())
 
-let downloadTask = backgroundSession.downloadTask(with: URL(string: "https://api.example.com/largefile")!)
-downloadTask.resume()
+        let downloadTask = backgroundSession.downloadTask(with: URL(string: "https://apod.nasa.gov/apod/image/0810/lagoon_hst.jpg")!)
+        downloadTask.resume()
+    }
+}
+
+extension ViewController: URLSessionDownloadDelegate {
+    
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        print("다운완료")
+
+        guard let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+
+        let destinationURL = documentsDirectoryURL.appendingPathComponent(downloadTask.response?.suggestedFilename ?? "default_filename")
+
+        do {
+            // 기존에 동일한 파일이 있으면 삭제
+            if FileManager.default.fileExists(atPath: destinationURL.path) {
+                try FileManager.default.removeItem(at: destinationURL)
+            }
+
+            // 파일을 영구적인 위치로 이동
+            try FileManager.default.moveItem(at: location, to: destinationURL)
+            print("File moved to Documents folder: \(destinationURL)")
+        } catch {
+            print("File move error: \(error)")
+        }
+
+        
+        DispatchQueue.main.async { [weak self] in
+            let alert = UIAlertController(title: "Download Completed", message: "Your file has been downloaded.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self?.present(alert, animated: true)
+        }
+    }
+    
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        if let error = error {
+            print("다운로드 에러: \(error)")
+        }
+    }
+    
+}
+
 
 ```
 
