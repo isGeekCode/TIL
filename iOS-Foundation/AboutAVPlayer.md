@@ -7,26 +7,207 @@ Avplayer는 AVfoundation 을 import하여 사용한다.
 ### 파일이름으로 사용하기
 
 ```swift
-guard let path = Bundle.main.path(forResource: "videoTest", ofType: "mp4") else { return }
-var player = AVPlayer(url: URL(fileURLWithPath: path))
-let playerLayer = AVPlayerLayer(player: player)
-playerLayer.frame = self.splashImageView.frame
-self.layer.addSublayer(playerLayer)
-playerLayer.videoGravity = .resizeAspect
-play()
+import UIKit
+import AVKit
+import AVFoundation
+
+class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        playVideo()
+    }
+
+    func playVideo() {
+        guard let path = Bundle.main.path(forResource: "fileName", ofType: "mp4") else { return }
+        let filePathURL = URL(fileURLWithPath: path)
+        let player = AVPlayer(url: filePathURL)
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = self.view.bounds
+        self.view.layer.addSublayer(playerLayer)
+        playerLayer.videoGravity = .resizeAspect
+        player.play()
+    }
+}
 ```
 
 ### URL로 사용하기
 
 ```swift
-guard let pathURL = URL(string: "http://www.test.com/videotest.mp4") else {return}
-var player = AVPlayer(url: customURL)
-let playerLayer = AVPlayerLayer(player: player)
-playerLayer.frame = self.splashImageView.frame
-self.layer.addSublayer(playerLayer)
-playerLayer.videoGravity = .resizeAspect
-player.play()
+import UIKit
+import AVKit
+import AVFoundation
+
+class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        playVideo()
+    }
+
+    func playVideo() {
+        let urlPathStr = "http://down.humoruniv.com//hwiparambbs/data/editor/pdswait/e_s661a39001_c6c0d855eee53a714dbac585191e3e8bea0376ca.mp4"
+        guard let urlPath = URL(string: urlPathStr) else { return }
+        let player = AVPlayer(url: urlPath)
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = self.view.bounds
+        self.view.layer.addSublayer(playerLayer)
+        playerLayer.videoGravity = .resizeAspect
+        player.play()
+    }
+}
 ```
+
+## AVPlayerViewController로 사용하기
+AVPlayerViewController는 AVPlayer를 위한 기본 제공 사용자 인터페이스(UI)를 포함하는 뷰 컨트롤러다.  
+
+이 방법은 비디오 재생을 위한 표준 컨트롤을 쉽게 제공하며, 전체 화면 재생과 같은 기능도 자동으로 처리한다.  
+
+이때, 주의할 점은 AVPlayerViewControler를 호출하는 시점이 너무 빠르면 
+아래와 같은 에러메세지가 발생한다.   
+
+> Attempt to present <AVPlayerViewController: 0x10581b400> on <MoviePlayer.ViewController: 0x105207d90> (from <MoviePlayer.ViewController: 0x105207d90>) whose view is not in the window hierarchy
+  
+이 메세지는 현재 ViewController가 완전히 그려지지않았는데 ViewDidLoad에서 또 다른 VC를 Present한다고 발생하는 에러이다.  
+
+그럴땐 아래 예시코드처럼 ViewDidAppear를 사용한다.  
+
+```swift
+class ViewController: UIViewController {
+    
+    func playVideo() {
+        guard let path = Bundle.main.path(forResource: "dog", ofType: "mp4") else {
+            print("비디오 파일을 찾을 수 없습니다.")
+            return
+        }
+        
+        let fileURL = URL(fileURLWithPath: path) 
+
+        let player = AVPlayer(url: fileURL)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+
+        present(playerViewController, animated: true) {
+            player.play()
+        }
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        playVideo()
+    }
+}
+
+```
+
+## AVPlayerLayer 직접 사용하기 (커스텀 UI)
+
+AVPlayerLayer의 분리 사용은 추가적인 커스터마이징과 특정 미디어 재생 요구 사항에 대응하기 위한 유연성을 제공한다.  
+
+표준 UI와 기능으로 충분한 경우, AVPlayerViewController를 사용하는 것이 더 간단하고 직관적일 수 있다.
+
+또한 메서드 분리를 위해 전역변수로 만들 수 있겠다. 
+
+
+아래처럼 버튼을 구현하기 위해 따로 분리
+
+<img width="300" alt="스크린샷 2022-03-22 오후 1 32 04" src="https://github.com/isGeekCode/TIL/assets/76529148/54a0babd-ce30-47a9-85b4-b2be32670da5">
+
+```swift
+class ViewController: UIViewController {
+    
+    var player: AVPlayer?
+    var playerLayer: AVPlayerLayer?
+    
+    //  Properties for Control
+    var playPauseButton: UIButton!
+    var timeLabel: UILabel!
+    var progressSlider: UISlider!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupPlayer()
+        setupCustomControls()
+    }
+
+    func setupPlayer() {
+        guard let path = Bundle.main.path(forResource: "dog", ofType: "mp4") else {
+            print("비디오 파일을 찾을 수 없습니다.")
+            return
+        }
+        let filePath = URL(fileURLWithPath: path) 
+        
+        player = AVPlayer(url: filePath)
+        playerLayer = AVPlayerLayer(player: player)
+        playerLayer?.frame = self.view.bounds
+        if let playerLayer = self.playerLayer {
+            self.view.layer.addSublayer(playerLayer)
+        }
+        player?.play()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        playerLayer?.frame = self.view.bounds
+    }
+    
+    func setupCustomControls() {
+        // 재생/일시 정지 버튼
+        playPauseButton = UIButton(type: .system)
+        playPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal) // "playIcon"은 재생 이미지의 에셋 이름입니다.
+        playPauseButton.addTarget(self, action: #selector(togglePlayPause), for: .touchUpInside)
+        playPauseButton.frame = CGRect(x: 20, y: 100, width: 60, height: 30)
+        self.view.addSubview(playPauseButton)
+
+        // 시간 레이블
+        timeLabel = UILabel(frame: CGRect(x: 20, y: 140, width: 100, height: 30))
+        timeLabel.text = "00:00"
+        self.view.addSubview(timeLabel)
+
+        // 진행 상태 슬라이더
+        progressSlider = UISlider(frame: CGRect(x: 20, y: 180, width: 300, height: 30))
+        progressSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+        self.view.addSubview(progressSlider)
+
+        // 주기적으로 현재 재생 시간 업데이트
+        let interval = CMTime(seconds: 1, preferredTimescale: CMTimeScale(NSEC_PER_SEC))
+        player?.addPeriodicTimeObserver(forInterval: interval, queue: .main) { [weak self] time in
+            let timeString = String(format: "%02d:%02d", Int(time.seconds / 60), Int(time.seconds.truncatingRemainder(dividingBy: 60)))
+            self?.timeLabel.text = timeString
+            if let duration = self?.player?.currentItem?.duration.seconds, duration > 0 {
+                self?.progressSlider.value = Float(time.seconds / duration)
+            }
+        }
+    }
+
+    @objc func togglePlayPause() {
+        if player?.rate == 0 {
+            player?.play()
+            playPauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal) // "pauseIcon"은 일시 정지 이미지의 에셋 이름입니다.
+        } else {
+            player?.pause()
+            playPauseButton.setImage(UIImage(systemName: "play.fill"), for: .normal) // "pauseIcon"은 일시 정지 이미지의 에셋 이름입니다.
+        }
+    }
+
+    @objc func sliderValueChanged() {
+        if let duration = player?.currentItem?.duration {
+            let totalSeconds = CMTimeGetSeconds(duration)
+            let value = Float64(progressSlider.value) * totalSeconds
+            let seekTime = CMTime(value: Int64(value), timescale: 1)
+            player?.seek(to: seekTime)
+        }
+    }
+
+}
+
+```
+
 
 # AVPlayerItem
 
