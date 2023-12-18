@@ -4,6 +4,8 @@ Avplayer는 AVfoundation 을 import하여 사용한다.
 
 따로 AVPlayerController를 이용할 수도 있다.
 
+<br><br>
+
 ### 파일이름으로 사용하기
 
 ```swift
@@ -30,6 +32,8 @@ class ViewController: UIViewController {
     }
 }
 ```
+
+<br><br>
 
 ### URL로 사용하기
 
@@ -58,6 +62,8 @@ class ViewController: UIViewController {
 }
 ```
 
+<br><br>
+
 ## AVPlayerViewController로 사용하기
 AVPlayerViewController는 AVPlayer를 위한 기본 제공 사용자 인터페이스(UI)를 포함하는 뷰 컨트롤러다.  
 
@@ -65,6 +71,8 @@ AVPlayerViewController는 AVPlayer를 위한 기본 제공 사용자 인터페�
 
 이때, 주의할 점은 AVPlayerViewControler를 호출하는 시점이 너무 빠르면 
 아래와 같은 에러메세지가 발생한다.   
+
+<br>
 
 > Attempt to present <AVPlayerViewController: 0x10581b400> on <MoviePlayer.ViewController: 0x105207d90> (from <MoviePlayer.ViewController: 0x105207d90>) whose view is not in the window hierarchy
   
@@ -105,6 +113,8 @@ class ViewController: UIViewController {
 
 ```
 
+<br><br>
+
 ## AVPlayerLayer 직접 사용하기 (커스텀 UI)
 
 AVPlayerLayer의 분리 사용은 추가적인 커스터마이징과 특정 미디어 재생 요구 사항에 대응하기 위한 유연성을 제공한다.  
@@ -117,6 +127,8 @@ AVPlayerLayer의 분리 사용은 추가적인 커스터마이징과 특정 미�
 아래처럼 버튼을 구현하기 위해 따로 분리
 
 <img width="300" alt="스크린샷 2022-03-22 오후 1 32 04" src="https://github.com/isGeekCode/TIL/assets/76529148/54a0babd-ce30-47a9-85b4-b2be32670da5">
+
+<br><br>
 
 ```swift
 class ViewController: UIViewController {
@@ -208,12 +220,82 @@ class ViewController: UIViewController {
 
 ```
 
+<br><br>
+
+## KVO를 이용한 상태관리
+```swift
+import UIKit
+import AVFoundation
+
+class MoviePlayerController: UIViewController {
+
+    var player: AVPlayer?
+    var playerLayer: AVPlayerLayer?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupPlayer()
+    }
+
+    func setupPlayer() {
+        let urlStr = "http://down.humoruniv.com//hwiparambbs/data/editor/pdswait/e_s661a39002_846dd22bd05ecb889c61558314d4892c8b75978f.mp4"
+        guard let urlPath = URL(string: urlStr) else { return }
+        player = AVPlayer(url: urlPath)
+
+        // AVPlayerLayer 생성 및 설정
+        playerLayer = AVPlayerLayer(player: player)
+        playerLayer?.frame = view.bounds // 현재 뷰의 크기에 맞게 설정
+        view.layer.addSublayer(playerLayer!)
+
+        // 재생 완료 노티피케이션 감지
+        NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: player?.currentItem)
+
+        // 재생 상태 (KVO) 감지
+        player?.currentItem?.addObserver(self, forKeyPath: "status", options: [.new, .old], context: nil)
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        playerLayer?.frame = view.bounds // 뷰의 크기가 변경될 때마다 업데이트
+    }
+
+    @objc func playerDidFinishPlaying(note: NSNotification) {
+        print("Video Finished")
+    }
+
+    // KVO 처리
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "status",
+           let playerItem = object as? AVPlayerItem {
+            switch playerItem.status {
+            case .readyToPlay:
+                print("readyToPlay")
+                player?.play()
+            case .failed:
+                print("failed")
+            default:
+                break
+            }
+        }
+    }
+
+    deinit {
+        player?.currentItem?.removeObserver(self, forKeyPath: "status")
+        NotificationCenter.default.removeObserver(self)
+    }
+}
+
+```
+
+<br><br><br><br>
 
 # AVPlayerItem
 
 AVPlayer 자체만 생성하고 재생할 item을 따로 만들어 바꿔줄 수 있다.
 
 AVPlayer를 init할때 자동으로 기본 AVplayerItem이 생성되기때문에 ‘바꿔’준다.
+
+<br><br>
 
 ### AvplayerItem Init / replaceCurrentItem
 
@@ -250,6 +332,8 @@ player.replaceCurrentItem(with: customplayerItem)
 player.play()
 ```
 
+<br><br>
+
 ## Video Gravity
 
 - resize
@@ -259,6 +343,9 @@ player.play()
     - 화면 가로세로축이 맞지않아 player바깥은 하위 뷰계층이 보이기때문에 isHidden을 고려할 것
 - resizeAspectFill
     - 비디오의 비율을 유지하고 레이어의 경계를 채운다. 가운데만 표시됨.
+
+
+<br><br>
 
 # 종료를 제어하기위한 3가지 방법
 
@@ -277,6 +364,8 @@ NotificationCenter.default.addObserver(self, selector: #selector(didEndPlayActio
 }
 ```
 
+<br><br>
+
 ## 2.  MainThread에서 제어하여 특정시간만큼 보여주기
 
 같은 시점에서 해주기위해 동일한 쓰레드에서 실행하였다.
@@ -290,6 +379,8 @@ DispatchQueue.main.async {
         }
 }
 ```
+
+<br><br>
 
 ## 3. addBoundaryTimeObserver로 시간제어하기
 

@@ -1,5 +1,35 @@
-# MPMoviePlayerController Deprecated in iOS 10, Replaced by AVPlayer in iOS 7
+# MPMoviePlayerController Deprecated in iOS 10, Replaced by AVPlayerViewController in iOS 7
 
+
+```
+'moviePlayer' is deprecated: first deprecated in iOS 9.0 - Use AVPlayerViewController in AVKit.
+```
+
+AVPlayerViewController는 iOS 7.0부터 도입되었지만 iOS 9.0부터 MPMoviePlayerController의 대체제로 사용되기 시작한다. 
+
+MPMoviePlayerController는 iOS에서 오래 사용하던 비디오 플레이어 컴포넌트인데, 기본적인 비디오 재생 기능만을 제공했다.  
+
+AVPlayerViewController으로 대체된 주된 이유는 더 향상된 기능과 유연성 때문이다.  
+
+AVPlayerViewController는 AVFoundation 프레임워크의 일부로,  
+보다 고급 기능과 맞춤형 비디오 재생 경험을 제공한다.  
+
+## 나아진 점
+- **커스텀 사용자 인터페이스**
+    - AVPlayerViewController를 사용하면 개발자가 비디오 플레이어의 사용자 인터페이스를 더 세밀하게 제어하고 사용자 정의할 수 있다. 즉, 앱의 디자인과 더 잘 어울리게 만들 수 있다는 의미다.
+- **더 나은 스트리밍 지원** 
+    - AVPlayerViewController는 다양한 스트리밍 형식과 프로토콜을 지원하여, 라이브 스트리밍이나 온디맨드 비디오 재생에 더 적합해졌다.
+- **자막과 클로즈드 캡션 지원** 
+    - 사용자가 필요로 하는 자막과 클로즈드 캡션을 쉽게 통합하고 제어할 수 있다.
+- **에어플레이와 외부 디스플레이 지원** 
+    - 사용자가 비디오를 Apple TV나 다른 에어플레이 호환 디바이스에 쉽게 스트리밍할 수 있게 해준다.
+- **시간 이동 및 탐색 기능** 
+    - 사용자가 비디오 내에서 쉽게 특정 시점으로 이동하거나 탐색할 수 있다.
+- **백그라운드 오디오 재생** 
+    - 앱이 백그라운드에서 실행되는 동안에도 오디오 재생이 가능하다.
+- **통합된 프레임워크**
+    - AVFoundation 프레임워크의 일부로, 비디오 재생뿐만 아니라 비디오 편집, 오디오 처리 등 다양한 멀티미디어 기능을 쉽게 통합할 수 있다.
+        
 
 ## 간단한 세팅방법
 
