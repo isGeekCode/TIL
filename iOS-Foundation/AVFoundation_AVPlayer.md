@@ -290,8 +290,10 @@ class MoviePlayerController: UIViewController {
 <br><br><br><br>
 
 # AVPlayerItem
+AVPlayerItem은 재생할 콘텐츠(비디오나 오디오) 자체의 정보와 상태를 나타낸다.  
+AVPlayerItem을 따로 분리해 사용하면 하나의 AVPlayer를 사용하여 여러 콘텐츠(다양한 AVPlayerItem 인스턴스)를 순차적이나 조건적으로 재생할 수 있다.  
 
-AVPlayer 자체만 생성하고 재생할 item을 따로 만들어 바꿔줄 수 있다.
+또한 AVPlayer 자체만 생성하고 재생할 item을 따로 만들어 바꿔줄 수 있다.  
 
 AVPlayer를 init할때 자동으로 기본 AVplayerItem이 생성되기때문에 ‘바꿔’준다.
 
