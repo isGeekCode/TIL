@@ -15,12 +15,12 @@
   ```
 
 ### View에 추가
-  ```
+  ```swift
   addSubView(tableView)
   ```
 
 ### frame 혹은 제약조건 세팅
-  ```
+  ```swift
   // frame으로 설정할 경우
   tableView.frame = view.bounds
 
@@ -35,7 +35,7 @@
   ```
   
 ### TableView Protocol 선언 
-  ```
+  ```swift
   class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource { }
   ```
 
@@ -47,7 +47,7 @@
 
 ### TableView Delegate 함수 세팅
 - 첫 UITableViewCell은 여기서 구현을 한 상황이다.
-  ```
+  ```swift
     /// 테이블뷰 섹션 내부의 Row의 갯수를 선언하는 부분
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       return 10
@@ -287,3 +287,52 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     return cell
   }
   ```
+
+## 빠른 생성
+
+```swift
+import UIKit
+
+class ViewController: UIViewController {
+    
+    lazy var listData = Array(0...10).map { "Item\($0)" }
+    
+    lazy var tableView: UITableView = {
+       let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: #function)
+        return tableView
+    }()
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.addSubview(tableView)
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+        ])
+    }
+}
+
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: #function)
+        cell.textLabel?.text = listData[indexPath.row]
+        return cell
+    }
+}
+
+
+```
