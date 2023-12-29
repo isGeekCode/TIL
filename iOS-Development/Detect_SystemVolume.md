@@ -6,6 +6,12 @@
     - 전통적 KVO 사용법
 
 ## 방법1. NotificationCenter 이용하기
+iOS14 이전에는 시스템 볼륨 변경에 대한 Notification name인
+`AVSystemController_SystemVolumeDidChangeNotification` 를 이용해 
+노티피케이션을 받았다.  
+
+그리고 iOS15부터는 `SystemVolumeDidChange`로 Notification name이 변경됐지만,
+Apple에서는 KVO를 활용하기를 권고한다.  
 
 ```swift
 
