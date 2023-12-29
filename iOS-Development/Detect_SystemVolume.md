@@ -1,5 +1,10 @@
 # 볼륨버튼 캐치하기
 
+- 방법1. NotificationCenter 이용하기
+- 방법2. KVO 이용하기
+    - 현대적 KVO 사용법
+    - 전통적 KVO 사용법
+
 ## 방법1. NotificationCenter 이용하기
 
 ```swift
@@ -110,7 +115,7 @@ class ViewController: UIViewController {
 
 ```
 
-### 2-2. 전통적인 KVO 사용하기
+### 전통적인 KVO 사용하기
 
 ```swift
 import UIKit
