@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 사용법 (Diffable부분 내용추가필요)
+# NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 사용법
 
 CollectionView는 iOS에서 다양한 방식으로 데이터를 표시하는 컴포넌트로, TableView와 비슷한 역할을 한다. 하지만 TableView와는 몇 가지 중요한 차이점이 있다.
 
@@ -27,7 +27,7 @@ CollectionView는 iOS에서 다양한 방식으로 데이터를 표시하는 컴
     - [isSelected 사용하기](#isSelected-사용하기)
     - [Array에 선택된 셀정보를 담아서 보관하기](#Array에-선택된-셀정보를-담아서-보관하기)
     - [Index를 가리키는 Int값 하나를 보관하는 방법](#Index를-가리키는-Int값-하나를-보관하는-방법)
--  [DiffableDataSource를 이용한 CollectionView 구현하기
+- [DiffableDataSource를 이용한 CollectionView 구현하기
 ](#DiffableDataSource를-이용한-CollectionView-구현하기)
 
 
