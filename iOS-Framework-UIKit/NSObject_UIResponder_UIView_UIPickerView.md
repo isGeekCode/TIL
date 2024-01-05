@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView : UITabBar
+# NSObject_UIResponder_UIView : UIPickerView
 
 pickerView는 여러 개의 데이터 리스트에서 하나를 골라 사용하는 UIView객체이다.  
 
