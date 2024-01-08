@@ -168,6 +168,7 @@ OS에서는 내부적으로 함수안에 선언된 파라미터, 지역변수 �
     - 메모리 크기에 대한 제한이 있다.  
     - 지역 변수만 액세스가 가능하다.  
     
+<br><br>
 
 ## Data / Heap / Stack 영역에 할당되는 경우 살펴보기
 
@@ -222,6 +223,8 @@ class NumberClass {
 
 ```
 
+<br><br>
+
 ViewController 또한 마찬가지이다.  
 
 ```swift
@@ -270,7 +273,7 @@ class ViewController: UIViewController {
 }
 ```
 
-
+<br><br>
 
 
 ## 힙과 스택의 메모리관계
@@ -287,6 +290,8 @@ Stack 영역은 높은 메모리 주소부터 할당 받는다.
 힙이 자신의 영역 외로 확장하려하면, Heap over flow가 발생하고,  
 스택이  자신의 영역 외로 확장하려하면, Stack over flow가 발생한다. 
 
+
+<br><br>
 
 ### Stack이 과해지는 경우
 
@@ -318,6 +323,7 @@ class ViewController: UIViewController {
 - 과도한 스택 할당
     - 한 함수에서 너무 많은 메모리를 로컬 변수로 할당하여 스택의 한계를 초과하는 경우.
 
+<br><br>
 
 ### Heap이 과해지는 경우
 반대로 Heap 오버 플로우도 일어날 수 있다
@@ -336,6 +342,7 @@ class ViewController: UIViewController {
     - 프로그램에 무한 루프가 있고, 이 루프 내에서 지속적으로 새로운 메모리를 할당하는 경우에도 힙 오버플로우가 발생할 수 있다.
     - 프로그램이 정상적으로 종료되지 않고 계속해서 메모리를 요구하다가 결국 사용 가능한 메모리를 모두 소모하게 된다
 
+<br><br>
 
 ```swift
 // 데이터영역에 과도한 부담을 주는 경우에도 오류가 발생할 수 있다.
@@ -373,6 +380,7 @@ class TESTViewController: UIViewController {
 
 ```
 
+<br><br>
 
 ## History
 - 초안 작성
