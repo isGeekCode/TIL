@@ -1,4 +1,4 @@
-# iOS에서 메모리구조
+# iOS에서 메모리구조 : Code / Data / Heap / Stack
 
 
 
