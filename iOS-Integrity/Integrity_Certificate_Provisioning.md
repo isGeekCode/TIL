@@ -120,8 +120,9 @@ Apple Distribution 역시 마찬가지이다.
 
 팀정보 등의 개인정보를 가렸다.  
 
-<img width="633" alt="스크린샷 2024-01-11 오전 10 34 30" src="https://github.com/isGeekCode/TIL/assets/76529148/5f54f0a2-58f4-4789-83a5-e7bc81e131c9">
+<img width="800" alt="스크린샷 2024-01-11 오전 10 34 30" src="https://github.com/isGeekCode/TIL/assets/76529148/77fdca4e-750a-4e1e-ab1c-0ffce1514396">
 
+  
 내보낼 인증서가 저장될 경로와 이름을 정하는 부분이다.  
 p.12 그대로 선택된 상태로 저장  
 <img width="400" alt="스크린샷 2024-01-11 오전 10 34 48" src="https://github.com/isGeekCode/TIL/assets/76529148/fbdeff3d-edce-4cf8-9570-9891b132bffa">
