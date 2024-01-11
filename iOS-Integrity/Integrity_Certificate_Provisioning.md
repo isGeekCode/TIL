@@ -61,6 +61,10 @@
 ### 발급절차
 애플에서 인증서를 발급받기 위해서는 키체인에서 인증기관에 인증서 요청을 클릭, 필요한 정보를 채운다.
 
+- 사용자 이메일주소 : 사용하는 애플 이메일
+- 일반 이름 : 사용자 이름 ( 한글도 가능 )
+- `디스크에 저장`됨으로 선택
+
 
 <img width="550" alt="스크린샷 2023-03-30 오후 10 08 01" src="https://user-images.githubusercontent.com/76529148/228845817-ca9773a5-47cf-4f8e-8399-ec201b4b7106.png">
 <img width="550" alt="스크린샷 2023-03-30 오후 10 08 07" src="https://user-images.githubusercontent.com/76529148/228845826-ec710d1a-7121-4eb4-b20e-560f82be0198.png">
@@ -108,6 +112,10 @@ Keychain 쪽에 아까 인증서 요청을 할때 생성된 개인 키와 합쳐
 Apple Distribution 역시 마찬가지이다.  
 
  발급 받을 인증서의 종류를 Apple Distribution 로 선택하고, 신청서를 업로드하는 부분에 위에서 만든 CSR을 넣는다. 위와 동일하게 진행하면 완료!
+ 
+ 
+ <img width="207" alt="스크린샷 2024-01-11 오전 10 36 46" src="https://github.com/isGeekCode/TIL/assets/76529148/c325f4ed-ea1d-4feb-afa4-467046c63cdd">
+
  
 <br><br>
  
