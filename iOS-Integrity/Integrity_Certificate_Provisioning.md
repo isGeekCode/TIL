@@ -63,7 +63,7 @@
 
 
 <img width="550" alt="스크린샷 2023-03-30 오후 10 08 01" src="https://user-images.githubusercontent.com/76529148/228845817-ca9773a5-47cf-4f8e-8399-ec201b4b7106.png">
-<img width="495" alt="스크린샷 2023-03-30 오후 10 08 07" src="https://user-images.githubusercontent.com/76529148/228845826-ec710d1a-7121-4eb4-b20e-560f82be0198.png">
+<img width="550" alt="스크린샷 2023-03-30 오후 10 08 07" src="https://user-images.githubusercontent.com/76529148/228845826-ec710d1a-7121-4eb4-b20e-560f82be0198.png">
 
 <br><br>
 
@@ -71,7 +71,7 @@
 
 
 <img width="258" alt="스크린샷 2023-03-30 오후 10 08 11" src="https://user-images.githubusercontent.com/76529148/228845835-8f9a0621-60fb-41ef-a3d0-6b0bc2e60d18.png">
-<img width="300" alt="스크린샷 2024-01-11 오전 10 06 12" src="https://github.com/isGeekCode/TIL/assets/76529148/4ae4f1f4-3c58-47fc-acd5-838d9d0598a3">
+<img width="550" alt="스크린샷 2024-01-11 오전 10 06 12" src="https://github.com/isGeekCode/TIL/assets/76529148/4ae4f1f4-3c58-47fc-acd5-838d9d0598a3">
 
 
 CSR은 인증서 발급을 위해 필요한 정보를 담고있는 데이터다. `이름, 국가, 이메일, 서명알고리즘 등등`을 담고 있고 `이 공개키가 포함된 인증서를 만들고 싶다` 라는 내용이 들어있다.
@@ -120,7 +120,7 @@ Apple Distribution 역시 마찬가지이다.
 
 팀정보 등의 개인정보를 가렸다.  
 
-<img width="500" alt="스크린샷 2024-01-11 오전 10 34 30" src="https://github.com/isGeekCode/TIL/assets/76529148/5f54f0a2-58f4-4789-83a5-e7bc81e131c9">
+<img width="633" alt="스크린샷 2024-01-11 오전 10 34 30" src="https://github.com/isGeekCode/TIL/assets/76529148/5f54f0a2-58f4-4789-83a5-e7bc81e131c9">
 
 내보낼 인증서가 저장될 경로와 이름을 정하는 부분이다.  
 p.12 그대로 선택된 상태로 저장  
@@ -128,10 +128,13 @@ p.12 그대로 선택된 상태로 저장
 
 이렇게 내보낸 인증서를 아무나 사용할 수 없도록 암호를 설정한다.  
 이 인증서를 받는 사람이 최초 한번 등록할 때만 사용한다.  
-<img width="400" alt="스크린샷 2024-01-11 오전 10 35 22" src="https://github.com/isGeekCode/TIL/assets/76529148/0feccdc7-70fd-417c-b916-b02cfbcb71f4">
 
-그러면 이제 생성된 파일을 전달하면 된다. 
-<img width="400" alt="스크린샷 2024-01-11 오전 10 36 46" src="https://github.com/isGeekCode/TIL/assets/76529148/c325f4ed-ea1d-4feb-afa4-467046c63cdd">
+<img width="633" alt="스크린샷 2024-01-11 오전 10 35 22" src="https://github.com/isGeekCode/TIL/assets/76529148/0feccdc7-70fd-417c-b916-b02cfbcb71f4">
+
+  
+그러면 이제 생성된 파일을 전달하면 된다.   
+
+<img width="207" alt="스크린샷 2024-01-11 오전 10 36 46" src="https://github.com/isGeekCode/TIL/assets/76529148/c325f4ed-ea1d-4feb-afa4-467046c63cdd">
 
 
 
