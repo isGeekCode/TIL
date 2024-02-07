@@ -1,5 +1,12 @@
 # NSObject_UIResponder_UIView_UIControl : UITextField
 
+## 스토리보드로 구현하기
+1. 라이브러리로 부터 viewController 위로 텍스트필드를 올려둔다. (addSubView 처리)
+2. 제약조건을 세팅한다. 
+3. 델리게이트 링크시키기
+4. Did End On Exit 링크시키기 : 텍스트필드에서 엔터를 누르면 실행되는 곳
+    - textFieldShouldReturn 메서드와 동일한 동작
+
 ## textfield 사용하기
 1. 프로토콜 채택
 ```swift
