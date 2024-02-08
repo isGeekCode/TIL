@@ -232,20 +232,16 @@ editingStyle은 위에서 살펴본것 처럼 3가지이다.
 <br><br><br>
 
 # Swipe Action
-사실 delete만 구현하려는 것이면 editingStyleForRowAt 에서 정의한 옵션에 따라 delete가 가능한 셀에서는 스와이프로 삭제를 할 수 있다.  
 
-아래처럼 활성화 되어있는 셀에 한해서는 자동으로 delete 스와이프 애니메이션이 가능하니 참고하자. 
-이 때, 스와이프 동작은 `tableView(_:commit:forRowAt:)` 메서드에 구현한 동작이 실행된다.  
-때문에 delete만 구현할 거면 아래 추가적인 스와이프를 정의하지않아도 된다.  
+> `tableView(_:editingStyle:indexPath:)`메서드는 어떤 셀에 어떤 editingStyle로 할지 구현하는 곳이다.  
+> `tableView(_:commit:forRowAt:)`메서드는 어떤 editingStyle에서 어떤 동작을 할지 구현하는 곳이다.  
 
-!!!!!
-단, 스와이프 액션을 직접 커스텀으로 다른 동작을 구현해야한다면, 반드시 delete는 구현하고 다른 액션을 생성해야한다.  만약 구현하지않는 경우, editing Mode에서 삭제 버튼을 눌러도 동작하지않는다.  
+여기에 delete만 잘 구현이 되어있다면, swipe 액션을 따로 구현하지않아도 자동으로 swipe 액션을 지원한다.  
 
-```
-func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-    return .delete
-}
-```
+이 때, 동작하는 스와이프 동작은 `tableView(_:commit:forRowAt:)` 메서드에 구현한 동작이 실행된다.  
+
+‼️‼️‼️‼️
+단, 스와이프 액션으로 delete 이외의 동작을 구현해야한다면, 반드시 delete는 스와이프로 구현하고 다른 액션을 추가해야한다.  만약 구현하지않는 경우, editing Mode에서 삭제 버튼을 눌러도 동작하지않는다.  
 
 ## 정의하기
 
