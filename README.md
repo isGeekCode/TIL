@@ -8,17 +8,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_396 TILs and counting..._
+_397 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [AppStore - 수출 규정 준수 정보](iOS-AppStore/AppStore_AppUseNonExempt.md) - Tue Feb 13 12:48:44 2024 +0900
 - [Integrity - APN 인증키(.p8) 발급받기](iOS-Integrity/Integrity_apn_p8.md) - Mon Jan 29 14:42:39 2024 +0900
 - [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile) 관리하기](iOS-Integrity/Integrity_Certificate_Provisioning.md) - Thu Jan 11 10:54:26 2024 +0900
 - [볼륨버튼 캐치하기](iOS-Development/Detect_SystemVolume.md) - Fri Dec 29 10:53:17 2023 +0900
 - ['setVolume:' is deprecated: first deprecated in iOS 7.0 - Use MPVolumeView for volume control.](iOS-Framework-Migration/mpmusicplayer.md) - Thu Dec 28 09:01:00 2023 +0900
-- [AVFoundation - AVPlayer 사용하기](iOS-Foundation/AVFoundation_AVPlayer.md) - Tue Dec 19 08:34:22 2023 +0900
 
 ### Categories
 
@@ -223,6 +223,7 @@ _396 TILs and counting..._
 ### [iOS-AppStore](#ios-appstore)
 - [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](iOS-AppStore/AppStore_AppDismiss.md)
 - [AppStore - 앱 생성하기](iOS-AppStore/AppStore_AppInit.md)
+- [AppStore - 수출 규정 준수 정보](iOS-AppStore/AppStore_AppUseNonExempt.md)
 - [기존 배포되어있는 앱을 다른 앱으로 바꾸기](iOS-AppStore/AppStore_ChangeBundleId.md)
 - [AppStore - 버전정보 수정하기](iOS-AppStore/AppStore_ChangeVersionInfo.md)
 - [AppStore - 긴급 심사 요청(Request Expedited Review)](iOS-AppStore/AppStore_expeditedReview.md)
