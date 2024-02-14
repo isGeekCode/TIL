@@ -1,4 +1,73 @@
-# NSObject_UIResponder_UIView_UIScrollView_UITableView : 사용법
+# NSObject_UIResponder_UIView_UIScrollView_UITableView : (템플릿) 사용법
+
+  <br><br>
+
+## 템플릿
+
+```swift
+import UIKit
+
+class ViewController: UIViewController {
+
+    lazy var listData = Array(0...10).map { "Item\($0)" }
+    
+    lazy var tableView = {
+        let tableView = UITableView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setLayout()
+    }
+    
+    func setLayout() {
+        view.backgroundColor = .white
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+        ])
+    }
+
+
+}
+
+extension ViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell =  tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
+        cell.textLabel?.text = listData[indexPath.row]
+        return cell
+    }
+}
+
+class CustomTableViewCell: UITableViewCell {
+
+    static let identifier = "test"
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier )
+        print(#function)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+}
+```
+
+
+<br><br>
 
 ## Step1. TableView 선언
 
@@ -14,10 +83,14 @@
 
   ```
 
+<br><br>
+
 ### View에 추가
   ```swift
   addSubView(tableView)
   ```
+
+<br><br>
 
 ### frame 혹은 제약조건 세팅
   ```swift
@@ -34,10 +107,14 @@
   ])
   ```
   
+  <br><br>
+  
 ### TableView Protocol 선언 
   ```swift
   class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource { }
   ```
+
+<br><br>
 
 ### TableView Protocol Delegate 선언
   ```swfit
@@ -65,10 +142,14 @@
   ```
 
 
+<br><br>
+
 ### 현재까지의 작업화면
 - 시뮬레이터 다크모드전환 단축키: `Shift + Command + A`
 <img width="356" alt="스크린샷 2023-01-28 오후 3 13 58" src="https://user-images.githubusercontent.com/76529148/215250704-86891e64-c094-4898-80ea-d76f41e6d14a.png">
 
+
+<br><br>
 
 ### 현재까지의 전체코드
 
@@ -113,6 +194,8 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 ```
+
+<br><br>
 
 ## Step2. 테이블뷰 내용을 보여주기위한 구조체 구현
 
@@ -168,8 +251,12 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
 ```
 
 
+<br><br>
+
 ### 현재까지의 작업화면
 <img width="358" alt="스크린샷 2023-01-28 오후 3 55 43" src="https://user-images.githubusercontent.com/76529148/215251949-32f24bc6-b9f7-4ec7-97eb-37c888c4cf87.png">
+
+<br><br>
 
 ### 현재까지의 전체코드
 ```swift
@@ -231,6 +318,8 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
 
 ```
 
+<br><br>
+
 ## Step3. UITableViewCell생성하기
 - identifier 세팅하기
   ```swift
@@ -263,8 +352,12 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
   }
 
   ```
+  
+  
+  <br><br>
+  
 
-- ViewController에서 해당 TableViewCell 등록하기
+### 셀 재사용을 위해 해당 TableViewCell 등록하기
   ```swift
   // Property
   private let tableView: UITableView = {
@@ -288,51 +381,5 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
   }
   ```
 
-## 빠른 생성
+<br><br>
 
-```swift
-import UIKit
-
-class ViewController: UIViewController {
-    
-    lazy var listData = Array(0...10).map { "Item\($0)" }
-    
-    lazy var tableView: UITableView = {
-       let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: #function)
-        return tableView
-    }()
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.addSubview(tableView)
-        
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-        ])
-    }
-}
-
-
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listData.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: #function)
-        cell.textLabel?.text = listData[indexPath.row]
-        return cell
-    }
-}
-
-
-```
