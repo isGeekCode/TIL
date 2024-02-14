@@ -133,7 +133,7 @@ override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) { }
 extension UITableViewCell {
     
     public enum CellStyle : Int, @unchecked Sendable {
-        case `default` = 0
+        case default = 0
         case value1 = 1
         case value2 = 2
         case subtitle = 3
@@ -169,12 +169,20 @@ tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 
 // 커스텀 클래스
 tableView.register(MyTableViewCell.self, forCellReuseIdentifier: "Cell")
+
+// nib파일을 사용하는 경우 
+tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
 ```
 
-만약 커스텀 셀 내부에 ID값을 변수로 생성했다면 아래와 같이 사용도 가능하다.
-```swift
+<br><br>
 
+
+
+만약 커스텀 셀 내부에 ID값을 변수로 생성했다면 아래와 같이 사용도 가능하다.
+
+```swift
 tableView.register(MyTableViewCell.self, forCellReuseIdentifier: MyTableViewCell.reuseIdentifier)
+tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: MyTableViewCell.reuseIdentifier)
 
 class MyTableViewCell : UITableViewCell { 
 
@@ -203,10 +211,123 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
         
         // 커스텀 클래스의 ID값을 사용하는 경우
         let cell = tableView.dequeueReusableCell(withIdentifier: MyTableViewCell.reuseIdentifier, for: indexPath)
+        
+}
+```
+
+
+## UI 구현부 메서드
+
+### Nib을 사용하는 경우
+
+`awakeFromNib()`에서드에서 로직을 추가할 수 있다.    
+없어도 문제는 되지않는다.  
+
+
+```swift
+class CustomTableViewCell: UITableViewCell {
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
 }
 ```
 
 <br><br>
+
+
+### 코드로만 구현하는 경우
+
+`awakeFromNib()`에서드가 있어도 실행되지않는다. 
+
+```swift
+class CustomTableViewCell: UITableViewCell {
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        // Initialization code
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+}
+```
+
+<br><br><br>
+
+
+
+###  전체코드
+
+
+```swift
+import UIKit
+
+class ViewController: UIViewController {
+
+    let data = ["Sam", "John", "Kim", "Bang"]
+    
+    lazy var tableView = {
+        let tableView = UITableView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setLayout()
+    }
+    
+    func setLayout() {
+        view.backgroundColor = .white
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+        ])
+    }
+
+
+}
+
+extension ViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell =  tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
+
+        cell.textLabel?.text = data[indexPath.row]
+        return cell
+    }
+}
+
+class CustomTableViewCell: UITableViewCell {
+
+    static let identifier = "test"
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        print(#function)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+}
+
+```
+
+
+<br><br><br>
 
 
 ## 재사용으로 인한 사이드이펙트
@@ -215,6 +336,9 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 일반적으로 UI가 변경되지않는 앱들은 문제가 생기지않겠지만,
 
 셀을 클릭할 때마다, 레이아웃이 변경되는 UI를 가진 테이블뷰라면 재사용에 대해 추가 작업을 진행해야한다.  
+
+
+<br><br>
 
 
 ### Cell 내부에서 재사용 초기화하기
