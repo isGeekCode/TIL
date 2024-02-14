@@ -107,3 +107,19 @@
     - 문장 : Because UIView is a highly configurable class, there are also many ways to implement sophisticated view behaviors without overriding custom methods, which are discussed in the Alternatives to Subclassing section. In the meantime, the following list includes the methods you might consider overriding in your UIView subclasses.
     - 링크 : [UIView](https://developer.apple.com/documentation/uikit/uiview#1652798)
 
+### associated
+- 영한 : 관련된, 연관된, 연결된
+- 출처
+    - 문장 : A UITableViewCell object with the associated identifier, or nil if no such object exists in the reusable-cell queue.
+    - 링크 : [dequeueReusableCell](https://developer.apple.com/documentation/uikit/uitableview/1614891-dequeuereusablecell)
+- if의 사용
+    - 처음에 나오는 경우 : 만일 ~라면
+    - 중간에 나오는 경우 : 만일 ~라면 / ~인지 아닌지
+    - 문장 중간에 나오는 경우, 여러가지로 해석할 수 있다. 
+        - 시작 말고도 문장을 더 자연스럽고 대화적으로 만들기위해 조건을 뒤로 붙이기도 한다. 
+            - If it rains, the event will be cancelled. : 비가 오면, 이벤트는 취소될 것입니다.
+            - The event will be cancelled if it rains. : 이벤트는 비가 오면 취소될 것입니다.
+        - if절에 을/를 로 대입해보고 목적어로 사용이되면 '~인지 아닌지를' 로 사용이 가능하다.  
+            - I'm not sure if he will come. : 그가 올지를 확신할 수 없어
+            - Ask her if she will attend the party : 그녀가 파티에 참석할지 물어봐
+            - We need to check if we have enough time : 우리가 시간이 충분한지 확인해야 해
