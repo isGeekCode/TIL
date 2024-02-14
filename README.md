@@ -14,11 +14,11 @@ _397 TILs and counting..._
 
 ### 5 most recent TILs
 
+- [Xcode Error - The CFBundleShortVersionString of an app extension (‘1.0’) must match that of its containing parent app](About-Error/xcodeError_CFBundleShortVersionString.md) - Tue Feb 13 16:35:19 2024 +0900
 - [AppStore - 수출 규정 준수 정보](iOS-AppStore/AppStore_AppUseNonExempt.md) - Tue Feb 13 12:48:44 2024 +0900
 - [Integrity - APN 인증키(.p8) 발급받기](iOS-Integrity/Integrity_apn_p8.md) - Mon Jan 29 14:42:39 2024 +0900
 - [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile) 관리하기](iOS-Integrity/Integrity_Certificate_Provisioning.md) - Thu Jan 11 10:54:26 2024 +0900
 - [볼륨버튼 캐치하기](iOS-Development/Detect_SystemVolume.md) - Fri Dec 29 10:53:17 2023 +0900
-- ['setVolume:' is deprecated: first deprecated in iOS 7.0 - Use MPVolumeView for volume control.](iOS-Framework-Migration/mpmusicplayer.md) - Thu Dec 28 09:01:00 2023 +0900
 
 ### Categories
 
@@ -90,6 +90,7 @@ _397 TILs and counting..._
 - [Terminal Error - xcrun: error: active developer path...](About-Error/terminalError_xcrunError.md)
 - [Xcode Error - Presenting view controllers on detached view controllers is discouraged.](About-Error/xcodeError_Alert_In_UIViewController_Init.md)
 - [Xcode Error - Build input file cannot be found:](About-Error/xcodeError_BuildInputFile.md)
+- [Xcode Error - The CFBundleShortVersionString of an app extension (‘1.0’) must match that of its containing parent app](About-Error/xcodeError_CFBundleShortVersionString.md)
 - [Xcode Error - Command PhaseScriptExecution failed with a nonzero exit code](About-Error/xcodeError_CommandPhaseScript.md)
 - [Xcode Error - Launching _AppName_ is taking longer than expected](About-Error/xcodeError_Launching_is_taking_longer_than.md)
 - [Xcode Error - Unable to process request - PLA Update available](About-Error/xcodeError_UnableProcess.md)
@@ -224,7 +225,6 @@ _397 TILs and counting..._
 - [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](iOS-AppStore/AppStore_AppDismiss.md)
 - [AppStore - 앱 생성하기](iOS-AppStore/AppStore_AppInit.md)
 - [AppStore - 수출 규정 준수 정보](iOS-AppStore/AppStore_AppUseNonExempt.md)
-- [기존 배포되어있는 앱을 다른 앱으로 바꾸기](iOS-AppStore/AppStore_ChangeBundleId.md)
 - [AppStore - 버전정보 수정하기](iOS-AppStore/AppStore_ChangeVersionInfo.md)
 - [AppStore - 긴급 심사 요청(Request Expedited Review)](iOS-AppStore/AppStore_expeditedReview.md)
 - [앱심사 - 수출 규정 관련 문서가 누락됨(Missing Compliance) / 우회처리](iOS-AppStore/AppStore_missing_Compliance.md)
