@@ -10,8 +10,9 @@
 이번엔 명함 UI를 만들었다.  
 
 여기서 특별한 점은 커스텀테이블뷰셀에서 직접 선언이 아닌 외부에서 값을 세팅하는 메서드를 구현했다는 것이다.  
+tableView는 처리에 있어 다른 객체에 위임했기 때문에,  해당 객체에서 이 부분을 호출에 직접 값을 넣어주어야한다.  
 
-```
+```swift
 func configure(name: String, title: String, contact: String) {
     nameLabel.text = name
     titleLabel.text = title
@@ -20,9 +21,6 @@ func configure(name: String, title: String, contact: String) {
 ```
 
 <br><br>
-
-tableView를 처리에 있어 다른 객체에 위임했기 때문에,  해당 객체에서 이 부분을 호출에 직접 값을 넣어주어야한다.  
-
 
 ```swift
 class BusinessCardTableViewCell: UITableViewCell {
@@ -60,7 +58,6 @@ class BusinessCardTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        contentView.backgroundColor = .systemYellow.withAlphaComponent(0.3)
         contentView.addSubview(nameLabel)
         contentView.addSubview(titleLabel)
         contentView.addSubview(contactLabel)
@@ -101,11 +98,11 @@ class BusinessCardTableViewCell: UITableViewCell {
 
 <br><br>
 
-## 위임한 객체에서 바인딩 처리
+## 커스텀 UITableViewCell로 타입캐스팅
 
 사용하는데 있어서는 일반적인 셀 재사용 방법과 동일하지만,  dequeue처리할 때 타입캐스팅이 추가된다. 
 
-기졶에 사용하던 `dequeueReusableCell(withIdentifier:for:)` 메서드는 UITableViewCell를 리턴하기 때문에 
+기존에 사용하던 `dequeueReusableCell(withIdentifier:for:)` 메서드는 UITableViewCell를 리턴하기 때문에 
 커스텀셀 내부에 선언한 객체들을 가져오려면 새로 구현한 커스텀 테이블뷰 셀 객체로 타입캐스팅 해주어야한다.  
 
 ```swift
@@ -118,11 +115,10 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     //혹은
     // let cell = tableView.dequeueReusableCell(withIdentifier: "BusinessCardTableViewCell", for: indexPath) as! BusinessCardTableViewCell 
     
-    
+    // 데이터바인딩
     cell.configure(name: "John Doe", 
                    title: "Software Engineer", 
                    contact: "john.doe@example.com")
-
     
     return cell
 }
@@ -249,6 +245,7 @@ class BusinessCardTableViewCell: UITableViewCell {
         ])
     }
     
+    // 데이터바인딩
     func configure(name: String, title: String, contact: String) {
         nameLabel.text = name
         titleLabel.text = title
