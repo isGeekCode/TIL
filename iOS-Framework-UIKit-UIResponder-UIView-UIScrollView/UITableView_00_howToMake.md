@@ -2,69 +2,6 @@
 
   <br><br>
 
-## 템플릿
-
-```swift
-import UIKit
-
-class ViewController: UIViewController {
-
-    lazy var listData = Array(0...10).map { "Item\($0)" }
-    
-    lazy var tableView = {
-        let tableView = UITableView()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
-    }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setLayout()
-    }
-    
-    func setLayout() {
-        view.backgroundColor = .white
-        view.addSubview(tableView)
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-        ])
-    }
-
-
-}
-
-extension ViewController : UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listData.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
-        cell.textLabel?.text = listData[indexPath.row]
-        return cell
-    }
-}
-
-class CustomTableViewCell: UITableViewCell {
-
-    static let identifier = "test"
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier )
-        print(#function)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-}
-```
 
 
 <br><br>
@@ -72,11 +9,15 @@ class CustomTableViewCell: UITableViewCell {
 ## Step1. TableView 선언
 
 ### Property 
-- `.grouped` 이 필요한 경우에 아래와 같이 하지만 필요 없을 경우에는 `UITableView()`로 생성
-- cell도 등록해준다. 
+- 아이폰 설정앱처럼 그룹화된 셀을 보여주고 싶다면 style에서 .grouped / insetGrouped 를 선택한다.
+    - 이 내용은 Section 구현에서 추가언급예정
+- 셀을 스크롤하며 재활용해야한다면 cell도 등록해준다. 
   ```swift
     private let tableView: UITableView = {
-      let table = UITableView(frame: .zero, style: .grouped)
+      let table = UITableView()
+      // let table = UITableView(frame: .zero, style: .grouped)
+      // let table = UITableView(frame: .zero, style: .insetGrouped)
+
       table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
       return table
     }()
