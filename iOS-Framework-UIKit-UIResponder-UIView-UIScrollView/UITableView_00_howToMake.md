@@ -78,7 +78,7 @@ delegation이란 원래 해당 역할을 수행할 주체를 위임한다는 것
 해당 tableView의 여러 메서드들을 ViewController에 구현해서 처리하겠다는 말이다.  
 
 tableView의 위임자는 delegate와 dataSource가 있다.  
-```swfit
+```swift
 tableView.delegate = self
 tableView.dataSource = self
 ```
@@ -178,6 +178,8 @@ tableView에 셀을 관리할 Queue를 두고,
 미리 그 Queue에 넣을 셀을 등록한다. 
 또 Queue에서 뺄 셀도 등록을 하게 된다.  
 
+<br><br>
+
 ### 셀 등록하기
 - UINib : 내가 사용할 테이블뷰셀 클래스
     - 만약 커스텀 클래스를 사용한다면 해당 클래스를 넣어준다.  
@@ -189,6 +191,8 @@ func register(UINib?, forCellReuseIdentifier: String)
 // 사용예
 tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 ```
+
+<br><br>
 
 ### dequeue하여 재사용할 셀 선언하기
 UITableView는 reusableCell 큐에서 지정된 식별자(identifier)를 가진 셀을 "빼내어(dequeue)" 재사용하는 방식으로 작동한다. 
@@ -209,9 +213,12 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 }
 ```
 
+<br><br>
 
 ### 현재까지의 작업화면
 <img width="356" alt="스크린샷 2023-01-28 오후 3 13 58" src="https://github.com/isGeekCode/TIL/assets/76529148/30a77816-185b-4fa3-bb5b-5659dd4d5c4e">
+
+<br><br>
 
 ### 전체코드
 ```swift
@@ -252,199 +259,3 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 ```
-
-
-
-
-<br><br>
-
-## Step2. 복잡한 테이블뷰 내용은 구조체로 정리하기
-테이블뷰에 보여줄 내용의 수가 많아지면 구조체로 만들어서 관리하기 쉽도록 만들 수 있다.  
-
-### 구조체 구현
-- `icon`처럼 항상 존재하지는 않을 정보라면 `?`을 통해 옵셔널 세팅해줄 것
-```swift
-  struct SettingsOptions {
-    let title: String
-    let icon: UIImage?
-    let iconBackgroundColor: UIColor
-    let handler: (() -> Void)
-  }
-```
-  
-<br><br>
-
-### 구조체 init
-```swift  
-class ViewController: UIViewController {
-
-  var models = [SettingsOptions]()
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    configure()
-  }
-
-  func configure() {
-    self.models = Array(0...100).compactMap({
-      SettingsOptions(title: "Item \($0)", icon: UIImage(systemName: "house"), iconBackgroundColor: .systemPink) {
-      }
-    })
-  } 
-  ```
-  
-  
-<br><br>
-  
-### TabelView에 반영하기
-- numberOfRowsInSection에 모델변수의 갯수 선언
-- cellForRowAt에 모델변수의 텍스트값 세팅
-```swift
-
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return models.count
-  }
-  
-
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let model = models[indexPath.row]
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-  
-    cell.textLabel?.text = model.title
-    return cell
-  }
-```
-
-
-<br><br>
-
-### 현재까지의 작업화면
-<img width="358" alt="스크린샷 2023-01-28 오후 3 55 43" src="https://user-images.githubusercontent.com/76529148/215251949-32f24bc6-b9f7-4ec7-97eb-37c888c4cf87.png">
-
-<br><br>
-
-### 현재까지의 전체코드
-```swift
-import UIKit
-
-struct SettingsOptions {
-  let title: String
-  let icon: UIImage?
-  let iconBackgroundColor: UIColor
-  let handler: (() -> Void)
-}
-
-class ViewController: UIViewController {
-
-  private let tableView: UITableView = {
-    let table = UITableView(frame: .zero, style: .grouped)
-    table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-    return table
-  }()
-  
-  var models = [SettingsOptions]()
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    configure()
-    title = "Settings"
-    view.addSubview(tableView)
-    tableView.frame = view.bounds
-
-    tableView.delegate = self
-    tableView.dataSource = self
-  }
-
-  func configure() {
-    self.models = Array(0...100).compactMap({
-      SettingsOptions(title: "Item \($0)", icon: UIImage(systemName: "house"), iconBackgroundColor: .systemPink) {
-
-      }
-    })
-  }
-}
-
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
-
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return models.count
-  }
-  
-
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let model = models[indexPath.row]
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-  
-    cell.textLabel?.text = model.title
-    return cell
-  }
-}
-
-```
-
-<br><br>
-
-## Step3. UITableViewCell생성하기
-- identifier 세팅하기
-  ```swift
-  static let identifier = "SettingTableViewCell"
-
-  ```
-- swift파일 세팅
-  ```swift
-  import UIKit
-
-  class SettingTableViewCell: UITableViewCell {
-
-    static let identifier = "SettingTableViewCell"
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-      super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-    
-    required init?(coder: NSCoder) {
-      fatalError()
-    }
-    
-    override func layoutSubviews() {
-      super.layoutSubviews()
-    }
-    
-    override func prepareForReuse() {
-      super.prepareForReuse()
-    }
-  }
-
-  ```
-  
-  
-  <br><br>
-  
-
-### 셀 재사용을 위해 해당 TableViewCell 등록하기
-  ```swift
-  // Property
-  private let tableView: UITableView = {
-    let table = UITableView(frame: .zero, style: .grouped)
-    table.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.identifier)
-    return table
-  }()
-  
-  // TableViewDelegate - Cell for Row At 에도 셀정보 등록
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let model = models[indexPath.row]
-    guard let cell = tableView.dequeueReusableCell(
-      withIdentifier: SettingTableViewCell.identifier,
-      for: indexPath
-    ) as? SettingTableViewCell else {
-      return UITableViewCell()
-    }
-  
-    cell.configure(with: model)
-    return cell
-  }
-  ```
-
-<br><br>
-
