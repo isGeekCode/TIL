@@ -3,16 +3,83 @@
 이번엔 여러 섹션을 가진 테이블뷰를 구현해보고, 각 섹션에 다른 종류의 셀도 사용해보자.  
 
 
-
-
-
-
 ## 섹션 나누기
+
+
+### 섹션을 구별할 구조체 생성
+섹션을 구분할 구조체를 구현한다.  
+
+```swift
+import UIKit
+
+struct SectionModel {
+    let title: String
+    let itemList: [String]
+}
+```
 
 <br><br>
 
+### 구현할 내용 추가
+```swift
+var sectionList: [SectionModel] = [
+    SectionModel(title: "Section 1",
+                 itemList: ["Item 1","Item 2","Item 3"]),
+    
+    SectionModel(title: "Section 2",
+                 itemList: ["Item 4","Item 5"]),
+    
+    SectionModel(title: "Section 3",
+                 itemList: ["Item 6","Item 7","Item 8"]),
+    ]
+
+```
+
+<br><br>
+
+### 델리게이트 메서드 구현
+이제 데이터가 단순 Array가 아니기때문에, section과 row를 혼동하면 안된다.  
+
+IndexPath프로퍼티는 Section과 Row를 가지고 있다.  
+
+
+
+```swift
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    // Section의 수
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sectionList.count
+    }
+    
+    // Section당 Row의 수
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sectionList[section].itemList.count
+    }
+    
+    // 각 셀에만 해당하는 데이터 모델을 추출해 바인딩처리
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell()
+        let item = sectionList[indexPath.section].itemList[indexPath.row]
+
+        cell.textLabel?.text = item
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionList[section].title
+    }
+}
+
+```
+
+
+<br><br>
+
+
 ### 작업화면
-<img width="356" alt="스크린샷 2023-01-28 오후 3 13 58" src="https://github.com/isGeekCode/TIL/assets/76529148/b8803c37-051a-4566-8d95-37b94cf36329">
+<img width="356" alt="스크린샷 2023-01-28 오후 3 13 58" src="https://github.com/isGeekCode/TIL/assets/76529148/d1255f3a-cc61-4b4e-b209-a8811f2e8417">
 
 <br><br>
 
