@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIScrollView_UITableView : 편집스타일 설정하기 - editingStyle
+# UITableView : 편집스타일 설정하기 - editingStyle
 
 일반적으로 우리가 앱을 경험하게 되면 UX상 테이블에서 셀을 스와이프 하여 앱을 편집 / 삭제 하는 경우가 있다. 
 
