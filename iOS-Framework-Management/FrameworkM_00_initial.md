@@ -23,6 +23,7 @@ swift파일을 생성하고, 사용할 내부 클래스 및 메서드를 구현�
 ## Build Setting 변경
 
 1. Build Options - Build Libraries for Distribution=YES
+    - 이부분을 Yes로 하지않으면 XCFramework로 생성할 수 없다.   
 2. Deployment - Skip install=NO
 
 > ‼️ 주의할 점: 여기에 최소버전을 반드시 확인하자. 나중에 적용한 후, 빌드시 에러가 발생한다.  
