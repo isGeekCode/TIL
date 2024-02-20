@@ -46,10 +46,17 @@ swift파일을 생성하고, 사용할 내부 클래스 및 메서드를 구현�
 아카이브를 성공하면 `** ARCHIVE SUCCEEDED **` 메세지를 출력한다.  
 
 이 때, command line tool의 경로를 잘 못 잡아 아래 에러가 발생할 수 있다.
-
-에러가 발생한다면 간단히 해결할 수 있으니 확인할 것.
+ 
+에러가 발생한다면 간단히 해결할 수 있으니 확인할 것. 
 [xcode-select: error: tool 'xcodebuild' requires Xcode](https://github.com/isGeekCode/TIL/blob/main/About-Error/xcodeError_xcodeBuild.md)
 
+
+<br><br>
+
+## 사용할 환경에 맞는 Archive를 생성한다. 
+만약 MacOS에서도 사용한다면 MacOS Archive도 생성해야하는 것이다.  
+
+<br>
 
 ### iOS Archive 생성
 
@@ -80,6 +87,24 @@ xcodebuild archive\
 <br><br>
 
 ### XCFramework 생성하기
+
+위에서 만들어준 archive 파일들을 하나의 번들로 묶어준다. 
+
+위에서 생성한 xcarchive파일들의 경로를 잡아주고 묶는 과정이다.  
+
+```
+xcodebuild -create-xcframework
+    -framework <xcarchive 파일 경로1/내부의 프레임워크 scheme1> 
+    -framework <xcarchive 파일 경로2/내부의 프레임워크 scheme2> 
+    -output <XCFramework 파일을 저장할 경로>
+```
+
+<br><br>
+
+참고하자.  
+나는 2개의 xcarchive만 묶을 예정이다.  
+
+
 ```
 xcrun xcodebuild -create-xcframework \
 -framework './build/TestFrameworkA.framework-iphoneos.xcarchive/Products/Library/Frameworks/TestFrameworkA.framework' \
@@ -122,9 +147,11 @@ xcrun xcodebuild -create-xcframework \
 
 framework폴더를 따로 생성해서 명시해주자.  
 
+<br><br>
+
 복사할 때, Copy items if needed를 체크해야하는 데,  
 
-직접 테스트해보니 복사를 하는데 
+직접 테스트를 하다가 발견한 Xcode오류가 있다.   
 
 Copy items if needed 여부를 항상 보여주지 않고 참조타입으로 추가가 되는 상황이 발생했다.   
 
@@ -132,6 +159,9 @@ Copy items if needed 여부를 항상 보여주지 않고 참조타입으로 추
 - Finder로 프로젝트 폴더에 먼저 xcframework파일을 복제해 넣는다.
 - 이미 내 프로젝트 폴더에 있는 파일을 Xcode내에 드래그한다. (이러면 인식한다.)
 - 여기서 Copy items if needed를 체크하든 안하든 동일한 결과가 발생한다. (이미 내 폴더에 있는 걸 추가했기 때문)
+
+
+<br><br>
 
 카피가 완료되면 아래 그림과 같이 보여진다.  
 
