@@ -8,17 +8,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_405 TILs and counting..._
+_406 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
-- [UITableView - 동적 셀 높이](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_05_AutomaticDimension.md) - Fri Feb 16 10:52:18 2024 +0900
+- [Xcode Error - xcode-select: error: tool 'xcodebuild' requires Xcode](About-Error/xcodeError_xcodeBuild.md) - Mon Feb 19 16:44:33 2024 +0900
 - [UITableView - 셀 선택, 삭제 및 상호작용](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_04_select_UI.md) - Fri Feb 16 10:52:18 2024 +0900
+- [UITableView - 동적 셀 높이](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_05_AutomaticDimension.md) - Fri Feb 16 10:52:18 2024 +0900
 - [UIKit - UIStoryboard](iOS-Framework-UIKit/About_UIKIt_010_UIStoryboard.md) - Thu Feb 15 16:44:32 2024 +0900
 - [UITableView - Section 구현하기](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_03_Section.md) - Thu Feb 15 16:19:19 2024 +0900
-- [UITableView - 기본 UITableView 생성](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_01_basic.md) - Thu Feb 15 15:43:37 2024 +0900
 
 ### Categories
 
@@ -101,6 +101,7 @@ _405 TILs and counting..._
 - [Xcode Error - iPhone is busy: Making Apple Watch ready for development](About-Error/xcodeError_makingAppleWatch.md)
 - [Xcode Error - maximumViewportInset cannot be larger than frame](About-Error/xcodeError_viewResizing.md)
 - [Xcode Error - warning: libobjc.A.dylib is being read from process memory...](About-Error/xcodeError_warningLibObjc.md)
+- [Xcode Error - xcode-select: error: tool 'xcodebuild' requires Xcode](About-Error/xcodeError_xcodeBuild.md)
 - [Flutter Error - Entrypoint doesn't contain...](About-Error/zFlutterError_EntryPoint.md)
 
 ### [About-IT](#about-it)
