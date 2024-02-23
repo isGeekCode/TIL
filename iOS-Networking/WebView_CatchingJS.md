@@ -67,6 +67,10 @@ extension MainViewController: WKScriptMessageHandler {
         }
     }
 }
+
+// window.webkit.messageHandlers.JavaScriptName.postMessage({url: 'https://www.naver.com'})
+// 여러개일 경우
+// window.webkit.messageHandlers.JavaScriptName.postMessage({url: 'https://www.naver.com', topShow: true, postData: ' '})
 ```
 
 <br><br>
@@ -125,6 +129,23 @@ class LeakAvoider: NSObject, WKScriptMessageHandler {
         self.delegate?.userContentController(userContentController, didReceive: message)
     }
 }
+
+// 세팅 예시
+let config = WKWebViewConfiguration.init()
+let contentController = WKUserContentController()
+
+contentController.add(LeakAvoider(delegate: self), name: JavaInterFace.JavaScriptA)
+contentController.add(LeakAvoider(delegate: self), name: JavaInterFace.JavaScriptB)
+
+contentController.addUserScript(.overlapStatus)
+config.userContentController = contentController
+
+// 그외 각종세팅
+config.allowsInlineMediaPlayback = true
+config.ignoresViewportScaleLimits = true
+config.processPool = WKProcessPool.shared
+
+mainWebView = WKWebView(frame: .zero, configurate: config)
 
 
 // Objective - C 에서 사용하려면 아래처럼 @objc를 넣어주어야한다. 
