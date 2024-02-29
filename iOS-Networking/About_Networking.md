@@ -50,6 +50,7 @@
   - 링크 : 네트워크 → MAC 주소 추가 (하드웨어 주소)
 
 
+<br>
 
 
 
@@ -106,6 +107,9 @@ Content-Type: application/x-www-form-urlencoded
                             // 공백라인
 name=sam&age=30            // 메세지 본문
 ```
+
+<br>
+
 
 ### HTTP 응답 메세지
 - 시작라인 : HTTP버전 + 상태코드 + 상태코드에 대한 문구
