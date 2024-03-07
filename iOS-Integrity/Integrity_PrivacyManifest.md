@@ -1,4 +1,4 @@
-# Integrity_PrivacyInfo.xcprivacy 만들기
+# Integrity_PrivacyInfo.xcprivacy 만들기(작성중)
 - 관련 링크
     - [(23.12.7) Apple News and Updates - App Store 앱 제출을 위한 개인정보 보호 관련 업데이트](https://developer.apple.com/kr/news/?id=r1henawx)
     - [(24.2.29) Apple News and Updates - App Store 앱 제출을 위한 개인정보 보호 관련 업데이트](https://developer.apple.com/kr/news/?id=3d8a9yyh)
