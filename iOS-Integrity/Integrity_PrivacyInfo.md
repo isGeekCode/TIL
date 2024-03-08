@@ -24,7 +24,7 @@
 
 이 글에서  서드파티 SDK는 앱에 탁월한 기능을 제공하지만 개발자 / 사용자도 모르는 사이에 사용자 개인 정보 보안을 취약하게 만든다고 한다. 
 
-말하는 `Third-party SDK privacy manifest and signatures` 가 뭘까?
+여기서 말하는 `Third-party SDK privacy manifest and signatures` 가 뭘까?
 
 <br><br>
 
