@@ -34,9 +34,6 @@
 
 [WWDC2023 : Get started with privacy manifests](https://developer.apple.com/videos/play/wwdc2023/10060/)라는 영상에서 이제 프로젝트 파일 내에 PrivacyInfo.xcprivacy라는 파일이 생겼다는 걸 알 수 있다.  
 
-<br><br>
-
-그리고 하단의 나머지 글들과 WWDC20 영상을 살펴보면서 이 파일이 어떤 구조인지 알 수 있게 된다.  
 일단 이 PrivacyInfo 파일은 마치 Info.plist와 같은 Dictionary 구조의 소스코드를 Property List로 볼 수 있도록 만든 파일이다.  
 그래서 그냥 보면 Info.plist 파일처럼 보인다.  그리고 이미지도 살작 다르게 생겼다.  
 
@@ -44,15 +41,21 @@
 
 다만 Info.plist와 다른 점은 PrivacyInfo 내부에 정의된 값은 앱 내부에 정의 되어있는 Privacy 정보들을 모두 정의해서 어떤 용도로 사용하고 있는 지를 나타낸다.  
 
-<img width="500" alt="스크린샷 2024-03-07 오후 3 36 27" src="https://github.com/isGeekCode/TIL/assets/76529148/d1ba4282-708a-4fda-bcb5-8f0355fb8bb8">
+<br><br>
 
 new file을 통해 PrivacyInfo.xcprivacy 파일을 최초 생성하게 되면 아래와 같이 생성된다.  
 위치는 어디에 둬도 상관없다. 나중에 Archiving 후, Appstore Connect로 Upload를 할때, 인증하는 과정에서 PrivacyInfo.xcprivacy파일을 모두 스캔해서 리포트를 작성하기 때문이다.  
 
+<img width="500" alt="스크린샷 2024-03-07 오후 3 36 27" src="https://github.com/isGeekCode/TIL/assets/76529148/d1ba4282-708a-4fda-bcb5-8f0355fb8bb8">
+
+<br><br>
+아래는 생성한 파일이다. 
+
 <img width="800" alt="스크린샷 2024-03-07 오후 3 37 12" src="https://github.com/isGeekCode/TIL/assets/76529148/eaa65333-445c-4280-852d-c62a054f3aaf">
 
+<br><br>
 
-그럼 이 파일의 구성요소를 살펴보자.  
+그럼 이 파일의 App Privacy Configuration Dictionary에 들어갈 Key값을 살펴보자.  
 
 <br><br>
 
@@ -60,9 +63,9 @@ new file을 통해 PrivacyInfo.xcprivacy 파일을 최초 생성하게 되면 �
 - NSPrivacyTrackingDomains
 - NSPrivacyCollectedDataTypes
 - NSPrivacyAccessedAPITypes
-
-
-이 네가지는 PrivacyInfo.xcprivacy 파일의 주요 키값을 의미하는 Value다 
+  
+<br>
+이 네가지는 PrivacyInfo.xcprivacy 파일의 주요 키값을 의미하는 Value다.   
 PrivacyInfo파일을 Property List로 보게 되면 아래와 같이 표시된다.  
 
 - Privacy Tracking Enabled
@@ -70,7 +73,7 @@ PrivacyInfo파일을 Property List로 보게 되면 아래와 같이 표시된�
 - PrivacyCollectedDataTypes
 - PrivacyAccessedAPITypes
 
-
+<br>
 기본 최상위 구조인 App Privacy Configuration은 Dictionary타입이다. 
 
 여기서 + 버튼을 누르면 아래 그림처럼 추가할 수가 있게 된다.  
@@ -79,6 +82,9 @@ PrivacyInfo파일을 Property List로 보게 되면 아래와 같이 표시된�
 
 <br><br>
 
+그럼 이 키값들을 하나씩 살펴보자.  
+
+<br><br>
 
 ## Privacy Tracking Enabled
 - [ Apple AppStore - 사용자 개인정보 보호 및 데이터 사용](https://developer.apple.com/app-store/user-privacy-and-data-use/)
@@ -96,6 +102,7 @@ PrivacyInfo파일을 Property List로 보게 되면 아래와 같이 표시된�
 
 앱 또는 타사 SDK가 추적에 참여하는 인터넷 도메인을 나열한 배열이다.  
 
+<br>
 사용자가 ATT 프레임워크를 통해 추적권한을 부여하지 않은 경우에는 이러한 도메인으로의 네트워크 요청이 실패한다.  
 
 -> 이는 [WWDC2023 Get started with privacy manifests : 앱 추적 투명성](https://developer.apple.com/videos/play/wwdc2023/10060)
@@ -103,9 +110,12 @@ PrivacyInfo파일을 Property List로 보게 되면 아래와 같이 표시된�
 
 <img width="500" alt="스크린샷 2024-03-05 오후 1 26 16" src="https://github.com/isGeekCode/TIL/assets/76529148/c01b7309-4026-4c32-9c1c-48dc62769348">
 
+<br>
 iOS17자체에서는 아무리 도메인에서 추적을 한다고 해도 사용자가 추적권한 얼럿에서 허용하지 않았다면,  OS단에서 추적을 끊는다는 것이다.  
 
 그러니 추적권한을 허용하면 추적에 참여할 인터넷 도메인을 기입하면 된다.  
+
+<br><br>
 
 
 <img width="500" alt="스크린샷 2024-03-08 오전 8 36 27" src="https://github.com/isGeekCode/TIL/assets/76529148/92fe623e-a028-4b00-baa3-b0a38f4ff96f">
@@ -116,7 +126,7 @@ iOS17자체에서는 아무리 도메인에서 추적을 한다고 해도 사용
 ## Privacy Nutrition Label Types
 
 앱 또는 타사 SDK가 수집하는 데이터의 유형을 설명하는 Dictionary를 담은 배열이다.  
-
+<br>
 Privacy Nutrition Label Types에 들어갈 각각의 배열 안에는 데이터의 유형을 하나씩 어떤 용도로 사용하는지 정의한 내용이 담겨있다. 
 
 - Collected Data Types
@@ -160,11 +170,12 @@ Privacy Nutrition Label Types에 들어갈 각각의 배열 안에는 데이터�
 
 <img width="624" alt="스크린샷 2024-03-08 오전 9 01 38" src="https://github.com/isGeekCode/TIL/assets/76529148/97028fdc-00a8-4754-8f79-17e8838ac95c">
 
-- [Apple App Store의 앱 개인정보 보호 세부정보](https://developer.apple.com/app-store/app-privacy-details/)
+<br><br>
 
-그림에서 나오는 것 처럼 미리 등록 된 문구가 있다.  이 값들에 대한 설명은 
-위 글에서 Data use 챕터에 정의되어있다.  
+그림에서 나오는 것 처럼 미리 문구가 정의되어있다.  
+이 값들에 대한 설명은 [Apple App Store의 앱 개인정보 보호 세부정보](https://developer.apple.com/app-store/app-privacy-details/)글의 `Data use` 챕터에 정의되어있다.  
 
+<br>
 - Third-party advertising : 제3자의 광고 
 - Developer’s advertising or marketing : 개발자의 광고 또는 마케팅
 - Analytics : 앱 분석
@@ -181,8 +192,11 @@ Privacy Nutrition Label Types에 들어갈 각각의 배열 안에는 데이터�
 - [Apple Support: 타사 SDK 요구 사항 변경 예정](https://developer.apple.com/kr/support/third-party-SDK-requirements)
 
 이 앱에서 사용하고 있는 API들의 사용이유를 정의한 배열이다.  
+
+<br>
 이 배열안에는 Dictionary타입으로 SDK를 포함하여 앱내에서 사용하고 있는 API를 정의하고 사용용도를 포함하고 있다.  
-여기서 말하는 API란 우리가 일반적으로 정보를 GET / POST 형태로 하는 네트워크 요청을 말하는 것이 아니라 Apple에서 제공한 UserDefault 같은 API를 말한다.  
+
+> 여기서 말하는 API란 우리가 일반적으로 정보를 `GET / POST` 형태로 하는 네트워크 요청을 말하는 것이 아니라 Apple에서 제공한 UserDefault 같은 API를 말한다.  
 
 - Privacy Accessed API Type : 앱내에서 사용하고 있는 API 타입
 - Privacy Accessed API Reasons : 앱내에서 사용하고 있는 API 사용 목적
@@ -190,7 +204,11 @@ Privacy Nutrition Label Types에 들어갈 각각의 배열 안에는 데이터�
 <br><br>
 
 ### Privacy Accessed API Type
-참고링크 [Apple Article : Describing use of required reason API](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api) 라는 글을 살펴보면 각 카테고리 별 API들에 해당하는 Privacy Accessed API Type 의 Value를 알 수 있다.  
+[Apple Article : Describing use of required reason API](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api) 라는 글을 살펴보면 각 카테고리 별 API들에 해당하는 Privacy Accessed API Type 의 Value를 알 수 있다.  
+
+<br>
+
+각 카테고리는 아래와 같다.  
 
 - File timestamp APIs 
 - System boot time APIs
@@ -199,6 +217,7 @@ Privacy Nutrition Label Types에 들어갈 각각의 배열 안에는 데이터�
 - User defaults APIs
 
 <br><br>
+
 
 <img width="800" alt="스크린샷 2024-03-08 오전 9 26 13" src="https://github.com/isGeekCode/TIL/assets/76529148/1e2bb4cf-88e8-4ee6-a34e-53dd69202a1c">
 
@@ -268,6 +287,21 @@ Apple에서는 앱을 만드는 개발자는 앱 내에서 어떤 정보를 수�
 다행히도 Kingfisher 7.10.0 , Alamofire 5.9.0 , Snapkit 5.7.0 , 네비버로그인 4.2.0 , Lottie 4.4.1  이 SDK 들은 현재 24.3.8 일자로 모두 추가가 되었다.  
 
 gifu나 Kingfisher는 둘다 gif를 보여주고 캐싱처리가 가능한 SDK인데 한쪽만 관련업데이트가 있다면, 교체해주거나 앱개발자가 직접 앱 내 PrivacyInfo에 서드파티가 사용한다는것을 명시해줘야한다.  
+<br>
+협조적으로 SDK내 PrivacyInfo 파일을 추가해주는 곳이 있는 반면,  
+잘 못 업데이트한 경우도 있다.  
+<br>
+네이버로그인같은 경우, 발빠르게 업데이트 했지만, 키값을 잘못 사용하여 배포했기에 아래 언급할 Privacy Report단계에서 에러를 리턴했다.  
+현재에는 네이버로그인도 바로 다음 버전 업데이트로 정상 동작하고 있다.  
+
+<br>
+
+[구글 애널리틱스](https://support.google.com/analytics/answer/10285841?hl=ko) 처럼 `데이터 공개 요건`을 언급하며 어떤 것들을 다루는지 문서만 만드는 경우도 있다.  
+현재에는 구글에서도 SDK내 업데이트까지 완료하였다.   
+
+<br>
+만약 이렇게 어떤 것들을 다루는지 문서만 업로드하거나,  아무것도 언급이 없다면
+앱 개발자가 스스로.. 리젝을 당해가며 PrivacyInfo파일을 수정해나가면서 실험하는 일이 생기지 않을까 싶다.  
 
 
 <br><br>
@@ -277,19 +311,23 @@ gifu나 Kingfisher는 둘다 gif를 보여주고 캐싱처리가 가능한 SDK�
 
 <img width="800" alt="스크린샷 2024-03-08 오전 10 16 07" src="https://github.com/isGeekCode/TIL/assets/76529148/69899311-30a5-401b-8836-6681683044a3">
 
-<br>
+<br><br>
 
 앱을 아카이빙하고 Organizer 에서 해당 타겟 - Generate Privacy Report  단계로 클릭을 하면 아래와 같은 pdf가 생성된다.  
 
 <img width="800" alt="스크린샷 2024-03-08 오전 10 16 07" src="https://github.com/isGeekCode/TIL/assets/76529148/5e2fe482-c0ec-4277-843c-b68e86fd4a56">
 
-<br>
+<br><br>
 
 Apple에서는 여러 해 동안 Privacy Nutrition Label, 데이터 유형, 용도를 정의해 왔기 때문에 기술적으로 전혀 새로운 내용은 아니다.  
 
 그렇기 때문에 최근 게시한 [(24.2.29) Apple News and Updates - App Store 앱 제출을 위한 개인정보 보호 관련 업데이트](https://developer.apple.com/kr/news/?id=3d8a9yyh) 글에서는 
+이번에도 유예 기간을 의미하는 것만 같은 뉘앙스를 풍기고 있다.  
 
-마치 예전 2022년에 회원가입이 있는경우 탈퇴 버튼을 추가하지 않으면 리젝사유가 된다는 유예기간을 주었던 것처럼,  
+마치 예전 2022년에 회원가입이 있는경우 탈퇴 버튼을 추가하지 않으면 리젝사유가 된다는 유예기간을 주었던 것처럼 말이다.  
+> 하지만 유예기간이 점점 연장되긴 했지
+
+<br><br>
 
 2024년 3월 13일 부터는 사유가 필요한 API를 사용하는 신규 / 업데이트 앱을 업로드할 때, 개인정보 보호 매니페스트(PrivacyInfo.xcprivacy)파일이 누락되면 이메일을 보내준다고 한다. 
 
