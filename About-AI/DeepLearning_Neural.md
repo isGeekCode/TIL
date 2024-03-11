@@ -1,6 +1,6 @@
 # 딥러닝 - 신경망으로 숫자에서 패턴찾기
 
-- 지난 글 : [TIL : DeepLearning - 살펴보기](https://github.com/isGeekCode/TIL/blob/main/AboutAI/DeepLearning.md)  
+- 지난 글 : [TIL : DeepLearning - 살펴보기](https://github.com/isGeekCode/TIL/blob/main/About-AI/DeepLearning.md)  
 
 지난 글에서 딥러닝이 어떤 분야에 영향을 줬고, 간단하게 딥러닝의 개요에 대해 설명했다.
 

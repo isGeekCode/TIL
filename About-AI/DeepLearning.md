@@ -92,7 +92,7 @@
   그렇다면 딥러닝은 어떤 다른 방법이기에 가능할까??
   아래 링크에서 이어서 설명.
   
-  링크 : [TIL: 딥러닝 - 신경망으로 숫자에서 패턴찾기](https://github.com/isGeekCode/TIL/blob/main/AboutAI/DeepLearning_Neural.md)  
+  링크 : [TIL: 딥러닝 - 신경망으로 숫자에서 패턴찾기](https://github.com/isGeekCode/TIL/blob/main/About-AI/DeepLearning_Neural.md)  
 
 
   
