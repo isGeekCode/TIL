@@ -6,6 +6,7 @@ Serialize / Deserialize
 
 Codable은 Serialize / Deserialize 과 대응하는 Encodable / Decodable을 가지고 있는 프로토콜이다.
 
+<br><br>
 
 # 모델링
 
@@ -17,6 +18,8 @@ Codable은 Serialize / Deserialize 과 대응하는 Encodable / Decodable을 가
 {   "name" : "Park",   "age" : "100"}
 ```
 
+<br>
+
 ### Struct일 경우
 
 ```swift
@@ -26,6 +29,8 @@ struct Person : Codable {
 }
 
 ```
+
+<br>
 
 ### Class일 경우
 
@@ -50,6 +55,8 @@ struct Person : Codable {
 
 그리고 이 모델들을 이용해 JSON으로 Serialize를 할수있다.
 
+<br><br>
+
 ## 상위계층
 
 만약 여러개의 모델을 한꺼번에 사용한다면 상위계층이 만들어야 할때가 있다. 각각 Person객체가 들어간 구조를 추가한다면 아래와 같다.
@@ -67,6 +74,8 @@ struct Person : Codable {
     var name, age : String
 }
 ```
+
+<br>
 
 ### class일경우
 
@@ -92,6 +101,8 @@ struct Person : Codable {
  }
 ```
 
+<br><br>
+
 # Encodable (Serialize)
 
 ### 1. JSONEncoder 이니셜
@@ -100,11 +111,15 @@ struct Person : Codable {
 let encoder = JSONEncoder()
 ```
 
+<br>
+
 ### 2. JSON으로 만들 객체 생성
 
 ```swift
 let park = Person(name: "Park", age: "100")
 ```
+
+<br>
 
 ### 3. (선택) outputFormatting설정
 
@@ -117,11 +132,15 @@ let park = Person(name: "Park", age: "100")
    encoder.outputFormatting = [.sortedKeys, .prettyPrinted]
 ```
 
+<br>
+
 ### 4. JSON Data로 인코딩
 
 ```swift
 let jsonData = try? encoder.encode(personModel)
 ```
+
+<br>
 
 ### 5. 생성된 JSONData와 그 Data를 읽을 수 있도록 String으로 변환하고 옵셔널 캐스팅을 해준다.
 
@@ -143,6 +162,8 @@ if let jsonData = jsonData, let jsonString = String(data: jsonData, encoding: .u
 */
 
 ```
+
+<br>
 
 ### 상위계층을 사용하는 경우
 
@@ -194,6 +215,8 @@ if let jsonData = jsonData, let jsonString = String(data: jsonData, encoding: .u
 
 ```
 
+<br><br>
+
 # Decodable (Deserialize)
 
 - decode는 encode과정과 동일하다. 오히려 더 단순할 수 있다.
@@ -210,6 +233,8 @@ let decoder = JSONDecoder()
 
 ```
 
+<br>
+
 ### 2. (선택) String을 Data로 변환
 
 API로 받는 경우, 이 과정은 생략한다.
@@ -218,6 +243,8 @@ API로 받는 경우, 이 과정은 생략한다.
 var data = exampleJSON.data(using: .utf8)
 
 ```
+
+<br>
 
 ### 4. data를 decode처리
 
@@ -242,6 +269,8 @@ myPerson.person:
 }
 ```
 
+<br><br>
+
 ### 4.2 단일계층을 가져오는 경우
 
 ```swift
@@ -256,6 +285,8 @@ if let data = data, let myPerson = try? decoder.decode(Person.self, from: data) 
 // myPerson.name: Kim
 }
 ```
+
+<br><br>
 
 # 통신사용
 

@@ -135,6 +135,21 @@ task.resume()
 
 ```
 
+<br><br>
+
+### 서버가 개발이 안된 경우
+
+이럴 때에는 앱 입장에선 약속된 더미데이터를 만들어서 사용할 수 밖에 없다.  
+
+- String형태로 먼저 더미데이터를 생성
+- 더미데이터를 JSONEncoding 하여 사용
+
+해당 내용은 아래 글을 참고하자.  
+- [TIL : iOS에서 JSON다루기(1): Encode JSONData](https://github.com/isGeekCode/TIL/blob/main/iOS-Development/iOS_JSONSerialization_Encode.md)
+
+이제 여기서 들어오는 Response에 대한 처리를 위해서는 아래 글을 참고하자. 
+- [TIL : Swift - Codable 다루기](https://github.com/isGeekCode/TIL/blob/main/iOS-Lang-Swift/Codable.md)  
+
 
 <br><br>
 
