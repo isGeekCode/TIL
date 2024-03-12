@@ -2,8 +2,6 @@
 
 - [Apple Document : Managing your app’s life cycle](https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle)
 
-<br><br>
-
 ## Overview
 
 앱의 현재 상태는 `언제든 수행할 수 있는 작업`과 `수행할 수 없는 작업`을 결정한다.  

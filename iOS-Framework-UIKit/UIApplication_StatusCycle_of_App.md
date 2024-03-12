@@ -1,7 +1,31 @@
 # UIApplication_AppDelegate - UIApplicationDelegate : 앱의 상태 / 생명주기(Life-Cycle)
+
+- [WWDC19: Architecting Your App for Multiple Windows 앱 / 씬의 생명주기](https://developer.apple.com/videos/play/wwdc2019/258/)
+- [코더스하이: 앱의 생명주기](https://www.youtube.com/watch?v=7GlwS2lOKbE)
 - UIApplication: 애플리케이션의 라이프 사이클을 관리하는 싱글톤 클래스
 
-화면을 터치하여 앱을 실행시키면 UIApplication이git라는 클래스에  오프젝트 하나가 생긴다.
+
+<br><br>
+
+앱의 생명주기라는 개념은 왜 필요할까? 
+
+아래 동작을 상상해보자.  
+
+- 아이폰 앱 게임 중
+- 전화 수신
+- 앱에선 자동으로 통화화면으로 전환
+- 실행중이던 앱은 잠시 비활성화 상태로 전환
+
+단순한 동작이지만, 이 외에도 다양한 주기가 존재한다.  
+Apple에서는 이 주기에 실행되는 메서드로 만들어 호출한다. 
+
+이제 개발자는 특정 상황에 어떤 메서드가 호출되는지를 이해하고,   
+그에 맞게 구현하기만 하면된다.  
+
+
+
+
+화면을 터치하여 앱을 실행시키면 UIApplication이라는 클래스에 오프젝트 하나가 생긴다.
 자신의 이벤트를 대행해줄  AppDelegate라는 오브젝트를 만든다.
 
 AppDelegate라는 Object는 개발자가 직접 만들어가는 클래스이다. 
@@ -23,6 +47,13 @@ App에서 사용하는 여러 data들은 AppDelegate가 관리한다. 이는 App
 
 
 ## 앱의 상태(Life-Cycle)
+
+- Not-Running(Terminated)
+- InActive(Foregound)
+- Active(Foregound)
+- Running(Background)
+- Suspend(Background)
+
 
 ### Not-Running(Terminated)
 앱이 시작되지않은상태
@@ -77,4 +108,47 @@ Active상태로 들어오거나 나갈때 잠시 거치는 상태이다. 앱을 
 - 이곳에서 공유 리소스를 해제, 타이머 무효화 등의 작업을 수행한다. 앱 상태 정보(app state information)를 저장하여 나중에 앱이 종료(terminated) 되는 경우 앱을 현재 상태로 복원(restore)할 수 있다.
 - 백그라운드로 전환 시 적합한 작업 내용은 이곳의 Release Resources upon Entering the Background을 참고.
 - 앱이 백그라운드로 들어가고 delegate method가 return되면 UIKit은 앱의 현재 사용자 인터페이스의 스냅샷을 만든다. 시스템은 app switcher 에서 해당 이미지를 표시하고, 앱을 다시 Foreground로 가져올 때도 일시적으로 표시한다. 이때 비밀번호나 신용카드 번호와 같은 민감한 사용자 정보가 포함되어서는 안되므로 인터페이스에 이러한 정보가 포함되어 있으면 Background에 들어갈 때 view에서 제거해야 한다.
+
+
+## SceneDelegate
+
+iOS13이후, Scene이라는 개념이 추가되면서 SceneDelegate가 생겼다.  
+
+기존에는 한번에 한가지의 앱만 실행할 수 있었으나,  
+Scene이라는게 생겨나면서 ipad에 여러개의 앱을 동시에 동작시키는게 가능해졌다.  
+여러개의 Scnee(창)을 띄우고 있어도 결국에는 유저가 실제로 동작시키고 있는 것은 하나의 Scene이다. 
+
+### SceneDelegate 의 역할
+- 다른 Scene으로 넘어가거나, 그런 시점들을 파악하기 위한 대리자 역할이다.  
+- Scene(멀티태스킹의 창)의 개념이 도입되면서 AppDelegate의 역할에서 몇가지를 SceneDelegate로 보내게 된다.  
+
+
+기존 AppDelegate에서 전부 관리하던 앱의 생명주기에서 
+앱의 생명주기 + Scene의 생명주기 로 나뉘어지게 된다.  
+
+### AppDelegate에서 관리하는 메서드
+- Not running -> Active : didFinishLaunchingWithOptions
+- Suspended -> Not running : didDiscardSceneSessions
+
+
+### SceneDelegate에서 관리하는 메서드
+- Inactive -> Active : sceneDidBecomeActive
+- Active -> Inactive : sceneWillResignActive
+- Forground -> Background :
+    - sceneWillEnterForeground
+    - sceneDidEnterBackground
+- Background -> Suspended : sceneDidDisconnect
+
+
+### 기존 AppDelegate
+
+- Not running -> Active : didFinishLaunchingWithOptions
+- Suspended -> Not running : willTerminate
+
+- Inactive -> Active : didBecomeActive
+- Active -> Inactive : willResignActive
+- Forground -> Background :
+    - willEnterForeground
+    - didEnterBackground
+- Background -> Suspended : sceneDidDisconnect
 
