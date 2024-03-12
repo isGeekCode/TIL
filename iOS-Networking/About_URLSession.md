@@ -145,7 +145,7 @@ task.resume()
 - 더미데이터를 JSONEncoding 하여 사용
 
 해당 내용은 아래 글을 참고하자.  
-- [TIL : iOS에서 JSON다루기(1): Encode JSONData](https://github.com/isGeekCode/TIL/blob/main/iOS-Development/iOS_JSONSerialization_Encode.md)
+- [TIL : iOS에서 JSON다루기(1): Encode JSONData](https://github.com/isGeekCode/TIL/blob/main/iOS-Foundation/Foundation_JSONSerialization_Encode.md)
 
 이제 여기서 들어오는 Response에 대한 처리를 위해서는 아래 글을 참고하자. 
 - [TIL : Swift - Codable 다루기](https://github.com/isGeekCode/TIL/blob/main/iOS-Lang-Swift/Codable.md)  

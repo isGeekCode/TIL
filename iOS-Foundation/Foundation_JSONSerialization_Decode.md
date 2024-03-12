@@ -3,7 +3,7 @@
 - 참고링크
     - [TIL: 직렬화(Serialization)란](https://github.com/isGeekCode/TIL/blob/main/ComputerScience/Serialization.md)
     - [TIL: JSONSerialization으로  직렬화하기](https://github.com/isGeekCode/TIL/blob/main/iOS-Foundation/Foundation_JSONSerialization.md)
-    - [TIL: Swift - Codable 다루기](https://github.com/isGeekCode/TIL/blob/main/iOS-Swift/Codable.md)
+    - [TIL: Swift - Codable 다루기](https://github.com/isGeekCode/TIL/blob/main/iOS-Lang-Swift/Codable.md)
 
 ## 순서
 iOS에서 역직렬화를 하는 방법은 아래 세가지가 있다.
