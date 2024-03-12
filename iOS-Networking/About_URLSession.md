@@ -15,7 +15,7 @@ Swift에서 데이터 통신을 하는 가장 기본적인 방법은 URL Session
 - URLSession: URLSession은 웹 서버에 데이터를 전송하거나 데이터를 수신하는 네트워크 통신을 처리하는 객체.
 - URLRequest: URLRequest는 웹 서버에 보낼 요청의 정보를 제공하는 객체.
 
-<br>
+<br><br>
 
 ## 1. URL 구조체 생성
 기본적으로 문자열로 이루어진 경로를 담은 변수는 말그대로 문자열일 뿐이다.  
@@ -27,6 +27,8 @@ URL을 생성할 때, 옵셔널 타입으로 리턴하는데
 let urlString = "https://www.naver.com"
 guard let requestURL = URL(string: urlString) else { return }
 ```
+
+<br>
 
 ## 2. URLSession 생성
 
@@ -40,6 +42,34 @@ URLSession은 애플에서 미리 만들어둔 Foundation 프레임워크에 있
 
 HTTP 요청을 사용하여 RESTful API를 호출하는 것이 가장 기본적인 방법이다.
 
+<br><br>
+
+## 3. dataTask 
+dataTask는 URLSession이 갖고 있는 메서드다.  
+이 메서드를 찾아보면 파라미터로 URL을 받는게 있고 URLRequest를 받는 메서드가 있다.  
+
+<br>
+
+```swift
+
+extension URLSession {
+    open func dataTask(with request: URLRequest, completionHandler: @escaping @Sendable (Data?, URLResponse?, (any Error)?) -> Void) -> URLSessionDataTask
+
+    open func dataTask(with url: URL, completionHandler: @escaping @Sendable (Data?, URLResponse?, (any Error)?) -> Void) -> URLSessionDataTask
+}
+```
+
+<br>
+
+만약 GET메서드로  단순히 URL만 가지고 조회를 요청할 거라면   
+
+1. URL만 넣어서 사용하거나,  
+2. URL을 담은 URLRequest를 만들어서 사용가능하다.  
+
+POST메서드의 경우 반드시 URLRequest를 생성해서 사용해야한다.  
+
+  
+
 
 ### GET 요청으로 웹 API에 접근하는 예제.
 
@@ -52,16 +82,33 @@ let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
     }
 }
 task.resume()
-```
 
-이 외에도 Alamofire, Moya 등의 라이브러리를 사용할 수도 있다. 이들 라이브러리는 더 편리하고 강력한 HTTP 통신 기능을 제공한다.
+
+// 혹은 request를 만드는 경우
+
+let url = URL(string: "https://api.example.com/data")!
+
+var request = URLRequest(url: url)
+
+// HTTP 메서드 설정
+request.httpMethod = "GET"
+
+let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+    if let data = data {
+        let result = String(data: data, encoding: .utf8)
+        print(result)
+    }
+}
+task.resume()
+
+```
 
 
 <br><br>
 
 ### POST 사용하기
 POST 메서드를 사용하기 위해서는 
-URLRequest를 만들어야한다.  물론 GET메서드 일때도 URLRequest를 생성해서 사용해도된다.  
+URLRequest를 만들어야만 한다. 
 
 ```swift
 guard let url = URL(string: "https://www.example.com/post") else { return }
@@ -88,6 +135,8 @@ task.resume()
 
 ```
 
+
+<br><br>
 
 # Alamofire
 
