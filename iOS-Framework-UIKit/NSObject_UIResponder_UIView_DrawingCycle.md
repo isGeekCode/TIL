@@ -78,9 +78,9 @@ UI를 담당하는 Main Thread가 1초에 60번 다시 그려야하는 역할을
 <br><br>
 
 실제 런루프로 뷰를 다시 그리는 것과 연관된 부분은  
-viewWillAppear (화면에 뷰가 표시될 예정) 이후인  
-🟥 updateConstraints 부터 
-viewDidAppear (화면에 뷰가 표시됨) 이전인  
+🟩 viewWillAppear (화면에 뷰가 표시될 예정) 이후인  
+🟥 updateConstraints 부터  
+🟩 viewDidAppear (화면에 뷰가 표시됨) 이전인  
 🟥 drawRect 까지이다.  
 
 
