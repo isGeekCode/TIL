@@ -1,8 +1,8 @@
-# iOS에서 JSON다루기(2): Decode JSONData
+# Foundation - JSONSerialization(3):  Decode JSONData
 
 - 참고링크
     - [TIL: 직렬화(Serialization)](https://github.com/isGeekCode/TIL/blob/main/ComputerScience/Serialization.md)
-    - [TIL: Foundation - JSONSerialization 직렬화하기](https://github.com/isGeekCode/TIL/blob/main/iOS-Foundation/Foundation_JSONSerialization.md)
+    - [TIL: Foundation - JSONSerialization(1): 직렬화 Intro](https://github.com/isGeekCode/TIL/blob/main/iOS-Foundation/Foundation_JSONSerialization.md)
     - [TIL: iOS에서 JSON다루기(1): Encode JSONData](https://github.com/isGeekCode/TIL/blob/main/iOS-Foundation/Foundation_JSONSerialization_Encode.md)
     - [TIL: Swift - Codable 다루기](https://github.com/isGeekCode/TIL/blob/main/iOS-Lang-Swift/Codable.md)
 

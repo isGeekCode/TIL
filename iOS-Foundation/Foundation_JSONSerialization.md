@@ -1,4 +1,4 @@
-# Foundation - JSONSerialization 직렬화하기
+# Foundation - JSONSerialization(1): 직렬화 Intro
 
 - 참고링크
     - [TIL: 직렬화(Serialization)](https://github.com/isGeekCode/TIL/blob/main/ComputerScience/Serialization.md)
