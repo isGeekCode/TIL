@@ -1,8 +1,9 @@
 # Foundation - JSONSerialization 직렬화하기
 
 - 참고링크
-    - [TIL: 직렬화(Serialization)란](https://github.com/isGeekCode/TIL/blob/main/ComputerScience/Serialization.md)
-    - [TIL: iOS에서의 직렬화(Serialization하기)](https://github.com/isGeekCode/TIL/blob/main/iOS-Development/iOS_JSONSerializationMethod.md)
+    - [TIL: 직렬화(Serialization)](https://github.com/isGeekCode/TIL/blob/main/ComputerScience/Serialization.md)
+    - [TIL: iOS에서 JSON다루기(1): Encode JSONData](https://github.com/isGeekCode/TIL/blob/main/iOS-Foundation/Foundation_JSONSerialization_Encode.md)
+    - [TIL: iOS에서 JSON다루기(2): Decode JSONData](https://github.com/isGeekCode/TIL/blob/main/iOS-Foundation/Foundation_JSONSerialization_Decode.md)
     - [TIL: Codable로 직렬화하기](https://github.com/isGeekCode/TIL/blob/main/iOS-Swift/Codable.md)
 
 iOS의 Foundation 프레임워크에서 제공하는 클래스다.   
