@@ -8,17 +8,17 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_409 TILs and counting..._
+_410 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [Foundation - JSONSerialization(2): Encode JSONData](iOS-Foundation/Foundation_JSONSerialization_Encode.md) - Tue Mar 12 17:01:51 2024 +0900
+- [UIView의 Drawing Cycle (Layout Cycle)](iOS-Framework-UIKit/NSObject_UIResponder_UIView_DrawingCycle.md) - Tue Mar 12 17:01:51 2024 +0900
+- [Foundation - JSONSerialization(3):  Decode JSONData](iOS-Foundation/Foundation_JSONSerialization_Decode.md) - Tue Mar 12 17:01:51 2024 +0900
 - [Foundation - JSONSerialization(1): 직렬화 Intro](iOS-Foundation/Foundation_JSONSerialization00.md) - Tue Mar 12 13:46:22 2024 +0900
-- [Foundation - JSONSerialization(2): Encode JSONData](iOS-Foundation/Foundation_JSONSerialization01_Encode.md) - Tue Mar 12 13:46:22 2024 +0900
-- [Foundation - JSONSerialization(3):  Decode JSONData](iOS-Foundation/Foundation_JSONSerialization02_Decode.md) - Tue Mar 12 13:46:22 2024 +0900
 - [NSObject - URLSession](iOS-Networking/About_URLSession.md) - Tue Mar 12 11:02:18 2024 +0900
-- [네트워크 통신의 이해](iOS-Networking/About_Networking.md) - Thu Feb 29 14:20:48 2024 +0900
 
 ### Categories
 
@@ -306,8 +306,8 @@ _409 TILs and counting..._
 - [FileManager - 파일 다운로드하기](iOS-Foundation/FileManager_fileDownload.md)
 - [FileManager - 사용하기](iOS-Foundation/FileManager_introduce.md)
 - [Foundation - JSONSerialization(1): 직렬화 Intro](iOS-Foundation/Foundation_JSONSerialization00.md)
-- [Foundation - JSONSerialization(2): Encode JSONData](iOS-Foundation/Foundation_JSONSerialization01_Encode.md)
-- [Foundation - JSONSerialization(3):  Decode JSONData](iOS-Foundation/Foundation_JSONSerialization02_Decode.md)
+- [Foundation - JSONSerialization(3):  Decode JSONData](iOS-Foundation/Foundation_JSONSerialization_Decode.md)
+- [Foundation - JSONSerialization(2): Encode JSONData](iOS-Foundation/Foundation_JSONSerialization_Encode.md)
 - [String Protocol - String to Data](iOS-Foundation/StringProtocol_stringToData.md)
 - [타임스탬프 구현하기](iOS-Foundation/TIL220914_TimeStamp.md)
 - [CMTime](iOS-Foundation/cmtime.md)
@@ -386,8 +386,9 @@ _409 TILs and counting..._
 - [NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기 기능](iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
 - [NSObject_UIResponder_UIViewController : 소개](iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_a_Functions.md)
 - [NSObject_UIResponder_UIViewController : 생성자](iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_a_howToMake.md)
-- [NSObject_UIResponder_UIViewController : UIViewController의 생명주기 (UIVC's Life-cycle)](iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_lifeCycle.md)
+- [NSObject_UIResponder_UIViewController : UIViewController's Life-cycle (뷰컨트롤러의 생명주기)](iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_lifeCycle.md)
 - [NSObject_UIResponder_UIView : UIView 클래스](iOS-Framework-UIKit/NSObject_UIResponder_UIView_.md)
+- [UIView의 Drawing Cycle (Layout Cycle)](iOS-Framework-UIKit/NSObject_UIResponder_UIView_DrawingCycle.md)
 - [NSObject_UIResponder_UIView_UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
 - [NSObject_UIResponder_UIView : UIPickerView](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIPickerView.md)
 - [NSObject_UIResponder_UIView_UIProgressView](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIProgressView.md)
