@@ -62,6 +62,8 @@ export PATH="$PATH:~/Downloads/flutter/bin"
 
 Intel 여부를 꼭 확인해서 다운로드할 것
 [사이트링크](https://developer.android.com/studio)
+[참고링크](https://space-engineers-developer.tistory.com/10)
+
 
 - Flutter를 Install
 - 설치 중간에 Dart 플러그인이 필요하다고한다.
@@ -69,6 +71,9 @@ Intel 여부를 꼭 확인해서 다운로드할 것
 
 - 설치가 완료되면 새로 생긴 Restart IDE 버튼을 눌러 안드로이드 스튜디오 프로그램을 재시작
 - 잘 됐다면 프로젝트 생성에서 플러터 프로젝터로 생성가능해진다.
+
+<br><br>
+
 
 ## 플러터 SDK 설치
 [사이트링크](https://docs.flutter.dev/get-started/install/macos)
@@ -99,6 +104,8 @@ flutter --version
 - flutter doctor 이용해 나머지 설치여부 확인
 어떤것이 설치가 더 필요한지 진단이 나온다. 
 
+<br><br>
+
 ## Issue
 
 ### Android toolchain
@@ -115,4 +122,18 @@ flutter --version
 - Hide Obsolete Packages 해제
 - Android SDK Command-line Tools(latest) 체크 후 설치
   <img width="500" alt="img1 daumcdn-4" src="https://github.com/isGeekCode/TIL/assets/76529148/e38fa7d7-47bd-45b9-a4ae-e746b9752571">  
+
+<br><br>
+
+### Android toolchain - Some Android licenses not accepted
+```
+flutter doctor --android-licenses
+```
+
+위와 같이 입력해도 라이센스에 대한 동의 과정이 진행이 안된다면,  
+플러터의 버전과 안드로이드 스튜디오의 버전이 안맞아서 그럴 것이다.  
+
+버전을 맞춰주고, 
+특별한 일이 없다면 둘다 최신화 하면 바로 해결된다.  
+
 
