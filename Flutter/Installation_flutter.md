@@ -73,6 +73,46 @@ Intel 여부를 꼭 확인해서 다운로드할 것
 ## 플러터 SDK 설치
 [사이트링크](https://docs.flutter.dev/get-started/install/macos)
 - Intel 클릭 및 다운로드
-- 터미널을 열고 다운로드 받은 폴더로 이동
+- 터미널을 열고 다운로드 받은 폴더로 이동 (Downloads 폴더 권장)
+- pc내에 development(권장) 폴더를 생성하여 해당 폴더로 이동처리
+- development 디렉토리로 이동하여 압축해제
 
+```
+cd ~/development
+
+unzip flutter_macos_3.16.5-stable.zip
+```
+
+### 경로 설정
+- 현재 사용중인 셸 확인
+- vim 에디터로 실행
+```
+vim ~/.zshrc
+export PATH="$PATH:/Users/나의폴더명/flutter/bin"
+
+source ~/.zshrc
+```
+- 설치된 경로가 잡히는지 버전체크
+```
+flutter --version
+```
+- flutter doctor 이용해 나머지 설치여부 확인
+어떤것이 설치가 더 필요한지 진단이 나온다. 
+
+## Issue
+
+### Android toolchain
+```
+[!] Android toolchain - develop for Android devices (Android SDK version 32.0.0)
+    ✗ cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+```
+ 
+- SDK Manager 이동
+ <img width="500" alt="스크린샷 2024-03-13 오전 10 19 25" src="https://github.com/isGeekCode/TIL/assets/76529148/0cdbd767-e9c1-4f7b-87fc-abe041486005">
+
+- Hide Obsolete Packages 해제
+- Android SDK Command-line Tools(latest) 체크 후 설치
+  <img width="500" alt="img1 daumcdn-4" src="https://github.com/isGeekCode/TIL/assets/76529148/e38fa7d7-47bd-45b9-a4ae-e746b9752571">  
 
