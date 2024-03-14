@@ -24,9 +24,14 @@
 ## Contents
 - [기본구조 구현](#기본구조-구현)
 - [API 소개](#API-소개)
-- [API 소개](#API-소개)
 - [Response 더미데이터 생성](#Response-더미데이터-생성)
     - [CodingKey](#CodingKey)
+    - [더미데이터로부터 데이터가져오기](#더미데이터로부터-데이터가져오기)
+- [URLSession을 이용한 Request](#URLSession을-이용한-Request)
+- [escaping closure](#escaping-closure)
+    - [Escaping을 이용한 Response 호출](#Escaping을-이용한-Response-호출)
+
+
     
     
 <br><br>
@@ -168,11 +173,15 @@ let dummyData = """
 
 이 더미 데이터 문자열을 Data로 변경하고,  사용할 구조체를 정의해서 변경할 것이다. 
 
+이 때, 키값들을 모두 사용할 필요는 없고,  사용할 정보만 정의해서 가져올 수 있다.  
+
+<br>
+
 ```swift
 struct Article {
     let id: Int
     let title, content, createdAt, updatedAt: String
-    let UserID: Int
+    let userID: Int
     
     enum CodingKeys: String, CodingKey {
         case id, title, content, createdAt, updatedAt
@@ -213,13 +222,17 @@ API를 통해 수신한 값을 구조체로 받기위해서는 키값들을 일�
 
 이형태로 아래와 같이 매칭하여 구조체를 구현한다.  
 
+키값이 다르게 작성되면 변환시 에러가 발생한다.  
+`error: The data couldn’t be read because it is missing.`
+
+
 <br>
 
 ```swift
 struct Article {
     let id: Int
     let title, content, createdAt, updatedAt: String
-    let UserID: Int // 변경 후 사용할 변수명
+    let userID: Int // 변경 후 사용할 변수명
     
     enum CodingKeys: String, CodingKey {
         case id, title, content, createdAt, updatedAt
@@ -234,7 +247,681 @@ struct Article {
 
 <br><br><br>
 
+
+## 더미데이터로부터 데이터가져오기
+위에서 생성한 dummyData는 문자열 일 뿐이고, 우리가 사용할 데이터는 Struct로 변환해서 사용하려고 한다.  
+
+바로 문자열에서 Struct로 변환은 안되고,  Data 에서 Struct로 변환이 가능하다.  
+그렇기 때문에 String 타입 dummyData를 아래와 같이 Data로 변환한다.   
+
+> data(using:)메서드는 String이라는 구조체에 String protocol에 들어있는 메서드이다.  
+> API에서 사용하는 데이터 변환 방식은 주로 utf8형식을 사용한다.  
+
+```swift
+guard let convertedData =  dummyData.data(using: .utf8) else { return }
+```
+
+<br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
+
+## Codable을 사용하여 변환된 데이터를 구조체로 변환하기
+기존의 만들어둔 더미데이터(데이터형태로 변환됨)를  
+앱에서 사용할 수 있도록 구조체로 가공하는 과정이다.   
+
+```swift
+let title = dict["title"]
+let address = dict["address"]
+```
+
+<br>
+
+
+과거에는 JSON 내부에 존재하는 키값들을 일일히 코드로 키값을 선언해서 꺼내 사용했지만,  
+Codable을 사용하면 훨씬 보수성이 좋고 가독성 좋게 작업이 가능하다.  
+
+기존의 구현한 모델 구조체에 Codable 프로토콜을 채택한다.  
+Codable 프로토콜을 살펴보면 Encodable & Decodable 을 캡슐화한 것을 알 수 있다.  
+
+<br>
+
+
+```
+
+struct Article: Codable {
+    let id: Int
+    let title, content, createdAt, updatedAt: String
+    let userID: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case id, title, content, createdAt, updatedAt
+        case userID = "UserId"
+    }
+}
+```
+
+<br>
+
+JSONDecoder()의 decode 메서드를 이용해 집어넣을 그릇인 `구조체.self`와 `가공할 대상 data`를 넣어준다.  
+
+이 때, 이 작업은 실패할 수 있기 때문에  swift 자체에서 do catch, try 를 사용하라고 안내한다. 
+
+<br>
+
+
+```
+// 원본 데이터
+guard let convertedData =  dummyData.data(using: .utf8) else { return }
+
+do {
+    let decodedResponse = try JSONDecoder().decode(Article.self, from: convertedData)
+    data.append(decodedResponse.title)
+} catch {
+    print("error: \(error.localizedDescription)")
+}
+
+```
+
+<br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
+
+
+### 전체코드
+
+```
+
+struct Article: Codable {
+    let id: Int
+    let title, content, createdAt, updatedAt: String
+    let userID: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case id, title, content, createdAt, updatedAt
+        case userID = "UserId"
+    }
+}
+
+
+struct ContentView: View {
+    
+    @State var data: [String] = ["A", "B"]
+    
+    var body: some View {
+        VStack {
+            List { 
+                ForEach(data, id: \.self) { item in
+                    Text(item)
+                }
+            }
+        }
+        
+        Button {
+            // 버튼 액션
+            requestData()
+        } label: {
+            Text("Append")
+        }
+    }
+    
+    func requestData() {
+        // String -> Data 변환
+        guard let convertedData =  dummyData.data(using: .utf8) else { return }
+        
+        do {
+            // codable을 이용하여 Article 구조체로 변환
+            let decodedResponse = try JSONDecoder().decode(Article.self, from: convertedData)
+            // 변환된 데이터 추가
+            data.append(decodedResponse.title)
+        } catch {
+            print("error: \(error.localizedDescription)")
+        }
+    }
+}
+```
+
+<br><br>
+
+### 동작
+
+  <img width="300" alt="img1 daumcdn-4" src="https://github.com/isGeekCode/TIL/assets/76529148/e95c28e7-6c33-4b8f-ab72-14dc3a311c64">  
+
+<br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
+
+## URLSession을 이용한 Request
+앞에서는 더미데이터를 이용해 Response를 처리하였다.  
+
+이제 서버로 보낼 Request를 구현하자.  
+
+- 구조체 경로 생성
+- 세션 구현
+    - task 작성
+    - task 실행
+
+<br>
+
+Apple에서 미리 구현해둔 URLSession 싱글톤을 가져온다.  
+
+이 싱글톤이 가진 `dataTask(with:)` 라는 메서드를 이용한다.  
+
+파라미터로는 `URL`이 들어갈 수도 있고, `URLRequest`가 들어가는 경우도 있다.  
+
+GET방식이라면 두가지 방식 모두 사용가능하지만,  
+POST방식이라면 반드시 URLRequest를 사용해야한다.  
+
+여기선 GET방식이기 떄문에 URL을 생성해서 파라미터로 사용한다.  
+
+<br>
+
+```
+    let endPoint = "https://koreanjson.com/posts/1"
+    
+    // 문자열 그대로의 경로를 사용하도록 구조체 URL로 변환
+    guard let url = URL(string: endPoint) else { return }
+    
+    // 싱글톤 URLSession 가져오기
+    let session = URLSession.shared
+    
+    // 업무 정의
+    let task = session.dataTask(with: url) { data, response, error in
+        // 수신한 Data, URLResponse, Error 체크 후 업무 정의
+    }
+    
+    // 업무 실행
+    task.resume()
+```
+
+<br>
+
+dataTask(with:) 메서드는 Data?, URLResponse?, Error? 세가지 타입으로 반환한다.  
+
+이것들이 각각 존재할지 모르기 때문이다.  
+
+비동기적으로 통신한 결과를 옵셔널 타입으로 가져온다.  
+
+그래서 일반적으로는 1. 에러체크 2. response 체크 3. 데이터 체크 4. 데이터 가공
+순으로 작업을 정의한다.  
+<br>
+
+```
+// 업무 정의
+let task = session.dataTask(with: url) { data, response, error in
+
+    // 에러 여부 체크
+    if let _ = error { return }
+    
+    // 응답 성공 체크
+    guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
+    
+    // 데이터 여부 체크
+    guard let data = data else { return }
+    
+    
+    // 더미데이터 대신 실제 data로 Codable처리
+    do {
+        let decodedResponse = try JSONDecoder().decode(Article.self, from: data)
+        print("decodedResponse:\(decodedResponse)")
+    } catch {
+        print("error: \(error.localizedDescription)")
+    }
+}
+
+// 정의한 업무 실행
+task.resume()
+```
+
+
+<br><br>
+
+
+### 전체코드
+
+```swift
+func requestArticle() {
+    let endPoint = "https://koreanjson.com/posts/1"
+    
+    // 문자열 그대로의 경로를 사용하도록 구조체 URL로 변환
+    guard let url = URL(string: endPoint) else { return }
+    
+    // 싱글톤 URLSession 가져오기
+    let session = URLSession.shared
+    
+    // 업무 정의
+    let task = session.dataTask(with: url) { data, response, error in
+    
+        if let _ = error { return }
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
+        
+        guard let data = data else { return  }
+        
+        
+        // 더미데이터 대신 실제 data로 Codable처리
+        do {
+            let decodedResponse = try JSONDecoder().decode(Article.self, from: data)
+            print("decodedResponse:\(decodedResponse)")
+        } catch {
+            print("error: \(error.localizedDescription)")
+        }
+    }
+    
+    // 정의한 업무 실행
+    task.resume()
+}
+```
+<br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
+
+
+## escaping closure
+네트워킹 작업은 클라이언트(내 컴퓨터 혹은 핸드폰)만 하는 작업이 아닌,  서버 컴퓨터 뿐 아니라 네트워크 환경에 따라 얼마든지 속도에 영향을 받을 수 있다.  
+
+그렇기 때문에 탑다운 방식으로 코드를 읽어나가는 내 앱의 속도에 맞춰서  결과를 보장하지 못한다.  
+그래서 사용하는 것이 @escaping 이다.  탈출 클로저라고도 부른다.  
+
+swift에서는 함수의 파라미터로 () -> () 이렇게 클로저를 넣을 수 가 있다.  
+
+먼저 가볍게 클로저를 살펴보자.  
+
+<br>
+
+
+```swift
+
+var closure: () -> () = {
+    print("Test")
+}
+
+closure() // Test
+
+closure = { 
+    print("test2")
+}
+
+closure() //test2
+
+```
+
+<br>
+
+
+위와 같은 것을 클로저 라고 부른다.  
+그리고 우리가 흔하게 사용하는 func 또한 클로저의 일종이다.  
+클로저는 이름이 없는 클로저와 이름이 있는 클로저(일반적인 함수)로 나뉘는 것이다.  
+
+swift에서는 함수의 파라미터로 () -> () 이렇게 클로저를 넣을 수 가 있다.  
+
+<br>
+
+
+```swift
+// 기본적인 형태
+func someMethod() { }
+
+// 기본적인 형태
+func someMethod(num: Int) { }
+
+// 파라미터로 클로저를 넣는 형태
+func someClosure(completion: () -> ()) {
+    completion()
+}
+
+```
+
+<br>
+
+
+좀더 클로저를 살펴보자. 
+
+파라미터로 클로저를 넣는 경우에는,  
+함수 내부에서 해당 클로저를 구현해줘야한다.  여기서는 completion이라는 파라미터 명으로 사용하였다.  
+
+선언부에서는 completion() 까지 넣어주어야 클로저까지 동작한다.  
+
+<br>
+
+
+```swift
+// 파라미터로 String을 받는 클로저를 넣는 형태
+func someClosure(num: Int, completion: (String) -> ()) {
+    completion()
+}
+```
+ 
+ <br>
+
+ 
+클로저의 파라미터가 있다면 in 키워드 앞에 파라미터가 들어온다.  
+
+파라미터의 갯수에 따라 `a, b in` 이런식으로 표현할 수 있고, in 키워드를 지우고 `$0` 처럼 사용도 가능하다. 키워드 갯수에 따라 `$0, $1` 처럼 사용 가능하다. 
+
+
+<br>
+
+
+```swift
+// 파라미터로 String을 받는 클로저를 넣는 형태
+func someClosure(num: Int, completion: (String) -> ()) {
+    
+    let numString = num as? String
+    completion(numString)
+}
+
+// 위의 경우 사용할 때, 아래와 두 경우와 같이 사용할 수 있다.  
+// 1. 파라미터 내부에 클로저 구현
+someClosure(num: 4, completion: { str in
+    print("str의 값은: \(str)")
+})
+// 동일
+someClosure(num: 4, completion: { 
+    print("str의 값은: \($0)")
+})
+
+
+// 2. 가장 마지막 파라미터로 클로저가 오는 경우, 
+someClosure(num: 3) { str in
+    print("str의 값은: \(str)")
+}
+// 동일
+someClosure(num: 3) { 
+    print("str의 값은: \($0)")
+}
+
+
+func someClosure(num: Int, completion: @escaping() -> ()) {
+    // 파라미터로 탈출클로저를 넣는 형태
+}
+
+```
+
+<br>
+
+
+위와 같이 다양한 방법으로 함수를 구현할 수 있다.  
+
+@escaping를 사용하면 해당 함수의 클로저가 함수범위를 벗어나도,  
+
+해당 값을 붙잡고 있게 된다.  
+비동기 작업이 완료되면 외부에서 해당 값을 처리할 수 있게 되는 것이다. 
+
+
+<br><br>
+
+### Escaping을 이용한 Response 호출
+이제 네트워킹이 완료되는 데로 결과를 가져올 함수를 구현해 보자.  
+
+메서드에 `completion: @Escaping (Article?) -> ()`파라미터를 추가하고
+
+통신 결과 처리후 completion에 Article을 넣어주면 된다.  
+
+가령 여러가지 에러들로 인해 Article이 들어가지 못하는 상황도 있다.  
+
+그렇기 떄문에 옵셔널로 처리해준다.    
+
+<br>
+
+```swift
+
+// 성공하는 부분
+let decodedResponse = try JSONDecoder().decode(Article.self, from: data)
+completion(decodedResponse)
+
+// 실패하는 부분
+completion(nil)
+```
+
+<br>
+
+성공 여부에 따라 위와 같이 처리하면 되는 것이다.  
+
+<br>
+
+```swift
+func requestArticle(completion: @escaping (Article?) -> ()) {
+    let endPoint = "https://koreanjson.com/post2s/1"
+    
+    // 문자열 그대로의 경로를 사용하도록 구조체 URL로 변환
+    guard let url = URL(string: endPoint) else { return }
+    
+    // 싱글톤 URLSession 가져오기
+    let session = URLSession.shared
+    
+    // 업무 정의
+    let task = session.dataTask(with: url) { data, response, error in
+    
+        if let _ = error { return }
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
+        
+        guard let data = data else { return  }
+        
+        
+        do {
+            let decodedResponse = try JSONDecoder().decode(Article.self, from: data)
+            completion(decodedResponse)
+        } catch {
+            completion(nil)
+        }
+    }
+    
+    // 정의한 업무 실행
+    task.resume()
+}
+
+```
+
+<br>
+
+이제 정의한 requestArticle을 사용해보자.  
+
+requestArticle에서는 Article? 타입으로 파라미터를 가져오고 있다.  
+
+<br>
+
+```swift
+
+func requestData() {
+
+    // requestArticle의 결과값인 article 을 체크
+    requestArticle { article in
+        if let article = article {
+            // 데이터가 있는 경우 로직
+            data.append(article.title)
+        } else {
+            // 데이터가 없는 경우
+            print("data is nil")
+        }
+    }
+}
+
+```
+
+
+<br>
+
+### 전체코드
+
+```swift
+// 선언하는 부분
+func requestArticle(completion: @escaping (Article?) -> ()) {
+    let endPoint = "https://koreanjson.com/post2s/1"
+    
+    // 문자열 그대로의 경로를 사용하도록 구조체 URL로 변환
+    guard let url = URL(string: endPoint) else { return }
+    
+    // 싱글톤 URLSession 가져오기
+    let session = URLSession.shared
+    
+    // 업무 정의
+    let task = session.dataTask(with: url) { data, response, error in
+    
+        if let _ = error { return }
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
+        
+        guard let data = data else { return  }
+        
+        
+        do {
+            let decodedResponse = try JSONDecoder().decode(Article.self, from: data)
+            completion(decodedResponse)
+        } catch {
+            completion(nil)
+        }
+    }
+    
+    // 정의한 업무 실행
+    task.resume()
+}
+
+// 사용하는 부분
+func requestData() {
+
+    // requestArticle의 결과값인 article 을 체크
+    requestArticle { article in
+        if let article = article {
+            data.append(article.title)
+        } else {
+            print("data is nil")
+        }
+    }
+}
+```
+
+
+<br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
+
+## 다양한 Request
+    requestArticle 메서드는 https://koreanjson.com/posts/1 경로를 이용해 get형식으로 받아오는 메서드였다.  
+    
+    
+    여기에 https://koreanjson.com/users/1 경로를 이용하여 비슷한 메서드를 만들어보자.  
+    
+    버튼은 새로운 버튼을 생성해보자.  
+
+### Users Codable모델 구현
+기존의 모델은 Posts로 바꾸고, Users도 구현해보자. 
+
+
+
+```swift
+// https://koreanjson.com/users/1
+
+
+
+```
+
+
+
+<br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
+
+
+## Error 타입 사용하기
+기존의 completion 타입을 Article뿐아니라 에러에 대한 메세지를 넣기도 한다. 
+어디서 에러가 났는지 모르기에 각각 에러가 나는 부분에 대한 문자열을 정의해서 사용할 수 있다. 
+
+<br>
+
+```swift
+    func requestData() {
+        requestArticle { article, error in
+            if let error = error {
+                print(error)
+            }
+            
+            if let article = article {
+                data.append(article.title)
+            }
+        }
+    }
+    
+    func requestArticle(completion: @escaping (Article?, String?) -> ()) {
+        let endPoint = "https://koreanjson.com/posts/1"
+        
+        // 문자열 그대로의 경로를 사용하도록 구조체 URL로 변환
+        guard let url = URL(string: endPoint) else {
+            completion(nil, "This is not correct url")
+            return }
+        
+        // 싱글톤 URLSession 가져오기
+        let session = URLSession.shared
+        
+        // 업무 정의
+        let task = session.dataTask(with: url) { data, response, error in
+        
+            if let _ = error {
+                completion(nil, "We got some errror. check the internet")
+                return 
+            }
+            
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completion(nil, "Invalid response")
+                return 
+            }
+            
+            guard let data = data else {
+                completion(nil, "the data received is wrong")
+                return 
+            }
+            
+            
+            do {
+                let decodedResponse = try JSONDecoder().decode(Article.self, from: data)
+                completion(decodedResponse, nil)
+                
+            } catch {
+                print("error: \(error.localizedDescription)")
+            }
+        }
+        
+        // 정의한 업무 실행
+        task.resume()
+    }
+
+```
+
+<br>
+
+그런데 에러는 여러 곳에서 발생할 수도 있기 때문에 발생 위치마다 문자열로 넣어준다면,  
+파악이 어려울 수 있고, 가독성도 떨어질 수 있다.  
+
+이를 위해 Error 타입을 사용할 수 있다.  기본적인 Error 타입을 사용할 수도 있고, 커스텀 enum을 만들어서 사용할 수 도 있다.  
+
+
+```swift
+
+```
+
+
+
+<br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
+
+
 [ ](https://www.youtube.com/watch?v=u2sSdwxu2R0&t=302s)
 
 ## History
 - 240313 : 기본 앱 추가, 더미데이터, Response Model구현, CodingKey구현
+- 240314 : Codable, URLSession, escaping
