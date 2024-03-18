@@ -30,9 +30,10 @@
 - [URLSession을 이용한 Request](#URLSession을-이용한-Request)
 - [escaping closure](#escaping-closure)
     - [Escaping을 이용한 Response 호출](#Escaping을-이용한-Response-호출)
+- [Error 타입 사용하기](#Error-타입-사용하기)
+- [커스텀 Result 만들어 사용하기](#커스텀-Result-만들어-사용하기)
+- [Generic으로 유동적인 메서드 만들기](#Generic으로-유동적인-메서드-만들기)
 
-
-    
     
 <br><br>
 
@@ -806,34 +807,6 @@ func requestData() {
 
 <br><br><br>
 
-## 다양한 Request
-    requestArticle 메서드는 https://koreanjson.com/posts/1 경로를 이용해 get형식으로 받아오는 메서드였다.  
-    
-    
-    여기에 https://koreanjson.com/users/1 경로를 이용하여 비슷한 메서드를 만들어보자.  
-    
-    버튼은 새로운 버튼을 생성해보자.  
-
-### Users Codable모델 구현
-기존의 모델은 Posts로 바꾸고, Users도 구현해보자. 
-
-
-
-```swift
-// https://koreanjson.com/users/1
-
-
-
-```
-
-
-
-<br><br>
-
-[[Top]](#contents)
-
-<br><br><br>
-
 
 ## Error 타입 사용하기
 기존의 completion 타입을 Article뿐아니라 에러에 대한 메세지를 넣기도 한다. 
@@ -902,14 +875,326 @@ func requestData() {
 <br>
 
 그런데 에러는 여러 곳에서 발생할 수도 있기 때문에 발생 위치마다 문자열로 넣어준다면,  
-파악이 어려울 수 있고, 가독성도 떨어질 수 있다.  
+어떤 에러들이 있는지 파악이 어려울 수 있고, 관리도 어렵고, 가독성도 떨어질 수 있다.  
 
 이를 위해 Error 타입을 사용할 수 있다.  기본적인 Error 타입을 사용할 수도 있고, 커스텀 enum을 만들어서 사용할 수 도 있다.  
+
+사용한 error 메세지를 모아보자.  
+
+- This is not correct url
+- We got some errror. check the internet
+- Invalid response
+- the data received is wrong
+
+
+이제 이 에러들을 enum으로 정리해보자.  
+
+```swift
+enum NetworkError: Error {
+    case invalidURL
+    case badConnection
+    case invalidResponse
+    case invalidData
+    
+    var errorMessage: String {
+        switch self {
+        case .invalidURL:
+            return "This is not correct url"
+        case .badConnection:
+            return "We got some errror. check the internet"
+        case .invalidResponse:
+            return "Invalid response"
+        case .invalidData:
+            return "the data received is wrong"
+        }
+    }
+}
+
+```
+
+<br>
+
+
+이렇게 만든 커스텀 에러타입을 Completion에 정의하고,  담아준다.  
+NetworkError 타입은 Error타입이기 때문에 Error타입으로 정의해줘도 상관없다.  
+
+```swift
+//    String? ->  NetworkError? 
+//    func requestPost(completion: @escaping (Posts?, String?) -> ()) {
+
+    func requestPost(completion: @escaping (Posts?, NetworkError?) -> ()) {
+        let endPoint = "https://koreanjson.com/posts/1"
+        
+        // 문자열 그대로의 경로를 사용하도록 구조체 URL로 변환
+        guard let url = URL(string: endPoint) else {
+            completion(nil, .invalidURL)
+            return
+        }
+        
+        // 싱글톤 URLSession 가져오기
+        let session = URLSession.shared
+        
+        // 업무 정의
+        let task = session.dataTask(with: url) { data, response, error in
+        
+            if let _ = error {
+                completion(nil, .badConnection)
+                return 
+            }
+            
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completion(nil, .invalidResponse)
+                return 
+            }
+            
+            guard let data = data else {
+                completion(nil, .invalidData )
+                return 
+            }
+            
+            
+            do {
+                let decodedResponse = try JSONDecoder().decode(Posts.self, from: data)
+                completion(decodedResponse, nil)
+                
+            } catch {
+                print("error: \(error.localizedDescription)")
+            }
+        }
+        
+        // 정의한 업무 실행
+        task.resume()
+    }
+    
+    func requestPostData() {
+        requestPost { post, error in
+            if let error = error {
+                print(error.errorMessage)
+            }
+            if let post = post {
+                data.append(post.title)
+            }
+        }
+    }
+}
+
+```
+
+<br>
+
+이제 Error관리가 손쉬워졌다.  
+
+
+<br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
+
+
+## 커스텀 Result 만들어 사용하기
+
+Completion을 통해 여러 파라미터를 내보낼 수 있다는 걸 알게됐다.  
+
+하지만 앞서 선언한 completion들을 보면
+`func requestPost(completion: @escaping (Posts?, NetworkError?) -> ())`
+이런식으로 Completion이 작성되어있다.  
+
+- completion(nil, .badConnection)
+- completion(nil, .invalidResponse)
+- completion(decodedResponse, nil)
+
+이런 식으로 Completion 을 넣어주려면 어떤건 nil을 넣고, 어떤 건 값을 넣어주며 복잡해질 수 있다.  
+
+이런 가독성을 위해 사용하는 것이 Result 타입이다.  
+
+```swift
+enum MyResult {
+    case success(data: Posts)
+    case failure(error: NetworkError)
+}
+```
+
+어차피 결과에는 성공하면 특정 데이터, 실패하면 NetworkError 타입이 들어오기 때문에  
+위와 같이 정의할 수 있다.  
+
+그러면 성공인지 실패인지에 따라 enum에서 정한 타입을 넣어줄 수 있다.  
+
+```swift
+// 코드 사용
+func requestPostData() {
+    requestPost { result in
+        switch result {
+        case .success(data: let post):
+            data.append(post.title)
+        case .failure(error: let error):
+            switch error {
+            case .invalidURL:
+                print("URL이 유효하지 않은 얼럿 띄우기")
+            case .badConnection:
+                print("badConnection 얼럿 띄우기")
+            default: 
+                print("알 수 없는 에러처리")
+            }
+        }
+    }
+}
+
+
+// 코드 정의
+func requestPost(completion: @escaping (MyResult) -> ()) {
+    let endPoint = "https://koreanjson.com/posts/1"
+    
+    // 문자열 그대로의 경로를 사용하도록 구조체 URL로 변환
+    guard let url = URL(string: endPoint) else {
+        completion(.failure(error: .invalidURL))
+        return
+    }
+    
+    // 싱글톤 URLSession 가져오기
+    let session = URLSession.shared
+    
+    // 업무 정의
+    let task = session.dataTask(with: url) { data, response, error in
+    
+        if let _ = error {
+            completion(.failure(error: .badConnection))
+            return 
+        }
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            completion(.failure(error: .invalidResponse))
+            return 
+        }
+        
+        guard let data = data else {
+                completion(.failure(error: .invalidData))
+            return 
+        }
+        
+        
+        do {
+            let decodedResponse = try JSONDecoder().decode(Posts.self, from: data)
+                completion(.success(data: decodedResponse))
+            
+        } catch {
+            print("error: \(error.localizedDescription)")
+        }
+    }
+    
+    // 정의한 업무 실행
+    task.resume()
+}
+```
+
+<br><br>
+
+[[Top]](#contents)
+
+<br><br><br>
+
+## Generic으로 유동적인 메서드 만들기
+
+사실 위에서 만든 MyResult는 Result 타입을 모방한 형태일 뿐이다.  
+실제 
+
+### 새로운 request
+    requestArticle 메서드는 https://koreanjson.com/posts/1 경로를 이용해 get형식으로 받아오는 메서드였다.  
+    
+        여기에 https://koreanjson.com/users/1 경로를 이용하여 비슷한 메서드를 만들어보자.  
+    
+    버튼은 새로운 버튼을 생성해보자.  
+
+### Users Codable모델 구현
+기존의 모델은 Posts로 바꾸고, Users도 구현해보자. 
+
+
+
+```swift
+struct Users: Codable {
+    let id: Int
+    let name, userName, email, phone, website, province, city, district, street, createdAt, updatedAt: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id, name, email, phone, website, province, city, district, street, createdAt, updatedAt
+        case userName = "username"
+    }
+}
+
+```
 
 
 ```swift
 
+// https://koreanjson.com/users/1
+
+func requestUserData() {
+    requestUser { result in
+        switch result {
+        case .success(data: let user):
+            data.append(user.city)
+        case .failure(error: let error):
+            switch error {
+            case .invalidURL:
+                print("URL이 유효하지 않은 얼럿 띄우기")
+            case .badConnection:
+                print("badConnection 얼럿 띄우기")
+            default: 
+                print("알 수 없는 에러처리")
+            }
+        }
+
+func requestUser(completion: @escaping (UserResult) -> ()) {
+    let endPoint = "https://koreanjson.com/users/1"
+    
+    // 문자열 그대로의 경로를 사용하도록 구조체 URL로 변환
+    guard let url = URL(string: endPoint) else {
+        completion(.failure(error: .invalidURL))
+        return
+    }
+    
+    // 싱글톤 URLSession 가져오기
+    let session = URLSession.shared
+    
+    // 업무 정의
+    let task = session.dataTask(with: url) { data, response, error in
+    
+        if let _ = error {
+            completion(.failure(error: .badConnection))
+            return 
+        }
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            completion(.failure(error: .invalidResponse))
+            return 
+        }
+        
+        guard let data = data else {
+            completion(.failure(error: .invalidData))
+            return 
+        }
+        
+        
+        do {
+            let decodedResponse = try JSONDecoder().decode(Users.self, from: data)
+            completion(.success(data: decodedResponse))
+        } catch {
+            print("error: \(error.localizedDescription)")
+        }
+    }
+    
+    // 정의한 업무 실행
+    task.resume()
+}
+
+enum UserResult {
+    case success(data: Users)
+    case failure(error: NetworkError)
+}
+
+
 ```
+
 
 
 
@@ -922,6 +1207,7 @@ func requestData() {
 
 [ ](https://www.youtube.com/watch?v=u2sSdwxu2R0&t=302s)
 
+
 ## History
 - 240313 : 기본 앱 추가, 더미데이터, Response Model구현, CodingKey구현
-- 240314 : Codable, URLSession, escaping
+- 240314 : Codable, URLSession, escaping, error타입
