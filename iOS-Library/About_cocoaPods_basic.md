@@ -1,5 +1,11 @@
 # CocoaPods 사용하기
 
+
+
+### 공식페이지 링크
+- [cocoapods.org](https://cocoapods.org/)
+
+
 코코아프로젝트에 대한 의존성 패키지를 관리하는 도구다. 쉽게 말해 외부 라이브러리를 간단핳게 설치할 수 있게 도와주는 유틸
 
 과거에는 개발자가 외부라이브러리를 사용하면 자동 업데이트가 이루어지지 않았기 때문에 버전 관리는 순전히 개발자의 성실성에 달려 있었다. 해당 라이브러리의 새 버전으로 업뎃하기 위해서는 개발자가 꾸준히 관심을 갖고 버전 업데이트 여부를 확인해야 했다. 간혹 소홀할 경우 버그가 발생하기도 했다.
@@ -12,8 +18,47 @@
 
 Mac에는 이미 ruby가 설치되어있기 때문에 ruby를 추가적으로 설치해줄 필요는 없다. 다만 가끔 gem 관련 에러가 발생하여 ruby를 사용못하는 상황이 발생한다. 그러면 cocoapods도 먹통이기때문에 사용법을 이해할 필요가 있다.
 
+<br><br>
+
+## CocoaPods 설치된 버전 확인하기
+
+### 현재 메인 버전 확인하기
+```
+pod --version
+// 1.15.2
+```
+
+<br>
+
+### 현재 pc에 설치된 버전 전부 확인하기
+
+기본적으로 메인 버전은 설치한 버전중 가장 최신 버전이다.  
+```
+gem list - local | grep cocoapods
+
+// cocoapods-core (1.15.2, 1.12.0, 1.8.0)
+// cocoapods-deintegrate (1.0.5)
+// cocoapods-downloader (2.1, 1.6.3)
+// cocoapods-plugins (1.0.0)
+// cocoapods-search (1.0.1)
+// cocoapods-stats (1.1.0)
+// cocoapods-trunk (1.6.0)
+// cocoapods-try (1.2.0)
+```
+
+## CocoaPods 설치하기
+내가 필요없는 버전은 삭제해야하는 경우가 있다.  
+
+```
+sudo gem uninstall cocoapods -v 1.8.0
+```
+
+<br><br>
+
 ## CocoaPods 설치하기
 여러가지 방법으로 설치를 할 수 있다.
+
+<br>
 
 ### RubyGems를 사용한 설치
 
@@ -23,6 +68,7 @@ RubyGems을 사용하여 CocoaPods를 설치하는 것이 가장 일반적인 �
 sudo gem install cocoapods
 ```
 
+<br>
 
 ### HomeBrew를 통한 설치
 먼저 RubyGems를 사용한 설치를 해도 안되면 이방법을 사용하는 것이 좋다. 
@@ -32,6 +78,7 @@ brew install cocoapods
 
 ```
 
+<br><br>
 
 ## 사용방법
 Cocoapods 설치를 완료하면 원하는 프로젝트의 폴더로 이동한다. 
@@ -39,10 +86,14 @@ Cocoapods 설치를 완료하면 원하는 프로젝트의 폴더로 이동한�
 그리고 기입된 내용을 통해 라이브러리를 설치하는 것이다. 
 
 
+<br>
+
 ### 팟파일 생성하기
 ```
 pod init
 ```
+
+<br>
 
 ### 팟파일 편집하기
 폴더내 생성된 Podfile에 들어가 버전정보 기입한다.
@@ -54,6 +105,8 @@ pod init
 # Pods for <앱이름>
 pod ‘KakaoSDKCommon’, ‘~> 2.14.0’
 ```
+
+<br>
 
 ### 라이브러리 설치하기
 
@@ -139,5 +192,4 @@ sudo gem uninstall cocoapods
 
 뭔가 확장자가 .gitignore에 포함되어야 할 느낌이지만! Podfile.lock은 Pod 파일들의 버전을 픽스시켜주는 역할을 한다.다른사람에게 프로젝트를 공유할 때, 동일한 라이브러리 환경을 제공하기 위해 필수로 필요하며, 따라서 Git 으로 함께 버전관리를 해야한다.
 
-### 공식페이지 링크
-- [cocoapods.org](https://cocoapods.org/)
+CocoaPod
