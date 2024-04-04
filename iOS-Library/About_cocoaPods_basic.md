@@ -191,5 +191,3 @@ sudo gem uninstall cocoapods
 `해야한다`
 
 뭔가 확장자가 .gitignore에 포함되어야 할 느낌이지만! Podfile.lock은 Pod 파일들의 버전을 픽스시켜주는 역할을 한다.다른사람에게 프로젝트를 공유할 때, 동일한 라이브러리 환경을 제공하기 위해 필수로 필요하며, 따라서 Git 으로 함께 버전관리를 해야한다.
-
-CocoaPod

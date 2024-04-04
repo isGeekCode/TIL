@@ -70,6 +70,11 @@ git restore --staged 파일명
 단, reset은 커밋이 한 번이라도 되어서 HEAD 포인터를 가지고 있는 경우에 사용이 가능하다.  
 
 ```
+# 가장 많이 사용하는 방법; Head 포인터가 생겨야 사용가능
+git reset --hard HEAD~1
+# 성공메세지 : HEAD is now at {해시값} {커밋명}
+
+
 # 스테이지에 있는 변경 사항을 작업 트리로 이동
 git reset 파일명
 
