@@ -10,6 +10,17 @@
 
 <br><br>
 
+
+##  두 개의  Delegation
+UITableView에는 DataSource, Delegate 라는 대리자가 옵셔널로 생성되어 있다.   
+각각의 용도는 아래와 같다.  
+
+- DataSource : 테이븗뷰의 구성을 어떻게 할지 위임
+- Delegate : 테이블뷰의 동작을 결정하는 걸 위임
+
+
+
+
 ## Step1. TableView 선언하기
 
 ### Property 
