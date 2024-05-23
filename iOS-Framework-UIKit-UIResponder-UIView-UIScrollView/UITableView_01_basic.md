@@ -71,7 +71,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 ```
 
-혹은 아래와 같이 나눠서 구현하기도 한다.   
+보통은 편의상 코드가독성을 위해 extension을 사용한다.  
+
 
 ```swift
 class ViewController: UIViewController { }
@@ -176,31 +177,47 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 <br><br>
 
-## TableViewCell을 재사용하기
+## 셀의 재사용 개념
 테이블뷰에서 가장 중요한 요소 중 하나이다.  
 테이블뷰는 스크롤할 정도로 여러개의 셀을 가지고 있을 때,  
 추가적으로 화면에 표시할 셀을 생성하게 되어있다.  
 
-그런데 매번 새로 생성하게 되면 자원을 낭비하게 된다.  
+그런데 매번 새로 생성하게 되면 자원을 낭비하기 때문에 사용하는 개념이 재사용이다.  
 
-그렇기 때문에 사용하는 개념이 재사용이다.  
+메모리의 HEAP영역에 셀 관리용 Queue를 두고,
+한번에 화면에 표시될 분량의 셀들을 이곳에 저장해둔다. 
+그리고 화면을 스크롤 할 때, Heap영역에 저장된 셀을 꺼내서(Dequeue) 사용하는 것이다.
 
-tableView에 셀을 관리할 Queue를 두고, 
-미리 그 Queue에 넣을 셀을 등록한다. 
-또 Queue에서 뺄 셀도 등록을 하게 된다.  
+이방법을 사용하게 되면 메모리를 보다 효율적으로 사용할 수 있다.
+
+다만 기존 셀의 UI와  새롭게 나타나야할 셀과 다른 경우에 UI를 업데이트 하기위한 로직을 추가해야한다는 것을 유념하자.
+
+
 
 <br><br>
 
 ### 셀 등록하기
-- UINib : 내가 사용할 테이블뷰셀 클래스
-    - 만약 커스텀 클래스를 사용한다면 해당 클래스를 넣어준다.  
+셀을 사용하기 위해서는 미리 그 Queue에 넣을 셀을 등록해야한다. 
+이 때, 어떤 셀을 사용할 건지 해당 셀의 객체타입의 타입 (메타타입; `ex UITableViewCell.self`)과 해당 셀 구분에 사용할 Identifier를 입력해야한다.  
+
+이 과정은 스토리보드를 사용하는 경우에는 Cell에 Class를 지정하고 ID를 선언함으로 대체된다.   
+
+
+- UINib : 내가 사용할 테이블뷰셀 클래스의 메타타입
+    - 만약 커스텀 클래스를 사용한다면 해당 클래스의 메타타입을 넣어준다.  
 - forCellReuseIdentifier : 구분에 필요한 ID
+
+
 ```swift
 // 재사용할 셀을 등록하는 메서드
 func register(UINib?, forCellReuseIdentifier: String)
 
 // 사용예
 tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
+// 커스텀 테이블뷰 셀인 경우
+tableView.register(MyTableViewCell.self, forCellReuseIdentifier: "cell2")
+
 ```
 
 <br><br>
@@ -211,6 +228,8 @@ UITableView는 reusableCell 큐에서 지정된 식별자(identifier)를 가진 
 
 - withIdentifier : 구분에 필요한 ID
 - for : indexPath 
+
+
 ```swift
 func dequeueReusableCell(withIdentifier: String, for: IndexPath) -> UITableViewCell
 
@@ -221,7 +240,15 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
   cell.textLabel?.text = "Row \(indexPath.row)"
   
   return cell
+
+
+  // 커스텀 클래스 인경우에는 반드시 커스텀 테이블뷰 셀로 타입캐스팅을 해준다.
+  // let myCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
+  // cell.mainImageView.image = UIImage(named:"test")
+  //
+  // return myCell
 }
+
 ```
 
 <br><br>
@@ -270,3 +297,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 ```
+
+<br><br>
+
+
+## HISTORY
+- 240514: register, dequeue개념 수정
