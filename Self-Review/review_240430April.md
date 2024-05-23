@@ -96,8 +96,6 @@ PrivacyInfo와 관련하여, 사용중인 라이브러리들을 조사하던 중
 
 그럼에도 해당 작업을 마치면 항상 매뉴얼을 작성하였고, 팀원들에게 공유했다. 이 작업은 앞 선 시간들로 이해도가 높았기에 오히려 시간이 적게 들었지만 내스스로 생각하기에 반드시 해야만하는 작업이었다. 이런 습관은 앞으로도 나를 위해서 혹은 팀을 위해서도 지속해야겠다는 생각이 든다.
 
-[##_Image|kage@b3NwyM/btsHqu5RmNe/AxtA1zz7G6wtfv6Linm2wk/img.webp|CDM|1.3|{"originWidth":1400,"originHeight":1867,"style":"alignCenter","width":500,"height":667,"filename":"1_P1lfi2RTcWwfDZ7lP1yKKg.webp"}_##]
-
 
 <br><br>
 
