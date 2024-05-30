@@ -1,4 +1,4 @@
-# Foundation - Integer Signum()
+# Swift - Collection_Int : signum()
 
 signum() 메서드는 주어진 숫자의 부호를 나타내는 메서드다. 이 메서드는 수학적으로 숫자의 부호를 판별하여 그 결과를 반환한다.  
 대부분의 프로그래밍 언어에서 사용할 수 있으며, 특히 수치 연산이 중요한 경우 유용하게 사용할 수 있다.
