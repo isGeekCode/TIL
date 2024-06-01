@@ -33,11 +33,12 @@
 이번 달에는 알고리즘에 대해 생각해보는 시간이 있었다. 특별한 기회로 알고리즘에 대해 관심을 갖게 되었다.  그동안 업무을 헤쳐나가는 데에만 집중했다면,  이젠 알고리즘적 지식을 올려서 코드의 질도 올라가도록 해보고 싶다.  
 
 
-- [UITableView - 기본 UITableView 생성](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_01_basic.md) 업데이트
-- [Testable한 코드 만들기1 - VC -> MVC -> MVP](iOS-TDD/testable_mvc_mvp.md)
-- [Swift - Collection_Int : signum()](iOS-Lang-Swift/swift_collection_Int_signum.md) 
-- [Swift - Collection_Array : prefix() `안전한 사용`](iOS-Lang-Swift/Swift_collection_Array_prefix.md)
-- [Swift - Subscript(작성중)](iOS-Lang-Swift/Swift_collection_Subscript.md)
+- [UITableView - 기본 UITableView 생성](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_01_basic.md) 업데이트
+- [Testable한 코드 만들기1 - VC -> MVC -> MVP](https://github.com/isGeekCode/TIL/blob/main/iOS-TDD/testable_mvc_mvp.md)
+- [Swift - Collection_Int : signum()](https://github.com/isGeekCode/TIL/blob/main/iOS-Lang-Swift/swift_collection_Int_signum.md) 
+- [Swift - Collection_Array : prefix() `안전한 사용`](https://github.com/isGeekCode/TIL/blob/main/iOS-Lang-Swift/Swift_collection_Array_prefix.md)
+- [Swift - Subscript(작성중)](https://github.com/isGeekCode/TIL/blob/main/iOS-Lang-Swift/Swift_collection_Subscript.md)
+- [필수 알고리즘 - BFS: 너비 우선 탐색(Breath-first search)](https://github.com/isGeekCode/TIL/blob/main/Algorithm/algorithm_000_essential_BFS.md)
 
 <br><br>
 
@@ -49,7 +50,7 @@
 
 ### 세부 계획
 - 프로그래머스 매일 과제를 통한 흥미, 필수 알고리즘 10가지 습득할 것
-    - 기본적인 개념을 익히기
+    - 기본적인 개념 익히기
     - swift로 구현하기
     - 문제 많이 풀어보기
 - VC하나로 만든 프로젝트를 UIViewController -> MVC -> MVP 변형하는 연습할것
