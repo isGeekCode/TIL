@@ -16,6 +16,7 @@ let emptyArray2 = Array<Int>()// 단축 문법 사용
 let emptyArray3 = [Int]()
 ```
 
+<br><br>
 
 ### 값이 있는 배열 생성하기
 
@@ -26,6 +27,34 @@ var strings: [String] = ["Apple", "Banana", "Cherry"] // String 타입의 배열
 // 특정 크기와 초기값을 가진 배열을 생성할 수도 있다.
 var threeDoubles = Array(repeating: 0.0, count: 3) // [0.0, 0.0, 0.0]
 ```
+
+<br><br>
+
+### 같은 값이 연속적으로 들어가있는 배열 생성하기
+`Array(repeating:count:)`생성자를 이용하면 연속된 어레이를 생성가능하다.
+
+```swift
+var numbers = Array(repeating: 3, count: 5)
+// [3, 3, 3, 3, 3]
+```
+
+<br><br>
+
+### 이중 Array 만들기
+Bool타입 배열을 5개 연속해서 만들고, 해당 배열을 3개 만드는 경우. 
+
+주로 알고리즘으로 확인여부를 체크할 때 구현한다.  
+
+```swift
+var  = Array(repeating: Array(repeating: false, count: m), count: n)
+// [
+//   [false, false, false, false, false],
+//   [false, false, false, false, false],
+//   [false, false, false, false, false],
+// ]
+```
+
+<br><br>
 
 ## 배열 처리하기
 
