@@ -294,8 +294,45 @@ func binarySearch(_ start: Int, _ end: Int, _ target: Int) {
 <br><br>
 
 ### 그리디
-
+때로는 당장 눈앞의 최선이 최고의 결과를 가져온다.  
+- 현재 차례의 최고의 답을 찾는 문제
+- 어려운 이유 : 이게 왜 최고인지 증명하기가 어려운 경우가 많다.
+- 예시 : 각기 다른 종류의 동전이 주어졌을 때, M원을 만드는 최소 개수
+- 반례가 있을 수 있는지 체크해볼 것
 ```swift
+let input3 = """
+10 4790
+1
+5
+10
+50
+100
+500
+1000
+5000
+10000
+50000
+"""
+
+let totalArr = input3.split(separator: "\n")
+//let firstLine = totalArr[0].split(separator: " ").map{ Int($0)!}
+
+let firstLine = readLine()!.split(separator: " ").map{ Int($0)!}
+var (coinRow, target) = (firstLine[0], firstLine[1])
+//var coins = totalArr[1...].map{Int($0)!}.sorted(by: >)
+var coins = [Int]()
+for _ in (0..<coinRow) {
+    let coin = Int(readLine()!)!
+    coins.append(coin)
+}
+coins.sort(by: >)
+
+var count = 0
+for coin in coins {
+    count += target / coin
+    target = target % coin
+}
+print(count)
 ```
 
 <br><br>

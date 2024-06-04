@@ -86,3 +86,38 @@ func binarySearch(_ start: Int, _ end: Int, _ target: Int) {
 
 ## 기본 문제
 백준 1920
+```swift
+let input3 = """
+10 4790
+1
+5
+10
+50
+100
+500
+1000
+5000
+10000
+50000
+"""
+
+let totalArr = input3.split(separator: "\n")
+//let firstLine = totalArr[0].split(separator: " ").map{ Int($0)!}
+
+let firstLine = readLine()!.split(separator: " ").map{ Int($0)!}
+var (coinRow, target) = (firstLine[0], firstLine[1])
+//var coins = totalArr[1...].map{Int($0)!}.sorted(by: >)
+var coins = [Int]()
+for _ in (0..<coinRow) {
+    let coin = Int(readLine()!)!
+    coins.append(coin)
+}
+coins.sort(by: >)
+
+var count = 0
+for coin in coins {
+    count += target / coin
+    target = target % coin
+}
+print(count)
+```
