@@ -8,7 +8,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_421 TILs and counting..._
+_423 TILs and counting..._
 
 ---
 
@@ -16,8 +16,8 @@ _421 TILs and counting..._
 
 - [Swift - Subscript(작성중)](iOS-Lang-Swift/Swift_collection_Subscript.md) - Fri May 31 03:43:41 2024 +0900
 - [Swift - Collection_Int : signum()](iOS-Lang-Swift/swift_collection_Int_signum.md) - Fri May 31 00:23:58 2024 +0900
-- [Swift - Collection_Array : prefix() `안전한 사용`](iOS-Lang-Swift/Swift_collection_Array_prefix.md) - Fri May 31 00:23:58 2024 +0900
 - [random함수를 이용해 Random한 숫자 뽑아내기](iOS-Lang-Swift/Swift_collection_Array_random.md) - Fri May 31 00:23:58 2024 +0900
+- [Swift - Collection_Array : prefix() `안전한 사용`](iOS-Lang-Swift/Swift_collection_Array_prefix.md) - Fri May 31 00:23:58 2024 +0900
 - [Testable한 코드 만들기1 - VC -> MVC -> MVP](iOS-TDD/testable_mvc_mvp.md) - Wed May 29 02:56:34 2024 +0900
 
 ### Categories
@@ -117,6 +117,8 @@ _421 TILs and counting..._
 - [알고리즘 - 선택정렬 : Selection Sort](Algorithm/algorithm00_selectionSort.md)
 - [알고리즘 - 버블정렬 : Bubble Sort(작성중)](Algorithm/algorithm01_bubbleSort.md)
 - [필수 알고리즘 - BFS: 너비 우선 탐색(Breath-first search)](Algorithm/algorithm_000_essential_BFS.md)
+- [필수 알고리즘 - 백트래킹](Algorithm/algorithm_002_essential_BackTracking.md)
+- [필수 알고리즘 - 시뮬레이션](Algorithm/algorithm_003_essential_simulation.md)
 
 ### [CI_CD](#ci_cd)
 - [CI/CD - GitHub Action 사용하기 : 초기 구현하기](CI_CD/GithubAction_A_tutorial00.md)
