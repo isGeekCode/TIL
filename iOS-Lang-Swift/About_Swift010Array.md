@@ -40,13 +40,38 @@ var numbers = Array(repeating: 3, count: 5)
 
 <br><br>
 
-### 이중 Array 만들기
-Bool타입 배열을 5개 연속해서 만들고, 해당 배열을 3개 만드는 경우. 
+### 반복된 배열 만들기
+`let arr = Array(repeating: a, count: b)`
 
+- a : 제네릭타입으로 모든 데이터타입이 가능
+- b : 반복할 횟수
+
+a의 값을 b번 반복한 배열을 생성한다. 
+
+<br><br>
+
+예시1)
+
+Bool타입을 연속 3개 만드는 경우. 
+```swift
+let arr = Array(repeating: false, count:3)
+// [false, false, false]
+```
+
+<br><br>
+
+### 반복된 이중 배열 만들기
 주로 알고리즘으로 확인여부를 체크할 때 구현한다.  
 
 ```swift
-var  = Array(repeating: Array(repeating: false, count: m), count: n)
+var arr = Array(repeating: Array(repeating: false, count: m), count: n)
+```
+
+예시)
+Bool타입 배열을 5개 연속해서 만들고, 해당 배열을 3개 만드는 경우. 
+
+```swift
+var arr = Array(repeating: Array(repeating: false, count: 5), count: 3)
 // [
 //   [false, false, false, false, false],
 //   [false, false, false, false, false],
@@ -94,6 +119,42 @@ for fruit in fruits {
 var fruits = ["Apple", "Blueberry", "Cherry", "Durian"]
 fruits.insert("Melon", at:2) =  // ["Apple", "Blueberry", "Melon", "Cherry", "Durian"]
 ```
+
+
+<br><br>
+
+## 배열의 요소를 서로 교환하기
+배열에서 특정 요소 두개를 서로 교환하는 경우가 있다. 
+이때, 교환할 요소가 i번째와 j번째라고 했을 때, 아래와 같이 3가지 방법이 있다. 
+
+### 1. 직접 교환
+임시 배열을 생성하여 교환할 값들을 저장하여, 원본 arr에 접근하여 변경  
+```swift
+let tempArr = [originArr[i], originArr[j]]
+arr[j] = tempArr[0]
+arr[i] = tempArr[1]
+```
+
+<br><br>
+
+### 2. 튜플을 이용한 교환
+튜플을 사용하면 임시로 저장하는 공간이 없이 두 요소를 교환 가능하다.   
+```swift
+(resultArr[i], resultArr[j]) = (resultArr[j], resultArr[i])
+```
+
+<br><br>
+
+### 3. swapAt(_:_:)메서드를 이용한 교환
+swapAt메서드의 파라미터는 원본 배열의 index가 들어간다. 별도의 메모리가 저장되지 않기 때문에 효율적이다.  
+
+```swift
+arr.swapAt(i, j) 
+```
+swapAt 메서드의 시간복잡도는 𝑂(1) 이다.  
+
+<br><br>
+
 
 # 배열과 관련된 실용적 사용방법
 
