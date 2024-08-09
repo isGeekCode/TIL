@@ -155,6 +155,36 @@ swapAt 메서드의 시간복잡도는 𝑂(1) 이다.
 
 <br><br>
 
+## 열거형 Enumerated()
+[애플문서](https://developer.apple.com/documentation/swift/array/enumerated())
+배열에 정의되어있는 메서드다. 
+
+배열을 열거형으로 만들면서 배열의 index와 element를 파라미터로 리턴하는 메서드이다. 
+문자열자체를 열거형으로 변환하여도 동일하게 적용이 가능하다. 
+```swift
+let strArr = ["S", "w", "i", "f", "t"]
+for (n, c) in strArr.enumerated() {
+    print("\(n): '\(c)'")
+}
+// Prints "0: 'S'"
+// Prints "1: 'w'"
+// Prints "2: 'i'"
+// Prints "3: 'f'"
+// Prints "4: 't'"
+
+
+for (n, c) in "Swift".enumerated() {
+    print("\(n): '\(c)'")
+}
+
+// Prints "0: 'S'"
+// Prints "1: 'w'"
+// Prints "2: 'i'"
+// Prints "3: 'f'"
+// Prints "4: 't'"
+
+```
+
 
 # 배열과 관련된 실용적 사용방법
 
