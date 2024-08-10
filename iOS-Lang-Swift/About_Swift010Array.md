@@ -314,6 +314,11 @@ let squaredNumbers = numbers.map { $0 * $0 } // [1, 4, 9, 16, 25, 36]
 
 ```swift
 let sum = numbers.reduce(0, { $0 + $1 }) // 21
+let multi =  numbers.reduce(1, { $0 * $1 })
+//축약
+let sum = numbers.reduce(0, +) // 21
+let multi =  numbers.reduce(1, *)
+
 ```
 reduce의 첫 번째 인자는 초기값이고, 두 번째 인자는 두 요소를 결합하는 클로저이다.  여기서 $0은 누적값(현재까지의 합), $1은 배열의 현재 요소를 나타낸다.  
 
