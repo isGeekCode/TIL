@@ -25,5 +25,30 @@ Thread1이 존재한다.  아래와 같은 작업이 Thread1에 순서대로 존
 근데 통상적으로 일은 Thread1에서 처리하게 된다. 그러면 과부하가 생긴다.  
 이걸 분산시켜서 처리를 하는 것이 동시성 프로그래밍이다. 
 
+핸드폰에는 일을 하는 녀석이 사실 여러개가 있다.  
+
+그렇다면 일을 다른 쓰레드로 보내서 분산 처리를 할 수 있다.  
+
+이제 Task들을 Thread2, Thread3, Thread4 ... 다른 스레드로 보내버리는 것이다. 
+
+이러한 내용들은 아래와 같은 순서대로 살펴보자. 
+
+- Synchronous(동기) vs Asynchronous(비동기)
+- Serial(직렬) vs Concurrent(동시)
+- 동시성 (Concurrency) 프로그래밍이 필요한 이유는?
 
 
+## Synchronous(동기) vs Asynchronous(비동기)
+
+아래와 같이 Thread1에 Task가 몰려있다고 생각해보자. 
+
+| Thread |  - | - | - | - |
+| :--: | :--: |  :--: |  :--: |  :--: |
+| Thread 1 | Task1 | Task2 | Task3 | Task4 |
+| Thread 2 | - | - | - | - |
+| Thread 3 | - | - | - | - |
+| Thread 4 | - | - | - | - |
+
+
+비동기란 작업을 분산처리 할 때,
+ 
