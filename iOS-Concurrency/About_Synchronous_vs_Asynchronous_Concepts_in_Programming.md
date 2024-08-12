@@ -42,7 +42,6 @@ Thread1이 존재한다.  아래와 같은 작업이 Thread1에 순서대로 존
 
 아래와 같이 Thread1에 Task가 몰려있다고 생각해보자. 
 
-| Thread |  - | - | - | - |
 | :--: | :--: |  :--: |  :--: |  :--: |
 | Thread 1 | Task1 | Task2 | Task3 | Task4 |
 | Thread 2 | - | - | - | - |
