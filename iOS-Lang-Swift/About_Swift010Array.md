@@ -106,6 +106,34 @@ fruits[1] = "Blueberry" // ["Apple", "Blueberry", "Cherry", "Durian"]
 fruits.remove(at: 2) // "Cherry"를 제거, ["Apple", "Blueberry", "Durian"]
 ```
 
+<br><br>
+
+### 마지막 요소 삭제하기
+- dropLast() : 마지막 요소를 삭제한 결과가 담긴 배열을 리턴, 원본은 유지, 기본k값은 1개
+    - dropLast(_k:) : k 개 만큼의 뒷 요소를 삭제 // k는 갯수보다 커도 상관없음
+- removeLast() : 마지막 요소를 원본 배열에서 제거 후, 제거한 요소를 반환
+    - 빈배열에서 사용하는 경우 컴파일 에러 발생!!!!!
+- popLast() : 마지막 요소를 원본 배열에서 제거 후, 제거한 요소를 옵셔널로 반환
+
+```swift
+/// dropLast 사용
+var fruits = ["Apple", "Banana", "Cherry", "Durian"]
+print(fruits.dropLast()) // ["Apple", "Blueberry", "Cherry"]
+print(fruits) // ["Apple", "Banana", "Cherry", "Durian"]  그대로 유지
+print(fruits.dropLast(5)) // []
+
+/// removeLast 사용
+print(fruits.removeLast()) // "Durian"
+print(fruits) // ["Apple", "Blueberry", "Cherry"]
+
+/// popLast 사용
+print(fruits.popLast()!) // "Durian"
+print(fruits) // ["Apple", "Blueberry", "Cherry"]
+
+```
+
+<br><br>
+
 
 ### 배열 순회하기
 ```swift
