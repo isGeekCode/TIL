@@ -150,13 +150,16 @@ iOS14부터 UIAction을 이용해 추가하는 방법이 가능해졌다.
         button.setTitle("Reset", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
         button.backgroundColor = .systemBlue
-        button.addAction(action, for: .touchUpInside)
-        
+        button.translatesAutoresizingMaskIntoConstraints = false
+
         // let action = UIAction {  _ in resetAction() }
         let action = UIAction { [weak self] _ in
             guard let self else { return }
             resetAction()
         }
+
+        button.addAction(action, for: .touchUpInside)
+
     }
     
     func resetAction() {
