@@ -20,7 +20,7 @@
 <br>
 
 ### 배열 사용 예시 (Swift)
-swift
+```swift
 var numbers = [1, 2, 3, 4, 5]
 
 // 1. 배열의 첫 번째 요소에 접근
@@ -40,6 +40,7 @@ print(numbers.count)  // 출력: 5
 // 5. 배열의 모든 요소 순회 (for-in loop)
 for number in numbers {
     print(number)  // 출력: 1, 2, 4, 5, 6
+```
 
 ### 배열의 시간 복잡도
 - **접근**: O(1) (인덱스를 통해 바로 접근 가능)
@@ -55,7 +56,6 @@ for number in numbers {
 이 방식은 거의 모든 언어에서 사용하는 전형적인 값 교환 방식이야. 교환할 두 값을 임시 변수에 저장한 후, 서로 맞바꾸는 방식이야.
 
 ``` Swift
-swift
 var numbers = [1, 2, 3, 4, 5]
 let n = 1  // 두 번째 요소
 let m = 3  // 네 번째 요소
@@ -66,9 +66,10 @@ numbers[n] = numbers[m]
 numbers[m] = temp
 
 print(numbers)  // 출력: [1, 4, 3, 2, 5]
+``` 
 
-##### Python
-python
+
+``` python
 arr = [1, 2, 3, 4, 5]
 n, m = 1, 3  # 인덱스 1과 3
 
@@ -92,13 +93,16 @@ let m = 3  // 네 번째 요소
 numbers.swapAt(n, m)
 
 print(numbers)  // 출력: [1, 4, 3, 2, 5]
+```
 
-#### 3. 다중 할당을 사용한 값 교환 (Python 전용)
-Python에서는 다중 할당을 사용해 간단히 값을 교환할 수 있어.
+### 3. 다중 할당을 사용한 값 교환 (Python 전용)
+Python에서는 다중 할당을 사용해 간단히 값을 교환할 수 있다.
 
-python
+```python
 arr = [1, 2, 3, 4, 5]
 n, m = 1, 3  # 인덱스 1과 3
+
+
 
 # 다중 할당을 사용한 값 교환
 arr[n], arr[m] = arr[m], arr[n]
