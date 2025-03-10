@@ -213,5 +213,114 @@ Task {
 
 <br><br>
 
+## withCheckedContinuation 사용하기
+
+### ✅ withCheckedContinuation이란?
+
+`withCheckedContinuation`은 **콜백 기반 API를 `async/await` 방식으로 변환**할 때 사용한다.  
+비동기 작업을 **중단(suspend)** 후 **재개(resume)** 하여, 기존의 Completion Handler 패턴을 개선할 수 있다.
+
+#### 📌 언제 사용해야 할까?
+- 기존 **Completion Handler 기반 API를 `async/await`으로 변환**할 때  
+- 비동기 라이브러리(Firebase, CoreBluetooth 등)와 연동할 때  
+- 비동기 작업의 결과를 `async` 함수에서 반환해야 할 때  
+
+#### ❌ 사용하지 않아도 되는 경우
+- 이미 `async` 함수로 제공되는 API 사용 (`URLSession.shared.data(from:)` 등)  
+
+### 🛠 기본 사용법
+```swift
+func fetchRemoteConfig() async -> Bool {
+    return await withCheckedContinuation { continuation in
+        remoteConfig.fetchAndActivate { status, error in
+            if let error = error {
+                print("❌ Error: \(error.localizedDescription)")
+                continuation.resume(returning: false) // 실패 시 false 반환
+            } else {
+                continuation.resume(returning: true) // 성공 시 true 반환
+            }
+        }
+    }
+}
+```
+
+### ✅ 동작 방식
+- 1️⃣ withCheckedContinuation 실행 시 함수가 일시 중단(suspend)
+- 2️⃣ 비동기 작업 완료 후 continuation.resume(returning:)을 호출하여 값 반환
+- 3️⃣ await이 해제되며 호출한 쪽에서 값이 반환됨
+
+
+
+### ✅ 기존 Completion Handler 방식과 비교
+
+```swift
+// 기존 방식 (Completion Handler)
+func fetchRemoteConfig(completion: @escaping (Bool) -> Void) {
+
+    remoteConfig.fetchAndActivate { status, error in
+        if let error = error {
+            print("❌ RemoteConfig Fetch Error: \(error.localizedDescription)")
+            completion(false)
+        } else {
+            completion(true)
+        }
+    }
+}
+
+fetchRemoteConfig { result in
+    if result {
+        print("✅ RemoteConfig 가져오기 성공")
+    } else 
+        print("❌ RemoteConfig 가져오기 실패")
+    }
+}
+
+
+
+
+// withCheckedContinuation 사용 (async/await 변환)
+
+func fetchRemoteConfig() async -> Bool {
+
+    return await withCheckedContinuation { continuation in
+
+        remoteConfig.fetchAndActivate { status, error in
+
+            if let error = error {
+
+                print("❌ RemoteConfig Fetch Error: \(error.localizedDescription)")
+
+                continuation.resume(returning: false)
+
+            } else {
+
+                continuation.resume(returning: true)
+
+            }
+        }
+    }
+}
+
+  
+
+Task {
+    let result = await fetchRemoteConfig()
+    print(result ? "✅ RemoteConfig 가져오기 성공" : "❌ RemoteConfig 가져오기 실패")
+}
+
+```
+
+💡 결과
+- withCheckedContinuation을 사용하면 콜백 없이 await fetchRemoteConfig()로 직관적으로 호출 가능
+- 기존 Completion Handler 대비 가독성이 좋아지고, 체이닝이 용이
+
+⸻
+
+🚀 결론
+- withCheckedContinuation은 기존의 콜백 기반 비동기 API를 async/await으로 변환하는 데 유용하다.
+- 사용하지 않아도 되는 경우: 이미 async API로 제공되는 기능 사용 시.
+
+
 ## 히스토리
-• 2025-03-10: 최초 작성
+- 2025-03-10: 최초 작성
+- 2025-03-11: withCheckedContinuation 추가
