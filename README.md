@@ -8,66 +8,66 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_445 TILs and counting..._
+_446 TILs and counting..._
 
 ---
 
 ### 5 most recent TILs
 
+- [🚀 애자일 방법론 (Agile Methodology) 이해하기](ComputerScience/methodology_agile.md) - Fri Mar 14 15:47:43 2025 +0900
 - [Swift Concurrency - Async / Await / Task](iOS-Concurrency/SwiftConcurrency_Overview.md) - Mon Mar 10 16:54:42 2025 +0900
-- [GCD - DispatchGroup](iOS-Concurrency/GCD_010_DispatchGroup.md) - Mon Mar 10 16:54:20 2025 +0900
+- [비동기처리가 필요한 이유](iOS-Concurrency/About_001_Async_vs_Concurrent_Concepts.md) - Mon Mar 10 16:54:20 2025 +0900
+- [동시성 프로그래밍 : Concurrency 톺아보기](iOS-Concurrency/GCD_001_Overview.md) - Mon Mar 10 16:54:20 2025 +0900
 - [GCD - performSelector를 이용한 비동기 작업](iOS-Concurrency/Concurrency_030_performSelector.md) - Mon Mar 10 16:54:20 2025 +0900
-- [GCD - OperationQueue를 이용한 비동기 작업](iOS-Concurrency/Concurrency_020_OperationQueue.md) - Mon Mar 10 16:54:20 2025 +0900
-- [GCD - DispatchWorkItem](iOS-Concurrency/GCD_011_DispatchWorkItem.md) - Mon Mar 10 16:54:20 2025 +0900
 
 ### Categories
 
-- [A_Writing_in_Progress](#a_writing_in_progress)
-- [About-AI](#about-ai)
-- [About-Error](#about-error)
-- [About-IT](#about-it)
-- [Algorithm](#algorithm)
-- [CI_CD](#ci_cd)
-- [ComputerScience](#computerscience)
-- [Conference](#conference)
-- [Docs](#docs)
-- [Flutter](#flutter)
-- [Git](#git)
-- [Insight](#insight)
-- [Mobile-Android](#mobile-android)
-- [Ruby](#ruby)
-- [Sample-App-List](#sample-app-list)
-- [Self-Review](#self-review)
-- [iOS-AppStore](#ios-appstore)
-- [iOS-Architecture](#ios-architecture)
-- [iOS-Concurrency](#ios-concurrency)
-- [iOS-CustomLogic](#ios-customlogic)
-- [iOS-Development](#ios-development)
-- [iOS-Environment](#ios-environment)
-- [iOS-Extensions](#ios-extensions)
-- [iOS-Foundation](#ios-foundation)
-- [iOS-Framework-CoreAnimation](#ios-framework-coreanimation)
-- [iOS-Framework-CoreLocation](#ios-framework-corelocation)
-- [iOS-Framework-Management](#ios-framework-management)
-- [iOS-Framework-Migration](#ios-framework-migration)
-- [iOS-Framework-PhotoKit](#ios-framework-photokit)
-- [iOS-Framework-SwiftUI](#ios-framework-swiftui)
-- [iOS-Framework-SwiftUI_UIKit](#ios-framework-swiftui_uikit)
-- [iOS-Framework-UIKit](#ios-framework-uikit)
-- [iOS-Framework-UIKit-UIResponder-UIApplication](#ios-framework-uikit-uiresponder-uiapplication)
-- [iOS-Framework-UIKit-UIResponder-UIView-UIControl](#ios-framework-uikit-uiresponder-uiview-uicontrol)
-- [iOS-Framework-UIKit-UIResponder-UIView-UIScrollView](#ios-framework-uikit-uiresponder-uiview-uiscrollview)
-- [iOS-Hierachy](#ios-hierachy)
-- [iOS-Integrity](#ios-integrity)
-- [iOS-Lang-Objective-C](#ios-lang-objective-c)
-- [iOS-Lang-Swift](#ios-lang-swift)
-- [iOS-Library](#ios-library)
-- [iOS-Networking](#ios-networking)
-- [iOS-RelatedImage](#ios-relatedimage)
-- [iOS-ScreenTranport](#ios-screentranport)
-- [iOS-TDD](#ios-tdd)
+- [A_Writing_in_Progress](#A_Writing_in_Progress)
+- [About-AI](#About-AI)
+- [About-Error](#About-Error)
+- [About-IT](#About-IT)
+- [Algorithm](#Algorithm)
+- [CI_CD](#CI_CD)
+- [ComputerScience](#ComputerScience)
+- [Conference](#Conference)
+- [Docs](#Docs)
+- [Flutter](#Flutter)
+- [Git](#Git)
+- [Insight](#Insight)
+- [Mobile-Android](#Mobile-Android)
+- [Ruby](#Ruby)
+- [Sample-App-List](#Sample-App-List)
+- [Self-Review](#Self-Review)
+- [iOS-AppStore](#iOS-AppStore)
+- [iOS-Architecture](#iOS-Architecture)
+- [iOS-Concurrency](#iOS-Concurrency)
+- [iOS-CustomLogic](#iOS-CustomLogic)
+- [iOS-Development](#iOS-Development)
+- [iOS-Environment](#iOS-Environment)
+- [iOS-Extensions](#iOS-Extensions)
+- [iOS-Foundation](#iOS-Foundation)
+- [iOS-Framework-CoreAnimation](#iOS-Framework-CoreAnimation)
+- [iOS-Framework-CoreLocation](#iOS-Framework-CoreLocation)
+- [iOS-Framework-Management](#iOS-Framework-Management)
+- [iOS-Framework-Migration](#iOS-Framework-Migration)
+- [iOS-Framework-PhotoKit](#iOS-Framework-PhotoKit)
+- [iOS-Framework-SwiftUI](#iOS-Framework-SwiftUI)
+- [iOS-Framework-SwiftUI_UIKit](#iOS-Framework-SwiftUI_UIKit)
+- [iOS-Framework-UIKit](#iOS-Framework-UIKit)
+- [iOS-Framework-UIKit-UIResponder-UIApplication](#iOS-Framework-UIKit-UIResponder-UIApplication)
+- [iOS-Framework-UIKit-UIResponder-UIView-UIControl](#iOS-Framework-UIKit-UIResponder-UIView-UIControl)
+- [iOS-Framework-UIKit-UIResponder-UIView-UIScrollView](#iOS-Framework-UIKit-UIResponder-UIView-UIScrollView)
+- [iOS-Hierachy](#iOS-Hierachy)
+- [iOS-Integrity](#iOS-Integrity)
+- [iOS-Lang-Objective-C](#iOS-Lang-Objective-C)
+- [iOS-Lang-Swift](#iOS-Lang-Swift)
+- [iOS-Library](#iOS-Library)
+- [iOS-Networking](#iOS-Networking)
+- [iOS-RelatedImage](#iOS-RelatedImage)
+- [iOS-ScreenTranport](#iOS-ScreenTranport)
+- [iOS-TDD](#iOS-TDD)
 
-### [A_Writing_in_Progress](#a_writing_in_progress)
+### [A_Writing_in_Progress](#A_Writing_in_Progress)
 - [Design Pattern - Command 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Command.md)
 - [Design Pattern - Composite 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Composite.md)
 - [Design Pattern - Factory method 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Factory.md)
@@ -80,13 +80,13 @@ _445 TILs and counting..._
 - [Integrity - Secure Enclave](A_Writing_in_Progress/Integrity_secureEnclave.md)
 - [소켓이란](A_Writing_in_Progress/TIL220420_socket.md)
 
-### [About-AI](#about-ai)
+### [About-AI](#About-AI)
 - [딥러닝이란](About-AI/DeepLearning.md)
 - [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md)
 - [요즘 핫한 GPT로 앱만들어보기](About-AI/MVVM_ReactorKit_Snapkit_RxSwift.md)
 - [언어모델이란](About-AI/chatGPT.md)
 
-### [About-Error](#about-error)
+### [About-Error](#About-Error)
 - [[StoryBoard] - Unknown class ViewControllerC in Interface Builder file](About-Error/StoryBoard_InheritModuleFromTarget.md)
 - [Git Error - command line tools are already installed (사실 git 에러 아님)](About-Error/gitError_CommandLineTool.md)
 - [Git Error - RPC failed; curl 18 transfer closed with...](About-Error/gitError_RPCfailed.md)
@@ -108,12 +108,12 @@ _445 TILs and counting..._
 - [Xcode Error - xcode-select: error: tool 'xcodebuild' requires Xcode](About-Error/xcodeError_xcodeBuild.md)
 - [Flutter Error - Entrypoint doesn't contain...](About-Error/zFlutterError_EntryPoint.md)
 
-### [About-IT](#about-it)
+### [About-IT](#About-IT)
 - [써드파티(Third party)](About-IT/Third_party.md)
 - [Apple Document Words - 단어장](About-IT/iOS_words.md)
 - [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md)
 
-### [Algorithm](#algorithm)
+### [Algorithm](#Algorithm)
 - [기본적인 자료구조 - 배열](Algorithm/000_algorithm_dataStructure_essential_array.md)
 - [기본적인 자료구조 - 연결 리스트 (Linked List)](Algorithm/001_algorithm_dataStructure_essential_linkedList.md)
 - [기본적인 자료구조 - 스택 (Stack)](Algorithm/002_algorithm_dataStructure_essential_stack.md)
@@ -134,12 +134,12 @@ _445 TILs and counting..._
 - [필수 알고리즘 - 플로이드 (Floyd)](Algorithm/algorithm_0091_essentail_Floyd.md)
 - [필수 알고리즘 - 다익스트라 (Dijkstra)](Algorithm/algorithm_009_essential_Dijkstra.md)
 
-### [CI_CD](#ci_cd)
+### [CI_CD](#CI_CD)
 - [CI/CD - GitHub Action 사용하기 : 초기 구현하기](CI_CD/GithubAction_A_tutorial00.md)
 - [CI/CD - GitHub Action 사용하기2 : on 섹션 수정하기](CI_CD/GithubAction_A_tutorial01.md)
 - [CI/CD - GitHub Action 사용하기3 : 실행할 스크립트 짜보기](CI_CD/GithubAction_A_tutorial02.md)
 
-### [ComputerScience](#computerscience)
+### [ComputerScience](#ComputerScience)
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
 - [Data Structure - 다양한 데이터 구조, iOS에서 사용하는 데이터 구조](ComputerScience/DataStructure.md)
@@ -154,6 +154,7 @@ _445 TILs and counting..._
 - [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
 - [iOS와 HTTP/2에 대하여](ComputerScience/http_2.md)
 - [iOS에서 메모리구조 : Code / Data / Heap / Stack](ComputerScience/memoryStructure.md)
+- [🚀 애자일 방법론 (Agile Methodology) 이해하기](ComputerScience/methodology_agile.md)
 - [네트워킹 - 호스트파일이란, 내부망 설정하기](ComputerScience/networking_hostfile.md)
 - [OSI 7 Layer](ComputerScience/osi_7layer.md)
 - [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md)
@@ -164,19 +165,19 @@ _445 TILs and counting..._
 - [Functional Programming - 모나드 이해하기](ComputerScience/programming_00_Functional_Monade.md)
 - [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
-### [Conference](#conference)
+### [Conference](#Conference)
 - [Let us: Go! 2022 가을 - 221105(미참석)](Conference/Conference2022_LetUsGo2022_3Fall.md)
 - [iOS Daejeon Club - 230325(참석)](Conference/Conference2023_IOSDaejonCodingClub_230325.md)
 - [Let us: Go! 2023 봄 - 2304(미참석)](Conference/Conference2023_LetUSGo2023_1Spring.md)
 
-### [Docs](#docs)
+### [Docs](#Docs)
 - [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md)
 - [마크다운에서 Toggle(Expander control) 기능 사용하기](Docs/HTML_Toggle.md)
 - [마크다운 - 이미지 사이즈 세팅하기](Docs/MarkDown_Image.md)
 - [마크다운 - TOC기능 만들기 (Table Of Contents)](Docs/MarkDown_TOC.md)
 - [마크다운 - 표 만들기 (Table)](Docs/MarkDown_Table.md)
 
-### [Flutter](#flutter)
+### [Flutter](#Flutter)
 - [Flutter - 플랫폼 빌드하기 / 라이브러리](Flutter/Flutter_00_how.md)
 - [Flutter - 기본 4가지 위젯](Flutter/Flutter_Basic_Widget.md)
 - [Flutter - Drawer : GNB / 사이드바](Flutter/Flutter_Drawer.md)
@@ -185,7 +186,7 @@ _445 TILs and counting..._
 - [Flutter - 삼각형 View 그리기](Flutter/Flutter_View_shape_triangle.md)
 - [Flutter - Installation](Flutter/Installation_flutter.md)
 
-### [Git](#git)
+### [Git](#Git)
 - [Git Actions - Permission to ....git denied to github-actions](Git/GitAction_tokenError.md)
 - [Git - 튜토리얼(1) : 브랜치 생성하기. 리스트 확인, 브랜치 체크아웃](Git/Git_001_tutorial_checkout.md)
 - [Git - 튜토리얼(2) : pull, fetch](Git/Git_002_pull.md)
@@ -206,24 +207,24 @@ _445 TILs and counting..._
 - [Commit Template - 소스트리](Git/how_to_make_SourceTree_Commit_Template.md)
 - [XcodeError - UserInterfaceState.xcuserState가 자꾸 뜰 때](Git/what_is_UserInterfaceState.md)
 
-### [Insight](#insight)
+### [Insight](#Insight)
 - [백만장자의 시크릿](Insight/220604_BookReview_Millionaire_Secret.md)
 - [나에게 TIL이란](Insight/230408_About_TIL.md)
 - [부의 추월차선: The Millionaire Fastlane](Insight/Economics_TheMillionaireFastlane.md)
 - [부모님의 정원](Insight/TIL_220601_parentsGarden.md)
 - [SuperNormal](Insight/superNormal.md)
 
-### [Mobile-Android](#mobile-android)
+### [Mobile-Android](#Mobile-Android)
 - [Android Studio 완전삭제](Mobile-Android/AndroidStudio_delete.md)
 - [Android - Basic : 안드로이드의 기본 앱구조](Mobile-Android/Android_Basic_AppStructure.md)
 - [Android - WebView : 앱에서 웹으로 JavaScript 보내기](Mobile-Android/Android_WebView_Sending_JS.md)
 
-### [Ruby](#ruby)
+### [Ruby](#Ruby)
 - [Installation: Ruby](Ruby/Installation_Ruby.md)
 - [RubyGems - Package Manager :　gem 관리하기](Ruby/ManageGem.md)
 - [Ruby - 버전관리 : RVM, Rbenv 사용법](Ruby/ManageRuby.md)
 
-### [Sample-App-List](#sample-app-list)
+### [Sample-App-List](#Sample-App-List)
 - [sample App - 투두리스트](Sample-App-List/sample_000todoList.md)
 - [sample App - 그림판앱](Sample-App-List/sample_001pictureApp.md)
 - [Sample App : 설정앱 - SwiftUI](Sample-App-List/sample_002SettingApp_SwiftUI.md)
@@ -231,7 +232,7 @@ _445 TILs and counting..._
 - [Sample App : 네트워킹과정 앱 - SwiftUI [Data parse, URLSession, completion, Singleton, Error, Result, Generic]](Sample-App-List/sample_010networkingApp_SwiftUI.md)
 - [Block6 앱 만들기](Sample-App-List/sample_blockSix.md)
 
-### [Self-Review](#self-review)
+### [Self-Review](#Self-Review)
 - [어떻게 리뷰할 것인가](Self-Review/aboutReview.md)
 - [22년 5월 회고 / 6월 목표](Self-Review/review_220530May.md)
 - [22년 7월 회고 / 8월 목표](Self-Review/review_220806July.md)
@@ -247,7 +248,7 @@ _445 TILs and counting..._
 - [24년 4월 회고 / 5월 목표](Self-Review/review_240430April.md)
 - [24년 5월 회고 / 6월 목표](Self-Review/review_240531May.md)
 
-### [iOS-AppStore](#ios-appstore)
+### [iOS-AppStore](#iOS-AppStore)
 - [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](iOS-AppStore/AppStore_AppDismiss.md)
 - [AppStore - 앱 생성하기](iOS-AppStore/AppStore_AppInit.md)
 - [AppStore - 수출 규정 준수 정보](iOS-AppStore/AppStore_AppUseNonExempt.md)
@@ -259,7 +260,7 @@ _445 TILs and counting..._
 - [리젝사유 - 5. Legal(법률)](iOS-AppStore/Reject_5_Legal.md)
 - [테스트플라잇 - 외부 테스팅 (External Testing)](iOS-AppStore/TestFlight_externalTester.md)
 
-### [iOS-Architecture](#ios-architecture)
+### [iOS-Architecture](#iOS-Architecture)
 - [디자인패턴이란](iOS-Architecture/Architecture_100_De_Intro_.md)
 - [Cocoa Design Pattern - Delegate 델리게이트 패턴](iOS-Architecture/Architecture_101_De_CocoaDesignPattern_Delegate.md)
 - [Cocoa Design Pattern - Observer 옵저버 패턴](iOS-Architecture/Architecture_101_De_CocoaDesignPattern_Observer.md)
@@ -279,7 +280,7 @@ _445 TILs and counting..._
 - [데이터 바인딩이란](iOS-Architecture/Data_Binding_about.md)
 - [Architecture - 비즈니스 로직이란](iOS-Architecture/aboutBusinessLogic.md)
 
-### [iOS-Concurrency](#ios-concurrency)
+### [iOS-Concurrency](#iOS-Concurrency)
 - [프로그래밍에서 동기 비동기 개념에 대한 이해](iOS-Concurrency/About_000_Sync_vs_Async_Basics.md)
 - [비동기처리가 필요한 이유](iOS-Concurrency/About_001_Async_vs_Concurrent_Concepts.md)
 - [비동기(Async), 동시(Concurrent)의 개념](iOS-Concurrency/About_002_async_concurrent_2.md)
@@ -290,11 +291,11 @@ _445 TILs and counting..._
 - [GCD - DispatchWorkItem](iOS-Concurrency/GCD_011_DispatchWorkItem.md)
 - [Swift Concurrency - Async / Await / Task](iOS-Concurrency/SwiftConcurrency_Overview.md)
 
-### [iOS-CustomLogic](#ios-customlogic)
+### [iOS-CustomLogic](#iOS-CustomLogic)
 - [Login Logic (feat. UserDefault)](iOS-CustomLogic/Login_Logic.md)
 - [DynamicSplash 세팅하기](iOS-CustomLogic/splash_dynamicSplash.md)
 
-### [iOS-Development](#ios-development)
+### [iOS-Development](#iOS-Development)
 - [Date - Date로 두 개의 시간차 구하기](iOS-Development/Date_getTimeInterval.md)
 - [볼륨버튼 캐치하기](iOS-Development/Detect_SystemVolume.md)
 - [External Link (외부링크) - 커스텀 앱스키마 만들기, 사용하기](iOS-Development/ExternalLink_CustomScheme.md)
@@ -303,7 +304,7 @@ _445 TILs and counting..._
 - [AudioToolbox - 롱프레스와 햅틱진동 구현하기 (Feat.Long press)](iOS-Development/Third_AudioToolBox_HapticAndLongpress.md)
 - [IOS에 있어서 Caching](iOS-Development/ios_caching.md)
 
-### [iOS-Environment](#ios-environment)
+### [iOS-Environment](#iOS-Environment)
 - [Xcode - 빌드된 app파일은 어디에 있을까](iOS-Environment/Bundle_derivedData.md)
 - [appStoreReceiptURL](iOS-Environment/DetectingDeploymentEnvironment.md)
 - [.ipa 파일 만들기](iOS-Environment/How_to.make_ipa.md)
@@ -317,11 +318,11 @@ _445 TILs and counting..._
 - [Xcode에서 디버그뷰 활성화하기 :Firebase, GA4](iOS-Environment/firebase_debugView.md)
 - [iOS DeviceSupport - 테스트 디바이스 iOS 수동 업데이트](iOS-Environment/iOSDeviceSupport_Manually_update.md)
 
-### [iOS-Extensions](#ios-extensions)
+### [iOS-Extensions](#iOS-Extensions)
 - [hex값을 UIcolor로 변환하는 방법](iOS-Extensions/TIL221025_convertHexToUIColor.md)
 - [UIKit에서 SwiftUI처럼 만들어 사용하기](iOS-Extensions/UIKitLikeSwiftUI.md)
 
-### [iOS-Foundation](#ios-foundation)
+### [iOS-Foundation](#iOS-Foundation)
 - [AVFoundation - AVPlayer 사용하기](iOS-Foundation/AVFoundation_AVPlayer.md)
 - [AVFoundation - TTS : Text-To-Speech](iOS-Foundation/AVFoundation_AVSpeechSynthesizer.md)
 - [AVFoundation - Barcode Scanner 구현하기](iOS-Foundation/AVFoundation_BarcodeScan.md)
@@ -336,28 +337,28 @@ _445 TILs and counting..._
 - [타임스탬프 구현하기](iOS-Foundation/TIL220914_TimeStamp.md)
 - [CMTime](iOS-Foundation/cmtime.md)
 
-### [iOS-Framework-CoreAnimation](#ios-framework-coreanimation)
+### [iOS-Framework-CoreAnimation](#iOS-Framework-CoreAnimation)
 - [Core Animation 프레임워크(작성중)](iOS-Framework-CoreAnimation/About_CA_000_.md)
 
-### [iOS-Framework-CoreLocation](#ios-framework-corelocation)
+### [iOS-Framework-CoreLocation](#iOS-Framework-CoreLocation)
 - [CLLocation - 위치정보 사용하기](iOS-Framework-CoreLocation/CLLocation_a_howToUse.md)
 - [CoreLocation - 비콘 조회하기](iOS-Framework-CoreLocation/CLLocation_beacon.md)
 - [Bluetooth, BLE, Beacon, iBeacon](iOS-Framework-CoreLocation/CoreLocation_iBeacon.md)
 
-### [iOS-Framework-Management](#ios-framework-management)
+### [iOS-Framework-Management](#iOS-Framework-Management)
 - [Framework란 무엇인가](iOS-Framework-Management/FrameworkM_00_about.md)
 - [XCFramework 생성하기](iOS-Framework-Management/FrameworkM_00_initial.md)
 
-### [iOS-Framework-Migration](#ios-framework-migration)
+### [iOS-Framework-Migration](#iOS-Framework-Migration)
 - [UIAlertView Deprecated in iOS 9, Replaced by UIAlertController in iOS 10.0](iOS-Framework-Migration/AlertView.md)
 - [MPMoviePlayerController Deprecated in iOS 10, Replaced by AVPlayerViewController in iOS 7](iOS-Framework-Migration/MPMoviePlayer.md)
 - [NSURLConnection Deprecated in iOS 9, Replaced by URLSession in iOS 7](iOS-Framework-Migration/NSURLConnection.md)
 - ['setVolume:' is deprecated: first deprecated in iOS 7.0 - Use MPVolumeView for volume control.](iOS-Framework-Migration/mpmusicplayer.md)
 
-### [iOS-Framework-PhotoKit](#ios-framework-photokit)
+### [iOS-Framework-PhotoKit](#iOS-Framework-PhotoKit)
 - [PhotoKit - Introduce](iOS-Framework-PhotoKit/photokit_000_intro.md)
 
-### [iOS-Framework-SwiftUI](#ios-framework-swiftui)
+### [iOS-Framework-SwiftUI](#iOS-Framework-SwiftUI)
 - [Layout - SwiftUI: Text](iOS-Framework-SwiftUI/SwiftUI_001_Text.md)
 - [Layout - SwiftUI: Image](iOS-Framework-SwiftUI/SwiftUI_002_Image.md)
 - [Layout - SwiftUI: Button](iOS-Framework-SwiftUI/SwiftUI_003_Button.md)
@@ -373,13 +374,13 @@ _445 TILs and counting..._
 - [Layout - SwiftUI: ScrollView](iOS-Framework-SwiftUI/SwiftUI_ScrollView.md)
 - [Layout - SwiftUI: State와 바인딩](iOS-Framework-SwiftUI/SwiftUI_State.md)
 
-### [iOS-Framework-SwiftUI_UIKit](#ios-framework-swiftui_uikit)
+### [iOS-Framework-SwiftUI_UIKit](#iOS-Framework-SwiftUI_UIKit)
 - [UIKit으로 구현된 화면에 SwiftUI View를 추가하기 : UIHostingController](iOS-Framework-SwiftUI_UIKit/PreviewProvider_UIHostingController.md)
 - [UIKit에서 SwiftUI의 Preview 사용하기](iOS-Framework-SwiftUI_UIKit/PreviewProvier.md)
 - [UIKit에서 SwiftUI의 Preview관련 함수 만들어 사용하기](iOS-Framework-SwiftUI_UIKit/PreviewProvier3.md)
 - [SwiftUI에서 UIKit 사용하기 : UIViewRepresentable, UILabel, WebView](iOS-Framework-SwiftUI_UIKit/UIViewResentable_UIKit.md)
 
-### [iOS-Framework-UIKit](#ios-framework-uikit)
+### [iOS-Framework-UIKit](#iOS-Framework-UIKit)
 - [UIKit - UIStoryboard](iOS-Framework-UIKit/About_UIKIt_010_UIStoryboard.md)
 - [[Apple Document] - About App Development with UIKit](iOS-Framework-UIKit/About_UIKit_.md)
 - [UIKit기반 앱의 간단한 화면 인터페이스 구조](iOS-Framework-UIKit/About_UIKit_050WindowsAnsScreens_Screens_SimpleUIKitInterface.md)
@@ -428,7 +429,7 @@ _445 TILs and counting..._
 - [UIKit - UISearchBar](iOS-Framework-UIKit/UIKit_UITextField_UISearchBar.md)
 - [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS-Framework-UIKit/ios_CollectionViewCell.md)
 
-### [iOS-Framework-UIKit-UIResponder-UIApplication](#ios-framework-uikit-uiresponder-uiapplication)
+### [iOS-Framework-UIKit-UIResponder-UIApplication](#iOS-Framework-UIKit-UIResponder-UIApplication)
 - [[Apple Document] - UIApplicationMain(::::)](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_000UIApplicationMain.md)
 - [[Apple Document] - UIApplication 싱글턴 객체](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_001UIApplication.md)
 - [[Apple Document] - AppDelegate, UIApplicationDelegate 프로토콜](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_002UIApplicationDelegate.md)
@@ -440,7 +441,7 @@ _445 TILs and counting..._
 - [UIApplication_AppDelegate - userNotificationCenter](iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_AppDelegate_userNotificationCenter.md)
 - [UIApplication_AppDelegate - UIApplicationDelegate : 앱의 상태 / 생명주기(Life-Cycle)](iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_StatusCycle_of_App.md)
 
-### [iOS-Framework-UIKit-UIResponder-UIView-UIControl](#ios-framework-uikit-uiresponder-uiview-uicontrol)
+### [iOS-Framework-UIKit-UIResponder-UIView-UIControl](#iOS-Framework-UIKit-UIResponder-UIView-UIControl)
 - [[Apple Document] - UIControl.Event 살펴보기](iOS-Framework-UIKit-UIResponder-UIView-UIControl/About_UIControl_030_event.md)
 - [UIKit - UIAlertController : 장문의 얼럿 만들기](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UIAlertController_NSMutableAttributedString.md)
 - [NSObject_UIResponder_UIView_UIControl : UIButton](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UIButton.md)
@@ -451,7 +452,7 @@ _445 TILs and counting..._
 - [NSObject_UIResponder_UIView_UIControl : UISwitch](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UISwitch.md)
 - [NSObject_UIResponder_UIView_UIControl : UITextField](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UITextField.md)
 
-### [iOS-Framework-UIKit-UIResponder-UIView-UIScrollView](#ios-framework-uikit-uiresponder-uiview-uiscrollview)
+### [iOS-Framework-UIKit-UIResponder-UIView-UIScrollView](#iOS-Framework-UIKit-UIResponder-UIView-UIScrollView)
 - [NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 사용법](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UICollectionView_00_howToMake.md)
 - [UICollectionView with DiffableDataSource](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UICollectionView_30_Diffable.md)
 - [UICellAccessory : UICollectionView에 사용하는 악세서리 Struct](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UICollectionView_41_-UICellAccessory.md)
@@ -469,11 +470,11 @@ _445 TILs and counting..._
 - [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 클릭시 높이가 변경되는 테이블뷰](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_80_FlexibleTableViewCell.md)
 - [NSObject_UIResponder_UIView_UIScrollView_UITableView : SwiftUI로 셀 구현하기](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_81_SwiftUI_Configuration.md)
 
-### [iOS-Hierachy](#ios-hierachy)
+### [iOS-Hierachy](#iOS-Hierachy)
 - [iOS_Hierachy - Foundation](iOS-Hierachy/IOS_Hierachy_Foundation.md)
 - [iOS_Hierachy - UIKit](iOS-Hierachy/IOS_Hierachy_UIKit.md)
 
-### [iOS-Integrity](#ios-integrity)
+### [iOS-Integrity](#iOS-Integrity)
 - [Integrity - 앱 설치환경 체크](iOS-Integrity/Integrity_Build_Environment.md)
 - [Integrity - 인증서(.p8, .p12 / Development, Distribution / Producation SSL, Development SSL)](iOS-Integrity/Integrity_Certificate.md)
 - [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile) 관리하기](iOS-Integrity/Integrity_Certificate_Provisioning.md)
@@ -484,7 +485,7 @@ _445 TILs and counting..._
 - [Integrity - 중간자 공격(man-in-the-middle attack)](iOS-Integrity/Integrity_manInTheMiddleAttack.md)
 - [Integrity - 리플레이 공격(Replay attack)](iOS-Integrity/Integrity_replayAttack.md)
 
-### [iOS-Lang-Objective-C](#ios-lang-objective-c)
+### [iOS-Lang-Objective-C](#iOS-Lang-Objective-C)
 - [Objc - Objc 프로젝트에서 Swift 라이브러리 사용하기](iOS-Lang-Objective-C/Objc_Bridging_SwiftInObjc.md)
 - [ObjC - Control Flow : Switch문](iOS-Lang-Objective-C/Objc_ControlFlow.md)
 - [Objc - 라이브러리 : 직접 파일삽입된 라이브러리 제거작업](iOS-Lang-Objective-C/Objc_DeleteFramework.md)
@@ -492,7 +493,7 @@ _445 TILs and counting..._
 - [ObjC - 로그찍기](iOS-Lang-Objective-C/Objc_Log.md)
 - [Objc - c언어와 objective-c의 차이, 발전](iOS-Lang-Objective-C/TIL220421_aboutObjectiveC.md)
 
-### [iOS-Lang-Swift](#ios-lang-swift)
+### [iOS-Lang-Swift](#iOS-Lang-Swift)
 - [Swift에 대한 소개](iOS-Lang-Swift/About_Swift000Intro_.md)
 - [Swift문법 기초](iOS-Lang-Swift/About_Swift001Basic_.md)
 - [Swift - Class와 Struct](iOS-Lang-Swift/About_Swift001ClassAndStruct.md)
@@ -538,7 +539,7 @@ _445 TILs and counting..._
 - [Swift - 참조(Strong, weak, unowned)](iOS-Lang-Swift/swift_reference_weak_unowned.md)
 - [Array - 특정값이 동일하거나 포함한 경우 찾기 :  firstIndex()](iOS-Lang-Swift/swift_replacingArrayIndexValue..md)
 
-### [iOS-Library](#ios-library)
+### [iOS-Library](#iOS-Library)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](iOS-Library/About_A_iOS_Package.md)
 - [About Swift PackageManager](iOS-Library/About_SPM.md)
 - [CocoaPods 사용하기](iOS-Library/About_cocoaPods_basic.md)
@@ -555,7 +556,7 @@ _445 TILs and counting..._
 - [SNS Login - Kakao](iOS-Library/SNSLogin_kakao.md)
 - [SNS Login - Naver](iOS-Library/SNSLogin_naver.md)
 
-### [iOS-Networking](#ios-networking)
+### [iOS-Networking](#iOS-Networking)
 - [네트워크 통신의 이해](iOS-Networking/About_Networking.md)
 - [NSObject - URLSession](iOS-Networking/About_URLSession.md)
 - [Notifications - IOS에서 사용하는 알림의 종류](iOS-Networking/Apple_Notification.md)
@@ -582,12 +583,12 @@ _445 TILs and counting..._
 - [WebView - 스와이프로 리프레시 세팅](iOS-Networking/WebView_swipe_refresh.md)
 - [webview - 바운스 효과 제거하기](iOS-Networking/Webview_how_to_stop_bounce.md)
 
-### [iOS-RelatedImage](#ios-relatedimage)
+### [iOS-RelatedImage](#iOS-RelatedImage)
 - [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md)
 - [화면캡처 - 특정화면을 이미지로 저장하기](iOS-RelatedImage/imageSave.md)
 - [PNG와 JPG에 대하여](iOS-RelatedImage/png_jpg.md)
 
-### [iOS-ScreenTranport](#ios-screentranport)
+### [iOS-ScreenTranport](#iOS-ScreenTranport)
 - [정리 : iOS에서의 화면관리 및 전환](iOS-ScreenTranport/A_Various_switchingScene.md)
 - [기본적인 iOS 앱의 구조 / 탭바컨트롤러 / 네비게이션컨트롤러](iOS-ScreenTranport/Application_BasicStructure.md)
 - [화면전환 - UINavigationController 이해하기](iOS-ScreenTranport/navigationController.md)
@@ -597,7 +598,7 @@ _445 TILs and counting..._
 - [Show는 push와 present의 추상화 메서드](iOS-ScreenTranport/showPushPresent.md)
 - [화면전환 - UITabBarController 이해하기](iOS-ScreenTranport/tabbarController.md)
 
-### [iOS-TDD](#ios-tdd)
+### [iOS-TDD](#iOS-TDD)
 - [Testable한 코드 만들기1 - VC -> MVC -> MVP](iOS-TDD/testable_mvc_mvp.md)
 
 [1]: https://simonwillison.net/2020/Apr/20/self-rewriting-readme/
