@@ -118,3 +118,151 @@ print(arr)  # 출력: [1, 4, 3, 2, 5]
 | **임시 변수를 사용한 교환**     | 값을 교환할 때 임시 변수를 사용해서 두 값을 서로 맞바꾸는 전형적인 방식 | **언어에 상관없이 사용 가능**                         | 코드가 상대적으로 길어지고, 가독성이 떨어질 수 있음       |
 | **`swapAt()` 메서드를 사용한 교환** | Swift에서 제공하는 내장 메서드로, 두 인덱스의 값을 간단히 교환함      | **코드가 간결**하고, **Swift 표준 라이브러리**의 일부분 | 다른 언어에서는 사용할 수 없음 (Swift 전용 기능)          |
 | **다중 할당을 사용한 교환**      | Python에서 제공하는 간단한 값 교환 방식                             | **코드가 매우 간결**                                   | 다른 언어에서는 사용할 수 없음 (Python 전용 기능)          |
+
+
+## 배열을 사용하는 상황
+
+### 상황 1: 배열에서 최대값 찾기
+문제 상황:
+주어진 정수 배열에서 가장 큰 값을 찾아보자. 배열의 요소는 양수 또는 음수가 될 수 있어. 배열의 크기는 자유롭게 설정해도 돼.
+
+예시:
+`let nums = [3, 7, -2, 8, 1, 9, -5]`
+위 배열에서 가장 큰 값을 찾아야 해. 배열의 인덱스를 사용하여 순차적으로 값을 비교하는 방식을 고민해보면 돼.
+
+
+답변:
+```swift
+let nums = [3, 7, -2, 8, 1, 9, -5]
+
+var maximum = nums[0]  // 배열의 첫 번째 요소로 초기화
+for num in nums {
+    print("num:: \(num)")
+    if maximum < num {
+        maximum = num
+    }
+}
+print(maximum)  // 출력: 9
+
+
+
+nums.max() // 동일한 시간복잡도
+```
+
+
+### 상황 2: 배열의 합 구하기
+문제 상황:
+주어진 정수 배열에서 모든 요소의 합을 구해보자. 배열의 크기는 자유롭게 설정할 수 있어.
+
+예시:
+`let nums = [1, 2, 3, 4, 5]`
+배열의 모든 요소를 더한 합을 구하는 문제야. 각 요소를 순차적으로 더해가는 방법을 고민해보면 돼.
+
+답변:
+
+```swift
+let nums = [1, 2, 3, 4, 5]
+
+// for문 이용
+var sums = 0  // 배열의 첫 번째 요소로 초기화
+
+for num in nums {
+    print("num:: \(num)")
+    sums += num
+
+}
+print(sums)
+
+
+// reduce 이용
+nums.reduce(0, +) // 동일하게 O(n) 시간복잡도
+
+```
+
+###  상황 3: 이중 배열을 이용한 좌표 탐색
+문제 상황:
+주어진 2차원 배열에서 특정 값을 찾아서 그 좌표를 출력해보자. 배열의 크기는 자유롭게 설정할 수 있어. 여기서는 값이 1인 좌표를 찾는 문제야.
+
+예시:
+```swift
+let matrix = [
+    [0, 0, 1],
+    [0, 1, 0],
+    [1, 0, 0]
+]
+```
+이 배열에서 1이 있는 좌표를 찾아내야 해. 이중 for문을 사용해서 배열의 요소를 순회하며 해결할 수 있어.
+
+
+답변:
+
+```swift
+import Foundation
+
+let matrix = [
+    [0, 0, 1],
+    [0, 1, 0],
+    [1, 0, 0]
+]
+
+var answers = [(Int,Int)]() {
+    didSet {
+        print(answers)
+    }
+}
+var currentX: Int
+var currentY: Int
+
+for yIndex in 0 ... matrix.count-1 {
+    currentY = yIndex
+    let row = matrix[yIndex]
+    
+    for xIndex in 0 ... row.count-1 {
+        currentX = xIndex
+        if row[xIndex] == 1 {
+            let answer = (xIndex, yIndex)
+            answers.append(answer)
+        }
+    }
+}
+
+
+
+// enumerated 기본형
+//for (index, value) in matrix.enumerated() {
+//
+//    print("index:\(index)")
+//    print("value:\(value)")
+//}
+
+for (yIndex, row) in matrix.enumerated() {
+    if let xIndex = row.firstIndex(of: 1) {
+        answers.append((xIndex, yIndex))
+    }
+}
+
+```
+
+## 상황 4: 배열 회전
+문제 상황:
+주어진 배열을 오른쪽으로 k번 회전시켜 보자. 배열의 크기는 자유롭게 설정할 수 있어. 배열을 회전한 후 새로운 배열을 출력해봐.
+
+예시:
+```swift
+let nums = [1, 2, 3, 4, 5]
+let k = 2
+```
+
+이 배열을 오른쪽으로 2번 회전시키면, 결과는 [4, 5, 1, 2, 3]이 돼야 해.
+
+
+답변:
+
+```swift
+```
+
+
+답변:
+
+```swift
+```
