@@ -1,4 +1,4 @@
-# 🧠 Problem Solving Insights
+# Problem Solving Insights
 
 이 문서는 코딩 테스트를 풀면서 겪는 시행착오, 깨달음, 방향 전환 등을  
 **기록하고 돌아보기 위한 통찰 모음집**입니다.
