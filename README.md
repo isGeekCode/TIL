@@ -114,6 +114,7 @@ _446 TILs and counting..._
 - [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md)
 
 ### [Algorithm](#algorithm)
+- [복잡도 정리](Algorithm/algorithm_000_essential_TimeComplexity.md)
 - [기본적인 자료구조 - 배열](Algorithm/000_algorithm_dataStructure_essential_array.md)
 - [기본적인 자료구조 - 연결 리스트 (Linked List)](Algorithm/001_algorithm_dataStructure_essential_linkedList.md)
 - [기본적인 자료구조 - 스택 (Stack)](Algorithm/002_algorithm_dataStructure_essential_stack.md)
