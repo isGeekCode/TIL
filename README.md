@@ -14,7 +14,7 @@ _446 TILs and counting..._
 
 ### 5 most recent TILs
 
-- [🚀 애자일 방법론 (Agile Methodology) 이해하기](ComputerScience/methodology_agile.md) - Fri Mar 14 15:47:43 2025 +0900
+- [애자일 방법론 (Agile Methodology) 이해하기](ComputerScience/methodology_agile.md) - Fri Mar 14 15:47:43 2025 +0900
 - [Swift Concurrency - Async / Await / Task](iOS-Concurrency/SwiftConcurrency_Overview.md) - Mon Mar 10 16:54:42 2025 +0900
 - [비동기처리가 필요한 이유](iOS-Concurrency/About_001_Async_vs_Concurrent_Concepts.md) - Mon Mar 10 16:54:20 2025 +0900
 - [동시성 프로그래밍 : Concurrency 톺아보기](iOS-Concurrency/GCD_001_Overview.md) - Mon Mar 10 16:54:20 2025 +0900
@@ -156,7 +156,7 @@ _446 TILs and counting..._
 - [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
 - [iOS와 HTTP/2에 대하여](ComputerScience/http_2.md)
 - [iOS에서 메모리구조 : Code / Data / Heap / Stack](ComputerScience/memoryStructure.md)
-- [🚀 애자일 방법론 (Agile Methodology) 이해하기](ComputerScience/methodology_agile.md)
+- [애자일 방법론 이해하기](ComputerScience/methodology_agile.md)
 - [네트워킹 - 호스트파일이란, 내부망 설정하기](ComputerScience/networking_hostfile.md)
 - [OSI 7 Layer](ComputerScience/osi_7layer.md)
 - [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md)
