@@ -19,7 +19,7 @@ jobs:
 
       # 30초 후에 README 파일 다시 조회
       - name: Check out repo again
-        uses: actions/checkout@v3.5.3
+        uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
 
@@ -33,8 +33,8 @@ jobs:
           python .github/workflows/fix_readme_links.py
           git diff
           git config user.name "isGeekCode"
-          git config user.email "ptuguitar@naver.com"
+          git config user.email "h1guitar@naver.com"
           git add README.md
-          git commit -m "Fix README links"  -a || exit 0
+          git commit -m "Fix README TOC update"  -a || exit 0
           git push
 
