@@ -186,5 +186,57 @@ for i in 0..<4 {
 
 > 이런 표현이 문제에 있다면 → 그래프 탐색 (DFS/BFS) 문제일 가능성 높음!
 
+--- 
 
+## 🔧 DFS & BFS 기본 Swift 템플릿
 
+### DFS - 재귀 방식
+
+```swift
+func dfs(_ graph: [[Int]], _ v: Int, _ visited: inout [Bool]) {
+    visited[v] = true
+    print(v, terminator: " ")
+
+    for next in graph[v] {
+        if !visited[next] {
+            dfs(graph, next, &visited)
+        }
+    }
+}
+```
+
+### BFS - 큐 사용 방식
+
+```swift
+func bfs(_ graph: [[Int]], _ start: Int) {
+    var visited = Array(repeating: false, count: graph.count)
+    var queue = [start]
+    visited[start] = true
+
+    while !queue.isEmpty {
+        let current = queue.removeFirst()
+        print(current, terminator: " ")
+
+        for next in graph[current] {
+            if !visited[next] {
+                visited[next] = true
+                queue.append(next)
+            }
+        }
+    }
+}
+```
+
+---
+
+## ❓ 언제 DFS를 재귀로 구현할 수 있을까?
+
+다음과 같은 조건을 만족하면 재귀 DFS로 충분히 구현 가능하다:
+
+- 그래프의 노드 수가 작다 (보통 10⁴ 이하)
+- 재귀 깊이가 깊지 않다 (1000 ~ 2000 이하)
+- 문제에서 **'모든 경로를 방문'**, **'깊이 우선'** 접근이 필요하다
+- 함수 호출 비용을 감수해도 되는 상황이다
+
+⚠️ 재귀 호출이 많을 경우 **스택 오버플로우 위험**이 있기 때문에,  
+특히 노드 수가 수만 개를 넘을 경우 반복문 기반의 DFS나 BFS로 전환하는 것이 안전하다.
