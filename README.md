@@ -14,11 +14,11 @@ _446 TILs and counting..._
 
 ### 5 most recent TILs
 
+- [AVFoundation - AVPlayer 사용하기: 업데이트](iOS-Foundation/AVFoundation_AVPlayer.md) - Tue May 8 15:47:43 2025 +0900
 - [애자일 방법론 (Agile Methodology) 이해하기](ComputerScience/methodology_agile.md) - Fri Mar 14 15:47:43 2025 +0900
 - [Swift Concurrency - Async / Await / Task](iOS-Concurrency/SwiftConcurrency_Overview.md) - Mon Mar 10 16:54:42 2025 +0900
 - [비동기처리가 필요한 이유](iOS-Concurrency/About_001_Async_vs_Concurrent_Concepts.md) - Mon Mar 10 16:54:20 2025 +0900
 - [동시성 프로그래밍 : Concurrency 톺아보기](iOS-Concurrency/GCD_001_Overview.md) - Mon Mar 10 16:54:20 2025 +0900
-- [GCD - performSelector를 이용한 비동기 작업](iOS-Concurrency/Concurrency_030_performSelector.md) - Mon Mar 10 16:54:20 2025 +0900
 
 ### Categories
 

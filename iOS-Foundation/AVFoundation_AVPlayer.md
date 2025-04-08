@@ -223,71 +223,9 @@ class ViewController: UIViewController {
 <br><br>
 
 ## KVO를 이용한 상태관리
-```swift
-import UIKit
-import AVFoundation
 
-class MoviePlayerController: UIViewController {
+AVPlayer의 상태를 감지하기 위해 `KVO`를 사용할 수 있으며, 더 나은 구조를 위해 아래의 [AVPlayer Observer 관리와 SOLID 설계](#avplayer-observer-관리와-solid-설계) 섹션에서 리팩토링 방법을 소개한다.
 
-    var player: AVPlayer?
-    var playerLayer: AVPlayerLayer?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupPlayer()
-    }
-
-    func setupPlayer() {
-        let urlStr = "http://down.humoruniv.com//hwiparambbs/data/editor/pdswait/e_s661a39002_846dd22bd05ecb889c61558314d4892c8b75978f.mp4"
-        guard let urlPath = URL(string: urlStr) else { return }
-        player = AVPlayer(url: urlPath)
-
-        // AVPlayerLayer 생성 및 설정
-        playerLayer = AVPlayerLayer(player: player)
-        playerLayer?.frame = view.bounds // 현재 뷰의 크기에 맞게 설정
-        view.layer.addSublayer(playerLayer!)
-
-        // 재생 완료 노티피케이션 감지
-        NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: player?.currentItem)
-
-        // 재생 상태 (KVO) 감지
-        player?.currentItem?.addObserver(self, forKeyPath: "status", options: [.new, .old], context: nil)
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        playerLayer?.frame = view.bounds // 뷰의 크기가 변경될 때마다 업데이트
-    }
-
-    @objc func playerDidFinishPlaying(note: NSNotification) {
-        print("Video Finished")
-    }
-
-    // KVO 처리
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "status",
-           let playerItem = object as? AVPlayerItem {
-            switch playerItem.status {
-            case .readyToPlay:
-                print("readyToPlay")
-                player?.play()
-            case .failed:
-                print("failed")
-            default:
-                break
-            }
-        }
-    }
-
-    deinit {
-        player?.currentItem?.removeObserver(self, forKeyPath: "status")
-        NotificationCenter.default.removeObserver(self)
-    }
-}
-
-```
-
-<br><br><br><br>
 
 # AVPlayerItem
 AVPlayerItem은 재생할 콘텐츠(비디오나 오디오) 자체의 정보와 상태를 나타낸다.  
@@ -387,11 +325,17 @@ DispatchQueue.main.async {
 ## 3. addBoundaryTimeObserver로 시간제어하기
 
 이 함수는 CMTime이라는 시간을 나타내는 구조체를 통해 특정시점을 세팅하고 캐치할 수 있게 한다. 
-
 CMTime을 NSValue로 파싱하고 그걸 Array에 담아 파라미터로 사용한다. 
+
+
+> addBoundaryTimeObserver로 등록한 옵저버는 반드시 나중에 removeTimeObserver(_:)로 해제해줘야 합니다.
+> 해제하지 않으면 메모리 누수나 중복 실행 등의 문제가 발생할 수 있습니다.
+> 반환된 토큰은 timeObserverToken에 저장해두고, 종료 시점에 player.removeTimeObserver(token)으로 제거하세요.
+
 
 ```swift
 let player = AVPlayer()
+var timeObserverToken: Any?
 
 // AVPlayerLayer Init
 let playerLayer = AVPlayerLayer(player: player)
@@ -413,12 +357,15 @@ let timeNSValue = NSValue(time: targetCMTime)
 let targetTimeArray = [timeNSValue]
 let mainQueue = DispatchQueue.main
 
-player.addBoundaryTimeObserver(forTimes: targetTimeArray, queue: mainQueue) {
+timeObserverToken =  player.addBoundaryTimeObserver(forTimes: targetTimeArray,
+                                                       queue: mainQueue) { [weak self] in
         // 캐치하는 시점에 실행할 함수세팅
-    self.splashViewDismiss() // dismiss처리함수
+    self?.splashViewDismiss() // dismiss처리함수
 }
 self.player.play()
 ```
+
+<br><br>
 
 ### 어레이에 여러 시간 세팅하기
 
@@ -436,13 +383,80 @@ targetTimeArray.append(targetNSValue3)
 let mainQueue = DispatchQueue.main
 
         
-player.addBoundaryTimeObserver(forTimes: targetTimeArray, queue: mainQueue) {
+timeObserverToken =  player.addBoundaryTimeObserver(forTimes: targetTimeArray,
+                                                       queue: mainQueue) { [weak self] in
     print("캐치")
-    self.player.pause()
+    self?.player.pause()
 //    테스트 
 //    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//        self.player.play()
+//        self?.player.play()
 //    }
 }
 self.player.play()
 ```
+
+<br><br>
+
+---
+
+## AVPlayer Observer 관리와 SOLID 설계
+
+복잡한 미디어 제어가 필요한 상황에서는 `AVPlayer`의 상태를 정밀하게 추적하고, 재생 종료 시점 등을 세밀하게 제어해야 한다. 이때 `KVO`와 `addBoundaryTimeObserver`를 사용하여 **재생 시작/종료 시점 감지**를 구현할 수 있으며, 이 로직을 SOLID 원칙에 따라 분리하면 유지보수성과 가독성이 크게 향상된다.
+
+<br><br>
+
+### ✅ KVO로 재생 준비 상태 감지하기
+
+```swift
+private func observePlayerStatus() {
+    player?.currentItem?.addObserver(self,
+                                     forKeyPath: #keyPath(AVPlayerItem.status),
+                                     options: [.old, .new],
+                                     context: &playerItemContext)
+}
+```
+
+<br><br>
+
+### ✅ BoundaryTimeObserver로 재생 종료 시점 감지
+
+```swift
+private func observePlaybackEnd(at time: CMTime) {
+    timeObserverToken = player?.addBoundaryTimeObserver(forTimes: [NSValue(time: time)], queue: .main) { [weak self] in
+        self?.handlePlaybackFinished()
+    }
+}
+```
+
+### ✅ 옵저버 해제 책임 분리
+
+```swift
+private func removePlayerStatusObserver() {
+    player?.currentItem?.removeObserver(self, forKeyPath: #keyPath(AVPlayerItem.status))
+}
+
+private func removePlaybackEndObserver() {
+    if let token = timeObserverToken {
+        player?.removeTimeObserver(token)
+        timeObserverToken = nil
+    }
+}
+```
+
+<br><br>
+
+### 🔍 SOLID 설계 이점
+
+- **단일 책임 원칙 (SRP)**: 등록/해제 책임을 명확히 나눔
+- **안정성**: 옵저버 해제를 누락하거나 중복 제거하는 실수를 방지
+- **가독성**: `observePlayerStatus()` / `removePlayerStatusObserver()` 등으로 목적이 명확해짐
+
+> AVPlayer를 확장성 있게 다루고 싶다면 이처럼 명확한 옵저버 관리 구조를 설계하는 것이 중요하다.
+
+
+<br><br>
+
+## History 
+- 231219 : 초안작성
+- 231228 : 해설 추가
+- 250408 : AVPlayer Observer 관리와 SOLID 설계
