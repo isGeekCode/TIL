@@ -14,11 +14,11 @@ _446 TILs and counting..._
 
 ### 5 most recent TILs
 
+- [Git 브랜치 전략 3종 요약 (Git Flow / GitHub Flow / GitLab Flow)](Git/Git_030_BranchStrategy.md) - 화 May 15
 - [AVFoundation - AVPlayer 사용하기: 업데이트](iOS-Foundation/AVFoundation_AVPlayer.md) - Tue May 8 15:47:43 2025 +0900
 - [애자일 방법론 (Agile Methodology) 이해하기](ComputerScience/methodology_agile.md) - Fri Mar 14 15:47:43 2025 +0900
 - [Swift Concurrency - Async / Await / Task](iOS-Concurrency/SwiftConcurrency_Overview.md) - Mon Mar 10 16:54:42 2025 +0900
 - [비동기처리가 필요한 이유](iOS-Concurrency/About_001_Async_vs_Concurrent_Concepts.md) - Mon Mar 10 16:54:20 2025 +0900
-- [동시성 프로그래밍 : Concurrency 톺아보기](iOS-Concurrency/GCD_001_Overview.md) - Mon Mar 10 16:54:20 2025 +0900
 
 ### Categories
 
@@ -191,6 +191,7 @@ _446 TILs and counting..._
 - [Flutter - Installation](Flutter/Installation_flutter.md)
 
 ### [Git](#git)
+- [Git 브랜치 전략 3종 요약 (Git Flow / GitHub Flow / GitLab Flow)](Git/Git_030_BranchStrategy.md)
 - [Git Actions - Permission to ....git denied to github-actions](Git/GitAction_tokenError.md)
 - [Git - 튜토리얼(1) : 브랜치 생성하기. 리스트 확인, 브랜치 체크아웃](Git/Git_001_tutorial_checkout.md)
 - [Git - 튜토리얼(2) : pull, fetch](Git/Git_002_pull.md)
