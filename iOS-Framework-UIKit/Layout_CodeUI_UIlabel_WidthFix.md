@@ -15,7 +15,7 @@ UILabel의 intrinsicContentSize로 인한 가변 폭 문제와 고정 길이 대
 특히 숫자처럼 **문자 폭이 가변적인 콘텐츠**는 `intrinsicContentSize`에 따라 자동 너비가 설정되면 들쭉날쭉한 UI를 유발할 수 있다. 이는 디자인적으로 불균형을 주고, 데이터 간 비교나 가독성을 떨어뜨린다.
 
 아래 이미지를 보자.  
-
+   
 
 <img src="https://i.imgur.com/FDdykX6.png" width="300" />
 
