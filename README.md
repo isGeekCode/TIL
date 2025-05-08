@@ -14,11 +14,11 @@ _446 TILs and counting..._
 
 ### 5 most recent TILs
 
+- [Layout - CodeUI: UILabel 고정폭 지정 이유 및 방법](iOS-Framework-UIKit/Layout_CodeUI_UILabel_WidthFix.md) - 목 May 8
 - [Git 브랜치 전략 3종 요약 (Git Flow / GitHub Flow / GitLab Flow)](Git/Git_030_BranchStrategy.md) - 화 May 15
 - [AVFoundation - AVPlayer 사용하기: 업데이트](iOS-Foundation/AVFoundation_AVPlayer.md) - Tue May 8 15:47:43 2025 +0900
 - [애자일 방법론 (Agile Methodology) 이해하기](ComputerScience/methodology_agile.md) - Fri Mar 14 15:47:43 2025 +0900
 - [Swift Concurrency - Async / Await / Task](iOS-Concurrency/SwiftConcurrency_Overview.md) - Mon Mar 10 16:54:42 2025 +0900
-- [비동기처리가 필요한 이유](iOS-Concurrency/About_001_Async_vs_Concurrent_Concepts.md) - Mon Mar 10 16:54:20 2025 +0900
 
 ### Categories
 
@@ -400,6 +400,7 @@ _446 TILs and counting..._
 - [Layout - CGRectMake는 뭘까](iOS-Framework-UIKit/Layout_CGRectMake.md)
 - [Layout - CodeUI: CustomShadow(feat.CustomClass)](iOS-Framework-UIKit/Layout_CodeUI_CustomShadow.md)
 - [Layout - CodeUI: UIView, UILabel](iOS-Framework-UIKit/Layout_CodeUI_UILabel_UIView.md)
+- [Layout - CodeUI: UILabel 고정폭 지정 이유 및 방법](iOS-Framework-UIKit/Layout_CodeUI_UILabel_WidthFix.md)
 - [Layout - 이미지 컨텐츠 모드 (ContentMode)](iOS-Framework-UIKit/Layout_ImageContentMode.md)
 - [Layout - StoryboardUI: CornerRadius](iOS-Framework-UIKit/Layout_StoryboardUI_CornerRadius.md)
 - [UIAlert 어디서든 띄우기](iOS-Framework-UIKit/Layout_UIAlert.md)
