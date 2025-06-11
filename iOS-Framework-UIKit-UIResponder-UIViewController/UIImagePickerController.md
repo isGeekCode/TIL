@@ -1,4 +1,4 @@
-# TIL - UIImagePickerController 사용법 정리
+# UIImagePickerController 사용법 정리
 
 ## 📌 오늘의 주제
 **UIImagePickerController**를 이용한 기본적인 사진 선택 기능 구현

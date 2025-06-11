@@ -244,3 +244,4 @@ class ViewController: UIViewController {
 
 ### History
 - 230601 : 생성
+- 250611 : UIViewController 상속 메뉴로 이동
