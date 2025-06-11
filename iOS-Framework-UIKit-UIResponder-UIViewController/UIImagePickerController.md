@@ -51,6 +51,15 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
 <string>사진 접근을 허용해주세요.</string>
 ```
 
+
+5. 취소하는 경우 처리
+```swift
+func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    print(#function)
+    picker.dismiss(animated: true)
+}
+
+```
 ---
 
 ## 💡 주의할 점
