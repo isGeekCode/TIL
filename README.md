@@ -34,6 +34,7 @@ _446 TILs and counting..._
 - [Flutter](#flutter)
 - [Git](#git)
 - [Insight](#insight)
+- [Lang-Dart](#lang-dart)
 - [Lang-Android](#lang-android)
 - [Lang-Ruby](#lang-ruby)
 - [Sample-App-List](#sample-app-list)
@@ -226,7 +227,7 @@ _446 TILs and counting..._
 - [Android - WebView : 앱에서 웹으로 JavaScript 보내기](Lang-Android/Android_WebView_Sending_JS.md)
 
 ### [Lang-Dart](#lang-dart)
-- [Install: Dart](Lang-Dart/Install_dart.md)
+- [Intro: Dart](Lang-Dart/Intro_dart.md)
 
 ### [Lang-Ruby](#lang-ruby)
 - [Install: Ruby](Lang-Ruby/Install_Ruby.md)
