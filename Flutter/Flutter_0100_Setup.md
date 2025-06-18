@@ -1,29 +1,40 @@
-# Flutter - 세팅하기
+# Flutter - 설치 및 환경 세팅 가이드
 
-## 1. Flutter  환경 세팅
-
-## 1. 1. Flutter 설치
-- 1.1.1. Homebrew로 설치하는 방법
-- 1.1.2. 수동으로 설치하는 방법
-- 1.1.3. FVM으로 설치하는 방법
+## 1. 필요한 도구 정리
+- Android Studio  
+- Xcode  
+- Chrome  
+- VSCode  
+- Flutter SDK  
+- VSCode Extension - Flutter  (필수아님)
 
 
 <br><br>
 
-### 1.1.1. Homebrew로 설치하는 방법
+## 2. Flutter SDK 설치
 
-- Step1. brew 설치
-- Step2. brew에서 flutter 설치 진행
+### 2.1. 설치 방법 요약
+- 2.1.1. Homebrew로 설치  
+- 2.1.2. 수동 설치  
+- 2.1.3. FVM으로 설치 (공식 권장 방식)  
+
+
+<br><br>
+
+### 2.1.1. Homebrew 설치
+
+- Step1. brew 설치  
+- Step2. brew에서 flutter 설치 진행  
+
 ```
 brew install --cask flutter
 ```
 
-- Step3. 설치 후 세팅은  2. Flutter 세팅에서 진행
-
+- Step3. 설치 후 세팅은  3. 설치 확인 및 진단 도구에서 진행  
 
 <br><br>
 
-### 1.1.2. 수동으로 설치하는 방법
+### 2.1.2. 수동으로 설치하는 방법
 fvm으로 관리하지않는 한, Flutter에서는 공식적으로 이 방법을 추천한다. 
 - Step1. [Flutter 공식 사이트](https://flutter.dev/docs/get-started/install/macos)에서 stable버전 다운로드
 - Step2. 다운받은 파일을 원하는 위치에 합축해제 (예: `/{원하는 폴더}/flutter`)
@@ -31,7 +42,7 @@ fvm으로 관리하지않는 한, Flutter에서는 공식적으로 이 방법을
     - 참고 : Users 를 포함한 전체경로로 설정하지 않는 경우 인식하지 못할 수 있음
     - `export PATH="$PATH:{원하는 폴더}/flutter/bin"`
     - `source .zshrc` 로 반영
-- Step4. 설치 확인 : 1.2. 설치 확인 및 관련 세팅 에서 진행
+- Step4. 설치 확인 : 3. 설치 확인 및 진단 도구에서 진행  
 
 ```
 $flutter --version
@@ -44,7 +55,7 @@ Tools • Dart 3.8.1 • DevTools 2.45.1
 
 <br><br>
 
-###  1.1.3. FVM으로 설치하는 방법
+###  2.1.3. FVM으로 설치하는 방법
 
 - [FVM 공식 사이트](https://fvm.app/)
 
@@ -55,7 +66,7 @@ Tools • Dart 3.8.1 • DevTools 2.45.1
 
 <br><br>
 
-#### 1.1.3.1. 독립적 설치
+#### 2.1.3.1. 독립적 설치
 ```
 // 설치하기
 brew tap leoafarias/fvm
@@ -68,8 +79,8 @@ brew remove fvm
 
 <br><br>
 
-#### 1.1.3.2. Pub Package를 이용한 설치
-해당 방법으로도 설치가 가능하지만 FVM을 이용하여  전역 Flutter 설치를 관리할 계획이라면 독립형으로 설치하여 관리하는 것을 추천.
+#### 2.1.3.2. Pub Package를 이용한 설치
+해당 방법으로도 설치가 가능하지만 FVM을 이용하여 전역 Flutter 설치를 관리할 계획이라면 독립형으로 설치하여 관리하는 것을 추천.
 -  [pub 공식 다운로드 경로](https://pub.dev/packages/fvm)
 - 해당 경로에서 
 - 설치 후 아래 명령어로 global하게 활성화
@@ -78,9 +89,9 @@ dart pub global activate fvm
 ```
 
 
-## 1.2. 설치 확인 및 관련 세팅
-### 1.2.1. Flutter 설치 확인
-#### 1.2.1.1. FVM 이외의 설치 환경
+## 2.2. 설치 확인 및 관련 세팅
+### 2.2.1. Flutter 설치 확인
+#### 2.2.1.1. FVM 이외의 설치 확인
 -> FVM외의 환경이라면 이미 설치한 버전이 정해져있기 때문에 다운받은 버전으로 설치가 확인되어야 합니다.
 
 ```
@@ -93,7 +104,7 @@ flutter --version
 
 <br><br>
 
-#### 1.2.1.2. FVM 환경 설치 및 사용
+#### 2.2.1.2. FVM 환경 설치 및 사용
 - Step1. 설치할 폴더로 이동
 - Step2. 사용가능한 Release 확인
 ```
@@ -125,8 +136,11 @@ fvm flutter --version
 
 <br><br>
 
-### 1.2.2. Flutter Doctor
-Flutter는 사용하기위한 환경의 세팅 여부를 확인할 수있도록 flutter doctor라는 것을 지원한다. 
+### 2.2.2. Flutter Doctor
+Flutter는 사용하기위한 환경의 세팅 여부를 확인할 수있도록 flutter doctor라는 것을 지원한다.   
+
+  
+  
 ```
 // 일반 설치
 flutter doctor
@@ -137,8 +151,10 @@ fvm flutter doctor
 
 <br><br>
 
+flutter doctor를 통해 아래 내용을 확인한다.  
 
-flutter doctor를 통해 아래 내용을 확인한다.
+<br>
+  
 - Apple 환경 확인 
     - Xcode설치(필수) : 
         - 환경세팅
@@ -167,7 +183,7 @@ flutter doctor를 통해 아래 내용을 확인한다.
 
 <br><br>
 
-### 1.2.3. IDE 설정 
+### 2.2.3. 개발 IDE 설치 
 -  IDE에 Dart / Flutter 설치하기
     - VSCode로 개발하는 경우
         - Extension에서 Flutter만 설치하면 된다.
@@ -188,8 +204,8 @@ VSCode 사용시 추천 확장프로그램
 
 <br><br>
 
-## 1.3. Flutter 삭제하기
-### 1.3.1. FVM을 사용한 경우
+## 2.3. Flutter 삭제하기
+### 2.3.1. FVM을 사용한 경우
 - Step1. 플러터 삭제
 ```
 // 특정 버전 삭제하기
@@ -207,15 +223,15 @@ brew remove fvm
 
 <br><br>
 
-###  1.3.2. 작업한 IDE에서 삭제하기
+###  2.3.2. 작업한 IDE에서 삭제하기
 - VSCode : 설치한 extension 에서 삭제
 - Android Studio : 설치한  PlugIn에서 삭제
 
 <br><br>
 
-## 1.4. 프로젝트 구성
-### 1.4.1. 프로젝트 생성
-#### 1.4.1.1. 프로젝트 생성하기
+## 2.4. 프로젝트 구성
+### 2.4.1. 프로젝트 생성
+#### 2.4.1.1. 프로젝트 생성하기
 기본적인 프로젝트 네이밍은 대문자 및 특수문자를 포함할 수 없습니다. 허용되는 특수문자는 `_`만 가능하기 때문에
 소문자로만  혹은 camel case 로 네이밍을 할 수 있습니다. 
 
@@ -255,7 +271,7 @@ cd my_first_app
 
 <br><br>
 
-#### 1.4.1.2. SDK 경로 설정하기 
+#### 2.4.1.2. SDK 경로 설정하기 
 - FVM 을 사용하는 경우
     - `/{해당 프로젝트 폴더}/.fvm/flutter_sdk`
 - 일반 설치인경우
@@ -263,7 +279,7 @@ cd my_first_app
 
 <br><br>
 
-### 1.4.3. 플러터 실행하기
+### 2.4.3. 플러터 실행하기
 IDE를 사용하는 경우 해당 플러그인이 설치되어있다면 GUI 를 통해 조작이 가능합니다.
 
 최초 정상 실행 성공하면 sample앱인 countapp이 실행됩니다. 
