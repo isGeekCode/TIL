@@ -30,7 +30,7 @@
 brew install --cask flutter
 ```
 
-- Step3. 설치 후 세팅은  3. 설치 확인 및 진단 도구에서 진행  
+- Step3. 설치 후 세팅은  `2.2 설치 확인 및 진단 도구`에서 이어서 진행
 
 <br><br>
 
@@ -42,7 +42,7 @@ fvm으로 관리하지않는 한, Flutter에서는 공식적으로 이 방법을
     - 참고 : Users 를 포함한 전체경로로 설정하지 않는 경우 인식하지 못할 수 있음
     - `export PATH="$PATH:{원하는 폴더}/flutter/bin"`
     - `source .zshrc` 로 반영
-- Step4. 설치 확인 : 3. 설치 확인 및 진단 도구에서 진행  
+- Step4. 설치 확인 : `2.2 설치 확인 및 진단 도구`에서 이어서 진행  
 
 ```
 $flutter --version
@@ -248,8 +248,7 @@ cd my_first_app
 <br><br>
 
 ##### VSCode이용한 생성
-`1.2.3. IDE설정`  선행작업 필요
-
+`2.2.3. 개발 IDE 설치`  선행작업 필요
 1. Visual Studio Code를 실행합니다.
 2. Command Palette(`Ctrl+Shift+P` 또는 `Cmd+Shift+P`)를 열고 “Flutter: New Project”를 입력하고 선택합니다.
 3. 프로젝트 이름을 입력합니다 (예: “my_first_app”).
@@ -260,7 +259,7 @@ cd my_first_app
 
 ##### 안드로이드 스튜디오를 이용한 생성
 
-`1.2.3. IDE설정`  선행작업 필요
+`2.2.3. 개발 IDE 설치`  선행작업 필요
 
 1. Android Studio를 실행합니다.
 2. “Create New Flutter Project”를 선택합니다.
@@ -324,7 +323,7 @@ flutter run --release
 
 <br><br>
 
-### 1.4.4. 플러터 빌드하기
+### 2.4.4. 플러터 빌드하기
 
 개발이 완료된 앱을 배포 가능한 형태로 빌드하려면 다음 명령어를 사용합니다:
 
