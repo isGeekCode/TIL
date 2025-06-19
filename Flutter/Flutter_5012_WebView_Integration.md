@@ -1,13 +1,21 @@
-# Flutter - WebView 생성하기
+# Flutter - 웹뷰구현 : webview_flutter 세팅
+
+[릴리즈 노트](https://pub.dev/packages/webview_flutter)
+
 
 **Flutter에서 웹뷰(WebView)** 를 이용해 앱을 켜자마자  
 **네이버 홈페이지(https://www.naver.com)** 를 보여주는 가장 간단한 방법 
+
+> 제한사항 : http 도메인이나 자바스크립트 등에 있어서 사용하기에 (커스텀하기)복잡하다.  그러니 간단한 거라면 추천
+> 만약 커스텀이 필요하다면 inappWebView로 진행할 것
+
+
 
 ---
 
 ## 1단계: webview_flutter 패키지 설치하기
 
-`pubspec.yaml` 파일을 열고 아래 내용을 `dependencies:` 아래에 추가해요:
+`pubspec.yaml` 파일을 열고 아래 내용을 `dependencies:` 아래에 추가:
 
 ```yaml
 dependencies:
@@ -16,7 +24,7 @@ dependencies:
   webview_flutter: ^4.4.2
 ```
 
-※ 저장하면 자동으로 설치되거나, 안 되면 터미널에서 아래 명령어를 입력해요:
+※ 저장하면 자동으로 설치되거나, 안 되면 터미널에서 아래 명령어를 입력:
 
 ```bash
 flutter pub get
@@ -99,24 +107,6 @@ class _WebViewPageState extends State<WebViewPage> {
 }
 ```
 
----
 
-## ✅ 4단계: 실행하기
-
-이제 아래 명령어로 앱을 실행해요:
-
-```bash
-flutter run
-```
-
-기기가 연결돼 있다면 바로 네이버가 뜰 거예요!  
-시뮬레이터에서도 잘 보여요.
-
----
-
-## 📝 마무리
-
-이렇게 하면 별다른 버튼 없이,  
-**앱을 켜자마자 웹페이지가 바로 뜨는 Flutter 앱**이 완성돼요!
-
-다음 글에서는 이 웹뷰에 뒤로가기 버튼을 달거나, 로딩 중 표시를 넣는 방법도 소개할게요 :)
+## History
+- 250619: 초안작성
