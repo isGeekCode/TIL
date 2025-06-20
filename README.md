@@ -12,7 +12,7 @@ _446 TILs and counting..._
 
 ---
 
-### 5 most recent TILs
+## 5 most recent TILs
 
 - [PHPickerController 사용하기-iOS14이상](iOS-Framework-UIKit-UIResponder-UIViewController/PHPickerViewController.md) - 수 May 11
 - [UIImagePickerController 사용하기-iOS14미만](iOS-Framework-UIKit-UIResponder-UIViewController/UIImagePickerController.md) - 수 May 11
@@ -20,7 +20,7 @@ _446 TILs and counting..._
 - [Git 브랜치 전략 3종 요약 (Git Flow / GitHub Flow / GitLab Flow)](Git/Git_030_BranchStrategy.md) - 화 May 15
 - [AVFoundation - AVPlayer 사용하기: 업데이트](iOS-Foundation/AVFoundation_AVPlayer.md) - Tue May 8 15:47:43 2025 +0900
 
-### Categories
+## Categories
 
 - [A_Writing_in_Progress](#a_writing_in_progress)
 - [About-AI](#about-ai)
@@ -68,6 +68,12 @@ _446 TILs and counting..._
 - [Mobile-Android](#mobile-android)
 - [Mobile-Flutter](#mobile-flutter)
 
+<br><br>
+
+---
+
+## Detail TILs
+
 ### [A_Writing_in_Progress](#a_writing_in_progress)
 - [Design Pattern - Command 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Command.md)
 - [Design Pattern - Composite 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Composite.md)
@@ -81,11 +87,15 @@ _446 TILs and counting..._
 - [Integrity - Secure Enclave](A_Writing_in_Progress/Integrity_secureEnclave.md)
 - [소켓이란](A_Writing_in_Progress/TIL220420_socket.md)
 
+<br><br>
+
 ### [About-AI](#about-ai)
 - [딥러닝이란](About-AI/DeepLearning.md)
 - [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md)
 - [요즘 핫한 GPT로 앱만들어보기](About-AI/MVVM_ReactorKit_Snapkit_RxSwift.md)
 - [언어모델이란](About-AI/chatGPT.md)
+
+<br><br>
 
 ### [About-Error](#about-error)
 - [[StoryBoard] - Unknown class ViewControllerC in Interface Builder file](About-Error/StoryBoard_InheritModuleFromTarget.md)
@@ -558,7 +568,7 @@ _446 TILs and counting..._
 - [Flutter - 문서 구조 가이드](Mobile_03_Flutter/Flutter_0000_Document_Guide.md)
 - [Flutter - 설치 및 환경 세팅 가이드](Mobile_03_Flutter/Flutter_0100_Setup.md)
 - [Flutter - 기본 위젯 4종 (Text, Icon, Image, Box)](Mobile_03_Flutter/Flutter_1000_Basic_4_Widget.md)
-- [Flutter - Dart: Intro)](Mobile_03_Flutter/Flutter_0500_Dart_Intro.md)
+- [Flutter - Dart: Intro](Mobile_03_Flutter/Flutter_0500_Dart_Intro.md)
 - [Flutter - Drawer : GNB / 사이드바](Mobile_03_Flutter/Flutter_Drawer.md)
 - [Flutter - ListView](Mobile_03_Flutter/Flutter_ListView.md)
 - [Flutter - Toggle Switch](Mobile_03_Flutter/Flutter_ToggleSwitch.md)
