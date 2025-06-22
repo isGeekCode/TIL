@@ -12,61 +12,58 @@ _446 TILs and counting..._
 
 ---
 
-## 5 most recent TILs
-
-- [PHPickerController 사용하기-iOS14이상](iOS-Framework-UIKit-UIResponder-UIViewController/PHPickerViewController.md) - 수 May 11
-- [UIImagePickerController 사용하기-iOS14미만](iOS-Framework-UIKit-UIResponder-UIViewController/UIImagePickerController.md) - 수 May 11
-- [Layout - CodeUI: UILabel 고정폭 지정 이유 및 방법](iOS-Framework-UIKit/Layout_CodeUI_UILabel_Width_Fix.md) - 목 May 8  
-- [Git 브랜치 전략 3종 요약 (Git Flow / GitHub Flow / GitLab Flow)](Git/Git_030_BranchStrategy.md) - 화 May 15
-- [AVFoundation - AVPlayer 사용하기: 업데이트](iOS-Foundation/AVFoundation_AVPlayer.md) - Tue May 8 15:47:43 2025 +0900
-
 ## Categories
 
 - [A_Writing_in_Progress](#a_writing_in_progress)
 - [About-AI](#about-ai)
 - [About-Error](#about-error)
 - [About-IT](#about-it)
-- [Algorithm](#algorithm)
+- CS
+    - [Algorithm](#algorithm)
+    - [ComputerScience](#computerscience)
+- [Sample-App-List](#sample-app-list)
+- [Mobile-Common](#mobile-common)
+    - [Mobile-iOS](#mobile-ios)
+    - [Mobile-Android](#mobile-android)
+    - [Mobile-Flutter](#mobile-flutter)
+- Other Languages
+    - [Lang-Ruby](#lang-ruby)
+- Legacy-iOS
+    - [iOS-AppStore](#ios-appstore)
+    - [iOS-Architecture](#ios-architecture)
+    - [iOS-Concurrency](#ios-concurrency)
+    - [iOS-CustomLogic](#ios-customlogic)
+    - [iOS-Development](#ios-development)
+    - [iOS-Environment](#ios-environment)
+    - [iOS-Extensions](#ios-extensions)
+    - [iOS-Foundation](#ios-foundation)
+    - [iOS-Framework-CoreAnimation](#ios-framework-coreanimation)
+    - [iOS-Framework-CoreLocation](#ios-framework-corelocation)
+    - [iOS-Framework-Management](#ios-framework-management)
+    - [iOS-Framework-Migration](#ios-framework-migration)
+    - [iOS-Framework-PhotoKit](#ios-framework-photokit)
+    - [iOS-Framework-SwiftUI](#ios-framework-swiftui)
+    - [iOS-Framework-SwiftUI_UIKit](#ios-framework-swiftui_uikit)
+    - [iOS-Framework-UIKit](#ios-framework-uikit)
+    - [iOS-Framework-UIKit-UIResponder-UIApplication](#ios-framework-uikit-uiresponder-uiapplication)
+    - [iOS-Framework-UIKit-UIResponder-UIView-UIControl](#ios-framework-uikit-uiresponder-uiview-uicontrol)
+    - [iOS-Framework-UIKit-UIResponder-UIView-UIScrollView](#ios-framework-uikit-uiresponder-uiview-uiscrollview)
+    - [iOS-Framework-UIKit-UIResponder-UIViewController](#ios-framework-uikit-uiresponder-uiviewcontroller)
+    - [iOS-Hierachy](#ios-hierachy)
+    - [iOS-Integrity](#ios-integrity)
+    - [iOS-Lang-Objective-C](#ios-lang-objective-c)
+    - [iOS-Lang-Swift](#ios-lang-swift)
+    - [iOS-Library](#ios-library)
+    - [iOS-Networking](#ios-networking)
+    - [iOS-RelatedImage](#ios-relatedimage)
+    - [iOS-ScreenTranport](#ios-screentranport)
+    - [iOS-TDD](#ios-tdd)
 - [CI_CD](#ci_cd)
-- [ComputerScience](#computerscience)
-- [Conference](#conference)
 - [Docs](#docs)
 - [Git](#git)
 - [Insight](#insight)
-- [Lang-Ruby](#lang-ruby)
-- [Sample-App-List](#sample-app-list)
 - [Self-Review](#self-review)
-- [iOS-AppStore](#ios-appstore)
-- [iOS-Architecture](#ios-architecture)
-- [iOS-Concurrency](#ios-concurrency)
-- [iOS-CustomLogic](#ios-customlogic)
-- [iOS-Development](#ios-development)
-- [iOS-Environment](#ios-environment)
-- [iOS-Extensions](#ios-extensions)
-- [iOS-Foundation](#ios-foundation)
-- [iOS-Framework-CoreAnimation](#ios-framework-coreanimation)
-- [iOS-Framework-CoreLocation](#ios-framework-corelocation)
-- [iOS-Framework-Management](#ios-framework-management)
-- [iOS-Framework-Migration](#ios-framework-migration)
-- [iOS-Framework-PhotoKit](#ios-framework-photokit)
-- [iOS-Framework-SwiftUI](#ios-framework-swiftui)
-- [iOS-Framework-SwiftUI_UIKit](#ios-framework-swiftui_uikit)
-- [iOS-Framework-UIKit](#ios-framework-uikit)
-- [iOS-Framework-UIKit-UIResponder-UIApplication](#ios-framework-uikit-uiresponder-uiapplication)
-- [iOS-Framework-UIKit-UIResponder-UIView-UIControl](#ios-framework-uikit-uiresponder-uiview-uicontrol)
-- [iOS-Framework-UIKit-UIResponder-UIView-UIScrollView](#ios-framework-uikit-uiresponder-uiview-uiscrollview)
-- [iOS-Framework-UIKit-UIResponder-UIViewController](#ios-framework-uikit-uiresponder-uiviewcontroller)
-- [iOS-Hierachy](#ios-hierachy)
-- [iOS-Integrity](#ios-integrity)
-- [iOS-Lang-Objective-C](#ios-lang-objective-c)
-- [iOS-Lang-Swift](#ios-lang-swift)
-- [iOS-Library](#ios-library)
-- [iOS-Networking](#ios-networking)
-- [iOS-RelatedImage](#ios-relatedimage)
-- [iOS-ScreenTranport](#ios-screentranport)
-- [iOS-TDD](#ios-tdd)
-- [Mobile-Android](#mobile-android)
-- [Mobile-Flutter](#mobile-flutter)
+- [Conference](#conference)
 
 <br><br>
 
@@ -191,6 +188,14 @@ _446 TILs and counting..._
 - [Let us: Go! 2022 가을 - 221105(미참석)](Conference/Conference2022_LetUsGo2022_3Fall.md)
 - [iOS Daejeon Club - 230325(참석)](Conference/Conference2023_IOSDaejonCodingClub_230325.md)
 - [Let us: Go! 2023 봄 - 2304(미참석)](Conference/Conference2023_LetUSGo2023_1Spring.md)
+
+
+### [Mobile-Common](#mobile-common)
+- [App 공통 구성 요소 : Intro](Mobile_000_Common/Mobile_common_0000_intro.md)
+
+
+### [Mobile-iOS](#mobile-ios)
+
 
 ### [iOS-AppStore](#ios-appstore)
 - [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](iOS-AppStore/AppStore_AppDismiss.md)
@@ -575,6 +580,7 @@ _446 TILs and counting..._
 - [Flutter - 삼각형 View 그리기](Mobile_03_Flutter/Flutter_View_shape_triangle.md)
 - [Flutter - 웹뷰구현 : inappwebview 세팅(권장)](Mobile_03_Flutter/Flutter_5011_WebView_inappwebview.md)
 - [Flutter - 웹뷰구현 : webview_flutter 세팅](Mobile_03_Flutter/Flutter_5012_WebView_inappwebview.md)
+- [Flutter - iOS 릴리즈 빌드 및 .ipa 생성](Flutter_6101_iOS_IPA_Build_Manual.md)
 - [Flutter Error - Trouble Shooting Template](Mobile_03_Flutter/Flutter_8000_TroubleShoot_template.md)
 - [Flutter Error - WebView_PlatformNotSet : WebViewPlatform.instance 오류](Mobile_03_Flutter/Flutter_8101_WebView_PlatformNotSet.md)
 - [Flutter Error - WebView_NDKVersionMismatch : Android NDK 버전 불일치](Mobile_03_Flutter/Flutter_8102_WebView_NDKVersionMismatch.md)
