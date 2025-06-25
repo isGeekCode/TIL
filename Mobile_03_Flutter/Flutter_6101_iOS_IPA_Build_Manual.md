@@ -1,6 +1,6 @@
 # Flutter-iOS 릴리즈 빌드 및 .ipa 수동 생성 가이드
 
-이 문서는 Flutter 프로젝트에서 `fvm`을 사용하여 iOS용 `.ipa` 파일을 수동으로 생성하는 절차를 설명합니다.
+이 문서는 Flutter 프로젝트에서 iOS용 `.ipa` 파일을 수동으로 생성하는 절차를 설명합니다.
 
 
 <br><br>
@@ -30,13 +30,40 @@ Flutter iOS 앱을 실기기 테스트 또는 Apple Configurator 배포를 위�
 
 ## 🔧 빌드 및 패키징 절차
 
-### 1. 릴리즈 빌드 수행
+### 1. iOS 빌드 종류 및 실행 방법
 
-```bash
-fvm flutter build ios --release
+Flutter에서 iOS 빌드는 주로 `Release` 모드로 진행되며, 기본 설정도 `--release`입니다. 필요에 따라 `--debug`, `--profile` 옵션도 사용할 수 있습니다.
+
+#### ▸ Release 빌드 (기본)
+
+```
+// 일반
+flutter build ios           
+
+// 동일 
+flutter build ios --release
+
+// fvm 사용 시
+fvm flutter build ios
 ```
 
 - 결과: `build/ios/iphoneos/Runner.app` 생성
+- 실기기 설치, 배포, TestFlight, App Store 제출용
+
+#### ▸ Debug 빌드
+
+```bash
+// 일반
+flutter build ios --debug
+
+// fvm 사용 시
+fvm flutter build ios --debug
+```
+
+- 결과: `build/ios/iphoneos/Runner.app` 생성
+- 디버깅 목적용이며 `.ipa` 패키징이나 배포에는 적합하지 않음
+
+> ⚠️ 참고: `flutter run`은 자동으로 `debug` 모드 빌드를 사용함
 
 ### 2. `.ipa` 파일 수동 생성
 
