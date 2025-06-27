@@ -190,9 +190,9 @@ _446 TILs and counting..._
 <details>
 <summary> 🔌 기본 제공 프레임워크 기반 기능 활용 </summary>
 
-    - [Media & Camera](#media--camera) : 이미지, 비디오, 카메라 활용  
-    - [Sharing & Files](#sharing--files) : 공유 기능, 파일 다운로드 처리  
-    - [Contacts & Location](#contacts--location) : 연락처, 위치 권한 및 연동  
+- [Media & Camera](#media--camera) : 이미지, 비디오, 카메라 활용  
+- [Sharing & Files](#sharing--files) : 공유 기능, 파일 다운로드 처리  
+- [Contacts & Location](#contacts--location) : 연락처, 위치 권한 및 연동  
 </details>
 
 ---
@@ -206,7 +206,7 @@ _446 TILs and counting..._
 
 </details>
 
----
+
 
 <details>
 <summary> 🛡 보안 및 데이터 저장 기술   </summary>
@@ -217,7 +217,7 @@ _446 TILs and counting..._
 </details>
 
 
----
+
 
 <details>
 <summary> 🔔 푸시 알림 및 백그라운드 처리 </summary>
@@ -226,7 +226,7 @@ _446 TILs and counting..._
 - [Background Tasks](#background-tasks) : Background Fetch, Task 처리  
 </details>
 
----
+
 
 <details>
 <summary>  🧪 앱 테스트 구성 요소  </summary>
@@ -254,6 +254,7 @@ _446 TILs and counting..._
 - [CI/CD Pipeline](#ci-cd-pipeline) : 자동화된 테스트 및 배포 흐름 
 
 </details>
+
 ---
 
 <details>
