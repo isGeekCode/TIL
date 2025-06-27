@@ -167,7 +167,7 @@ _446 TILs and counting..._
 </details>
 
 <details open>
-<summary>&nbsp;&nbsp;&nbsp;&nbsp; 화면 구조 및 전환 </summary> 
+<summary>&nbsp;&nbsp;&nbsp;&nbsp; 🧭 화면 전환 & 네비게이션 비교 : UIKit과 SwiftUI의 화면 이동 구조</summary>
 
 - [ViewController & Screen Transition](#viewcontroller--screen-transition) : UIKit & SwiftUI의 화면 전환 구조  
 - [Navigation / Modal / Tab](#navigation--modal--tab) : 두 프레임워크의 화면 이동 방식 비교  
