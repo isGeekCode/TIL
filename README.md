@@ -178,17 +178,20 @@ _446 TILs and counting..._
 
 <details open>
 <summary> 🌐 네트워크 통신 및 비동기 처리 구성 요소  </summary>
+
 - [Networking](#networking) : URLSession, Alamofire 등 iOS 네트워크 통신 구성  
 - [JSON & Codable](#json--codable) : Codable을 활용한 데이터 직렬화 / 역직렬화  
 - [Concurrency](#concurrency) : GCD, OperationQueue, async/await 기반 동시성 처리  
 </details>
+
 ---
 
-- 🔌 [Apple Frameworks](#apple-frameworks) : 기본 제공 프레임워크 기반 기능 활용  
+<details open>
+<summary> 🔌 기본 제공 프레임워크 기반 기능 활용 </summary>
     - [Media & Camera](#media--camera) : 이미지, 비디오, 카메라 활용  
     - [Sharing & Files](#sharing--files) : 공유 기능, 파일 다운로드 처리  
     - [Contacts & Location](#contacts--location) : 연락처, 위치 권한 및 연동  
-
+</details>
 ---
 
 - 🧰 [Utilities](#utilities) : 개발 보조 도구 및 구성 관리  
