@@ -168,7 +168,7 @@ _446 TILs and counting..._
 - [SwiftUI - Layout & Modifier](#swiftui--layout--modifier) : ViewBuilder, Modifier 체계  
 </details>
 
-<details open>
+<details>
 <summary>🧭 화면 전환 & 네비게이션 비교 : UIKit과 SwiftUI의 화면 이동 구조</summary>
 
 - [ViewController & Screen Transition](#viewcontroller--screen-transition) : UIKit & SwiftUI의 화면 전환 구조  
@@ -178,7 +178,7 @@ _446 TILs and counting..._
 
 ---
 
-<details open>
+<details>
 <summary> 🌐 네트워크 통신 및 비동기 처리 구성 요소  </summary>
 
 - [Networking](#networking) : URLSession, Alamofire 등 iOS 네트워크 통신 구성  
@@ -186,10 +186,10 @@ _446 TILs and counting..._
 - [Concurrency](#concurrency) : GCD, OperationQueue, async/await 기반 동시성 처리  
 </details>
 
----
 
-<details open>
+<details>
 <summary> 🔌 기본 제공 프레임워크 기반 기능 활용 </summary>
+
     - [Media & Camera](#media--camera) : 이미지, 비디오, 카메라 활용  
     - [Sharing & Files](#sharing--files) : 공유 기능, 파일 다운로드 처리  
     - [Contacts & Location](#contacts--location) : 연락처, 위치 권한 및 연동  
@@ -197,53 +197,71 @@ _446 TILs and counting..._
 
 ---
 
-<details open>
+<details>
 <summary> 🧰 개발 보조 도구 및 구성 관리  </summary>
 
 - [3rd Party Libraries](#3rd-party-libraries) : CocoaPods, Swift Package Manager 관리  
 - [Environment Configuration](#environment-configuration) : .xcconfig, Scheme, Flavor 구성  
 - [Debugging & Performance](#debugging--performance) : 디버깅 도구 및 성능 최적화  
+
 </details>
 
 ---
 
-- 🛡 [Security & Persistence](#security--persistence) : 보안 및 데이터 저장 기술  
-    - [Storage Options](#storage-options) : Keychain, UserDefaults, CoreData  
-    - [Biometrics](#biometrics) : Face ID / Touch ID 연동  
+<details>
+<summary> 🛡 보안 및 데이터 저장 기술   </summary>
+
+- [Storage Options](#storage-options) : Keychain, UserDefaults, CoreData  
+- [Biometrics](#biometrics) : Face ID / Touch ID 연동  
+    
+</details>
+
 
 ---
 
-- 🔔 [Push & Background](#push--background) : 푸시 알림 및 백그라운드 처리  
-    - [Push Notification](#push-notification) : APNs 설정 및 메시지 처리  
-    - [Background Tasks](#background-tasks) : Background Fetch, Task 처리  
+<details>
+<summary> 🔔 푸시 알림 및 백그라운드 처리 </summary>
+
+- [Push Notification](#push-notification) : APNs 설정 및 메시지 처리  
+- [Background Tasks](#background-tasks) : Background Fetch, Task 처리  
+</details>
 
 ---
 
-- 🧪 [Testing](#testing) : 앱 테스트 구성 요소  
-    - [Unit & UI Test](#unit--ui-test) : XCTest 기반 단위 및 UI 테스트  
-    - [Snapshot Testing](#snapshot-testing) : UI 정합성 확인을 위한 스냅샷 테스트  
+<details>
+<summary>  🧪 앱 테스트 구성 요소  </summary>
 
+- [Unit & UI Test](#unit--ui-test) : XCTest 기반 단위 및 UI 테스트  
+- [Snapshot Testing](#snapshot-testing) : UI 정합성 확인을 위한 스냅샷 테스트  
+</details>
+
+
+<details>
+<summary> 🏗 앱 설계 및 구조화 전략  </summary>
+
+- [Architecture Patterns](#architecture-patterns) : MVC, MVVM, VIPER 구조  
+- [Clean Architecture](#clean-architecture) : 의존성 분리 및 클린 코드 구조  
+- [Modularization](#modularization) : 모듈 단위 분리 전략  
+    
+</details>
+
+<details>
+<summary>🚀 배포 및 운영 자동화 전략   </summary>
+
+- [Build & Distribution](#build--distribution) : 앱 서명, 빌드, 스토어 배포  
+- [Monitoring Tools](#monitoring-tools) : Firebase, Sentry 등 모니터링 연동  
+- [App Store Submission](#app-store-submission) : 리뷰 대응, 정책 이해  
+- [CI/CD Pipeline](#ci-cd-pipeline) : 자동화된 테스트 및 배포 흐름 
+
+</details>
 ---
 
-- 🏗 [App Architecture](#app-architecture) : 앱 설계 및 구조화 전략  
-    - [Architecture Patterns](#architecture-patterns) : MVC, MVVM, VIPER 구조  
-    - [Clean Architecture](#clean-architecture) : 의존성 분리 및 클린 코드 구조  
-    - [Modularization](#modularization) : 모듈 단위 분리 전략  
-
----
-
-- 🚀 [Deployment & Operation](#deployment--operation) : 배포 및 운영 자동화 전략  
-    - [Build & Distribution](#build--distribution) : 앱 서명, 빌드, 스토어 배포  
-    - [Monitoring Tools](#monitoring-tools) : Firebase, Sentry 등 모니터링 연동  
-    - [App Store Submission](#app-store-submission) : 리뷰 대응, 정책 이해  
-    - [CI/CD Pipeline](#ci-cd-pipeline) : 자동화된 테스트 및 배포 흐름  
-
----
-
-- 🧯 [Troubleshooting](#troubleshooting) : 앱 문제 해결 전략  
+<details>
+<summary>🧯 문제 해결 </summary>
     - [Log Analysis](#log-analysis) : 로그 기반 이슈 추적 및 원인 분석  
     - [Crash Handling](#crash-handling) : 크래시 수집 및 대응 전략  
-
+    
+</details>
 
 
 
