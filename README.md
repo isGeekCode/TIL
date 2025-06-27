@@ -116,7 +116,7 @@ _446 TILs and counting..._
 ---
 
 # 💻 Development
-<details>
+<details open>
 <summary>💻 Development</summary>
 
 - 📱 Mobile  
@@ -134,7 +134,7 @@ _446 TILs and counting..._
 
 ### 🍎 iOS
 
-<details>
+<details open>
 <summary>📦 iOS-Basics : iOS에 대해 알아야 할 기본 지식</summary>
 
 - [App Launch Process](#app-launch-process) : 앱 시작 순서  
