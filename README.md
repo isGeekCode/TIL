@@ -153,14 +153,45 @@ _446 TILs and counting..._
 ### 🖼 UI : 주요 프레임워크 구성
 
 <details>
-<summary>🧱 UIKit : UIKit 기반 iOS 앱 구성</summary>
+<summary>🧱 UIKit : 전통적인 iOS UI 프레임워크 구성</summary>
 
-- [UIKit - Lifecycle](#uikit--lifecycle) : 앱/뷰컨 생명주기  
-- [UIKit - Components](#uikit--components) : View, Button, TableView 등  
-- [UIKit - Navigation](#uikit--navigation) : ViewController 전환 등  
-- [UIKit - Patterns](#uikit--patterns) : Delegate, NotificationCenter 등  
-- [UIKit - Customization](#uikit--customization) : Autolayout, 커스텀 뷰  
-</details>
+- [UIKit - App Structure](#uikit--app-structure) : UIApplication, AppDelegate, SceneDelegate 기반 앱 구조  
+- [UIKit - App & Environment](#uikit--app--environment) : 앱 설정, 환경 구성, Info.plist 등  
+
+- 📁 **Resource Management**
+  - [UIKit - Storyboards](#uikit--storyboards) : 스토리보드의 개념과 역할  
+  - [UIKit - Assets](#uikit--assets) : 이미지, 색상, 폰트 관리  
+  - [UIKit - Nib Files](#uikit--nib-files) : XIB 파일과 커스텀 뷰 분리  
+
+- 🧩 **User Interface**
+  - [UIKit - Views & Controls](#uikit--views--controls) : UILabel, UIButton, UISwitch 등  
+  - [UIKit - View Controllers](#uikit--view-controllers) : UIViewController 구조 및 전환  
+  - [UIKit - Layout & Autolayout](#uikit--layout--autolayout) : 프레임, 오토레이아웃, 스택뷰  
+  - [UIKit - Appearance](#uikit--appearance) : 전역 스타일 커스터마이징  
+  - [UIKit - Animation & Haptics](#uikit--animation--haptics) : UIView.animate, CoreAnimation, 햅틱 피드백  
+  - [UIKit - Windows & Screens](#uikit--windows--screens) : UIWindow, UIScreen 구성  
+
+- 🖱️ **User Interactions**
+  - [UIKit - Gestures & Touches](#uikit--gestures--touches) : 제스처 인식기, 터치 처리  
+  - [UIKit - Menus & Shortcuts](#uikit--menus--shortcuts) : UIMenu, 키보드 단축키  
+  - [UIKit - Drag & Drop](#uikit--drag--drop) : 드래그 앤 드롭 API  
+  - [UIKit - Pointer & Pencil](#uikit--pointer--pencil) : 포인터, Apple Pencil 대응  
+  - [UIKit - Focus Navigation](#uikit--focus-navigation) : 키보드 포커스 이동  
+  - [UIKit - Accessibility](#uikit--accessibility) : VoiceOver, 접근성 대응 방법  
+
+- 🖼 **Graphics, Drawing & Printing**
+  - [UIKit - Images & PDF](#uikit--images--pdf) : UIImage, PDF 렌더링  
+  - [UIKit - Drawing](#uikit--drawing) : CoreGraphics 기반 드로잉  
+  - [UIKit - Printing](#uikit--printing) : 인쇄 기능 구성  
+
+- ✍️ **Text & Input**
+  - [UIKit - Text & Fonts](#uikit--text--fonts) : UILabel, NSAttributedString  
+  - [UIKit - TextKit](#uikit--textkit) : 고급 텍스트 처리 시스템  
+  - [UIKit - Keyboards & Input](#uikit--keyboards--input) : 키보드 이벤트, 입력 제어  
+  - [UIKit - Writing Tools](#uikit--writing-tools) : 필기 입력 도구  
+  - [UIKit - Handwriting Recognition](#uikit--handwriting-recognition) : Apple Pencil 필기 인식  
+
+</details>    
 
 <details>
 <summary>🌿 SwiftUI : 선언형 UI 프레임워크 SwiftUI 구성 요소</summary>
