@@ -144,7 +144,7 @@ _446 TILs and counting..._
 
 </details>
 
-<details>
+<details open>
 <summary>🧱 UIKit : UIKit 기반 iOS 앱 구성</summary>
 
 - [UIKit Lifecycle](#uikit-lifecycle) : 앱/뷰컨 생명주기  
@@ -156,31 +156,17 @@ _446 TILs and counting..._
 </details>
 
 
-
-
-- 📦 [iOS-Basics](#ios-basics) : iOS에 대해 알아야 할 기본 지식  
-  - [App Launch Process](#app-launch-process) : 앱 시작 순서 
-    - [UIKit Launch Process](#uikit-launch-process) : 전통적인 앱 시작 순서  
-    - [SwiftUI Launch Process](#swiftui-launch-process) : 선언형 앱 시작 방식  
-  - [System Overview](#system-overview) : 시스템 구조 및 OS 이해  
-
 ---
 
-- 🧱 [UIKit](#uikit) : UIKit 기반의 iOS 앱 개발 구성 요소  
-    - [UIKit Lifecycle](#uikit-lifecycle) : 앱/뷰컨 생명주기 (`AppDelegate`, `SceneDelegate`, `UIViewController`)  
-    - [UIKit Components](#uikit-components) : View, Button, TableView, CollectionView 등  
-    - [UIKit Navigation](#uikit-navigation) : ViewController 전환, Modal, TabBar, NavigationController  
-    - [UIKit Patterns](#uikit-patterns) : Delegate, NotificationCenter, Target-Action, KVO  
-    - [UIKit Customization](#uikit-customization) : 커스텀 뷰, 동적 레이아웃, Autolayout  
 
----
-
-- 🌿 [SwiftUI](#swiftui) : 선언형 UI 프레임워크 SwiftUI 구성 요소  
-    - [SwiftUI Lifecycle](#swiftui-lifecycle) : 앱 생명주기 (`@main`, `App`, `Scene`)  
-    - [SwiftUI Components](#swiftui-components) : Text, Button, List, VStack 등  
-    - [SwiftUI Navigation](#swiftui-navigation) : NavigationStack, sheet, tabView  
-    - [SwiftUI State Management](#swiftui-state-management) : `@State`, `@Binding`, `@EnvironmentObject`  
-    - [SwiftUI Layout & Modifier](#swiftui-layout--modifier) : ViewBuilder, Modifier 체계  
+<details open>
+<summary> 🌿 SwiftUI : 선언형 UI 프레임워크 SwiftUI 구성 요소  
+- [SwiftUI Lifecycle](#swiftui-lifecycle) : 앱 생명주기 (`@main`, `App`, `Scene`)  
+- [SwiftUI Components](#swiftui-components) : Text, Button, List, VStack 등  
+- [SwiftUI Navigation](#swiftui-navigation) : NavigationStack, sheet, tabView  
+- [SwiftUI State Management](#swiftui-state-management) : `@State`, `@Binding`, `@EnvironmentObject`  
+- [SwiftUI Layout & Modifier](#swiftui-layout--modifier) : ViewBuilder, Modifier 체계  
+</details>
 
 ---
 
