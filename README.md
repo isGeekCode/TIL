@@ -117,22 +117,147 @@ _446 TILs and counting..._
 
 # 💻 Development
 <details>
-<summary>📱 Mobile</summary>
+<summary>💻 Development</summary>
+- 📱 Mobile  
+  - [Sample Apps](#sample-app-list)  
+  - [iOS](#mobile-ios)  
+  - [Android](#mobile-android)  
+  - [Flutter](#mobile-flutter)
 
-- [Sample-App-List](#sample-app-list)
-- [Mobile-iOS](#mobile-ios)
-- [Mobile-Android](#mobile-android)
-- [Mobile-Flutter](#mobile-flutter)
+- 🌐 Web  
+  - [HTML Samples](#web-html-sample)  
+  - [CSS Patterns](#web-css-patterns)  
+  - [React](#web-react)  
 </details>
-
 
 
 ### 🍎 iOS
 
+<details>
+<summary>📦 iOS-Basics : iOS에 대해 알아야 할 기본 지식</summary>
+
+- [App Launch Process](#app-launch-process) : 앱 시작 순서  
+  - [UIKit Launch Process](#uikit-launch-process) : 전통적인 앱 시작 순서  
+  - [SwiftUI Launch Process](#swiftui-launch-process) : 선언형 앱 시작 방식  
+- [System Overview](#system-overview) : 시스템 구조 및 OS 이해  
+
+</details>
+
+<details>
+<summary>🧱 UIKit : UIKit 기반 iOS 앱 구성</summary>
+
+- [UIKit Lifecycle](#uikit-lifecycle) : 앱/뷰컨 생명주기  
+- [UIKit Components](#uikit-components) : View, Button, TableView 등  
+- [UIKit Navigation](#uikit-navigation) : ViewController 전환 등  
+- [UIKit Patterns](#uikit-patterns) : Delegate, NotificationCenter 등  
+- [UIKit Customization](#uikit-customization) : Autolayout, 커스텀 뷰  
+
+</details>
+
+
+
+
+- 📦 [iOS-Basics](#ios-basics) : iOS에 대해 알아야 할 기본 지식  
+  - [App Launch Process](#app-launch-process) : 앱 시작 순서 
+    - [UIKit Launch Process](#uikit-launch-process) : 전통적인 앱 시작 순서  
+    - [SwiftUI Launch Process](#swiftui-launch-process) : 선언형 앱 시작 방식  
+  - [System Overview](#system-overview) : 시스템 구조 및 OS 이해  
+
+---
+
+- 🧱 [UIKit](#uikit) : UIKit 기반의 iOS 앱 개발 구성 요소  
+    - [UIKit Lifecycle](#uikit-lifecycle) : 앱/뷰컨 생명주기 (`AppDelegate`, `SceneDelegate`, `UIViewController`)  
+    - [UIKit Components](#uikit-components) : View, Button, TableView, CollectionView 등  
+    - [UIKit Navigation](#uikit-navigation) : ViewController 전환, Modal, TabBar, NavigationController  
+    - [UIKit Patterns](#uikit-patterns) : Delegate, NotificationCenter, Target-Action, KVO  
+    - [UIKit Customization](#uikit-customization) : 커스텀 뷰, 동적 레이아웃, Autolayout  
+
+---
+
+- 🌿 [SwiftUI](#swiftui) : 선언형 UI 프레임워크 SwiftUI 구성 요소  
+    - [SwiftUI Lifecycle](#swiftui-lifecycle) : 앱 생명주기 (`@main`, `App`, `Scene`)  
+    - [SwiftUI Components](#swiftui-components) : Text, Button, List, VStack 등  
+    - [SwiftUI Navigation](#swiftui-navigation) : NavigationStack, sheet, tabView  
+    - [SwiftUI State Management](#swiftui-state-management) : `@State`, `@Binding`, `@EnvironmentObject`  
+    - [SwiftUI Layout & Modifier](#swiftui-layout--modifier) : ViewBuilder, Modifier 체계  
+
+---
+
+- 🔄 [Shared Concepts](#shared-concepts) : UIKit과 SwiftUI에서 공통으로 활용되는 UI 개념  
+    - [ViewController & Screen Transition](#viewcontroller--screen-transition) : UIKit & SwiftUI의 화면 전환 구조  
+    - [Navigation / Modal / Tab](#navigation--modal--tab) : 두 프레임워크의 화면 이동 방식 비교  
+
+---
+
+- 🌐 [Networking & Concurrency](#networking--concurrency) : 네트워크 통신 및 비동기 처리 구성 요소  
+    - [Networking](#networking) : URLSession, Alamofire 등 iOS 네트워크 통신 구성  
+    - [JSON & Codable](#json--codable) : Codable을 활용한 데이터 직렬화 / 역직렬화  
+    - [Concurrency](#concurrency) : GCD, OperationQueue, async/await 기반 동시성 처리  
+
+---
+
+- 🔌 [Apple Frameworks](#apple-frameworks) : 기본 제공 프레임워크 기반 기능 활용  
+    - [Media & Camera](#media--camera) : 이미지, 비디오, 카메라 활용  
+    - [Sharing & Files](#sharing--files) : 공유 기능, 파일 다운로드 처리  
+    - [Contacts & Location](#contacts--location) : 연락처, 위치 권한 및 연동  
+
+---
+
+- 🧰 [Utilities](#utilities) : 개발 보조 도구 및 구성 관리  
+    - [3rd Party Libraries](#3rd-party-libraries) : CocoaPods, Swift Package Manager 관리  
+    - [Environment Configuration](#environment-configuration) : .xcconfig, Scheme, Flavor 구성  
+    - [Debugging & Performance](#debugging--performance) : 디버깅 도구 및 성능 최적화  
+
+---
+
+- 🛡 [Security & Persistence](#security--persistence) : 보안 및 데이터 저장 기술  
+    - [Storage Options](#storage-options) : Keychain, UserDefaults, CoreData  
+    - [Biometrics](#biometrics) : Face ID / Touch ID 연동  
+
+---
+
+- 🔔 [Push & Background](#push--background) : 푸시 알림 및 백그라운드 처리  
+    - [Push Notification](#push-notification) : APNs 설정 및 메시지 처리  
+    - [Background Tasks](#background-tasks) : Background Fetch, Task 처리  
+
+---
+
+- 🧪 [Testing](#testing) : 앱 테스트 구성 요소  
+    - [Unit & UI Test](#unit--ui-test) : XCTest 기반 단위 및 UI 테스트  
+    - [Snapshot Testing](#snapshot-testing) : UI 정합성 확인을 위한 스냅샷 테스트  
+
+---
+
+- 🏗 [App Architecture](#app-architecture) : 앱 설계 및 구조화 전략  
+    - [Architecture Patterns](#architecture-patterns) : MVC, MVVM, VIPER 구조  
+    - [Clean Architecture](#clean-architecture) : 의존성 분리 및 클린 코드 구조  
+    - [Modularization](#modularization) : 모듈 단위 분리 전략  
+
+---
+
+- 🚀 [Deployment & Operation](#deployment--operation) : 배포 및 운영 자동화 전략  
+    - [Build & Distribution](#build--distribution) : 앱 서명, 빌드, 스토어 배포  
+    - [Monitoring Tools](#monitoring-tools) : Firebase, Sentry 등 모니터링 연동  
+    - [App Store Submission](#app-store-submission) : 리뷰 대응, 정책 이해  
+    - [CI/CD Pipeline](#ci-cd-pipeline) : 자동화된 테스트 및 배포 흐름  
+
+---
+
+- 🧯 [Troubleshooting](#troubleshooting) : 앱 문제 해결 전략  
+    - [Log Analysis](#log-analysis) : 로그 기반 이슈 추적 및 원인 분석  
+    - [Crash Handling](#crash-handling) : 크래시 수집 및 대응 전략  
+
+
+
+
+
+
+
+
 - [Mobile-iOS](#mobile-ios)
-- Legacy-iOS
-  - [iOS-AppStore](#ios-appstore)  
   - [iOS-Architecture](#ios-architecture)  
+
+  - [iOS-AppStore](#ios-appstore)  
   - [iOS-Concurrency](#ios-concurrency)  
   - [iOS-CustomLogic](#ios-customlogic)  
   - [iOS-Development](#ios-development)  
@@ -159,24 +284,7 @@ _446 TILs and counting..._
   - [iOS-ScreenTranport](#ios-screentranport)  
   - [iOS-TDD](#ios-tdd)  
 
-### 🤖 Android
 
-- [Mobile-Android](#mobile-android)
-
-### 🐦 Flutter
-
-- [Mobile-Flutter](#mobile-flutter)
-
----
-
-<details>
-<summary>🌐 Web Development</summary>
-- [Web-HTML-Sample](#web-html-sample)
-- [Web-CSS-Patterns](#web-css-patterns)   
-- [Web-React](#web-react)
-- [Web-Flutter-Web](#web-flutter-web)
-
-</details>
 
 ---
 
