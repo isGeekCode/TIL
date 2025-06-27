@@ -186,10 +186,17 @@ _446 TILs and counting..._
 - [Concurrency](#concurrency) : GCD, OperationQueue, async/await 기반 동시성 처리  
 </details>
 
+<details>
+<summary> 🔀 동시성  </summary>
+
+- [Networking](#networking) : URLSession, Alamofire 등 iOS 네트워크 통신 구성  
+- [JSON & Codable](#json--codable) : Codable을 활용한 데이터 직렬화 / 역직렬화  
+- [Concurrency](#concurrency) : GCD, OperationQueue, async/await 기반 동시성 처리  
+</details>
+
 
 <details>
 <summary> 🔌 기본 제공 프레임워크 기반 기능 활용 </summary>
-
 - [Media & Camera](#media--camera) : 이미지, 비디오, 카메라 활용  
 - [Sharing & Files](#sharing--files) : 공유 기능, 파일 다운로드 처리  
 - [Contacts & Location](#contacts--location) : 연락처, 위치 권한 및 연동  
@@ -259,9 +266,9 @@ _446 TILs and counting..._
 
 <details>
 <summary>🧯 문제 해결 </summary>
-    - [Log Analysis](#log-analysis) : 로그 기반 이슈 추적 및 원인 분석  
-    - [Crash Handling](#crash-handling) : 크래시 수집 및 대응 전략  
-    
+
+- [Log Analysis](#log-analysis) : 로그 기반 이슈 추적 및 원인 분석  
+- [Crash Handling](#crash-handling) : 크래시 수집 및 대응 전략  
 </details>
 
 
