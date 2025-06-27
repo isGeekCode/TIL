@@ -132,7 +132,7 @@ _446 TILs and counting..._
 </details>
 
 
-### 🍎 iOS
+## 🍎 iOS
 
 <details open>
 <summary>📦 iOS-Basics : iOS에 대해 알아야 할 기본 지식</summary>
@@ -144,8 +144,7 @@ _446 TILs and counting..._
 
 </details>
 
-<details open>
-<summary>🖼 UI : iOS의 주요 UI 프레임워크 구성</summary>
+### 🖼 UI : iOS의 주요 UI 프레임워크 구성
 
 <details open>
 <summary>&nbsp;&nbsp;&nbsp;&nbsp; 🧱 UIKit : UIKit 기반 iOS 앱 구성</summary>
@@ -172,7 +171,6 @@ _446 TILs and counting..._
 
 - [ViewController & Screen Transition](#viewcontroller--screen-transition) : UIKit & SwiftUI의 화면 전환 구조  
 - [Navigation / Modal / Tab](#navigation--modal--tab) : 두 프레임워크의 화면 이동 방식 비교  
-</details>
 </details>
 
 
