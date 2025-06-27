@@ -144,16 +144,18 @@ _446 TILs and counting..._
 
 </details>
 
+---
+
 ### 🖼 UI : 주요 프레임워크 구성
 
 <details open>
 <summary>🧱 UIKit : UIKit 기반 iOS 앱 구성</summary>
 
-- [UIKit Lifecycle](#uikit-lifecycle) : 앱/뷰컨 생명주기  
-- [UIKit Components](#uikit-components) : View, Button, TableView 등  
-- [UIKit Navigation](#uikit-navigation) : ViewController 전환 등  
-- [UIKit Patterns](#uikit-patterns) : Delegate, NotificationCenter 등  
-- [UIKit Customization](#uikit-customization) : Autolayout, 커스텀 뷰  
+- [UIKit - Lifecycle](#uikit--lifecycle) : 앱/뷰컨 생명주기  
+- [UIKit - Components](#uikit--components) : View, Button, TableView 등  
+- [UIKit - Navigation](#uikit--navigation) : ViewController 전환 등  
+- [UIKit - Patterns](#uikit--patterns) : Delegate, NotificationCenter 등  
+- [UIKit - Customization](#uikit--customization) : Autolayout, 커스텀 뷰  
 </details>
 
 <details open>
@@ -192,12 +194,16 @@ _446 TILs and counting..._
     - [Sharing & Files](#sharing--files) : 공유 기능, 파일 다운로드 처리  
     - [Contacts & Location](#contacts--location) : 연락처, 위치 권한 및 연동  
 </details>
+
 ---
 
-- 🧰 [Utilities](#utilities) : 개발 보조 도구 및 구성 관리  
-    - [3rd Party Libraries](#3rd-party-libraries) : CocoaPods, Swift Package Manager 관리  
-    - [Environment Configuration](#environment-configuration) : .xcconfig, Scheme, Flavor 구성  
-    - [Debugging & Performance](#debugging--performance) : 디버깅 도구 및 성능 최적화  
+<details open>
+<summary> 🧰 개발 보조 도구 및 구성 관리  </summary>
+
+- [3rd Party Libraries](#3rd-party-libraries) : CocoaPods, Swift Package Manager 관리  
+- [Environment Configuration](#environment-configuration) : .xcconfig, Scheme, Flavor 구성  
+- [Debugging & Performance](#debugging--performance) : 디버깅 도구 및 성능 최적화  
+</details>
 
 ---
 
