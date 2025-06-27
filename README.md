@@ -118,6 +118,7 @@ _446 TILs and counting..._
 # 💻 Development
 <details>
 <summary>💻 Development</summary>
+
 - 📱 Mobile  
   - [Sample Apps](#sample-app-list)  
   - [iOS](#mobile-ios)  
