@@ -132,6 +132,10 @@ _446 TILs and counting..._
 </details>
 
 
+
+---
+
+
 ## 🍎 iOS
 
 <details>
@@ -161,11 +165,17 @@ _446 TILs and counting..._
 <details>
 <summary>🌿 SwiftUI : 선언형 UI 프레임워크 SwiftUI 구성 요소</summary>
 
-- [SwiftUI - Lifecycle](#swiftui--lifecycle) : 앱 생명주기 (`@main`, `App`, `Scene`)  
-- [SwiftUI - Components](#swiftui--components) : Text, Button, List, VStack 등  
-- [SwiftUI - Navigation](#swiftui--navigation) : NavigationStack, sheet, tabView  
-- [SwiftUI - State Management](#swiftui--state-management) : `@State`, `@Binding`, `@EnvironmentObject`  
-- [SwiftUI - Layout & Modifier](#swiftui--layout--modifier) : ViewBuilder, Modifier 체계  
+- [SwiftUI - App Structure](#swiftui--app-structure) : `@main`, `App`, `Scene` 구성과 앱 엔트리 포인트  
+- [SwiftUI - Lifecycle](#swiftui--lifecycle) : 앱 생명주기 관리 및 상태 전이 흐름  
+- [SwiftUI - View Composition](#swiftui--view-composition) : `View`, `ViewBuilder`, 재사용 가능한 뷰 설계  
+- [SwiftUI - Components](#swiftui--components) : `Text`, `Image`, `Button`, `List`, `VStack` 등 기본 UI 요소  
+- [SwiftUI - Modifiers](#swiftui--modifiers) : `.padding()`, `.font()`, `.background()` 등 스타일링 체계  
+- [SwiftUI - State Management](#swiftui--state-management) : `@State`, `@Binding`, `@ObservedObject`, `@EnvironmentObject`  
+- [SwiftUI - Navigation](#swiftui--navigation) : `NavigationStack`, `NavigationLink`, path 기반 탐색 구조  
+- [SwiftUI - Modal & Presentation](#swiftui--modal--presentation) : `sheet`, `fullScreenCover`, `popover` 등 화면 전환  
+- [SwiftUI - Gestures & Input](#swiftui--gestures--input) : `TapGesture`, `DragGesture`, 제스처 조합  
+- [SwiftUI - Integration](#swiftui--integration) : `UIViewRepresentable`, `UIHostingController` 등 UIKit 연동  
+
 </details>
 
 <details>
@@ -197,6 +207,7 @@ _446 TILs and counting..._
 
 <details>
 <summary> 🔌 기본 제공 프레임워크 기반 기능 활용 </summary>
+
 - [Media & Camera](#media--camera) : 이미지, 비디오, 카메라 활용  
 - [Sharing & Files](#sharing--files) : 공유 기능, 파일 다운로드 처리  
 - [Contacts & Location](#contacts--location) : 연락처, 위치 권한 및 연동  
@@ -270,8 +281,6 @@ _446 TILs and counting..._
 - [Log Analysis](#log-analysis) : 로그 기반 이슈 추적 및 원인 분석  
 - [Crash Handling](#crash-handling) : 크래시 수집 및 대응 전략  
 </details>
-
-
 
 
 
