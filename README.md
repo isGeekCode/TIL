@@ -12,58 +12,224 @@ _446 TILs and counting..._
 
 ---
 
-## Categories
+# Categories
+👉 전체 콘텐츠의 **주제별 구조**를 간단히 훑어보는 목차입니다.
 
+- 🚧 In Progress
+- 💻 Development
+- 🧬 Languages
+- 🌐 Other Topics
+- 🧠 Computer Science
+- 🧭 Personal Meta
+
+
+- 🚧 In Progress
+- 💻 Development
+    - 📱 Mobile
+        - sample apps
+        - ios
+        - android
+        - flutter
+    - 🌐 Web 
+        - html sample
+        - css sample
+- 🧬 Languages
+    - Programming
+        - Swift
+        - Objective-c
+        - Python
+        - Dart
+        - Kotlin
+        - C
+        - Csharp
+    - Markup_n_Style
+        - HTML
+        - CSS
+        - Markdown
+- 🌐 Other Topics
+    - ⚙️ DevOps / Tools
+        - Git
+    - 📡 Industry / Community
+        - About IT
+        - Conference
+    - 🤖 AI 
+    - 🐞 Debug / Errors
+- 🧠 Computer Science
+    - 📚 Basics  
+      - Discrete Mathematics  
+      - Logic & Number Systems  
+      - Mathematical Foundations  
+    - ⚙️ Hardware  
+      - Computer Architecture (Registers, Bus, ALU, Clock)  
+      - Memory Structure (Cache, RAM, ROM)  
+      - CPU 동작 원리  
+      - I/O 흐름과 장치 제어  
+      - 논리 회로  
+    - 🧩 Software  
+      - Operating System 구조  
+      - Virtual Memory / Stack / Heap  
+      - Process & Thread  
+      - System Call 흐름  
+      - Software Layer 구조  
+      - Compiler & Interpreter  
+    - 📐 Algorithms  
+      - Sorting / Searching / Recursion  
+      - Graph, DP, Greedy 등  
+    - 📦 Data Structures  
+      - Array, Stack, Queue  
+      - Tree, Heap, Hash Table  
+    - 🌐 Networking  
+      - OSI 7계층  
+      - TCP/IP, DNS, HTTP  
+    - 🧮 Programming Paradigms  
+      - OOP / FP / Reactive  
+    - 🛡 Security & Cryptography  
+      - 암호화 기초  
+      - 인증과 권한  
+      - 보안 위협과 대응  
+    - 🗄 Database  
+      - SQL, 트랜잭션, 인덱스  
+      - 정규화 / Join / Lock  
+    - 🧠 AI / Machine Learning  
+      - 지도학습 / 비지도학습  
+      - 모델 평가, 기초 수학  
+      - Neural Networks / CNN / RNN  
+- 🧭 Personal Meta
+    - Self-Review
+    - Insight
+
+
+
+# Detail TOC  
+👇 각 항목별 **상세 링크와 실제 콘텐츠**로 이동하세요.
+
+## 🚧 In Progress
 - [A_Writing_in_Progress](#a_writing_in_progress)
+
+---
+
+## 🤖 AI & Errors
+
 - [About-AI](#about-ai)
 - [About-Error](#about-error)
-- [About-IT](#about-it)
-- CS
-    - [Algorithm](#algorithm)
-    - [ComputerScience](#computerscience)
+
+---
+
+# 💻 Development
+<details>
+<summary>📱 Mobile</summary>
+
 - [Sample-App-List](#sample-app-list)
-- [Mobile-Common](#mobile-common)
-    - [Mobile-iOS](#mobile-ios)
-    - [Mobile-Android](#mobile-android)
-    - [Mobile-Flutter](#mobile-flutter)
-- Other Languages
-    - [Lang-Ruby](#lang-ruby)
+- [Mobile-iOS](#mobile-ios)
+- [Mobile-Android](#mobile-android)
+- [Mobile-Flutter](#mobile-flutter)
+</details>
+
+
+
+### 🍎 iOS
+
+- [Mobile-iOS](#mobile-ios)
 - Legacy-iOS
-    - [iOS-AppStore](#ios-appstore)
-    - [iOS-Architecture](#ios-architecture)
-    - [iOS-Concurrency](#ios-concurrency)
-    - [iOS-CustomLogic](#ios-customlogic)
-    - [iOS-Development](#ios-development)
-    - [iOS-Environment](#ios-environment)
-    - [iOS-Extensions](#ios-extensions)
-    - [iOS-Foundation](#ios-foundation)
-    - [iOS-Framework-CoreAnimation](#ios-framework-coreanimation)
-    - [iOS-Framework-CoreLocation](#ios-framework-corelocation)
-    - [iOS-Framework-Management](#ios-framework-management)
-    - [iOS-Framework-Migration](#ios-framework-migration)
-    - [iOS-Framework-PhotoKit](#ios-framework-photokit)
-    - [iOS-Framework-SwiftUI](#ios-framework-swiftui)
-    - [iOS-Framework-SwiftUI_UIKit](#ios-framework-swiftui_uikit)
-    - [iOS-Framework-UIKit](#ios-framework-uikit)
-    - [iOS-Framework-UIKit-UIResponder-UIApplication](#ios-framework-uikit-uiresponder-uiapplication)
-    - [iOS-Framework-UIKit-UIResponder-UIView-UIControl](#ios-framework-uikit-uiresponder-uiview-uicontrol)
-    - [iOS-Framework-UIKit-UIResponder-UIView-UIScrollView](#ios-framework-uikit-uiresponder-uiview-uiscrollview)
-    - [iOS-Framework-UIKit-UIResponder-UIViewController](#ios-framework-uikit-uiresponder-uiviewcontroller)
-    - [iOS-Hierachy](#ios-hierachy)
-    - [iOS-Integrity](#ios-integrity)
-    - [iOS-Lang-Objective-C](#ios-lang-objective-c)
-    - [iOS-Lang-Swift](#ios-lang-swift)
-    - [iOS-Library](#ios-library)
-    - [iOS-Networking](#ios-networking)
-    - [iOS-RelatedImage](#ios-relatedimage)
-    - [iOS-ScreenTranport](#ios-screentranport)
-    - [iOS-TDD](#ios-tdd)
+  - [iOS-AppStore](#ios-appstore)  
+  - [iOS-Architecture](#ios-architecture)  
+  - [iOS-Concurrency](#ios-concurrency)  
+  - [iOS-CustomLogic](#ios-customlogic)  
+  - [iOS-Development](#ios-development)  
+  - [iOS-Environment](#ios-environment)  
+  - [iOS-Extensions](#ios-extensions)  
+  - [iOS-Foundation](#ios-foundation)  
+  - [iOS-Framework-CoreAnimation](#ios-framework-coreanimation)  
+  - [iOS-Framework-CoreLocation](#ios-framework-corelocation)  
+  - [iOS-Framework-Management](#ios-framework-management)  
+  - [iOS-Framework-Migration](#ios-framework-migration)  
+  - [iOS-Framework-PhotoKit](#ios-framework-photokit)  
+  - [iOS-Framework-SwiftUI](#ios-framework-swiftui)  
+  - [iOS-Framework-SwiftUI_UIKit](#ios-framework-swiftui_uikit)  
+  - [iOS-Framework-UIKit](#ios-framework-uikit)  
+  - [iOS-Framework-UIKit-UIResponder-UIApplication](#ios-framework-uikit-uiresponder-uiapplication)  
+  - [iOS-Framework-UIKit-UIResponder-UIView-UIControl](#ios-framework-uikit-uiresponder-uiview-uicontrol)  
+  - [iOS-Framework-UIKit-UIResponder-UIView-UIScrollView](#ios-framework-uikit-uiresponder-uiview-uiscrollview)  
+  - [iOS-Framework-UIKit-UIResponder-UIViewController](#ios-framework-uikit-uiresponder-uiviewcontroller)  
+  - [iOS-Hierachy](#ios-hierachy)  
+  - [iOS-Integrity](#ios-integrity)  
+  - [iOS-Library](#ios-library)  
+  - [iOS-Networking](#ios-networking)  
+  - [iOS-RelatedImage](#ios-relatedimage)  
+  - [iOS-ScreenTranport](#ios-screentranport)  
+  - [iOS-TDD](#ios-tdd)  
+
+### 🤖 Android
+
+- [Mobile-Android](#mobile-android)
+
+### 🐦 Flutter
+
+- [Mobile-Flutter](#mobile-flutter)
+
+---
+
+<details>
+<summary>🌐 Web Development</summary>
+- [Web-HTML-Sample](#web-html-sample)
+- [Web-CSS-Patterns](#web-css-patterns)   
+- [Web-React](#web-react)
+- [Web-Flutter-Web](#web-flutter-web)
+
+</details>
+
+---
+
+
+<details>
+<summary>🧬 Languages</summary>
+- [Lang-Swift](#lang-swift)
+- [Lang-Objective-C](#lang-objective-c)
+- [Lang-Ruby](#lang-ruby)
+- [Lang-Dart](#lang-dart)
+- [Lang-TypeScript](#lang-typescript)
+- [Lang-JavaScript](#lang-javascript)
+- [Lang-SQL](#lang-sql)
+</details>
+
+### Programming
+
+### Markup & Style
+- [Lang-Markdown](#lang-markdown)
+- [Lang-HTML](#lang-html)
+- [Lang-CSS](#lang-css)
+
+---
+
+<details>
+<summary>🧠 Computer Science</summary>
+
+- [Algorithms](#algorithm)
+- [Data Structures](#data-structures)
+- [Operating Systems](#operating-systems)
+</details>
+
+### ⚙️ DevOps / Tools
+
 - [CI_CD](#ci_cd)
 - [Docs](#docs)
 - [Git](#git)
-- [Insight](#insight)
-- [Self-Review](#self-review)
+
+
+## 🌐 Other Topics
+
+- [About-IT](#about-it)
 - [Conference](#conference)
+
+---
+
+
+## 🧭 Personal Meta
+
+
+- [Self-Review](#self-review)
+- [Insight](#insight)
+
 
 <br><br>
 
@@ -439,69 +605,6 @@ _446 TILs and counting..._
 - [Integrity - 중간자 공격(man-in-the-middle attack)](iOS-Integrity/Integrity_manInTheMiddleAttack.md)
 - [Integrity - 리플레이 공격(Replay attack)](iOS-Integrity/Integrity_replayAttack.md)
 
-### [iOS-Lang-Objective-C](#ios-lang-objective-c)
-- [Objc - Objc 프로젝트에서 Swift 라이브러리 사용하기](iOS-Lang-Objective-C/Objc_Bridging_SwiftInObjc.md)
-- [ObjC - Control Flow : Switch문](iOS-Lang-Objective-C/Objc_ControlFlow.md)
-- [Objc - 라이브러리 : 직접 파일삽입된 라이브러리 제거작업](iOS-Lang-Objective-C/Objc_DeleteFramework.md)
-- [ObjC - NSDictionary to NSString](iOS-Lang-Objective-C/Objc_DicToStr.md)
-- [ObjC - 로그찍기](iOS-Lang-Objective-C/Objc_Log.md)
-- [Objc - c언어와 objective-c의 차이, 발전](iOS-Lang-Objective-C/TIL220421_aboutObjectiveC.md)
-
-### [iOS-Lang-Swift](#ios-lang-swift)
-- [Swift에 대한 소개](iOS-Lang-Swift/About_Swift000Intro_.md)
-- [Swift문법 기초](iOS-Lang-Swift/About_Swift001Basic_.md)
-- [Swift - 변수와 상수](iOS-Lang-Swift/Swift_1-1_LetVar.md)
-- [Swift - 기본 타입](iOS-Lang-Swift/Swift_1-2_Types.md)
-- [Swift - 조건문과 반복문](iOS-Lang-Swift/Swift_1-3_Control.md)
-- [Swift - 함수](iOS-Lang-Swift/Swift_1-4_Function.md)
-- [Swift - 옵셔널](iOS-Lang-Swift/Swift_1-5_Optional.md)
-- [Swift - 저장 프로퍼티와 연산 프로퍼티](iOS-Lang-Swift/Swift_2-1_Property.md)
-- [Swift - Getter와 Setter](iOS-Lang-Swift/Swift_2-2_GetSet.md)
-- [Swift - 프로퍼티 옵저버 (willSet, didSet)](iOS-Lang-Swift/Swift_2-3_Observer.md)
-- [Swift - 접근 제어자 (private, internal, public 등)](iOS-Lang-Swift/Swift_2-4_Access.md)
-- [Swift - Class와 Struct](iOS-Lang-Swift/About_Swift001ClassAndStruct.md)
-- [Swift - Initialization에 대해 알아보기](iOS-Lang-Swift/About_Swift002Init.md)
-- [Playground에서 UIView를 그려보자](iOS-Lang-Swift/About_Swift005Playground.md)
-- [Swift - Array 모아보기](iOS-Lang-Swift/About_Swift010Array.md)
-- [Swift_Sequence Protocol](iOS-Lang-Swift/About_Swift020SequenceProtocol.md)
-- [Attribute - @frozen](iOS-Lang-Swift/Attribute_frozen.md)
-- [Swift - Codable 다루기](iOS-Lang-Swift/Codable.md)
-- [Do - Try - Catch](iOS-Lang-Swift/DoTryCatch.md)
-- [Swift - Collection_Array : prefix() `안전한 사용`](iOS-Lang-Swift/Swift_collection_Array_prefix.md)
-- [random함수를 이용해 Random한 숫자 뽑아내기](iOS-Lang-Swift/Swift_collection_Array_random.md)
-- [Swift - Subscript(작성중)](iOS-Lang-Swift/Swift_collection_Subscript.md)
-- [안전하게 배열에 접근하는 방법](iOS-Lang-Swift/TIL220310_contactArraySafely.md)
-- [[Common Method] 로그 관련 함수](iOS-Lang-Swift/TIL220318_aboutLogMethod.md)
-- [# 여러개의 Action을 한번에 추가하기](iOS-Lang-Swift/TIL220404_forEach.md)
-- [mutating 과 구조체](iOS-Lang-Swift/TIL220413_mutating.md)
-- [텍스트인코딩에 관하여](iOS-Lang-Swift/TIL220517_aboutTextEncoding.md)
-- [배열안에 담긴 url 유효성 검사](iOS-Lang-Swift/TIL220520_aboutCheckArrayComponent.md)
-- [이미지의 형태](iOS-Lang-Swift/TIL220915_KindsOfImageFormats.md)
-- [Xcode 디버깅으로 변수변화 캐치하기](iOS-Lang-Swift/TIL221026_howToDebugging.md)
-- [Understanding Closures in Swift : 클로저 톺아보기](iOS-Lang-Swift/UnderstandingClosures.md)
-- [enum 사용법](iOS-Lang-Swift/aboutEnum.md)
-- [저장프로퍼티 - 프로퍼티(1)](iOS-Lang-Swift/aboutProperty1.md)
-- [연산프로퍼티 - 프로퍼티(2)](iOS-Lang-Swift/aboutProperty2.md)
-- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](iOS-Lang-Swift/aboutProperty205.md)
-- [타입프로퍼티(static) - 프로퍼티(3)](iOS-Lang-Swift/aboutProperty3.md)
-- [타입메서드, 클래스메서드, 인스턴스 메서드](iOS-Lang-Swift/aboutPropertyWith_static.md)
-- [파일경로 String으로에서 확장자 추출하기](iOS-Lang-Swift/bringToExtensionName.md)
-- [고차함수 - Higher Order Function : Map, Filter, Reduce, Sort, FlatMap](iOS-Lang-Swift/higherOrderFuction.md)
-- [Special Literal](iOS-Lang-Swift/specialLiteral.md)
-- [Splite과 Component](iOS-Lang-Swift/splite_component_map.md)
-- [Swift - 스위프트에서 사용하는 패턴들](iOS-Lang-Swift/swift_a_swift_patterns.md)
-- [case let : for case let 익숙해지기](iOS-Lang-Swift/swift_caseLet_for.md)
-- [Switch case let, If case let, guard case let](iOS-Lang-Swift/swift_caseLet_switch_if_guard.md)
-- [Swift - Collection_Int : signum()](iOS-Lang-Swift/swift_collection_Int_signum.md)
-- [Closure 톺아보기](iOS-Lang-Swift/swift_firstClassClosureMaster.md)
-- [1급 객체](iOS-Lang-Swift/swift_firstClassObject.md)
-- [Swift - 키워드 defer](iOS-Lang-Swift/swift_keywordDefer.md)
-- [Swift - 키워드 inout](iOS-Lang-Swift/swift_keywordInout.md)
-- [Swift - Mirror 사용하기](iOS-Lang-Swift/swift_mirror.md)
-- [Swift - Range 함수 사용하기](iOS-Lang-Swift/swift_range.md)
-- [Swift - 참조(Strong, weak, unowned)](iOS-Lang-Swift/swift_reference_weak_unowned.md)
-- [Array - 특정값이 동일하거나 포함한 경우 찾기 :  firstIndex()](iOS-Lang-Swift/swift_replacingArrayIndexValue..md)
-
 ### [iOS-Library](#ios-library)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](iOS-Library/About_A_iOS_Package.md)
 - [About Swift PackageManager](iOS-Library/About_SPM.md)
@@ -573,14 +676,14 @@ _446 TILs and counting..._
 - [Flutter - 문서 구조 가이드](Mobile_03_Flutter/Flutter_0000_Document_Guide.md)
 - [Flutter - 설치 및 환경 세팅 가이드](Mobile_03_Flutter/Flutter_0100_Setup.md)
 - [Flutter - Splash 구현](Mobile_03_Flutter/Flutter_0271_SplashScreen_basic.md)
-- [Flutter - Dart: Intro](Mobile_03_Flutter/Flutter_0500_Dart_Intro.md)
 - [Flutter - 위젯 개요](Mobile_03_Flutter/Flutter_1000_Widget_Overview.md)
 - [Flutter - 기본 위젯 4종 (Text, Icon, Image, Box)](Mobile_03_Flutter/Flutter_1001_Basic_4_Widget.md)
 - [Flutter - 레이아웃의 이해](Mobile_03_Flutter/Flutter_1400_Widget_Layout_Guide.md)
-- [Flutter - Drawer : GNB / 사이드바](Mobile_03_Flutter/Flutter_Drawer.md)
-- [Flutter - ListView](Mobile_03_Flutter/Flutter_ListView.md)
-- [Flutter - Toggle Switch](Mobile_03_Flutter/Flutter_ToggleSwitch.md)
-- [Flutter - 삼각형 View 그리기](Mobile_03_Flutter/Flutter_View_shape_triangle.md)
+- [Flutter - Drawer : GNB / 사이드바](Mobile_03_Flutter/Flutter_1410_Drawer.md)
+- [Flutter - ListView](Mobile_03_Flutter/Flutter_1100_ListView.md)
+- [Flutter - Toggle Switch](Mobile_03_Flutter/Flutter_1501_ToggleSwitch.md)
+- [Flutter - 삼각형 View 그리기](Mobile_03_Flutter/Flutter_1990_View_Triangle.md)
+- [Flutter - 네트워크 통신 기초 (RESTful API 중심)](Mobile_03_Flutter/Flutter_2000_Networking_Basics.md)
 - [Flutter - 화면 전환(Navigator)](Mobile_03_Flutter/Flutter_4000_Navigator_Basics.md)
 - [Flutter - 웹뷰구현 : inappwebview 세팅(권장)](Mobile_03_Flutter/Flutter_5011_WebView_inappwebview.md)
 - [Flutter - 웹뷰구현 : webview_flutter 세팅](Mobile_03_Flutter/Flutter_5012_WebView_inappwebview.md)
@@ -591,10 +694,84 @@ _446 TILs and counting..._
 - [Flutter Error - WebView_NDKVersionMismatch : Android NDK 버전 불일치](Mobile_03_Flutter/Flutter_8102_WebView_NDKVersionMismatch.md)
 - [Flutter Error - Entrypoint doesn't contain...](Mobile_03_Flutter/Flutter_8103_EntryPoint.md)
 
+## [🌐 Web Development](#web-development)
+
+
+
+## [Languages](#languages)
+
 ### [Lang-Ruby](#lang-ruby)
 - [Install: Ruby](Lang-Ruby/Install_Ruby.md)
 - [RubyGems - Package Manager :　gem 관리하기](Lang-Ruby/ManageGem.md)
 - [Ruby - 버전관리 : RVM, Rbenv 사용법](Lang-Ruby/ManageRuby.md)
+
+### [Lang-Swift](#lang-swift)
+- [Swift에 대한 소개](Lang-Swift/About_Swift000Intro_.md)
+- [Swift문법 기초](Lang-Swift/About_Swift001Basic_.md)
+- [Swift - 변수와 상수](Lang-Swift/Swift_1-1_LetVar.md)
+- [Swift - 기본 타입](Lang-Swift/Swift_1-2_Types.md)
+- [Swift - 조건문과 반복문](Lang-Swift/Swift_1-3_Control.md)
+- [Swift - 함수](Lang-Swift/Swift_1-4_Function.md)
+- [Swift - 옵셔널](Lang-Swift/Swift_1-5_Optional.md)
+- [Swift - 저장 프로퍼티와 연산 프로퍼티](Lang-Swift/Swift_2-1_Property.md)
+- [Swift - Getter와 Setter](Lang-Swift/Swift_2-2_GetSet.md)
+- [Swift - 프로퍼티 옵저버 (willSet, didSet)](Lang-Swift/Swift_2-3_Observer.md)
+- [Swift - 접근 제어자 (private, internal, public 등)](Lang-Swift/Swift_2-4_Access.md)
+- [Swift - Class와 Struct](Lang-Swift/About_Swift001ClassAndStruct.md)
+- [Swift - Initialization에 대해 알아보기](Lang-Swift/About_Swift002Init.md)
+- [Playground에서 UIView를 그려보자](Lang-Swift/About_Swift005Playground.md)
+- [Swift - Array 모아보기](Lang-Swift/About_Swift010Array.md)
+- [Swift_Sequence Protocol](Lang-Swift/About_Swift020SequenceProtocol.md)
+- [Attribute - @frozen](Lang-Swift/Attribute_frozen.md)
+- [Swift - Codable 다루기](Lang-Swift/Codable.md)
+- [Do - Try - Catch](Lang-Swift/DoTryCatch.md)
+- [Swift - Collection_Array : prefix() `안전한 사용`](Lang-Swift/Swift_collection_Array_prefix.md)
+- [random함수를 이용해 Random한 숫자 뽑아내기](Lang-Swift/Swift_collection_Array_random.md)
+- [Swift - Subscript(작성중)](Lang-Swift/Swift_collection_Subscript.md)
+- [안전하게 배열에 접근하는 방법](Lang-Swift/TIL220310_contactArraySafely.md)
+- [[Common Method] 로그 관련 함수](Lang-Swift/TIL220318_aboutLogMethod.md)
+- [# 여러개의 Action을 한번에 추가하기](Lang-Swift/TIL220404_forEach.md)
+- [mutating 과 구조체](Lang-Swift/TIL220413_mutating.md)
+- [텍스트인코딩에 관하여](Lang-Swift/TIL220517_aboutTextEncoding.md)
+- [배열안에 담긴 url 유효성 검사](Lang-Swift/TIL220520_aboutCheckArrayComponent.md)
+- [이미지의 형태](Lang-Swift/TIL220915_KindsOfImageFormats.md)
+- [Xcode 디버깅으로 변수변화 캐치하기](Lang-Swift/TIL221026_howToDebugging.md)
+- [Understanding Closures in Swift : 클로저 톺아보기](Lang-Swift/UnderstandingClosures.md)
+- [enum 사용법](Lang-Swift/aboutEnum.md)
+- [저장프로퍼티 - 프로퍼티(1)](Lang-Swift/aboutProperty1.md)
+- [연산프로퍼티 - 프로퍼티(2)](Lang-Swift/aboutProperty2.md)
+- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](Lang-Swift/aboutProperty205.md)
+- [타입프로퍼티(static) - 프로퍼티(3)](Lang-Swift/aboutProperty3.md)
+- [타입메서드, 클래스메서드, 인스턴스 메서드](Lang-Swift/aboutPropertyWith_static.md)
+- [파일경로 String으로에서 확장자 추출하기](Lang-Swift/bringToExtensionName.md)
+- [고차함수 - Higher Order Function : Map, Filter, Reduce, Sort, FlatMap](Lang-Swift/higherOrderFuction.md)
+- [Special Literal](Lang-Swift/specialLiteral.md)
+- [Splite과 Component](Lang-Swift/splite_component_map.md)
+- [Swift - 스위프트에서 사용하는 패턴들](Lang-Swift/swift_a_swift_patterns.md)
+- [case let : for case let 익숙해지기](Lang-Swift/swift_caseLet_for.md)
+- [Switch case let, If case let, guard case let](Lang-Swift/swift_caseLet_switch_if_guard.md)
+- [Swift - Collection_Int : signum()](Lang-Swift/swift_collection_Int_signum.md)
+- [Closure 톺아보기](Lang-Swift/swift_firstClassClosureMaster.md)
+- [1급 객체](Lang-Swift/swift_firstClassObject.md)
+- [Swift - 키워드 defer](Lang-Swift/swift_keywordDefer.md)
+- [Swift - 키워드 inout](Lang-Swift/swift_keywordInout.md)
+- [Swift - Mirror 사용하기](Lang-Swift/swift_mirror.md)
+- [Swift - Range 함수 사용하기](Lang-Swift/swift_range.md)
+- [Swift - 참조(Strong, weak, unowned)](Lang-Swift/swift_reference_weak_unowned.md)
+- [Array - 특정값이 동일하거나 포함한 경우 찾기 :  firstIndex()](Lang-Swift/swift_replacingArrayIndexValue..md)
+
+### [Lang-Objective-C](#ios-lang-objective-c)
+- [Objc - Objc 프로젝트에서 Swift 라이브러리 사용하기](Lang-Objective-C/Objc_Bridging_SwiftInObjc.md)
+- [ObjC - Control Flow : Switch문](Lang-Objective-C/Objc_ControlFlow.md)
+- [Objc - 라이브러리 : 직접 파일삽입된 라이브러리 제거작업](Lang-Objective-C/Objc_DeleteFramework.md)
+- [ObjC - NSDictionary to NSString](Lang-Objective-C/Objc_DicToStr.md)
+- [ObjC - 로그찍기](Lang-Objective-C/Objc_Log.md)
+- [Objc - c언어와 objective-c의 차이, 발전](Lang-Objective-C/TIL220421_aboutObjectiveC.md)
+
+
+### [Lang-Dart](#ios-dart)
+- [Flutter - Dart: Intro](Lang-Dart/Flutter_0000_Dart_Intro.md)
+
 
 
 ### [Docs](#docs)
@@ -627,6 +804,13 @@ _446 TILs and counting..._
 - [Git - 깃 리모트 변경 하기](Git/gitRemoteChange.md)
 - [Commit Template - 소스트리](Git/how_to_make_SourceTree_Commit_Template.md)
 - [XcodeError - UserInterfaceState.xcuserState가 자꾸 뜰 때](Git/what_is_UserInterfaceState.md)
+
+
+<br><br>
+
+---
+
+## 🧭 Personal Meta
 
 
 ### [Insight](#insight)
