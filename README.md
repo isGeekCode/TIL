@@ -148,7 +148,7 @@ _446 TILs and counting..._
 
 ### 🖼 UI : 주요 프레임워크 구성
 
-<details open>
+<details>
 <summary>🧱 UIKit : UIKit 기반 iOS 앱 구성</summary>
 
 - [UIKit - Lifecycle](#uikit--lifecycle) : 앱/뷰컨 생명주기  
@@ -158,7 +158,7 @@ _446 TILs and counting..._
 - [UIKit - Customization](#uikit--customization) : Autolayout, 커스텀 뷰  
 </details>
 
-<details open>
+<details>
 <summary>🌿 SwiftUI : 선언형 UI 프레임워크 SwiftUI 구성 요소</summary>
 
 - [SwiftUI - Lifecycle](#swiftui--lifecycle) : 앱 생명주기 (`@main`, `App`, `Scene`)  
