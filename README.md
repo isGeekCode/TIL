@@ -157,7 +157,7 @@ _446 TILs and counting..._
 </details>
 
 <details open>
-<summary>&nbsp;&nbsp;&nbsp;&nbsp; <b style="color:gold;">🌿 SwiftUI : 선언형 UI 프레임워크 SwiftUI 구성 요소</b></summary>
+<summary>&nbsp;&nbsp;&nbsp;&nbsp; 🌿 SwiftUI : 선언형 UI 프레임워크 SwiftUI 구성 요소</summary>
 
 - [SwiftUI - Lifecycle](#swiftui--lifecycle) : 앱 생명주기 (`@main`, `App`, `Scene`)  
 - [SwiftUI - Components](#swiftui--components) : Text, Button, List, VStack 등  
@@ -167,7 +167,7 @@ _446 TILs and counting..._
 </details>
 
 <details open>
-<summary>&nbsp;&nbsp;&nbsp;&nbsp; 화면 </summary> 
+<summary>&nbsp;&nbsp;&nbsp;&nbsp; 화면 구조 및 전환 </summary> 
 
 - [ViewController & Screen Transition](#viewcontroller--screen-transition) : UIKit & SwiftUI의 화면 전환 구조  
 - [Navigation / Modal / Tab](#navigation--modal--tab) : 두 프레임워크의 화면 이동 방식 비교  
