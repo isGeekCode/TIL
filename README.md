@@ -144,7 +144,7 @@ _446 TILs and counting..._
 
 </details>
 
-### 🖼 UI : iOS의 주요 UI 프레임워크 구성
+### 🖼 UI : 주요 프레임워크 구성
 
 <details open>
 <summary>🧱 UIKit : UIKit 기반 iOS 앱 구성</summary>
@@ -176,11 +176,12 @@ _446 TILs and counting..._
 
 ---
 
-- 🌐 [Networking & Concurrency](#networking--concurrency) : 네트워크 통신 및 비동기 처리 구성 요소  
-    - [Networking](#networking) : URLSession, Alamofire 등 iOS 네트워크 통신 구성  
-    - [JSON & Codable](#json--codable) : Codable을 활용한 데이터 직렬화 / 역직렬화  
-    - [Concurrency](#concurrency) : GCD, OperationQueue, async/await 기반 동시성 처리  
-
+<details open>
+<summary> 🌐 네트워크 통신 및 비동기 처리 구성 요소  </summary>
+- [Networking](#networking) : URLSession, Alamofire 등 iOS 네트워크 통신 구성  
+- [JSON & Codable](#json--codable) : Codable을 활용한 데이터 직렬화 / 역직렬화  
+- [Concurrency](#concurrency) : GCD, OperationQueue, async/await 기반 동시성 처리  
+</details>
 ---
 
 - 🔌 [Apple Frameworks](#apple-frameworks) : 기본 제공 프레임워크 기반 기능 활용  
