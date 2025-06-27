@@ -158,9 +158,9 @@ _446 TILs and counting..._
 
 ---
 
-
 <details open>
 <summary> 🌿 SwiftUI : 선언형 UI 프레임워크 SwiftUI 구성 요소 </summary> 
+
 - [SwiftUI Lifecycle](#swiftui-lifecycle) : 앱 생명주기 (`@main`, `App`, `Scene`)  
 - [SwiftUI Components](#swiftui-components) : Text, Button, List, VStack 등  
 - [SwiftUI Navigation](#swiftui-navigation) : NavigationStack, sheet, tabView  
