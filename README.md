@@ -147,18 +147,6 @@ _446 TILs and counting..._
 <details open>
 <summary>🖼 UI : iOS의 주요 UI 프레임워크 구성</summary>
 
-
-<h3>🖼 UI 관련</h3>
-<details>
-  <summary><b>🌿 SwiftUI 구성 요소</b></summary>
-  <ul>
-    <li>📌 SwiftUI Lifecycle</li>
-    <li>📌 SwiftUI Components</li>
-  </ul>
-</details>
-
-
-
 <details open>
 <summary>&nbsp;&nbsp;&nbsp;&nbsp; 🧱 UIKit : UIKit 기반 iOS 앱 구성</summary>
 
