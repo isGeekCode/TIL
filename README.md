@@ -145,6 +145,9 @@ _446 TILs and counting..._
 </details>
 
 <details open>
+<summary>🖼 UI : iOS의 주요 UI 프레임워크 구성</summary>
+
+<details open>
 <summary>🧱 UIKit : UIKit 기반 iOS 앱 구성</summary>
 
 - [UIKit Lifecycle](#uikit-lifecycle) : 앱/뷰컨 생명주기  
@@ -152,11 +155,8 @@ _446 TILs and counting..._
 - [UIKit Navigation](#uikit-navigation) : ViewController 전환 등  
 - [UIKit Patterns](#uikit-patterns) : Delegate, NotificationCenter 등  
 - [UIKit Customization](#uikit-customization) : Autolayout, 커스텀 뷰  
-
 </details>
 
-
----
 
 <details open>
 <summary> 🌿 SwiftUI : 선언형 UI 프레임워크 SwiftUI 구성 요소 </summary> 
@@ -168,11 +168,14 @@ _446 TILs and counting..._
 - [SwiftUI Layout & Modifier](#swiftui-layout--modifier) : ViewBuilder, Modifier 체계  
 </details>
 
----
+<details open>
+<summary> UIKit과 SwiftUI에서 공통으로 활용되는 UI 개념   </summary> 
 
-- 🔄 [Shared Concepts](#shared-concepts) : UIKit과 SwiftUI에서 공통으로 활용되는 UI 개념  
-    - [ViewController & Screen Transition](#viewcontroller--screen-transition) : UIKit & SwiftUI의 화면 전환 구조  
-    - [Navigation / Modal / Tab](#navigation--modal--tab) : 두 프레임워크의 화면 이동 방식 비교  
+- [ViewController & Screen Transition](#viewcontroller--screen-transition) : UIKit & SwiftUI의 화면 전환 구조  
+- [Navigation / Modal / Tab](#navigation--modal--tab) : 두 프레임워크의 화면 이동 방식 비교  
+</details>
+</details>
+
 
 ---
 
