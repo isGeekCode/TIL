@@ -161,11 +161,11 @@ _446 TILs and counting..._
 <details open>
 <summary>&nbsp;&nbsp;&nbsp;&nbsp; 🌿 SwiftUI : 선언형 UI 프레임워크 SwiftUI 구성 요소 </summary> 
 
-- [SwiftUI Lifecycle](#swiftui-lifecycle) : 앱 생명주기 (`@main`, `App`, `Scene`)  
-- [SwiftUI Components](#swiftui-components) : Text, Button, List, VStack 등  
-- [SwiftUI Navigation](#swiftui-navigation) : NavigationStack, sheet, tabView  
-- [SwiftUI State Management](#swiftui-state-management) : `@State`, `@Binding`, `@EnvironmentObject`  
-- [SwiftUI Layout & Modifier](#swiftui-layout--modifier) : ViewBuilder, Modifier 체계  
+        - [SwiftUI Lifecycle](#swiftui-lifecycle) : 앱 생명주기 (`@main`, `App`, `Scene`)  
+        - [SwiftUI Components](#swiftui-components) : Text, Button, List, VStack 등  
+        - [SwiftUI Navigation](#swiftui-navigation) : NavigationStack, sheet, tabView  
+        - [SwiftUI State Management](#swiftui-state-management) : `@State`, `@Binding`, `@EnvironmentObject`  
+        - [SwiftUI Layout & Modifier](#swiftui-layout--modifier) : ViewBuilder, Modifier 체계  
 </details>
 
 <details open>
