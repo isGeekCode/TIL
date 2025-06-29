@@ -132,13 +132,12 @@ _446 TILs and counting..._
 </details>
 
 
-
 ---
 
 
 ## 🍎 iOS
 
-<details>
+<details open>
 <summary>📦 iOS-Basics : iOS에 대해 알아야 할 기본 지식</summary>
 
 - [App Launch Process](#app-launch-process) : 앱 시작 순서  
@@ -152,7 +151,7 @@ _446 TILs and counting..._
 
 ### 🖼 UI : 주요 프레임워크 구성
 
-<details>
+<details open>
 <summary>🧱 UIKit : 전통적인 iOS UI 프레임워크 구성</summary>
 
 - [UIKit - App Structure](#uikit--app-structure) : UIApplication, AppDelegate, SceneDelegate 기반 앱 구조  
@@ -193,7 +192,7 @@ _446 TILs and counting..._
 
 </details>    
 
-<details>
+<details open>
 <summary>🌿 SwiftUI : 선언형 UI 프레임워크 SwiftUI 구성 요소</summary>
 
 - [SwiftUI - App Structure](#swiftui--app-structure) : `@main`, `App`, `Scene` 구성과 앱 엔트리 포인트  
@@ -209,7 +208,7 @@ _446 TILs and counting..._
 
 </details>
 
-<details>
+<details open>
 <summary>🧭 화면 전환 & 네비게이션 비교 : UIKit과 SwiftUI의 화면 이동 구조</summary>
 
 - [ViewController & Screen Transition](#viewcontroller--screen-transition) : UIKit & SwiftUI의 화면 전환 구조  
@@ -219,7 +218,7 @@ _446 TILs and counting..._
 
 ---
 
-<details>
+<details open>
 <summary> 🌐 네트워크 통신 및 비동기 처리 구성 요소  </summary>
 
 - [Networking](#networking) : URLSession, Alamofire 등 iOS 네트워크 통신 구성  
@@ -227,7 +226,7 @@ _446 TILs and counting..._
 - [Concurrency](#concurrency) : GCD, OperationQueue, async/await 기반 동시성 처리  
 </details>
 
-<details>
+<details open>
 <summary> 🔀 동시성  </summary>
 
 - [Networking](#networking) : URLSession, Alamofire 등 iOS 네트워크 통신 구성  
@@ -236,7 +235,7 @@ _446 TILs and counting..._
 </details>
 
 
-<details>
+<details open>
 <summary> 🔌 기본 제공 프레임워크 기반 기능 활용 </summary>
 
 - [Media & Camera](#media--camera) : 이미지, 비디오, 카메라 활용  
@@ -246,7 +245,7 @@ _446 TILs and counting..._
 
 ---
 
-<details>
+<details open>
 <summary> 🧰 개발 보조 도구 및 구성 관리  </summary>
 
 - [3rd Party Libraries](#3rd-party-libraries) : CocoaPods, Swift Package Manager 관리  
@@ -257,7 +256,7 @@ _446 TILs and counting..._
 
 
 
-<details>
+<details open>
 <summary> 🛡 보안 및 데이터 저장 기술   </summary>
 
 - [Storage Options](#storage-options) : Keychain, UserDefaults, CoreData  
@@ -268,7 +267,7 @@ _446 TILs and counting..._
 
 
 
-<details>
+<details open>
 <summary> 🔔 푸시 알림 및 백그라운드 처리 </summary>
 
 - [Push Notification](#push-notification) : APNs 설정 및 메시지 처리  
@@ -277,7 +276,7 @@ _446 TILs and counting..._
 
 
 
-<details>
+<details open>
 <summary>  🧪 앱 테스트 구성 요소  </summary>
 
 - [Unit & UI Test](#unit--ui-test) : XCTest 기반 단위 및 UI 테스트  
@@ -285,7 +284,7 @@ _446 TILs and counting..._
 </details>
 
 
-<details>
+<details open>
 <summary> 🏗 앱 설계 및 구조화 전략  </summary>
 
 - [Architecture Patterns](#architecture-patterns) : MVC, MVVM, VIPER 구조  
@@ -294,7 +293,7 @@ _446 TILs and counting..._
     
 </details>
 
-<details>
+<details open>
 <summary>🚀 배포 및 운영 자동화 전략   </summary>
 
 - [Build & Distribution](#build--distribution) : 앱 서명, 빌드, 스토어 배포  
@@ -306,7 +305,7 @@ _446 TILs and counting..._
 
 ---
 
-<details>
+<details open>
 <summary>🧯 문제 해결 </summary>
 
 - [Log Analysis](#log-analysis) : 로그 기반 이슈 추적 및 원인 분석  
@@ -352,7 +351,7 @@ _446 TILs and counting..._
 ---
 
 
-<details>
+<details open>
 <summary>🧬 Languages</summary>
 - [Lang-Swift](#lang-swift)
 - [Lang-Objective-C](#lang-objective-c)
@@ -372,7 +371,7 @@ _446 TILs and counting..._
 
 ---
 
-<details>
+<details open>
 <summary>🧠 Computer Science</summary>
 
 - [Algorithms](#algorithm)
