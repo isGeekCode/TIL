@@ -24,15 +24,14 @@ _446 TILs and counting..._
 
 
 - 🚧 In Progress
-- 💻 Development
-    - 📱 Mobile
-        - sample apps
-        - ios
-        - android
-        - flutter
-    - 🌐 Web 
-        - html sample
-        - css sample
+- 📱 Mobile
+    - sample apps
+    - ios
+    - android
+    - flutter
+- 🌐 Web 
+    - html sample
+    - css sample
 - 🧬 Languages
     - Programming
         - Swift
@@ -107,8 +106,7 @@ _446 TILs and counting..._
 - [A_Writing_in_Progress](#a_writing_in_progress)
 
 
-# 💻 Development
-
+# Mobile
 ## 📦 iOS - UIKit기반 앱
 
 <details open>
@@ -336,11 +334,10 @@ _446 TILs and counting..._
 ## Android
 
 
-
 ## Flutter
 
 
-## 🌐 Web  
+# 🌐 Web  
 - [HTML Samples](#web-html-sample)  
 - [CSS Patterns](#web-css-patterns)  
 - [React](#web-react)  
