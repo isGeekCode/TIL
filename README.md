@@ -12,95 +12,8 @@ _446 TILs and counting..._
 
 ---
 
-# Categories
-👉 전체 콘텐츠의 **주제별 구조**를 간단히 훑어보는 목차입니다.
-
-- 🚧 In Progress
-- 💻 Development
-- 🧬 Languages
-- 🌐 Other Topics
-- 🧠 Computer Science
-- 🧭 Personal Meta
-
-
-- 🚧 In Progress
-- 📱 Mobile
-    - sample apps
-    - ios
-    - android
-    - flutter
-- 🌐 Web 
-    - html sample
-    - css sample
-- 🧬 Languages
-    - Programming
-        - Swift
-        - Objective-c
-        - Python
-        - Dart
-        - Kotlin
-        - C
-        - Csharp
-    - Markup_n_Style
-        - HTML
-        - CSS
-        - Markdown
-- 🌐 Other Topics
-    - ⚙️ DevOps / Tools
-        - Git
-    - 📡 Industry / Community
-        - About IT
-        - Conference
-    - 🤖 AI 
-    - 🐞 Debug / Errors
-- 🧠 Computer Science
-    - 📚 Basics  
-      - Discrete Mathematics  
-      - Logic & Number Systems  
-      - Mathematical Foundations  
-    - ⚙️ Hardware  
-      - Computer Architecture (Registers, Bus, ALU, Clock)  
-      - Memory Structure (Cache, RAM, ROM)  
-      - CPU 동작 원리  
-      - I/O 흐름과 장치 제어  
-      - 논리 회로  
-    - 🧩 Software  
-      - Operating System 구조  
-      - Virtual Memory / Stack / Heap  
-      - Process & Thread  
-      - System Call 흐름  
-      - Software Layer 구조  
-      - Compiler & Interpreter  
-    - 📐 Algorithms  
-      - Sorting / Searching / Recursion  
-      - Graph, DP, Greedy 등  
-    - 📦 Data Structures  
-      - Array, Stack, Queue  
-      - Tree, Heap, Hash Table  
-    - 🌐 Networking  
-      - OSI 7계층  
-      - TCP/IP, DNS, HTTP  
-    - 🧮 Programming Paradigms  
-      - OOP / FP / Reactive  
-    - 🛡 Security & Cryptography  
-      - 암호화 기초  
-      - 인증과 권한  
-      - 보안 위협과 대응  
-    - 🗄 Database  
-      - SQL, 트랜잭션, 인덱스  
-      - 정규화 / Join / Lock  
-    - 🧠 AI / Machine Learning  
-      - 지도학습 / 비지도학습  
-      - 모델 평가, 기초 수학  
-      - Neural Networks / CNN / RNN  
-- 🧭 Personal Meta
-    - Self-Review
-    - Insight
-
-
-
-# Detail TOC  
-👇 각 항목별 **상세 링크와 실제 콘텐츠**로 이동하세요.
+# TOC  
+👇 각 항목별 **상세 콘텐츠**로 이동하세요.
 
 ## 🚧 In Progress
 - [A_Writing_in_Progress](#a_writing_in_progress)
@@ -109,7 +22,7 @@ _446 TILs and counting..._
 # Mobile
 ## 📦 iOS - UIKit기반 앱
 
-<details open>
+<details>
 <summary>🔄 UIKit 앱의 구조와 각종 이벤트 흐름</summary>
 
 - [UIKit - App Structure](#uikit---app-structure) : UIApplication, AppDelegate, SceneDelegate 기반 앱 구조
