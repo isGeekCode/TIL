@@ -314,7 +314,7 @@ _446 TILs and counting..._
 - [📚 Basics](#-basics) : 
 - [⚙️ Hardware](#-hardware) : 
 - [🧩 Software](#-software) : 
-- [📐 Algorithms](#-algorithms) : 
+- [📐 Algorithms](#algorithms) : 
 - [📦 Data Structure](#-data-structure) : 
 - [🌐 Networking](#-networking) : 
 - [🧮 Programming Paradigms](#-programming-paradigms) : 
