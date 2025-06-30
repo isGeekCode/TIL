@@ -238,11 +238,19 @@ _446 TILs and counting..._
 # 🧱 UIKit 요소
 
 <details open>
-<summary>📁 App 구조 & 구동</summary>
+<summary>🔄 UIKit 앱의 구조와 각종 이벤트 흐름</summary>
 
-- UIKit - App Structure : UIApplication, AppDelegate, SceneDelegate 기반 앱 구조
-- UIKit - App & Environment : 앱 설정, 환경 구성, Info.plist 등
-- UIKit - Scene : UIWindowScene, SceneDelegate 등
+- [UIKit - App Structure](#uikit---app-structure) : UIApplication, AppDelegate, SceneDelegate 기반 앱 구조
+- [UIKit - Windows & Screens](#uikit---windows--screens)  
+  UIWindow, UIScreen 구성
+- [UIKit - App Lifecycle](#uikit---app-lifecycle)  
+  AppDelegate와 SceneDelegate의 이벤트
+- [UIKit - UIViewController Lifecycle](#uikit---uiviewcontroller-lifecycle)  
+  ViewController의 Life-cycle
+- [UIKit - UIView Drawing Cycle](#uikit---uiview-drawing-cycle)  
+  UIView의 Drawing-Cycle
+- [UIKit - Responder Chain](#uikit---responder-chain)  
+  UIResponder 처리 흐름, event 전달 체계  
 </details>
 
 <details open>
