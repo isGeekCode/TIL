@@ -415,7 +415,7 @@ _446 TILs and counting..._
 - [Apple Document Words - 단어장](About-IT/iOS_words.md)
 - [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md)
 
-### 📐 Algorithms(-algorithms)
+### 📐 Algorithms(#-algorithms)
 - [문제풀이 인사이트](Algorithm/000_algorithm_a_problem_solving_insights.md)
 - [복잡도 정리](Algorithm/algorithm_000_essential_TimeComplexity.md)
 - [필수 알고리즘 - 그리디 (Greedy)](Algorithm/algorithm_006_esssential_Greedy.md)
