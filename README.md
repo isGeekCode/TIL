@@ -290,7 +290,7 @@ _446 TILs and counting..._
 
 # 📚 Programming Language Reference  
 
-## 🧬 Languages
+- [🧬 Languages](#-languages)
 - [Lang-Swift](#lang-swift)
 - [Lang-Objective-C](#lang-objective-c)
 - [Lang-Ruby](#lang-ruby)
@@ -310,7 +310,7 @@ _446 TILs and counting..._
 
 ---
 
-# 🧠 Computer Science
+- [🧠 Computer Science](#-computer-science)
 - [📚 Basics](#-basics) : 
 - [⚙️ Hardware](#-hardware) : 
 - [🧩 Software](#-software) : 
@@ -415,6 +415,37 @@ _446 TILs and counting..._
 - [Apple Document Words - 단어장](About-IT/iOS_words.md)
 - [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md)
 
+# 🧬 Languages
+
+
+
+# 🧠 Computer Science
+- [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
+- [트랜지스터의 원리](ComputerScience/221024_transister.md)
+- [Data Structure - 다양한 데이터 구조, iOS에서 사용하는 데이터 구조](ComputerScience/DataStructure.md)
+- [MVP: Minimum Viable Product](ComputerScience/MVP.md)
+- [직렬화(Serialization)](ComputerScience/Serialization.md)
+- [# 터미널 - 커스텀 함수 및 환경변수 설정하기](ComputerScience/Terminal_customization.md)
+- [Terminal 기초 사용법](ComputerScience/Terminal_manual.md)
+- [여러가지 버전관리정책](ComputerScience/VersionLint.md)
+- [iOS의 Virtual Memory에 대하여](ComputerScience/VirtualMemory.md)
+- [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
+- [Data Structure - Stack과 Queue](ComputerScience/cs_001_stackQeueue.md)
+- [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
+- [iOS와 HTTP/2에 대하여](ComputerScience/http_2.md)
+- [iOS에서 메모리구조 : Code / Data / Heap / Stack](ComputerScience/memoryStructure.md)
+- [애자일 방법론 이해하기](ComputerScience/methodology_agile.md)
+- [네트워킹 - 호스트파일이란, 내부망 설정하기](ComputerScience/networking_hostfile.md)
+- [OSI 7 Layer](ComputerScience/osi_7layer.md)
+- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md)
+- [OSI 7 Layer - 1.5 여러 컴퓨터간 통신](ComputerScience/osi_7layer_011_internet.md)
+- [OSI 7 Layer - 2. Data Link Layer(데이터 링크 계층)](ComputerScience/osi_7layer_020.DataLink.md)
+- [OSI 7 Layer - 3. Network Layer(네트워크 계층)](ComputerScience/osi_7layer_030.Network.md)
+- [프로그래밍 패러다임 - Functional Programming(함수형 프로그래밍)](ComputerScience/programming_00_Functional_.md)
+- [Functional Programming - 모나드 이해하기](ComputerScience/programming_00_Functional_Monade.md)
+- [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
+
+
 ### 📐 Algorithms
 - [문제풀이 인사이트](Algorithm/000_algorithm_a_problem_solving_insights.md)
 - [복잡도 정리](Algorithm/algorithm_000_essential_TimeComplexity.md)
@@ -445,31 +476,6 @@ _446 TILs and counting..._
 - [CI/CD - GitHub Action 사용하기2 : on 섹션 수정하기](CI_CD/GithubAction_A_tutorial01.md)
 - [CI/CD - GitHub Action 사용하기3 : 실행할 스크립트 짜보기](CI_CD/GithubAction_A_tutorial02.md)
 
-### [ComputerScience](#computerscience)
-- [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
-- [트랜지스터의 원리](ComputerScience/221024_transister.md)
-- [Data Structure - 다양한 데이터 구조, iOS에서 사용하는 데이터 구조](ComputerScience/DataStructure.md)
-- [MVP: Minimum Viable Product](ComputerScience/MVP.md)
-- [직렬화(Serialization)](ComputerScience/Serialization.md)
-- [# 터미널 - 커스텀 함수 및 환경변수 설정하기](ComputerScience/Terminal_customization.md)
-- [Terminal 기초 사용법](ComputerScience/Terminal_manual.md)
-- [여러가지 버전관리정책](ComputerScience/VersionLint.md)
-- [iOS의 Virtual Memory에 대하여](ComputerScience/VirtualMemory.md)
-- [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
-- [Data Structure - Stack과 Queue](ComputerScience/cs_001_stackQeueue.md)
-- [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
-- [iOS와 HTTP/2에 대하여](ComputerScience/http_2.md)
-- [iOS에서 메모리구조 : Code / Data / Heap / Stack](ComputerScience/memoryStructure.md)
-- [애자일 방법론 이해하기](ComputerScience/methodology_agile.md)
-- [네트워킹 - 호스트파일이란, 내부망 설정하기](ComputerScience/networking_hostfile.md)
-- [OSI 7 Layer](ComputerScience/osi_7layer.md)
-- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md)
-- [OSI 7 Layer - 1.5 여러 컴퓨터간 통신](ComputerScience/osi_7layer_011_internet.md)
-- [OSI 7 Layer - 2. Data Link Layer(데이터 링크 계층)](ComputerScience/osi_7layer_020.DataLink.md)
-- [OSI 7 Layer - 3. Network Layer(네트워크 계층)](ComputerScience/osi_7layer_030.Network.md)
-- [프로그래밍 패러다임 - Functional Programming(함수형 프로그래밍)](ComputerScience/programming_00_Functional_.md)
-- [Functional Programming - 모나드 이해하기](ComputerScience/programming_00_Functional_Monade.md)
-- [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
 ### [Conference](#conference)
 - [Let us: Go! 2022 가을 - 221105(미참석)](Conference/Conference2022_LetUsGo2022_3Fall.md)
