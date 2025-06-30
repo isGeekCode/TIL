@@ -250,13 +250,33 @@ _446 TILs and counting..._
 </details>
 
 
+<details open>
+<summary>🧾 Sample App 모음</summary>
+
+- [sample App - 투두리스트](Sample-App-List/sample_000todoList.md)
+- [sample App - 그림판앱](Sample-App-List/sample_001pictureApp.md)
+- [Sample App : 설정앱 - SwiftUI](Sample-App-List/sample_002SettingApp_SwiftUI.md)
+- [Sample App : 설정앱 - UIKit(Code)](Sample-App-List/sample_002SettingApp_UIKit.md)
+- [Sample App : 네트워킹과정 앱 - SwiftUI](Sample-App-List/sample_010networkingApp_SwiftUI.md)
+- [Block6 앱 만들기](Sample-App-List/sample_blockSix.md)
+</details>
+
+
+<br><br>
+
 ---
 
 ## Android
 
+<br><br>
+
+---
 
 ## Flutter
 
+<br><br>
+
+---
 
 # 🌐 Web  
 - [HTML Samples](#web-html-sample)  
@@ -264,12 +284,13 @@ _446 TILs and counting..._
 - [React](#web-react)  
 </details>
 
----
+<br><br>
 
+---  
 
-<details open>
-<summary>🧬 Languages</summary>
+# 📚 Programming Language Reference  
 
+## 🧬 Languages
 - [Lang-Swift](#lang-swift)
 - [Lang-Objective-C](#lang-objective-c)
 - [Lang-Ruby](#lang-ruby)
@@ -277,32 +298,29 @@ _446 TILs and counting..._
 - [Lang-TypeScript](#lang-typescript)
 - [Lang-JavaScript](#lang-javascript)
 - [Lang-SQL](#lang-sql)
-</details>
 
-### Programming
 
 ### Markup & Style
 - [Lang-Markdown](#lang-markdown)
 - [Lang-HTML](#lang-html)
 - [Lang-CSS](#lang-css)
 
+
+<br><br>
+
 ---
 
-<details open>
-<summary>🧠 Computer Science</summary>
-
+# 🧠 Computer Science
 - [📚 Basics](#-basics) : 
 - [⚙️ Hardware](#-hardware) : 
 - [🧩 Software](#-software) : 
-- [📐 Algorithms](#-algorithms) : 
+- [📐 Algorithms](#algorithms) : 
 - [📦 Data Structure](#-data-structure) : 
 - [🌐 Networking](#-networking) : 
 - [🧮 Programming Paradigms](#-programming-paradigms) : 
 - [🛡 Security & Cryptography](#-security--cryptography) : 
 - [🗄 Database](#-database) : 
 - [🧠 AI / Machine Learning](#-ai--machine-learning) : 
-
-</details>
 
 ### ⚙️ DevOps / Tools
 
@@ -316,7 +334,6 @@ _446 TILs and counting..._
 - [About-IT](#about-it)
 - [Conference](#conference)
 
----
 
 ## 🤖 AI & Errors
 
@@ -398,7 +415,7 @@ _446 TILs and counting..._
 - [Apple Document Words - 단어장](About-IT/iOS_words.md)
 - [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md)
 
-### [Algorithm](#algorithm)
+### 📐 Algorithms(#algorithms)
 - [문제풀이 인사이트](Algorithm/000_algorithm_a_problem_solving_insights.md)
 - [복잡도 정리](Algorithm/algorithm_000_essential_TimeComplexity.md)
 - [필수 알고리즘 - 그리디 (Greedy)](Algorithm/algorithm_006_esssential_Greedy.md)
