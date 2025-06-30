@@ -106,20 +106,8 @@ _446 TILs and counting..._
 ## 🚧 In Progress
 - [A_Writing_in_Progress](#a_writing_in_progress)
 
----
-
-## 🤖 AI & Errors
-
-- [About-AI](#about-ai)
-- [About-Error](#about-error)
-
----
 
 # 💻 Development
-<details open>
-<summary>💻 Development</summary>
-
-- 📱 Mobile  
 
 ## 📦 iOS - UIKit기반 앱
 
@@ -376,9 +364,17 @@ _446 TILs and counting..._
 <details open>
 <summary>🧠 Computer Science</summary>
 
-- [Algorithms](#algorithm)
-- [Data Structures](#data-structures)
-- [Operating Systems](#operating-systems)
+- [📚 Basics](#-basics) : 
+- [⚙️ Hardware](#-hardware) : 
+- [🧩 Software](#-software) : 
+- [📐 Algorithms](#-algorithms) : 
+- [📦 Data Structure](#-data-structure) : 
+- [🌐 Networking](#-networking) : 
+- [🧮 Programming Paradigms](#-programming-paradigms) : 
+- [🛡 Security & Cryptography](#-security--cryptography) : 
+- [🗄 Database](#-database) : 
+- [🧠 AI / Machine Learning](#-ai--machine-learning) : 
+
 </details>
 
 ### ⚙️ DevOps / Tools
@@ -395,6 +391,13 @@ _446 TILs and counting..._
 
 ---
 
+## 🤖 AI & Errors
+
+- [About-AI](#about-ai)
+- [About-Error](#about-error)
+
+---
+
 
 ## 🧭 Personal Meta
 
@@ -406,8 +409,6 @@ _446 TILs and counting..._
 <br><br>
 
 ---
-
-
 
 
 # Detail TILs
