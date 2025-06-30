@@ -149,7 +149,30 @@ _446 TILs and counting..._
 
 ---
 
-### 🖼 UI : 주요 프레임워크 구성
+## 📦 iOS-Basics : iOS 앱의 기본 구조 이해
+
+<details open>
+<summary>🧱 iOS 앱의 구성 : UIKit / SwiftUI / 공통</summary>
+
+### UIKit 전용 구성
+- [UIKit - App Structure](#uikit--app-structure)
+- [UIKit - App & Environment](#uikit--app--environment)
+- [UIKit - Scene](#uikit--scene) : UIWindowScene, SceneDelegate 등
+
+### SwiftUI 전용 구성
+- [SwiftUI - App Structure](#swiftui--app-structure)
+- [SwiftUI - App & Environment](#swiftui--app--environment)
+- [SwiftUI - Scene](#swiftui--scene) : WindowGroup, App 프로토콜 내 Scene 구성
+
+### 공통 필수 구성 요소
+- **Info.plist** : 앱 설정의 근간
+- **Launch Screen** : 최초 진입 경험 처리
+- **Assets.xcassets** : 앱 아이콘, 이미지 등 공통 리소스
+
+</details>
+
+
+## 🖼 UI : 주요 프레임워크 구성
 
 <details open>
 <summary>🧱 UIKit : 전통적인 iOS UI 프레임워크 구성</summary>
@@ -192,10 +215,150 @@ _446 TILs and counting..._
 
 </details>    
 
+## 📦 iOS-Basics : iOS 앱의 기본 구조 이해
+
+<details open>
+<summary>🧱 iOS 앱의 구성 : UIKit / SwiftUI / 공통</summary>
+
+- UIKit 앱의 구조 & 구동 → [이동](#📁-app-구조--구동)
+- SwiftUI 앱의 구조 & 구동 → [이동](#📁-app-구조--구동)
+- 공통 구성 요소 (Info.plist, LaunchScreen 등)
+</details>
+
+
+### 🔖 UIKit 구성 목차 (TOC)
+
+- [📁 App 구조 & 구동](#📁-app-구조--구동)
+- [🧩 UI 구성 & View 설계](#🧩-ui-구성--view-설계)
+- [📐 레이아웃](#📐-레이아웃)
+- [🧭 화면 전환 & 탐색](#🧭-화면-전환--탐색)
+- [🎯 이벤트 & 입력 처리](#🎯-이벤트--입력-처리)
+- [🖼 그래픽, 그리기, 텍스트](#🖼-그래픽-그리기-텍스트)
+
+# 🧱 UIKit 요소
+
+<details open>
+<summary>📁 App 구조 & 구동</summary>
+
+- UIKit - App Structure : UIApplication, AppDelegate, SceneDelegate 기반 앱 구조
+- UIKit - App & Environment : 앱 설정, 환경 구성, Info.plist 등
+- UIKit - Scene : UIWindowScene, SceneDelegate 등
+</details>
+
+<details open>
+<summary>🧩 UI 구성 & View 설계</summary>
+
+- UIKit - Views & Controls : UILabel, UIButton, UISwitch 등
+- UIKit - View Controllers : UIViewController 구조 및 전환
+- UIKit - Appearance : 전역 스타일 커스터마이징
+- UIKit - Windows & Screens : UIWindow, UIScreen 구성
+</details>
+
+<details open>
+<summary>📐 레이아웃</summary>
+
+- UIKit - Layout & Autolayout : 프레임, 오토레이아웃, 스택뷰
+- UIKit - Storyboards : 스토리보드의 개념과 역할
+- UIKit - Nib Files : XIB 파일과 커스텀 뷰 분리
+</details>
+
+<details open>
+<summary>🧭 화면 전환 & 탐색</summary>
+
+- UIKit - View Controllers : NavigationController, Modal, Present/Push 흐름
+- UIKit - Windows & Screens : 멀티 윈도우 탐색 등
+</details>
+
+<details open>
+<summary>🎯 이벤트 & 입력 처리</summary>
+
+- UIKit - Gestures & Touches : 제스처 인식기, 터치 처리
+- UIKit - Menus & Shortcuts : UIMenu, 키보드 단축키
+- UIKit - Drag & Drop : 드래그 앤 드롭 API
+- UIKit - Pointer & Pencil : 포인터, Apple Pencil 대응
+- UIKit - Focus Navigation : 키보드 포커스 이동
+- UIKit - Accessibility : VoiceOver, 접근성 대응 방법
+
+</details>
+
+<details open>
+<summary>🖼 그래픽, 그리기, 텍스트</summary>
+
+- UIKit - Images & PDF : UIImage, PDF 렌더링
+- UIKit - Drawing : CoreGraphics 기반 드로잉
+- UIKit - Printing : 인쇄 기능 구성
+- UIKit - Text & Fonts : UILabel, NSAttributedString
+- UIKit - TextKit : 고급 텍스트 처리 시스템
+- UIKit - Writing Tools : 필기 입력 도구
+- UIKit - Handwriting Recognition : Apple Pencil 필기 인식
+</details>
+
+---
+
+# 🌿 SwiftUI 실전 구성 요소
+
+<details open>
+<summary>📁 App 구조 & 구동</summary>
+
+- SwiftUI - App Structure : @main, App, Scene 구성과 앱 엔트리 포인트
+- SwiftUI - Lifecycle : 앱 생명주기 관리 및 상태 전이 흐름
+</details>
+
+<details open>
+<summary>🧩 UI 구성 & View 설계</summary>
+
+- SwiftUI - View Composition : View, ViewBuilder, 재사용 가능한 뷰 설계
+- SwiftUI - Components : Text, Image, Button, List, VStack 등 기본 UI 요소
+- SwiftUI - Modifiers : .padding(), .font(), .background() 등 스타일링 체계
+</details>
+
+<details open>
+<summary>🔄 상태 & 데이터 흐름</summary>
+
+- SwiftUI - State Management : @State, @Binding, @ObservedObject, @EnvironmentObject
+</details>
+
+<details open>
+<summary>🧭 화면 전환 & 레이아웃</summary>
+
+- SwiftUI - Navigation : NavigationStack, NavigationLink, path 기반 탐색 구조
+- SwiftUI - Modal & Presentation : sheet, fullScreenCover, popover 등 화면 전환
+</details>
+
+<details open>
+<summary>🎯 이벤트 & 입력 처리</summary>
+
+- **SwiftUI - Gestures** : TapGesture, LongPressGesture, DragGesture 등  
+- **SwiftUI - Input Events** : 키보드 입력, 포커스 상태 등 이벤트 대응  
+- **SwiftUI - Clipboard** : 클립보드 복사/붙여넣기 처리  
+- **SwiftUI - Drag & Drop** : 드래그 앤 드롭 구현 방법  
+- **SwiftUI - Focus** : 포커스 가능한 뷰 구성 및 이동 제어  
+- **SwiftUI - System Events** : 앱 상태 변경 등 시스템 이벤트 대응  
+</details>
+
+---
+
+<details open>
+<summary>🔗 프레임워크 상호 연동 (UIKit ↔ SwiftUI)</summary>
+
+- **SwiftUI 내 UIKit 사용**  
+  - UIViewRepresentable, UIViewControllerRepresentable  
+  - MapView, PhotoPicker 등 UIKit 전용 뷰 활용  
+  - 기존: `SwiftUI - Integration` 항목 내용 포함
+
+- **UIKit 내 SwiftUI 사용**  
+  - UIHostingController 사용하여 SwiftUI View 삽입  
+  - 기존 UIKit 앱 일부 화면만 SwiftUI로 교체하는 방식
+
+- **상호 통신 기법**  
+  - Coordinator 패턴  
+  - delegate 연결, Binding 전달, EnvironmentObject 공유 등
+
+</details>
+
+
 <details open>
 <summary>🌿 SwiftUI : 선언형 UI 프레임워크 SwiftUI 구성 요소</summary>
-
-- [SwiftUI - App Structure](#swiftui--app-structure) : `@main`, `App`, `Scene` 구성과 앱 엔트리 포인트  
 - [SwiftUI - Lifecycle](#swiftui--lifecycle) : 앱 생명주기 관리 및 상태 전이 흐름  
 - [SwiftUI - View Composition](#swiftui--view-composition) : `View`, `ViewBuilder`, 재사용 가능한 뷰 설계  
 - [SwiftUI - Components](#swiftui--components) : `Text`, `Image`, `Button`, `List`, `VStack` 등 기본 UI 요소  
