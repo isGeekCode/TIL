@@ -135,213 +135,94 @@ _446 TILs and counting..._
 ---
 
 
-## 🍎 iOS
-
-<details open>
-<summary>📦 iOS-Basics : iOS에 대해 알아야 할 기본 지식</summary>
-
-- [App Launch Process](#app-launch-process) : 앱 시작 순서  
-  - [UIKit Launch Process](#uikit-launch-process) : 전통적인 앱 시작 순서  
-  - [SwiftUI Launch Process](#swiftui-launch-process) : 선언형 앱 시작 방식  
-- [System Overview](#system-overview) : 시스템 구조 및 OS 이해  
-
-</details>
-
----
-
-## 📦 iOS-Basics : iOS 앱의 기본 구조 이해
-
-<details open>
-<summary>🧱 iOS 앱의 구성 : UIKit / SwiftUI / 공통</summary>
-
-### UIKit 전용 구성
-- [UIKit - App Structure](#uikit--app-structure)
-- [UIKit - App & Environment](#uikit--app--environment)
-- [UIKit - Scene](#uikit--scene) : UIWindowScene, SceneDelegate 등
-
-### SwiftUI 전용 구성
-- [SwiftUI - App Structure](#swiftui--app-structure)
-- [SwiftUI - App & Environment](#swiftui--app--environment)
-- [SwiftUI - Scene](#swiftui--scene) : WindowGroup, App 프로토콜 내 Scene 구성
-
-### 공통 필수 구성 요소
-- **Info.plist** : 앱 설정의 근간
-- **Launch Screen** : 최초 진입 경험 처리
-- **Assets.xcassets** : 앱 아이콘, 이미지 등 공통 리소스
-
-</details>
-
-
-## 🖼 UI : 주요 프레임워크 구성
-
-<details open>
-<summary>🧱 UIKit : 전통적인 iOS UI 프레임워크 구성</summary>
-
-- [UIKit - App Structure](#uikit--app-structure) : UIApplication, AppDelegate, SceneDelegate 기반 앱 구조  
-- [UIKit - App & Environment](#uikit--app--environment) : 앱 설정, 환경 구성, Info.plist 등  
-
-- 📁 **Resource Management**
-  - [UIKit - Storyboards](#uikit--storyboards) : 스토리보드의 개념과 역할  
-  - [UIKit - Assets](#uikit--assets) : 이미지, 색상, 폰트 관리  
-  - [UIKit - Nib Files](#uikit--nib-files) : XIB 파일과 커스텀 뷰 분리  
-
-- 🧩 **User Interface**
-  - [UIKit - Views & Controls](#uikit--views--controls) : UILabel, UIButton, UISwitch 등  
-  - [UIKit - View Controllers](#uikit--view-controllers) : UIViewController 구조 및 전환  
-  - [UIKit - Layout & Autolayout](#uikit--layout--autolayout) : 프레임, 오토레이아웃, 스택뷰  
-  - [UIKit - Appearance](#uikit--appearance) : 전역 스타일 커스터마이징  
-  - [UIKit - Animation & Haptics](#uikit--animation--haptics) : UIView.animate, CoreAnimation, 햅틱 피드백  
-  - [UIKit - Windows & Screens](#uikit--windows--screens) : UIWindow, UIScreen 구성  
-
-- 🖱️ **User Interactions**
-  - [UIKit - Gestures & Touches](#uikit--gestures--touches) : 제스처 인식기, 터치 처리  
-  - [UIKit - Menus & Shortcuts](#uikit--menus--shortcuts) : UIMenu, 키보드 단축키  
-  - [UIKit - Drag & Drop](#uikit--drag--drop) : 드래그 앤 드롭 API  
-  - [UIKit - Pointer & Pencil](#uikit--pointer--pencil) : 포인터, Apple Pencil 대응  
-  - [UIKit - Focus Navigation](#uikit--focus-navigation) : 키보드 포커스 이동  
-  - [UIKit - Accessibility](#uikit--accessibility) : VoiceOver, 접근성 대응 방법  
-
-- 🖼 **Graphics, Drawing & Printing**
-  - [UIKit - Images & PDF](#uikit--images--pdf) : UIImage, PDF 렌더링  
-  - [UIKit - Drawing](#uikit--drawing) : CoreGraphics 기반 드로잉  
-  - [UIKit - Printing](#uikit--printing) : 인쇄 기능 구성  
-
-- ✍️ **Text & Input**
-  - [UIKit - Text & Fonts](#uikit--text--fonts) : UILabel, NSAttributedString  
-  - [UIKit - TextKit](#uikit--textkit) : 고급 텍스트 처리 시스템  
-  - [UIKit - Keyboards & Input](#uikit--keyboards--input) : 키보드 이벤트, 입력 제어  
-  - [UIKit - Writing Tools](#uikit--writing-tools) : 필기 입력 도구  
-  - [UIKit - Handwriting Recognition](#uikit--handwriting-recognition) : Apple Pencil 필기 인식  
-
-</details>    
-
-## 📦 iOS-Basics : iOS 앱의 기본 구조 이해
-
-<details open>
-<summary>🧱 iOS 앱의 구성 : UIKit / SwiftUI / 공통</summary>
-
-- UIKit 앱의 구조 & 구동 → [이동](#📁-app-구조--구동)
-- SwiftUI 앱의 구조 & 구동 → [이동](#📁-app-구조--구동)
-- 공통 구성 요소 (Info.plist, LaunchScreen 등)
-</details>
-
-
-### 🔖 UIKit 구성 목차 (TOC)
-
-- [📁 App 구조 & 구동](#📁-app-구조--구동)
-- [🧩 UI 구성 & View 설계](#🧩-ui-구성--view-설계)
-- [📐 레이아웃](#📐-레이아웃)
-- [🧭 화면 전환 & 탐색](#🧭-화면-전환--탐색)
-- [🎯 이벤트 & 입력 처리](#🎯-이벤트--입력-처리)
-- [🖼 그래픽, 그리기, 텍스트](#🖼-그래픽-그리기-텍스트)
-
-# 🧱 UIKit 요소
+## 📦 iOS - UIKit기반 앱
 
 <details open>
 <summary>🔄 UIKit 앱의 구조와 각종 이벤트 흐름</summary>
 
 - [UIKit - App Structure](#uikit---app-structure) : UIApplication, AppDelegate, SceneDelegate 기반 앱 구조
-- [UIKit - Windows & Screens](#uikit---windows--screens)  
-  UIWindow, UIScreen 구성
-- [UIKit - App Lifecycle](#uikit---app-lifecycle)  
-  AppDelegate와 SceneDelegate의 이벤트
-- [UIKit - UIViewController Lifecycle](#uikit---uiviewcontroller-lifecycle)  
-  ViewController의 Life-cycle
-- [UIKit - UIView Drawing Cycle](#uikit---uiview-drawing-cycle)  
-  UIView의 Drawing-Cycle
-- [UIKit - Responder Chain](#uikit---responder-chain)  
-  UIResponder 처리 흐름, event 전달 체계  
+- [UIKit - Windows & Screens](#uikit---windows--screens) : UIWindow, UIScreen 구성
+- [UIKit - App Lifecycle](#uikit---app-lifecycle) : AppDelegate와 SceneDelegate의 이벤트
+- [UIKit - UIViewController Lifecycle](#uikit---uiviewcontroller-lifecycle) : ViewController의 Life-cycle
+- [UIKit - UIView Drawing Cycle](#uikit---uiview-drawing-cycle) : UIView의 Drawing-Cycle
+- [UIKit - Responder Chain](#uikit---responder-chain) : UIResponder 처리 흐름, event 전달 체계
 </details>
 
 <details open>
 <summary>🧩 UI 구성 & View 설계</summary>
 
-- UIKit - Views & Controls : UILabel, UIButton, UISwitch 등
-- UIKit - View Controllers : UIViewController 구조 및 전환
-- UIKit - Appearance : 전역 스타일 커스터마이징
-- UIKit - Windows & Screens : UIWindow, UIScreen 구성
+- [UIKit - Views & Controls](#uikit---views--controls) : UIView (Container / Content / Control / Text / Search)
+- [UIKit - View Controllers](#uikit---view-controllers) : UIViewController (Content / Container)
+- [UIKit - Appearance](#uikit---appearance) : 전역 스타일 커스터마이징
+- [UIKit - Animation](#uikit---animation) : 애니메이션 처리
+- [UIKit - Navigation](#uikit---navigation) : 화면 전환 (Modal, Present/Push 흐름)
 </details>
 
 <details open>
 <summary>📐 레이아웃</summary>
 
-- UIKit - Layout & Autolayout : 프레임, 오토레이아웃, 스택뷰
-- UIKit - Storyboards : 스토리보드의 개념과 역할
-- UIKit - Nib Files : XIB 파일과 커스텀 뷰 분리
-</details>
-
-<details open>
-<summary>🧭 화면 전환 & 탐색</summary>
-
-- UIKit - View Controllers : NavigationController, Modal, Present/Push 흐름
-- UIKit - Windows & Screens : 멀티 윈도우 탐색 등
+- [UIKit - Layout & Autolayout](#uikit---layout--autolayout) : 프레임, 오토레이아웃, 스택뷰
+- [UIKit - Storyboards](#uikit---storyboards) : 스토리보드의 개념과 역할
+- [UIKit - Nib Files](#uikit---nib-files) : XIB 파일과 커스텀 뷰 분리
 </details>
 
 <details open>
 <summary>🎯 이벤트 & 입력 처리</summary>
 
-- UIKit - Gestures & Touches : 제스처 인식기, 터치 처리
-- UIKit - Menus & Shortcuts : UIMenu, 키보드 단축키
-- UIKit - Drag & Drop : 드래그 앤 드롭 API
-- UIKit - Pointer & Pencil : 포인터, Apple Pencil 대응
-- UIKit - Focus Navigation : 키보드 포커스 이동
-- UIKit - Accessibility : VoiceOver, 접근성 대응 방법
+- [UIKit - Gestures & Touches](#uikit---gestures--touches) : 제스처 인식기, 터치 처리
+- [UIKit - Menus & Shortcuts](#uikit---menus--shortcuts) : UIMenu, 키보드 단축키
+- [UIKit - Drag & Drop](#uikit---drag--drop) : 드래그 앤 드롭 API
+- [UIKit - Pointer & Pencil](#uikit---pointer--pencil) : 포인터, Apple Pencil 대응
+- [UIKit - Focus Navigation](#uikit---focus-navigation) : 키보드 포커스 이동
+- [UIKit - Accessibility](#uikit---accessibility) : VoiceOver, 접근성 대응 방법
 
 </details>
 
 <details open>
 <summary>🖼 그래픽, 그리기, 텍스트</summary>
 
-- UIKit - Images & PDF : UIImage, PDF 렌더링
-- UIKit - Drawing : CoreGraphics 기반 드로잉
-- UIKit - Printing : 인쇄 기능 구성
-- UIKit - Text & Fonts : UILabel, NSAttributedString
-- UIKit - TextKit : 고급 텍스트 처리 시스템
-- UIKit - Writing Tools : 필기 입력 도구
-- UIKit - Handwriting Recognition : Apple Pencil 필기 인식
+- [UIKit - Images & PDF](#uikit---images--pdf) : UIImage, PDF 렌더링
+- [UIKit - Drawing](#uikit---drawing) : CoreGraphics 기반 드로잉
+- [UIKit - Printing](#uikit---printing) : 인쇄 기능 구성
+- [UIKit - Text & Fonts](#uikit---text--fonts) : UILabel, NSAttributedString
+- [UIKit - TextKit](#uikit---textkit) : 고급 텍스트 처리 시스템
+- [UIKit - Writing Tools](#uikit---writing-tools) : 필기 입력 도구
+- [UIKit - Handwriting Recognition](#uikit---handwriting-recognition) : Apple Pencil 필기 인식
 </details>
 
 ---
 
-# 🌿 SwiftUI 실전 구성 요소
+
+## 📦 iOS - SwiftUI앱
 
 <details open>
-<summary>📁 App 구조 & 구동</summary>
+<summary>📁 SwiftUI 앱의 구조와 각종 이벤트 흐름</summary>
 
-- SwiftUI - App Structure : @main, App, Scene 구성과 앱 엔트리 포인트
-- SwiftUI - Lifecycle : 앱 생명주기 관리 및 상태 전이 흐름
+- [SwiftUI - App Structure](#swiftui---app-structure) : @main, App, Scene 구성과 앱 엔트리 포인트
+- [SwiftUI - Lifecycle](#swiftui---lifecycle) : 앱 생명주기 관리 및 상태 전이 흐름
+- [SwiftUI - State Management](#swiftui---state-management) : @State, @Binding, @ObservedObject, @EnvironmentObject
 </details>
 
 <details open>
 <summary>🧩 UI 구성 & View 설계</summary>
 
-- SwiftUI - View Composition : View, ViewBuilder, 재사용 가능한 뷰 설계
-- SwiftUI - Components : Text, Image, Button, List, VStack 등 기본 UI 요소
-- SwiftUI - Modifiers : .padding(), .font(), .background() 등 스타일링 체계
-</details>
-
-<details open>
-<summary>🔄 상태 & 데이터 흐름</summary>
-
-- SwiftUI - State Management : @State, @Binding, @ObservedObject, @EnvironmentObject
-</details>
-
-<details open>
-<summary>🧭 화면 전환 & 레이아웃</summary>
-
-- SwiftUI - Navigation : NavigationStack, NavigationLink, path 기반 탐색 구조
-- SwiftUI - Modal & Presentation : sheet, fullScreenCover, popover 등 화면 전환
+- [SwiftUI - View Composition](#swiftui---view-composition) : View, ViewBuilder, 재사용 가능한 뷰 설계
+- [SwiftUI - Components](#swiftui---components) : Text, Image, Button, List, VStack 등 기본 UI 요소
+- [SwiftUI - Modifiers](#swiftui---modifiers) : .padding(), .font(), .background() 등 스타일링 체계
+- [SwiftUI - Navigation](#swiftui---navigation) : NavigationStack, NavigationLink, path 기반 탐색 구조
+- [SwiftUI - Modal & Presentation](#swiftui---modal--presentation) : sheet, fullScreenCover, popover 등 화면 전환
+- [SwiftUI - Animation](#swiftui---animation) : withAnimation, animation(), transition(), matchedGeometryEffect 등
 </details>
 
 <details open>
 <summary>🎯 이벤트 & 입력 처리</summary>
 
-- **SwiftUI - Gestures** : TapGesture, LongPressGesture, DragGesture 등  
-- **SwiftUI - Input Events** : 키보드 입력, 포커스 상태 등 이벤트 대응  
-- **SwiftUI - Clipboard** : 클립보드 복사/붙여넣기 처리  
-- **SwiftUI - Drag & Drop** : 드래그 앤 드롭 구현 방법  
-- **SwiftUI - Focus** : 포커스 가능한 뷰 구성 및 이동 제어  
-- **SwiftUI - System Events** : 앱 상태 변경 등 시스템 이벤트 대응  
+- [SwiftUI - Gestures](#swiftui---gestures) : TapGesture, LongPressGesture, DragGesture 등
+- [SwiftUI - Input Events](#swiftui---input-events) : 키보드 입력, 포커스 상태 등 이벤트 대응
+- [SwiftUI - Clipboard](#swiftui---clipboard) : 클립보드 복사/붙여넣기 처리
+- [SwiftUI - Drag & Drop](#swiftui---drag--drop) : 드래그 앤 드롭 구현 방법
+- [SwiftUI - Focus](#swiftui---focus) : 포커스 가능한 뷰 구성 및 이동 제어
+- [SwiftUI - System Events](#swiftui---system-events) : 앱 상태 변경 등 시스템 이벤트 대응
 </details>
 
 ---
@@ -349,69 +230,53 @@ _446 TILs and counting..._
 <details open>
 <summary>🔗 프레임워크 상호 연동 (UIKit ↔ SwiftUI)</summary>
 
-- **SwiftUI 내 UIKit 사용**  
-  - UIViewRepresentable, UIViewControllerRepresentable  
-  - MapView, PhotoPicker 등 UIKit 전용 뷰 활용  
-  - 기존: `SwiftUI - Integration` 항목 내용 포함
-
-- **UIKit 내 SwiftUI 사용**  
-  - UIHostingController 사용하여 SwiftUI View 삽입  
-  - 기존 UIKit 앱 일부 화면만 SwiftUI로 교체하는 방식
-
-- **상호 통신 기법**  
-  - Coordinator 패턴  
-  - delegate 연결, Binding 전달, EnvironmentObject 공유 등
-
-</details>
-
-
-<details open>
-<summary>🌿 SwiftUI : 선언형 UI 프레임워크 SwiftUI 구성 요소</summary>
-- [SwiftUI - Lifecycle](#swiftui--lifecycle) : 앱 생명주기 관리 및 상태 전이 흐름  
-- [SwiftUI - View Composition](#swiftui--view-composition) : `View`, `ViewBuilder`, 재사용 가능한 뷰 설계  
-- [SwiftUI - Components](#swiftui--components) : `Text`, `Image`, `Button`, `List`, `VStack` 등 기본 UI 요소  
-- [SwiftUI - Modifiers](#swiftui--modifiers) : `.padding()`, `.font()`, `.background()` 등 스타일링 체계  
-- [SwiftUI - State Management](#swiftui--state-management) : `@State`, `@Binding`, `@ObservedObject`, `@EnvironmentObject`  
-- [SwiftUI - Navigation](#swiftui--navigation) : `NavigationStack`, `NavigationLink`, path 기반 탐색 구조  
-- [SwiftUI - Modal & Presentation](#swiftui--modal--presentation) : `sheet`, `fullScreenCover`, `popover` 등 화면 전환  
-- [SwiftUI - Gestures & Input](#swiftui--gestures--input) : `TapGesture`, `DragGesture`, 제스처 조합  
-- [SwiftUI - Integration](#swiftui--integration) : `UIViewRepresentable`, `UIHostingController` 등 UIKit 연동  
-
-</details>
-
-<details open>
-<summary>🧭 화면 전환 & 네비게이션 비교 : UIKit과 SwiftUI의 화면 이동 구조</summary>
-
-- [ViewController & Screen Transition](#viewcontroller--screen-transition) : UIKit & SwiftUI의 화면 전환 구조  
-- [Navigation / Modal / Tab](#navigation--modal--tab) : 두 프레임워크의 화면 이동 방식 비교  
+- [SwiftUI - UIKit Integration](#swiftui---uikit-integration) : UIViewRepresentable, UIViewControllerRepresentable 활용
+- [UIKit - SwiftUI Integration](#uikit---swiftui-integration) : UIHostingController로 SwiftUI View 연결
 </details>
 
 
 ---
 
 <details open>
-<summary> 🌐 네트워크 통신 및 비동기 처리 구성 요소  </summary>
+<summary>🌐 네트워크 통신</summary>
 
-- [Networking](#networking) : URLSession, Alamofire 등 iOS 네트워크 통신 구성  
+- [Networking-restful](#networking-restful) : RESTful API 통신
 - [JSON & Codable](#json--codable) : Codable을 활용한 데이터 직렬화 / 역직렬화  
-- [Concurrency](#concurrency) : GCD, OperationQueue, async/await 기반 동시성 처리  
+- [WebView 기반 앱 구현](#webview-기반-앱-구현) : WKWebView 구성, JS 통신, 팝업 대응 등
+- [Socket Communication](#socket-communication) : WebSocket, Socket.IO 등 실시간 통신 방식
+- [Bluetooth / BLE](#bluetooth--ble) : CoreBluetooth 기반 주변기기 연결 및 데이터 송수신
 </details>
 
-<details open>
-<summary> 🔀 동시성  </summary>
-
-- [Networking](#networking) : URLSession, Alamofire 등 iOS 네트워크 통신 구성  
-- [JSON & Codable](#json--codable) : Codable을 활용한 데이터 직렬화 / 역직렬화  
-- [Concurrency](#concurrency) : GCD, OperationQueue, async/await 기반 동시성 처리  
-</details>
+---
 
 
 <details open>
-<summary> 🔌 기본 제공 프레임워크 기반 기능 활용 </summary>
+<summary>🎨 UI 스타일링 & 디자인 시스템</summary>
+
+- [Design System](#design-system) : 폰트, 색상, 간격 등 재사용 가능한 스타일 가이드 설계
+- [Dark Mode Support](#dark-mode-support) : 다크/라이트 모드 대응 전략 및 시스템 연동
+- [Theming](#theming) : 사용자 정의 테마 적용 및 환경 연계 처리 (.environment, UIAppearance 등)
+- [Assets & Resources](#assets--resources) : 이미지, 색상, 앱 아이콘 등 xcassets 리소스 구성
+- [Localization](#localization) : 다국어 지원을 위한 .strings 파일 구성 및 지역 대응 전략  
+</details>
+
+---
+
+<details open>
+<summary> 🔌 내부 프레임워크 기능 활용 </summary>
 
 - [Media & Camera](#media--camera) : 이미지, 비디오, 카메라 활용  
 - [Sharing & Files](#sharing--files) : 공유 기능, 파일 다운로드 처리  
 - [Contacts & Location](#contacts--location) : 연락처, 위치 권한 및 연동  
+</details>
+
+
+<details open>
+<summary>🔗 외부 프레임워크 서비스 연동</summary>
+
+- [Social Login](#social-login) : Kakao, Naver, Apple 로그인 연동  
+- [Firebase Integration](#firebase-integration) : 인증, 실시간 DB, Analytics 등 활용  
+- [Analytics & Tracking](#analytics--tracking) : GA4, Adjust 등 연동  
 </details>
 
 ---
@@ -420,23 +285,19 @@ _446 TILs and counting..._
 <summary> 🧰 개발 보조 도구 및 구성 관리  </summary>
 
 - [3rd Party Libraries](#3rd-party-libraries) : CocoaPods, Swift Package Manager 관리  
-- [Environment Configuration](#environment-configuration) : .xcconfig, Scheme, Flavor 구성  
-- [Debugging & Performance](#debugging--performance) : 디버깅 도구 및 성능 최적화  
-
+- [Environment Configuration](#environment-configuration) : .xcconfig, Scheme
+- [Debugging & Performance](#debugging--performance) : 디버깅 도구 및 성능
+- [Launch Performance](#launch-performance) : 런치 타임 최적화 전략 (lazy load, 초기 렌더 경량화) 최적화  
 </details>
-
 
 
 <details open>
 <summary> 🛡 보안 및 데이터 저장 기술   </summary>
-
+- [App Permissions](#app-permissions) : Info.plist 권한 설정, 마이크/카메라/위치 접근 처리
+- [Privacy Manifest](#privacy-manifest) : 2024년부터 도입된 Apple의 민감 정보 접근 명세
 - [Storage Options](#storage-options) : Keychain, UserDefaults, CoreData  
 - [Biometrics](#biometrics) : Face ID / Touch ID 연동  
-    
 </details>
-
-
-
 
 <details open>
 <summary> 🔔 푸시 알림 및 백그라운드 처리 </summary>
@@ -444,7 +305,6 @@ _446 TILs and counting..._
 - [Push Notification](#push-notification) : APNs 설정 및 메시지 처리  
 - [Background Tasks](#background-tasks) : Background Fetch, Task 처리  
 </details>
-
 
 
 <details open>
@@ -456,13 +316,25 @@ _446 TILs and counting..._
 
 
 <details open>
-<summary> 🏗 앱 설계 및 구조화 전략  </summary>
+<summary>🏗 아키텍처 및 모듈 설계</summary>
 
-- [Architecture Patterns](#architecture-patterns) : MVC, MVVM, VIPER 구조  
-- [Clean Architecture](#clean-architecture) : 의존성 분리 및 클린 코드 구조  
+- [Model-View Patterns](#model-view-patterns) : MVC, MVP, MVVM
+- [Clean Architecture 계열](#clean-architecture-계열) : VIPER, RIBs의 책임 기반 분리 설계
+- [Unidirectional Architecture](#unidirectional-architecture) : Redux 스타일, TCA, ReactorKit 등 단방향 데이터 흐름  
 - [Modularization](#modularization) : 모듈 단위 분리 전략  
-    
 </details>
+
+
+<details open>
+<summary>🔀 동시성 처리</summary>
+
+- [Concurrency Overview](#concurrency-overview) : 비동기 및 동시성의 개념과 필요성  
+- [GCD (Grand Central Dispatch)](#gcd-grand-central-dispatch) : DispatchQueue, QoS, main/asyncAfter 처리  
+- [DispatchWorkItem](#dispatchworkitem) : 작업 단위 생성 및 cancel, notify 등  
+- [Operation & OperationQueue](#operation--operationqueue) : 병렬 작업 구성 및 의존성 관리  
+- [Swift Concurrency](#swift-concurrency) : async/await, Task, TaskGroup 기반의 구조화된 동시성  
+</details>
+
 
 <details open>
 <summary>🚀 배포 및 운영 자동화 전략   </summary>
@@ -477,46 +349,11 @@ _446 TILs and counting..._
 ---
 
 <details open>
-<summary>🧯 문제 해결 </summary>
+<summary>🧯 운영 이슈 문제 해결 </summary>
 
 - [Log Analysis](#log-analysis) : 로그 기반 이슈 추적 및 원인 분석  
 - [Crash Handling](#crash-handling) : 크래시 수집 및 대응 전략  
 </details>
-
-
-
-
-
-- [Mobile-iOS](#mobile-ios)
-  - [iOS-Architecture](#ios-architecture)  
-
-  - [iOS-AppStore](#ios-appstore)  
-  - [iOS-Concurrency](#ios-concurrency)  
-  - [iOS-CustomLogic](#ios-customlogic)  
-  - [iOS-Development](#ios-development)  
-  - [iOS-Environment](#ios-environment)  
-  - [iOS-Extensions](#ios-extensions)  
-  - [iOS-Foundation](#ios-foundation)  
-  - [iOS-Framework-CoreAnimation](#ios-framework-coreanimation)  
-  - [iOS-Framework-CoreLocation](#ios-framework-corelocation)  
-  - [iOS-Framework-Management](#ios-framework-management)  
-  - [iOS-Framework-Migration](#ios-framework-migration)  
-  - [iOS-Framework-PhotoKit](#ios-framework-photokit)  
-  - [iOS-Framework-SwiftUI](#ios-framework-swiftui)  
-  - [iOS-Framework-SwiftUI_UIKit](#ios-framework-swiftui_uikit)  
-  - [iOS-Framework-UIKit](#ios-framework-uikit)  
-  - [iOS-Framework-UIKit-UIResponder-UIApplication](#ios-framework-uikit-uiresponder-uiapplication)  
-  - [iOS-Framework-UIKit-UIResponder-UIView-UIControl](#ios-framework-uikit-uiresponder-uiview-uicontrol)  
-  - [iOS-Framework-UIKit-UIResponder-UIView-UIScrollView](#ios-framework-uikit-uiresponder-uiview-uiscrollview)  
-  - [iOS-Framework-UIKit-UIResponder-UIViewController](#ios-framework-uikit-uiresponder-uiviewcontroller)  
-  - [iOS-Hierachy](#ios-hierachy)  
-  - [iOS-Integrity](#ios-integrity)  
-  - [iOS-Library](#ios-library)  
-  - [iOS-Networking](#ios-networking)  
-  - [iOS-RelatedImage](#ios-relatedimage)  
-  - [iOS-ScreenTranport](#ios-screentranport)  
-  - [iOS-TDD](#ios-tdd)  
-
 
 
 ---
@@ -576,7 +413,11 @@ _446 TILs and counting..._
 
 ---
 
-## Detail TILs
+
+
+
+# Detail TILs
+세부 Topic들이 입력되는곳
 
 ### [A_Writing_in_Progress](#a_writing_in_progress)
 - [Design Pattern - Command 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Command.md)
