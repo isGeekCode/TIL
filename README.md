@@ -331,10 +331,19 @@ _446 TILs and counting..._
 </details>
 
 
-- 🌐 Web  
-  - [HTML Samples](#web-html-sample)  
-  - [CSS Patterns](#web-css-patterns)  
-  - [React](#web-react)  
+---
+
+## Android
+
+
+
+## Flutter
+
+
+## 🌐 Web  
+- [HTML Samples](#web-html-sample)  
+- [CSS Patterns](#web-css-patterns)  
+- [React](#web-react)  
 </details>
 
 ---
