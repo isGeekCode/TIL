@@ -120,20 +120,6 @@ _446 TILs and counting..._
 <summary>💻 Development</summary>
 
 - 📱 Mobile  
-  - [Sample Apps](#sample-app-list)  
-  - [iOS](#mobile-ios)  
-  - [Android](#mobile-android)  
-  - [Flutter](#mobile-flutter)
-
-- 🌐 Web  
-  - [HTML Samples](#web-html-sample)  
-  - [CSS Patterns](#web-css-patterns)  
-  - [React](#web-react)  
-</details>
-
-
----
-
 
 ## 📦 iOS - UIKit기반 앱
 
@@ -293,6 +279,7 @@ _446 TILs and counting..._
 
 <details open>
 <summary> 🛡 보안 및 데이터 저장 기술   </summary>
+
 - [App Permissions](#app-permissions) : Info.plist 권한 설정, 마이크/카메라/위치 접근 처리
 - [Privacy Manifest](#privacy-manifest) : 2024년부터 도입된 Apple의 민감 정보 접근 명세
 - [Storage Options](#storage-options) : Keychain, UserDefaults, CoreData  
@@ -356,11 +343,18 @@ _446 TILs and counting..._
 </details>
 
 
+- 🌐 Web  
+  - [HTML Samples](#web-html-sample)  
+  - [CSS Patterns](#web-css-patterns)  
+  - [React](#web-react)  
+</details>
+
 ---
 
 
 <details open>
 <summary>🧬 Languages</summary>
+
 - [Lang-Swift](#lang-swift)
 - [Lang-Objective-C](#lang-objective-c)
 - [Lang-Ruby](#lang-ruby)
