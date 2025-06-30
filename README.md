@@ -291,13 +291,13 @@ _446 TILs and counting..._
 # 📚 Programming Language Reference  
 
 - [🧬 Languages](#-languages)
-- [Lang-Swift](#lang-swift)
-- [Lang-Objective-C](#lang-objective-c)
-- [Lang-Ruby](#lang-ruby)
-- [Lang-Dart](#lang-dart)
-- [Lang-TypeScript](#lang-typescript)
-- [Lang-JavaScript](#lang-javascript)
-- [Lang-SQL](#lang-sql)
+    - [Lang-Swift](#lang-swift)
+    - [Lang-Objective-C](#lang-objective-c)
+    - [Lang-Ruby](#lang-ruby)
+    - [Lang-Dart](#lang-dart)
+    - [Lang-TypeScript](#lang-typescript)
+    - [Lang-JavaScript](#lang-javascript)
+    - [Lang-SQL](#lang-sql)
 
 
 ### Markup & Style
@@ -417,9 +417,81 @@ _446 TILs and counting..._
 
 # 🧬 Languages
 
+## Lang-Ruby
+- [Install: Ruby](Lang-Ruby/Install_Ruby.md)
+- [RubyGems - Package Manager :　gem 관리하기](Lang-Ruby/ManageGem.md)
+- [Ruby - 버전관리 : RVM, Rbenv 사용법](Lang-Ruby/ManageRuby.md)
+
+## Lang-Swift
+- [Swift에 대한 소개](Lang-Swift/About_Swift000Intro_.md)
+- [Swift문법 기초](Lang-Swift/About_Swift001Basic_.md)
+- [Swift - 변수와 상수](Lang-Swift/Swift_1-1_LetVar.md)
+- [Swift - 기본 타입](Lang-Swift/Swift_1-2_Types.md)
+- [Swift - 조건문과 반복문](Lang-Swift/Swift_1-3_Control.md)
+- [Swift - 함수](Lang-Swift/Swift_1-4_Function.md)
+- [Swift - 옵셔널](Lang-Swift/Swift_1-5_Optional.md)
+- [Swift - 저장 프로퍼티와 연산 프로퍼티](Lang-Swift/Swift_2-1_Property.md)
+- [Swift - Getter와 Setter](Lang-Swift/Swift_2-2_GetSet.md)
+- [Swift - 프로퍼티 옵저버 (willSet, didSet)](Lang-Swift/Swift_2-3_Observer.md)
+- [Swift - 접근 제어자 (private, internal, public 등)](Lang-Swift/Swift_2-4_Access.md)
+- [Swift - Class와 Struct](Lang-Swift/About_Swift001ClassAndStruct.md)
+- [Swift - Initialization에 대해 알아보기](Lang-Swift/About_Swift002Init.md)
+- [Playground에서 UIView를 그려보자](Lang-Swift/About_Swift005Playground.md)
+- [Swift - Array 모아보기](Lang-Swift/About_Swift010Array.md)
+- [Swift_Sequence Protocol](Lang-Swift/About_Swift020SequenceProtocol.md)
+- [Attribute - @frozen](Lang-Swift/Attribute_frozen.md)
+- [Swift - Codable 다루기](Lang-Swift/Codable.md)
+- [Do - Try - Catch](Lang-Swift/DoTryCatch.md)
+- [Swift - Collection_Array : prefix() `안전한 사용`](Lang-Swift/Swift_collection_Array_prefix.md)
+- [random함수를 이용해 Random한 숫자 뽑아내기](Lang-Swift/Swift_collection_Array_random.md)
+- [Swift - Subscript(작성중)](Lang-Swift/Swift_collection_Subscript.md)
+- [안전하게 배열에 접근하는 방법](Lang-Swift/TIL220310_contactArraySafely.md)
+- [[Common Method] 로그 관련 함수](Lang-Swift/TIL220318_aboutLogMethod.md)
+- [# 여러개의 Action을 한번에 추가하기](Lang-Swift/TIL220404_forEach.md)
+- [mutating 과 구조체](Lang-Swift/TIL220413_mutating.md)
+- [텍스트인코딩에 관하여](Lang-Swift/TIL220517_aboutTextEncoding.md)
+- [배열안에 담긴 url 유효성 검사](Lang-Swift/TIL220520_aboutCheckArrayComponent.md)
+- [이미지의 형태](Lang-Swift/TIL220915_KindsOfImageFormats.md)
+- [Xcode 디버깅으로 변수변화 캐치하기](Lang-Swift/TIL221026_howToDebugging.md)
+- [Understanding Closures in Swift : 클로저 톺아보기](Lang-Swift/UnderstandingClosures.md)
+- [enum 사용법](Lang-Swift/aboutEnum.md)
+- [저장프로퍼티 - 프로퍼티(1)](Lang-Swift/aboutProperty1.md)
+- [연산프로퍼티 - 프로퍼티(2)](Lang-Swift/aboutProperty2.md)
+- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](Lang-Swift/aboutProperty205.md)
+- [타입프로퍼티(static) - 프로퍼티(3)](Lang-Swift/aboutProperty3.md)
+- [타입메서드, 클래스메서드, 인스턴스 메서드](Lang-Swift/aboutPropertyWith_static.md)
+- [파일경로 String으로에서 확장자 추출하기](Lang-Swift/bringToExtensionName.md)
+- [고차함수 - Higher Order Function : Map, Filter, Reduce, Sort, FlatMap](Lang-Swift/higherOrderFuction.md)
+- [Special Literal](Lang-Swift/specialLiteral.md)
+- [Splite과 Component](Lang-Swift/splite_component_map.md)
+- [Swift - 스위프트에서 사용하는 패턴들](Lang-Swift/swift_a_swift_patterns.md)
+- [case let : for case let 익숙해지기](Lang-Swift/swift_caseLet_for.md)
+- [Switch case let, If case let, guard case let](Lang-Swift/swift_caseLet_switch_if_guard.md)
+- [Swift - Collection_Int : signum()](Lang-Swift/swift_collection_Int_signum.md)
+- [Closure 톺아보기](Lang-Swift/swift_firstClassClosureMaster.md)
+- [1급 객체](Lang-Swift/swift_firstClassObject.md)
+- [Swift - 키워드 defer](Lang-Swift/swift_keywordDefer.md)
+- [Swift - 키워드 inout](Lang-Swift/swift_keywordInout.md)
+- [Swift - Mirror 사용하기](Lang-Swift/swift_mirror.md)
+- [Swift - Range 함수 사용하기](Lang-Swift/swift_range.md)
+- [Swift - 참조(Strong, weak, unowned)](Lang-Swift/swift_reference_weak_unowned.md)
+- [Array - 특정값이 동일하거나 포함한 경우 찾기 :  firstIndex()](Lang-Swift/swift_replacingArrayIndexValue..md)
+
+### [Lang-Objective-C](#ios-lang-objective-c)
+- [Objc - Objc 프로젝트에서 Swift 라이브러리 사용하기](Lang-Objective-C/Objc_Bridging_SwiftInObjc.md)
+- [ObjC - Control Flow : Switch문](Lang-Objective-C/Objc_ControlFlow.md)
+- [Objc - 라이브러리 : 직접 파일삽입된 라이브러리 제거작업](Lang-Objective-C/Objc_DeleteFramework.md)
+- [ObjC - NSDictionary to NSString](Lang-Objective-C/Objc_DicToStr.md)
+- [ObjC - 로그찍기](Lang-Objective-C/Objc_Log.md)
+- [Objc - c언어와 objective-c의 차이, 발전](Lang-Objective-C/TIL220421_aboutObjectiveC.md)
 
 
-# 🧠 Computer Science
+## Lang-Dart
+- [Flutter - Dart: Intro](Lang-Dart/Flutter_0000_Dart_Intro.md)
+
+
+
+# 🖥️ Computer Science
 - [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
 - [Data Structure - 다양한 데이터 구조, iOS에서 사용하는 데이터 구조](ComputerScience/DataStructure.md)
@@ -488,7 +560,6 @@ _446 TILs and counting..._
 
 ### [Mobile-iOS](#mobile-ios)
 - [iOS - 스플래시 화면 구현 가이드 (정적 & 동적)](Mobile_01_iOS/iOS_0271_SplashScreen.md)
-
 
 ### [iOS-AppStore](#ios-appstore)
 - [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](iOS-AppStore/AppStore_AppDismiss.md)
@@ -824,80 +895,6 @@ _446 TILs and counting..._
 ## [🌐 Web Development](#web-development)
 
 
-
-## [Languages](#languages)
-
-### [Lang-Ruby](#lang-ruby)
-- [Install: Ruby](Lang-Ruby/Install_Ruby.md)
-- [RubyGems - Package Manager :　gem 관리하기](Lang-Ruby/ManageGem.md)
-- [Ruby - 버전관리 : RVM, Rbenv 사용법](Lang-Ruby/ManageRuby.md)
-
-### [Lang-Swift](#lang-swift)
-- [Swift에 대한 소개](Lang-Swift/About_Swift000Intro_.md)
-- [Swift문법 기초](Lang-Swift/About_Swift001Basic_.md)
-- [Swift - 변수와 상수](Lang-Swift/Swift_1-1_LetVar.md)
-- [Swift - 기본 타입](Lang-Swift/Swift_1-2_Types.md)
-- [Swift - 조건문과 반복문](Lang-Swift/Swift_1-3_Control.md)
-- [Swift - 함수](Lang-Swift/Swift_1-4_Function.md)
-- [Swift - 옵셔널](Lang-Swift/Swift_1-5_Optional.md)
-- [Swift - 저장 프로퍼티와 연산 프로퍼티](Lang-Swift/Swift_2-1_Property.md)
-- [Swift - Getter와 Setter](Lang-Swift/Swift_2-2_GetSet.md)
-- [Swift - 프로퍼티 옵저버 (willSet, didSet)](Lang-Swift/Swift_2-3_Observer.md)
-- [Swift - 접근 제어자 (private, internal, public 등)](Lang-Swift/Swift_2-4_Access.md)
-- [Swift - Class와 Struct](Lang-Swift/About_Swift001ClassAndStruct.md)
-- [Swift - Initialization에 대해 알아보기](Lang-Swift/About_Swift002Init.md)
-- [Playground에서 UIView를 그려보자](Lang-Swift/About_Swift005Playground.md)
-- [Swift - Array 모아보기](Lang-Swift/About_Swift010Array.md)
-- [Swift_Sequence Protocol](Lang-Swift/About_Swift020SequenceProtocol.md)
-- [Attribute - @frozen](Lang-Swift/Attribute_frozen.md)
-- [Swift - Codable 다루기](Lang-Swift/Codable.md)
-- [Do - Try - Catch](Lang-Swift/DoTryCatch.md)
-- [Swift - Collection_Array : prefix() `안전한 사용`](Lang-Swift/Swift_collection_Array_prefix.md)
-- [random함수를 이용해 Random한 숫자 뽑아내기](Lang-Swift/Swift_collection_Array_random.md)
-- [Swift - Subscript(작성중)](Lang-Swift/Swift_collection_Subscript.md)
-- [안전하게 배열에 접근하는 방법](Lang-Swift/TIL220310_contactArraySafely.md)
-- [[Common Method] 로그 관련 함수](Lang-Swift/TIL220318_aboutLogMethod.md)
-- [# 여러개의 Action을 한번에 추가하기](Lang-Swift/TIL220404_forEach.md)
-- [mutating 과 구조체](Lang-Swift/TIL220413_mutating.md)
-- [텍스트인코딩에 관하여](Lang-Swift/TIL220517_aboutTextEncoding.md)
-- [배열안에 담긴 url 유효성 검사](Lang-Swift/TIL220520_aboutCheckArrayComponent.md)
-- [이미지의 형태](Lang-Swift/TIL220915_KindsOfImageFormats.md)
-- [Xcode 디버깅으로 변수변화 캐치하기](Lang-Swift/TIL221026_howToDebugging.md)
-- [Understanding Closures in Swift : 클로저 톺아보기](Lang-Swift/UnderstandingClosures.md)
-- [enum 사용법](Lang-Swift/aboutEnum.md)
-- [저장프로퍼티 - 프로퍼티(1)](Lang-Swift/aboutProperty1.md)
-- [연산프로퍼티 - 프로퍼티(2)](Lang-Swift/aboutProperty2.md)
-- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](Lang-Swift/aboutProperty205.md)
-- [타입프로퍼티(static) - 프로퍼티(3)](Lang-Swift/aboutProperty3.md)
-- [타입메서드, 클래스메서드, 인스턴스 메서드](Lang-Swift/aboutPropertyWith_static.md)
-- [파일경로 String으로에서 확장자 추출하기](Lang-Swift/bringToExtensionName.md)
-- [고차함수 - Higher Order Function : Map, Filter, Reduce, Sort, FlatMap](Lang-Swift/higherOrderFuction.md)
-- [Special Literal](Lang-Swift/specialLiteral.md)
-- [Splite과 Component](Lang-Swift/splite_component_map.md)
-- [Swift - 스위프트에서 사용하는 패턴들](Lang-Swift/swift_a_swift_patterns.md)
-- [case let : for case let 익숙해지기](Lang-Swift/swift_caseLet_for.md)
-- [Switch case let, If case let, guard case let](Lang-Swift/swift_caseLet_switch_if_guard.md)
-- [Swift - Collection_Int : signum()](Lang-Swift/swift_collection_Int_signum.md)
-- [Closure 톺아보기](Lang-Swift/swift_firstClassClosureMaster.md)
-- [1급 객체](Lang-Swift/swift_firstClassObject.md)
-- [Swift - 키워드 defer](Lang-Swift/swift_keywordDefer.md)
-- [Swift - 키워드 inout](Lang-Swift/swift_keywordInout.md)
-- [Swift - Mirror 사용하기](Lang-Swift/swift_mirror.md)
-- [Swift - Range 함수 사용하기](Lang-Swift/swift_range.md)
-- [Swift - 참조(Strong, weak, unowned)](Lang-Swift/swift_reference_weak_unowned.md)
-- [Array - 특정값이 동일하거나 포함한 경우 찾기 :  firstIndex()](Lang-Swift/swift_replacingArrayIndexValue..md)
-
-### [Lang-Objective-C](#ios-lang-objective-c)
-- [Objc - Objc 프로젝트에서 Swift 라이브러리 사용하기](Lang-Objective-C/Objc_Bridging_SwiftInObjc.md)
-- [ObjC - Control Flow : Switch문](Lang-Objective-C/Objc_ControlFlow.md)
-- [Objc - 라이브러리 : 직접 파일삽입된 라이브러리 제거작업](Lang-Objective-C/Objc_DeleteFramework.md)
-- [ObjC - NSDictionary to NSString](Lang-Objective-C/Objc_DicToStr.md)
-- [ObjC - 로그찍기](Lang-Objective-C/Objc_Log.md)
-- [Objc - c언어와 objective-c의 차이, 발전](Lang-Objective-C/TIL220421_aboutObjectiveC.md)
-
-
-### [Lang-Dart](#ios-dart)
-- [Flutter - Dart: Intro](Lang-Dart/Flutter_0000_Dart_Intro.md)
 
 
 
