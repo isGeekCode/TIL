@@ -310,17 +310,17 @@ _446 TILs and counting..._
 
 ---
 
-- [🧠 Computer Science](#-computer-science)
-- [📚 Basics](#-basics) : 
-- [⚙️ Hardware](#-hardware) : 
-- [🧩 Software](#-software) : 
-- [📐 Algorithms](#-algorithms) : 
-- [📦 Data Structure](#-data-structure) : 
-- [🌐 Networking](#-networking) : 
-- [🧮 Programming Paradigms](#-programming-paradigms) : 
-- [🛡 Security & Cryptography](#-security--cryptography) : 
-- [🗄 Database](#-database) : 
-- [🧠 AI / Machine Learning](#-ai--machine-learning) : 
+- [🖥️ Computer Science](#-computer-science)
+    - [📚 Basics](#-basics) : 
+    - [⚙️ Hardware](#-hardware) : 
+    - [🧩 Software](#-software) : 
+    - [📐 Algorithms](#-algorithms) : 
+    - [📦 Data Structure](#-data-structure) : 
+    - [🌐 Networking](#-networking) : 
+    - [🧮 Programming Paradigms](#-programming-paradigms) : 
+    - [🛡 Security & Cryptography](#-security--cryptography) : 
+    - [🗄 Database](#-database) : 
+    - [🧠 AI / Machine Learning](#-ai--machine-learning) : 
 
 ### ⚙️ DevOps / Tools
 
