@@ -23,6 +23,9 @@ _446 TILs and counting..._
 ## 📦 iOS - UIKit기반 앱
 
 <details>
+<summary>UIKit 펼쳐보기</summary>
+
+<details open>
 <summary>🔄 UIKit 앱의 구조와 각종 이벤트 흐름</summary>
 
 - [UIKit - App Structure](#uikit---app-structure) : UIApplication, AppDelegate, SceneDelegate 기반 앱 구조
@@ -75,10 +78,15 @@ _446 TILs and counting..._
 - [UIKit - Handwriting Recognition](#uikit---handwriting-recognition) : Apple Pencil 필기 인식
 </details>
 
+</details>
+
 ---
 
 
 ## 📦 iOS - SwiftUI앱
+<details>
+<summary>SwiftUI 펼쳐보기</summary>
+
 
 <details open>
 <summary>📁 SwiftUI 앱의 구조와 각종 이벤트 흐름</summary>
