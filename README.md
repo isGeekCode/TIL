@@ -84,7 +84,7 @@ _446 TILs and counting..._
 
 
 ## 📦 iOS - SwiftUI앱
-<img src="https://img.shields.io/badge/swift-EF5036.svg?style=for-the-badge&logo=swift&logoColor=EF5036" />
+<img src="https://img.shields.io/badge/swift-EF5036.svg?style=for-the-badge&logo=swift&logoColor=white" />
 
 <details>
 <summary>SwiftUI 펼쳐보기</summary>
