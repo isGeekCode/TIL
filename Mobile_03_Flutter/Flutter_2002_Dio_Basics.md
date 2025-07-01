@@ -88,6 +88,50 @@ final dio = Dio(BaseOptions(
 ));
 ```
 
+### 🔍 로그 인터셉터(LogInterceptor) 추가
+
+개발 중에는 요청/응답 정보를 확인할 수 있도록 `LogInterceptor`를 사용하는 것이 유용합니다.
+
+```dart
+dio.interceptors.add(LogInterceptor(
+  request: true,
+  requestHeader: true,
+  requestBody: true,
+  responseHeader: true,
+  responseBody: true,
+  error: true,
+  logPrint: (log) => debugPrint('📡 [NETWORK] $log'), // 로그 출력 방식 지정
+));
+```
+
+> `logPrint`를 활용하면 원하는 방식으로 로그를 커스터마이징할 수 있습니다.  
+> 운영 환경에서는 민감한 정보를 출력하지 않도록 `requestBody`, `responseBody`를 false로 설정하는 것이 좋습니다.
+
+### 🛠 커스텀 Interceptor 직접 구현
+
+기본 제공되는 `LogInterceptor`보다 더 세밀하게 요청/응답 흐름을 제어하고 싶다면, `InterceptorsWrapper`를 사용하여 커스텀 인터셉터를 구현할 수 있습니다.  
+이는 토큰 갱신, 공통 헤더 추가, 에러 공통 처리 등 고급 네트워크 핸들링에 유용합니다.
+
+```dart
+dio.interceptors.add(InterceptorsWrapper(
+  onRequest: (options, handler) {
+    print('🌐 [ApiClient] Request: ${options.uri}');
+    return handler.next(options); // 요청을 계속 진행
+  },
+  onResponse: (response, handler) {
+    print('📥 [ApiClient] Response: ${response.statusCode}');
+    return handler.next(response); // 응답 처리를 계속 진행
+  },
+  onError: (DioError e, handler) {
+    print('❗️ [ApiClient] Error: ${e.message}');
+    return handler.next(e); // 에러 처리 계속 진행
+  },
+));
+```
+
+> 위와 같이 직접 Interceptor를 구성하면 요청 흐름을 세밀하게 제어할 수 있습니다.
+> 예외 처리, 헤더 자동 주입, 리프레시 토큰 등의 고급 기능 구현에도 사용됩니다.
+
 ---
 
 ## 5️⃣ Dio 싱글턴 패턴 예제
