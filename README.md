@@ -18,7 +18,6 @@ _446 TILs and counting..._
 ## 🚧 In Progress
 - [A_Writing_in_Progress](#a_writing_in_progress)
 
-
 # Mobile
 ## 📦 iOS - UIKit기반 앱
 <img src="https://img.shields.io/badge/UIKit-2A2F3D.svg?style=for-the-badge&logo=swift&logoColor=EF5036" />
@@ -85,7 +84,7 @@ _446 TILs and counting..._
 
 
 ## 📦 iOS - SwiftUI앱
-<img src="https://img.shields.io/badge/swift-2A2F3D.svg?style=for-the-badge&logo=swift&logoColor=EF5036" />
+<img src="https://img.shields.io/badge/SwiftUI-00DCF9.svg?style=for-the-badge&logo=swift&logoColor=EF5036" />
 
 <details>
 <summary>SwiftUI 펼쳐보기</summary>
