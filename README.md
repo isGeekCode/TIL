@@ -311,17 +311,20 @@ _446 TILs and counting..._
 ---
 
 - [🖥️ Computer Science](#-computer-science)
-    - [📚 Basics](#-basics) : 
-    - [⚙️ Hardware](#-hardware) : 
-    - [🧩 Software](#-software) : 
-    - [📐 Algorithms](#-algorithms) : 
-    - [📦 Data Structure](#-data-structure) : 
-    - [🌐 Networking](#-networking) : 
-    - [🧮 Programming Paradigms](#-programming-paradigms) : 
-    - [🛡 Security & Cryptography](#-security--cryptography) : 
-    - [🗄 Database](#-database) : 
-    - [🧠 AI / Machine Learning](#-ai--machine-learning) : 
-
+    - [📚 Basics](#-basics) : 컴퓨터 과학의 기초 개념, 비트와 바이트, 논리 게이트 등
+    - [⚙️ Hardware](#-hardware) : CPU, 메모리, 저장장치 등 하드웨어 구성 요소
+    - [🧩 Software](#-software) : 운영체제, 컴파일러, 소프트웨어 개발의 기반
+    - [📐 Algorithms](#-algorithms) : 문제 해결을 위한 알고리즘과 패턴
+    - [📦 Data Structure](#-data-structure) : 배열, 리스트, 트리 등 자료 구조
+    - [🌐 Networking](#-networking) : 인터넷, TCP/IP, OSI 7계층 등 네트워크 원리
+    - [🧮 Programming Paradigms](#-programming-paradigms) : 명령형, 함수형, 객체지향 등 프로그래밍 방식
+    - [🎯 Design Patterns](#-design-patterns) : 재사용 가능한 소프트웨어 설계 패턴 (싱글턴, 옵저버 등)
+    - [🏛 Architecture Patterns](#-architecture-patterns) : 앱의 구조를 구성하는 고수준 설계 패턴 (MVC, MVVM 등)
+    - [🛡 Security & Cryptography](#-security--cryptography) : 인증, 암호화, 보안 위협 대응 방법
+    - [🗄 Database](#-database) : 데이터베이스 기본 개념과 SQL 활용
+    - [🧠 AI / Machine Learning](#-ai--machine-learning) : 인공지능의 기본 개념과 머신러닝 모델  
+    
+      
 ### ⚙️ DevOps / Tools
 
 - [CI_CD](#ci_cd)
@@ -337,7 +340,6 @@ _446 TILs and counting..._
 
 ## 🤖 AI & Errors
 
-- [About-AI](#about-ai)
 - [About-Error](#about-error)
 
 ---
@@ -373,13 +375,6 @@ _446 TILs and counting..._
 
 <br><br>
 
-### [About-AI](#about-ai)
-- [딥러닝이란](About-AI/DeepLearning.md)
-- [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md)
-- [요즘 핫한 GPT로 앱만들어보기](About-AI/MVVM_ReactorKit_Snapkit_RxSwift.md)
-- [언어모델이란](About-AI/chatGPT.md)
-
-<br><br>
 
 ### [About-Error](#about-error)
 - [[StoryBoard] - Unknown class ViewControllerC in Interface Builder file](About-Error/StoryBoard_InheritModuleFromTarget.md)
@@ -492,33 +487,21 @@ _446 TILs and counting..._
 
 
 # 🖥️ Computer Science
-- [2진법,10진법,16진법](ComputerScience/221021_baseRadix.md)
+
+## 📚 Basics
 - [트랜지스터의 원리](ComputerScience/221024_transister.md)
-- [Data Structure - 다양한 데이터 구조, iOS에서 사용하는 데이터 구조](ComputerScience/DataStructure.md)
+- [2진법,10진법,16진법](ComputerScience/Basics/221021_baseRadix.md)
+
+## ⚙️ Hardware
+
+## 🧩 Software
+- [여러가지 버전관리정책](ComputerScience/VersionLint.md)
+- [애자일 방법론 이해하기](ComputerScience/methodology_agile.md)
 - [MVP: Minimum Viable Product](ComputerScience/MVP.md)
 - [직렬화(Serialization)](ComputerScience/Serialization.md)
-- [# 터미널 - 커스텀 함수 및 환경변수 설정하기](ComputerScience/Terminal_customization.md)
-- [Terminal 기초 사용법](ComputerScience/Terminal_manual.md)
-- [여러가지 버전관리정책](ComputerScience/VersionLint.md)
-- [iOS의 Virtual Memory에 대하여](ComputerScience/VirtualMemory.md)
 - [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
-- [Data Structure - Stack과 Queue](ComputerScience/cs_001_stackQeueue.md)
-- [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
-- [iOS와 HTTP/2에 대하여](ComputerScience/http_2.md)
-- [iOS에서 메모리구조 : Code / Data / Heap / Stack](ComputerScience/memoryStructure.md)
-- [애자일 방법론 이해하기](ComputerScience/methodology_agile.md)
-- [네트워킹 - 호스트파일이란, 내부망 설정하기](ComputerScience/networking_hostfile.md)
-- [OSI 7 Layer](ComputerScience/osi_7layer.md)
-- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md)
-- [OSI 7 Layer - 1.5 여러 컴퓨터간 통신](ComputerScience/osi_7layer_011_internet.md)
-- [OSI 7 Layer - 2. Data Link Layer(데이터 링크 계층)](ComputerScience/osi_7layer_020.DataLink.md)
-- [OSI 7 Layer - 3. Network Layer(네트워크 계층)](ComputerScience/osi_7layer_030.Network.md)
-- [프로그래밍 패러다임 - Functional Programming(함수형 프로그래밍)](ComputerScience/programming_00_Functional_.md)
-- [Functional Programming - 모나드 이해하기](ComputerScience/programming_00_Functional_Monade.md)
-- [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
 
-
-### 📐 Algorithms
+## 📐 Algorithms
 - [문제풀이 인사이트](Algorithm/000_algorithm_a_problem_solving_insights.md)
 - [복잡도 정리](Algorithm/algorithm_000_essential_TimeComplexity.md)
 - [필수 알고리즘 - 그리디 (Greedy)](Algorithm/algorithm_006_esssential_Greedy.md)
@@ -542,6 +525,48 @@ _446 TILs and counting..._
 - [필수 알고리즘 - MST (Minimum Spanning Tree)](Algorithm/algorithm_008_essential_mst.md)
 - [필수 알고리즘 - 플로이드 (Floyd)](Algorithm/algorithm_0091_essentail_Floyd.md)
 - [필수 알고리즘 - 다익스트라 (Dijkstra)](Algorithm/algorithm_009_essential_Dijkstra.md)
+
+## 📦 Data Structure
+
+## 🌐 Networking
+- [HTTP/2에 대하여(feat.ios)](ComputerScience/http_2.md)
+- [네트워킹 - 호스트파일이란, 내부망 설정하기](ComputerScience/networking_hostfile.md)
+- [OSI 7 Layer](ComputerScience/osi_7layer.md)
+- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md)
+- [OSI 7 Layer - 1.5 여러 컴퓨터간 통신](ComputerScience/osi_7layer_011_internet.md)
+- [OSI 7 Layer - 2. Data Link Layer(데이터 링크 계층)](ComputerScience/osi_7layer_020.DataLink.md)
+- [OSI 7 Layer - 3. Network Layer(네트워크 계층)](ComputerScience/osi_7layer_030.Network.md)
+
+## 🧮 Programming Paradigms
+- [프로그래밍 패러다임 - Functional Programming(함수형 프로그래밍)](ComputerScience/programming_00_Functional_.md)
+- [Functional Programming - 모나드 이해하기](ComputerScience/programming_00_Functional_Monade.md)
+- [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
+
+## 🎯 Design Patterns
+- [Singleton Pattern 개요](ComputerScience/DesignPatterns/cs_dp_00_singleton_overview.md)
+
+## 🏛 Architecture Patterns
+
+## 🛡 Security & Cryptography
+
+## 🗄 Database
+
+## 🧠 AI / Machine Learning
+- [딥러닝이란](About-AI/DeepLearning.md)
+- [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md)
+- [요즘 핫한 GPT로 앱만들어보기](About-AI/MVVM_ReactorKit_Snapkit_RxSwift.md)
+- [언어모델이란](About-AI/chatGPT.md)
+
+
+## ASIS
+- [Data Structure - 다양한 데이터 구조, iOS에서 사용하는 데이터 구조](ComputerScience/DataStructure.md)
+- [iOS에서 메모리구조 : Code / Data / Heap / Stack](ComputerScience/memoryStructure.md)
+- [터미널 - 커스텀 함수 및 환경변수 설정하기](ComputerScience/Terminal_customization.md)
+- [Terminal 기초 사용법](ComputerScience/Terminal_manual.md)
+- [iOS의 Virtual Memory에 대하여](ComputerScience/VirtualMemory.md)
+- [Data Structure - Stack과 Queue](ComputerScience/cs_001_stackQeueue.md)
+- [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
+
 
 ### [CI_CD](#ci_cd)
 - [CI/CD - GitHub Action 사용하기 : 초기 구현하기](CI_CD/GithubAction_A_tutorial00.md)
