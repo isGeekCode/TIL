@@ -320,7 +320,7 @@ _446 TILs and counting..._
     - [📦 Data Structure](#-data-structure) : 배열, 리스트, 트리 등 자료 구조
     - [🌐 Networking](#-networking) : 인터넷, TCP/IP, OSI 7계층 등 네트워크 원리
     - [🧮 Programming Paradigms](#-programming-paradigms) : 명령형, 함수형, 객체지향 등 프로그래밍 방식
-    - [🎯 Design Patterns](#-design-patterns) : 재사용 가능한 소프트웨어 설계 패턴 (싱글턴, 옵저버 등)
+    - [🎯 Design Patterns](#-design-patterns) : 재사용 가능한 소프트웨어 설계 패턴 (싱글턴, 팩토리, 옵저버 등)
     - [🏛 Architecture Patterns](#-architecture-patterns) : 앱의 구조를 구성하는 고수준 설계 패턴 (MVC, MVVM 등)
     - [🛡 Security & Cryptography](#-security--cryptography) : 인증, 암호화, 보안 위협 대응 방법
     - [🗄 Database](#-database) : 데이터베이스 기본 개념과 SQL 활용
@@ -484,8 +484,9 @@ _446 TILs and counting..._
 
 
 ## Lang-Dart
-- [Flutter - Dart: Intro](Lang-Dart/Flutter_0000_Dart_Intro.md)
-
+- [Dart - Intro](Lang-Dart/Dart_0000_Intro.md)
+- [Dart - 싱글턴 패턴](Lang-Dart/Dart_3010_Singleton_Basics.md)
+- [Dart - 팩토리 패턴](Lang-Dart/Dart_3011_Factory.md)
 
 
 # 🖥️ Computer Science
@@ -546,6 +547,7 @@ _446 TILs and counting..._
 
 ## 🎯 Design Patterns
 - [Singleton Pattern 개요](ComputerScience/DesignPatterns/cs_dp_00_singleton_overview.md)
+- [Factory Pattern 개요](ComputerScience/DesignPatterns/cs_dp_01_factory_overview.md)
 
 ## 🏛 Architecture Patterns
 
@@ -909,6 +911,7 @@ _446 TILs and counting..._
 - [Flutter - Toggle Switch](Mobile_03_Flutter/Flutter_1501_ToggleSwitch.md)
 - [Flutter - 삼각형 View 그리기](Mobile_03_Flutter/Flutter_1990_View_Triangle.md)
 - [Flutter - 네트워크 통신 기초 (RESTful API 중심)](Mobile_03_Flutter/Flutter_2000_Networking_Basics.md)
+- [Flutter - 네트워크 통신 : Dio를 이용한 모듈 구현)](Mobile_03_Flutter/Flutter_2002_Dio_Basics.md)
 - [Flutter - 화면 전환(Navigator)](Mobile_03_Flutter/Flutter_4000_Navigator_Basics.md)
 - [Flutter - 웹뷰구현 : inappwebview 세팅(권장)](Mobile_03_Flutter/Flutter_5011_WebView_inappwebview.md)
 - [Flutter - 웹뷰구현 : webview_flutter 세팅](Mobile_03_Flutter/Flutter_5012_WebView_inappwebview.md)
