@@ -36,10 +36,16 @@ _446 TILs and counting..._
 - [📦 iOS - UIKit 기반 앱](#-ios---uikit-기반-앱)
     - [🔄 UIKit 앱의 구조와 각종 이벤트 흐름](#-uikit-앱의-구조와-각종-이벤트-흐름)
     - [🧩 UI 구성 & View 설계](#-ui-구성--View-설계)
+        - [UIKit - Views & Controls](#uikit---views--controls) : UIView (Container / Content / Control / Text / Search)
+        - [UIKit - View Controllers](#uikit---view-controllers) : UIViewController (Content / Container)
+        - [UIKit - Appearance](#uikit---appearance) : 전역 스타일 커스터마이징
+        - [UIKit - Animation](#uikit---animation) : 애니메이션 처리
+        - [UIKit - Navigation](#uikit---navigation) : 화면 전환 (Modal, Present/Push 흐름)
     - [📐 레이아웃](#-레이아웃)
     - [🎯 이벤트 & 입력 처리](#-이벤트--입력-처리)
     - [🖼 그래픽, 그리기, 텍스트](#-그래픽-그리기-텍스트)
     
+
 <details>
 <summary>UIKit 펼쳐보기</summary>
 
