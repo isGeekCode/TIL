@@ -637,15 +637,13 @@ _446 TILs and counting..._
 - [iOS - 스플래시 화면 구현 가이드 (정적 & 동적)](Mobile_01_iOS/iOS_0271_SplashScreen.md)
 
 ## 📦 iOS - UIKit 기반 앱
-<img src="https://img.shields.io/badge/UIKit-2A2F3D.svg?style=for-the-badge&logo=swift&logoColor=EF5036" />
 
 [\- 👆목차로 돌아가기 \-](#-ios---uikit-목차)
 
 
 ## 📦 iOS - SwiftUI 기반 앱
-<img src="https://img.shields.io/badge/SwiftUI-2A2F3D.svg?style=for-the-badge&logo=swift&logoColor=00DCF9" />
 
-[👆목차로 돌아가기](#-ios---swiftui-목차)
+[\- 👆목차로 돌아가기 \-](#-ios---swiftui-목차)
 
 
 ### [iOS-AppStore](#ios-appstore)
