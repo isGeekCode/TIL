@@ -41,8 +41,20 @@ _446 TILs and counting..._
         - [UIKit - Appearance](#uikit---appearance) : 전역 스타일 커스터마이징
         - [UIKit - Animation](#uikit---animation) : 애니메이션 처리
         - [UIKit - Navigation](#uikit---navigation) : 화면 전환 (Modal, Present/Push 흐름)
+        
     - [📐 레이아웃](#-레이아웃)
+        - [UIKit - Layout & Autolayout](#uikit---layout--autolayout) : 프레임, 오토레이아웃, 스택뷰
+        - [UIKit - Storyboards](#uikit---storyboards) : 스토리보드의 개념과 역할
+        - [UIKit - Nib Files](#uikit---nib-files) : XIB 파일과 커스텀 뷰 분리
+
     - [🎯 이벤트 & 입력 처리](#-이벤트--입력-처리)
+        - [UIKit - Gestures & Touches](#uikit---gestures--touches) : 제스처 인식기, 터치 처리
+        - [UIKit - Menus & Shortcuts](#uikit---menus--shortcuts) : UIMenu, 키보드 단축키
+        - [UIKit - Drag & Drop](#uikit---drag--drop) : 드래그 앤 드롭 API
+        - [UIKit - Pointer & Pencil](#uikit---pointer--pencil) : 포인터, Apple Pencil 대응
+        - [UIKit - Focus Navigation](#uikit---focus-navigation) : 키보드 포커스 이동
+        - [UIKit - Accessibility](#uikit---accessibility) : VoiceOver, 접근성 대응 방법
+
     - [🖼 그래픽, 그리기, 텍스트](#-그래픽-그리기-텍스트)
     
 
@@ -65,30 +77,15 @@ _446 TILs and counting..._
 <details open>
 <summary>🧩 UI 구성 & View 설계</summary>
 
-- [UIKit - Views & Controls](#uikit---views--controls) : UIView (Container / Content / Control / Text / Search)
-- [UIKit - View Controllers](#uikit---view-controllers) : UIViewController (Content / Container)
-- [UIKit - Appearance](#uikit---appearance) : 전역 스타일 커스터마이징
-- [UIKit - Animation](#uikit---animation) : 애니메이션 처리
-- [UIKit - Navigation](#uikit---navigation) : 화면 전환 (Modal, Present/Push 흐름)
 </details>
 
 <details open>
 <summary>📐 레이아웃</summary>
 
-- [UIKit - Layout & Autolayout](#uikit---layout--autolayout) : 프레임, 오토레이아웃, 스택뷰
-- [UIKit - Storyboards](#uikit---storyboards) : 스토리보드의 개념과 역할
-- [UIKit - Nib Files](#uikit---nib-files) : XIB 파일과 커스텀 뷰 분리
 </details>
 
 <details open>
 <summary>🎯 이벤트 & 입력 처리</summary>
-
-- [UIKit - Gestures & Touches](#uikit---gestures--touches) : 제스처 인식기, 터치 처리
-- [UIKit - Menus & Shortcuts](#uikit---menus--shortcuts) : UIMenu, 키보드 단축키
-- [UIKit - Drag & Drop](#uikit---drag--drop) : 드래그 앤 드롭 API
-- [UIKit - Pointer & Pencil](#uikit---pointer--pencil) : 포인터, Apple Pencil 대응
-- [UIKit - Focus Navigation](#uikit---focus-navigation) : 키보드 포커스 이동
-- [UIKit - Accessibility](#uikit---accessibility) : VoiceOver, 접근성 대응 방법
 
 </details>
 
