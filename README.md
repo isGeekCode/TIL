@@ -39,8 +39,7 @@ _446 TILs and counting..._
 
 
 ## 📦 iOS - UIKit 목차
-[📦 iOS - UIKit기반 앱](#-ios---uikit기반-앱)
-<img src="https://img.shields.io/badge/UIKit-2A2F3D.svg?style=for-the-badge&logo=swift&logoColor=EF5036" />
+[📦 iOS - UIKit 기반 앱](#-ios---uikit-기반-앱)
 
 
 <details>
@@ -104,9 +103,8 @@ _446 TILs and counting..._
 ---
 
 ## 📦 iOS - SwiftUI 목차
-[📦 iOS - SwiftUI기반 앱](#-ios---swiftui기반-앱)
+[📦 iOS - SwiftUI 기반 앱](#-ios---swiftui-기반-앱)
 
-<img src="https://img.shields.io/badge/SwiftUI-2A2F3D.svg?style=for-the-badge&logo=swift&logoColor=00DCF9" />
 
 <details>
 <summary>SwiftUI 펼쳐보기</summary>
@@ -638,9 +636,14 @@ _446 TILs and counting..._
 ## Mobile-ios-공통기능
 - [iOS - 스플래시 화면 구현 가이드 (정적 & 동적)](Mobile_01_iOS/iOS_0271_SplashScreen.md)
 
-## 📦 iOS - UIKit기반 앱
+## 📦 iOS - UIKit 기반 앱
+<img src="https://img.shields.io/badge/UIKit-2A2F3D.svg?style=for-the-badge&logo=swift&logoColor=EF5036" />
+[목차로 돌아가기](#-ios---uikit-목차)
 
-## 📦 iOS - SwiftUI앱
+
+## 📦 iOS - SwiftUI 기반 앱
+<img src="https://img.shields.io/badge/SwiftUI-2A2F3D.svg?style=for-the-badge&logo=swift&logoColor=00DCF9" />
+[목차로 돌아가기](#-ios---swiftui-목차)
 
 
 ### [iOS-AppStore](#ios-appstore)
