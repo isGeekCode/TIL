@@ -19,6 +19,23 @@ _446 TILs and counting..._
 - [A_Writing_in_Progress](#a_writing_in_progress)
 
 # Mobile
+
+앱 개발에서 공통적으로 필요한 기능들을 정리합니다.  
+(예: Splash 화면, UserDefaults, 퍼미션 처리 등)
+
+<details open>
+<summary>📄 공통 기능</summary>
+
+- [Mobile-공통기능](#mobile-공통기능)
+- [Mobile-iOS-공통기능](#mobile-ios-공통기능)
+- [Mobile-Android-공통기능](#mobile-android-공통기능)
+- [Mobile-Flutter-공통기능](#mobile-flutter-공통기능)
+
+</details>
+
+
+
+
 ## 📦 iOS - UIKit기반 앱
 <img src="https://img.shields.io/badge/UIKit-2A2F3D.svg?style=for-the-badge&logo=swift&logoColor=EF5036" />
 
@@ -584,10 +601,33 @@ _446 TILs and counting..._
 - [Let us: Go! 2023 봄 - 2304(미참석)](Conference/Conference2023_LetUSGo2023_1Spring.md)
 
 
-### [Mobile-Common](#mobile-common)
+## Mobile-공통기능
+아래와 같이 매칭합니다.
+```
+📁 Mobile_00_Common/
+  ├── Mobile_common_000_Splash.md
+  ├── Mobile_common_001_LocalMemory.md
+  └── ...
+
+📁 Mobile_01_iOS/
+  ├── Mobile_ios_common_000_Splash.md
+  ├── Mobile_ios_common_001_UserDefault.md
+  └── ...
+
+📁 Mobile_02_Android/
+  ├── Mobile_android_common_000_Splash.md
+  ├── Mobile_android_common_001_SharedPreference.md
+  └── ...
+
+📁 Mobile_03_Flutter/
+  ├── Mobile_flutter_common_000_Splash.md
+  ├── Mobile_flutter_common_001_SharedPreference.md
+  └── ...
+```
+
 - [App 공통 구성 요소 : Intro](Mobile_000_Common/Mobile_common_0000_intro.md)
 
-### [Mobile-iOS](#mobile-ios)
+### Mobile-iOS-공통기능
 - [iOS - 스플래시 화면 구현 가이드 (정적 & 동적)](Mobile_01_iOS/iOS_0271_SplashScreen.md)
 
 ### [iOS-AppStore](#ios-appstore)
@@ -894,22 +934,30 @@ _446 TILs and counting..._
 ### [iOS-TDD](#ios-tdd)
 - [Testable한 코드 만들기1 - VC -> MVC -> MVP](iOS-TDD/testable_mvc_mvp.md)
 
-### [Mobile-Android](#mobile-android)
+## Mobile-Android
+### Mobile-Android-공통기능
+- [Android - 스플래시 화면 구현 가이드 (정적 & 동적)]() 미완
+
+### Mobile-Android-ASIS
 - [Android Studio 완전삭제](Mobile_02_Android/AndroidStudio_delete.md)
 - [Android - Basic : 안드로이드의 기본 앱구조](Mobile_02_Android/Android_Basic_AppStructure.md)
 - [Android - WebView : 앱에서 웹으로 JavaScript 보내기](Mobile_02_Android/Android_WebView_Sending_JS.md)
 
-### [Mobile-Flutter](#mobile-flutter)
+## Mobile-Flutter
+### Mobile-Flutter-공통기능
+- [Flutter - Splash 구현](Mobile_03_Flutter/Flutter_0271_SplashScreen_basic.md)
+
+### Mobile-Flutter-ASIS
+
 - [Flutter - 문서 구조 가이드](Mobile_03_Flutter/Flutter_0000_Document_Guide.md)
 - [Flutter - 설치 및 환경 세팅 가이드](Mobile_03_Flutter/Flutter_0100_Setup.md)
-- [Flutter - Splash 구현](Mobile_03_Flutter/Flutter_0271_SplashScreen_basic.md)
-- [Flutter - 위젯 개요](Mobile_03_Flutter/Flutter_1000_Widget_Overview.md)
-- [Flutter - 기본 위젯 4종 (Text, Icon, Image, Box)](Mobile_03_Flutter/Flutter_1001_Basic_4_Widget.md)
-- [Flutter - 레이아웃의 이해](Mobile_03_Flutter/Flutter_1400_Widget_Layout_Guide.md)
-- [Flutter - Drawer : GNB / 사이드바](Mobile_03_Flutter/Flutter_1410_Drawer.md)
-- [Flutter - ListView](Mobile_03_Flutter/Flutter_1100_ListView.md)
-- [Flutter - Toggle Switch](Mobile_03_Flutter/Flutter_1501_ToggleSwitch.md)
-- [Flutter - 삼각형 View 그리기](Mobile_03_Flutter/Flutter_1990_View_Triangle.md)
+- [Flutter - 위젯 개요](Mobile_03_Flutter/Flutter_1000.01_Widget_Overview.md)
+- [Flutter - 레이아웃의 이해](Mobile_03_Flutter/Flutter_1000.02_Widget_Layout_Guide.md)
+- [Flutter - 기본 위젯 4종 (Text, Icon, Image, Box)](Mobile_03_Flutter/Flutter_1001.00_Basic_4_Widget.md)
+- [Flutter - Drawer : GNB / 사이드바](Mobile_03_Flutter/Flutter_1001.01_Drawer.md)
+- [Flutter - ListView](Mobile_03_Flutter/Flutter_1002.01_ListView.md)
+- [Flutter - Toggle Switch](Mobile_03_Flutter/Flutter_1004.01_ToggleSwitch.md)
+- [Flutter - 삼각형 View 그리기 : CustomPainter](Mobile_03_Flutter/Flutter_1009.01_View_Triangle.md)
 - [Flutter - 네트워크 통신 기초 (RESTful API 중심)](Mobile_03_Flutter/Flutter_2000_Networking_Basics.md)
 - [Flutter - 네트워크 통신 : Dio를 이용한 모듈 구현)](Mobile_03_Flutter/Flutter_2002_Dio_Basics.md)
 - [Flutter - 화면 전환(Navigator)](Mobile_03_Flutter/Flutter_4000_Navigator_Basics.md)
