@@ -30,8 +30,7 @@ _446 TILs and counting..._
     - [Mobile Android 공통 기능 구현](#mobile-android-공통-기능-구현)
     - [Mobile Flutter 공통 기능 구현](#mobile-flutter-공통-기능-구현)
 
-## iOS - 목차
-
+## UIKit 목차
 
 - [Mobile iOS 공통 기능 구현](#mobile-ios-공통-기능-구현)
 - [📦 iOS - UIKit 기반 앱](#-ios---uikit-기반-앱)
