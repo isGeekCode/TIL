@@ -18,29 +18,24 @@ _446 TILs and counting..._
 ## 🚧 In Progress
 - [A_Writing_in_Progress](#a_writing_in_progress)
 
-# Mobile
+# Mobile 목차
+
+## Mobile 공통 기능 목차
 
 앱 개발에서 공통적으로 필요한 기능들을 정리합니다.  
 (예: Splash 화면, UserDefaults, 퍼미션 처리 등)
 
-<details open>
-<summary>📄 공통 기능</summary>
+- [Mobile 공통 기능 구현](#mobile-공통-기능)
+    - [Mobile iOS 공통 기능 구현](#mobile-ios-공통-기능-구현)
+    - [Mobile Android 공통 기능 구현](#mobile-android-공통-기능-구현)
+    - [Mobile Flutter 공통 기능 구현](#mobile-flutter-공통-기능-구현)
 
-- [Mobile-공통기능](#mobile-공통기능)
-- [Mobile-iOS-공통기능](#mobile-ios-공통기능)
-- [Mobile-Android-공통기능](#mobile-android-공통기능)
-- [Mobile-Flutter-공통기능](#mobile-flutter-공통기능)
-
-</details>
-
-## 📦 iOS - 목차
-
-## 📦 iOS - 공통 기능 목차
+## iOS - 목차
 
 
-## 📦 iOS - UIKit 목차
-[📦 iOS - UIKit 기반 앱](#-ios---uikit-기반-앱)
-
+- [Mobile iOS 공통 기능 구현](#mobile-ios-공통-기능-구현)
+- [📦 iOS - UIKit 기반 앱](#-ios---uikit-기반-앱)
+    - [🔄 UIKit 앱의 구조와 각종 이벤트 흐름](#-uikit-앱의-구조와-각종-이벤트-흐름)
 
 <details>
 <summary>UIKit 펼쳐보기</summary>
@@ -631,19 +626,24 @@ _446 TILs and counting..._
 - [App 공통 구성 요소 : Intro](Mobile_000_Common/Mobile_common_0000_intro.md)
 
 
-# Mobile-iOS
+# Mobile iOS
 
-## Mobile-ios-공통기능
+## Mobile iOS 공통 기능 구현
 - [iOS - 스플래시 화면 구현 가이드 (정적 & 동적)](Mobile_01_iOS/iOS_0271_SplashScreen.md)
 
 ## 📦 iOS - UIKit 기반 앱
 
-[\- 👆목차로 돌아가기 \-](#-ios---uikit-목차)
+[\- 👆목차로 돌아가기 \-](#uikit-목차)
+
+### 🔄 UIKit 앱의 구조와 각종 이벤트 흐름
+
+
 
 
 ## 📦 iOS - SwiftUI 기반 앱
 
-[\- 👆목차로 돌아가기 \-](#-ios---swiftui-목차)
+[\- 👆목차로 돌아가기 \-](#swiftui-목차)
+
 
 
 ### [iOS-AppStore](#ios-appstore)
