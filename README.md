@@ -54,7 +54,14 @@ _446 TILs and counting..._
         - [UIKit - Accessibility](#uikit---accessibility) : VoiceOver, 접근성 대응 방법
 
     - [🖼 그래픽, 그리기, 텍스트](#-그래픽-그리기-텍스트)
-    
+        - [UIKit - Images & PDF](#uikit---images--pdf) : UIImage, PDF 렌더링
+        - [UIKit - Drawing](#uikit---drawing) : CoreGraphics 기반 드로잉
+        - [UIKit - Printing](#uikit---printing) : 인쇄 기능 구성
+        - [UIKit - Text & Fonts](#uikit---text--fonts) : UILabel, NSAttributedString
+        - [UIKit - TextKit](#uikit---textkit) : 고급 텍스트 처리 시스템
+        - [UIKit - Writing Tools](#uikit---writing-tools) : 필기 입력 도구
+        - [UIKit - Handwriting Recognition](#uikit---handwriting-recognition) : Apple Pencil 필기 인식
+
 
 
 <!--
@@ -90,13 +97,6 @@ _446 TILs and counting..._
 <details open>
 <summary>🖼 그래픽, 그리기, 텍스트</summary>
 
-- [UIKit - Images & PDF](#uikit---images--pdf) : UIImage, PDF 렌더링
-- [UIKit - Drawing](#uikit---drawing) : CoreGraphics 기반 드로잉
-- [UIKit - Printing](#uikit---printing) : 인쇄 기능 구성
-- [UIKit - Text & Fonts](#uikit---text--fonts) : UILabel, NSAttributedString
-- [UIKit - TextKit](#uikit---textkit) : 고급 텍스트 처리 시스템
-- [UIKit - Writing Tools](#uikit---writing-tools) : 필기 입력 도구
-- [UIKit - Handwriting Recognition](#uikit---handwriting-recognition) : Apple Pencil 필기 인식
 </details>
 
 </details>
