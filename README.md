@@ -637,11 +637,125 @@ _446 TILs and counting..._
 ## Mobile iOS 공통 기능 구현
 - [iOS - 스플래시 화면 구현 가이드 (정적 & 동적)](Mobile_01_iOS/iOS_0271_SplashScreen.md)
 
+## 기초 개념
+- [iOS_Hierachy - Foundation](iOS-Hierachy/IOS_Hierachy_Foundation.md)
+- [iOS_Hierachy - UIKit](iOS-Hierachy/IOS_Hierachy_UIKit.md)
+
+
 ## 📦 iOS - UIKit 기반 앱
 
 ### 🔄 UIKit 앱의 구조와 각종 이벤트 흐름
+- [[Apple Document] - UIApplicationMain(::::)](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_000UIApplicationMain.md)
+- [[Apple Document] - UIApplication 싱글턴 객체](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_001UIApplication.md)
+- [[Apple Document] - AppDelegate, UIApplicationDelegate 프로토콜](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_002UIApplicationDelegate.md)
+- [[Apple Document] - Managing your app’s life cycle : 앱의 생명주기 관리](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_003AppLifeCycle.md)
+- [[Apple Document] - Responding to the launch of your app : 앱 실행에 대한 응답](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_004LaunchStoryboard.md)
+- [[Apple Document] - About the app launch sequence : 앱의 실행되는 순서에 관하여](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_005AppLaunchSequnce.md)
+- [앱의 구동에 관하여](iOS-Framework-UIKit-UIResponder-UIApplication/AppLaunching_About.md)
+- [UIApplication_AppDelegate - 헷갈릴수 있는 두 함수(didReceive형제)](iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_AppDelegate-DifferenceNotification.md)
+- [UIApplication_AppDelegate - userNotificationCenter](iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_AppDelegate_userNotificationCenter.md)
+- [UIApplication_AppDelegate - UIApplicationDelegate : 앱의 상태 / 생명주기(Life-Cycle)](iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_StatusCycle_of_App.md)
+
+
 ### 🧩 UI 구성 & View 설계
+
+- [[Apple Document] - About App Development with UIKit](iOS-Framework-UIKit/About_UIKit_.md)
+- [UIKit기반 앱의 간단한 화면 인터페이스 구조](iOS-Framework-UIKit/About_UIKit_050WindowsAnsScreens_Screens_SimpleUIKitInterface.md)
+- [읽어야할 개발자 문서](iOS-Framework-UIKit/About__Document_Recommended.md)
+- [[iOS App Dev Tutorials] UIKit - Today앱 만들기(0) : Intro](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today00.md)
+- [[iOS App Dev Tutorials] UIKit - Today앱 만들기(1) : Creating a list View](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today01.md)
+- [[iOS App Dev Tutorials] UIKit - Today앱 만들기(2) : Adopting collection views](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today02.md)
+- [[iOS App Dev Tutorials] UIKit - Today앱 만들기(3) : Displaying cell info](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today03.md)
+- [Container ViewController Type - Navigation Controller](iOS-Framework-UIKit/Container_ViewController_NavigationController.md)
+- UIView
+    - [Layout - UIView에 대하여](iOS-Framework-UIKit/Layout_About_UIView.md)
+
+- UIViewController
+    - [PHPickerController 사용하기-iOS14이상](iOS-Framework-UIKit-UIResponder-UIViewController/PHPickerViewController.md)
+    - [UIImagePickerController 사용하기-iOS14미만](iOS-Framework-UIKit-UIResponder-UIViewController/UIImagePickerController.md)
+    - [NSObject_UIResponder_UIViewController_UITableViewController : 테이블뷰 전용 ViewController](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableViewController.md)
+
+- [Layout - CGRectMake는 뭘까](iOS-Framework-UIKit/Layout_CGRectMake.md)
+- [Layout - CodeUI: CustomShadow(feat.CustomClass)](iOS-Framework-UIKit/Layout_CodeUI_CustomShadow.md)
+- [Layout - CodeUI: UIView, UILabel](iOS-Framework-UIKit/Layout_CodeUI_UILabel_UIView.md)
+- [Layout - CodeUI: UILabel 고정폭 지정 이유 및 방법](iOS-Framework-UIKit/Layout_CodeUI_UILabel_Width_Fix.md)  
+- [Layout - 이미지 컨텐츠 모드 (ContentMode)](iOS-Framework-UIKit/Layout_ImageContentMode.md)
+- [Layout - StoryboardUI: CornerRadius](iOS-Framework-UIKit/Layout_StoryboardUI_CornerRadius.md)
+- [UIAlert 어디서든 띄우기](iOS-Framework-UIKit/Layout_UIAlert.md)
+- [Layout - Hierarchy of UIView (feat. addSubView)](iOS-Framework-UIKit/Layout_addSubView.md)
+- [현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](iOS-Framework-UIKit/Layout_currentDeviceCheck&useCombineReactiveAutoLayout.md)
+- [MessageUI란](iOS-Framework-UIKit/MessageUI.md)
+- [MessageUI - MFMailComposeVC : 문의메일 보내기](iOS-Framework-UIKit/MessageUI_sendMail.md)
+- [MessageUI - MFMessageComposeVC : 문자메세지 보내기](iOS-Framework-UIKit/MessageUI_sendSMS.md)
+- [NSDate - Timezone: UTC, GMT, KST](iOS-Framework-UIKit/NSObject_NSDate_UTC.md)
+- [NSObject - Timer : 타이머 구현하기](iOS-Framework-UIKit/NSObject_Timer.md)
+- [NSObject_UIBarItem_UIBarButtonItem & UITabBarItem : 네비게이션바 / 툴바 / 탭바를 표시하는 아이템](iOS-Framework-UIKit/NSObject_UIBarItem.md)
+- [CGColor에 대하여](iOS-Framework-UIKit/NSObject_UIColorCgColor.md)
+- [NSObject - UIFont](iOS-Framework-UIKit/NSObject_UIFont.md)
+- [NSObjcect_GestureRecognizer_UILongPressGestureRecognizer](iOS-Framework-UIKit/NSObject_UIGestureRecognizer_LongPress.md)
+- [NSObject_UIResponder : UIResponder와 Responder Chain](iOS-Framework-UIKit/NSObject_UIResponder_.md)
+- [NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기 기능](iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
+- [NSObject_UIResponder_UIViewController : 소개](iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_a_Functions.md)
+- [NSObject_UIResponder_UIViewController : 생성자](iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_a_howToMake.md)
+- [NSObject_UIResponder_UIViewController : UIViewController's Life-cycle (뷰컨트롤러의 생명주기)](iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_lifeCycle.md)
+- [NSObject_UIResponder_UIView : UIView 클래스](iOS-Framework-UIKit/NSObject_UIResponder_UIView_.md)
+- [UIView의 Drawing Cycle (Layout Cycle)](iOS-Framework-UIKit/NSObject_UIResponder_UIView_DrawingCycle.md)
+- [NSObject_UIResponder_UIView_UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
+- [NSObject_UIResponder_UIView : UIPickerView](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIPickerView.md)
+- [NSObject_UIResponder_UIView_UIProgressView](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIProgressView.md)
+- [NSObject_UIResponder_UIView_UIScrollView](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIScrollView.md)
+- [NSObject_UIResponder_UIView : UITabBar](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UITabBar.md)
+- [UIView - Layer란 무엇인가(작성중)](iOS-Framework-UIKit/NSObject_UIResponder_UIView_layer.md)
+- [NSObject_UIResponder_UIView_UIActivityIndicatorView : 사용법](iOS-Framework-UIKit/NsObject_UIResponder_UIView_UIActivityIndicatorView.md)
+- [UIKit에서 RootViewController 찾기](iOS-Framework-UIKit/SearchingRootVC.md)
+- [CGPoint, CGSize, CGRect](iOS-Framework-UIKit/UIKit_CGPoint_CGSize_CGRect.md)
+- [UIDevice](iOS-Framework-UIKit/UIKit_UIDevice.md)
+- [UIKit - UISearchBar](iOS-Framework-UIKit/UIKit_UITextField_UISearchBar.md)
+- [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS-Framework-UIKit/ios_CollectionViewCell.md)
+- UIScrollView
+    - [NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 사용법](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UICollectionView_00_howToMake.md)
+    - [UICollectionView with DiffableDataSource](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UICollectionView_30_Diffable.md)
+    - [UICellAccessory : UICollectionView에 사용하는 악세서리 Struct](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UICollectionView_41_-UICellAccessory.md)
+    - [UITableView - 템플릿](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_00_Template.md)
+    - [UITableView - 기본 UITableView 생성](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_01_basic.md)
+    - [UITableView - 커스텀 UITableViewCell](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_02_CustomTableViewCell.md)
+    - [UITableView - Section 구현하기](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_03_Section.md)
+    - [UITableView - 셀 선택, 삭제 및 상호작용](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_04_select_UI.md)
+    - [UITableView - 동적 셀 높이](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_05_AutomaticDimension.md)
+    - [UITableView : 편집스타일 설정하기 - editingStyle](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_10_editingStyle.md)
+    - [[Apple Document] - NSObject_UIResponder_UIView_UITableViewCell](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_40_UITableViewCell.md)
+    - [NSObject_UIResponder_UIView_UITableViewCell : accessoryType](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_41_UITableViewCell_Delegate_AccessoryType.md)
+    - [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 경계선없는 테이블뷰](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_50_excludeOutline.md)
+    - [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 클릭시 높이가 변경되는 테이블뷰](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_80_FlexibleTableViewCell.md)
+    - [NSObject_UIResponder_UIView_UIScrollView_UITableView : SwiftUI로 셀 구현하기](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_81_SwiftUI_Configuration.md)
+
+- UIControl
+    - [[Apple Document] - UIControl.Event 살펴보기](iOS-Framework-UIKit-UIResponder-UIView-UIControl/About_UIControl_030_event.md)
+    - [UIKit - UIAlertController : 장문의 얼럿 만들기](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UIAlertController_NSMutableAttributedString.md)
+    - [NSObject_UIResponder_UIView_UIControl : UIButton](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UIButton.md)
+    - [NSObject_UIResponder_UIView_UIControl : UIDatePicker](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UIDatePicker.md)
+    - [NSObject_UIResponder_UIView_UIControl : UIRefreshControl](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UIRefreshControl.md)
+    - [NSObject_UIResponder_UIView_UIControl : UISegmentedControl](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UISegmentedControl.md)
+    - [NSObject_UIResponder_UIView_UIControl : UISlider](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UISlider.md)
+    - [NSObject_UIResponder_UIView_UIControl : UISwitch](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UISwitch.md)
+    - [NSObject_UIResponder_UIView_UIControl : UITextField](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UITextField.md)
+
+
+- 네비게이션
+    - [정리 : iOS에서의 화면관리 및 전환](iOS-ScreenTranport/A_Various_switchingScene.md)
+    - [기본적인 iOS 앱의 구조 / 탭바컨트롤러 / 네비게이션컨트롤러](iOS-ScreenTranport/Application_BasicStructure.md)
+    - [화면전환 - UINavigationController 이해하기](iOS-ScreenTranport/navigationController.md)
+    - [present - CodeUI to StoryBoard](iOS-ScreenTranport/presentCodeUIToStoryboard.md)
+    - [present - UIKit to SwiftUI](iOS-ScreenTranport/present_UIKitToSwiftUI.md)
+    - [Segue를 이용한 화면이동](iOS-ScreenTranport/segue.md)
+    - [Show는 push와 present의 추상화 메서드](iOS-ScreenTranport/showPushPresent.md)
+    - [화면전환 - UITabBarController 이해하기](iOS-ScreenTranport/tabbarController.md)
+
+
 ### 📐 레이아웃
+- [Layout - 오토레이아웃의 개념](iOS-Framework-UIKit/Layout_About_AutoLayout.md)
+- [UIKit - UIStoryboard](iOS-Framework-UIKit/About_UIKIt_010_UIStoryboard.md)
+
 ### 🎯 이벤트 & 입력 처리
 ### 🖼 그래픽, 그리기, 텍스트
 
@@ -669,14 +783,52 @@ _446 TILs and counting..._
 - [Layout - SwiftUI: ScrollView](iOS-Framework-SwiftUI/SwiftUI_ScrollView.md)
 
 ### 🎯 이벤트 & 입력 처리
-### 🔗 프레임워크 상호 연동
+
+
+## 🔗 프레임워크 상호 연동
+
+- [UIKit으로 구현된 화면에 SwiftUI View를 추가하기 : UIHostingController](iOS-Framework-SwiftUI_UIKit/PreviewProvider_UIHostingController.md)
+- [UIKit에서 SwiftUI의 Preview 사용하기](iOS-Framework-SwiftUI_UIKit/PreviewProvier.md)
+- [UIKit에서 SwiftUI의 Preview관련 함수 만들어 사용하기](iOS-Framework-SwiftUI_UIKit/PreviewProvier3.md)
+- [SwiftUI에서 UIKit 사용하기 : UIViewRepresentable, UILabel, WebView](iOS-Framework-SwiftUI_UIKit/UIViewResentable_UIKit.md)
 
 [\- 👆목차로 돌아가기 \-](#swiftui-목차)
+
+----
 
 <br>
 
 ## 🎯 핵심 개발
 ### 🌐 네트워크 통신
+- [네트워크 통신의 이해](iOS-Networking/About_Networking.md)
+- [NSObject - URLSession](iOS-Networking/About_URLSession.md)
+- [Network Programming - RESTful APIs 사용하기](iOS-Networking/Network_RestfulAPI.md)
+- [Notifications - IOS에서 사용하는 알림의 종류](iOS-Networking/Apple_Notification.md)
+- [개념 - 페이로드(Payload)](iOS-Networking/Concept_payload.md)
+- [Cookie란](iOS-Networking/Cookie_about.md)
+- [Cookie - cookieAcceptPolicy (쿠키수락정책)](iOS-Networking/Cookie_cookieAcceptPolicy.md)
+- [네트워킹 - 각종 URL의 유효성 검사](iOS-Networking/URL_ValidationCheck.md)
+- 웹뷰 구현
+    - [WKWebView 사용하기, 구성 요소 살펴보기](iOS-Networking/WebView_00_INTRO.md)
+    - [WebView - 웹뷰에 스크립트를 적용시키는 방법](iOS-Networking/WebView_Adjust_Script.md)
+    - [WebView - 웹에서 앱으로 보내는 JavaScript 수신하기 : WKScriptMessageHandler](iOS-Networking/WebView_CatchingJS.md)
+    - [WebView - Delegate method](iOS-Networking/WebView_Delegate.md)
+    - [WebView - 앱에서 웹소스의 JavaScript 메서드 호출하기 : evaluateJavaScript()](iOS-Networking/WebView_Sending_JS.md)
+    - [WebView - App에서 웹페이지를 여는 3가지 방법](iOS-Networking/WebView_basic_use.md)
+    - [WebView - 네비게이션컨트롤러 목록으로 웹뷰 관리하는 방법](iOS-Networking/WebView_catchNavigation.md)
+    - [WebView - Safari로 웹뷰 디버깅하는 방법](iOS-Networking/WebView_commute_with_Web.md)
+    - [WebView - createWebViewWith : blank로 새창열기](iOS-Networking/WebView_createWebViewWith.md)
+    - [WebView - 자주 사용하는 메서드](iOS-Networking/WebView_often_use_delegate_method.md)
+    - [WebView - 스와이프로 리프레시 세팅](iOS-Networking/WebView_swipe_refresh.md)
+    - [webview - 바운스 효과 제거하기](iOS-Networking/Webview_how_to_stop_bounce.md)
+    - [WebView - WKWebsiteDataStore 사용하여 웹뷰의 데이터관리하기](iOS-Networking/Cookie_WebView_WKWebsiteDataStore.md)
+    - [Cookie - 현재 웹뷰로 쿠키 가져오기](iOS-Networking/Cookie_cookie_call.md)
+    - [Cookie - ios에서 쿠키 다루기](iOS-Networking/Cookie_AdjustCookie.md)
+    - [Cookie - WKProcessPool를 사용해 여러 웹뷰에서 쿠키 공유하기](iOS-Networking/Cookie_Cookie_sharing.md)
+- 웹뷰 디버깅
+    - [WebView - PC에서 사용중인 내부망을 Iphone으로 연결시키는 방법](iOS-Networking/WebViewZ_intranet.md)
+
+
 ### 🔌 내부 프레임워크 기능 활용
 - CLLocation
     - [CLLocation - 위치정보 사용하기](iOS-Framework-CoreLocation/CLLocation_a_howToUse.md)
@@ -707,6 +859,25 @@ _446 TILs and counting..._
 
 ### 🔗 외부 프레임워크 서비스 연동
 - [External Link (외부링크) - 커스텀 앱스키마 만들기, 사용하기](iOS-Development/ExternalLink_CustomScheme.md)
+- [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](iOS-Library/About_A_iOS_Package.md)
+- [About Swift PackageManager](iOS-Library/About_SPM.md)
+- [CocoaPods 사용하기](iOS-Library/About_cocoaPods_basic.md)
+- [About CocoaPods Error 방지하기](iOS-Library/About_cocoaPods_error.md)
+- Convention
+    - [Convention - SwiftLint 세팅하기](iOS-Library/Convention_SwiftLint.md)
+    - [Convention - SwiftLint 세부설정하기](iOS-Library/Convention_SwiftLintCustomRule.md)
+- [라이브러리 - 카카오 SDK 사용하기](iOS-Library/Library_A_kakaoSDK.md)
+- [라이브러리 - swiftSoup](iOS-Library/Library_SwiftSoup.md)
+- [ReactiveX: RxSwift Introduce](iOS-Library/RxSwift_Introduce.md)
+- Push
+    - [Push - 핑거푸시](iOS-Library/Push_fingerPush.md)
+- UI/UX
+    - [라이브러리 - GIFu 사용하기](iOS-Library/Library_Gifu.md)
+    - [Library - Hero](iOS-Library/Library_Hero.md)
+    - [라이브러리 - Kingfisher 사용하기](iOS-Library/Library_Kingfisher.md)
+- SNS
+    - [SNS Login - Kakao](iOS-Library/SNSLogin_kakao.md)
+    - [SNS Login - Naver](iOS-Library/SNSLogin_naver.md)
 
 [\- 👆목차로 돌아가기 \-](#핵심-개발-목차)
 
@@ -787,6 +958,7 @@ _446 TILs and counting..._
 - [Xcode - 빌드된 app파일은 어디에 있을까](iOS-Environment/Bundle_derivedData.md)
 
 ### 🧪 앱 테스트 구성 요소
+- [Testable한 코드 만들기1 - VC -> MVC -> MVP](iOS-TDD/testable_mvc_mvp.md)
 
 [\- 👆목차로 돌아가기 \-](#테스트--도구-목차)
 
@@ -795,6 +967,15 @@ _446 TILs and counting..._
 ## 🛡 보안 & 저장
 ### 🛡 보안 및 데이터 저장 기술
 - [userDefault](iOS-Foundation/AboutUserDefualt.md)
+- [Integrity - 앱 설치환경 체크](iOS-Integrity/Integrity_Build_Environment.md)
+- [Integrity - 인증서(.p8, .p12 / Development, Distribution / Producation SSL, Development SSL)](iOS-Integrity/Integrity_Certificate.md)
+- [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile) 관리하기](iOS-Integrity/Integrity_Certificate_Provisioning.md)
+- [Integrity - DeviceCheck](iOS-Integrity/Integrity_DeviceCheck.md)
+- [Integrity_개인정보 보호 매니페스트 PrivacyInfo.xcprivacy 만들기](iOS-Integrity/Integrity_PrivacyInfo.md)
+- [Integrity - UUID / UDID / IDFA / IDFV](iOS-Integrity/Integrity_UUID_UDID_IDFA.md)
+- [Integrity - APN 인증키(.p8) 발급받기](iOS-Integrity/Integrity_apn_p8.md)
+- [Integrity - 중간자 공격(man-in-the-middle attack)](iOS-Integrity/Integrity_manInTheMiddleAttack.md)
+- [Integrity - 리플레이 공격(Replay attack)](iOS-Integrity/Integrity_replayAttack.md)
 
 [\- 👆목차로 돌아가기 \-](#보안--저장-목차)
 
@@ -807,10 +988,6 @@ _446 TILs and counting..._
 ### 🧾 Sample App
 
 [\- 👆목차로 돌아가기 \-](#샘플-목차)
-
-
-
-
 
 
 ### [iOS-Development](#ios-development)
@@ -841,187 +1018,10 @@ _446 TILs and counting..._
 - [NSURLConnection Deprecated in iOS 9, Replaced by URLSession in iOS 7](iOS-Framework-Migration/NSURLConnection.md)
 - ['setVolume:' is deprecated: first deprecated in iOS 7.0 - Use MPVolumeView for volume control.](iOS-Framework-Migration/mpmusicplayer.md)
 
-### [iOS-Framework-PhotoKit](#ios-framework-photokit)
-
-### [iOS-Framework-SwiftUI](#ios-framework-swiftui)
-
-### [iOS-Framework-SwiftUI_UIKit](#ios-framework-swiftui_uikit)
-- [UIKit으로 구현된 화면에 SwiftUI View를 추가하기 : UIHostingController](iOS-Framework-SwiftUI_UIKit/PreviewProvider_UIHostingController.md)
-- [UIKit에서 SwiftUI의 Preview 사용하기](iOS-Framework-SwiftUI_UIKit/PreviewProvier.md)
-- [UIKit에서 SwiftUI의 Preview관련 함수 만들어 사용하기](iOS-Framework-SwiftUI_UIKit/PreviewProvier3.md)
-- [SwiftUI에서 UIKit 사용하기 : UIViewRepresentable, UILabel, WebView](iOS-Framework-SwiftUI_UIKit/UIViewResentable_UIKit.md)
-
-### [iOS-Framework-UIKit](#ios-framework-uikit)
-- [UIKit - UIStoryboard](iOS-Framework-UIKit/About_UIKIt_010_UIStoryboard.md)
-- [[Apple Document] - About App Development with UIKit](iOS-Framework-UIKit/About_UIKit_.md)
-- [UIKit기반 앱의 간단한 화면 인터페이스 구조](iOS-Framework-UIKit/About_UIKit_050WindowsAnsScreens_Screens_SimpleUIKitInterface.md)
-- [읽어야할 개발자 문서](iOS-Framework-UIKit/About__Document_Recommended.md)
-- [[iOS App Dev Tutorials] UIKit - Today앱 만들기(0) : Intro](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today00.md)
-- [[iOS App Dev Tutorials] UIKit - Today앱 만들기(1) : Creating a list View](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today01.md)
-- [[iOS App Dev Tutorials] UIKit - Today앱 만들기(2) : Adopting collection views](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today02.md)
-- [[iOS App Dev Tutorials] UIKit - Today앱 만들기(3) : Displaying cell info](iOS-Framework-UIKit/About__UIKit_Tutorial00_Today03.md)
-- [Container ViewController Type - Navigation Controller](iOS-Framework-UIKit/Container_ViewController_NavigationController.md)
-- [Layout - 오토레이아웃의 개념](iOS-Framework-UIKit/Layout_About_AutoLayout.md)
-- [Layout - UIView에 대하여](iOS-Framework-UIKit/Layout_About_UIView.md)
-- [Layout - CGRectMake는 뭘까](iOS-Framework-UIKit/Layout_CGRectMake.md)
-- [Layout - CodeUI: CustomShadow(feat.CustomClass)](iOS-Framework-UIKit/Layout_CodeUI_CustomShadow.md)
-- [Layout - CodeUI: UIView, UILabel](iOS-Framework-UIKit/Layout_CodeUI_UILabel_UIView.md)
-- [Layout - CodeUI: UILabel 고정폭 지정 이유 및 방법](iOS-Framework-UIKit/Layout_CodeUI_UILabel_Width_Fix.md)  
-- [Layout - 이미지 컨텐츠 모드 (ContentMode)](iOS-Framework-UIKit/Layout_ImageContentMode.md)
-- [Layout - StoryboardUI: CornerRadius](iOS-Framework-UIKit/Layout_StoryboardUI_CornerRadius.md)
-- [UIAlert 어디서든 띄우기](iOS-Framework-UIKit/Layout_UIAlert.md)
-- [Layout - Hierarchy of UIView (feat. addSubView)](iOS-Framework-UIKit/Layout_addSubView.md)
-- [현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](iOS-Framework-UIKit/Layout_currentDeviceCheck&useCombineReactiveAutoLayout.md)
-- [MessageUI란](iOS-Framework-UIKit/MessageUI.md)
-- [MessageUI - MFMailComposeVC : 문의메일 보내기](iOS-Framework-UIKit/MessageUI_sendMail.md)
-- [MessageUI - MFMessageComposeVC : 문자메세지 보내기](iOS-Framework-UIKit/MessageUI_sendSMS.md)
-- [NSDate - Timezone: UTC, GMT, KST](iOS-Framework-UIKit/NSObject_NSDate_UTC.md)
-- [NSObject - Timer : 타이머 구현하기](iOS-Framework-UIKit/NSObject_Timer.md)
-- [NSObject_UIBarItem_UIBarButtonItem & UITabBarItem : 네비게이션바 / 툴바 / 탭바를 표시하는 아이템](iOS-Framework-UIKit/NSObject_UIBarItem.md)
-- [CGColor에 대하여](iOS-Framework-UIKit/NSObject_UIColorCgColor.md)
-- [NSObject - UIFont](iOS-Framework-UIKit/NSObject_UIFont.md)
-- [NSObjcect_GestureRecognizer_UILongPressGestureRecognizer](iOS-Framework-UIKit/NSObject_UIGestureRecognizer_LongPress.md)
-- [NSObject_UIResponder : UIResponder와 Responder Chain](iOS-Framework-UIKit/NSObject_UIResponder_.md)
-- [NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기 기능](iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
-- [NSObject_UIResponder_UIViewController : 소개](iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_a_Functions.md)
-- [NSObject_UIResponder_UIViewController : 생성자](iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_a_howToMake.md)
-- [NSObject_UIResponder_UIViewController : UIViewController's Life-cycle (뷰컨트롤러의 생명주기)](iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_lifeCycle.md)
-- [NSObject_UIResponder_UIView : UIView 클래스](iOS-Framework-UIKit/NSObject_UIResponder_UIView_.md)
-- [UIView의 Drawing Cycle (Layout Cycle)](iOS-Framework-UIKit/NSObject_UIResponder_UIView_DrawingCycle.md)
-- [NSObject_UIResponder_UIView_UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
-- [NSObject_UIResponder_UIView : UIPickerView](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIPickerView.md)
-- [NSObject_UIResponder_UIView_UIProgressView](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIProgressView.md)
-- [NSObject_UIResponder_UIView_UIScrollView](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIScrollView.md)
-- [NSObject_UIResponder_UIView : UITabBar](iOS-Framework-UIKit/NSObject_UIResponder_UIView_UITabBar.md)
-- [UIView - Layer란 무엇인가(작성중)](iOS-Framework-UIKit/NSObject_UIResponder_UIView_layer.md)
-- [NSObject_UIResponder_UIView_UIActivityIndicatorView : 사용법](iOS-Framework-UIKit/NsObject_UIResponder_UIView_UIActivityIndicatorView.md)
-- [UIKit에서 RootViewController 찾기](iOS-Framework-UIKit/SearchingRootVC.md)
-- [CGPoint, CGSize, CGRect](iOS-Framework-UIKit/UIKit_CGPoint_CGSize_CGRect.md)
-- [UIDevice](iOS-Framework-UIKit/UIKit_UIDevice.md)
-- [UIKit - UISearchBar](iOS-Framework-UIKit/UIKit_UITextField_UISearchBar.md)
-- [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS-Framework-UIKit/ios_CollectionViewCell.md)
-
-### [iOS-Framework-UIKit-UIResponder-UIApplication](#ios-framework-uikit-uiresponder-uiapplication)
-- [[Apple Document] - UIApplicationMain(::::)](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_000UIApplicationMain.md)
-- [[Apple Document] - UIApplication 싱글턴 객체](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_001UIApplication.md)
-- [[Apple Document] - AppDelegate, UIApplicationDelegate 프로토콜](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_002UIApplicationDelegate.md)
-- [[Apple Document] - Managing your app’s life cycle : 앱의 생명주기 관리](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_003AppLifeCycle.md)
-- [[Apple Document] - Responding to the launch of your app : 앱 실행에 대한 응답](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_004LaunchStoryboard.md)
-- [[Apple Document] - About the app launch sequence : 앱의 실행되는 순서에 관하여](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_005AppLaunchSequnce.md)
-- [앱의 구동에 관하여](iOS-Framework-UIKit-UIResponder-UIApplication/AppLaunching_About.md)
-- [UIApplication_AppDelegate - 헷갈릴수 있는 두 함수(didReceive형제)](iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_AppDelegate-DifferenceNotification.md)
-- [UIApplication_AppDelegate - userNotificationCenter](iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_AppDelegate_userNotificationCenter.md)
-- [UIApplication_AppDelegate - UIApplicationDelegate : 앱의 상태 / 생명주기(Life-Cycle)](iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_StatusCycle_of_App.md)
-
-### [iOS-Framework-UIKit-UIResponder-UIView-UIControl](#ios-framework-uikit-uiresponder-uiview-uicontrol)
-- [[Apple Document] - UIControl.Event 살펴보기](iOS-Framework-UIKit-UIResponder-UIView-UIControl/About_UIControl_030_event.md)
-- [UIKit - UIAlertController : 장문의 얼럿 만들기](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UIAlertController_NSMutableAttributedString.md)
-- [NSObject_UIResponder_UIView_UIControl : UIButton](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UIButton.md)
-- [NSObject_UIResponder_UIView_UIControl : UIDatePicker](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UIDatePicker.md)
-- [NSObject_UIResponder_UIView_UIControl : UIRefreshControl](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UIRefreshControl.md)
-- [NSObject_UIResponder_UIView_UIControl : UISegmentedControl](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UISegmentedControl.md)
-- [NSObject_UIResponder_UIView_UIControl : UISlider](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UISlider.md)
-- [NSObject_UIResponder_UIView_UIControl : UISwitch](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UISwitch.md)
-- [NSObject_UIResponder_UIView_UIControl : UITextField](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UITextField.md)
-
-### [iOS-Framework-UIKit-UIResponder-UIView-UIScrollView](#ios-framework-uikit-uiresponder-uiview-uiscrollview)
-- [NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 사용법](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UICollectionView_00_howToMake.md)
-- [UICollectionView with DiffableDataSource](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UICollectionView_30_Diffable.md)
-- [UICellAccessory : UICollectionView에 사용하는 악세서리 Struct](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UICollectionView_41_-UICellAccessory.md)
-- [UITableView - 템플릿](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_00_Template.md)
-- [UITableView - 기본 UITableView 생성](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_01_basic.md)
-- [UITableView - 커스텀 UITableViewCell](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_02_CustomTableViewCell.md)
-- [UITableView - Section 구현하기](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_03_Section.md)
-- [UITableView - 셀 선택, 삭제 및 상호작용](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_04_select_UI.md)
-- [UITableView - 동적 셀 높이](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_05_AutomaticDimension.md)
-- [UITableView : 편집스타일 설정하기 - editingStyle](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_10_editingStyle.md)
-- [[Apple Document] - NSObject_UIResponder_UIView_UITableViewCell](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_40_UITableViewCell.md)
-- [NSObject_UIResponder_UIView_UITableViewCell : accessoryType](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_41_UITableViewCell_Delegate_AccessoryType.md)
-- [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 경계선없는 테이블뷰](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_50_excludeOutline.md)
-- [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 클릭시 높이가 변경되는 테이블뷰](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_80_FlexibleTableViewCell.md)
-- [NSObject_UIResponder_UIView_UIScrollView_UITableView : SwiftUI로 셀 구현하기](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_81_SwiftUI_Configuration.md)
-
-### [iOS-Framework-UIKit-UIResponder-UIViewController](#ios-framework-uikit-uiresponder-uiviewcontroller)
-- [PHPickerController 사용하기-iOS14이상](iOS-Framework-UIKit-UIResponder-UIViewController/PHPickerViewController.md)
-- [UIImagePickerController 사용하기-iOS14미만](iOS-Framework-UIKit-UIResponder-UIViewController/UIImagePickerController.md)
-- [NSObject_UIResponder_UIViewController_UITableViewController : 테이블뷰 전용 ViewController](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableViewController.md)
-
-### [iOS-Hierachy](#ios-hierachy)
-- [iOS_Hierachy - Foundation](iOS-Hierachy/IOS_Hierachy_Foundation.md)
-- [iOS_Hierachy - UIKit](iOS-Hierachy/IOS_Hierachy_UIKit.md)
-
-### [iOS-Integrity](#ios-integrity)
-- [Integrity - 앱 설치환경 체크](iOS-Integrity/Integrity_Build_Environment.md)
-- [Integrity - 인증서(.p8, .p12 / Development, Distribution / Producation SSL, Development SSL)](iOS-Integrity/Integrity_Certificate.md)
-- [Integrity - 인증서와 프로비저닝 프로파일 (Certificate & Provisioning Profile) 관리하기](iOS-Integrity/Integrity_Certificate_Provisioning.md)
-- [Integrity - DeviceCheck](iOS-Integrity/Integrity_DeviceCheck.md)
-- [Integrity_개인정보 보호 매니페스트 PrivacyInfo.xcprivacy 만들기](iOS-Integrity/Integrity_PrivacyInfo.md)
-- [Integrity - UUID / UDID / IDFA / IDFV](iOS-Integrity/Integrity_UUID_UDID_IDFA.md)
-- [Integrity - APN 인증키(.p8) 발급받기](iOS-Integrity/Integrity_apn_p8.md)
-- [Integrity - 중간자 공격(man-in-the-middle attack)](iOS-Integrity/Integrity_manInTheMiddleAttack.md)
-- [Integrity - 리플레이 공격(Replay attack)](iOS-Integrity/Integrity_replayAttack.md)
-
-### [iOS-Library](#ios-library)
-- [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](iOS-Library/About_A_iOS_Package.md)
-- [About Swift PackageManager](iOS-Library/About_SPM.md)
-- [CocoaPods 사용하기](iOS-Library/About_cocoaPods_basic.md)
-- [About CocoaPods Error 방지하기](iOS-Library/About_cocoaPods_error.md)
-- [Convention - SwiftLint 세팅하기](iOS-Library/Convention_SwiftLint.md)
-- [Convention - SwiftLint 세부설정하기](iOS-Library/Convention_SwiftLintCustomRule.md)
-- [라이브러리 - 카카오 SDK 사용하기](iOS-Library/Library_A_kakaoSDK.md)
-- [라이브러리 - GIFu 사용하기](iOS-Library/Library_Gifu.md)
-- [Library - Hero](iOS-Library/Library_Hero.md)
-- [라이브러리 - Kingfisher 사용하기](iOS-Library/Library_Kingfisher.md)
-- [라이브러리 - swiftSoup](iOS-Library/Library_SwiftSoup.md)
-- [Push - 핑거푸시](iOS-Library/Push_fingerPush.md)
-- [ReactiveX: RxSwift Introduce](iOS-Library/RxSwift_Introduce.md)
-- [SNS Login - Kakao](iOS-Library/SNSLogin_kakao.md)
-- [SNS Login - Naver](iOS-Library/SNSLogin_naver.md)
-
-### [iOS-Networking](#ios-networking)
-- [네트워크 통신의 이해](iOS-Networking/About_Networking.md)
-- [NSObject - URLSession](iOS-Networking/About_URLSession.md)
-- [Notifications - IOS에서 사용하는 알림의 종류](iOS-Networking/Apple_Notification.md)
-- [개념 - 페이로드(Payload)](iOS-Networking/Concept_payload.md)
-- [Cookie - ios에서 쿠키 다루기](iOS-Networking/Cookie_AdjustCookie.md)
-- [Cookie - WKProcessPool를 사용해 여러 웹뷰에서 쿠키 공유하기](iOS-Networking/Cookie_Cookie_sharing.md)
-- [WebView - WKWebsiteDataStore 사용하여 웹뷰의 데이터관리하기](iOS-Networking/Cookie_WebView_WKWebsiteDataStore.md)
-- [Cookie란](iOS-Networking/Cookie_about.md)
-- [Cookie - cookieAcceptPolicy (쿠키수락정책)](iOS-Networking/Cookie_cookieAcceptPolicy.md)
-- [Cookie - 현재 웹뷰로 쿠키 가져오기](iOS-Networking/Cookie_cookie_call.md)
-- [Network Programming - RESTful APIs 사용하기](iOS-Networking/Network_RestfulAPI.md)
-- [네트워킹 - 각종 URL의 유효성 검사](iOS-Networking/URL_ValidationCheck.md)
-- [WebView - PC에서 사용중인 내부망을 Iphone으로 연결시키는 방법](iOS-Networking/WebViewZ_intranet.md)
-- [WKWebView 사용하기, 구성 요소 살펴보기](iOS-Networking/WebView_00_INTRO.md)
-- [WebView - 웹뷰에 스크립트를 적용시키는 방법](iOS-Networking/WebView_Adjust_Script.md)
-- [WebView - 웹에서 앱으로 보내는 JavaScript 수신하기 : WKScriptMessageHandler](iOS-Networking/WebView_CatchingJS.md)
-- [WebView - Delegate method](iOS-Networking/WebView_Delegate.md)
-- [WebView - 앱에서 웹소스의 JavaScript 메서드 호출하기 : evaluateJavaScript()](iOS-Networking/WebView_Sending_JS.md)
-- [WebView - App에서 웹페이지를 여는 3가지 방법](iOS-Networking/WebView_basic_use.md)
-- [WebView - 네비게이션컨트롤러 목록으로 웹뷰 관리하는 방법](iOS-Networking/WebView_catchNavigation.md)
-- [WebView - Safari로 웹뷰 디버깅하는 방법](iOS-Networking/WebView_commute_with_Web.md)
-- [WebView - createWebViewWith : blank로 새창열기](iOS-Networking/WebView_createWebViewWith.md)
-- [WebView - 자주 사용하는 메서드](iOS-Networking/WebView_often_use_delegate_method.md)
-- [WebView - 스와이프로 리프레시 세팅](iOS-Networking/WebView_swipe_refresh.md)
-- [webview - 바운스 효과 제거하기](iOS-Networking/Webview_how_to_stop_bounce.md)
-
 ### [iOS-RelatedImage](#ios-relatedimage)
 - [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md)
 - [화면캡처 - 특정화면을 이미지로 저장하기](iOS-RelatedImage/imageSave.md)
 - [PNG와 JPG에 대하여](iOS-RelatedImage/png_jpg.md)
-
-### [iOS-ScreenTranport](#ios-screentranport)
-- [정리 : iOS에서의 화면관리 및 전환](iOS-ScreenTranport/A_Various_switchingScene.md)
-- [기본적인 iOS 앱의 구조 / 탭바컨트롤러 / 네비게이션컨트롤러](iOS-ScreenTranport/Application_BasicStructure.md)
-- [화면전환 - UINavigationController 이해하기](iOS-ScreenTranport/navigationController.md)
-- [present - CodeUI to StoryBoard](iOS-ScreenTranport/presentCodeUIToStoryboard.md)
-- [present - UIKit to SwiftUI](iOS-ScreenTranport/present_UIKitToSwiftUI.md)
-- [Segue를 이용한 화면이동](iOS-ScreenTranport/segue.md)
-- [Show는 push와 present의 추상화 메서드](iOS-ScreenTranport/showPushPresent.md)
-- [화면전환 - UITabBarController 이해하기](iOS-ScreenTranport/tabbarController.md)
-
-### [iOS-TDD](#ios-tdd)
-- [Testable한 코드 만들기1 - VC -> MVC -> MVP](iOS-TDD/testable_mvc_mvp.md)
 
 ---
 
