@@ -46,6 +46,8 @@ _446 TILs and counting..._
     - [🖼 그래픽, 그리기, 텍스트](#-그래픽-그리기-텍스트)
     
 
+
+<!--
 <details>
 <summary>UIKit 펼쳐보기</summary>
 
@@ -287,6 +289,7 @@ _446 TILs and counting..._
 - [Block6 앱 만들기](Sample-App-List/sample_blockSix.md)
 </details>
 
+-->
 
 <br><br>
 
