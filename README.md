@@ -89,7 +89,7 @@ _446 TILs and counting..._
 
 
 ## 🎨 iOS - 그래픽 렌더링 & 시각 효과 목차
-- [iOS - 그래픽 렌더링 & 시각 효과 목차](#ios---그래픽-렌더링--시각-효과-목차)
+- [iOS - 그래픽 렌더링 & 시각 효과](#ios---그래픽-렌더링--시각-효과)
     - [🖼 iOS - Core Graphics - 직접 드로잉 처리](#-ios---core-graphics---직접-드로잉-처리)
     - [💫 iOS - Core Animation - 저수준 애니메이션 처리](#-ios---core-animation---저수준-애니메이션-처리)
     - [🎮 iOS - Metal - 고성능 GPU 렌더링](#-ios---metal---고성능-gpu-렌더링)
@@ -108,10 +108,86 @@ _446 TILs and counting..._
 
 ---
 
-## Android 목차 *(작성 예정)*  
-✍️ Android 섹션은 현재 구성 중입니다.
+# Mobile - Android
+
+## Android - View System 기반 앱 목차
+
+- [📦 View 기반 앱](#-android---view-기반-앱)
+    - [📦 View - 앱의 구조와 실행 흐름](#-view---앱의-구조와-실행-흐름) : 어떻게 실행되는가
+    - [🎨 View - UI 구성 요소 설계](#-view---ui-구성-요소-설계) : 어떤 뷰로 구성되는가
+    - [🎨 View - 레이아웃과 배치 전략](#-view---레이아웃과-배치-전략) : 어떻게 배치할까
+    - [🕹 View - 이벤트 & 입력 처리 흐름](#-view---이벤트--입력-처리-흐름) : 어떤 입력을 어떻게 처리할까
+    - [🔀 View - 화면 전환 흐름](#-view---화면-전환-흐름) : 어떤 흐름으로 이동할까
+    - [🧠 View - 데이터의 흐름과 상태 관리](#-view---데이터의-흐름과-상태-관리) : 데이터는 어떻게 전달되고, 상태는 어떻게 UI에 반영되는가
+    - [🎨 View - 애니메이션 & 뷰 효과 구성](#-view---애니메이션--뷰-효과-구성) : 어떻게 그려지는가
+    - [🧠 View - 메모리 관리](#-view---메모리-관리)
+
+## Android - Jetpack Compose 기반 앱 목차
+
+- [📦 Compose 기반 앱](#-android---compose-기반-앱)
+    - [📦 Compose - 앱의 구조와 실행 흐름](#-compose---앱의-구조와-실행-흐름) : 어떻게 실행되는가
+    - [🎨 Compose - UI 구성 요소 설계](#-compose---ui-구성-요소-설계) : 어떤 뷰로 구성되는가
+    - [🎨 Compose - 레이아웃과 배치 전략](#-compose---레이아웃과-배치-전략) : 어떻게 배치할까
+    - [🕹 Compose - 이벤트 & 입력 처리 흐름](#-swiftui---이벤트--입력-처리-흐름) : 어떤 입력을 어떻게 처리할까
+    - [🔀 Compose - 화면 전환 흐름](#-compose---화면-전환-흐름) : 어떤 흐름으로 이동할까
+    - [🧠 Compose - 데이터의 흐름과 상태 관리](#-compose---데이터의-흐름과-상태-관리) : 데이터는 어떻게 전달되고, 상태는 어떻게 UI에 반영되는가
+    - [🎨 Compose - 애니메이션 & 뷰 효과 구성](#-swiftui---애니메이션--뷰-효과-구성) : 어떻게 그려지는가
+    - [🧠 Compose - 메모리 관리](#-compose---메모리-관리)
+
+## Android - 공통
+- [🔗 View System / Compose 상호 연동](#-view-system---compose-상호-연동)
+
+
+## Android - 기능 개발 핵심 목차
+
+- [🌐 Android - 통신 & 네트워킹](#-android---통신--네트워킹)
+- [🔧 Android - 시스템 기능 & 네이티브 API](#-android---시스템-기능--네이티브-api)
+  - [🔔 Android - 푸시 알림 및 백그라운드 처리](#-android---푸시-알림-및-백그라운드-처리)
+- [🔗 Android - 외부 SDK & 서비스 연동](#-android---외부-sdk--서비스-연동)
+
+
+## Android - 앱 아키텍쳐 및 성능 목차
+- [Android - 앱 아키텍쳐 및 성능](#android---앱-아키텍쳐-및-성능)
+    - [🏗 Android - 아키텍처 및 모듈 설계](#-android---아키텍처-및-모듈-설계)
+    - [🔀 Android - 동시성 처리](#-android---동시성-처리)
+    - [🧱 Android - Deprecated API 마이그레이션 기록](#-android---deprecated-api-마이그레이션-기록)
+
+
+## Android - 시스템 및 운영 배포 목차
+- [Android - 시스템 및 운영 배포](#android---시스템-및-운영-배포)
+    - [🔧 Android - 시스템 환경 설정](#-android---시스템-환경-설정)
+    - [🚀 Android - 배포](#-android---배포)
+    - [🚀 Android - CI/CD](#-android---cicd)
+    - [🧯 Android - 운영 이슈 문제 해결](#-android---운영-이슈-문제-해결)
+
+## Android - 테스트 및 도구 목차
+- [Android - 테스트 및 도구](#-android---테스트-및-도구)
+    - [🧰 Android - 개발 보조 도구 및 구성 관리](#-android---개발-보조-도구-및-구성-관리)
+    - [🧪 Android - 앱 테스트 구성 요소](#-android---앱-테스트-구성-요소)
+
+
+## 🎨 Android - 그래픽 렌더링 & 시각 효과 목차
+- [Android - 그래픽 렌더링 & 시각 효과](#android---그래픽-렌더링--시각-효과)
+    - [🖼 Android - Canvas & Paint](#-android---canvas--paint) : 직접 드로잉 처리
+    - [💫 Android - Animator / MotionLayout](#-android---animator--motionlayout) : 애니메이션 처리
+    - [🎮 Android - OpenGL / Vulkan](#-android---opengl--vulkan) : 고성능 그래픽
+    - [🌈 Android - BlendMode / RenderScript](#-android---blendmode--renderscript) : 이미지 필터 및 색상 효과
+    - [🕹 Android - ARCore / Sceneform](#-android---arcore--sceneform) : AR 및 3D 렌더링
+
+## Android - 보안 및 저장 목차
+- [🛡 Android - 보안 및 데이터 저장 기술](#-ios---보안-및-데이터-저장-기술)
+
+
+## Android - 샘플 앱 목차
+- [🧾 Android - 샘플 앱](#-ios---샘플-앱)
+
+
+<br><br>
 
 ---
+
+
+
 
 # Mobile - Flutter 목차
 
@@ -912,7 +988,7 @@ _446 TILs and counting..._
 
 <br>
 
-## iOS - 그래픽 렌더링 & 시각 효과 목차
+## iOS - 그래픽 렌더링 & 시각 효과
 
 - [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md)
 - [화면캡처 - 특정화면을 이미지로 저장하기](iOS-RelatedImage/imageSave.md)
@@ -975,8 +1051,146 @@ _446 TILs and counting..._
 ---
 
 # Mobile-Android
-### Mobile-Android-공통기능
+### Mobile Android 공통 기능 구현
 - [Android - 스플래시 화면 구현 가이드 (정적 & 동적)]() 미완
+
+
+## 📦 Android - 앱의 구조와 실행 흐름
+
+[\- 👆목차로 돌아가기 \-](#android-목차)
+
+## 🎨 Android - UI 구성 요소 설계
+### 📐 Android - 레이아웃과 배치 전략
+
+[\- 👆목차로 돌아가기 \-](#android-목차)
+
+### 🕹 Android - 이벤트 & 입력 처리 흐름
+
+[\- 👆목차로 돌아가기 \-](#android-목차)
+
+### 🔀 Android - 화면 전환 흐름
+
+[\- 👆목차로 돌아가기 \-](#android-목차)
+
+### 🧠 Android - 데이터의 흐름과 상태 관리
+
+[\- 👆목차로 돌아가기 \-](#android-목차)
+
+### 🎨 Android - 그래픽 구성
+
+[\- 👆목차로 돌아가기 \-](#android-목차)
+
+
+### 🧠 Android - 메모리 관리 및 성능 최적화
+
+[\- 👆목차로 돌아가기 \-](#android-목차)
+
+## Android - 기능 개발 핵심
+### 🌐 Android - 통신 & 네트워킹
+
+[\- 👆목차로 돌아가기 \-](#android---기능-개발-핵심-목차)
+
+### 🔧 Android - 시스템 기능 & 네이티브 API
+
+[\- 👆목차로 돌아가기 \-](#android---기능-개발-핵심-목차)
+
+### 🔔 Android - 푸시 알림 및 백그라운드 처리
+
+[\- 👆목차로 돌아가기 \-](#android---기능-개발-핵심-목차)
+
+### 🔗 Android - 외부 SDK & 서비스 연동
+
+[\- 👆목차로 돌아가기 \-](#android---기능-개발-핵심-목차)
+
+
+## Android - 앱 아키텍쳐 및 성능
+### 🏗 Android - 아키텍처 및 모듈 설계
+
+[\- 👆목차로 돌아가기 \-](#android---앱-아키텍쳐-및-성능-목차)
+
+### 🔀 Android - 동시성 처리
+
+[\- 👆목차로 돌아가기 \-](#android---앱-아키텍쳐-및-성능-목차)
+
+### 🧱 Android - Deprecated API 마이그레이션 기록
+
+[\- 👆목차로 돌아가기 \-](#android---앱-아키텍쳐-및-성능-목차)
+
+## Android - 시스템 및 운영 배포 
+### 🔧 Android - 시스템 환경 설정
+
+[\- 👆목차로 돌아가기 \-](#android---시스템-및-운영-배포-목차)
+
+### 🚀 Android - 배포
+
+[\- 👆목차로 돌아가기 \-](#android---시스템-및-운영-배포-목차)
+
+### 🚀 Android - CI/CD
+
+[\- 👆목차로 돌아가기 \-](#android---시스템-및-운영-배포-목차)
+
+
+### 🧯 Android - 운영 이슈 문제 해결
+
+[\- 👆목차로 돌아가기 \-](#android---시스템-및-운영-배포-목차)
+
+
+## Android - 테스트 및 도구
+### 🧰 Android - 개발 보조 도구 및 구성 관리
+
+[\- 👆목차로 돌아가기 \-](#android---테스트-및-도구-목차)
+
+
+### 🧪 Android - 앱 테스트 구성 요소
+
+[\- 👆목차로 돌아가기 \-](#android---테스트-및-도구-목차)
+
+## Android - 그래픽 렌더링 & 시각 효과
+
+### 🖼 Android - Canvas & Paint
+직접 드로잉 처리
+
+[\- 👆목차로 돌아가기 \-](#-android---그래픽-렌더링--시각-효과-목차)
+
+
+### 💫 Android - Animator / MotionLayout
+애니메이션 처리
+
+[\- 👆목차로 돌아가기 \-](#-android---그래픽-렌더링--시각-효과-목차)
+
+
+### 🎮 Android - OpenGL / Vulkan
+고성능 그래픽
+
+[\- 👆목차로 돌아가기 \-](#-android---그래픽-렌더링--시각-효과-목차)
+
+
+### 🌈 Android - BlendMode / RenderScript
+이미지 필터 및 색상 효과
+
+[\- 👆목차로 돌아가기 \-](#-android---그래픽-렌더링--시각-효과-목차)
+
+
+### 🕹 Android - ARCore / Sceneform
+AR 및 3D 렌더링
+
+
+[\- 👆목차로 돌아가기 \-](#-android---그래픽-렌더링--시각-효과-목차)
+
+⸻
+
+
+## 🛡 Android - 보안 및 데이터 저장 기술
+
+[\- 👆목차로 돌아가기 \-](#android---보안-및-저장-목차)
+
+
+## 🧾 Android - 샘플 앱
+
+[\- 👆목차로 돌아가기 \-](#android---샘플-앱-목차)
+
+
+
 
 ### Mobile-Android-ASIS
 - [Android Studio 완전삭제](Mobile_02_Android/AndroidStudio_delete.md)
