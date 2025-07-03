@@ -99,9 +99,21 @@ _446 TILs and counting..._
 ## iOS - 보안 및 저장 목차
 - [🛡 iOS - 보안 및 데이터 저장 기술](#-ios---보안-및-데이터-저장-기술)
 
+## iOS - 컨퍼런스 인사이트
+- [🏛 국내 컨퍼런스 정리](#-국내-컨퍼런스-정리)
+    - [Let'Swift](#letswift)
+    - [Let us:Go!](#let-usgo)
+    - [asyncSwift](#asyncswift)
+    - [realm 아카데미 iOS](#realm-아카데미-ios)
+    - [Meetup](#async-swift)
+    - [adiOS](#adiOS)
+
+- [🌍 해외 컨퍼런스 정리](#-해외-컨퍼런스-정리)
+    - [WWDC](#wwdc)
 
 ## iOS - 샘플 앱 목차
 - [🧾 iOS - 샘플 앱](#-ios---샘플-앱)
+
 
 
 <br><br>
@@ -410,12 +422,6 @@ _446 TILs and counting..._
 - [iOS의 Virtual Memory에 대하여](ComputerScience/VirtualMemory.md)
 - [Data Structure - Stack과 Queue](ComputerScience/cs_001_stackQeueue.md)
 - [Dynamic Programming (DP): 동적프로그래밍](ComputerScience/dynamicProgramming.md)
-
-
-### [CI_CD](#ci_cd)
-- [CI/CD - GitHub Action 사용하기 : 초기 구현하기](CI_CD/GithubAction_A_tutorial00.md)
-- [CI/CD - GitHub Action 사용하기2 : on 섹션 수정하기](CI_CD/GithubAction_A_tutorial01.md)
-- [CI/CD - GitHub Action 사용하기3 : 실행할 스크립트 짜보기](CI_CD/GithubAction_A_tutorial02.md)
 
 
 ### [Conference](#conference)
@@ -1450,6 +1456,14 @@ ARKit, SceneKit처럼 AR 기능은 외부 플러그인 기반 접근 정리
 ---
 
 # DevOps / Tools
+### CI/CD
+- [CI/CD - GitHub Action 사용하기 : 초기 구현하기](CI_CD/GithubAction_A_tutorial00.md)
+- [CI/CD - GitHub Action 사용하기2 : on 섹션 수정하기](CI_CD/GithubAction_A_tutorial01.md)
+- [CI/CD - GitHub Action 사용하기3 : 실행할 스크립트 짜보기](CI_CD/GithubAction_A_tutorial02.md)
+
+<br><br>
+
+---
 
 ### Git
 - [Git 브랜치 전략 3종 요약 (Git Flow / GitHub Flow / GitLab Flow)](Git/Git_030_BranchStrategy.md)
@@ -1503,3 +1517,8 @@ ARKit, SceneKit처럼 AR 기능은 외부 플러그인 기반 접근 정리
 - [23년 12월 회고 / 1월 목표](Self-Review/review_231231Dec.md)
 - [24년 4월 회고 / 5월 목표](Self-Review/review_240430April.md)
 - [24년 5월 회고 / 6월 목표](Self-Review/review_240531May.md)
+
+
+# History
+- 220314 : First Commit
+- 250703 : 모바일 전체 구조 통일
