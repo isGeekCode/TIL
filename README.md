@@ -338,9 +338,7 @@ _446 TILs and counting..._
 
 
 ## 🧭 Personal Meta
-
 - [Insight](#insight)
-
 - [Self-Review](#self-review)
 
 
