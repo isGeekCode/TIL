@@ -32,81 +32,83 @@ _446 TILs and counting..._
 
 ## iOS - UIKit 목차
 
-- [📦 iOS - UIKit 기반 앱](#-ios---uikit-기반-앱)
-    - [🔄 UIKit 앱의 구조와 각종 이벤트 흐름](#-uikit-앱의-구조와-각종-이벤트-흐름)
-    - [🧩 UI 구성 & View 설계](#-ui-구성--View-설계)
-        - [UIKit - Views & Controls](#uikit---views--controls) : UIView (Container / Content / Control / Text / Search)
-        - [UIKit - View Controllers](#uikit---view-controllers) : UIViewController (Content / Container)
-        - [UIKit - Appearance](#uikit---appearance) : 전역 스타일 커스터마이징
-        - [UIKit - Animation](#uikit---animation) : 애니메이션 처리
-        - [UIKit - Navigation](#uikit---navigation) : 화면 전환 (Modal, Present/Push 흐름)
-    - [📐 레이아웃](#-레이아웃)
-        - [UIKit - Layout & Autolayout](#uikit---layout--autolayout) : 프레임, 오토레이아웃, 스택뷰
-        - [UIKit - Storyboards](#uikit---storyboards) : 스토리보드의 개념과 역할
-        - [UIKit - Nib Files](#uikit---nib-files) : XIB 파일과 커스텀 뷰 분리
-    - [🎯 이벤트 & 입력 처리](#-이벤트--입력-처리)
-        - [UIKit - Gestures & Touches](#uikit---gestures--touches) : 제스처 인식기, 터치 처리
-        - [UIKit - Menus & Shortcuts](#uikit---menus--shortcuts) : UIMenu, 키보드 단축키
-        - [UIKit - Drag & Drop](#uikit---drag--drop) : 드래그 앤 드롭 API
-        - [UIKit - Pointer & Pencil](#uikit---pointer--pencil) : 포인터, Apple Pencil 대응
-        - [UIKit - Focus Navigation](#uikit---focus-navigation) : 키보드 포커스 이동
-        - [UIKit - Accessibility](#uikit---accessibility) : VoiceOver, 접근성 대응 방법
-
-    - [🖼 그래픽, 그리기, 텍스트](#-그래픽-그리기-텍스트)
-        - [UIKit - Images & PDF](#uikit---images--pdf) : UIImage, PDF 렌더링
-        - [UIKit - Drawing](#uikit---drawing) : CoreGraphics 기반 드로잉
-        - [UIKit - Printing](#uikit---printing) : 인쇄 기능 구성
-        - [UIKit - Text & Fonts](#uikit---text--fonts) : UILabel, NSAttributedString
-        - [UIKit - TextKit](#uikit---textkit) : 고급 텍스트 처리 시스템
-        - [UIKit - Writing Tools](#uikit---writing-tools) : 필기 입력 도구
-        - [UIKit - Handwriting Recognition](#uikit---handwriting-recognition) : Apple Pencil 필기 인식
-
+- [📦 UIKit 기반 앱](#-ios---uikit-기반-앱)
+    - [📦 UIKit - 앱의 구조와 실행 흐름](#-uikit---앱의-구조와-실행-흐름) : 어떻게 실행되는가
+    - [🎨 UIKit - UI 구성 요소 설계](#-uikit---ui-구성-요소-설계) : 어떤 뷰로 구성되는가
+    - [🎨 UIKit - 레이아웃과 배치 전략](#-uikit---레이아웃과-배치-전략) : 어떻게 배치할까
+    - [🕹 UIKit - 이벤트 & 입력 처리 흐름](#-uikit---이벤트--입력-처리-흐름) : 어떤 입력을 어떻게 처리할까
+    - [🔀 UIKit - 화면 전환 흐름](#-uikit---화면-전환-흐름) : 어떤 흐름으로 이동할까
+    - [🧠 UIKit - 데이터의 흐름과 상태 관리](#-uikit---데이터의-흐름과-상태-관리) : 데이터는 어떻게 전달되고, 상태는 어떻게 UI에 반영되는가
+    - [🎨 UIKit - 애니메이션 & 뷰 효과 구성](#-uikit---애니메이션--뷰-효과-구성) : 어떻게 그려지는가
+    - [🧠 UIKit - 메모리 관리](#-uikit---메모리-관리)
 
 ## iOS - SwiftUI 목차
 
-- [📦 iOS - SwiftUI 기반 앱](#-ios---swiftui-기반-앱)
-    - [📁 SwiftUI - 앱의 구조와 각종 이벤트 흐름](#-swiftui--앱의-구조와-각종-이벤트-흐름)
-    - [🧩 SwiftUI - UI 구성 & View 설계](#-swiftui--ui-구성--View-설계)
-    - [🎯 SwiftUI - 이벤트 & 입력 처리](#-swiftui--이벤트--입력-처리)
-    - [🔗 SwiftUI - 프레임워크 상호 연동](#-swiftui--프레임워크-상호-연동)
+- [📦 SwiftUI 기반 앱](#-ios---swiftui-기반-앱)
+    - [📦 SwiftUI - 앱의 구조와 실행 흐름](#-swiftui---앱의-구조와-실행-흐름) : 어떻게 실행되는가
+    - [🎨 SwiftUI - UI 구성 요소 설계](#-swiftui---ui-구성-요소-설계) : 어떤 뷰로 구성되는가
+    - [🎨 SwiftUI - 레이아웃과 배치 전략](#-swiftui---레이아웃과-배치-전략) : 어떻게 배치할까
+    - [🕹 SwiftUI - 이벤트 & 입력 처리 흐름](#-swiftui---이벤트--입력-처리-흐름) : 어떤 입력을 어떻게 처리할까
+    - [🔀 SwiftUI - 화면 전환 흐름](#-swiftui---화면-전환-흐름) : 어떤 흐름으로 이동할까
+    - [🧠 SwiftUI - 데이터의 흐름과 상태 관리](#-swiftui---데이터의-흐름과-상태-관리) : 데이터는 어떻게 전달되고, 상태는 어떻게 UI에 반영되는가
+    - [🎨 SwiftUI - 애니메이션 & 뷰 효과 구성](#-swiftui---애니메이션--뷰-효과-구성) : 어떻게 그려지는가
+    - [🧠 SwiftUI - 메모리 관리](#-swiftui---메모리-관리)
 
-## 핵심 개발 목차
-
-- [🌐 네트워크 통신](#-네트워크-통신)
-- [🔌 내부 프레임워크 기능 활용](#-내부-프레임워크-기능-활용)
-- [🔗 외부 프레임워크 서비스 연동](#-외부-프레임워크-서비스-연동)
-
-## UI/UX 목차
-- [🎨 UI 스타일링 & 디자인 시스템](#-ui-스타일링--디자인-시스템)
-- [🔔 푸시 알림 및 백그라운드 처리](#-푸시-알림-및-백그라운드-처리)
-
-## 앱 구조 & 성능 목차
-- [🏗 아키텍처 및 모듈 설계](#-아키텍처-및-모듈-설계)
-- [🔀 동시성 처리](#-동시성-처리)
-- [🚀 배포 및 운영 자동화 전략](#-배포-및-운영-자동화-전략)
-- [🧯 운영 이슈 문제 해결](#-운영-이슈-문제-해결)
+## iOS - 공통
+- [🔗 UIKit / SwiftUI - 상호 연동](#-uikit--swiftui-상호-연동)
 
 
-## 테스트 & 도구 목차
-- [🧰 개발 보조 도구 및 구성 관리](#-개발-보조-도구-및-구성-관리)
-- [🧪 앱 테스트 구성 요소](#-앱-테스트-구성-요소)
+## iOS - 기능 개발 핵심 목차
+
+- [🌐 iOS - 통신 & 네트워킹](#-ios---통신--네트워킹)
+- [🔧 iOS - 시스템 기능 & 네이티브 API](#-ios---시스템-기능--네이티브-api)
+  - [🔔 iOS - 푸시 알림 및 백그라운드 처리](#-ios---푸시-알림-및-백그라운드-처리)
+- [🔗 iOS - 외부 SDK & 서비스 연동](#-ios---외부-sdk--서비스-연동)
 
 
-## 보안 & 저장 목차
-- [🛡 보안 및 데이터 저장 기술](#-보안-및-데이터-저장-기술)
+## iOS - 앱 아키텍쳐 및 성능 목차
+- [iOS - 앱 아키텍쳐 및 성능](#ios--앱-아키텍쳐-및-성능)
+    - [🏗 iOS - 아키텍처 및 모듈 설계](#-ios---아키텍처-및-모듈-설계)
+    - [🔀 iOS - 동시성 처리](#-ios---동시성-처리)
+    - [🧱 iOS - Deprecated API 마이그레이션 기록](#-ios---deprecated-api-마이그레이션-기록)
 
 
-## 샘플 목차
-- [🧾 Sample App](#-sample-app)
+## iOS - 시스템 및 운영 배포 목차
+- [iOS - 시스템 및 운영 배포](#ios---시스템-및-운영-배포)
+    - [🔧 iOS - 시스템 환경 설정](#-ios---시스템-환경-설정)
+    - [🚀 iOS - 배포](#-ios---배포)
+    - [🚀 iOS - CI/CD](#-ios---cicd)
+    - [🧯 iOS - 운영 이슈 문제 해결](#-ios---운영-이슈-문제-해결)
+
+
+## iOS - 테스트 및 도구 목차
+- [iOS - 테스트 및 도구](#ios---테스트-및-도구)
+    - [🧰 iOS - 개발 보조 도구 및 구성 관리](#-ios---개발-보조-도구-및-구성-관리)
+    - [🧪 iOS - 앱 테스트 구성 요소](#-ios---앱-테스트-구성-요소)
+
+
+## 🎨 iOS - 그래픽 렌더링 & 시각 효과 목차
+- [iOS - 그래픽 렌더링 & 시각 효과 목차](#ios---그래픽-렌더링--시각-효과-목차)
+    - [🖼 iOS - Core Graphics - 직접 드로잉 처리](#-ios---core-graphics---직접-드로잉-처리)
+    - [💫 iOS - Core Animation - 저수준 애니메이션 처리](#-ios---core-animation---저수준-애니메이션-처리)
+    - [🎮 iOS - Metal - 고성능 GPU 렌더링](#-ios---metal---고성능-gpu-렌더링)
+    - [🌈 iOS - Core Image - 이미지 필터링 및 효과](#-ios---core-image---이미지-필터링-및-효과)
+    - [🕹 iOS - SceneKit & ARKit - 3D 및 증강현실](#-ios---scenekit--arkit---3d-및-증강현실)
+
+## iOS - 보안 및 저장 목차
+- [🛡 iOS - 보안 및 데이터 저장 기술](#-ios---보안-및-데이터-저장-기술)
+
+
+## 샘플 앱 목차
+- [🧾 iOS - Sample App](#-ios---sample-app)
 
 
 <br><br>
 
 ---
 
-## Android
-
-<br><br>
+## Android 목차 *(작성 예정)*  
+✍️ Android 섹션은 현재 구성 중입니다.
 
 ---
 
@@ -126,6 +128,16 @@ _446 TILs and counting..._
     - [Animation and Motion](#animation-and-motion) : 애니메이션 효과와 트랜지션 처리
     - [Async Widgets](#async-widgets) : 비동기 상태를 다루기 위한 위젯 (Future, Stream 등)
     - [Accessibility Widgets](#accessibility-widgets) : 앱의 접근성을 향상시키는 도구 제공
+    
+
+- [📦 Flutter - 앱의 구조와 실행 흐름](#flutter---앱의-구조와-실행-흐름)
+- [🎨 Flutter - UI 구성 요소 설계](#flutter---ui-구성-요소-설계)
+- [📐 Flutter - 레이아웃과 배치 전략](#flutter---레이아웃과-배치-전략)
+- [🕹 Flutter - 이벤트 & 입력 처리 흐름](#flutter---이벤트--입력-처리-흐름)
+- [🔀 Flutter - 화면 전환 흐름](#flutter---화면-전환-흐름)
+- [🧠 Flutter - 데이터의 흐름과 상태 관리](#flutter---데이터의-흐름과-상태-관리)
+- [🎨 Flutter - 그래픽 구성](#flutter---그래픽-구성)
+- [🧠 Flutter - 메모리 관리 및 성능 최적화](#flutter---메모리-관리-및-성능-최적화)
 
 
 
@@ -476,8 +488,7 @@ _446 TILs and counting..._
 
 
 ## 📦 iOS - UIKit 기반 앱
-
-### 🔄 UIKit 앱의 구조와 각종 이벤트 흐름
+### 📦 iOS - UIKit 앱의 구조와 실행 흐름
 - [[Apple Document] - UIApplicationMain(::::)](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_000UIApplicationMain.md)
 - [[Apple Document] - UIApplication 싱글턴 객체](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_001UIApplication.md)
 - [[Apple Document] - AppDelegate, UIApplicationDelegate 프로토콜](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_002UIApplicationDelegate.md)
@@ -490,8 +501,7 @@ _446 TILs and counting..._
 - [UIApplication_AppDelegate - UIApplicationDelegate : 앱의 상태 / 생명주기(Life-Cycle)](iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_StatusCycle_of_App.md)
 
 
-### 🧩 UI 구성 & View 설계
-
+### 🎨 iOS - UIKit UI 구성 요소 설계
 - [[Apple Document] - About App Development with UIKit](iOS-Framework-UIKit/About_UIKit_.md)
 - [UIKit기반 앱의 간단한 화면 인터페이스 구조](iOS-Framework-UIKit/About_UIKit_050WindowsAnsScreens_Screens_SimpleUIKitInterface.md)
 - [읽어야할 개발자 문서](iOS-Framework-UIKit/About__Document_Recommended.md)
@@ -507,6 +517,7 @@ _446 TILs and counting..._
     - [PHPickerController 사용하기-iOS14이상](iOS-Framework-UIKit-UIResponder-UIViewController/PHPickerViewController.md)
     - [UIImagePickerController 사용하기-iOS14미만](iOS-Framework-UIKit-UIResponder-UIViewController/UIImagePickerController.md)
     - [NSObject_UIResponder_UIViewController_UITableViewController : 테이블뷰 전용 ViewController](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableViewController.md)
+
 
 - [Layout - CGRectMake는 뭘까](iOS-Framework-UIKit/Layout_CGRectMake.md)
 - [Layout - CodeUI: CustomShadow(feat.CustomClass)](iOS-Framework-UIKit/Layout_CodeUI_CustomShadow.md)
@@ -545,7 +556,7 @@ _446 TILs and counting..._
 - [UIDevice](iOS-Framework-UIKit/UIKit_UIDevice.md)
 - [UIKit - UISearchBar](iOS-Framework-UIKit/UIKit_UITextField_UISearchBar.md)
 - [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](iOS-Framework-UIKit/ios_CollectionViewCell.md)
-- UIScrollView
+### UIScrollView
     - [NSObject_UIResponder_UIView_UIScrollView_UICollectionView : 사용법](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UICollectionView_00_howToMake.md)
     - [UICollectionView with DiffableDataSource](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UICollectionView_30_Diffable.md)
     - [UICellAccessory : UICollectionView에 사용하는 악세서리 Struct](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UICollectionView_41_-UICellAccessory.md)
@@ -562,7 +573,7 @@ _446 TILs and counting..._
     - [NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 클릭시 높이가 변경되는 테이블뷰](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_80_FlexibleTableViewCell.md)
     - [NSObject_UIResponder_UIView_UIScrollView_UITableView : SwiftUI로 셀 구현하기](iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_81_SwiftUI_Configuration.md)
 
-- UIControl
+### UIControl
     - [[Apple Document] - UIControl.Event 살펴보기](iOS-Framework-UIKit-UIResponder-UIView-UIControl/About_UIControl_030_event.md)
     - [UIKit - UIAlertController : 장문의 얼럿 만들기](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UIAlertController_NSMutableAttributedString.md)
     - [NSObject_UIResponder_UIView_UIControl : UIButton](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UIButton.md)
@@ -574,7 +585,10 @@ _446 TILs and counting..._
     - [NSObject_UIResponder_UIView_UIControl : UITextField](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UITextField.md)
 
 
-- 네비게이션
+
+### UIKit - Animation
+
+### UIKit - Navigation
     - [정리 : iOS에서의 화면관리 및 전환](iOS-ScreenTranport/A_Various_switchingScene.md)
     - [기본적인 iOS 앱의 구조 / 탭바컨트롤러 / 네비게이션컨트롤러](iOS-ScreenTranport/Application_BasicStructure.md)
     - [화면전환 - UINavigationController 이해하기](iOS-ScreenTranport/navigationController.md)
@@ -585,12 +599,15 @@ _446 TILs and counting..._
     - [화면전환 - UITabBarController 이해하기](iOS-ScreenTranport/tabbarController.md)
 
 
-### 📐 레이아웃
+### 🎨 iOS - UIKit 레이아웃과 배치 전략
 - [Layout - 오토레이아웃의 개념](iOS-Framework-UIKit/Layout_About_AutoLayout.md)
 - [UIKit - UIStoryboard](iOS-Framework-UIKit/About_UIKIt_010_UIStoryboard.md)
 
-### 🎯 이벤트 & 입력 처리
-### 🖼 그래픽, 그리기, 텍스트
+### 🕹 iOS - UIKit 이벤트 & 입력 처리 흐름
+### 🔀 iOS - UIKit 화면 전환 흐름
+### 🧠 iOS - UIKit 데이터의 흐름과 상태 관리
+### 🎨 iOS - UIKit 애니메이션 & 뷰 효과 구성
+### 🧠 iOS - UIKit 메모리 관리
 
 [\- 👆목차로 돌아가기 \-](#ios--uikit-목차)
 
@@ -598,10 +615,10 @@ _446 TILs and counting..._
 
 ## 📦 iOS - SwiftUI 기반 앱
 
-### 🔄 SwiftUI - 앱의 구조와 각종 이벤트 흐름
+### 📦 iOS - SwiftUI 앱의 구조와 실행 흐름
 - [Layout - SwiftUI: State와 바인딩](iOS-Framework-SwiftUI/SwiftUI_State.md)
 
-### 🧩 SwiftUI - UI 구성 & View 설계
+### 🎨 iOS - SwiftUI UI 구성 요소 설계
 - [Layout - SwiftUI: Text](iOS-Framework-SwiftUI/SwiftUI_001_Text.md)
 - [Layout - SwiftUI: Image](iOS-Framework-SwiftUI/SwiftUI_002_Image.md)
 - [Layout - SwiftUI: Button](iOS-Framework-SwiftUI/SwiftUI_003_Button.md)
@@ -616,11 +633,18 @@ _446 TILs and counting..._
 - [Layout - SwiftUI: List](iOS-Framework-SwiftUI/SwiftUI_List.md)
 - [Layout - SwiftUI: ScrollView](iOS-Framework-SwiftUI/SwiftUI_ScrollView.md)
 
-### 🎯 SwiftUI - 이벤트 & 입력 처리
+### 🎨 iOS - SwiftUI 레이아웃과 배치 전략
+
+
+### 🕹 iOS - SwiftUI 이벤트 & 입력 처리 흐름
+### 🔀 iOS - SwiftUI 화면 전환 흐름
+### 🧠 iOS - SwiftUI 데이터의 흐름과 상태 관리
+### 🎨 iOS - SwiftUI 애니메이션 & 뷰 효과 구성
+### 🧠 iOS - SwiftUI 메모리 관리
 
 [\- 👆목차로 돌아가기 \-](#ios--swiftui-목차)
 
-## 🔗 UIKit / SwiftUI 프레임워크 상호 연동
+## 🔗 UIKit / SwiftUI 상호 연동
 
 - [UIKit으로 구현된 화면에 SwiftUI View를 추가하기 : UIHostingController](iOS-Framework-SwiftUI_UIKit/PreviewProvider_UIHostingController.md)
 - [UIKit에서 SwiftUI의 Preview 사용하기](iOS-Framework-SwiftUI_UIKit/PreviewProvier.md)
@@ -633,7 +657,7 @@ _446 TILs and counting..._
 <br>
 
 ## 🎯 iOS - 핵심 개발
-### 🌐 iOS - 네트워크 통신
+### 🌐 iOS - 통신 & 네트워킹
 - [네트워크 통신의 이해](iOS-Networking/About_Networking.md)
 - [NSObject - URLSession](iOS-Networking/About_URLSession.md)
 - [Network Programming - RESTful APIs 사용하기](iOS-Networking/Network_RestfulAPI.md)
@@ -662,6 +686,9 @@ _446 TILs and counting..._
 - 웹뷰 디버깅
     - [WebView - PC에서 사용중인 내부망을 Iphone으로 연결시키는 방법](iOS-Networking/WebViewZ_intranet.md)
 
+## 🔧 iOS - 시스템 기능 & 네이티브 API
+
+### 🔔 iOS - 푸시 알림 및 백그라운드 처리
 
 ### 🔌 iOS - 내부 프레임워크 기능 활용
 - CLLocation
@@ -691,7 +718,7 @@ _446 TILs and counting..._
 
 
 
-### 🔗 iOS - 외부 프레임워크 서비스 연동
+## 🔗 iOS - 외부 SDK & 서비스 연동
 - [External Link (외부링크) - 커스텀 앱스키마 만들기, 사용하기](iOS-Development/ExternalLink_CustomScheme.md)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](iOS-Library/About_A_iOS_Package.md)
 - [About Swift PackageManager](iOS-Library/About_SPM.md)
@@ -715,17 +742,10 @@ _446 TILs and counting..._
 
 [\- 👆목차로 돌아가기 \-](#핵심-개발-목차)
 
-<br>
-
-## 🎨 iOS - UI/UX
-### 🎨 iOS - UI 스타일링 & 디자인 시스템
-### 🔔 iOS - 푸시 알림 및 백그라운드 처리
-
-[\- 👆목차로 돌아가기 \-](#uiux-목차)
 
 <br>
 
-## 🧱 iOS - 앱 구조 & 성능
+## iOS - 앱 아키텍쳐 및 성능
 
 ### 🏗 iOS - 아키텍처 및 모듈 설계
 - [디자인패턴이란](iOS-Architecture/Architecture_100_De_Intro_.md)
@@ -762,7 +782,21 @@ _446 TILs and counting..._
 - [Swift Concurrency - Async / Await / Task](iOS-Concurrency/SwiftConcurrency_Overview.md)
 
 
-### 🚀 iOS - 배포 및 운영 자동화 전략
+### 🧱 iOS - Deprecated API 마이그레이션 기록
+- [UIAlertView Deprecated in iOS 9, Replaced by UIAlertController in iOS 10.0](iOS-Framework-Migration/AlertView.md)
+- [MPMoviePlayerController Deprecated in iOS 10, Replaced by AVPlayerViewController in iOS 7](iOS-Framework-Migration/MPMoviePlayer.md)
+- [NSURLConnection Deprecated in iOS 9, Replaced by URLSession in iOS 7](iOS-Framework-Migration/NSURLConnection.md)
+- ['setVolume:' is deprecated: first deprecated in iOS 7.0 - Use MPVolumeView for volume control.](iOS-Framework-Migration/mpmusicplayer.md)
+
+
+## iOS - 시스템 및 운영 배포
+### 🔧 iOS - 시스템 환경 설정
+- [Info.plist : (값 가져오기, 권한)](iOS-Environment/InfoPlist.md)
+- [Info.plist - App Version 가져오기](iOS-Environment/InfoPlist_appVersion.md)
+- [Privacy - 여러가지 접근권한요청](iOS-Environment/PrivercyPermission_various.md)
+- [Xcode에서 디버그뷰 활성화하기 :Firebase, GA4](iOS-Environment/firebase_debugView.md)
+
+### 🚀 iOS - 배포
 - [App Store Connect - 배포된 앱을 삭제하는 2가지 방법](iOS-AppStore/AppStore_AppDismiss.md)
 - [AppStore - 앱 생성하기](iOS-AppStore/AppStore_AppInit.md)
 - [AppStore - 수출 규정 준수 정보](iOS-AppStore/AppStore_AppUseNonExempt.md)
@@ -775,6 +809,8 @@ _446 TILs and counting..._
 - [테스트플라잇 - 외부 테스팅 (External Testing)](iOS-AppStore/TestFlight_externalTester.md)
 - [appStoreReceiptURL](iOS-Environment/DetectingDeploymentEnvironment.md)
 - [.ipa 파일 만들기](iOS-Environment/How_to.make_ipa.md)
+
+### 🚀 iOS - CI/CD
 
 ### 🧯 iOS - 운영 이슈 문제 해결
 
@@ -796,10 +832,16 @@ _446 TILs and counting..._
 
 [\- 👆목차로 돌아가기 \-](#테스트--도구-목차)
 
+## iOS - 그래픽 렌더링 & 시각 효과 목차
+### 🖼 iOS - Core Graphics - 직접 드로잉 처리
+### 💫 iOS - Core Animation - 저수준 애니메이션 처리
+### 🎮 iOS - Metal - 고성능 GPU 렌더링
+### 🌈 iOS - Core Image - 이미지 필터링 및 효과
+### 🕹 iOS - SceneKit & ARKit - 3D 및 증강현실
+
 <br>
 
-## 🛡 iOS - 보안 & 저장
-### 🛡 iOS - 보안 및 데이터 저장 기술
+## 🛡 iOS - 보안 및 데이터 저장 기술
 - [userDefault](iOS-Foundation/AboutUserDefualt.md)
 - [Integrity - 앱 설치환경 체크](iOS-Integrity/Integrity_Build_Environment.md)
 - [Integrity - 인증서(.p8, .p12 / Development, Distribution / Producation SSL, Development SSL)](iOS-Integrity/Integrity_Certificate.md)
@@ -815,11 +857,10 @@ _446 TILs and counting..._
 
 <br>
 
-## 📱 iOS - 샘플
+## 📱 iOS - Sample App
 - [Login Logic (feat. UserDefault)](iOS-CustomLogic/Login_Logic.md)
 - [DynamicSplash 세팅하기](iOS-CustomLogic/splash_dynamicSplash.md)
 
-### 🧾 iOS - Sample App
 
 [\- 👆목차로 돌아가기 \-](#샘플-목차)
 
@@ -832,11 +873,6 @@ _446 TILs and counting..._
 - [AudioToolbox - 롱프레스와 햅틱진동 구현하기 (Feat.Long press)](iOS-Development/Third_AudioToolBox_HapticAndLongpress.md)
 - [IOS에 있어서 Caching](iOS-Development/ios_caching.md)
 
-### [iOS-Environment](#ios-environment)
-- [Info.plist : (값 가져오기, 권한)](iOS-Environment/InfoPlist.md)
-- [Info.plist - App Version 가져오기](iOS-Environment/InfoPlist_appVersion.md)
-- [Privacy - 여러가지 접근권한요청](iOS-Environment/PrivercyPermission_various.md)
-- [Xcode에서 디버그뷰 활성화하기 :Firebase, GA4](iOS-Environment/firebase_debugView.md)
 
 ### [iOS-Extensions](#ios-extensions)
 - [hex값을 UIcolor로 변환하는 방법](iOS-Extensions/TIL221025_convertHexToUIColor.md)
@@ -846,11 +882,6 @@ _446 TILs and counting..._
 - [Framework란 무엇인가](iOS-Framework-Management/FrameworkM_00_about.md)
 - [XCFramework 생성하기](iOS-Framework-Management/FrameworkM_00_initial.md)
 
-### [iOS-Framework-Migration](#ios-framework-migration)
-- [UIAlertView Deprecated in iOS 9, Replaced by UIAlertController in iOS 10.0](iOS-Framework-Migration/AlertView.md)
-- [MPMoviePlayerController Deprecated in iOS 10, Replaced by AVPlayerViewController in iOS 7](iOS-Framework-Migration/MPMoviePlayer.md)
-- [NSURLConnection Deprecated in iOS 9, Replaced by URLSession in iOS 7](iOS-Framework-Migration/NSURLConnection.md)
-- ['setVolume:' is deprecated: first deprecated in iOS 7.0 - Use MPVolumeView for volume control.](iOS-Framework-Migration/mpmusicplayer.md)
 
 ### [iOS-RelatedImage](#ios-relatedimage)
 - [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md)
