@@ -839,19 +839,28 @@ _446 TILs and counting..._
 - [iOS DeviceSupport - 테스트 디바이스 iOS 수동 업데이트](iOS-Environment/iOSDeviceSupport_Manually_update.md)
 - [Xcode - 빌드된 app파일은 어디에 있을까](iOS-Environment/Bundle_derivedData.md)
 
+<br>
+
 ### 🧪 iOS - 앱 테스트 구성 요소
 - [Testable한 코드 만들기1 - VC -> MVC -> MVP](iOS-TDD/testable_mvc_mvp.md)
 
-[\- 👆목차로 돌아가기 \-](#-ios---테스트-및-도구-목차)
+[\- 👆목차로 돌아가기 \-](#ios---테스트-및-도구-목차)
+
+<br>
 
 ## iOS - 그래픽 렌더링 & 시각 효과 목차
+
+- [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md)
+- [화면캡처 - 특정화면을 이미지로 저장하기](iOS-RelatedImage/imageSave.md)
+- [PNG와 JPG에 대하여](iOS-RelatedImage/png_jpg.md)
+
 ### 🖼 iOS - Core Graphics - 직접 드로잉 처리
 ### 💫 iOS - Core Animation - 저수준 애니메이션 처리
 ### 🎮 iOS - Metal - 고성능 GPU 렌더링
 ### 🌈 iOS - Core Image - 이미지 필터링 및 효과
 ### 🕹 iOS - SceneKit & ARKit - 3D 및 증강현실
 
-[\- 👆목차로 돌아가기 \-](#ios---그래픽-렌더링--시각-효과-목차)
+[\- 👆목차로 돌아가기 \-](#-ios---그래픽-렌더링--시각-효과-목차)
 
 <br>
 
@@ -867,7 +876,7 @@ _446 TILs and counting..._
 - [Integrity - 중간자 공격(man-in-the-middle attack)](iOS-Integrity/Integrity_manInTheMiddleAttack.md)
 - [Integrity - 리플레이 공격(Replay attack)](iOS-Integrity/Integrity_replayAttack.md)
 
-[\- 👆목차로 돌아가기 \-](#-ios---보안-및-데이터-저장-기술-목차)
+[\- 👆목차로 돌아가기 \-](#ios---보안-및-저장-목차)
 
 <br>
 
@@ -876,8 +885,9 @@ _446 TILs and counting..._
 - [DynamicSplash 세팅하기](iOS-CustomLogic/splash_dynamicSplash.md)
 
 
-[\- 👆목차로 돌아가기 \-](#-ios---sample-app-목차)
+[\- 👆목차로 돌아가기 \-](#샘플-앱-목차)
 
+<br>
 
 ### [iOS-Development](#ios-development)
 - [Date - Date로 두 개의 시간차 구하기](iOS-Development/Date_getTimeInterval.md)
@@ -897,10 +907,6 @@ _446 TILs and counting..._
 - [XCFramework 생성하기](iOS-Framework-Management/FrameworkM_00_initial.md)
 
 
-### [iOS-RelatedImage](#ios-relatedimage)
-- [dp와 pt에 대하여 (Feat. 포인트란)](iOS-RelatedImage/DP_PT.md)
-- [화면캡처 - 특정화면을 이미지로 저장하기](iOS-RelatedImage/imageSave.md)
-- [PNG와 JPG에 대하여](iOS-RelatedImage/png_jpg.md)
 
 ---
 
