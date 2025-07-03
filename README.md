@@ -339,9 +339,9 @@ _446 TILs and counting..._
 
 ## 🧭 Personal Meta
 
+- [Insight](#insight)
 
 - [Self-Review](#self-review)
-- [Insight](#insight)
 
 
 <br><br>
@@ -402,154 +402,6 @@ _446 TILs and counting..._
 - [Apple Document Words - 단어장](About-IT/iOS_words.md)
 - [IT용어 - 공수, mm , m/m , 공수 계산하기](About-IT/mm.md)
 
-# 🧬 Languages
-
-## Lang-Ruby
-- [Install: Ruby](Lang-Ruby/Install_Ruby.md)
-- [RubyGems - Package Manager :　gem 관리하기](Lang-Ruby/ManageGem.md)
-- [Ruby - 버전관리 : RVM, Rbenv 사용법](Lang-Ruby/ManageRuby.md)
-
-## Lang-Swift
-- [Swift에 대한 소개](Lang-Swift/About_Swift000Intro_.md)
-- [Swift문법 기초](Lang-Swift/About_Swift001Basic_.md)
-- [Swift - 변수와 상수](Lang-Swift/Swift_1-1_LetVar.md)
-- [Swift - 기본 타입](Lang-Swift/Swift_1-2_Types.md)
-- [Swift - 조건문과 반복문](Lang-Swift/Swift_1-3_Control.md)
-- [Swift - 함수](Lang-Swift/Swift_1-4_Function.md)
-- [Swift - 옵셔널](Lang-Swift/Swift_1-5_Optional.md)
-- [Swift - 저장 프로퍼티와 연산 프로퍼티](Lang-Swift/Swift_2-1_Property.md)
-- [Swift - Getter와 Setter](Lang-Swift/Swift_2-2_GetSet.md)
-- [Swift - 프로퍼티 옵저버 (willSet, didSet)](Lang-Swift/Swift_2-3_Observer.md)
-- [Swift - 접근 제어자 (private, internal, public 등)](Lang-Swift/Swift_2-4_Access.md)
-- [Swift - Class와 Struct](Lang-Swift/About_Swift001ClassAndStruct.md)
-- [Swift - Initialization에 대해 알아보기](Lang-Swift/About_Swift002Init.md)
-- [Playground에서 UIView를 그려보자](Lang-Swift/About_Swift005Playground.md)
-- [Swift - Array 모아보기](Lang-Swift/About_Swift010Array.md)
-- [Swift_Sequence Protocol](Lang-Swift/About_Swift020SequenceProtocol.md)
-- [Attribute - @frozen](Lang-Swift/Attribute_frozen.md)
-- [Swift - Codable 다루기](Lang-Swift/Codable.md)
-- [Do - Try - Catch](Lang-Swift/DoTryCatch.md)
-- [Swift - Collection_Array : prefix() `안전한 사용`](Lang-Swift/Swift_collection_Array_prefix.md)
-- [random함수를 이용해 Random한 숫자 뽑아내기](Lang-Swift/Swift_collection_Array_random.md)
-- [Swift - Subscript(작성중)](Lang-Swift/Swift_collection_Subscript.md)
-- [안전하게 배열에 접근하는 방법](Lang-Swift/TIL220310_contactArraySafely.md)
-- [[Common Method] 로그 관련 함수](Lang-Swift/TIL220318_aboutLogMethod.md)
-- [# 여러개의 Action을 한번에 추가하기](Lang-Swift/TIL220404_forEach.md)
-- [mutating 과 구조체](Lang-Swift/TIL220413_mutating.md)
-- [텍스트인코딩에 관하여](Lang-Swift/TIL220517_aboutTextEncoding.md)
-- [배열안에 담긴 url 유효성 검사](Lang-Swift/TIL220520_aboutCheckArrayComponent.md)
-- [이미지의 형태](Lang-Swift/TIL220915_KindsOfImageFormats.md)
-- [Xcode 디버깅으로 변수변화 캐치하기](Lang-Swift/TIL221026_howToDebugging.md)
-- [Understanding Closures in Swift : 클로저 톺아보기](Lang-Swift/UnderstandingClosures.md)
-- [enum 사용법](Lang-Swift/aboutEnum.md)
-- [저장프로퍼티 - 프로퍼티(1)](Lang-Swift/aboutProperty1.md)
-- [연산프로퍼티 - 프로퍼티(2)](Lang-Swift/aboutProperty2.md)
-- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](Lang-Swift/aboutProperty205.md)
-- [타입프로퍼티(static) - 프로퍼티(3)](Lang-Swift/aboutProperty3.md)
-- [타입메서드, 클래스메서드, 인스턴스 메서드](Lang-Swift/aboutPropertyWith_static.md)
-- [파일경로 String으로에서 확장자 추출하기](Lang-Swift/bringToExtensionName.md)
-- [고차함수 - Higher Order Function : Map, Filter, Reduce, Sort, FlatMap](Lang-Swift/higherOrderFuction.md)
-- [Special Literal](Lang-Swift/specialLiteral.md)
-- [Splite과 Component](Lang-Swift/splite_component_map.md)
-- [Swift - 스위프트에서 사용하는 패턴들](Lang-Swift/swift_a_swift_patterns.md)
-- [case let : for case let 익숙해지기](Lang-Swift/swift_caseLet_for.md)
-- [Switch case let, If case let, guard case let](Lang-Swift/swift_caseLet_switch_if_guard.md)
-- [Swift - Collection_Int : signum()](Lang-Swift/swift_collection_Int_signum.md)
-- [Closure 톺아보기](Lang-Swift/swift_firstClassClosureMaster.md)
-- [1급 객체](Lang-Swift/swift_firstClassObject.md)
-- [Swift - 키워드 defer](Lang-Swift/swift_keywordDefer.md)
-- [Swift - 키워드 inout](Lang-Swift/swift_keywordInout.md)
-- [Swift - Mirror 사용하기](Lang-Swift/swift_mirror.md)
-- [Swift - Range 함수 사용하기](Lang-Swift/swift_range.md)
-- [Swift - 참조(Strong, weak, unowned)](Lang-Swift/swift_reference_weak_unowned.md)
-- [Array - 특정값이 동일하거나 포함한 경우 찾기 :  firstIndex()](Lang-Swift/swift_replacingArrayIndexValue..md)
-
-### [Lang-Objective-C](#ios-lang-objective-c)
-- [Objc - Objc 프로젝트에서 Swift 라이브러리 사용하기](Lang-Objective-C/Objc_Bridging_SwiftInObjc.md)
-- [ObjC - Control Flow : Switch문](Lang-Objective-C/Objc_ControlFlow.md)
-- [Objc - 라이브러리 : 직접 파일삽입된 라이브러리 제거작업](Lang-Objective-C/Objc_DeleteFramework.md)
-- [ObjC - NSDictionary to NSString](Lang-Objective-C/Objc_DicToStr.md)
-- [ObjC - 로그찍기](Lang-Objective-C/Objc_Log.md)
-- [Objc - c언어와 objective-c의 차이, 발전](Lang-Objective-C/TIL220421_aboutObjectiveC.md)
-
-
-## Lang-Dart
-- [Dart - Intro](Lang-Dart/Dart_0000_Intro.md)
-- [Dart - 싱글턴 패턴](Lang-Dart/Dart_3010_Singleton_Basics.md)
-- [Dart - 팩토리 패턴](Lang-Dart/Dart_3011_Factory.md)
-
-
-# 🖥️ Computer Science
-
-## 📚 Basics
-- [트랜지스터의 원리](ComputerScience/221024_transister.md)
-- [2진법,10진법,16진법](ComputerScience/Basics/221021_baseRadix.md)
-
-## ⚙️ Hardware
-
-## 🧩 Software
-- [여러가지 버전관리정책](ComputerScience/VersionLint.md)
-- [애자일 방법론 이해하기](ComputerScience/methodology_agile.md)
-- [MVP: Minimum Viable Product](ComputerScience/MVP.md)
-- [직렬화(Serialization)](ComputerScience/Serialization.md)
-- [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
-
-## 📐 Algorithms
-- [문제풀이 인사이트](Algorithm/000_algorithm_a_problem_solving_insights.md)
-- [복잡도 정리](Algorithm/algorithm_000_essential_TimeComplexity.md)
-- [필수 알고리즘 - 그리디 (Greedy)](Algorithm/algorithm_006_esssential_Greedy.md)
-- [구현 정리](Algorithm/strategy_001_basic_implementation.md)
-- [그래프 정리 (stack, queue, 재귀, bfs, dfs)](Algorithm/strategy_002_basic_graph_search.md)
-- [기본 자료 구조 - 배열](Algorithm/000_algorithm_dataStructure_essential_array.md)
-- [기본 자료 구조 - 연결 리스트 (Linked List)](Algorithm/001_algorithm_dataStructure_essential_linkedList.md)
-- [기본 자료 구조 - 스택 (Stack)](Algorithm/002_algorithm_dataStructure_essential_stack.md)
-- [기본 자료 구조 - 큐 (Queue)](Algorithm/003_algoritym_dataStructure_essential_queue.md)
-- [알고리즘이란](Algorithm/About_Algorithm.md)
-- [자료구조를 왜 공부해야하는지](Algorithm/algorithm00_00_dataStructure.md)
-- [알고리즘 - 선택정렬 : Selection Sort](Algorithm/algorithm00_selectionSort.md)
-- [알고리즘 - 버블정렬 : Bubble Sort(작성중)](Algorithm/algorithm01_bubbleSort.md)
-- [알고리즘 템플릿](Algorithm/algorithm_000_AQuck.md)
-- [필수 알고리즘 - BFS: 너비 우선 탐색(Breath-first search)](Algorithm/algorithm_000_essential_BFS.md)
-- [필수 알고리즘 - 백트래킹](Algorithm/algorithm_002_essential_BackTracking.md)
-- [필수 알고리즘 - 시뮬레이션](Algorithm/algorithm_003_essential_simulation.md)
-- [필수 알고리즘 - 투 포인터](Algorithm/algorithm_004_essential_twoPointer.md)
-- [필수 알고리즘 - 이진탐색 (Binary Search)](Algorithm/algorithm_005_essentail_binarySearch.md)
-- [필수 알고리즘 - DP (Dynamic programming)](Algorithm/algorithm_007_essential_DP.md)
-- [필수 알고리즘 - MST (Minimum Spanning Tree)](Algorithm/algorithm_008_essential_mst.md)
-- [필수 알고리즘 - 플로이드 (Floyd)](Algorithm/algorithm_0091_essentail_Floyd.md)
-- [필수 알고리즘 - 다익스트라 (Dijkstra)](Algorithm/algorithm_009_essential_Dijkstra.md)
-
-## 📦 Data Structure
-
-## 🌐 Networking
-- [HTTP/2에 대하여(feat.ios)](ComputerScience/http_2.md)
-- [네트워킹 - 호스트파일이란, 내부망 설정하기](ComputerScience/networking_hostfile.md)
-- [OSI 7 Layer](ComputerScience/osi_7layer.md)
-- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md)
-- [OSI 7 Layer - 1.5 여러 컴퓨터간 통신](ComputerScience/osi_7layer_011_internet.md)
-- [OSI 7 Layer - 2. Data Link Layer(데이터 링크 계층)](ComputerScience/osi_7layer_020.DataLink.md)
-- [OSI 7 Layer - 3. Network Layer(네트워크 계층)](ComputerScience/osi_7layer_030.Network.md)
-
-## 🧮 Programming Paradigms
-- [프로그래밍 패러다임 - Functional Programming(함수형 프로그래밍)](ComputerScience/programming_00_Functional_.md)
-- [Functional Programming - 모나드 이해하기](ComputerScience/programming_00_Functional_Monade.md)
-- [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
-
-## 🎯 Design Patterns
-- [Singleton Pattern 개요](ComputerScience/DesignPatterns/cs_dp_00_singleton_overview.md)
-- [Factory Pattern 개요](ComputerScience/DesignPatterns/cs_dp_01_factory_overview.md)
-
-## 🏛 Architecture Patterns
-
-## 🛡 Security & Cryptography
-
-## 🗄 Database
-
-## 🧠 AI / Machine Learning
-- [딥러닝이란](About-AI/DeepLearning.md)
-- [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md)
-- [요즘 핫한 GPT로 앱만들어보기](About-AI/MVVM_ReactorKit_Snapkit_RxSwift.md)
-- [언어모델이란](About-AI/chatGPT.md)
 
 
 ## ASIS
@@ -1419,10 +1271,94 @@ ARKit, SceneKit처럼 AR 기능은 외부 플러그인 기반 접근 정리
 ## 🌐 Web Development
 
 
+<br><br>
+---
+
+# 🧬 Languages
+
+
+## 📚 Programming Language  
+
+
+### Lang-Swift
+- [Swift에 대한 소개](Lang-Swift/About_Swift000Intro_.md)
+- [Swift문법 기초](Lang-Swift/About_Swift001Basic_.md)
+- [Swift - 변수와 상수](Lang-Swift/Swift_1-1_LetVar.md)
+- [Swift - 기본 타입](Lang-Swift/Swift_1-2_Types.md)
+- [Swift - 조건문과 반복문](Lang-Swift/Swift_1-3_Control.md)
+- [Swift - 함수](Lang-Swift/Swift_1-4_Function.md)
+- [Swift - 옵셔널](Lang-Swift/Swift_1-5_Optional.md)
+- [Swift - 저장 프로퍼티와 연산 프로퍼티](Lang-Swift/Swift_2-1_Property.md)
+- [Swift - Getter와 Setter](Lang-Swift/Swift_2-2_GetSet.md)
+- [Swift - 프로퍼티 옵저버 (willSet, didSet)](Lang-Swift/Swift_2-3_Observer.md)
+- [Swift - 접근 제어자 (private, internal, public 등)](Lang-Swift/Swift_2-4_Access.md)
+- [Swift - Class와 Struct](Lang-Swift/About_Swift001ClassAndStruct.md)
+- [Swift - Initialization에 대해 알아보기](Lang-Swift/About_Swift002Init.md)
+- [Playground에서 UIView를 그려보자](Lang-Swift/About_Swift005Playground.md)
+- [Swift - Array 모아보기](Lang-Swift/About_Swift010Array.md)
+- [Swift_Sequence Protocol](Lang-Swift/About_Swift020SequenceProtocol.md)
+- [Attribute - @frozen](Lang-Swift/Attribute_frozen.md)
+- [Swift - Codable 다루기](Lang-Swift/Codable.md)
+- [Do - Try - Catch](Lang-Swift/DoTryCatch.md)
+- [Swift - Collection_Array : prefix() `안전한 사용`](Lang-Swift/Swift_collection_Array_prefix.md)
+- [random함수를 이용해 Random한 숫자 뽑아내기](Lang-Swift/Swift_collection_Array_random.md)
+- [Swift - Subscript(작성중)](Lang-Swift/Swift_collection_Subscript.md)
+- [안전하게 배열에 접근하는 방법](Lang-Swift/TIL220310_contactArraySafely.md)
+- [[Common Method] 로그 관련 함수](Lang-Swift/TIL220318_aboutLogMethod.md)
+- [# 여러개의 Action을 한번에 추가하기](Lang-Swift/TIL220404_forEach.md)
+- [mutating 과 구조체](Lang-Swift/TIL220413_mutating.md)
+- [텍스트인코딩에 관하여](Lang-Swift/TIL220517_aboutTextEncoding.md)
+- [배열안에 담긴 url 유효성 검사](Lang-Swift/TIL220520_aboutCheckArrayComponent.md)
+- [이미지의 형태](Lang-Swift/TIL220915_KindsOfImageFormats.md)
+- [Xcode 디버깅으로 변수변화 캐치하기](Lang-Swift/TIL221026_howToDebugging.md)
+- [Understanding Closures in Swift : 클로저 톺아보기](Lang-Swift/UnderstandingClosures.md)
+- [enum 사용법](Lang-Swift/aboutEnum.md)
+- [저장프로퍼티 - 프로퍼티(1)](Lang-Swift/aboutProperty1.md)
+- [연산프로퍼티 - 프로퍼티(2)](Lang-Swift/aboutProperty2.md)
+- [프로퍼티 옵저버(willSet / didSet) - 프로퍼티(2.5)](Lang-Swift/aboutProperty205.md)
+- [타입프로퍼티(static) - 프로퍼티(3)](Lang-Swift/aboutProperty3.md)
+- [타입메서드, 클래스메서드, 인스턴스 메서드](Lang-Swift/aboutPropertyWith_static.md)
+- [파일경로 String으로에서 확장자 추출하기](Lang-Swift/bringToExtensionName.md)
+- [고차함수 - Higher Order Function : Map, Filter, Reduce, Sort, FlatMap](Lang-Swift/higherOrderFuction.md)
+- [Special Literal](Lang-Swift/specialLiteral.md)
+- [Splite과 Component](Lang-Swift/splite_component_map.md)
+- [Swift - 스위프트에서 사용하는 패턴들](Lang-Swift/swift_a_swift_patterns.md)
+- [case let : for case let 익숙해지기](Lang-Swift/swift_caseLet_for.md)
+- [Switch case let, If case let, guard case let](Lang-Swift/swift_caseLet_switch_if_guard.md)
+- [Swift - Collection_Int : signum()](Lang-Swift/swift_collection_Int_signum.md)
+- [Closure 톺아보기](Lang-Swift/swift_firstClassClosureMaster.md)
+- [1급 객체](Lang-Swift/swift_firstClassObject.md)
+- [Swift - 키워드 defer](Lang-Swift/swift_keywordDefer.md)
+- [Swift - 키워드 inout](Lang-Swift/swift_keywordInout.md)
+- [Swift - Mirror 사용하기](Lang-Swift/swift_mirror.md)
+- [Swift - Range 함수 사용하기](Lang-Swift/swift_range.md)
+- [Swift - 참조(Strong, weak, unowned)](Lang-Swift/swift_reference_weak_unowned.md)
+- [Array - 특정값이 동일하거나 포함한 경우 찾기 :  firstIndex()](Lang-Swift/swift_replacingArrayIndexValue..md)
+
+### [Lang-Objective-C](#ios-lang-objective-c)
+- [Objc - Objc 프로젝트에서 Swift 라이브러리 사용하기](Lang-Objective-C/Objc_Bridging_SwiftInObjc.md)
+- [ObjC - Control Flow : Switch문](Lang-Objective-C/Objc_ControlFlow.md)
+- [Objc - 라이브러리 : 직접 파일삽입된 라이브러리 제거작업](Lang-Objective-C/Objc_DeleteFramework.md)
+- [ObjC - NSDictionary to NSString](Lang-Objective-C/Objc_DicToStr.md)
+- [ObjC - 로그찍기](Lang-Objective-C/Objc_Log.md)
+- [Objc - c언어와 objective-c의 차이, 발전](Lang-Objective-C/TIL220421_aboutObjectiveC.md)
+
+
+### Lang-Dart
+- [Dart - Intro](Lang-Dart/Dart_0000_Intro.md)
+- [Dart - 싱글턴 패턴](Lang-Dart/Dart_3010_Singleton_Basics.md)
+- [Dart - 팩토리 패턴](Lang-Dart/Dart_3011_Factory.md)
+
+### Lang-Ruby
+- [Install: Ruby](Lang-Ruby/Install_Ruby.md)
+- [RubyGems - Package Manager :　gem 관리하기](Lang-Ruby/ManageGem.md)
+- [Ruby - 버전관리 : RVM, Rbenv 사용법](Lang-Ruby/ManageRuby.md)
 
 
 
-### [Docs](#docs)
+## Markup & Style
+
+### Lang-Markdown
 - [마크다운 - HTML사용하기](Docs/Docs_MarkDown_CSS.md)
 - [마크다운에서 Toggle(Expander control) 기능 사용하기](Docs/HTML_Toggle.md)
 - [마크다운 - 이미지 사이즈 세팅하기](Docs/MarkDown_Image.md)
@@ -1430,8 +1366,94 @@ ARKit, SceneKit처럼 AR 기능은 외부 플러그인 기반 접근 정리
 - [마크다운 - 표 만들기 (Table)](Docs/MarkDown_Table.md)
 
 
+### Lang-HTML
 
-### [Git](#git)
+### Lang-CSS
+
+
+<br><br>
+---
+
+# 🖥️ Computer Science
+
+## 📚 Basics
+- [트랜지스터의 원리](ComputerScience/221024_transister.md)
+- [2진법,10진법,16진법](ComputerScience/Basics/221021_baseRadix.md)
+
+## ⚙️ Hardware
+
+## 🧩 Software
+- [여러가지 버전관리정책](ComputerScience/VersionLint.md)
+- [애자일 방법론 이해하기](ComputerScience/methodology_agile.md)
+- [MVP: Minimum Viable Product](ComputerScience/MVP.md)
+- [직렬화(Serialization)](ComputerScience/Serialization.md)
+- [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
+
+## 📐 Algorithms
+- [문제풀이 인사이트](Algorithm/000_algorithm_a_problem_solving_insights.md)
+- [복잡도 정리](Algorithm/algorithm_000_essential_TimeComplexity.md)
+- [필수 알고리즘 - 그리디 (Greedy)](Algorithm/algorithm_006_esssential_Greedy.md)
+- [구현 정리](Algorithm/strategy_001_basic_implementation.md)
+- [그래프 정리 (stack, queue, 재귀, bfs, dfs)](Algorithm/strategy_002_basic_graph_search.md)
+- [기본 자료 구조 - 배열](Algorithm/000_algorithm_dataStructure_essential_array.md)
+- [기본 자료 구조 - 연결 리스트 (Linked List)](Algorithm/001_algorithm_dataStructure_essential_linkedList.md)
+- [기본 자료 구조 - 스택 (Stack)](Algorithm/002_algorithm_dataStructure_essential_stack.md)
+- [기본 자료 구조 - 큐 (Queue)](Algorithm/003_algoritym_dataStructure_essential_queue.md)
+- [알고리즘이란](Algorithm/About_Algorithm.md)
+- [자료구조를 왜 공부해야하는지](Algorithm/algorithm00_00_dataStructure.md)
+- [알고리즘 - 선택정렬 : Selection Sort](Algorithm/algorithm00_selectionSort.md)
+- [알고리즘 - 버블정렬 : Bubble Sort(작성중)](Algorithm/algorithm01_bubbleSort.md)
+- [알고리즘 템플릿](Algorithm/algorithm_000_AQuck.md)
+- [필수 알고리즘 - BFS: 너비 우선 탐색(Breath-first search)](Algorithm/algorithm_000_essential_BFS.md)
+- [필수 알고리즘 - 백트래킹](Algorithm/algorithm_002_essential_BackTracking.md)
+- [필수 알고리즘 - 시뮬레이션](Algorithm/algorithm_003_essential_simulation.md)
+- [필수 알고리즘 - 투 포인터](Algorithm/algorithm_004_essential_twoPointer.md)
+- [필수 알고리즘 - 이진탐색 (Binary Search)](Algorithm/algorithm_005_essentail_binarySearch.md)
+- [필수 알고리즘 - DP (Dynamic programming)](Algorithm/algorithm_007_essential_DP.md)
+- [필수 알고리즘 - MST (Minimum Spanning Tree)](Algorithm/algorithm_008_essential_mst.md)
+- [필수 알고리즘 - 플로이드 (Floyd)](Algorithm/algorithm_0091_essentail_Floyd.md)
+- [필수 알고리즘 - 다익스트라 (Dijkstra)](Algorithm/algorithm_009_essential_Dijkstra.md)
+
+## 📦 Data Structure
+
+## 🌐 Networking
+- [HTTP/2에 대하여(feat.ios)](ComputerScience/http_2.md)
+- [네트워킹 - 호스트파일이란, 내부망 설정하기](ComputerScience/networking_hostfile.md)
+- [OSI 7 Layer](ComputerScience/osi_7layer.md)
+- [OSI 7 Layer - 1. Physical Layer(물리계층)](ComputerScience/osi_7layer_010.Physical.md)
+- [OSI 7 Layer - 1.5 여러 컴퓨터간 통신](ComputerScience/osi_7layer_011_internet.md)
+- [OSI 7 Layer - 2. Data Link Layer(데이터 링크 계층)](ComputerScience/osi_7layer_020.DataLink.md)
+- [OSI 7 Layer - 3. Network Layer(네트워크 계층)](ComputerScience/osi_7layer_030.Network.md)
+
+## 🧮 Programming Paradigms
+- [프로그래밍 패러다임 - Functional Programming(함수형 프로그래밍)](ComputerScience/programming_00_Functional_.md)
+- [Functional Programming - 모나드 이해하기](ComputerScience/programming_00_Functional_Monade.md)
+- [동기와 비동기](ComputerScience/synchronous_Asynchronous.md)
+
+## 🎯 Design Patterns
+- [Singleton Pattern 개요](ComputerScience/DesignPatterns/cs_dp_00_singleton_overview.md)
+- [Factory Pattern 개요](ComputerScience/DesignPatterns/cs_dp_01_factory_overview.md)
+
+## 🏛 Architecture Patterns
+
+## 🛡 Security & Cryptography
+
+## 🗄 Database
+
+## 🧠 AI / Machine Learning
+- [딥러닝이란](About-AI/DeepLearning.md)
+- [딥러닝 - 신경망으로 숫자에서 패턴찾기](About-AI/DeepLearning_Neural.md)
+- [요즘 핫한 GPT로 앱만들어보기](About-AI/MVVM_ReactorKit_Snapkit_RxSwift.md)
+- [언어모델이란](About-AI/chatGPT.md)
+
+
+<br><br>
+
+---
+
+# DevOps / Tools
+
+### Git
 - [Git 브랜치 전략 3종 요약 (Git Flow / GitHub Flow / GitLab Flow)](Git/Git_030_BranchStrategy.md)
 - [Git Actions - Permission to ....git denied to github-actions](Git/GitAction_tokenError.md)
 - [Git - 튜토리얼(1) : 브랜치 생성하기. 리스트 확인, 브랜치 체크아웃](Git/Git_001_tutorial_checkout.md)
