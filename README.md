@@ -1067,35 +1067,84 @@ _446 TILs and counting..._
 - [Android - 스플래시 화면 구현 가이드 (정적 & 동적)]() 미완
 
 
-## 📦 Android - 앱의 구조와 실행 흐름
+## Android - View System 기반 앱
 
-[\- 👆목차로 돌아가기 \-](#android-목차)
+### 📦 View - 앱의 구조와 실행 흐름
 
-## 🎨 Android - UI 구성 요소 설계
-### 📐 Android - 레이아웃과 배치 전략
+[\- 👆목차로 돌아가기 \-](#android---view-system-기반-앱-목차)
 
-[\- 👆목차로 돌아가기 \-](#android-목차)
+### 🎨 View - UI 구성 요소 설계
 
-### 🕹 Android - 이벤트 & 입력 처리 흐름
+[\- 👆목차로 돌아가기 \-](#android---view-system-기반-앱-목차)
 
-[\- 👆목차로 돌아가기 \-](#android-목차)
+### 🎨 View - 레이아웃과 배치 전략
 
-### 🔀 Android - 화면 전환 흐름
+[\- 👆목차로 돌아가기 \-](#android---view-system-기반-앱-목차)
 
-[\- 👆목차로 돌아가기 \-](#android-목차)
+### 🕹 View - 이벤트 & 입력 처리 흐름
 
-### 🧠 Android - 데이터의 흐름과 상태 관리
+[\- 👆목차로 돌아가기 \-](#android---view-system-기반-앱-목차)
 
-[\- 👆목차로 돌아가기 \-](#android-목차)
+### 🔀 View - 화면 전환 흐름
 
-### 🎨 Android - 그래픽 구성
+[\- 👆목차로 돌아가기 \-](#android---view-system-기반-앱-목차)
 
-[\- 👆목차로 돌아가기 \-](#android-목차)
+### 🧠 View - 데이터의 흐름과 상태 관리
+
+[\- 👆목차로 돌아가기 \-](#android---view-system-기반-앱-목차)
+
+### 🎨 View - 애니메이션 & 뷰 효과 구성
+
+[\- 👆목차로 돌아가기 \-](#android---view-system-기반-앱-목차)
 
 
-### 🧠 Android - 메모리 관리 및 성능 최적화
+### 🧠 View - 메모리 관리
 
-[\- 👆목차로 돌아가기 \-](#android-목차)
+[\- 👆목차로 돌아가기 \-](#android---view-system-기반-앱-목차)
+
+
+<br>
+
+## Android - Jetpack Compose 기반 앱
+
+### 📦 Compose - 앱의 구조와 실행 흐름
+
+[\- 👆목차로 돌아가기 \-](#android---jetpack-compose-기반-앱-목차)
+
+### 🎨 Compose - UI 구성 요소 설계
+
+[\- 👆목차로 돌아가기 \-](#android---jetpack-compose-기반-앱-목차)
+
+
+### 🎨 Compose - 레이아웃과 배치 전략
+
+[\- 👆목차로 돌아가기 \-](#android---jetpack-compose-기반-앱-목차)
+
+
+### 🕹 Compose - 이벤트 & 입력 처리 흐름
+
+[\- 👆목차로 돌아가기 \-](#android---jetpack-compose-기반-앱-목차)
+
+
+### 🔀 Compose - 화면 전환 흐름
+
+[\- 👆목차로 돌아가기 \-](#android---jetpack-compose-기반-앱-목차)
+
+### 🧠 Compose - 데이터의 흐름과 상태 관리
+
+[\- 👆목차로 돌아가기 \-](#android---jetpack-compose-기반-앱-목차)
+
+### 🎨 Compose - 애니메이션 & 뷰 효과 구성
+
+[\- 👆목차로 돌아가기 \-](#android---jetpack-compose-기반-앱-목차)
+
+
+### 🧠 Compose - 메모리 관리
+
+[\- 👆목차로 돌아가기 \-](#android---jetpack-compose-기반-앱-목차)
+
+<br><br>
+---
 
 ## Android - 기능 개발 핵심
 ### 🌐 Android - 통신 & 네트워킹
