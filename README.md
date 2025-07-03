@@ -831,7 +831,7 @@ _446 TILs and counting..._
 
 <br>
 
-## 🧪 iOS - 테스트 & 도구
+## 🧪 iOS - 테스트 및 도구
 ### 🧰 iOS - 개발 보조 도구 및 구성 관리
 - [How to Set - 세로모드 고정 (Potrait)](iOS-Environment/How_to_set_potrait_mode.md)
 - [Xcode 주석사용법](iOS-Environment/PragmaMark.md)
@@ -843,7 +843,7 @@ _446 TILs and counting..._
 ### 🧪 iOS - 앱 테스트 구성 요소
 - [Testable한 코드 만들기1 - VC -> MVC -> MVP](iOS-TDD/testable_mvc_mvp.md)
 
-[\- 👆목차로 돌아가기 \-](#-ios---테스트--도구-목차)
+[\- 👆목차로 돌아가기 \-](#-ios---테스트-및-도구-목차)
 
 ## iOS - 그래픽 렌더링 & 시각 효과 목차
 ### 🖼 iOS - Core Graphics - 직접 드로잉 처리
