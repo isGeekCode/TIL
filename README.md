@@ -69,7 +69,7 @@ _446 TILs and counting..._
 
 
 ## iOS - 앱 아키텍쳐 및 성능 목차
-- [iOS - 앱 아키텍쳐 및 성능](#ios--앱-아키텍쳐-및-성능)
+- [iOS - 앱 아키텍쳐 및 성능](#ios---앱-아키텍쳐-및-성능)
     - [🏗 iOS - 아키텍처 및 모듈 설계](#-ios---아키텍처-및-모듈-설계)
     - [🔀 iOS - 동시성 처리](#-ios---동시성-처리)
     - [🧱 iOS - Deprecated API 마이그레이션 기록](#-ios---deprecated-api-마이그레이션-기록)
@@ -825,7 +825,7 @@ _446 TILs and counting..._
 - [데이터 바인딩이란](iOS-Architecture/Data_Binding_about.md)
 - [Architecture - 비즈니스 로직이란](iOS-Architecture/aboutBusinessLogic.md)
 
-[\- 👆목차로 돌아가기 \-](#-ios---아키텍처-및-모듈-설계-목차)
+[\- 👆목차로 돌아가기 \-](#-ios---아키텍처-및-성능-목차)
 
 
 
