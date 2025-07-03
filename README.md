@@ -825,7 +825,7 @@ _446 TILs and counting..._
 - [데이터 바인딩이란](iOS-Architecture/Data_Binding_about.md)
 - [Architecture - 비즈니스 로직이란](iOS-Architecture/aboutBusinessLogic.md)
 
-[\- 👆목차로 돌아가기 \-](#-ios---아키텍처-및-성능-목차)
+[\- 👆목차로 돌아가기 \-](#ios---앱-아키텍쳐-및-성능-목차)
 
 
 
@@ -841,7 +841,7 @@ _446 TILs and counting..._
 - [GCD - DispatchWorkItem](iOS-Concurrency/GCD_011_DispatchWorkItem.md)
 - [Swift Concurrency - Async / Await / Task](iOS-Concurrency/SwiftConcurrency_Overview.md)
 
-[\- 👆목차로 돌아가기 \-](#-ios---동시성-처리-목차)
+[\- 👆목차로 돌아가기 \-](#ios---앱-아키텍쳐-및-성능-목차)
 
 
 ### 🧱 iOS - Deprecated API 마이그레이션 기록
@@ -849,6 +849,8 @@ _446 TILs and counting..._
 - [MPMoviePlayerController Deprecated in iOS 10, Replaced by AVPlayerViewController in iOS 7](iOS-Framework-Migration/MPMoviePlayer.md)
 - [NSURLConnection Deprecated in iOS 9, Replaced by URLSession in iOS 7](iOS-Framework-Migration/NSURLConnection.md)
 - ['setVolume:' is deprecated: first deprecated in iOS 7.0 - Use MPVolumeView for volume control.](iOS-Framework-Migration/mpmusicplayer.md)
+
+[\- 👆목차로 돌아가기 \-](#ios---앱-아키텍쳐-및-성능-목차)
 
 
 ## iOS - 시스템 및 운영 배포
