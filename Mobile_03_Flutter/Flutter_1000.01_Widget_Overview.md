@@ -236,8 +236,6 @@ Flutter Docs - Widget Catalog에 따르면,
 아래는 Widget Catalogs에서 볼 수 있는 세부 카테고리입니다.
 
 
-
-
 # Accessibility widgets
 Make your app accessible.
 
