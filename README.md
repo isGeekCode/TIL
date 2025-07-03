@@ -469,7 +469,7 @@ _446 TILs and counting..._
 
 
 ## 📦 iOS - UIKit 기반 앱
-### 📦 iOS - UIKit 앱의 구조와 실행 흐름
+### 📦 UIKit - 앱의 구조와 실행 흐름
 - [[Apple Document] - UIApplicationMain(::::)](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_000UIApplicationMain.md)
 - [[Apple Document] - UIApplication 싱글턴 객체](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_001UIApplication.md)
 - [[Apple Document] - AppDelegate, UIApplicationDelegate 프로토콜](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_002UIApplicationDelegate.md)
@@ -482,7 +482,7 @@ _446 TILs and counting..._
 - [UIApplication_AppDelegate - UIApplicationDelegate : 앱의 상태 / 생명주기(Life-Cycle)](iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_StatusCycle_of_App.md)
 
 
-### 🎨 iOS - UIKit UI 구성 요소 설계
+### 🎨 UIKit - UI 구성 요소 설계
 - [[Apple Document] - About App Development with UIKit](iOS-Framework-UIKit/About_UIKit_.md)
 - [UIKit기반 앱의 간단한 화면 인터페이스 구조](iOS-Framework-UIKit/About_UIKit_050WindowsAnsScreens_Screens_SimpleUIKitInterface.md)
 - [읽어야할 개발자 문서](iOS-Framework-UIKit/About__Document_Recommended.md)
@@ -566,11 +566,21 @@ _446 TILs and counting..._
     - [NSObject_UIResponder_UIView_UIControl : UISwitch](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UISwitch.md)
     - [NSObject_UIResponder_UIView_UIControl : UITextField](iOS-Framework-UIKit-UIResponder-UIView-UIControl/NSObject_UIResponder_UIView_UIControl_UITextField.md)
 
+[\- 👆목차로 돌아가기 \-](#ios---uikit-목차)
 
 
-### UIKit - Animation
+### 🎨 UIKit - 레이아웃과 배치 전략
+- [Layout - 오토레이아웃의 개념](iOS-Framework-UIKit/Layout_About_AutoLayout.md)
+- [UIKit - UIStoryboard](iOS-Framework-UIKit/About_UIKIt_010_UIStoryboard.md)
 
-### UIKit - Navigation
+[\- 👆목차로 돌아가기 \-](#ios---uikit-목차)
+
+
+### 🕹 UIKit - 이벤트 & 입력 처리 흐름
+
+[\- 👆목차로 돌아가기 \-](#ios---uikit-목차)
+
+### 🔀 UIKit - 화면 전환 흐름
 - [정리 : iOS에서의 화면관리 및 전환](iOS-ScreenTranport/A_Various_switchingScene.md)
 - [기본적인 iOS 앱의 구조 / 탭바컨트롤러 / 네비게이션컨트롤러](iOS-ScreenTranport/Application_BasicStructure.md)
 - [화면전환 - UINavigationController 이해하기](iOS-ScreenTranport/navigationController.md)
@@ -580,18 +590,20 @@ _446 TILs and counting..._
 - [Show는 push와 present의 추상화 메서드](iOS-ScreenTranport/showPushPresent.md)
 - [화면전환 - UITabBarController 이해하기](iOS-ScreenTranport/tabbarController.md)
 
+[\- 👆목차로 돌아가기 \-](#ios---uikit-목차)
 
-### 🎨 iOS - UIKit 레이아웃과 배치 전략
-- [Layout - 오토레이아웃의 개념](iOS-Framework-UIKit/Layout_About_AutoLayout.md)
-- [UIKit - UIStoryboard](iOS-Framework-UIKit/About_UIKIt_010_UIStoryboard.md)
 
-### 🕹 iOS - UIKit 이벤트 & 입력 처리 흐름
-### 🔀 iOS - UIKit 화면 전환 흐름
-### 🧠 iOS - UIKit 데이터의 흐름과 상태 관리
-### 🎨 iOS - UIKit 애니메이션 & 뷰 효과 구성
-### 🧠 iOS - UIKit 메모리 관리
+### 🧠 UIKit - 데이터의 흐름과 상태 관리
 
-[\- 👆목차로 돌아가기 \-](#ios--uikit-목차)
+[\- 👆목차로 돌아가기 \-](#ios---uikit-목차)
+
+### 🎨 UIKit - 애니메이션 & 뷰 효과 구성
+
+[\- 👆목차로 돌아가기 \-](#ios---uikit-목차)
+
+### 🧠 UIKit - 메모리 관리
+
+[\- 👆목차로 돌아가기 \-](#ios---uikit-목차)
 
 <br>
 
