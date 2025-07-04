@@ -1234,7 +1234,7 @@ AR 및 3D 렌더링
 <br><br>
 
 ## 🧠 Flutter - 데이터의 흐름과 상태 관리
-- [Flutter - 상태관리 개요](Mobile_03_Flutter/Fㅈlutter_4000_State_Management_Overview.md)
+- [Flutter - 상태관리 개요](Mobile_03_Flutter/Flutter_4000_State_Management_Overview.md)
 
 [\- 👆목차로 돌아가기 \-](#flutter-목차)
 
