@@ -8,20 +8,29 @@ Flutter 앱을 개발할 때 중요한 개념 중 하나는 상태 관리(State 
 ## 상태(State)란?
 
 상태란 앱 동작 중 변할 수 있는 데이터를 말한다.  
-사용자 입력, 네트워크 응답, 시간 경과 등에 따라 UI는 변경되어야 하며, 이를 결정하는 데이터가 상태이다.
+사용자 입력, 네트워크 응답, 시간 경과 등에 따라 UI는 변경되어야 한다.
+
+- 버튼을 누르면 숫자가 올라가고,  
+- 로그인을 하면 이름이 보이고,  
+- 시간이 지나면 타이머가 줄어드는 것처럼.
+
+이렇게 **UI가 바뀌게 만드는 데이터**를  **“상태”**라고 부른다.
 
 Flutter에서의 상태는 크게 두 가지로 나뉜다.
 
-- **임시 상태 (Ephemeral State)**  
-  - 단일 위젯 내에서만 사용되는 상태  
-  - UI의 일시적 변화 관리 (예: 버튼 눌림, 텍스트 필드 포커스 등)  
-  - `StatefulWidget`과 `setState()`로 관리
+### 임시 상태 (Ephemeral State)
+- 단일 위젯 내에서만 사용되는 상태  
+- UI의 일시적 변화 관리 (예: 버튼 눌림, 텍스트 필드 포커스 등)  
+- `StatefulWidget`에서 `setState()`로 관리한다
 
-- **앱 상태 (App State)**  
-  - 앱 여러 부분에서 공유되는 상태  
-  - 장기적으로 유지되는 정보 (예: 사용자 설정, 로그인 토큰 등)  
-  - 전역 접근과 효율적인 관리가 필요  
-  - Provider, Riverpod, Bloc 등의 라이브러리로 관리
+### 앱 상태 (App State)
+- 앱 여러 부분 혹은 전체에서 공유되는 상태  
+- 예
+    - 로그인한 사용자 정보
+    - 장바구니 안에 든 상품 목록
+    - 테마(다크모드 설정 등)
+- 여러 화면에서 이 값을 참고하거나 바꿔야하므로 전역 접근과 효율적인 관리가 필요하다.
+    - Provider, Riverpod, Bloc 등의 라이브러리로 관리한다.
 
 <br><br>
 
@@ -48,10 +57,13 @@ class CounterWidget extends StatefulWidget {
 }
 
 class _CounterWidgetState extends State<CounterWidget> {
+
+  // ✅ 상태 (State): UI에 영향을 주는 값
   int _count = 0;
 
   void _incrementCount() {
     setState(() {
+      // ✅ 상태 변경
       _count++;
     });
   }
@@ -60,8 +72,9 @@ class _CounterWidgetState extends State<CounterWidget> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text('카운트: $_count'),
+        Text('카운트: $_count'), // ✅ 상태 값 사용        
         ElevatedButton(
+          // ✅ 상태 변경 트리거
           onPressed: _incrementCount,
           child: Text('증가'),
         ),
@@ -74,6 +87,11 @@ class _CounterWidgetState extends State<CounterWidget> {
 - 장점: 간단하고 직관적  
 - 단점: 깊은 위젯 트리에서는 상태 전달이 어려움
 
+<br>
+
+> `setState()`는 해당 클래스 안에서만 작동하기 때문에  
+> 하위 위젯에서 직접 상태를 공유하거나 수정하려면 콜백 전달 또는 상태 관리 도구가 필요하다.
+
 <br><br>
 
 ### 2. InheritedWidget
@@ -81,22 +99,107 @@ class _CounterWidgetState extends State<CounterWidget> {
 Flutter 내장 메커니즘으로, 하위 위젯에 상태를 전달할 수 있다.  
 직접 구현은 복잡할 수 있지만 데이터 전파에는 효율적이다.
 
-```dart
-class CounterInheritedWidget extends InheritedWidget {
-  final int count;
-  final Function incrementCount;
+- 🧭 한눈에 보는 구조 요약
+```text
+CounterInheritedWidget
+└── Scaffold
+    └── Column
+        ├── CountText        // 상태 표시
+        └── IncrementButton  // 상태 변경
+```
 
+- 상위 위젯인 `CounterInheritedWidget`이 전체 UI를 감싸고 있고,  
+  자식 위젯들은 `context`를 통해 상태 값과 메서드에 접근한다.
+
+
+
+```dart
+// ✅선언 
+// 원래는 build 에서 바로 Scaffold를 리턴하지만 먼저 InheritedWidget로 감싸서 전달할 state를 상위에 선언한다. 
+
+class _InheritedWidgetPageState extends State<InheritedWidgetPage> {
+  // ✅ 전달할 State와 함수
+  int _count = 0;
+
+  // 상태를 증가시키는 함수 (자식 위젯에서 접근 가능하게 공유됨)
+  void _incrementCount() {
+    setState(() {
+      _count++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return CounterInheritedWidget(
+      // ✅ 전달할 State를 이니셜라이저로 전달
+
+      count: _count,
+      incrementCount: _incrementCount,
+      // ✅ 실제 화면에 표시되는 곳
+      child: Scaffold(
+        body: const Center(
+          child: Column(
+            children: [
+              // ✅ 전달할 하위 위젯
+              CountText(),      // 상태 표시 위젯
+              IncrementButton(),// 상태 변경 위젯
+            ]
+      )));
+  )}
+}
+// 이렇게 감싸두면, 하위 위젯에서 context로 값을 꺼낼 수 있게 된다.
+
+
+// 상태 표시 위젯
+class CountText extends StatelessWidget {
+  const CountText({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // ✅ 상위에서 제공한 CounterInheritedWidget으로부터 값 가져오기
+    final inherited = CounterInheritedWidget.of(context);
+    return Text(
+        '카운트: ${inherited.count}',
+        style: const TextStyle(fontSize: 24));
+  }
+}
+
+// 상태 변경 위젯
+class IncrementButton extends StatelessWidget {
+  const IncrementButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // ✅ 상위에서 제공한 CounterInheritedWidget의 함수 사용
+    final inherited = CounterInheritedWidget.of(context);
+    return ElevatedButton(
+      onPressed: () => inherited.incrementCount(),
+      child: const Text('증가'),
+    );
+  }
+}
+
+class CounterInheritedWidget extends InheritedWidget {
+  final int count; // 공유할 상태 값
+  final Function incrementCount; // 공유할 상태 변경 함수
+  
+  
+  // ✅ 생성자에서 공유할 상태를 받아 초기화
   CounterInheritedWidget({
     required this.count,
     required this.incrementCount,
     required Widget child,
   }) : super(child: child);
 
+
+  // 이전 값과 새로운 값이 다를 때만 하위 위젯을 다시 빌드하도록 알림
   @override
   bool updateShouldNotify(CounterInheritedWidget oldWidget) {
     return count != oldWidget.count;
   }
 
+
+  // ✅ context를 통해 트리 상단에 있는 CounterInheritedWidget을 찾는 정적 메서드
   static CounterInheritedWidget of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<CounterInheritedWidget>()!;
   }
