@@ -213,32 +213,104 @@ class CounterInheritedWidget extends InheritedWidget {
 
 ### 3. Provider
 
-InheritedWidget을 래핑한 라이브러리로, 더 직관적인 API를 제공한다.
+`Provider`는 Flutter에서 가장 많이 쓰이는 상태 관리 도구 중 하나입니다.  
+내부적으로는 `InheritedWidget`을 사용하지만, 더 편한 문법과 구조를 제공합니다.
+
+---
+
+### 📦 핵심 구조는 다음과 같아요
+
+```text
+CounterModel (상태와 notify 기능)
+└─ ChangeNotifierProvider (상태를 트리 아래로 제공)
+    └─ Consumer (상태를 구독하고 UI 갱신)
+```
+
+---
+
+### 🧠 흐름 정리
+
+1. `CounterModel`이 상태(count)를 가지고 있고, `increment()`를 통해 상태를 변경함
+2. `ChangeNotifierProvider`가 이 모델을 앱 하위 위젯에 전달함
+3. `Consumer` 위젯이 모델을 구독하고, count가 바뀌면 UI를 자동으로 다시 그림
+
+---
+
+### ✅ 예제 흐름을 말로 풀어보면
+
+- `Provider`로 상태 공급
+- `Consumer`로 상태 구독
+- `notifyListeners()`로 상태 변경 알림
+- 상태가 바뀌면 해당 위젯만 다시 그려짐
+
 
 ```dart
-// 상태 클래스
+// ✅ 상태를 관리하는 모델 클래스
 class CounterModel with ChangeNotifier {
-  int _count = 0;
-  int get count => _count;
+  int _count = 0; // 내부 상태
+  int get count => _count; // 외부에서 읽을 수 있는 getter
 
   void increment() {
-    _count++;
-    notifyListeners();
+    _count++; // 상태 변경
+    notifyListeners(); // ✅ 상태 변경 알림 → Consumer가 rebuild됨
   }
 }
 
-// Provider 설정
-ChangeNotifierProvider(
-  create: (context) => CounterModel(),
-  child: MyApp(),
-),
+// ✅ Provider 설정
+Widget build(BuildContext context) {
 
-// 데이터 사용
-Consumer<CounterModel>(
-  builder: (context, counter, child) {
-    return Text('카운트: ${counter.count}');
-  },
-)
+    return ChangeNotifierProvider(
+      // 상태 모델을 Provider로 등록
+      create: (_) => CounterModel(),
+      child: Scaffold(
+        body: const Center(
+          child: Column(
+            children: [
+              // ✅ 상태 표시 위젯
+              CountTextWithProvider(),
+              // ✅ 상태 변경 버튼
+              IncrementButtonWithProvider(),
+            ]
+      )));
+  )}
+}
+
+// ✅ 상태(count)를 표시하는 위젯
+class CountTextWithProvider extends StatelessWidget {
+  const CountTextWithProvider({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+  
+   // ✅ 데이터 사용
+    return Consumer<CounterModel>(
+      // 모델이 변경될 때마다 builder가 다시 실행됨
+      builder: (context, counter, _) {
+        return Text('카운트: ${counter.count}', style: const TextStyle(fontSize: 24));
+      },
+    );
+  }
+}
+
+// ✅ 상태를 변경하는 버튼 위젯
+class IncrementButtonWithProvider extends StatelessWidget {
+  const IncrementButtonWithProvider({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+  
+  
+    // ✅ 데이터 사용
+    return Consumer<CounterModel>(
+      builder: (context, counter, _) {
+        return ElevatedButton(
+          onPressed: counter.increment, // 모델의 메서드 호출로 상태 변경
+          child: const Text('증가'),
+        );
+      },
+    );
+  }
+}
 ```
 
 - 장점: 사용하기 쉽고 이해하기 쉬움  
@@ -252,6 +324,19 @@ Consumer<CounterModel>(
 - **Bloc/Cubit**: 비즈니스 로직 분리 중심의 구조  
 - **MobX**: 반응형 프로그래밍 기반  
 - **Redux**: 예측 가능한 상태 컨테이너
+
+여기선 Riverpod으로 살펴보자.
+
+`Riverpod`은 기존 Provider의 단점을 보완한 **더 강력하고 안전한 상태 관리 라이브러리**다.  
+컴파일 타임 안전성과 전역 접근의 유연성, 테스트 용이성에서 강점을 가진다.
+
+- **Provider와 다르게** context 없이도 상태에 접근할 수 있음
+- **전역 선언이 가능**해 코드 구조가 단순해짐
+- **IDE 자동완성, 타입 안정성** 등에서 개발 생산성 향상
+- **테스트 코드 작성이 쉬움**
+
+
+
 
 <br><br>
 
