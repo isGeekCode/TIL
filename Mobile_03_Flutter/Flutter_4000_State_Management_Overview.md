@@ -439,7 +439,10 @@ void main() {
 
 
 ## 전체코드
-```
+<details>
+<summary>전체 코드 보기</summary>
+
+```dart
 // main.dart
 
 // OS 관련
@@ -899,6 +902,7 @@ class RiverpodPage extends ConsumerWidget {
 
 ```
 
+</details>
 
 
 ## HISTORY
