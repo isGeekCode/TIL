@@ -335,7 +335,85 @@ class IncrementButtonWithProvider extends StatelessWidget {
 - **IDE 자동완성, 타입 안정성** 등에서 개발 생산성 향상
 - **테스트 코드 작성이 쉬움**
 
+### 📦 핵심 구조는 다음과 같다.
+```text
+CounterProvider (전역 상태 선언)
+└─ ProviderScope (앱 전체에 상태 주입)
+    └─ 위젯에서 ref.watch()로 상태 구독
+```
 
+### ✅ 예제 흐름을 말로 풀어보면
+
+- `Riverpod`에서 상태를 전역으로 선언함
+- `ProviderScope`로 앱을 감싸서 상태 접근 가능하게 함
+- 위젯에서는 `ref.watch()`로 상태를 구독함
+- 상태가 바뀌면 해당 위젯만 다시 그려짐
+
+---
+
+### 코드 예시
+
+```dart
+// ✅ 상태를 정의하는 Riverpod Provider
+final counterProvider = StateNotifierProvider<CounterNotifier, int>((ref) {
+  return CounterNotifier();
+});
+
+class CounterNotifier extends StateNotifier<int> {
+  CounterNotifier() : super(0);
+
+  void increment() => state++;
+}
+```
+
+```dart
+// ✅ UI 코드 - 상태 구독 및 사용
+class RiverpodPage extends ConsumerWidget {
+  const RiverpodPage({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final count = ref.watch(counterProvider); // 상태 구독
+
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('카운트: $count', style: const TextStyle(fontSize: 24)),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                ref.read(counterProvider.notifier).increment(); // 상태 변경
+              },
+              child: const Text('증가'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
+void main() {
+  runApp(
+    // ProviderScope는 Riverpod의 모든 Provider를 관리합니다
+    ProviderScope(
+      child: MyApp(),
+    ),
+  );
+}
+
+```
+
+- `ConsumerWidget`에서 `ref.watch()`로 상태를 읽고, `ref.read().increment()`로 상태를 바꾼다.
+- `ProviderScope`는 `main.dart`에서 앱을 감쌀 때 사용해야 한다.
+
+---
+
+이처럼 `Riverpod`은 글로벌하게 상태를 선언하고, context 없이 사용할 수 있어서 테스트와 유지보수가 쉽다.
 
 
 <br><br>
@@ -352,20 +430,479 @@ class IncrementButtonWithProvider extends StatelessWidget {
 
 <br><br>
 
-## 다음 섹션 예고
-
-이후 문서에서는 각 상태 관리 기법을 다음과 같은 순서로 자세히 다룰 예정이다:
-
-- `setState()`와 `ValueNotifier`  
-- `InheritedWidget`과 `Provider`  
-- `Riverpod`  
-- TodoList 실습으로 실제 적용
-
-<br><br>
-
 ## 요약
 
 - 상태 관리는 Flutter에서 매우 중요한 개념이다  
 - 상태는 임시 상태와 앱 상태로 구분할 수 있다  
 - 다양한 상태 관리 도구가 있으며, 상황에 따라 선택해야 한다  
 - 상태 관리를 잘하면 앱의 유지보수성, 성능, 확장성이 높아진다
+
+
+## 전체코드
+```
+// main.dart
+
+// OS 관련
+import 'package:flutter/foundation.dart' as foundation;
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+// 페이지
+import '../StateManagement/stateManagement.dart';
+
+void main() {
+  // runApp(const MyApp());
+  runApp(
+    // ProviderScope는 Riverpod의 모든 Provider를 관리합니다
+    ProviderScope(
+      child: MyApp(),
+    )
+  );
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  Widget build(BuildContext context) {
+    return MaterialApp(home: StateSamplePage());
+  }
+}
+
+
+class StateSamplePage extends StatefulWidget {
+  const StateSamplePage({super.key});
+
+  @override
+  State<StateSamplePage> createState() => _StateSamplePageState();
+}
+
+class _StateSamplePageState extends State<StateSamplePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('상태관리 방식 선택')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const SetStatePage()),
+                );
+              },
+              child: const Text('SetState 방식 보기'),
+            ),
+
+
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const InheritedWidgetPage()),
+                );
+              },
+              child: const Text('InheritedWidget 방식 보기'),
+            ),
+
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const ProviderPage()),
+                );
+              },
+              child: const Text('Provider 방식 보기'),
+            ),
+
+
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const RiverpodPage()),
+                );
+              },
+              child: const Text('Riverpod 방식 보기'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
+//stateManagement.dart
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:test_page/StateManagement/providerPage.dart';
+import 'package:test_page/StateManagement/rivorpodPage.dart';
+
+
+class SetStatePage extends StatefulWidget {
+  const SetStatePage({super.key});
+
+  @override
+  State<SetStatePage> createState() => _SetStatePageState();
+}
+
+class _SetStatePageState extends State<SetStatePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('setState 방식')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const SetStateSimplePage()),
+                );
+              },
+              child: const Text('간단한 구조 예제'),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const SetStateNestedPage()),
+                );
+              },
+              child: const Text('복잡한 구조 예제'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+class SetStateSimplePage extends StatefulWidget {
+  const SetStateSimplePage({super.key});
+
+  @override
+  State<SetStateSimplePage> createState() => _SetStateSimplePageState();
+}
+
+class _SetStateSimplePageState extends State<SetStateSimplePage> {
+  int _count = 0;
+
+  void _incrementCount() {
+    setState(() {
+      _count++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('setState - 간단한 구조')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('카운트: $_count', style: TextStyle(fontSize: 24)),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: _incrementCount,
+              child: const Text('증가'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+class SetStateNestedPage extends StatefulWidget {
+  const SetStateNestedPage({super.key});
+
+  @override
+  State<SetStateNestedPage> createState() => _SetStateNestedPageState();
+}
+
+class _SetStateNestedPageState extends State<SetStateNestedPage> {
+  int _count = 0;
+
+  void _increment() {
+    setState(() {
+      _count++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('자식에서 변경')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('카운트: $_count', style: TextStyle(fontSize: 24)),
+            const SizedBox(height: 16),
+            CounterButton(onPressed: _increment),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class CounterButton extends StatelessWidget {
+  final VoidCallback onPressed;
+
+  const CounterButton({super.key, required this.onPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      child: const Text('자식에서 증가'),
+    );
+  }
+}
+
+
+
+// InheritedWidgetPage는 InheritedWidget을 활용한 상태 관리 예제의 루트 위젯.
+class InheritedWidgetPage extends StatefulWidget {
+  const InheritedWidgetPage({super.key});
+
+  @override
+  State<InheritedWidgetPage> createState() => _InheritedWidgetPageState();
+}
+
+// 실제 상태 값과 상태 변경 함수를 관리하는 State 클래스
+class _InheritedWidgetPageState extends State<InheritedWidgetPage> {
+  int _count = 0;
+
+  // 상태를 증가시키는 함수 (자식 위젯에서 접근 가능하게 공유됨)
+  void _incrementCount() {
+    setState(() {
+      _count++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // CounterInheritedWidget을 트리 상단에 배치하여 자식들이 접근 가능하도록 함
+    return CounterInheritedWidget(
+      count: _count,
+      incrementCount: _incrementCount,
+      // 실제 화면에 표시되는 곳
+      child: Scaffold(
+        appBar: AppBar(title: const Text('InheritedWidget 방식')),
+        body: const Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CountText(),       // 상태 표시 위젯
+              SizedBox(height: 16),
+              IncrementButton(), // 상태 변경 위젯
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// 상태(count)를 표시하는 위젯
+class CountText extends StatelessWidget {
+  const CountText({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // 상위에서 제공한 CounterInheritedWidget으로부터 값 가져오기
+    final inherited = CounterInheritedWidget.of(context);
+    return Text(
+        '카운트: ${inherited.count}',
+        style: const TextStyle(fontSize: 24));
+  }
+}
+
+// 상태를 변경하는 버튼 위젯
+class IncrementButton extends StatelessWidget {
+  const IncrementButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // 상위에서 제공한 CounterInheritedWidget의 함수 사용
+    final inherited = CounterInheritedWidget.of(context);
+    return ElevatedButton(
+      onPressed: () => inherited.incrementCount(),
+      child: const Text('증가'),
+    );
+  }
+}
+
+// 실제 데이터를 공유하는 InheritedWidget 클래스
+class CounterInheritedWidget extends InheritedWidget {
+  final int count;                       // 공유하고자 하는 상태 값
+  final VoidCallback incrementCount;    // 공유할 함수
+
+  const CounterInheritedWidget({
+    required this.count,
+    required this.incrementCount,
+    required Widget child,
+  }) : super(child: child);
+
+  @override
+  bool updateShouldNotify(CounterInheritedWidget oldWidget) {
+    // count 값이 바뀌었을 때만 하위 위젯을 다시 빌드하도록 알림
+    return count != oldWidget.count;
+  }
+
+  // context를 통해 상위의 CounterInheritedWidget을 찾아주는 헬퍼 함수
+  static CounterInheritedWidget of(BuildContext context) {
+    final widget = context.dependOnInheritedWidgetOfExactType<CounterInheritedWidget>();
+    assert(widget != null, 'No CounterInheritedWidget found in context');
+    return widget!;
+  }
+}
+
+
+//providerPage.dart
+import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:provider/provider.dart';
+
+// 상태를 관리하는 모델 클래스
+class CounterModel with ChangeNotifier {
+  int _count = 0; // 내부 상태
+  int get count => _count; // 외부에서 읽을 수 있는 getter
+
+  void increment() {
+    _count++; // 상태 변경
+    notifyListeners(); // 상태 변경 알림 → Consumer가 rebuild됨
+  }
+}
+
+
+// Provider 방식을 사용하는 루트 위젯
+class ProviderPage extends StatelessWidget {
+  const ProviderPage({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      // 상태 모델을 Provider로 등록
+      create: (_) => CounterModel(),
+      child: Scaffold(
+        appBar: AppBar(title: const Text('Provider 방식')),
+        body: const Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CountTextWithProvider(),       // 상태 표시 위젯
+              SizedBox(height: 16),
+              IncrementButtonWithProvider(), // 상태 변경 버튼
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// 상태(count)를 표시하는 위젯
+class CountTextWithProvider extends StatelessWidget {
+  const CountTextWithProvider({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Consumer<CounterModel>(
+      // 모델이 변경될 때마다 builder가 다시 실행됨
+      builder: (context, counter, _) {
+        return Text('카운트: ${counter.count}', style: const TextStyle(fontSize: 24));
+      },
+    );
+  }
+}
+
+// 상태를 변경하는 버튼 위젯
+class IncrementButtonWithProvider extends StatelessWidget {
+  const IncrementButtonWithProvider({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Consumer<CounterModel>(
+      builder: (context, counter, _) {
+        return ElevatedButton(
+          onPressed: counter.increment, // 모델의 메서드 호출로 상태 변경
+          child: const Text('증가'),
+        );
+      },
+    );
+  }
+}
+
+
+//rivorpodPage.dart
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+
+// ✅ 상태를 정의하는 Riverpod Provider
+
+final counterProvider = StateNotifierProvider<CounterNotifier, int>((ref) {
+  return CounterNotifier();
+});
+
+// ✅ 상태를 관리하는 클래스
+class CounterNotifier extends StateNotifier<int> {
+  CounterNotifier() : super(0);
+
+  void increment() => state++;
+}
+
+// ✅ Riverpod 방식 예제 화면
+class RiverpodPage extends ConsumerWidget {
+  const RiverpodPage({super.key});
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final count = ref.watch(counterProvider); // 상태 구독
+    return Scaffold(
+      appBar: AppBar(title: const Text('Riverpod 방식')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('카운트: $count', style: const TextStyle(fontSize: 24)),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                ref.read(counterProvider.notifier).increment(); // 상태 변경
+              },
+              child: const Text('증가'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+```
+
+
+
+## HISTORY
+- 250704 : 초안 작성
+
+
+
