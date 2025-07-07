@@ -1,7 +1,6 @@
 # Layout - Single-child : Center
 
-<img src="https://i.imgur.com/qlU9vYp.png" width="500" />
-
+<img src="https://i.imgur.com/1M2BsK8.png" width="500" />
 
 <br>
 
