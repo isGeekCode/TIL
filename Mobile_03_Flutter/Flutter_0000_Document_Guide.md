@@ -66,6 +66,7 @@ Flutter에서 화면을 구성하는 모든 UI 요소는 위젯으로 표현되�
 | `1001` | Basics – 가장 기초적인 위젯 구성 요소들 (Text, Button 등) |
 | `1001.01` | Drawer – Scaffold 내 사이드 내비게이션 메뉴 구성용 위젯 |
 | `1002` | Layout – 레이아웃 구성용 위젯 (Row, Column, Stack 등) |
+| `1002.01` | Center –  |
 | `1003` | Text – 텍스트 표시 및 스타일링 관련 위젯 |
 | `1004` | Input – 사용자 입력을 위한 위젯 (TextField, Button, Form 등) |
 | `1005` | Assets, Images, and Icons – 이미지, 아이콘, 에셋 관련 구성 요소 |
