@@ -1,6 +1,6 @@
 # Layout - Single-child : Center
 
-![|500](https://i.imgur.com/qlU9vYp.png)
+<img src="https://i.imgur.com/qlU9vYp.png" width="500" />
 
 
 <br>
