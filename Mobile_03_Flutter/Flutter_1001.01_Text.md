@@ -1,6 +1,6 @@
 # Basics - Text
 
-<img src="https://i.imgur.com/93H27JZ.png" width="500" />
+<img src="https://i.imgur.com/llCcWoR.png" width="500" />  
 
 <br>
 
@@ -299,7 +299,7 @@ return  Scaffold(
 );
 ```
 
-→ 한 화면에서 `softWrap`, `maxLines`, `overflow` 동작을 시각적으로 비교할 수 있습니다.
+→ 한 화면에서 `softWrap`, `maxLines`, `overflow` 동작을 시각적으로 비교할 수 있다.
 
 - 스크린샷   
 <img src="https://i.imgur.com/g25qdOd.png" width="500" />
