@@ -87,11 +87,22 @@ Text.rich(
 | 속성 | 설명 |
 |------|------|
 | `style` | 텍스트 스타일 (색상, 크기 등) |
-| `textAlign` | 텍스트 정렬 방식 |
+| `textAlign` | 텍스트 정렬 방식 (`left`, `right`, `center`, `justify`, `start`, `end`) |
 | `maxLines` | 최대 줄 수 제한 |
 | `overflow` | 넘칠 경우 처리 방식 (ellipsis, fade 등) |
 | `softWrap` | 줄바꿈 허용 여부 |
 | `textScaler` | 텍스트 크기 조절 방식 (textScaleFactor는 deprecated) |
+
+<br>
+
+> `maxLines: 0`으로 설정하면 아무 텍스트도 표시되지 않는다.  
+> 줄 수 제한이 없게 하려면 `maxLines`를 생략하거나 null로 설정해야 한다.
+>
+> 텍스트가 컨테이너보다 넘칠 경우 `overflow` 속성 없이 기본 상태라면  
+> **다음 줄로 줄바꿈(wrapping)** 된다. 하지만 `maxLines`가 설정되어 있고 넘친다면,  
+> `overflow` 속성에 따라 `ellipsis(...)`, `fade`, `clip` 등의 방식으로 처리된다.
+
+
 
 <br>
 
@@ -210,14 +221,99 @@ Text.rich(
 
 → 단일 텍스트 내에서 다양한 스타일을 조합하려면 `Text.rich()` 사용.
 
+
+### 텍스트 비교
+
+아래 예제는 여러 종류의 텍스트 속성을 한 화면에서 비교하기 위한 구성이다.  
+특히 줄 수 제한, 생략(`overflow`), 줄바꿈(`softWrap`) 여부를 시각적으로 확인할 수 있도록 구성되어 있다.
+
+```dart
+return  Scaffold(
+  body: SafeArea(
+    child: Center(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+
+          Text('기본 텍스트'),
+          SizedBox(height: 8),
+
+          Text(
+            '파란색 + 크기 20 + Bold',
+            style: TextStyle(color: Colors.blue, fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 8),
+
+          Text(
+            '한 줄만, 넘치면 말줄임표 (ellipsis 처리)',
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
+          SizedBox(height: 8),
+
+          Text(
+            '줄바꿈 없이 fade 처리됨 - softWrap: false',
+            softWrap: false,
+            overflow: TextOverflow.fade,
+          ),
+          SizedBox(height: 8),
+
+          Text.rich(
+            TextSpan(
+              text: 'Hello',
+              children: [
+                TextSpan(
+                  text: ' beautiful ',
+                  style: TextStyle(fontStyle: FontStyle.italic),
+                ),
+                TextSpan(
+                  text: 'world!',
+                  style: TextStyle(fontWeight:FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 16),
+
+          Divider(),
+
+          Text(
+            '✅ 줄바꿈 테스트 (기본)',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          Text(
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          ),
+          SizedBox(height: 12),
+
+          Text(
+            '✅ 줄 수 제한 + ellipsis\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(color: Colors.red),
+          )
+        ],
+      ),
+    )
+  )
+);
+```
+
+→ 한 화면에서 `softWrap`, `maxLines`, `overflow` 동작을 시각적으로 비교할 수 있습니다.
+
+
+
 <br>
 
 ## 선택 및 상호작용
 
-- `Text`는 기본적으로 선택 불가능하다.  
-  → 선택 가능하게 하려면 `SelectionArea` 또는 `SelectableText` 사용
+`Text`는 기본적으로 유저가 선택하는 기능이 없다. 즉, 유저가 아무리 터치하거나 드래그를 해도 아무 반응이 없다는 말이다. 
 
-- 클릭 이벤트 처리: `GestureDetector` 또는 `InkWell`로 감싸서 사용
+`GestureDetector`는 텍스트에 터치 이벤트(예: 탭)를 추가하고 싶을 때 사용하는 위젯이다.  
+단순히 텍스트를 누르면 반응하는 UI를 만들고 싶다면 `GestureDetector` 또는 `InkWell`을 사용할 수 있다.
+
+아래 예시는 텍스트를 눌렀을 때 콘솔에 "Text tapped!" 라는 로그를 출력합니다.  
+단, 이 방식은 텍스트 선택 기능을 제공하진 않으며, 순수한 터치 인터랙션에만 사용된다.
 
 ```dart
 GestureDetector(
@@ -227,6 +323,29 @@ GestureDetector(
   child: Text('Tap Me'),
 )
 ```
+
+
+
+만약 선택 가능한 텍스트를 만들고 싶다면 다음과 같은 위젯을 사용할 수 있다
+
+- `SelectableText`: 단일 텍스트를 선택 가능하게 만들어주는 위젯.
+- `SelectionArea`: 여러 개의 텍스트 위젯을 감싸서 영역 전체를 선택할 수 있다.
+
+
+```dart
+SelectionArea(
+  child: Column(
+    children: [
+      Text('이 텍스트는'),
+      Text('모두 선택 가능해요!'),
+    ],
+  ),
+)
+
+// 혹은  
+SelectableText('이 텍스트는 선택 가능해요')
+```
+
 
 <br>
 
