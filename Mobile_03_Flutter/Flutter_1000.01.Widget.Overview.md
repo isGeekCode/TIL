@@ -401,39 +401,48 @@ Widget that builds itself based on the latest snapshot of interaction with a Str
 
 ### AppBar
 Container that displays content and actions at the top of a screen.
+- 화면 상단에 콘텐츠와 액션을 표시하는 컨테이너입니다.
 
 ### Column
 Layout a list of child widgets in the vertical direction.
+- 자식 위젯을 세로 방향으로 배치하는 레이아웃입니다
 
 ### Container
 A convenience widget that combines common painting, positioning, and sizing widgets.
+- 페인팅, 위치 지정, 크기 조절 기능이 결합된 다용도 위젯입니다.
 
 ### ElevatedButton
 A Material Design elevated button. A filled button whose material elevates when pressed.
-
+- 누르면 입체감이 생기는 머티리얼 스타일의 버튼입니다
 
 ### FlutterLogo
 The Flutter logo, in widget form. This widget respects the IconTheme.
+- Flutter 로고를 아이콘 형태로 표시하는 위젯입니다
+
 
 ### Icon
 A Material Design icon.
+- 머티리얼 디자인 아이콘을 표시하는 위젯입니다.
 
 ### Image
 A widget that displays an image.
-
+- 이미지를 표시하는 위젯입니다.
 
 ### Placeholder
 A widget that draws a box that represents where other widgets will one day be added.
+- 다른 위젯이 나중에 배치될 자리를 표시하는 박스 형태의 위젯입니다
 
 ### Row
 Layout a list of child widgets in the horizontal direction.
+- 자식 위젯을 가로 방향으로 배치하는 레이아웃입니다
 
 ### Scaffold
 Implements the basic Material Design visual layout structure. This class provides APIs for showing drawers, snack bars, and bottom sheets.
+- 앱의 기본적인 머티리얼 레이아웃 구조를 제공하며, 드로어, 스낵바, 바텀시트 등의 API를 포함합니다
 
 ### Text
 A run of text with a single style.
-
+- 하나의 스타일로 구성된 텍스트를 출력하는 위젯입니다
 
 # Input widgets
 Take user input in addition to input widgets in Material components and Cupertino.
@@ -502,6 +511,7 @@ A widget that manages a set of child widgets with a stack discipline. Many apps 
 
 # Layout widgets
 Arrange other widgets columns, rows, grids, and many other layouts.
+- 여러 위젯을 세로(Column), 가로(Row), 그리드(Grid) 등 다양한 형태로 배치하는 레이아웃 위젯입니다.
 
 ## Single-child layout widgets
 ### Align
@@ -515,6 +525,7 @@ Container that positions its child according to the child's baseline.
 
 ### Center
 Alignment block that centers its child within itself.
+- 자식 위젯을 자신의 영역 내에서 가운데 정렬하는 위젯입니다.
 
 ### ConstrainedBox
 A widget that imposes additional constraints on its child.
@@ -565,6 +576,7 @@ A widget that applies a transformation before painting its child.
 ## Multi-child layout widgets
 ### Column
 Layout a list of child widgets in the vertical direction.
+- 자식 위젯을 세로 방향(위→아래) 으로 배치하는 다자식 레이아웃 위젯입니다.
 
 ### CustomMultiChildLayout
 A widget that uses a delegate to size and position multiple children.
