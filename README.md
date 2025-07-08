@@ -1206,6 +1206,8 @@ AR 및 3D 렌더링
 ## 🎨 Flutter - UI 구성 요소 설계
 - [Flutter - 기본 위젯 4종 (Text, Icon, Image, Box)](Mobile_03_Flutter/Flutter_1001.00_Basic_4_Widget.md)
 - [Flutter - Drawer : GNB / 사이드바](Mobile_03_Flutter/Flutter_1001.01_Drawer.md)
+- Text
+    - [Flutter - Text](Mobile_03_Flutter/Flutter_1001.01_Text.md)
 - Layout
     - Single-child
         - [Flutter - Layout : Center](Mobile_03_Flutter/Flutter_1002.01_Center.md)
