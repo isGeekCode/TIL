@@ -615,7 +615,7 @@ _446 TILs and counting..._
 - [Layout - SwiftUI: State와 바인딩](iOS-Framework-SwiftUI/SwiftUI_State.md)
 
 ### 🎨 SwiftUI - UI 구성 요소 설계
-#### Layout Widgets
+### Layout Widgets
 - [Layout - SwiftUI: Text](iOS-Framework-SwiftUI/SwiftUI_001_Text.md)
 - [Layout - SwiftUI: Image](iOS-Framework-SwiftUI/SwiftUI_002_Image.md)
 - [Layout - SwiftUI: Button](iOS-Framework-SwiftUI/SwiftUI_003_Button.md)
