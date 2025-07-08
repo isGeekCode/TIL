@@ -258,33 +258,34 @@ Bring animations to your app.
 
 ### AlignTransition
 Animated version of an Align that animates its Align.alignment property.
-
+- Align 위젯의 alignment 속성을 애니메이션으로 처리한 버전입니다.
 
 
 
 ### AnimatedAlign
 Animated transition that moves the child's position over a given duration whenever the given alignment changes.
-
+- alignment가 바뀔 때 자식 위젯의 위치를 일정 시간 동안 애니메이션으로 이동시킵니다.
 
 ### AnimatedBuilder
 A general-purpose widget for building animations. AnimatedBuilder is useful for more complex widgets that wish to include animation as part of a larger build function....
-
+- 애니메이션 로직을 일반 위젯에 통합할 때 유용한 범용 애니메이션 위젯입니다.
 
 ### AnimatedContainer
 A container that gradually changes its values over a period of time.
-
+- Container의 속성(크기, 색상 등)을 일정 시간에 걸쳐 부드럽게 변경합니다
 
 ### AnimatedCrossFade
 A widget that cross-fades between two given children and animates itself between their sizes.
-
+- 두 자식 위젯 간에 크기와 함께 크로스 페이드 애니메이션을 수행합니다.
 
 ### AnimatedDefaultTextStyle
 Animated version of DefaultTextStyle which automatically transitions the default text style (the text style to apply to descendant Text widgets without explicit style) over a...
+- 자식 텍스트에 적용되는 기본 텍스트 스타일을 애니메이션으로 전환하는 위젯입니다.
 
 
 ### AnimatedList
 A scrolling container that animates items when they are inserted or removed.
-
+- 아이템이 추가되거나 제거될 때 애니메이션 효과를 적용하는 스크롤 리스트입니다.
 
 ### AnimatedListState
 The state for a scrolling container that animates items when they are inserted or removed.
@@ -292,79 +293,80 @@ The state for a scrolling container that animates items when they are inserted o
 
 ### AnimatedModalBarrier
 A widget that prevents the user from interacting with widgets behind itself.
-
+- AnimatedList의 상태를 관리하며, 삽입/삭제 애니메이션을 제어합니다
 
 ### AnimatedOpacity
 Animated version of Opacity which automatically transitions the child's opacity over a given duration whenever the given opacity changes.
-
+- 자식 위젯의 불투명도를 시간에 따라 점진적으로 변화시킵니다.
 
 ### AnimatedPhysicalModel
 Animated version of PhysicalModel.
-
+- 그림자, 모서리, 색상 등의 속성을 애니메이션으로 전환할 수 있는 PhysicalModel입니다
 
 ### AnimatedPositioned
 Animated version of Positioned which automatically transitions the child's position over a given duration whenever the given position changes.
-
+- 위치 속성이 변경될 때 부드럽게 애니메이션으로 전환합니다.
 
 ### AnimatedSize
 Animated widget that automatically transitions its size over a given duration whenever the given child's size changes.
-
+- 자식 위젯의 크기 변화에 따라 사이즈를 애니메이션으로 전환합니다
 
 ### AnimatedWidget
 A widget that rebuilds when the given Listenable changes value.
-
+- Listenable이 변경될 때마다 위젯을 다시 빌드하는 애니메이션 위젯입니다
 
 ### ImplicitlyAnimatedWidget
 An abstract class for building widgets that animate changes to their properties.
-
+- 속성 변화에 따라 애니메이션을 적용할 수 있도록 지원하는 추상 클래스입니다.
 
 ### DecoratedBoxTransition
 Animated version of a DecoratedBox that animates the different properties of its Decoration.
-
+- Decoration 속성(배경, 테두리 등)을 애니메이션으로 전환합니다
 
 ### DefaultTextStyleTransition
 Animated version of a DefaultTextStyle that animates the different properties of its TextStyle.
-
+- 텍스트 스타일의 변화(폰트, 색상 등)를 애니메이션으로 적용합니다
 
 ### FadeTransition
 Animates the opacity of a widget.
-
+- 위젯의 투명도를 애니메이션으로 조절합니다.
 
 ### Hero
 A widget that marks its child as being a candidate for hero animations.
-
+- 화면 전환 시 자식 위젯을 애니메이션으로 이동시키는 Hero 전환 대상입니다
 
 ### MatrixTransition
 Animates the Matrix4 of a transformed widget.
-
+- 변형 행렬(Matrix4)을 통해 위젯에 복합적인 애니메이션을 적용합니다
 
 ### PositionedTransition
 Animated version of Positioned which takes a specific Animation to transition the child's position from a start position to and end position over the lifetime...
-
+- Animation 객체를 기반으로 자식 위젯의 위치를 애니메이션으로 전환합니다
 
 ### RelativePositionedTransition
 Animated version of Positioned which transitions the child's position based on the value of rect relative to a bounding box with the specified size.
-
+- 바운딩 박스를 기준으로 자식 위치를 애니메이션으로 변경합니다
 
 ### RotationTransition
 Animates the rotation of a widget.
-
+- 위젯을 회전시키는 애니메이션 효과를 적용합니다.
 
 ### ScaleTransition
 Animates the scale of transformed widget.
-
+- 위젯의 크기를 확장하거나 축소하는 애니메이션을 적용합니다
 
 ### SizeTransition
 Animates its own size and clips and aligns the child.
-
+- 자신의 크기를 애니메이션으로 조절하며 자식 위젯도 클립 및 정렬합니다
 
 ### SlideTransition
 Animates the position of a widget relative to its normal position.
+- 자식 위젯의 위치를 기준 위치로부터 상대적으로 이동시키는 애니메이션입니다.
 
 
 ### SliverFadeTransition
-Animates the opacity of a sliver widget.
-
+Animates the opacity of a sliver widget.ㅁ
+- sliver 위젯의 불투명도를 애니메이션으로 처리합니다.
 
 ---
 

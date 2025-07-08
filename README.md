@@ -1217,7 +1217,7 @@ AR 및 3D 렌더링
   
 ### Text Widgets
 텍스트 표시 및 스타일링 관련 위젯
-- [Flutter - Text](Mobile_03_Flutter/Flutter_1001.01_Text.md)
+- [Flutter - Text](Mobile_03_Flutter/Flutter_1001.01.Text.md)
   
 ### Layout Widgets
 레이아웃 구성용 위젯
