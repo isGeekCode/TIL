@@ -210,7 +210,7 @@ _446 TILs and counting..._
 - [📦 Flutter - 앱의 구조와 실행 흐름](#-flutter---앱의-구조와-실행-흐름)
 - [🎨 Flutter - UI 구성 요소 설계](#-flutter---ui-구성-요소-설계)
     - [Basics Widgets](#flutter---basics-widgets) : 가장 기초적인 위젯 구성 요소들 (Text, Button 등)
-    - [Layout Widgets](#layout-widgets) : 레이아웃 구성용 위젯 (Row, Column, Stack 등)
+    - [Layout Widgets](#flutter---layout-widgets) : 레이아웃 구성용 위젯 (Row, Column, Stack 등)
     - [Text Widgets](#text-widgets) : 텍스트 표시 및 스타일링 관련 위젯
     - [Input Widgets](#input-widgets) : 사용자 입력을 위한 위젯 (TextField, Button, Form 등)
     - [Assets, Images, and Icons](#images-and-icons) : 이미지, 아이콘, 에셋 관련 구성 요소
