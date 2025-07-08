@@ -1190,7 +1190,7 @@ AR 및 3D 렌더링
 ---
 
 ## Mobile Flutter 공통 기능 구현
-- [Flutter - Splash 구현](Mobile_03_Flutter/Flutter_0271_SplashScreen_basic.md)
+- Flutter - Splash 구현
 
 
 <br><br>
