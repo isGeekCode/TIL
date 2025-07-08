@@ -301,6 +301,8 @@ return  Scaffold(
 
 → 한 화면에서 `softWrap`, `maxLines`, `overflow` 동작을 시각적으로 비교할 수 있습니다.
 
+- 스크린샷   
+<img src="https://i.imgur.com/g25qdOd.png" width="500" />
 
 
 <br>
@@ -328,8 +330,9 @@ GestureDetector(
 
 만약 선택 가능한 텍스트를 만들고 싶다면 다음과 같은 위젯을 사용할 수 있다
 
-- `SelectableText`: 단일 텍스트를 선택 가능하게 만들어주는 위젯.
 - `SelectionArea`: 여러 개의 텍스트 위젯을 감싸서 영역 전체를 선택할 수 있다.
+- `SelectableText`: 단일 텍스트를 선택 가능하게 만들어주는 위젯.
+  ⚠️ iOS에서는 `SelectableText` 단독 사용 시 시스템 context menu와 충돌로 인해 에러가 발생할 수 있으므로, 가능한 `SelectionArea`로 감싸는 방식이 더 안정적.
 
 
 ```dart
@@ -337,13 +340,23 @@ SelectionArea(
   child: Column(
     children: [
       Text('이 텍스트는'),
-      Text('모두 선택 가능해요!'),
+      Text('모두 선택 가능!'),
     ],
   ),
 )
 
 // 혹은  
-SelectableText('이 텍스트는 선택 가능해요')
+SelectionArea(
+  child: Column(
+    children: [
+      Text('이 텍스트도 선택 가능'),
+    ],
+  ),
+),
+
+SelectionArea(
+  child: Text('단일 텍스트'),
+)
 ```
 
 
@@ -352,10 +365,11 @@ SelectableText('이 텍스트는 선택 가능해요')
 
 ## 관련 위젯
 
-- `RichText`: 텍스트 스타일을 더 정교하게 제어 가능  
-- `SelectableText`: 복사/선택 가능한 텍스트  
-- `TextButton`: 클릭 가능한 텍스트 형태 버튼  
 - `DefaultTextStyle`: 자식 위젯들의 기본 텍스트 스타일 지정
+- `RichText`: 텍스트 스타일을 더 정교하게 제어 가능  
+- `SelectableText`: 복사/선택 가능한 텍스트
+    - SelectionArea를 사용하는 것을 추천
+- `TextButton`: 클릭 가능한 텍스트 형태 버튼  
 - `TextStyle`: 폰트, 크기, 색상 등 스타일 지정
 
 <br><br>
