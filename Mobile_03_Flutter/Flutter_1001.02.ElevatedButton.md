@@ -102,8 +102,19 @@ ElevatedButton(
 ## Style
 
 ElevatedButton은 Style을 `styleFrom`과 `ButtonStyle` 방식으로 구현할 수 있다.    
-두 방식의 비교와 차이는 [styleFrom vs ButtonStyle](#stylefrom-vs-buttonstyle) 섹션 참고. 
-아래는 대표적인 스타일 지정 예시이다.
+
+styleFrom은 ButtonStyle을 내부적으로 생성하는 팩토리 함수이다.  
+때문에 간단하고 일괄적으로 생성할 때, 사용한다.  
+
+ButtonStyle은 각 비주얼적인 요소마다 WidgetStateProperty를 이용해 클릭하는 경우, 마우스가 올라가는 경우 등 버튼의 상태를 체크하며 부여한다.  
+ 
+그렇기 때문에 조건처리가 다양해질수록 길어진다.  
+
+모든 상태 동일하게 적용하려면 ButtonStyle 에서 상태를 **.all**로 생성하거나 styleFrom을 사용하면 된다.   
+
+
+아래는 대표적인 스타일 지정 예시다.
+
  
 ```dart
 // styleFrom로 일괄 적용하기
