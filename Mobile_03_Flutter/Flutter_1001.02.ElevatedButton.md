@@ -1,6 +1,7 @@
 # Basics - ElevatedButton
 
-<img src="https://i.imgur.com/93H27JZ.png" width="500" />
+<img src="https://i.imgur.com/uGG1c3T.png" width="500" />
+
 
 <br>
 
@@ -450,6 +451,13 @@ ElevatedButton(
 ### 예제 5: 통합 예제 (다양한 스타일, 상태, 아이콘 등)
 
 ```dart
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
+
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
 class _MainScreenState extends State<MainScreen> {
   bool isEnabled = true;
   bool isLoading = false;
@@ -627,7 +635,7 @@ class _MainScreenState extends State<MainScreen> {
 <img src="https://i.imgur.com/d8HPf8d.gif" width="500" />
 
 
-<br>
+<br><br>
 
 
 ## ElevatedButtonTheme를 이용한 일괄 스타일 적용하기
