@@ -82,10 +82,8 @@ ElevatedButton(
   onPressed: null,
   child: Text('Disabled'),
 )
-```
 
-// 별도 함수로 정의해도 된다
-```dart
+// 별도 함수로 정의하는 경우
 void handleClick() {
   print("clicked");
 }
