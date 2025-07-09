@@ -51,60 +51,8 @@ ElevatedButton({
 })
 ```
 
-또는 아이콘과 텍스트를 함께 넣고 싶다면:
-
-```dart
-ElevatedButton.icon(
-  onPressed: () {},
-  icon: Icon(Icons.thumb_up),
-  label: Text('Like'),
-)
-```
-
-아이콘을 포함한 버튼도 스타일을 커스터마이징할 수 있다.  
-일반 `ElevatedButton`처럼 `styleFrom` 또는 `ButtonStyle`을 사용하면 된다.
-
-예를 들어, 아이콘 버튼의 색상, 여백, 모양 등을 다음과 같이 설정할 수 있다:
-
-```dart
-ElevatedButton.icon(
-  onPressed: () {},
-  icon: Icon(Icons.thumb_up),
-  label: Text('Like'),
-  style: ElevatedButton.styleFrom(
-    backgroundColor: Colors.indigo,
-    foregroundColor: Colors.white,
-    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-    elevation: 6,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(12),
-    ),
-  ),
-)
-```
-
-<br>
-
-## 주요 스타일 속성 (styleFrom 사용 시)
-
-| 속성명 | 설명 |
-|--------|------|
-| `foregroundColor` | 텍스트 및 아이콘 색상 |
-| `backgroundColor` | 버튼 배경색 |
-| `elevation` | 눌렀을 때의 그림자 깊이 |
-| `padding` | 버튼 내부 여백 |
-| `minimumSize`, `fixedSize`, `maximumSize` | 버튼 크기 조절 |
-| `shape` | 버튼의 외곽 모양 (e.g. `RoundedRectangleBorder`) |
-
-`styleFrom` 외에도 `ButtonStyle` 객체를 직접 생성하여 style 속성에 넣을 수 있다.
-
-
-### styleFrom vs ButtonStyle
-- `styleFrom`은 간편한 파라미터 기반 설정용 팩토리 메서드이다.  
-  → 자주 사용하는 스타일 속성에 빠르게 접근할 수 있다.
-- `ButtonStyle`은 더 세부적인 조정이 가능한 정식 스타일 객체이다.  
-  → 복잡한 조건별 스타일 처리나 위젯 상태별 처리에 유리하다.
-
+아이콘과 텍스트를 함께 넣으려면 `ElevatedButton.icon` 생성자를 사용한다.    
+자세한 내용과 스타일 커스터마이징 예시는 [아이콘 버튼](#아이콘-버튼) 섹션 참고.
 
 
 <br><br>
@@ -153,33 +101,14 @@ ElevatedButton(
 <br>
 <br>
 
+## Style
 
-
-## 🧪 Sample Code
-
-### 예제 1: 기본 ElevatedButton
-
+ElevatedButton은 Style을 `styleFrom`과 `ButtonStyle` 방식으로 구현할 수 있다.    
+두 방식의 비교와 차이는 [styleFrom vs ButtonStyle](#stylefrom-vs-buttonstyle) 섹션 참고. 
+아래는 대표적인 스타일 지정 예시이다.
+ 
 ```dart
-ElevatedButton(
-  onPressed: () {
-    print("Button pressed");
-  },
-  child: Text('Click Me'),
-)
-```
-
-### 예제 2: 버튼 비활성화 처리
-
-```dart
-ElevatedButton(
-  onPressed: null,
-  child: Text('Disabled'),
-)
-```
-
-### 예제 3-1: 스타일 지정 : styleFrom
-
-```dart
+// styleFrom로 일괄 적용하기
 ElevatedButton(
   onPressed: () {},
   style: ElevatedButton.styleFrom(
@@ -191,25 +120,59 @@ ElevatedButton(
       borderRadius: BorderRadius.circular(12),
     ),
   ),
-  child: Text('Styled Button'),
-)
-```
+  child: Text('StyleFrom'),
+),
 
-### 예제 3-2: 스타일 지정 : ButtonStyle
-
-```dart
+// ButtonStyle로 상태별 적용하기 - 일괄
 ElevatedButton(
   onPressed: () {},
   style: ButtonStyle(
+    // 일괄 적용
     backgroundColor: WidgetStateProperty.all(Colors.red),
     foregroundColor: WidgetStateProperty.all(Colors.white),
+    shape: WidgetStateProperty.all(
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
+    ),
+    
+    // 상태별 적용 - 예1
+    elevation:
+      WidgetStateProperty.resolveWith((states) {
+        return states.contains(WidgetState.pressed) ? 8 : 4;
+    }),
+    
+    // 상태별 적용 - 예2
+    overlayColor: WidgetStateProperty.resolveWith<Color?>(
+                            (Set<WidgetState> states) {
+        // 클릭 액션
+        if (states.contains(WidgetState.pressed)) {
+          return Colors.blue.withValues(alpha : 0.2);
+        }
+      
+        // 호버 액션, 웹에서만 동작
+        if (states.contains(WidgetState.hovered)) {
+          return Colors.red.withValues(alpha: 0.1);
+        }
+      
+        return null; // 기본 없음
+      },
+    ),
+    
   ),
-  child: Text('Custom Style'),
-)
+  child: Text('ButtonStyle'),
+),
+
+
+
 ```
 
-  
-### 예제 4: 아이콘 버튼
+<br><br>
+
+## 아이콘 버튼
+
+아이콘이 포함된 버튼은 `ElevatedButton.icon` 생성자를 사용한다.  
+텍스트와 아이콘을 나란히 배치할 수 있으며, 일반 버튼과 동일하게 스타일 지정이 가능하다.
 
 ```dart
 ElevatedButton.icon(
@@ -219,9 +182,104 @@ ElevatedButton.icon(
 )
 ```
 
+아이콘 버튼도 `styleFrom` 또는 `ButtonStyle`로 스타일 커스터마이징이 가능하다.
 
-### 예제 4-1: 아이콘 버튼 스타일 지정 : styleFrom
+```dart
+// styleFrom 예시
+ElevatedButton.icon(
+  onPressed: () {},
+  icon: Icon(Icons.thumb_up),
+  label: Text('Like'),
+  style: ElevatedButton.styleFrom(
+    backgroundColor: Colors.indigo,
+    foregroundColor: Colors.white,
+    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+    elevation: 6,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(12),
+    ),
+  ),
+)
+```
 
+아이콘 버튼의 다양한 스타일 예시는 아래 [예제 2](#예제-2-아이콘-버튼)에서 확인할 수 있다.  
+
+
+<br><br>
+
+
+## 🧪 Sample Code
+
+---
+
+### 예제 1: 기본 버튼
+
+
+```dart
+// 1-1. 가장 기본적인 ElevatedButton
+ElevatedButton(
+  onPressed: () {
+    print("Button pressed");
+  },
+  child: Text('Click Me'),
+)
+
+// 1-2. 여러 동작을 한 번에 처리
+ElevatedButton(
+  onPressed: () => {
+    print("Button pressed"),
+    print("Hello Flutter")
+  },
+  child: Text('Click Me'),
+)
+
+// 1-3. 동작을 별도 함수로 분리
+void doSomething() {
+  print('button Pressed');
+}
+
+ElevatedButton(
+  onPressed: doSomething,
+  child: Text('Click Me'),
+)
+// 버튼 동작과 비활성화 처리
+
+ElevatedButton(
+  onPressed: null,
+  child: Text('Disabled'),
+)
+```
+onPressed에는 클릭시 동작을 선언하는 곳이다.  
+여기에 null이 들어가게 되면 비활성화 처리된다.  
+
+혹은 상태변수를 두고 클릭시 비활성화 처리할 수도 있다.  
+
+```dart
+bool isEnabled = true;
+
+ElevatedButton(
+  onPressed: isEnabled ? () {
+    setState(() {
+      isEnabled = false;
+    });
+  } : null,
+  child: Text('Disabled'),
+)
+```
+
+아래 전체코드에서는 비동기로 1초 기다린후 다시 원래대로 돌아가는 소스가 추가되어있다. 
+
+## 예제 2: 아이콘 버튼
+### 2-1. 기본 아이콘 버튼
+```dart
+ElevatedButton.icon(
+  onPressed: () {},
+  icon: Icon(Icons.thumb_up),
+  label: Text('Like'),
+)
+```
+
+### 2-2. 스타일 지정 (styleFrom)
 ```dart
 ElevatedButton.icon(
   onPressed: () {},
@@ -240,22 +298,390 @@ ElevatedButton.icon(
 ```
 
 
-### 예제 5: 상태 변화 예제 (setState 사용)
-
+#### 2-3. 스타일 지정 (ButtonStyle)
 ```dart
-int counter = 0;
-
-ElevatedButton(
-  onPressed: () {
-    setState(() {
-      counter++;
-    });
-  },
-  child: Text('Count: \$counter'),
+ElevatedButton.icon(
+  onPressed: () {},
+  icon: Icon(Icons.thumb_up),
+  label: Text('Icon ButtonStyle'),
+  style: ButtonStyle(
+    backgroundColor: WidgetStateProperty.all(Colors.red),
+    foregroundColor: WidgetStateProperty.all(Colors.white),
+  ),
 )
 ```
 
+## 예제 3: 스타일 커스터마이징
+  
+### 3-1. styleFrom 사용  
+
+```dart
+ElevatedButton(
+  onPressed: () {},
+  style: ElevatedButton.styleFrom(
+    backgroundColor: Colors.green,
+    foregroundColor: Colors.white,
+    elevation: 4,
+    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(12),
+    ),
+  ),
+  child: Text('StyleFrom'),
+),
+
+```
+  
+### 3-2. ButtonStyle 사용 (상태별)
+```dart
+  ElevatedButton(
+    onPressed: () {},
+    // 일괄 적용
+    style: ButtonStyle(
+      backgroundColor: WidgetStateProperty.all(Colors.red),
+      foregroundColor: WidgetStateProperty.all(Colors.white),
+      
+    shape: WidgetStateProperty.all(
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
+    ),
+    
+    
+    // 상태별 분기처리
+    elevation: WidgetStateProperty.resolveWith((states) {
+      return states.contains(WidgetState.pressed) ? 8 : 4;
+    }),
+    
+    overlayColor: WidgetStateProperty.resolveWith<Color?>(
+      (Set<WidgetState> states) {
+        if (states.contains(WidgetState.pressed)) {
+          return Colors.blue.withValues(alpha: 0.2);
+        }
+        if (states.contains(WidgetState.hovered)) {
+          return Colors.red.withValues(alpha: 0.1);
+        }
+        return null;
+      },
+    ),
+  ),
+  child: Text('Custom Style'),
+),
+```
+
+## 예제 4: 상태 기반 처리
+
+### 4-1. 비활성화/활성화 (onPressed: null)
+```dart
+ElevatedButton(
+  onPressed: null,
+  child: Text('Disabled'),
+)
+```
+
+### 4-2. 상태 변수로 동적 활성/비활성화
+```dart
+bool isEnabled = true;
+
+ElevatedButton(
+  onPressed: isEnabled ? () {
+    setState(() {
+      isEnabled = false;
+    });
+  } : null,
+  child: Text('Disabled'),
+)
+```
+
+### 4-3. 1초간 비활성화/로딩 처리
+```dart
+bool isEnabled = true;
+
+ElevatedButton(
+  onPressed: 
+    isEnabled ? () {
+      setState(() {
+        isEnabled = false;
+      });
+      
+      Future.delayed(Duration(seconds: 1), () {
+        setState(() {
+          isEnabled = true;
+        });
+      });
+    } : null,
+  child: Text(isEnabled ? 'Disable Me' : 'Disabled'),
+)
+
+
+// State의 변수로 선언
+bool isLoading = false;
+
+ElevatedButton(
+  onPressed: isLoading ? null : () {
+    debugPrint('start Loading');
+    setState(() {
+      isLoading = true;
+    });
+    Future.delayed(Duration(seconds: 1), () {
+      debugPrint('stop Loading');
+      setState(() {
+        isLoading = false;
+      });
+    });
+  },
+  child: isLoading
+      ? SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2))
+      : Text('Start Loading'),
+)
+```
+
+---
+
+### 예제 5: 통합 예제 (다양한 스타일, 상태, 아이콘 등)
+
+```dart
+class _MainScreenState extends State<MainScreen> {
+  bool isEnabled = true;
+  bool isLoading = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+        body: SafeArea(
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+
+                  Text('기본 버튼'),
+                  ElevatedButton(
+                    onPressed: () {
+                     debugPrint('Simple Click');
+                    },
+                    child: Text('Simple'),
+                  ),
+
+                  SizedBox(height: 30),
+
+                  Text('Button Style 상태별 제어',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+
+                  SizedBox(height: 5),
+                  Text('클릭 : elevation 변경'),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStateProperty.all(Colors.red),
+                      foregroundColor: WidgetStateProperty.all(Colors.white),
+                      shape: WidgetStateProperty.all(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                      ),
+                      elevation: WidgetStateProperty.resolveWith((states) {
+                        return states.contains(WidgetState.pressed) ? 8 : 4;
+                      }),
+                    ),
+                    child: Text('Elevation'),
+                  ),
+
+                  Text('호버 : red, 클릭 : blue'),
+
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                      overlayColor: WidgetStateProperty.resolveWith<Color?>(
+                            (Set<WidgetState> states) {
+                          // 클릭 액션
+                          if (states.contains(WidgetState.pressed)) {
+                            return Colors.blue.withValues(alpha : 0.2);
+                          }
+                          // 호버 액션, 웹에서만 동작
+                          if (states.contains(WidgetState.hovered)) {
+                            return Colors.red.withValues(alpha: 0.1);
+                          }
+                          return null; // 기본 없음
+                        },
+                      ),
+                    ),
+                    child: Text('Custom Highlight'),
+                  ),
+
+                  SizedBox(height: 20),
+                  Text('StyleFrom 적용',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green,
+                      foregroundColor: Colors.white,
+                      elevation: 4,
+                      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: Text('StyleFrom'),
+                  ),
+
+                  SizedBox(height: 30),
+                  Text('Icon 버튼'),
+                  ElevatedButton.icon(
+                    onPressed: () {},
+                    icon: Icon(Icons.thumb_up),
+                    label: Text('Simple Icon'),
+                  ),
+
+                  SizedBox(height: 5),
+                  Text('ButtonStyle'),
+                  ElevatedButton.icon(
+                    onPressed: () {},
+                    icon: Icon(Icons.thumb_up),
+                    label: Text('Icon ButtonStyle'),
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStateProperty.all(Colors.red),
+                      foregroundColor: WidgetStateProperty.all(Colors.white),
+                    ),
+                  ),
+
+                  SizedBox(height: 5),
+                  Text('StyleFrom'),
+                  ElevatedButton.icon(
+                    onPressed: () {},
+                    icon: Icon(Icons.thumb_up),
+                    label: Text('Icon StyleFrom'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.indigo,
+                      foregroundColor: Colors.white,
+                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                      elevation: 6,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                  ),
+
+                  SizedBox(height: 30),
+                  Text('1초간 비활성화 모드'),
+                  ElevatedButton(
+                    onPressed: isEnabled
+                        ? () {
+                      setState(() {
+                        isEnabled = false;
+                      });
+                      Future.delayed(Duration(seconds: 1), () {
+                        setState(() {
+                          isEnabled = true;
+                        });
+                      });
+                    }
+                        : null,
+                    child: Text(isEnabled ? 'Disable Me' : 'Disabled'),
+                  ),
+
+                  SizedBox(height: 5),
+                  Text('1초간 로딩 처리'),
+                  ElevatedButton(
+                    onPressed: isLoading ? null : () {
+                      debugPrint('start Loading');
+                      setState(() {
+                        isLoading = true;
+                      });
+
+                      Future.delayed(Duration(seconds: 1), () {
+                        debugPrint('stop Loading');
+                        setState(() {
+                          isLoading = false;
+                        });
+                      });
+                    },
+                    child: isLoading
+                        ? SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2))
+                        : Text('Start Loading'),
+                  ),
+
+                ],
+              ),
+            )
+        )
+    );
+  }
+}
+```
+- 이 예제는 다양한 스타일, 상태 제어, 로딩 UI, 커스텀 highlight 등을 통합적으로 보여준다.
+
+- 참고영상
+<img src="https://i.imgur.com/d8HPf8d.gif" width="500" />
+
+
 <br>
+
+
+## ElevatedButtonTheme를 이용한 일괄 스타일 적용하기
+
+- `ElevatedButtonTheme`를 사용하면 트리 하위의 모든 `ElevatedButton`에 공통 스타일을 지정할 수 있다.
+- 앱 전체에 버튼 스타일을 일괄 적용하고 싶을 때 유용하다.
+
+```dart
+// 현재 하위에만 테마를 적용하고 싶은 경우
+Column(
+  children: [
+    ElevatedButtonTheme(
+      data: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
+      ),
+      child: Column(
+        children: [
+          ElevatedButton(onPressed: () {}, child: Text('오렌지 1')),
+          ElevatedButton(onPressed: () {}, child: Text('오렌지 2')),
+        ],
+      ),
+    ),
+    ElevatedButton(onPressed: () {}, child: Text('디폴트')), // 적용 안됨
+  ],
+)
+
+// 앱전체에 적용하고 싶은 경우
+MaterialApp(
+  theme: ThemeData(
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.deepPurple,
+        foregroundColor: Colors.white,
+        textStyle: TextStyle(fontSize: 16),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+      ),
+    ),
+  ),
+  home: MyHomePage(),
+)
+
+```
+
+<br><br>
+
+## ✅ FilledButton과의 차이
+- `ElevatedButton`: 기본적으로 눌렀을 때 elevation이 생기며 입체감이 강조된다.
+- `FilledButton`: 배경은 있으나 elevation이 없고, 평면적인 느낌이다.
+→ Flat하고 미니멀한 UI를 만들고 싶다면 `FilledButton`도 고려할 수 있다.
+
+
+<br><br>
+
+### ✅ iconAlignment 속성
+- `ElevatedButton.icon`에서 `iconAlignment` 속성을 통해 아이콘의 정렬 위치를 조정할 수 있다.
+- 아이콘과 텍스트 배치 위치를 더 정밀하게 컨트롤하고 싶을 때 사용한다.
+
+
+<br><br>
+
+
 
 ## 관련 위젯
 
@@ -267,38 +693,5 @@ ElevatedButton(
 
 <br><br>
 
-## ElevatedButtonTheme 활용법
-
-- `ElevatedButtonTheme`를 사용하면 트리 하위의 모든 `ElevatedButton`에 공통 스타일을 지정할 수 있다.
-- 앱 전체에 버튼 스타일을 일괄 적용하고 싶을 때 유용하다.
-
-```dart
-ElevatedButtonTheme(
-  data: ElevatedButtonThemeData(
-    style: ElevatedButton.styleFrom(
-      backgroundColor: Colors.teal,
-      foregroundColor: Colors.white,
-    ),
-  ),
-  child: MyApp(), // 하위 모든 버튼에 적용됨
-)
-```
-
-## ✅ FilledButton과의 차이
-- `ElevatedButton`: 기본적으로 눌렀을 때 elevation이 생기며 입체감이 강조된다.
-- `FilledButton`: 배경은 있으나 elevation이 없고, 평면적인 느낌이다.
-→ Flat하고 미니멀한 UI를 만들고 싶다면 `FilledButton`도 고려할 수 있다.
-
-### ✅ iconAlignment 속성
-- `ElevatedButton.icon`에서 `iconAlignment` 속성을 통해 아이콘의 정렬 위치를 조정할 수 있다.
-- 아이콘과 텍스트 배치 위치를 더 정밀하게 컨트롤하고 싶을 때 사용한다.
-
-### 고급 주제
-- `statesController`를 사용한 버튼 상태 직접 제어
-- `MaterialStatesController`를 활용한 상태 기반 커스텀 스타일링
-- 키보드 포커스, 마우스 hover 등 다양한 상태에 따른 반응 처리
-
-<br>
-
 ## History
-- 260708 : 초안 작성
+- 250708 : 초안 작성
