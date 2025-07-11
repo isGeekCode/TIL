@@ -1225,7 +1225,8 @@ AR 및 3D 렌더링
     - [Flutter - Layout : Center](Mobile_03_Flutter/Flutter_1002.01.Center.md)
 - Multi-child
     - [Flutter - Layout : Column](Mobile_03_Flutter/Flutter_1002.21.Column.md)
-    - [Flutter - ListView](Mobile_03_Flutter/Flutter_1002.22.ListView.md)
+    - [Flutter - Layout : Row](Mobile_03_Flutter/Flutter_1002.22.Row.md)
+    - [Flutter - ListView](Mobile_03_Flutter/Flutter_1002.26.ListView.md)
   
 ### Assets, Images, Icons
 텍스트 표시 및 스타일링 관련 위젯  
