@@ -1,7 +1,6 @@
 # Basics - ElevatedButton
 
-<img src="https://i.imgur.com/uGG1c3T.png" width="500" />
-
+<img src="https://i.imgur.com/gi1sHYx.png" width="500" />
 
 <br>
 
