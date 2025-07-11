@@ -1,6 +1,6 @@
 # Basics - Text
 
-<img src="https://i.imgur.com/llCcWoR.png" width="500" />  
+<img src="https://i.imgur.com/gt2KYZz.png" width="500" />
 
 <br>
 
