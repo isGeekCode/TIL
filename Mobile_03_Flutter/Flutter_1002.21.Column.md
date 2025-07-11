@@ -1,6 +1,6 @@
 # Layout - Multi-child : Column
 
-<img src="https://i.imgur.com/93H27JZ.png" width="500" />
+<img src="https://i.imgur.com/F9CuRgC.png" width="500" />
 
 <br>
 
