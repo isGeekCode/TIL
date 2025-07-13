@@ -123,13 +123,7 @@ SizedBox(
 )
 ```
 
-<br>
 
-StackOverflow에 따르면 [`SizedBox`는 Container보다 성능상 이점이 있으며](https://stackoverflow.com/questions/55716322/flutter-sizedbox-vs-container-why-use-one-instead-of-the-other),  
-의도에 맞는 전용 위젯을 사용하는 것이 Flutter 성능 최적화에 도움이 된다.
-
-- Container: 배경색, 테두리, 여백 등 다양한 시각적 속성 가능
-- SizedBox: 크기만 설정할 때 사용, const 선언 가능 → 더 가볍고 빠름
 
 <br><br>
 
