@@ -1,6 +1,6 @@
 # Layout - Single-child : Container
 
-<img src="https://i.imgur.com/DCsQAt2.png" width="500" />
+<img src="https://i.imgur.com/aOF2CEV.png" width="500" />
 
 <br>
 
