@@ -44,6 +44,8 @@ AppBar는 자동으로 SafeArea 처리를 하며, Drawer가 있으면 자동으�
 
 필요시 TabBar를 추가할 수 있다.  이 탭바는 주로 안드로이드에서 사용하며, 해당 페이지의 세부 카테고리를 표현할 때 사용한다.  
 
+actions 속성을 사용하면 검색, 메뉴 등 다양한 버튼을 AppBar 우측에 추가할 수 있다. 예를 들어 `IconButton`, `PopupMenuButton` 등을 통해 검색 기능이나 설정 메뉴를 구현할 수 있다. (예시는 하단 Sample Code 참고)
+
 <br>
 
 <img src="https://i.imgur.com/H0HtMIk.png" width="700" />
@@ -76,6 +78,7 @@ ScaffoldState로 제어.
   하단에서 나타나는 시트. bottomSheet 속성 또는 ScaffoldState로 제어.
   
   
+<br><br>
 ---
 
 ## ⚠️ 사용 시 유의사항
@@ -98,7 +101,7 @@ ScaffoldState로 제어.
 
 ## 🧪 Sample Code
 
-- Scaffold 기본 구조 예제
+### 예제 1: Scaffold 기본 구조
 
 
 ```dart
@@ -119,7 +122,12 @@ Scaffold(
 );
 ```
 
-- TabBar + BottomAppBar + FAB 조합 예제. 상단 탭과 하단 바, FAB 위치 조정까지 포함.
+<br><br>
+---
+
+### 예제 2: TabBar + BottomAppBar + FAB 조합
+
+상단 탭과 하단 바, FAB 위치 조정까지 포함.
 
 
 ```dart
@@ -190,7 +198,42 @@ class MainScreen extends StatelessWidget {
 }
 ```
 
+<br><br>
+---
 
+### 예제 3: AppBar에 커스텀 액션 추가
+
+AppBar의 actions 속성을 사용하여, 검색 아이콘과 팝업 메뉴를 추가할 수 있다.
+
+```dart
+AppBar(
+  title: Text('Example'),
+  actions: [
+    IconButton(
+      icon: Icon(Icons.search),
+      onPressed: () {
+        // 🔍 검색 동작
+        print('Search tapped');
+      },
+    ),
+    PopupMenuButton<String>(
+      onSelected: (value) {
+        print('Selected: $value');
+      },
+      itemBuilder: (BuildContext context) {
+        return ['설정', '로그아웃'].map((String choice) {
+          return PopupMenuItem<String>(
+            value: choice,
+            child: Text(choice),
+          );
+        }).toList();
+      },
+    ),
+  ],
+)
+```
+
+<br><br>
 ---
 
 ## History
