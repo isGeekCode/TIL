@@ -30,7 +30,7 @@ Scaffold는 앱 전체 레이아웃의 뼈대를 제공하는 Material 위젯이
 <img src="https://i.imgur.com/2VeTzUX.png" width="500" />
 
 - 동작  
-<img src="https://i.imgur.com/zeqpAI7.png" width="500" />
+<img src="https://i.imgur.com/zeqpAI7.png" width="300" />
   
 
 <br><br>  
