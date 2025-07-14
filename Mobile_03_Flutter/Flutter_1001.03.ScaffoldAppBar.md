@@ -44,6 +44,13 @@ AppBar는 자동으로 SafeArea 처리를 하며, Drawer가 있으면 자동으�
 
 필요시 TabBar를 추가할 수 있다.  이 탭바는 주로 안드로이드에서 사용하며, 해당 페이지의 세부 카테고리를 표현할 때 사용한다.  
 
+<br>
+
+<img src="https://i.imgur.com/H0HtMIk.png" width="700" />
+
+
+<br><br>
+
 
 - **Body**  
 콘텐츠 영역.  
