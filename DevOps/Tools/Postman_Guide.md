@@ -1,6 +1,6 @@
 # Postman 사용법
 
-<img src="https://i.imgur.com/xxrAZs1.png" width="500" />
+<img src="https://i.imgur.com/U2m3Ilb.png" width="500" />
 
 
 Postman은 REST API를 시각적으로 테스트하고 관리할 수 있는 툴이다.  
