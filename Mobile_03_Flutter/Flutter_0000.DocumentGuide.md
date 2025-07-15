@@ -382,9 +382,26 @@ Flutter Docs 순서 그대로 가져왔습니다.
 - 3. Beyond Ul
     - 3.1. Data & backend
         - 3.1.1. State management
+            - 3.1.1.1. Introduction
+            - 3.1.1.2. Think declaratively
+            - 3.1.1.3. Ephemeral vs app state
+            - 3.1.1.4. Simple app state management
+            - 3.1.1.5. Options
         - 3.1.2. Networking & http
+            - 3.1.2.1. Overview
+            - 3.1.2.2. Fetch data from the internet
+            - 3.1.2.3. Make authenticated requests
+            - 3.1.2.4. Send data  to the internet
+            - 3.1.2.5. update data over the internet
+            - 3.1.2.6. Dele data on ther internet
+            - 3.1.2.7. Communicate with WebSockets
         - 3.1.3. Serialization
+            - 3.1.3.1. JSON serialization
+            - 3.1.3.2. Parse JSON in the background
         - 3.1.4. Persistence
+            - 3.1.4.1. Store key-value data on disk
+            - 3.1.4.2. Read and write files
+            - 3.1.4.3. Persist data with SQList
         - 3.1.5. Firebase
         - 3.1.6. Google APIs
     - 3.2. App architecture
@@ -496,18 +513,19 @@ Flutter를 처음 학습하거나 체계적으로 정리하고 싶은 사용자�
 || 네비게이션||Drawer|
 || 네비게이션||bottomNavigationBar|
 || 네비게이션||TabBar|
-|| 상태관리 |||
-|| Using widget constructors|1.3.3.5 : State management||
-|| Using InheritedWidget|1.3.3.5 : State management||
-|| Using callbacks|1.3.3.5 : State management||
-|| User Input - 기초|||
+|| 📌 상태관리 |||
+|| Using widget constructors| 1.3.3.5 : State management||
+|| Using InheritedWidget| 1.3.3.5 : State management||
+|| Using callbacks| 1.3.3.5 : State management||
+|| 📌 Handling user input - 기초|||
 || Flutter 기초 개념 | 1.3.3.6 : Handling user input||
-|| Swipe & Slide  |1.3.3.6 : Handling user input| |
-|| Networking|||
-||Flutter 기초 개념 | 1.3.3.7 : Networking and data ||
-||네트워크 기초 | 3.1.2. 3.1.2.1. - 3.1.2.6. CRUD ||
-||네트워크 기초 - Dio 사용하기 | ||
-||네트워크 기초 - 직렬화 3.1.3. | ||
+|| Swipe & Slide  | 1.3.3.6 : Handling user input| |
+|| 📌 Networking|||
+|| Flutter 기초 개념 | 1.3.3.7 : Networking and data ||
+|| 네트워크 기초 | 3.1.2. 3.1.2.1. - 3.1.2.6. CRUD ||
+|| 네트워크 관련 라이브러리 - Dio 사용하기 |||
+|| 📌 Beyond UI - Serialiation |||
+|| 직렬화 | 3.1.3. Serialiation||
 || User Input - 각종 버튼 |1.3.3.6 : Handling user input|FilledButton, Total Button, OutlinedButton, IconButton, FloatingActionButton|
 || User Input - 각종 텍스트 |1.3.3.6 : Handling user input|SeleectableText, RichText, TextField, Form|
 || User Input - 옵션 그룹 위젯  |1.3.3.6 : Handling user input|SegmentedButton, Chip, DropdownMenu, Slider|
