@@ -256,6 +256,202 @@ Flutter 앱에서 디바이스(OS 기반) 기능 및 외부 SDK/API를 연동하
 이 가이드는 Flutter 문서 관리와 확장을 체계적으로 유지하기 위해 가장 앞에 위치합니다。
 
 
+### 공식 개발문서 연번
+읽어야할 자료를 모았습니다.  
+Flutter Docs 순서 그대로 가져왔습니다.  
+
+- 1. Get started
+    - 1.1. Set up Flutter
+    - 1.2. Install Flutter
+        - Overview
+        - Install manually
+        - upgrade SDK
+    - 1.3. Learn Flutter
+        - 1.3.1. Introduction
+        - 1.3.2. Write your first app
+        - 1.3.3. Learn the fundamentals
+            - 1.3.3.1. Introduction
+            - 1.3.3.2. Intro to Dart
+            - 1.3.3.3. Widgets
+            - 1.3.3.4. Layout
+            - 1.3.3.5. State management
+            - 1.3.3.6. Handling user input
+            - 1.3.3.7. Networking and data
+            - 1.3.3.8. Local data and caching
+- 2. User interface
+    - 2.1. Introduction
+    - 2.2. Widget catalog
+        - 2.2.1. Basics 가장 기초적인 위젯 구성 요소들
+        - 2.2.2. Layout 레이아웃 구성용 위젯
+        - 2.2.3. Text 텍스트 표시 및 스타일링 관련 위젯
+        - 2.2.4. Input 사용자 입력을 위한 위젯
+        - 2.2.5. Assets, Images and Icons 이미지, 아이콘, 에셋 관련 구성 요소
+        - 2.2.6. Scrolling 스크롤 가능한 콘텐츠를 구성하는 위젯
+        - 2.2.7. Interaction Models 제스처 및 터치 반응 처리 위젯
+        - 2.2.8. Styling 테마, 반응형 구성, 패딩 등 스타일링 위젯
+        - 2.2.9. Painting and Effects 시각적 효과 및 그리기 관련 위젯
+        - 2.2.10. Animation and Motion 애니메이션 효과와 트랜지션 처리
+        - 2.2.11. Async 비동기 상태를 다루기 위한 위젯
+        - 2.2.12. Accessibility 앱의 접근성을 향상시키는 도구 제공
+    - 2.3. Layout
+        - 2.3.1. Introduction
+        - 2.3.2. Build a layout
+        - 2.3.3. List & Grid
+            - 2.3.3.1.  Create and use lists
+            - 2.3.3.2. Create a horizontal  list
+            - 2.3.3.3. Create a grid view
+            - 2.3.3.4. Create a lists with different types of items
+            - 2.3.3.5. Create lists with spaced items
+            - 2.3.3.6. Work with long lists
+        - 2.3.4. Scrolling
+            - 2.3.4.1. Overview
+            - 2.3.4.2. Use slivers to achieve fancy scrolling
+            - 2.3.4.3. Place a floating app bar above a list
+            - 2.3.4.4. Create a scrolling parallax effect
+
+    - 2.4. Adaptive & responsive design
+        - 2.4.1. Overview
+        - 2.4.2. General approach
+        - 2.4.3. SafeArea & MediaQuery
+        - 2.4.4. Large screens & foldables
+        - 2.4.5. User input & accessibility
+        - 2.4.6. Capabilities & policies
+        - 2.4.7. Automatic platform adaptations
+        - 2.4.8. Best practices
+        - 2.4.9. Additional resources
+    - 2.5. Design & theming
+        - 2.5.1. Share styles with themes
+        - 2.5.2. Material design
+        - 2.5.3. Migrate to Material 3
+        - 2.5.4. Text
+            - 2.5.4.1. Fonts & typography
+            - 2.5.4.2. Use a custom font
+            - 2.5.4.3. Export fonts from a package
+            - 2.5.4.4. Google Fonts package
+        - 2.5.5. Custom graphics
+            - 2.5.5.1. Use custom fragment shaders
+    - 2.6. Interactivity
+        - 2.6.1. Add interactivity to your app
+        - 2.6.2. Gestures
+            - 2.6.2.1. Introduction
+            - 2.6.2.2. Handle taps
+            - 2.6.2.3. Drag an object outside an app
+            - 2.6.2.4. Drag a Ul element within an app
+            - 2.6.2.5. Add Material touch ripples
+            - 2.6.2.6. Implement swipe to dismiss
+        - 2.6.3. Input & forms
+            - 2.6.3.1. Create and style a text field
+            - 2.6.3.2. Retrieve the value of a text field
+            - 2.6.3.3. Handle changes to a text field
+            - 2.6.3.4. Manage focus in text fields Build a form with validation
+        - 2.6.4. Display a snackbar
+        - 2.6.5. Implement actions & shortcuts
+        - 2.6.6. Manage keyboard focus
+    - 2.7. Assets & media
+        - 2.7.1. Add assets and images 
+        - 2.7.2. Display images fror le interne
+        - 2.7.3. Fade in images with aceholde
+        - 2.7.4. Play and pause a video
+        - 2.7.5. Transform assets at build
+    - 2.8. Navigation & routing
+        - 2.8.1. Overview
+        - 2.8.2. Add tabs to your app Navigate to a new screen and back
+        - 2.8.3. Send data to a new screen
+        - 2.8.4. Return data from a screen
+        - 2.8.5. Add a drawer to a screen
+        - 2.8.6. Set up deep linking
+        - 2.8.7. Set up app links for Android 
+        - 2.8.8. Set up universal links for iOS 
+        - 2.8.9. Configure web URL strategies
+    - 2.9. Animations & transitions
+        - 2.9.1. Introduction
+        - 2.9.2. Tutorial
+        - 2.9.3. Implicit animations
+        - 2.9.4. Animate the properties of a container
+        - 2.9.5. Fade a widget in and out
+        - 2.9.6. Hero animations 
+        - 2.9.7. Animate a page route transition
+        - 2.9.8. Animate using a physics simulation
+        - 2.9.9. Staggered animations 
+        - 2.9.10. Create a staggered menu animation
+        - 2.9.11. API overview
+    - 2.10. Accessibility & internationalization
+        - 2.10.1. Accessibility
+        - 2.10.2. Internationalization
+- 3. Beyond Ul
+    - 3.1. Data & backend
+        - 3.1.1. State management
+        - 3.1.2. Networking & http
+        - 3.1.3. Serialization
+        - 3.1.4. Persistence
+        - 3.1.5. Firebase
+        - 3.1.6. Google APIs
+    - 3.2. App architecture
+        - 3.2.1. Introduction
+        - 3.2.2. Architecture concepts
+        - 3.2.3. Guide to app architecture
+        - 3.2.4. Architecture case study
+        - 3.2.5. Recommendations
+        - 3.2.6. Design patterns
+    - 3.3. Platform integration
+    - 3.4. Packages & plugins
+        - 3.4.1. Use packages & plugins
+        - 3.4.2. Develop packages & plugins
+        - 3.4.3. Swift Package Manager
+    - 3.5. Testing & debugging
+        - 3.5.1. Testing
+            - 3.5.1.1. Overview
+            - 3.5.1.2. Unit testing
+            - 3.5.1.3. Widget testing
+            - 3.5.1.4. Integration testing
+            - 3.5.1.5. Test a plugin
+            - 3.5.1.6. Handle plugin code in tests
+        - 3.5.2. Debugging
+            - 3.5.2.1. Debugging tools
+            - 3.5.2.2. Debug your app programmatically
+            - 3.5.2.3. Use a native
+            - 3.5.2.4. language debugger
+            - 3.5.2.5. Common Flutter errors
+            - 3.5.2.6. Handle errors
+            - 3.5.2.7. Report errors to a service
+    - 3.6. Performance & optimization
+        - 3.6.1. Overview
+        - 3.6.2. Impeller
+        - 3.6.3. Performance best practices
+        - 3.6.4. App size
+        - 3.6.5. Deferred components
+        - 3.6.6. Rendering performance
+        - 3.6.7. Performance profiling
+        - 3.6.8. Performance profiling for web
+        - 3.6.9. Performance metrics
+        - 3.6.10. Concurrency and isolates
+        - 3.6.11. Performance FAQ
+        - 3.6.12. Appendix
+    - 3.7. Deployment
+        - 3.7.1. Obfuscate Dart code
+        - 3.7.2. Create app flavors for Android 
+        - 3.7.3. Create app flavors for iOS and macOS
+        - 3.7.4. uild and release ar indroid app
+        - 3.7.5. Build and release an iOS app
+        - 3.7.6. Build and release a macOS app
+        - 3.7.7. Build and release a Linux app und and salese a
+        - 3.7.8. Build and release a web app
+        - 3.7.9. Set up continuous deployment
+    - 3.8. Add to an existing app
+        - 3.8.1. Introduction
+        - 3.8.2. Add to an Android app
+        - 3.8.3. Add to an iOS app
+        - 3.8.4. Add to a web app
+        - 3.8.5. Debug embedded Flutter module
+        - 3.8.6. Add multiple Flutter instances
+        - 3.8.7. Loading sequence and performance
+- 4. Flutter concepts
+    - 4.1. Architectural Overview
+    - 4.2. Inside Flutter
+    - 4.3. Understanding constraints
+    - 4.4. Flutter’s build modes
+    - 4.5. Hot reload
+
 
 
 
@@ -263,3 +459,73 @@ Flutter 앱에서 디바이스(OS 기반) 기능 및 외부 SDK/API를 연동하
 - 250618 : 초안작성
 - 250619 : 트러블슈팅 관련 넘버링 추가
 - 250702 : 리팩토링진행 - 모바일 개발 과정과 비슷하게 구성
+
+
+## 🗺️ 학습 로드맵 가이드
+
+Flutter를 처음 학습하거나 체계적으로 정리하고 싶은 사용자를 위해, 아래와 같은 단계별 로드맵과 함께 문서 번호 참고 범위를 제시합니다.
+
+| 단계 | 학습 주제 | 학습할 공식 개발 문서 연번 |widgetCatalog|
+|------|-----------|-------------------------|--|
+| 1단계 | 개발 환경 세팅 및 설치 | 1.1, 1.2 ||
+| 2단계 | Flutter 기초 개념 이해 | 1.3 : Learn Flutter ||
+|| Flutter 기초 개념 이해 | 1.3.3.1 : Introduction ||
+|| Flutter 기초 개념 이해 | 1.3.3.2 : Intro to Dart ||
+|| Flutter 기초 개념 이해 : 위젯 개념 | 1.3.3.3. Widgets ||
+|| Flutter 렌더링 이해 : 위젯트리 | 1.3.3.3. Widgets , Learn Flutter 깃||
+|| Flutter 렌더링 이해 : 요소 트리 | 1.3.3.3. Widgets, Learn Flutter 깃 ||
+|| Flutter 렌더링 이해 : 렌더트리 | 1.3.3.3. Widgets, Learn Flutter 깃 ||
+
+|| Flutter 기초 개념 이해 : 레이아웃 기초 | 1.3.3.4 : Layout ||
+|| 기본 위젯 익히기 | |AppBar, ElevatedButton, Icon, Image, Placeholder, Text|
+|| 레이아웃 위젯 사용|  |Center, Column, Row, Container |
+|| Flutter 기초 개념 이해 : 상태관리 기초| 1.3.3.5 : State management 중 ||
+||StatelessWidget|1.3.3.5 : State management ||
+||내부변수를 사용한 레이아웃 구현|1.3.3.5 : State management ||
+||StatefullWidget|1.3.3.5 : State management ||
+||state사이클 이해 : initState, setState|1.3.3.5 : State management ||
+||버튼 동작 구현|1.3.3.5 : State management|elevatedButton, TextButton|
+||네비게이션|2.8. Navigator 1.0, Learn Flutter 깃||
+||네비게이션|2.8. Navigator 2.0, Learn Flutter 깃||
+||네비게이션|go_router, Learn Flutter 깃||
+||네비게이션||Drawer|
+||네비게이션||bottomNavigationBar|
+||네비게이션||TabBar|
+||Using widget constructors|1.3.3.5 : State management||
+||Using InheritedWidget|1.3.3.5 : State management||
+||Using callbacks|1.3.3.5 : State management||
+||Flutter 기초 개념 이해 | 1.3.3.6 : Handling user input||
+||Swipe & Slide  |1.3.3.6 : Handling user input| |
+||Flutter 기초 개념 이해 | 1.3.3.7 : Networking and data ||
+||네트워크 기초 | 3.1.2. 3.1.2.1. - 3.1.2.6. CRUD ||
+||네트워크 기초 - Dio 사용하기 | ||
+||네트워크 기초 - 직렬화 3.1.3. | ||
+||각종 버튼 |1.3.3.6 : Handling user input|FilledButton, Total Button, OutlinedButton, IconButton, FloatingActionButton|
+||각종 텍스트 |1.3.3.6 : Handling user input|SeleectableText, RichText, TextField, Form|
+||옵션 그룹으로 선택하기  |1.3.3.6 : Handling user input|SegmentedButton, Chip, DropdownMenu, Slider|
+||토글관련 위젯 배우기|1.3.3.6 : Handling user input|Checkbox, Switch, Radio, CheckboxListTile, SwitchListTile |
+|| 날짜 및 시간 관련 위젯  |1.3.3.6 : Handling user input| DatePickerDialog, TimePickerDialog |
+|| 상태관리 심화 |3.1.1. State management||
+|| 상태관리 심화 - Using listenables.ChangeNotifier|1.3.3.5 : State management||
+|| 상태관리 심화 - Using listenables.ValueNotifier|1.3.3.5 : State management||
+|| 아키텍쳐 - MVVM구현하기|1.3.3.5 : State management||
+|| Flutter 기초 개념 이해 | 1.3.3.8 : Local data and caching ||
+
+
+| 3.3.3단계 | 텍스트 출력 및 스타일링 | 2.2.3 (Text) ||
+| 3.3.4단계 | 입력 필드 및 버튼 구성 | 2.2.4 (Input) ||
+| 3.3.5단계 | 이미지 및 아이콘 활용 | 2.2.5 (Assets) ||
+| 3.3.6단계 | 스크롤 가능한 리스트 구성 | 2.2.6 (Scrolling) ||
+| 4단계 | 사용자 인터랙션 및 제스처 처리 | 2.6.1 ~ 2.6.6, 2.2.7 ||
+| 5단계 | 내비게이션 및 화면 전환 | 2.8.1 ~ 2.8.9 ||
+| 6단계 | 네트워크 통신 및 비동기 처리 | 1.3.3.7, 3.1.2, 2.2.11 ||
+| 7단계 | 데이터 모델링 및 유틸리티 | 1.3.3.8, 3.1.3, 3.1.4 ||
+| 8단계 | 상태관리 및 앱 구조 설계 | 1.3.3.5, 3.1.1, 3.2.1 ~ 3.2.6 ||
+| 9단계 | 플랫폼 기능 연동 | 3.3, 3.4.1 ~ 3.4.3 ||
+| 10단계 | 디자인 시스템 및 테마 구성 | 2.5.1 ~ 2.5.5, 2.2.8 ||
+| 11단계 | 애니메이션 및 트랜지션 적용 | 2.9.1 ~ 2.9.11, 2.2.10 ||
+| 12단계 | 접근성 및 반응형 레이아웃 설계 | 2.4.1 ~ 2.4.9, 2.10.1 ||
+| 13단계 | 배포 및 빌드 환경 구성 | 3.7.1 ~ 3.7.9 ||
+| 14단계 | 아키텍처 및 설계 패턴 학습 | 3.2.1 ~ 3.2.6 ||
+| 15단계 | 테스트 및 디버깅 | 3.5.1.1 ~ 3.5.1.6, 3.5.2.1 ~ 3.5.2.7 ||
+| 16단계 | 에러 해결 및 트러블슈팅 | 3.6.5 ~ 3.6.6, 8000번대 참고 ||
