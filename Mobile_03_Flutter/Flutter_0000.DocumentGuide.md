@@ -479,11 +479,11 @@ Flutter를 처음 학습하거나 체계적으로 정리하고 싶은 사용자�
 || Flutter 렌더링 이해 : 요소 트리 | 1.3.3.3. Widgets, Learn Flutter 깃 ||
 || Flutter 렌더링 이해 : 렌더트리 | 1.3.3.3. Widgets, Learn Flutter 깃 ||
 || Flutter 기초 개념 이해 : 상태관리 기초| 1.3.3.5 : State management 중 ||
-||StatelessWidget|1.3.3.5 : State management ||
-||내부변수를 사용한 레이아웃 구현|1.3.3.5 : State management ||
-||StatefullWidget|1.3.3.5 : State management ||
-||state사이클 이해 : initState, setState|1.3.3.5 : State management ||
-||버튼 동작 구현|1.3.3.5 : State management|elevatedButton, TextButton|
+||StatelessWidget|1.3.3.5 : 상태관리 ||
+||내부변수를 사용한 레이아웃 구현|1.3.3.5 : 상태관리 ||
+||StatefullWidget|1.3.3.5 : 상태관리 ||
+||state사이클 이해 : initState, setState|1.3.3.5 : 상태관리 ||
+||버튼 동작 구현|1.3.3.5 : 상태관리|elevatedButton, TextButton|
 ||네비게이션|2.8. Navigator 1.0, Learn Flutter 깃||
 ||네비게이션|2.8. Navigator 2.0, Learn Flutter 깃||
 ||네비게이션|go_router, Learn Flutter 깃||
