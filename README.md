@@ -1648,7 +1648,7 @@ ARKit, SceneKit처럼 AR 기능은 외부 플러그인 기반 접근 정리
 # DevOps / Tools
 
 ### Tools
-    - [Postman 가이드](DevOps/Tools/Postman_Guide.md)
+- [Postman 가이드](DevOps/Tools/Postman_Guide.md)
 
 <br><br>
 
