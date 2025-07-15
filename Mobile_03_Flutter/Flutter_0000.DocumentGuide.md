@@ -472,13 +472,12 @@ Flutter를 처음 학습하거나 체계적으로 정리하고 싶은 사용자�
 || Flutter 기초 개념 이해 | 1.3.3.1 : Introduction ||
 || Flutter 기초 개념 이해 | 1.3.3.2 : Intro to Dart ||
 || Flutter 기초 개념 이해 : 위젯 개념 | 1.3.3.3. Widgets ||
-|| Flutter 렌더링 이해 : 위젯트리 | 1.3.3.3. Widgets , Learn Flutter 깃||
-|| Flutter 렌더링 이해 : 요소 트리 | 1.3.3.3. Widgets, Learn Flutter 깃 ||
-|| Flutter 렌더링 이해 : 렌더트리 | 1.3.3.3. Widgets, Learn Flutter 깃 ||
-
 || Flutter 기초 개념 이해 : 레이아웃 기초 | 1.3.3.4 : Layout ||
 || 기본 위젯 익히기 | |AppBar, ElevatedButton, Icon, Image, Placeholder, Text|
 || 레이아웃 위젯 사용|  |Center, Column, Row, Container |
+|| Flutter 렌더링 이해 : 위젯트리 | 1.3.3.3. Widgets , Learn Flutter 깃||
+|| Flutter 렌더링 이해 : 요소 트리 | 1.3.3.3. Widgets, Learn Flutter 깃 ||
+|| Flutter 렌더링 이해 : 렌더트리 | 1.3.3.3. Widgets, Learn Flutter 깃 ||
 || Flutter 기초 개념 이해 : 상태관리 기초| 1.3.3.5 : State management 중 ||
 ||StatelessWidget|1.3.3.5 : State management ||
 ||내부변수를 사용한 레이아웃 구현|1.3.3.5 : State management ||
