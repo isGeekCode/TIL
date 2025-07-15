@@ -1,5 +1,8 @@
 # Postman 사용법
 
+<img src="https://i.imgur.com/xxrAZs1.png" width="500" />
+
+
 Postman은 REST API를 시각적으로 테스트하고 관리할 수 있는 툴이다.  
 HTTP 메서드 설정, 요청 주소 입력, 헤더/바디 구성 등을 통해 API 요청 흐름을 직접 확인할 수 있다.
 
