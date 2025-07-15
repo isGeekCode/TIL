@@ -466,44 +466,52 @@ Flutter Docs 순서 그대로 가져왔습니다.
 
 Flutter를 처음 학습하거나 체계적으로 정리하고 싶은 사용자를 위해, 아래와 같은 단계별 로드맵과 함께 문서 번호 참고 범위를 제시합니다.
 
+
 | 단계 | 학습 주제 | 학습할 공식 개발 문서 연번 |widgetCatalog|
 |------|-----------|-------------------------|--|
 | 1단계 | 개발 환경 세팅 및 설치 | 1.1, 1.2 ||
 | 2단계 | Flutter 기초 개념 이해 | 1.3 : Learn Flutter ||
-|| Flutter 기초 개념 이해 | 1.3.3.1 : Introduction ||
-|| Flutter 기초 개념 이해 | 1.3.3.2 : Intro to Dart ||
-|| Flutter 기초 개념 이해 : 위젯 개념 | 1.3.3.3. Widgets ||
-|| Flutter 기초 개념 이해 : 레이아웃 기초 | 1.3.3.4 : Layout ||
-|| 기본 위젯 익히기 | |AppBar, ElevatedButton, Icon, Image, Placeholder, Text|
-|| 레이아웃 위젯 사용|  |Center, Column, Row, Container |
-|| Flutter 렌더링 이해 : 위젯트리 | 1.3.3.3. Widgets , Learn Flutter 깃||
-|| Flutter 렌더링 이해 : 요소 트리 | 1.3.3.3. Widgets, Learn Flutter 깃 ||
-|| Flutter 렌더링 이해 : 렌더트리 | 1.3.3.3. Widgets, Learn Flutter 깃 ||
-|| Flutter 기초 개념 이해 : 상태관리 기초| 1.3.3.5 : State management 중 ||
-||StatelessWidget|1.3.3.5 : 상태관리 ||
-||내부변수를 사용한 레이아웃 구현|1.3.3.5 : 상태관리 ||
-||StatefullWidget|1.3.3.5 : 상태관리 ||
-||state사이클 이해 : initState, setState|1.3.3.5 : 상태관리 ||
-||버튼 동작 구현|1.3.3.5 : 상태관리|elevatedButton, TextButton|
-||네비게이션|2.8. Navigator 1.0, Learn Flutter 깃||
-||네비게이션|2.8. Navigator 2.0, Learn Flutter 깃||
-||네비게이션|go_router, Learn Flutter 깃||
-||네비게이션||Drawer|
-||네비게이션||bottomNavigationBar|
-||네비게이션||TabBar|
-||Using widget constructors|1.3.3.5 : State management||
-||Using InheritedWidget|1.3.3.5 : State management||
-||Using callbacks|1.3.3.5 : State management||
-||Flutter 기초 개념 이해 | 1.3.3.6 : Handling user input||
-||Swipe & Slide  |1.3.3.6 : Handling user input| |
-||Flutter 기초 개념 이해 | 1.3.3.7 : Networking and data ||
+|| Flutter 기초 개념  | 1.3.3.1 : Introduction ||
+|| Flutter 기초 개념  | 1.3.3.2 : Intro to Dart ||
+|| 📌 위젯과 레이아웃 |||
+|| Flutter 기초 개념 : 위젯 개념 | 1.3.3.3. Widgets ||
+|| Flutter 기초 개념 : 레이아웃 기초 | 1.3.3.4 : Layout ||
+|| 위젯 기초                      | WidgetDialog-Basics |ElevatedButton, Icon, Text|
+|| 위젯 기초                      | WidgetDialog-Basics |AppBar, Image, Placeholder|
+|| 위젯 기초                      | WidgetDialog-Basics |Center, Column, Row, Container |
+|| Flutter 렌더링 : 위젯트리        | 1.3.3.3. Widgets, Learn Flutter Git ||
+|| Flutter 렌더링 : 요소 트리       | 1.3.3.3. Widgets, Learn Flutter Git ||
+|| Flutter 렌더링 : 렌더트리        | 1.3.3.3. Widgets, Learn Flutter Git ||
+|| 📌 상태관리 |||
+|| Flutter 기초 개념  : 상태관리 기초| 1.3.3.5 : State management 중 ||
+|| StatelessWidget|1.3.3.5 : 상태관리 ||
+|| 내부변수를 사용한 레이아웃 구현|1.3.3.5 : 상태관리 ||
+|| StatefullWidget|1.3.3.5 : 상태관리 ||
+|| state사이클 이해 : initState, setState|1.3.3.5 : 상태관리 ||
+|| 버튼 동작 구현|1.3.3.5 : 상태관리|elevatedButton, TextButton|
+|| 📌 네비게이션 & 라우팅|||
+|| 네비게이션|2.8. Navigator 1.0, Learn Flutter Git||
+|| 네비게이션|2.8. Navigator 2.0, Learn Flutter Git||
+|| 네비게이션|go_router, Learn Flutter Git||
+|| 네비게이션||Drawer|
+|| 네비게이션||bottomNavigationBar|
+|| 네비게이션||TabBar|
+|| 상태관리 |||
+|| Using widget constructors|1.3.3.5 : State management||
+|| Using InheritedWidget|1.3.3.5 : State management||
+|| Using callbacks|1.3.3.5 : State management||
+|| User Input - 기초|||
+|| Flutter 기초 개념 | 1.3.3.6 : Handling user input||
+|| Swipe & Slide  |1.3.3.6 : Handling user input| |
+|| Networking|||
+||Flutter 기초 개념 | 1.3.3.7 : Networking and data ||
 ||네트워크 기초 | 3.1.2. 3.1.2.1. - 3.1.2.6. CRUD ||
 ||네트워크 기초 - Dio 사용하기 | ||
 ||네트워크 기초 - 직렬화 3.1.3. | ||
-||각종 버튼 |1.3.3.6 : Handling user input|FilledButton, Total Button, OutlinedButton, IconButton, FloatingActionButton|
-||각종 텍스트 |1.3.3.6 : Handling user input|SeleectableText, RichText, TextField, Form|
-||옵션 그룹으로 선택하기  |1.3.3.6 : Handling user input|SegmentedButton, Chip, DropdownMenu, Slider|
-||토글관련 위젯 배우기|1.3.3.6 : Handling user input|Checkbox, Switch, Radio, CheckboxListTile, SwitchListTile |
+|| User Input - 각종 버튼 |1.3.3.6 : Handling user input|FilledButton, Total Button, OutlinedButton, IconButton, FloatingActionButton|
+|| User Input - 각종 텍스트 |1.3.3.6 : Handling user input|SeleectableText, RichText, TextField, Form|
+|| User Input - 옵션 그룹 위젯  |1.3.3.6 : Handling user input|SegmentedButton, Chip, DropdownMenu, Slider|
+|| User Input - 토글관련 위젯  |1.3.3.6 : Handling user input|Checkbox, Switch, Radio, CheckboxListTile, SwitchListTile |
 || 날짜 및 시간 관련 위젯  |1.3.3.6 : Handling user input| DatePickerDialog, TimePickerDialog |
 || 상태관리 심화 |3.1.1. State management||
 || 상태관리 심화 - Using listenables.ChangeNotifier|1.3.3.5 : State management||
