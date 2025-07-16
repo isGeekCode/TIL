@@ -586,7 +586,6 @@ Flutter를 처음 학습하거나 체계적으로 정리하고 싶은 사용자�
 |❌| 🔌 | 15   | 15.2   | 카카오 로그인 연동  | Kakao SDK 로그인, 토큰 → Firebase 커넥팅   | kakao_flutter_sdk, firebase_auth       |
 |❌| 🔌 | 15   | 15.3   | 네이버 로그인 연동  | Naver Login SDK 활용, 사용자 정보 처리      | naver_login, firebase_auth             |
 |❌| 🔌 | 15   | 15.4   | 구글 로그인 연동 (Firebase 기반) | GoogleSignIn 플러그인 + Firebase 연동       | firebase_auth, google_sign_in          |
-
 |❌| 🔌 | 15   | 15.5   | Firebase Authentication 로그인 | 이메일 로그인 흐름, 권한 처리                  | firebase_auth                          |
 |❌| 🔌 | 15   | 15.6   | Remote Config 구성               | 앱 기능 동적 제어 (예: 버튼 숨기기 등)                        | firebase_remote_config                   |
 |❌| 🔌 | 15   | 15.7   | Crashlytics 에러 추적            | 예외 발생 시 자동 리포팅 흐름 구성                           | firebase_crashlytics                     |
