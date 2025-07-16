@@ -173,7 +173,7 @@ Flutter 앱에서 디바이스(OS 기반) 기능 및 외부 SDK/API를 연동하
 
 | 번호   | 설명 |
 |--------|------|
-| `7000` | MVC, MVP, MVVM, 클린 아키텍처, 레이어 구성, DI 등 |
+| `7000` | MVVM, 클린 아키텍처, 레이어 구성, DI 등 |
 
 <br><br>
 
@@ -541,7 +541,7 @@ Flutter를 처음 학습하거나 체계적으로 정리하고 싶은 사용자�
 |❌| 🖱️ | 9    | 9.1    | 사용자 입력 심화 - 텍스트 그룹     | TextField, Form, RichText 조합                              | Form, GlobalKey, validator            |
 |❌| 🖱️ | 9    | 9.2    | 입력 위젯 - 옵션 그룹             | DropdownMenu, Slider, Chip 실습                             | value, onChanged, group widgets       |
 |❌| 🖱️ | 9    | 9.3    | 입력 위젯 - 토글류                | Checkbox, Switch, Radio 등 실습                             | onChanged, value, toggle              |
-|❌| 🎨 | 9    | 9.4   | 설정 페이지 구현                 | SwitchListTile로 사용자 설정 화면 구성                      | SwitchListTile, ListView, Divider     |
+|❌| 🎨 | 9    | 9.4    | 설정 페이지 구현                 | SwitchListTile로 사용자 설정 화면 구성                      | SwitchListTile, ListView, Divider     |
 |❌| 🎨 | 9    | 9.41   | 설정 페이지에 프로필 사진 표시   | 원형 이미지로 사용자 아바타 표시                           | CircleAvatar, Image.asset/network     |
 |❌| 🔍 | 9    | 9.42   | 앱 버전 및 기기 정보 표시       | 앱의 버전, OS 정보 등을 설정 페이지에 표시                   | package_info_plus, device_info_plus    |
 |❌| 💾 | 9    | 9.43   | 로컬 저장소                      | SharedPreferences로 간단한 데이터 저장                      | getString, setBool                    |
@@ -551,12 +551,12 @@ Flutter를 처음 학습하거나 체계적으로 정리하고 싶은 사용자�
 |❌| 💾 | 9    | 9.47   | 내 친구 보기 기능 구현            | 설정 페이지에서 친구 목록 리스트 확인 가능                     | ListView, SharedPreferences, local DB |
 |❌| 📷 | 9    | 9.48   | 친구 추가 - 바코드 스캐너 구현     | 친구 바코드를 스캔하여 회원번호를 친구 목록에 저장              | qr_code_scanner, flutter_barcode_sdk |
 |❌| 💾 | 9    | 9.49   | 친구 목록 영구 저장 처리         | 앱 삭제 후에도 유지되도록 로컬 DB 또는 secure storage 사용      | SharedPreferences, sqlite, hive       |
-|❌| 💬 | 9    | 9.5   | 언어/다국어 설정 지원          | 앱 내 언어 변경 및 intl 로케일 적용                          | intl, flutter_localizations            |
+|❌| 💬 | 9    | 9.5    | 언어/다국어 설정 지원          | 앱 내 언어 변경 및 intl 로케일 적용                          | intl, flutter_localizations            |
 |❌| 🖱️ | 9    | 9.6    | 날짜/시간 입력                   | DatePickerDialog, TimePickerDialog                          | showDatePicker, DateTime              |
 |❌| 📘 | 10   | 10.0   | Dart - 캡슐화와 접근 제어자      | private, getter/setter 실습                                | `_`, get, set                          |
 |❌| 🧠 | 10   | 10.1   | 상태관리 심화 - 구조화            | ChangeNotifier + Provider 기초                              | notifyListeners, context.watch        |
 |❌| 🧠 | 10   | 10.2   | ValueNotifier                    | UI 자동 갱신 상태 감시                                      | ValueNotifier, ValueListenableBuilder |
-|❌| 🎨 | 10   | 10.3  | Sliver로 설정 페이지 구현         | 기존 설정 UI를 SliverList/SliverAppBar로 변환하여 구성       | CustomScrollView, SliverList, SliverAppBar |
+|❌| 🎨 | 10   | 10.3   | Sliver로 설정 페이지 구현         | 기존 설정 UI를 SliverList/SliverAppBar로 변환하여 구성       | CustomScrollView, SliverList, SliverAppBar |
 |❌| 🧠 | 10   | 10.35  | 가벼운 상태 분리 예제 | 숫자 증가 버튼 만들기: UI와 로직을 파일로 분리해보기 |구조 나누기|
 |❌| 🧠 | 10   | 10.4   | MVVM 구조 맛보기                 | ViewModel 분리, Provider 바인딩                             | Provider, Consumer                    |
 |❌| 🧠 | 10   | 10.5   | 설정 상태 관리                  | Provider, ChangeNotifier로 설정 상태 관리                   | Provider, ChangeNotifier, 상태저장     |
