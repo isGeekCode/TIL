@@ -484,74 +484,70 @@ Flutter Docs 순서 그대로 가져왔습니다.
 Flutter를 처음 학습하거나 체계적으로 정리하고 싶은 사용자를 위해, 아래와 같은 단계별 로드맵과 함께 문서 번호 참고 범위를 제시합니다.
 
 
-| 단계 | 학습 주제 | 학습할 공식 개발 문서 연번 |widgetCatalog|
-|------|-----------|-------------------------|--|
-| 1단계 | 개발 환경 세팅 및 설치 | 1.1, 1.2 ||
-| 2단계 | Flutter 기초 개념 이해 | 1.3 : Learn Flutter ||
-|| Flutter 기초 개념  | 1.3.3.1 : Introduction ||
-|| Flutter 기초 개념  | 1.3.3.2 : Intro to Dart ||
-|| 📌 위젯과 레이아웃 |||
-|| Flutter 기초 개념 : 위젯 개념 | 1.3.3.3. Widgets ||
-|| Flutter 기초 개념 : 레이아웃 기초 | 1.3.3.4 : Layout ||
-|| 위젯 기초                      | WidgetDialog-Basics |ElevatedButton, Icon, Text|
-|| 위젯 기초                      | WidgetDialog-Basics |AppBar, Image, Placeholder|
-|| 위젯 기초                      | WidgetDialog-Basics |Center, Column, Row, Container |
-|| Flutter 렌더링 : 위젯트리        | 1.3.3.3. Widgets, Learn Flutter Git ||
-|| Flutter 렌더링 : 요소 트리       | 1.3.3.3. Widgets, Learn Flutter Git ||
-|| Flutter 렌더링 : 렌더트리        | 1.3.3.3. Widgets, Learn Flutter Git ||
-|| 📌 상태관리 |||
-|| Flutter 기초 개념  : 상태관리 기초| 1.3.3.5 : State management 중 ||
-|| StatelessWidget|1.3.3.5 : 상태관리 ||
-|| 내부변수를 사용한 레이아웃 구현|1.3.3.5 : 상태관리 ||
-|| StatefullWidget|1.3.3.5 : 상태관리 ||
-|| state사이클 이해 : initState, setState|1.3.3.5 : 상태관리 ||
-|| 버튼 동작 구현|1.3.3.5 : 상태관리|elevatedButton, TextButton|
-|| 📌 네비게이션 & 라우팅|||
-|| 네비게이션|2.8. Navigator 1.0, Learn Flutter Git||
-|| 네비게이션|2.8. Navigator 2.0, Learn Flutter Git||
-|| 네비게이션|go_router, Learn Flutter Git||
-|| 네비게이션||Drawer|
-|| 네비게이션||bottomNavigationBar|
-|| 네비게이션||TabBar|
-|| 📌 상태관리 |||
-|| Using widget constructors| 1.3.3.5 : State management||
-|| Using InheritedWidget| 1.3.3.5 : State management||
-|| Using callbacks| 1.3.3.5 : State management||
-|| 📌 Handling user input - 기초|||
-|| Flutter 기초 개념 | 1.3.3.6 : Handling user input||
-|| Swipe & Slide  | 1.3.3.6 : Handling user input| |
-|| 📌 Networking|||
-|| Flutter 기초 개념 | 1.3.3.7 : Networking and data ||
-|| 네트워크 기초 | 3.1.2. 3.1.2.1. - 3.1.2.6. CRUD ||
-|| 네트워크 관련 라이브러리 - Dio 사용하기 |||
-|| 📌 Beyond UI - Serialiation |||
-|| 직렬화 | 3.1.3. Serialiation||
-|| User Input - 각종 버튼 |1.3.3.6 : Handling user input|FilledButton, Total Button, OutlinedButton, IconButton, FloatingActionButton|
-|| User Input - 각종 텍스트 |1.3.3.6 : Handling user input|SeleectableText, RichText, TextField, Form|
-|| User Input - 옵션 그룹 위젯  |1.3.3.6 : Handling user input|SegmentedButton, Chip, DropdownMenu, Slider|
-|| User Input - 토글관련 위젯  |1.3.3.6 : Handling user input|Checkbox, Switch, Radio, CheckboxListTile, SwitchListTile |
-|| 날짜 및 시간 관련 위젯  |1.3.3.6 : Handling user input| DatePickerDialog, TimePickerDialog |
-|| 상태관리 심화 |3.1.1. State management||
-|| 상태관리 심화 - Using listenables.ChangeNotifier|1.3.3.5 : State management||
-|| 상태관리 심화 - Using listenables.ValueNotifier|1.3.3.5 : State management||
-|| 아키텍쳐 - MVVM구현하기|1.3.3.5 : State management||
-|| Flutter 기초 개념 이해 | 1.3.3.8 : Local data and caching ||
+| 단계 | 소단계 | 학습 포인트                     | 실습 예제                                                  | 관련 위젯 / 키워드                    |
+|------|--------|----------------------------------|------------------------------------------------------------|---------------------------------------|
+| 1    | 1.1    | Dart - 변수 선언과 타입 이해     | var, final, const 실습                                      | var, final, const                     |
+| 1    | 1.2    | Dart - 제어문과 흐름 제어        | if/else, switch, for, while 반복문                         | if, switch, for                      |
+| 1    | 1.3    | Dart - 함수 정의 및 활용         | 기본 함수, 람다식, 매개변수 전달                           | 함수, 파라미터, 익명함수              |
+| 1    | 1.4    | Dart - 클래스와 생성자           | class, 생성자, this 키워드                                  | class, constructor, this              |
+| 1    | 1.2    | Flutter 프로젝트 구조 이해       | main.dart 분석, MaterialApp 구조 살펴보기                  | runApp, Widget, BuildContext          |
+| 2    | 2.0    | Dart - 상속과 추상 클래스        | extends, abstract 클래스 실습                              | abstract, super, extends             |
+| 2    | 2.1    | 위젯 개념 입문                   | Text, Icon, ElevatedButton 배치                            | StatelessWidget, Build method         |
+| 2    | 2.2    | 레이아웃 기초                    | Row, Column, Center, Padding, SizedBox 연습                | MainAxisAlignment, SizedBox 등        |
+| 2    | 2.3    | 레이아웃 실전                    | 카드 형태로 3개 아이템 배치하기                             | Container, BoxDecoration              |
+| 2    | 2.4    | 앱 아이콘 설정 실습              | native 프로젝트에 아이콘 지정          | flutter_launcher_icons                |
+| 2    | 2.5    | 스플래시 화면 구현               | native 프로젝트에 런치이미지 구성                | flutter_native_splash, Timer          |
+| 3    | 3.1    | 상태관리 기본 구조 이해           | Stateless → Stateful 변환                                  | setState, initState                   |
+| 3    | 3.2    | 상태 변경 실습                   | 버튼 클릭 시 텍스트 변경하기                               | ElevatedButton, Text, setState        |
+| 3    | 3.3    | 도전과제                         | 내부 변수로 배경색 바꾸기                                   | Color, Container, 변수 제어           |
+| 4    | 4.1    | 네비게이션 1.0                   | Navigator.push()로 화면 이동                               | Navigator, MaterialPageRoute          |
+| 4    | 4.2    | 네비게이션 2.0                   | Navigator 2.0 방식 이해와 비교                              | Page, RouteInformationParser          |
+| 4    | 4.3    | go_router 실습                   | go_router로 로그인 → 홈 화면 이동                          | go_router                             |
+| 4    | 4.4    | 조건부 다이얼로그 네비게이션       | AlertDialog에서 OK 누르면 첫 화면으로 pop                  | AlertDialog, Navigator.popUntil       |
+| 4    | 4.5    | UI 네비게이션 요소               | Drawer, BottomNavigationBar, TabBar 구성                    | Drawer, Scaffold, TabController       |
+| 5    | 5.1    | 상태관리 중급: 콜백              | 부모 위젯에 콜백 전달                                       | Function 타입, callback 구조          |
+| 5    | 5.2    | InheritedWidget 이해             | 색상 테마 위젯 만들기                                       | of(context), InheritedWidget          |
+| 5    | 5.3    | 위젯 생성자 활용                 | 생성자 통해 초기값 전달 및 조건 분기                       | required, final, this.변수명          |
+| 6    | 6.1    | 사용자 입력 기초 개념             | 입력 필드 만들고 값 출력하기                                | TextField, onChanged                  |
+| 6    | 6.2    | 제스처 입력                      | 스와이프, 탭 등 UX 제스처 테스트                            | GestureDetector, Dismissible          |
+| 6    | 6.3    | Dart - 예외 처리 문법            | try/catch, throw, finally 기본 구조                         | try, catch, throw, finally           |
+| 7    | 7.0    | Dart - 비동기 프로그래밍 기초    | Future, async/await, Stream 개념 및 실습                    | Future, async, await, Stream         |
+| 7    | 7.1    | 네트워크 요청                    | Dio로 GET 요청, JSON 보기                                   | Dio, jsonDecode                       |
+| 7    | 7.2    | HTTP CRUD 흐름 익히기            | Create, Read, Update, Delete 버튼 구현                      | Dio, PATCH, DELETE                    |
+| 8    | 8.1    | JSON 직렬화 기초                 | User 모델 만들기, fromJson/toJson                           | fromJson, toJson                      |
+| 8    | 8.2    | FutureBuilder로 UI 바인딩         | API 요청 결과를 ListView로 출력                             | FutureBuilder, ListView.builder       |
+| 8    | 8.3    | 다이나믹 스플래시 화면 구현      | API로 받은 이미지 URL로 splash 구성                         | Dio, Image.network, FutureBuilder, Timer |
+| 9    | 9.1    | 사용자 입력 심화 - 텍스트 그룹     | TextField, Form, RichText 조합                              | Form, GlobalKey, validator            |
+| 9    | 9.2    | 입력 위젯 - 옵션 그룹             | DropdownMenu, Slider, Chip 실습                             | value, onChanged, group widgets       |
+| 9    | 9.3    | 입력 위젯 - 토글류                | Checkbox, Switch, Radio 등 실습                             | onChanged, value, toggle              |
+| 9    | 9.4   | 설정 페이지 구현                 | SwitchListTile로 사용자 설정 화면 구성                      | SwitchListTile, ListView, Divider     |
+| 9    | 9.5    | 날짜/시간 입력                   | DatePickerDialog, TimePickerDialog                          | showDatePicker, DateTime              |
+| 10   | 10.0   | Dart - 캡슐화와 접근 제어자      | private, getter/setter 실습                                | `_`, get, set                          |
+| 10   | 10.1   | 상태관리 심화 - 구조화            | ChangeNotifier + Provider 기초                              | notifyListeners, context.watch        |
+| 10   | 10.2   | ValueNotifier                    | UI 자동 갱신 상태 감시                                      | ValueNotifier, ValueListenableBuilder |
+| 10   | 10.3  | Sliver로 설정 페이지 구현         | 기존 설정 UI를 SliverList/SliverAppBar로 변환하여 구성       | CustomScrollView, SliverList, SliverAppBar |
+| 10   | 10.35  | 가벼운 상태 분리 예제 | 숫자 증가 버튼 만들기: UI와 로직을 파일로 분리해보기 |구조 나누기|
+| 10   | 10.4   | MVVM 구조 맛보기                 | ViewModel 분리, Provider 바인딩                             | Provider, Consumer                    |
+| 10   | 10.5   | 설정 상태 관리                  | Provider, ChangeNotifier로 설정 상태 관리                   | Provider, ChangeNotifier, 상태저장     |
+| 11   | 11.1   | 상태관리 심화 - Provider         | ChangeNotifier + Provider 기초                              | notifyListeners, context.watch        |
+| 11   | 11.2   | 로컬 저장소                      | SharedPreferences로 간단한 데이터 저장                      | getString, setBool                    |
+| 11   | 11.3   | 설정 상태 저장 및 복원          | 앱 재실행 시 설정 유지                                      | SharedPreferences, async/await        |
+| 12   | 12.1   | Riverpod 기초                    | ref.watch로 상태 관찰, StateProvider                         | flutter_riverpod, ProviderScope       |
+| 12   | 12.2   | 파생 상태 관리                   | FutureProvider, Computed 구성                               | ref.read, ref.watch, async/await      |
+| 12   | 12.3   | 상태 공유/모듈화                  | 여러 화면에서 상태 공유 및 리팩터링                         | ref.listen, ConsumerWidget            |
+| 12   | 12.4   | Provider → Riverpod 전환          | 기존 Provider 예제 리팩터링                                 | 리팩터링 전략, best practice          |
+| 13   | 13.1   | 푸시 알림 기초 세팅              | Firebase Messaging 연동, 권한 요청                             | firebase_messaging, 권한 처리         |
+| 13   | 13.2   | 푸시 알림 수신 및 처리           | Foreground/Background 알림 구분 처리                           | onMessage, onBackgroundMessage        |
+| 13   | 13.3   | 알림 클릭 시 라우팅 처리         | 알림 클릭 → 특정 페이지 이동                                   | initialMessage, push navigation       |
+| 14   | 14.1   | WebView 기본 구성                 | 웹 페이지를 띄우는 WebView 화면 구성                         | InAppWebView, initialUrlRequest       |
+| 14   | 14.2   | WebView 설정 커스터마이징        | 자바스크립트 허용, 유저에이전트 등 세부 옵션 구성            | settings, javaScriptEnabled           |
+| 14   | 14.3   | WebView 히스토리 제어            | 뒤로 가기 버튼으로 WebView 히스토리 제어                     | canGoBack, goBack, WillPopScope       |
+| 14   | 14.4   | 자바스크립트 → Flutter 메시지 수신 | JS에서 메시지 전송 → Flutter에서 메시지 수신 및 처리         | addJavaScriptHandler, onJsMessageReceived |
+| 14   | 14.5   | 커스텀 스킴 처리                 | 웹 링크 내 커스텀 스킴 감지하여 특정 동작 수행               | shouldOverrideUrlLoading, custom scheme |
+| 14   | 14.6   | 새 창 열기 처리                  | `target="_blank"` 등 새 창 요청 대응                           | onCreateWindow                        |
+| 14   | 14.7   | 푸시 링크로 WebView 열기         | 푸시 알림 클릭 시 링크로 WebView 열기                        | initialMessage, WebView navigation    |
+| 14   | 14.8   | 설정에서 푸시 허용 여부 동기화     | 설정 스위치로 사용자 푸시 허용 여부 조작 + 시스템 푸시 권한 상태 반영 | SwitchListTile, firebase_messaging, permission_handler |
 
 
-| 3.3.3단계 | 텍스트 출력 및 스타일링 | 2.2.3 (Text) ||
-| 3.3.4단계 | 입력 필드 및 버튼 구성 | 2.2.4 (Input) ||
-| 3.3.5단계 | 이미지 및 아이콘 활용 | 2.2.5 (Assets) ||
-| 3.3.6단계 | 스크롤 가능한 리스트 구성 | 2.2.6 (Scrolling) ||
-| 4단계 | 사용자 인터랙션 및 제스처 처리 | 2.6.1 ~ 2.6.6, 2.2.7 ||
-| 5단계 | 내비게이션 및 화면 전환 | 2.8.1 ~ 2.8.9 ||
-| 6단계 | 네트워크 통신 및 비동기 처리 | 1.3.3.7, 3.1.2, 2.2.11 ||
-| 7단계 | 데이터 모델링 및 유틸리티 | 1.3.3.8, 3.1.3, 3.1.4 ||
-| 8단계 | 상태관리 및 앱 구조 설계 | 1.3.3.5, 3.1.1, 3.2.1 ~ 3.2.6 ||
-| 9단계 | 플랫폼 기능 연동 | 3.3, 3.4.1 ~ 3.4.3 ||
-| 10단계 | 디자인 시스템 및 테마 구성 | 2.5.1 ~ 2.5.5, 2.2.8 ||
-| 11단계 | 애니메이션 및 트랜지션 적용 | 2.9.1 ~ 2.9.11, 2.2.10 ||
-| 12단계 | 접근성 및 반응형 레이아웃 설계 | 2.4.1 ~ 2.4.9, 2.10.1 ||
-| 13단계 | 배포 및 빌드 환경 구성 | 3.7.1 ~ 3.7.9 ||
-| 14단계 | 아키텍처 및 설계 패턴 학습 | 3.2.1 ~ 3.2.6 ||
-| 15단계 | 테스트 및 디버깅 | 3.5.1.1 ~ 3.5.1.6, 3.5.2.1 ~ 3.5.2.7 ||
-| 16단계 | 에러 해결 및 트러블슈팅 | 3.6.5 ~ 3.6.6, 8000번대 참고 ||
+
+
