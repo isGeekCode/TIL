@@ -1540,7 +1540,9 @@ ARKit, SceneKit처럼 AR 기능은 외부 플러그인 기반 접근 정리
 
 ### Lang-Dart
 - [Dart - Intro](Lang-Dart/Dart_0000.Intro.md)
-- [Dasrt - 변수와 상수 / 컴파일과 런타임](Lang-Dart/Dart_0001.Variable.md)
+- [Dart - 변수와 상수 / 컴파일과 런타임](Lang-Dart/Dart_0001.Variable.md)
+- [Dart - 함수정의 및 호출 / 1급 객체](Lang-Dart/Dart_0003.method.md)
+
 - [Dart - 싱글턴 패턴](Lang-Dart/Dart_3010.Singleton.Basics.md)
 - [Dart - 팩토리 패턴](Lang-Dart/Dart_3011.Factory.md)
 

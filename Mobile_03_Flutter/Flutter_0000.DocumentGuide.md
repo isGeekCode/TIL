@@ -510,7 +510,7 @@ Flutter를 처음 학습하거나 체계적으로 정리하고 싶은 사용자�
 |❌| 📘 | 1    | 1.4    | Dart - 클래스와 생성자           | class, 생성자, this 키워드                                  | class, constructor, this              |
 |❌| 🎨 | 1    | 1.5    | Flutter 프로젝트 구조 이해       | main.dart 분석, MaterialApp 구조 살펴보기                  | runApp, Widget, BuildContext          |
 |❌| 📘 | 2    | 2.0    | Dart - 상속과 추상 클래스        | extends, abstract 클래스 실습                              | abstract, super, extends             |
-|❌| 🎨 | 2    | 2.1    | 위젯 개념 입문                   | Text, Icon, ElevatedButton 배치                            | StatelessWidget, Build method         |
+|✅| 🎨 | 2    | 2.1    | 위젯 개념 입문                   | Text, Icon, ElevatedButton 배치                            | StatelessWidget, Build method         |
 |❌| 🎨 | 2    | 2.2    | 레이아웃 기초                    | Row, Column, Center, Padding, SizedBox 연습                | MainAxisAlignment, SizedBox 등        |
 |❌| 🎨 | 2    | 2.3    | 레이아웃 실전                    | 카드 형태로 3개 아이템 배치하기                             | Container, BoxDecoration              |
 |❌| 🎨 | 2    | 2.35   | SafeArea와 상태바 처리         | 기기별 상태바 영역 대응을 위해 SafeArea 사용 실습            | SafeArea, MediaQuery                   |
