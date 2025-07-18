@@ -1276,8 +1276,8 @@ AR 및 3D 렌더링
 - [레이아웃 구현전략](Mobile_03_Flutter/Flutter_LayoutStrategy.md)
 - 케이스 스터디
 	- [Three Cards Example - Container & BoxDecoration 실전 예제](Mobile_03_Flutter/Flutter_1010.Layout.CaseStudy.ThreeCards.md)
-	- [레이아웃 구현전략](Mobile_03_Flutter/Flutter_LayoutStrategy.md)
-	- [레이아웃 구현전략](Mobile_03_Flutter/Flutter_LayoutStrategy.md)
+	- [클론코딩 - iOS 설정앱](Mobile_03_Flutter/Flutter_1011.Layout.CaseStudy.SettingPage.md)
+
 [\- 👆목차로 돌아가기 \-](#flutter-목차)
 
 <br><br>
