@@ -1273,7 +1273,11 @@ AR 및 3D 렌더링
 
 ## 📐 Flutter - 레이아웃과 배치 전략
 - [Flutter - 레이아웃의 이해](Mobile_03_Flutter/Flutter_1000.02.Widget.LayoutGuide.md)
-- [Three Cards Example - Container & BoxDecoration 실전 예제](Flutter_1010.Layout.CaseStudy.ThreeCards.md)
+- [레이아웃 구현전략](Mobile_03_Flutter/Flutter_LayoutStrategy.md)
+- 케이스 스터디
+	- [Three Cards Example - Container & BoxDecoration 실전 예제](Mobile_03_Flutter/Flutter_1010.Layout.CaseStudy.ThreeCards.md)
+	- [레이아웃 구현전략](Mobile_03_Flutter/Flutter_LayoutStrategy.md)
+	- [레이아웃 구현전략](Mobile_03_Flutter/Flutter_LayoutStrategy.md)
 [\- 👆목차로 돌아가기 \-](#flutter-목차)
 
 <br><br>
