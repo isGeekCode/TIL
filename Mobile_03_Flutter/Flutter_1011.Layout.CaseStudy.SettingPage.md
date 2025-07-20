@@ -1,11 +1,65 @@
 # iOS - Setting 앱 클론
 
 
+## 결과물 화면
 
-![](https://i.imgur.com/YGedQEF.png) ![](https://i.imgur.com/FK5gZGc.png)
+![](https://i.imgur.com/YGedQEF.png)  ![](https://i.imgur.com/FK5gZGc.png)
 
 
+<br><br>
 
+## 🧪 실습 목표
+- iOS 설정앱 UI를 Flutter로 구현하며 레이아웃 구성 방식 학습
+- SafeArea, Column, ClipRRect, Stack, Expanded 등 실전 레이아웃 위젯 사용법 익히기
+- 상태바/SafeArea 대응 방법 이해
+
+
+<br><br>
+
+## 🔧 주요 사용 위젯
+- `SafeArea`, `MediaQuery`: 상태바 영역 대응
+- `Column`, `Expanded`, `Spacer`: 수직 정렬 및 비율 분배
+- `ClipRRect`, `Container`: 모서리 둥글게 처리 및 박스 스타일링
+- `Switch`, `ListTile`, `Icon`: 리스트 내 설정 항목 구성
+- `Stack`, `Positioned`: 중첩 레이아웃 구현
+
+
+<br><br>
+
+## 🧱 UI 구조 및 구현 전략
+
+### 🔹 상단 프로필 영역
+- `CircleAvatar`로 사용자 아이콘 표현
+- `Row` + `Column` 조합으로 이름 및 설명 배치
+- `Spacer()`로 우측 아이콘과 간격 정리
+
+### 🔹 설정 리스트
+- `ClipRRect`로 외곽 둥글게
+- 각 항목은 `Row` 또는 `ListTile` 유사 구조
+- `Switch`, `Text`, `Icon` 조합으로 기본 설정 항목 구성
+
+<br><br>
+---
+
+## ⚠️ 구현 시 주의점
+- 상태바 높이 대응: `MediaQuery.of(context).padding.top`으로 처리
+- 리스트 항목 고정 높이로 `Expanded` 사용 시, height와 overflow 유의
+- `Divider` 높이와 `indent` 값 조정으로 iOS 느낌 살리기
+
+## 🚀 확장 아이디어
+- 각 항목을 `ListView`로 감싸 스크롤 처리
+- 각 설정 항목에 실제 기능 바인딩 추가
+- 다크모드 대응 및 `ThemeData` 적용 실습으로 확장 가능
+
+
+## 🗺️ 이 문서는 로드맵의 다음 항목과 연계됩니다
+- ✅ 2.3 레이아웃 실전: 설정앱 클론 코딩
+- ✅ 2.35 SafeArea와 상태바 처리
+- 🔜 9.4 설정 페이지 구현 (SwitchListTile, ListView 도입 예정)
+
+<br><br>
+
+## 전체코드
 
 ```dart
 import 'dart:math';  

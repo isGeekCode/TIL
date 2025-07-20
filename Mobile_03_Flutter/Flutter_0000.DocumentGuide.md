@@ -512,7 +512,7 @@ Flutter를 처음 학습하거나 체계적으로 정리하고 싶은 사용자�
 |❌| 📘 | 2    | 2.0    | Dart - 상속과 추상 클래스        | extends, abstract 클래스 실습                              | abstract, super, extends             |
 |✅| 🎨 | 2    | 2.1    | 위젯 개념 입문                   | Text, Icon, ElevatedButton 배치                            | StatelessWidget, Build method         |
 |✅| 🎨 | 2    | 2.2    | 레이아웃 기초                    | Row, Column, Center, Padding, SizedBox 연습                | MainAxisAlignment, SizedBox 등        |
-|❌| 🎨 | 2    | 2.3    | 레이아웃 실전                    | 카드 형태로 3개 아이템 배치하기                             | Container, BoxDecoration              |
+|❌| 🎨 | 2    | 2.3    | 레이아웃 실전                    | 아이폰 설정앱 클론코딩                            | Container, BoxDecoration              |
 |❌| 🎨 | 2    | 2.35   | SafeArea와 상태바 처리         | 기기별 상태바 영역 대응을 위해 SafeArea 사용 실습            | SafeArea, MediaQuery                   |
 |❌| 🎨 | 2    | 2.4    | 앱 아이콘 설정 실습              | native 프로젝트에 아이콘 지정          | flutter_launcher_icons                |
 |❌| 🎨 | 2    | 2.5    | 스플래시 화면 구현               | native 프로젝트에 런치이미지 구성                | flutter_native_splash, Timer          |
