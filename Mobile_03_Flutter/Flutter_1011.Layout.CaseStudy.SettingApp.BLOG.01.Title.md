@@ -12,7 +12,7 @@ Flutter 입문자에게 실습 주제로 추천하는 이유는, 다양한 레�
 
 이번 글에서는 `SafeArea`, `ClipRRect`, `Stack`, `Switch` 등을 활용하여 설정앱 UI를 구현해보며, 실전 위젯 사용법과 상태바 대응 방법까지 함께 익혀봅니다.
 
-
+  
 ## 결과물 화면
 
 ![](https://i.imgur.com/YGedQEF.png)  ![](https://i.imgur.com/FK5gZGc.png)
