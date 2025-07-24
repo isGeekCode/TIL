@@ -286,7 +286,8 @@ Basic Widgets
 - [HTML Samples](#web-html-sample)  
 - [CSS Patterns](#web-css-patterns)  
 - [React](#web-react)  
-</details>
+
+
 
 <br><br>
 
@@ -1025,7 +1026,7 @@ Basic Widgets
 [\- 👆목차로 돌아가기 \-](#android---view-system-기반-앱-목차)
 
 
-<br>
+# <br>
 
 ## Android - Jetpack Compose 기반 앱
 
@@ -1272,6 +1273,10 @@ AR 및 3D 렌더링
 
 ## 📐 Flutter - 레이아웃과 배치 전략
 - [Flutter - 레이아웃의 이해](Mobile_03_Flutter/Flutter_1000.02.Widget.LayoutGuide.md)
+- [레이아웃 구현전략](Mobile_03_Flutter/Flutter_LayoutStrategy.md)
+- 케이스 스터디
+	- [Three Cards Example - Container & BoxDecoration 실전 예제](Mobile_03_Flutter/Flutter_1010.Layout.CaseStudy.ThreeCards.md)
+	- [클론코딩 - iOS 설정앱](Mobile_03_Flutter/Flutter_1011.Layout.CaseStudy.SettingPage.md)
 
 [\- 👆목차로 돌아가기 \-](#flutter-목차)
 
