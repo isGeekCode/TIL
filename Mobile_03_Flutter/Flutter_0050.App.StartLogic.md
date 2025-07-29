@@ -139,7 +139,7 @@ void main() async {
 
 앱을 QA / DEV / PROD 등 환경별로 구분할 때, `main.dart`를 여러 개 만들거나 `const String environment = 'dev';` 형태로 구분하여 초기 세팅을 나누는 구조도 자주 사용된다.
 
-→ 관련 설정 예시는 [Build Flavor Setup Guide](https://github.com/isGeekCode/TIL/blob/main/Flutter_6012.BuildFlavorSetupGuide.md) 문서를 참고할 수 있다.
+→ 관련 설정 예시는 [Build Flavor Setup Guide](Mobile_03_Flutter/https://github.com/isGeekCode/TIL/blob/main/Flutter_6012.BuildFlavorSetupGuide.md) 문서를 참고할 수 있다.
 
 
 
