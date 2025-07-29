@@ -1373,7 +1373,7 @@ AR 및 3D 렌더링
 
 ## Flutter - 시스템 및 운영 배포 
 ### 🔧 Flutter - 시스템 환경 설정
-- [Flutter – Flavor를 이용한 빌드 환경 분리](Flutter_6012.BuildFlavorSetupGuide.md)
+- [Flutter – Flavor를 이용한 빌드 환경 분리](Mobile_03_Flutter/Flutter_6012.BuildFlavorSetupGuide.md)
 
 [\- 👆목차로 돌아가기 \-](#flutter---시스템-및-운영-배포-목차)
 
@@ -1381,7 +1381,7 @@ AR 및 3D 렌더링
 <br><br>
 
 ### 🚀 Flutter - 배포
-- [Flutter - iOS 릴리즈 빌드 및 .ipa 생성](Flutter_6101.iOSIPABuildManual.md)
+- [Flutter - iOS 릴리즈 빌드 및 .ipa 생성](Mobile_03_Flutter/Flutter_6101.iOSIPABuildManual.md)
 
 [\- 👆목차로 돌아가기 \-](#flutter---시스템-및-운영-배포-목차)
 
