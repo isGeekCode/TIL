@@ -126,20 +126,11 @@ class _MyCounterState extends State<MyCounter> {
 
 ### 🔄 StatefulWidget 생명주기 요약 그래프
 
-```mermaid
-graph TD;
-    A["Constructor"] --> B["createState"]
-    B --> C["initState"]
-    C --> D["didChangeDependencies"]
-    D --> E["build"]
-    E --> F{"State Changed?"}
-    F -- Yes --> G["setState"]
-    G --> E
-    F -- No --> H["deactivate"]
-    H --> I["dispose"]
-    E --> J["didUpdateWidget"]
-    J --> E
-```
+
+
+![](https://i.imgur.com/2sB7Jfv.png)
+
+
 
 
 
