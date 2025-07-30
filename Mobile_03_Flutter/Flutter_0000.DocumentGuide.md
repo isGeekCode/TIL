@@ -519,6 +519,8 @@ Flutter를 처음 학습하거나 체계적으로 정리하고 싶은 사용자�
 | ❌  |  ❌  |  🎨  |  2  |  2.6   |        다크모드 & 테마 구성        |           라이트/다크모드 토글 및 ThemeData 적용            |             ThemeData, ThemeMode, Provider             |
 | ✅  |  ❌  |  🧠  |  3  |  3.0   |          App의 시작 흐름           |              main함수로 시작하여 첫화면 띄우기              |           main,   MaterialApp, CupertinoApp            |
 | ✅  |  ❌  |  🧠  |  3  |  3.1   |      상태관리 기본 구조 이해       |                    Stateless 와 Stateful                    |                  setState, initState                   |
+| ❌  |  ❌  |  🧠  |  3  |  3.1   |      상태관리 기본 구조 이해       |                    StatefulWidget의 LifeCycle                    |                  setState, initState                   |
+
 | ❌  |  ❌  |  🧠  |  3  |  3.2   |           상태 변경 실습           |                버튼 클릭 시 텍스트 변경하기                 |             ElevatedButton, Text, setState             |
 | ❌  |  ❌  |  🧠  |  3  |  3.3   |              도전과제              |                  내부 변수로 배경색 바꾸기                  |              Color, Container, 변수 제어               |
 | ❌  |  ❌  |  🧭  |  4  |  4.1   |           네비게이션 1.0           |                Navigator.push()로 화면 이동                 |              Navigator, MaterialPageRoute              |
