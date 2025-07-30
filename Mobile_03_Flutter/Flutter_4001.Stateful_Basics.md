@@ -128,16 +128,17 @@ class _MyCounterState extends State<MyCounter> {
 
 ```mermaid
 graph TD;
-    A[Constructor Function] --> B[createState()]
-    B --> C[initState()]
-    C --> D[didChangeDependencies()]
-    D --> E[build()]
-    E --> F{상태 변경?}
-    F -- Yes --> G[setState()]
+    A["Constructor"] --> B["createState"]
+    B --> C["initState"]
+    C --> D["didChangeDependencies"]
+    D --> E["build"]
+    E --> F{"State Changed?"}
+    F -- Yes --> G["setState"]
     G --> E
-    F -- No --> H[deactivate()]
-    H --> I[dispose()]
-    E --> J[didUpdateWidget()] --> E
+    F -- No --> H["deactivate"]
+    H --> I["dispose"]
+    E --> J["didUpdateWidget"]
+    J --> E
 ```
 
 
