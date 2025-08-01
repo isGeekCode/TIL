@@ -97,6 +97,8 @@ class DetailScreen extends StatelessWidget {
 이 방식은 주로 화면 초기 상태 설정이나 표시할 내용을 외부에서 넘길 때 사용된다.
 
 
+<br><br>
+
 ### 2. 복귀할 페이지로 데이터 반환하기
 새로운 화면에서 어떤 값을 선택하거나 처리한 후, 그 결과를 이전 화면으로 전달해야 할 때 사용합니다.  
 주로 선택 결과, 입력 값, 사용자 행동 결과 등을 이전 화면에서 받아 활용하는 용도로 쓰입니다.
@@ -202,9 +204,7 @@ ElevatedButton(
   },
   child: Text('4. Push And Remove Until'),
 ),
-```
 
-```dart
 // ✅ SecondScreen.dart
 // 👉 단순 push로 이동한 예제 화면
 class SecondScreen extends StatelessWidget {
