@@ -1,5 +1,16 @@
 # Flutter Navigator 1.0 - Push & Pop
 
+<br><br>
+
+
+<img src="https://i.imgur.com/SMO51qX.png" width="500" />
+
+
+
+<br><br>
+
+
+
 ## 개요
 
 Navigator는 Flutter의 화면 전환을 담당하는 핵심 위젯이다.  
