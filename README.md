@@ -1293,7 +1293,8 @@ AR 및 3D 렌더링
 
 
 ## 🔀 Flutter - 화면 전환 흐름
-- [Flutter - 화면 전환(Navigator)](Mobile_03_Flutter/Flutter_1300.Navigator.Basics.md)
+- [Flutter - 화면 전환(Navigator) 1.0](Mobile_03_Flutter/Flutter_1300.Navigator.Basics.md)
+- [Flutter - Dialog](Mobile_03_Flutter/Flutter_1341_AlertDialog_Basics.md)
 
 [\- 👆목차로 돌아가기 \-](#flutter-목차)
 
@@ -1307,7 +1308,7 @@ AR 및 3D 렌더링
 
 <br><br>
 
-## 🎨 Flutter - 애니메이션 & 뷰 효과 구성
+## 🎨 Flutter - 애니메이션 s& 뷰 효과 구성
 
 [\- 👆목차로 돌아가기 \-](#flutter-목차)
 
