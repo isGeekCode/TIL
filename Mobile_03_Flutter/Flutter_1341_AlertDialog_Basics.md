@@ -133,6 +133,8 @@ void _showAlert(BuildContext context) async {
 }
 ```
 
+<br>
+
 ---
 
 ### 🔍 다이얼로그의 결과값을 받는 방식
@@ -397,7 +399,7 @@ ElevatedButton(
 
 ---
 
-## 6. 실무 적용 포인트
+## 실무 적용 포인트
 
 - 다이얼로그 결과는 `await`을 사용해 받을 수 있으므로, 비동기 흐름에 자연스럽게 녹아들 수 있습니다.
 - 사용자 의사를 명확히 묻는 UI (예: 로그아웃, 삭제 등)에 적합합니다.
@@ -405,7 +407,7 @@ ElevatedButton(
 
 ---
 
-## 7. 실습 과제: 사용자 이름 확인 Dialog
+## 실습 과제: 사용자 이름 확인 Dialog
 
 ### 목표
 
@@ -433,10 +435,65 @@ ElevatedButton(
 
 ---
 
-## 8. 확장 개념 / 보충 설명
+### 🔍 다이얼로그 내에서 화면 복귀 처리
+
+예를 들어, 두 번째 페이지 (`SecondPage`)에서 다이얼로그를 띄우고, 사용자의 선택에 따라 첫 번째 화면으로 복귀하고 싶을 때 다음과 같은 흐름으로 구현할 수 있습니다:
+
+```dart
+class SecondPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('SecondPage')),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () async {
+            final confirm = await showDialog<bool>(
+              context: context,
+              builder: (context) => AlertDialog(
+                title: Text("확인 요청"),
+                content: Text("첫 화면으로 돌아가시겠습니까?"),
+                actions: [
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, false),
+                    child: Text("취소"),
+                  ),
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, true),
+                    child: Text("확인"),
+                  ),
+                ],
+              ),
+            );
+
+            if (confirm == true && context.mounted) {
+              Navigator.pop(context); // SecondPage pop → MainScreen으로 복귀
+            }
+          },
+          child: Text("Dialog 열기"),
+        ),
+      ),
+    );
+  }
+}
+```
+
+여기서 주의할 점은 context의 위치입니다.  
+- `showDialog`에 넘기는 context와  
+- 다이얼로그 내부에서 사용하는 `Navigator.pop(context)`의 context는 서로 다르지만,  
+**Flutter에서는 builder에 전달되는 context가 다이얼로그에 대한 새로운 context임을 이해해야 합니다.**
+
+하지만 그 내부에서도 여전히 같은 위젯 트리 상의 context를 참조하기 때문에 `Navigator.pop(context)`는 안전하게 동작합니다.  
+다만, 외부 context(`outerContext`)를 별도로 보존하거나 사용할 필요가 있을 경우 명확하게 구분해 주는 것이 좋습니다.
+
+
+<br><br>
+
+---
+
+## 확장 개념 / 보충 설명
 
 - AlertDialog 외에도 `SimpleDialog`, `CupertinoAlertDialog`, `CustomDialog` 등이 존재합니다.
-
 
 
 
@@ -446,4 +503,3 @@ ElevatedButton(
 
 ## HISTORY
 - 250804 : 최초 작성
-</file>
