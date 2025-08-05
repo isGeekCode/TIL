@@ -523,7 +523,7 @@ Flutter를 처음 학습하거나 체계적으로 정리하고 싶은 사용자�
 | ✅  |  ❌  |  🧠  |  3  |  3.12   |      상태관리 기본 구조 이해       |                    StatefulWidget의 LifeCycle                    |                  setState, initState                   |
 | ❌  |  ❌  |  🧠  |  3  |  3.2   |           상태 변경 실습           |                버튼 클릭 시 텍스트 변경하기                 |             ElevatedButton, Text, setState             |
 | ❌  |  ❌  |  🧠  |  3  |  3.3   |              도전과제              |                  내부 변수로 배경색 바꾸기                  |              Color, Container, 변수 제어               |
-| ✅  |  ❌  |  🧭  |  4  |  4.1   |           네비게이션 1.0           |                Navigator.push()로 화면 이동                 |              Navigator, MaterialPageRoute              |
+| ✅  |  ✅  |  🧭  |  4  |  4.1   |           네비게이션 1.0           |                Navigator.push()로 화면 이동                 |              Navigator, MaterialPageRoute              |
 | ❌  |  ❌  |  🧭  |  4  |  4.2   |           네비게이션 2.0           |               Navigator 2.0 방식 이해와 비교                |              Page, RouteInformationParser              |
 | ❌  |  ❌  |  🧭  |  4  |  4.3   |           go_router 실습           |              go_router로 로그인 → 홈 화면 이동              |                       go_router                        |
 | ✅  |  ❌  |  🧭  |  4  |  4.4   |    조건부 다이얼로그 네비게이션    |          AlertDialog에서 OK 누르면 첫 화면으로 pop          |            AlertDialog, Navigator.popUntil             |
