@@ -38,9 +38,10 @@ Scaffold는 앱 전체 레이아웃의 뼈대를 제공하는 Material 위젯이
 - **AppBar**  
 앱 상단에 위치하는 머리말 영역으로, 제목, 탐색 버튼, 액션 버튼 등을 포함한다. Scaffold의 `appBar` 속성에 전달되어 화면 최상단에 고정된다.   
 
-AppBar는 자동으로 SafeArea 처리를 하며, Drawer가 있으면 자동으로 햄버거 메뉴 버튼을 표시하고, 이전 라우트가 있으면 뒤로가기 버튼을 자동으로 추가한다.    
+AppBar는 자동으로 SafeArea 처리를 하며, Drawer가 있으면 자동으로 햄버거 메뉴 버튼을 표시하고, 이전 라우트가 있으면 뒤로가기 버튼을 자동으로 추가한다.  
+Navigator를 통해 새로운 페이지를 push하면, AppBar는 자동으로 상단에 뒤로가기(←) 버튼을 생성한다. 이 동작은 현재 페이지가 Navigator 스택 위에 쌓인 상태일 때 기본적으로 발생한다.
 
-필요시 `automaticallyImplyLeading: false`로 이 동작을 막을 수 있다.   
+필요시 `automaticallyImplyLeading: false`로 이 동작을 막을 수 있다.
 
 필요시 TabBar를 추가할 수 있다.  이 탭바는 주로 안드로이드에서 사용하며, 해당 페이지의 세부 카테고리를 표현할 때 사용한다.  
 
@@ -238,3 +239,4 @@ AppBar(
 
 ## History
 - 250714 : 초안 작성
+- 250806 : AppBar관련 내용 추가
