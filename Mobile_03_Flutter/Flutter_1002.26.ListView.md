@@ -17,32 +17,38 @@ ListView는 스크롤 가능한 다중 위젯 레이아웃을 구성할 수 있�
 - 주로 수직 방향으로 사용하지만, 수평으로도 구성할 수 있다.
 
 <br><br>
+
 ---
+
 
 ## 3. 만드는 방식 
 
 ListView는 생성 방식에 따라 크게 두 가지로 나뉜다:  
 
-1) 모든 항목을 한 번에 생성하는 **정적 방식**  
-2) 필요한 시점에 항목을 생성하는 **동적 방식**
+- 모든 항목을 한 번에 생성하는 **정적 방식**  
+- 필요한 시점에 항목을 생성하는 **동적 방식**
+
+정적방식은 미리 ListTile 등으로 위젯의 배열을 만들어서 ListView의 `childeren`에 전달하는 구조이다. 
+즉, 데이터 기반으로 위젯배열을 먼저만들고 이를 한번에 렌더링한다. 
+
+반면에 동적 방식은 ListView자체가 itemCount와 ItemBuilder 를 통해 항목 수를 판단하고,
+UI에 표시되는 공간에 해당하는 항목만 위젯으로 생성하여 렌더링한다. 
 
 
-정적 방식은 미리 ListTile 등의 위젯 배열(List<Widget>)을 만들어 ListView의 `children`에 전달하는 구조이다.  
-즉, 데이터를 기반으로 위젯 배열을 먼저 만들고 이를 한 번에 렌더링한다.
+|   구분    |          방식          |       생성 시점        |             추천 상황             |
+|:---------:|:----------------------:|:----------------------:|:---------------------------------:|
+| 정적 방식 | `generate()`, `.map()` | 미리 모두 한 번에 생성 |     항목 수가 적고 단순할 때      |
+| 동적 방식 | `builder`, `separated` |    스크롤 시점 생성    | 항목 수가 많거나 무한 스크롤일 때 |
 
 
-반면 동적 방식은 ListView 자체가 itemCount와 itemBuilder를 통해 항목 수를 판단하고,  
-UI에 표시되는 시점에 해당 항목만 위젯으로 생성하여 렌더링한다.
-
-
-| 구분 | 방식 | 생성 시점  | 추천 상황 |
-|------|------|------------|--------|
-| 정적 방식 | `generate()`, `.map()` | 미리 모두 한 번에 생성  | 항목 수가 적고 단순할 때 |
-| 동적 방식 | `builder`, `separated` | 스크롤 시점 생성  | 항목 수가 많거나 무한 스크롤일 때 |
+실무에서는 성능과 확장성을 고려해 대부분 동적 방식을 사용한다.
 
 
 <br><br>
+
 ---
+
+
 
 ## 4. 예제 코드로 이해하기
 다양한 방식으로 ListView를 구성하는 예제를 통해 실제 동작 방식을 확인할 수 있다.  
@@ -50,6 +56,7 @@ UI에 표시되는 시점에 해당 항목만 위젯으로 생성하여 렌더�
 
 ### 4-1. 단순 텍스트 리스트
 가장 단순한 생성방법이다.반복 횟수만 지정하고, index를 기반으로 항목을 생성할 수 있다.
+
 
 ```dart
 ListView(
@@ -134,7 +141,80 @@ ListView.separated(
 <br><br>
 ---
 
+## 5. 확장 개념 / 보충 설명
+
+### 5-1. 상태 변화를 반영한 동적 리스트 예제
+
+리스트에 항목을 추가하거나 삭제하려면 상태 변경이 필요하므로, 해당 화면은 `StatefulWidget`으로 구성해야 한다.  
+버튼을 눌러 리스트에 항목을 추가하거나 제거하면, `setState()`를 통해 UI가 자동으로 갱신된다.
+
+아래는 추가 버튼과 삭제 버튼을 모두 포함한 예제이다:
+
+```dart
+class ItemListPage extends StatefulWidget {
+  const ItemListPage({super.key});
+
+  @override
+  State<ItemListPage> createState() => _ItemListPageState();
+}
+
+class _ItemListPageState extends State<ItemListPage> {
+  List<String> items = ['사과', '바나나'];
+
+  void _addItem() {
+    setState(() {
+      items.add('항목 ${items.length}');
+    });
+  }
+
+  void _removeItem() {
+    if (items.isNotEmpty) {
+      setState(() {
+        items.removeLast();
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('리스트 추가 / 제거')),
+      body: buildItemList(items),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: _addItem,
+            tooltip: '추가',
+            child: const Icon(Icons.add),
+          ),
+          const SizedBox(width: 12),
+          FloatingActionButton(
+            onPressed: _removeItem,
+            tooltip: '삭제',
+            child: const Icon(Icons.remove),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+Widget buildItemList(List<String> items) {
+  return ListView.builder(
+    itemCount: items.length,
+    itemBuilder: (context, index) {
+      return ListTile(
+        title: Text(items[index]),
+      );
+    },
+  );
+}
+
+```
+
+이처럼 동적 방식은 ListView.builder와 함께 StatefulWidget 및 setState()를 사용하여 실시간으로 UI를 갱신할 수 있다.
 
 
-## 9. HISTORY
+## HISTORY
 - 250806 : 최초 작성
