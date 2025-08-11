@@ -8,15 +8,15 @@ Flutter 앱 전체에서 하나의 인스턴스를 사용해 특정 코드 구�
 ```dart
 /// [TimeTracker]
 ///
-/// Singleton class for tracking elapsed time between `start()` and `end()` calls.
+/// `start()`와 `end()` 호출 사이의 경과 시간을 추적하는 싱글톤 클래스입니다.
 ///
 /// Usage:
 /// TimeTracker.instance.start('Loading Data');
-/// // ... code to measure ...
+///  ... 측정할 코드 ...
 /// TimeTracker.instance.end();
 ///
 class TimeTracker {
-  /// The singleton instance of [TimeTracker].
+
   static final TimeTracker instance = TimeTracker._internal();
 
   int? _startTimeMillis;
@@ -26,26 +26,18 @@ class TimeTracker {
   /// Private constructor.
   TimeTracker._internal();
 
-  /// Starts tracking time.
-  ///
-  /// Optionally provide a [label] for the operation being measured.
-  ///
   void start([String? label]) {
     _startTimeMillis = DateTime.now().millisecondsSinceEpoch;
     _label = label ?? '';
     _endTimeMillis = null;
   }
 
-  /// Ends tracking and logs the elapsed time in milliseconds using [bLogger].
-  ///
-  /// If called before [start()], logs a warning.
-  /// If [label] is provided, only ends if it matches the stored label.
   void end([String? label]) {
     if (_startTimeMillis == null) {
       bLogger('Warning: TimeTracker.end() called before start()', 'TimeTracker');
       return;
     }
-    // If a label is provided, check if it matches the stored label
+    // 초기화
     if (label != null) {
       if (_label != label) {
         bLogger('Warning: TimeTracker.end() label "$label" does not match started label "${_label ?? ''}"', 'TimeTracker');
