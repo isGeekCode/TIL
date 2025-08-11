@@ -1,4 +1,3 @@
-
 # TimeTracker
 
 `TimeTracker`는 코드 실행 시간을 측정하고 로그로 출력하는 싱글톤 클래스입니다.  
@@ -57,6 +56,10 @@ class TimeTracker {
 
 final tt = TimeTracker.instance;
 ```
+
+<br><br>
+
+---
 
 ## 4. 예제 UI 코드
 
@@ -127,8 +130,90 @@ class _MainScreenState extends State<MainScreen> {
 }
 ```
 
+<br><br>
+
 ---
 
-## HISTORY
+## 5. 다이얼로그로 경과 시간 표시하기
 
-- 250811: 최초 작성 및 기본 기능 구현 
+이 버전의 `TimeTracker`는 `end()` 메서드에 `BuildContext`를 전달받아, 측정된 경과 시간을 `AlertDialog`로 화면에 표시합니다.  
+이렇게 하면 로그 출력뿐 아니라 사용자에게도 실행 시간을 바로 보여줄 수 있습니다.
+
+```dart
+import 'package:flutter/material.dart';
+
+class TimeTracker {
+
+  static final TimeTracker instance = TimeTracker._internal();
+
+  int? _startTimeMillis;
+  int? _endTimeMillis;
+  String? _label;
+
+  TimeTracker._internal();
+
+  void start([String? label]) {
+    _startTimeMillis = DateTime.now().millisecondsSinceEpoch;
+    _label = label ?? '';
+    _endTimeMillis = null;
+  }
+
+  void end(BuildContext context, [String? label]) {
+    if (_startTimeMillis == null) {
+      bLogger('Warning: TimeTracker.end() called before start()', 'TimeTracker');
+      return;
+    }
+    if (label != null && _label != label) {
+      bLogger('Warning: TimeTracker.end() label "$label" does not match started label "${_label ?? ''}"', 'TimeTracker');
+      return;
+    }
+    _endTimeMillis = DateTime.now().millisecondsSinceEpoch;
+    final elapsed = _endTimeMillis! - _startTimeMillis!;
+    final usedLabel = _label != null && _label!.isNotEmpty ? _label : 'operation';
+    bLogger('Elapsed time for $usedLabel: ${elapsed}ms', 'TimeTracker');
+
+    // 다이얼로그 표시
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('TimeTracker'),
+        content: Text('Elapsed time for $usedLabel: ${elapsed}ms'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
+
+    _startTimeMillis = null;
+    _endTimeMillis = null;
+    _label = null;
+  }
+}
+
+final tt = TimeTracker.instance;
+```
+
+### UI 코드에서 사용 예
+
+```dart
+class _MainScreenState extends State<MainScreen> {
+  void _startPressed() {
+    tt.start('Test Operation');
+  }
+
+  void _endPressed() {
+    tt.end(context, 'Test Operation');
+  }
+
+  // ... 이하 동일 ...
+}
+```
+
+---
+
+
+## HISTORY
+- 250811 : 초안작성
