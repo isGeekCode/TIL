@@ -176,23 +176,7 @@ class CounterText extends StatelessWidget {
 
 ---
 
-## 실무 적용 포인트
-- 상태 변경이 UI에 미치는 영향을 명확히 파악하고, 불필요한 빌드를 줄이기 위해 위젯을 분리하세요.
-- `setState`는 간단한 상태 관리에 적합하며, 복잡한 상태 관리가 필요할 경우 Provider, Bloc 등 다른 상태 관리 라이브러리를 고려하세요.
-- 비동기 작업 후 `setState` 호출 시 위젯이 마운트 상태인지 확인하여 예외를 방지하세요.
 
-<br><br>
-
----
-
-## 요약 정리
-- `setState`는 StatefulWidget의 상태를 변경하고 UI를 갱신하는 기본 메서드입니다.
-- 상태 변경 시 `build` 메서드가 다시 실행되어 UI가 업데이트됩니다.
-- 최소 빌드 영역을 설계하여 성능 최적화를 할 수 있습니다.
-- `setState` 호출 시 위젯의 마운트 상태를 확인하는 것이 안전합니다.
-
-<br><br>
----
 
 
 ## 실습 과제
@@ -202,7 +186,137 @@ class CounterText extends StatelessWidget {
 
 <br><br>
 
----
+## 실습 과제 : 다양한 state 사용
 
-## HISTORY
-- 2024-06-XX: Flutter setState 기본 개념 및 활용법 문서 작성 및 예제 추가.
+두 개의 counter 변수를 갖고 화면 업데이트하기
+
+```dart
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
+
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  int counter = 0;
+  int counter2 = 0;
+
+  void _updateCounter(int rowNum, int delta) {
+    setState(() {
+      if (rowNum == 0) {
+        counter = (counter + delta).clamp(0, 5);
+      } else {
+        counter2 = (counter2 + delta).clamp(0, 5);
+      }
+    });
+  }
+
+  bool _isMaximumed(int counterNum) {
+    return counterNum >= 5;
+  }
+
+  bool _isMinimumed(int counterNum) {
+    return counterNum <= 0;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Main')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Counter 1 is $counter'),
+            Text('Counter 2 is $counter2'),
+          ],
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.end,
+
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              FloatingActionButton(
+                backgroundColor: _isMaximumed(counter)
+                    ? Colors.grey
+                    : Theme.of(context).colorScheme.primaryContainer,
+                onPressed: _isMaximumed(counter)
+                    ? null
+                    : () => _updateCounter(0, 1),
+                child: Icon(
+                  Icons.add,
+                  color: _isMaximumed(counter)
+                      ? Colors.white
+                      : Theme.of(context).colorScheme.secondary,
+                ),
+              ),
+              SizedBox(width: 40),
+
+              FloatingActionButton(
+                backgroundColor: _isMinimumed(counter)
+                    ? Colors.grey
+                    : Theme.of(context).colorScheme.primaryContainer,
+                onPressed: _isMinimumed(counter)
+                    ? null
+                    : () => _updateCounter(0, -1),
+                child: Icon(
+                  Icons.remove,
+                  color: _isMinimumed(counter)
+                      ? Colors.white
+                      : Theme.of(context).colorScheme.secondary,
+                ),
+              ),
+            ],
+          ),
+
+          SizedBox(height: 40),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              FloatingActionButton(
+                backgroundColor: _isMaximumed(counter2)
+                    ? Colors.grey
+                    : Theme.of(context).colorScheme.primaryContainer,
+                onPressed: _isMaximumed(counter2)
+                    ? null
+                    : () => _updateCounter(1, 1),
+                child: Icon(
+                  Icons.add,
+                  color: _isMaximumed(counter2)
+                      ? Colors.white
+                      : Theme.of(context).colorScheme.secondary,
+                ),
+              ),
+              SizedBox(width: 40),
+
+              FloatingActionButton(
+                backgroundColor: _isMinimumed(counter2)
+                    ? Colors.grey
+                    : Theme.of(context).colorScheme.primaryContainer,
+                onPressed: _isMinimumed(counter2)
+                    ? null
+                    : () => _updateCounter(1, -1),
+                child: Icon(
+                  Icons.remove,
+                  color: _isMinimumed(counter2)
+                      ? Colors.white
+                      : Theme.of(context).colorScheme.secondary,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+/Users/banghyeonseok/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/TIL_Server/TIL
+
+```
+

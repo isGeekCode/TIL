@@ -62,6 +62,10 @@
 ## 기타 개발/Git
 [# 깃허브란?](https://h1guitar.tistory.com/30)
 [# 깃허브의 메뉴소개 및 로컬저장소, 이슈관리](https://h1guitar.tistory.com/31)
+[# git pull 실패 - You have not concluded your merge (MERGE_HEAD exists)](https://h1guitar.tistory.com/85)
+
+## Self/메타인지
+[# 면접을 통한 피드백](https://h1guitar.tistory.com/90)
 
 ## 모바일 앱개발/Swift
 [# 명명법 / 콘솔로그 / 문자열 보간법](https://h1guitar.tistory.com/32)
@@ -118,26 +122,22 @@
 
 
 
-[# 클래스상속은 언제 하면 좋을까?](https://h1guitar.tistory.co
+[# 클래스상속은 언제 하면 좋을까?](https://h1guitar.tistory.co)
 [생성자 이해하기, 2-phase Initialization, Convenience Initializer](https://h1guitar.tistory.com/76)
 [원피스 현상금 랭킹앱 만들기(1) - 테이블뷰 기초개념](https://h1guitar.tistory.com/79)
 [# 원피스 현상금 랭킹앱 만들기(2) - 테이블뷰](https://h1guitar.tistory.com/80)
 [원피스 현상금 랭킹앱 만들기(3) - 테이블뷰 프로토콜](https://h1guitar.tistory.com/81)
 [# 원피스 현상금 랭킹앱 만들기(4) - 커스텀셀](https://h1guitar.tistory.com/82)
-[](https://h1guitar.tistory.com/83)
-[](https://h1guitar.tistory.com/84)
-[](https://h1guitar.tistory.com/85)
-[](https://h1guitar.tistory.com/86)
-[](https://h1guitar.tistory.com/87)
-[](https://h1guitar.tistory.com/88)
+[원피스 현상금 랭킹앱 만들기(5) - 디테일뷰 모달로 띄우기](https://h1guitar.tistory.com/83)
+[원피스 현상금 랭킹앱 만들기(6) - 뷰컨트롤러 간 데이터 전달하기](https://h1guitar.tistory.com/84)
+[# 원피스 현상금 랭킹앱 만들기(7) - 코드리뷰](https://h1guitar.tistory.com/86)
+[원피스 랭킹 앱 프로젝트 Review (BountyListApp)](https://h1guitar.tistory.com/87)
+[# 투두리스트앱 만들기(구현계획)](https://h1guitar.tistory.com/88)
+[# 투두리스트앱 만들기(진행중)](https://h1guitar.tistory.com/89)
+[# 구조체와 클래스 복습](https://h1guitar.tistory.com/91)
+[# arc의 간단 개념](https://h1guitar.tistory.com/92)
 
-[](https://h1guitar.tistory.com/89)
 
-[](https://h1guitar.tistory.com/90)
-
-[](https://h1guitar.tistory.com/91)
-
-[](https://h1guitar.tistory.com/92)
 
 [](https://h1guitar.tistory.com/93)
 
