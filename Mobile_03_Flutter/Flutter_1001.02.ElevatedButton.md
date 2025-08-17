@@ -96,6 +96,44 @@ ElevatedButton(
 
 > ⚠️ `onPressed`는 생략할 수 없으며, null을 명시적으로 지정해야 비활성 상태가 된다.
 
+<br><br>
+
+### 버튼 비활성화시 헷갈릴 수 있는 점
+기능개발을 우선하고 추후에 버튼 활성화 여부를 수정하고자 할 때 자칫 헷갈릴 수 있다.
+
+`onPressed: null`과 `onPressed: () => null`은 비슷해 보이지만 동작이 완전히 다르다.
+
+- **`onPressed: null`**  
+  - 버튼이 완전히 **비활성(disabled)** 상태가 된다.  
+  - 버튼 색상이 흐려지고, 눌러도 아무 반응이 없다.  
+  - **실제로 버튼이 비활성화되어 사용자 입력을 받지 않는다.**
+
+- **`onPressed: () => null`**  
+  - `onPressed`에 함수가 할당되어 있기 때문에 버튼은 **활성(enabled)** 상태로 보인다.  
+  - 버튼을 누르면 함수가 실행되지만, 함수 내용이 아무 동작도 하지 않을 뿐이다.  
+  - 즉, 시각적으로 버튼이 활성 상태이며, 눌렀을 때 "눌림 효과"가 나타난다.
+
+<br>
+
+#### 예시 코드
+```dart
+// 버튼 비활성화
+ElevatedButton(
+  onPressed: null,
+  child: Text('Disabled'),
+)
+
+// 여전히 활성 상태 (누르면 실행되지만 아무 일도 안 함)
+ElevatedButton(
+  onPressed: () => null,
+  child: Text('Still Enabled'),
+)
+```
+
+> ⚠️ **비활성화를 원한다면 반드시 onPressed 자체를 null로 지정해야 한다.**  
+> `onPressed: () => null`은 버튼이 활성 상태로 남으니 주의!
+
+
 <br>
 <br>
 

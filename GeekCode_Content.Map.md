@@ -1,28 +1,18 @@
 
 
 
-
 ## IT Blog
 
-
-
-
 ### Back-End/Python
-
 [python -연산자와 조건문을 이용한 윤년계산기](https://h1guitar.tistory.com/9) 2021. 8. 19.
 
 ### ETC/고민있을때
 [온라인 스마트스토어를 만들면서](https://h1guitar.tistory.com/7) 2019. 7. 22
-
 [지금은 어디쯤 왔을까](https://h1guitar.tistory.com/8) 2019. 9. 22
-
-
 [m1 맥북 프로 장만!! 살땐 좋았지.ㅎㅎㅎ](https://h1guitar.tistory.com/11) 2021. 8. 28
-
 
 ### ETC/정말잡
 [# 자주쓰는 맥 단축키](https://h1guitar.tistory.com/193)
-
 
 ### NONE
 [JavaScript란?](https://h1guitar.tistory.com/12)
@@ -36,6 +26,7 @@
 [(Flutter) SDK설치와 환경변수 설정하기 (2)](https://h1guitar.tistory.com/18)  
 [(Flutter) 안드로이드 스튜디오, 비주얼 스튜디오 코드, 에뮬레이터 설치하기(3)](https://h1guitar.tistory.com/19)  
 [(Flutter) Mac OS 플러터 닥터 설정 및 프로젝트 생성하고 에뮬레이터에서 실행해 보기(4)](https://h1guitar.tistory.com/20)  
+
 
 ## 기타 개발/RPA_UIpath
 [# RPA란?](https://h1guitar.tistory.com/74)
@@ -162,7 +153,6 @@
 [# 안전하게 배열에 접근하는 3가지 방법](https://h1guitar.tistory.com/202)
 
 
-
 ## 모바일 앱개발/objective-c
 [# Objective C 울렁증 극복하기](https://h1guitar.tistory.com/226)
 [# 개발 / 운영서버를 반영하는 변수 만들기](https://h1guitar.tistory.com/229)
@@ -208,6 +198,9 @@
 [# autologin](https://h1guitar.tistory.com/167)
 [로그아웃구현 - push와 present 그리고 NotificationCenter, View의 생명주기](https://h1guitar.tistory.com/169)
 [# 링크에 한글이 있는 경우](https://h1guitar.tistory.com/170)
+[# Dispatch](https://h1guitar.tistory.com/171)
+[# Operation](https://h1guitar.tistory.com/172)
+[# serial(직렬)과 Concurrent(동시)](https://h1guitar.tistory.com/173)
 [# xib의 이름으로 화면전환하기 (present)](https://h1guitar.tistory.com/187)
 [# Progress Bar](https://h1guitar.tistory.com/189)
 [# Progress Bar(2)](https://h1guitar.tistory.com/190)
@@ -284,9 +277,15 @@
 [# 2022 연간계획](https://h1guitar.tistory.com/186)
 [# 2022년 4월 피드백](https://h1guitar.tistory.com/233)
 
-[# Dispatch](https://h1guitar.tistory.com/171)
-[# Operation](https://h1guitar.tistory.com/172)
-[# serial(직렬)과 Concurrent(동시)](https://h1guitar.tistory.com/173)
+
+
+
+## 러너노트 (Learner's Log)/출퇴근 공부
+[백만장자의 씨크릿(1) :손에서 놓아야할 것들을 기억하자](https://h1guitar.tistory.com/244)
+[백만장자의 씨크릿(2) :나를 버틸 수 있게하는 열매와 뿌리](https://h1guitar.tistory.com/245)
+[# 백만장자의 씨크릿(3) :부모님의 정원](https://h1guitar.tistory.com/246)
+[# 백만장자의 씨크릿(4) :나를 증명하는 방법](https://h1guitar.tistory.com/247)
+[백만장자의 씨크릿(5) :백만장자의 씨크릿 : 반항심을 통한 발전은 옳은 것일까?](https://h1guitar.tistory.com/248)
 
 
 
@@ -326,42 +325,31 @@
 
 
 [# iOS 키보드 타입을 더이상 찾아해매지말자.](https://h1guitar.tistory.com/230)
+[# 오토레이아웃 뽀개기](https://h1guitar.tistory.com/235)
+[# 텍스트인코딩에 관하여](https://h1guitar.tistory.com/236)
+[# iOS 날짜정보를 불러와서 비교하기](https://h1guitar.tistory.com/237)
+[(ios)  UIColor와 CgColor의 차이점 설명](https://h1guitar.tistory.com/239)
 
 
 
 
 
 
+[# 애쏘보자들을 위한 깃사용법 - 1](https://h1guitar.tistory.com/234)
+[sourcetree github User.name 변경하기](https://h1guitar.tistory.com/238)
 
-[](https://h1guitar.tistory.com/234)
 
-[](https://h1guitar.tistory.com/235)
 
-[](https://h1guitar.tistory.com/236)
 
-[](https://h1guitar.tistory.com/237)
+[# (Xcode) pragma mark 주석 사용법](https://h1guitar.tistory.com/240)
 
-[](https://h1guitar.tistory.com/238)
+[# UILabel 코드로 만들기](https://h1guitar.tistory.com/241)
 
-[](https://h1guitar.tistory.com/239)
-
-[](https://h1guitar.tistory.com/240)
-
-[](https://h1guitar.tistory.com/241)
-
-[](https://h1guitar.tistory.com/242)
+[# 비전선언문(2022)](https://h1guitar.tistory.com/242)
 
 [](https://h1guitar.tistory.com/243)
 
-[](https://h1guitar.tistory.com/244)
 
-[](https://h1guitar.tistory.com/245)
-
-[](https://h1guitar.tistory.com/246)
-
-[](https://h1guitar.tistory.com/247)
-
-[](https://h1guitar.tistory.com/248)
 
 [](https://h1guitar.tistory.com/249)
 
