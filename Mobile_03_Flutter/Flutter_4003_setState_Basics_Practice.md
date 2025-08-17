@@ -347,3 +347,93 @@ class _MainScreenState extends State<MainScreen> {
     - 남은 시간(초).
 5. “증가 버튼”의 동작: 누를 때마다 counter +1.
 6. setState로 상태를 갱신.
+
+
+
+```dart
+
+
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
+
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  int sum = 0;
+  int remainSeconds = 5;
+
+  bool isValid = false;
+
+  Timer? _timer;
+
+  void _increment() {
+    setState(() {
+      sum++;
+    });
+  }
+
+  void _startTimer() {
+    print('start');
+
+    _stopTimer();
+    setIncrementValid();
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      setState(() {
+        remainSeconds--;
+        if (remainSeconds <= 0) {
+          _stopTimer();
+          remainSeconds = 5;
+          sum = 0;
+        }
+      });
+      print("Timer!! $remainSeconds");
+    });
+  }
+
+  void setIncrementValid() => updateIsValid(true);
+  void setIncrementInvalid() => updateIsValid(false);
+
+  void updateIsValid(bool value) => setState(() => isValid = value);
+
+
+  void _stopTimer() {
+    if (_timer != null && _timer!.isActive) {
+      print('기존 timer stop');
+      setIncrementInvalid();
+      _timer?.cancel();
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Counter is $sum'),
+            Text('남은 시간 : $remainSeconds초'),
+
+            SizedBox(height: 30),
+
+            ElevatedButton(
+              onPressed: !isValid ? null : _increment,
+              child: Text('Increase'),
+            ),
+
+            SizedBox(height: 30),
+
+            ElevatedButton(
+              onPressed: _startTimer,
+              child: Text('start'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+```
