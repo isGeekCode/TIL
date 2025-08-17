@@ -750,3 +750,4 @@ MaterialApp(
 ## History
 - 250708 : 초안 작성
 - 250709 : ElevatedButtonTheme 추가
+- 250818 : 비활성화 관련 내용 추가
