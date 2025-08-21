@@ -437,3 +437,198 @@ class _MainScreenState extends State<MainScreen> {
 }
 
 ```
+
+
+
+## 실습과제 4: FAB + Dialog 기반 ToDo List
+
+
+### 🎯 목표
+
+- FloatingActionButton(+)을 눌러 Dialog를 띄워서 새로운 할 일을 입력/추가하는 방식의 ToDo List 앱 만들기.
+- 리스트가 비어 있을 때는 "일정이 없습니다"라는 안내 메시지를 화면 중앙에 표시.
+    
+
+---
+
+### ✅ 조건
+
+1. **할 일 추가 (FAB & Dialog)**
+    - 화면 우하단에 FloatingActionButton(+) 배치.
+    - 버튼을 누르면 AlertDialog가 뜨고, TextField로 할 일 입력.
+    - “추가” 버튼을 누르면 입력한 내용이 리스트에 반영되고 Dialog 닫힘.    
+    - “취소” 버튼을 누르면 아무 동작 없이 Dialog 닫힘.
+2. 할 일 목록 표시
+    - ListView를 사용해 동적으로 항목 출력.
+    - 항목마다 체크박스와 삭제 버튼 포함.
+3. 완료 표시
+    - 체크박스를 누르면 항목의 완료 여부 변경.    
+    - 완료된 항목은 텍스트에 취소선(strikethrough) 적용.
+4. 삭제 기능
+    - 각 항목 우측의 삭제 버튼을 눌러 해당 할 일을 제거.
+5. 빈 리스트 처리
+    - 리스트가 비어 있으면 "일정이 없습니다"라는 텍스트를 화면 중앙에 표시.
+6. 상태 관리
+    - 오직 setState만 사용.
+    - 할 일은 title(String)과 isDone(bool) 속성을 가진 객체로 관리.
+
+
+```dart
+import 'package:flutter/cupertino.dart';  
+import 'package:flutter/material.dart';  
+  
+main() => runApp(MyApp());  
+  
+class MyApp extends StatelessWidget {  
+  const MyApp({super.key});  
+  
+  @override  
+  Widget build(BuildContext context) {  
+    return MaterialApp(home: MainScreen());  
+  }  
+}  
+  
+class Todo {  
+  final int id;  
+  final String title;  
+  bool isDone;  
+  
+  Todo({required this.id, required this.title, this.isDone = false});  
+}  
+  
+class ViewModel {  
+  List<Todo> todos = [  
+    Todo(id: 1, title: '아침 운동하기'),  
+    Todo(id: 2, title: '출근 준비'),  
+    Todo(id: 3, title: '업무 미팅 참석'),  
+    Todo(id: 4, title: '저녁 장보기'),  
+    Todo(id: 5, title: '자기 전 독서하기'),  
+  ];  
+  
+  
+  void add(String title) {  
+   final id = todos.length + 1;  
+   todos.add(Todo(id: id, title: title));  
+  }  
+  
+  void remove(int index) {  
+    todos.removeAt(index);  
+  }  
+  
+  void toggle(int index) {  
+    todos[index].isDone = !todos[index].isDone;  
+  }  
+  
+  int getTodoLength() {  
+    return todos.length;  
+  }  
+  
+  Todo getTodo(int index) {  
+    return todos[index];  
+  }  
+}  
+  
+class MainScreen extends StatefulWidget {  
+  const MainScreen({super.key});  
+  
+  @override  
+  State<MainScreen> createState() => _MainScreenState();  
+}  
+  
+class _MainScreenState extends State<MainScreen> {  
+final todoViewModel = ViewModel();  
+  
+  @override  
+  Widget build(BuildContext context) {  
+    return Scaffold(  
+      appBar: AppBar(title: Text("To-do List")),  
+      body: Center(  
+        child: todoViewModel.todos.isEmpty  
+            ? Text("일정이 비어있습니다.")  
+            : Padding(  
+                padding: const EdgeInsets.all(8.0),  
+                child: ListView.builder(  
+                  itemCount: todoViewModel.todos.length,  
+                  itemBuilder: (context, index) {  
+                    final todo = todoViewModel.getTodo(index);  
+                    return ListTile(  
+                      title: Text('${todo.id}. ${todo.title}'),  
+                      trailing: Checkbox(value: todo.isDone, onChanged: (value) {  
+                        if (value != null) {  
+                          setState(() {  
+                            todo.isDone = value;  
+                            print('${todo.id} is ${todo.isDone}');  
+                          });  
+                        }  
+                      },),  
+                      onLongPress: () {  
+                        showDialog(context: context, builder: (context) =>  
+                          AlertDialog(  
+                            title: Text('알림'),  
+                            content: Text('삭제하시겠습니까?'),  
+                            actions: [  
+                              _buildCancelButton(context),  
+                              TextButton(onPressed: () {  
+                                setState(() {  
+                                  todoViewModel.remove(index);  
+                                });  
+                                Navigator.pop(context);  
+  
+                              }, child:  
+                              Text('확인')),  
+                            ]  
+                        ));  
+                      },  
+                    );  
+                  },  
+                ),  
+              ),  
+      ),  
+      floatingActionButton: FloatingActionButton(  
+        onPressed: () {  
+          final controller = TextEditingController();  
+  
+          showDialog(  
+            context: context,  
+            builder: (context) => AlertDialog(  
+              title: Text('알림'),  
+              content: TextField(  
+                controller: controller,  
+                decoration: InputDecoration(hintText: '할 일을 입력해주세요'),  
+              ),  
+              actions: [  
+  
+                _buildCancelButton(context),  
+                TextButton(  
+                  onPressed: () {  
+                    final input = controller.text;  
+                    print("input::: $input");  
+                    setState(() {  
+                      todoViewModel.add(input);  
+                    });  
+                    Navigator.pop(context);  
+                  },  
+                  child: Text('확인'),  
+                ),  
+              ],  
+            ),  
+          );  
+          print('clicked');  
+        },  
+        child: Icon(Icons.add),  
+      ),  
+    );  
+  }  
+  
+  Widget _buildCancelButton(BuildContext context) {  
+    return TextButton(  
+      onPressed: () {  
+        print("cancel");  
+        Navigator.pop(context);  
+      },  
+      child: const Text('취소'),  
+    );  
+  }  
+}
+
+```
