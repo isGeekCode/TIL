@@ -1,6 +1,7 @@
 # InheritedWidget 기본 구조와 동작 방식
 
 
+<br>
 
 ## InheritedWidget이 필요한 이유
 
@@ -10,12 +11,12 @@ Flutter에서 상태를 여러 위젯에 공유하려면 단순히 setState만�
 이 문제를 해결하기 위해 InheritedWidget이 등장하였다.
 트리에 Provider를 배치하고, 필요한 곳에서 참조하는 구조이다.
 
-⸻
+<br>
 
-
+---
 ## 동작원리
 
-핵심은 BuildContext.dependOnInheritedWidgetOfExactType<T>() 메서드이다.
+핵심은 `BuildContext.dependOnInheritedWidgetOfExactType<T>()` 메서드이다.
 - Consumer 위젯이 이 메서드를 호출하면, Flutter는 **해당 Consumer가 Provider를 “구독”**하게 만들어 준다.
 - 이후 Provider의 값이 바뀌면, 구독 중인 Consumer가 다시 build되면서 최신 값을 반영한다.
 
@@ -38,6 +39,8 @@ InheritedWidget을 직접 사용할 때는 보통 3개의 역할이 필요하다
     - context.dependOnInheritedWidgetOfExactType로 Provider에 접근한다.
     - Provider로부터 받은 데이터를 UI에 반영한다.
 
+
+<br>
 
 ## 예제코드
 
@@ -117,6 +120,8 @@ class CounterProvider extends InheritedWidget {
 }
 ```
 
+<br>
+
 ### 코드 분석
 - MyApp (State Manager)
     - count 값과 _increment 메서드를 관리한다.
@@ -128,12 +133,6 @@ class CounterProvider extends InheritedWidget {
     - CounterProvider.of(context)로 상태를 받아온다.
     - provider.count를 화면에 출력한다.
     - provider.increment를 버튼에 연결해 값 갱신을 수행한다.
-
-
-6. 정리
-- InheritedWidget은 Provider–Consumer 구조로 상태를 공유하는 핵심 원리이다.
-- 직접 구현하려면 State Manager, Provider, Consumer 세 가지가 필요하다.
-- 이 구조는 이후 Provider 패키지, Riverpod 같은 고급 상태관리의 기반이 된다.
 
 
 <br><br>
