@@ -236,6 +236,284 @@ class AppState extends InheritedNotifier<MyViewModel> {
 
 <br><br>
 
+
+###  실습과제 1
+```dart
+import 'package:flutter/material.dart';  
+  
+main() => runApp(AppRoot());  
+  
+class AppRoot extends StatefulWidget {  
+  const AppRoot({super.key});  
+  
+  @override  
+  State<AppRoot> createState() => _AppRootState();  
+}  
+  
+class _AppRootState extends State<AppRoot> {  
+  bool _isDark = false;  
+  
+  void _toggleThemes() {  
+    setState(() {  
+      _isDark = !_isDark;  
+    });  
+  }  
+  
+  @override  
+  Widget build(BuildContext context) {  
+    return ThemeProvider(_isDark, _toggleThemes, child: const MyApp());  
+  }  
+}  
+  
+class MyApp extends StatefulWidget {  
+  const MyApp({super.key});  
+  
+  @override  
+  State<MyApp> createState() => _MyAppState();  
+}  
+  
+class _MyAppState extends State<MyApp> {  
+  int _count = 0;  
+  
+  void _increment() {  
+    setState(() {  
+      _count++;  
+    });  
+  }  
+  
+  void _decrement() {  
+    setState(() {  
+      _count--;  
+    });  
+  }  
+  
+  @override  
+  Widget build(BuildContext context) {  
+    final provider = ThemeProvider.of(context);  
+  
+    return MaterialApp(  
+      theme: provider.isDark ? ThemeData.dark() : ThemeData.light(),  
+      home: CounterProvider(  
+        _count,  
+        _increment,  
+        _decrement,  
+        child: MainScreen(),  
+      ),  
+    );  
+  }  
+}  
+  
+class ThemeProvider extends InheritedWidget {  
+  final bool isDark;  
+  
+  final void Function() themeToggle;  
+  
+  const ThemeProvider(  
+    this.isDark,  
+    this.themeToggle, {  
+    super.key,  
+    required super.child,  
+  });  
+  
+  static ThemeProvider of(BuildContext context) {  
+    final ThemeProvider? result = context  
+        .dependOnInheritedWidgetOfExactType<ThemeProvider>();  
+    assert(result != null, 'No ThemeProvider found in context');  
+    return result!;  
+  }  
+  
+  @override  
+  bool updateShouldNotify(ThemeProvider oldWidget) {  
+    return isDark != oldWidget.isDark;  
+  }  
+}  
+  
+class CounterProvider extends InheritedWidget {  
+  final int count;  
+  final void Function() onIncrement;  
+  final void Function() onDecrement;  
+  
+  const CounterProvider(  
+    this.count,  
+    this.onIncrement,  
+    this.onDecrement, {  
+    super.key,  
+    required super.child,  
+  });  
+  
+  static CounterProvider of(BuildContext context) {  
+    final CounterProvider? result = context  
+        .dependOnInheritedWidgetOfExactType<CounterProvider>();  
+    assert(result != null, 'No CounterProvider found in context');  
+    return result!;  
+  }  
+  
+  @override  
+  bool updateShouldNotify(CounterProvider oldWidget) {  
+    return count != oldWidget.count;  
+  }  
+}  
+  
+class MainScreen extends StatelessWidget {  
+  const MainScreen({super.key});  
+  
+  @override  
+  Widget build(BuildContext context) {  
+    final provider = CounterProvider.of(context);  
+    final themeProvider = ThemeProvider.of(context);  
+  
+    return Scaffold(  
+      appBar: AppBar(title: Text('Inherited Widget')),  
+      body: Center(child: Text('counter : ${provider.count}')),  
+  
+      floatingActionButton: Column(  
+        mainAxisAlignment: MainAxisAlignment.end,  
+        children: [  
+  
+          FloatingActionButton(  
+            onPressed: provider.onIncrement,  
+            child: Icon(Icons.add),  
+          ),  
+  
+          SizedBox(height: 30),  
+  
+          FloatingActionButton(  
+            onPressed: provider.onDecrement,  
+            child: Icon(Icons.remove),  
+          ),  
+  
+          SizedBox(height: 30),  
+  
+          FloatingActionButton(  
+            onPressed: themeProvider.themeToggle,  
+            child: Icon(  
+              themeProvider.isDark ? Icons.toggle_off : Icons.toggle_on,  
+            ),  
+          ),  
+        ],  
+      ),  
+    );  
+  }  
+}
+```
+
+
+### 과제 리스트만들기
+
+```dart
+import 'package:flutter/material.dart';  
+  
+main() => runApp(MyApp());  
+  
+class MyApp extends StatefulWidget {  
+  const MyApp({super.key});  
+  
+  @override  
+  State<MyApp> createState() => _MyAppState();  
+}  
+  
+class _MyAppState extends State<MyApp> {  
+  List<int> items = [];  
+  
+  void increment() {  
+    setState(() {  
+      items = [...items, items.length + 1];  
+    });  
+  }  
+  
+  void decrement() {  
+    setState(() {  
+      if (items.isNotEmpty) {  
+        final copy = List<int>.of(items);  
+        copy.removeLast();  
+        items = copy;  
+      }  
+    });  
+  }  
+  
+  @override  
+  Widget build(BuildContext context) {  
+    return MaterialApp(  
+      home: ListProvider(  
+        items,  
+        increment,  
+        decrement,  
+        child: const MainScreen(),  
+      ),  
+    );  
+  }  
+}  
+  
+class ListProvider extends InheritedWidget {  
+  final List<int> items;  
+  final void Function() increment;  
+  final void Function() decrement;  
+  
+  const ListProvider(  
+    this.items,  
+    this.increment,  
+    this.decrement, {  
+    super.key,  
+    required super.child,  
+  });  
+  
+  static ListProvider of(BuildContext context) {  
+    final ListProvider? result = context  
+        .dependOnInheritedWidgetOfExactType<ListProvider>();  
+    assert(result != null, 'No listProvider found in context');  
+    return result!;  
+  }  
+  
+  @override  
+  bool updateShouldNotify(ListProvider oldWidget) {  
+    return items != oldWidget.items;  
+  }  
+}  
+  
+class MainScreen extends StatefulWidget {  
+  const MainScreen({super.key});  
+  
+  @override  
+  State<MainScreen> createState() => _MainScreenState();  
+}  
+  
+class _MainScreenState extends State<MainScreen> {  
+  @override  
+  Widget build(BuildContext context) {  
+    final provider = ListProvider.of(context);  
+  
+    return Scaffold(  
+      appBar: AppBar(title: Text('MainScreen')),  
+      body: Center(  
+        child: ListView.builder(  
+          itemCount: provider.items.length,  
+          itemBuilder: (context, index) {  
+            return ListTile(title: Text('Item ${provider.items[index]}'));  
+          },  
+        ),  
+      ),  
+  
+      floatingActionButton: Column(  
+        mainAxisAlignment: MainAxisAlignment.end,  
+        children: [  
+          FloatingActionButton(  
+            onPressed: provider.increment,  
+            child: Icon(Icons.add),  
+          ),  
+          SizedBox(height: 30),  
+  
+          FloatingActionButton(  
+            onPressed: provider.decrement,  
+            child: Icon(Icons.remove),  
+          ),  
+        ],  
+      ),  
+    );  
+  }  
+}
+
+```
+
 ---
 
 
