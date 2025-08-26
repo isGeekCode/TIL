@@ -1,6 +1,6 @@
-# InheritedNotifier 기본 구조와 동작 방식
+4# InheritedNotifier 기본 구조와 동작 방식
 
-## 개념
+## 개념 소개
 
 `InheritedNotifier`는 Flutter에서 상태 관리를 위해 사용되는 위젯 중 하나로, `ChangeNotifier`를 기반으로 하여 데이터의 변경을 감지하고 이를 하위 위젯들에게 효율적으로 전달하는 역할을 합니다. `InheritedWidget`과 `ChangeNotifier`의 장점을 결합한 형태로, 상태가 변경될 때마다 하위 위젯들을 자동으로 리빌드하게 만들어 UI의 일관성을 유지합니다.
 
@@ -24,7 +24,7 @@
 
 ---
 
-## 구조
+## 기본 구조
 
 ```
 InheritedNotifier<T extends ChangeNotifier>
@@ -122,7 +122,7 @@ class MyApp extends StatelessWidget {
 
 ---
 
-## 비교
+## 비교 분석
 
 | 구분              | InheritedWidget                  | InheritedNotifier               | Provider (패키지)                |
 |-----------------|-------------------------------|-------------------------------|-------------------------------|
@@ -134,37 +134,7 @@ class MyApp extends StatelessWidget {
 
 ---
 
-## 실습 과제
-
-1. `InheritedNotifier`를 사용하여 테마 색상을 변경하는 앱을 만들어보세요.  
-   - `ChangeNotifier`를 사용해 테마 색상 값을 관리합니다.  
-   - 버튼을 눌러 색상을 변경하면 앱 전체가 변경된 색상으로 리빌드됩니다.
-
-2. `InheritedNotifier`와 `InheritedWidget`을 각각 사용해 간단한 상태 관리를 구현해보고, 두 방식의 차이를 코드와 실행 결과로 비교해보세요.
-
-3. `CounterNotifier`에 `decrement()` 메서드를 추가하고, UI에 감소 버튼을 추가하여 상태 변경이 정상적으로 반영되는지 확인하세요.
-
----
-
-## 확장 개념
-
-- **`InheritedNotifier`의 재사용성**  
-  `InheritedNotifier`는 여러 `ChangeNotifier`를 조합하여 복합 상태 관리에도 활용할 수 있습니다. 예를 들어, 여러 개의 `ChangeNotifier`를 하나의 상위 `ChangeNotifier`로 묶어 관리할 수 있습니다.
-
-- **`InheritedNotifier`와 `Provider` 패키지**  
-  Flutter 커뮤니티에서는 `InheritedNotifier`를 기반으로 한 `Provider` 패키지를 널리 사용합니다. `Provider`는 `InheritedNotifier`의 복잡성을 감추고, 더 많은 기능과 편의성을 제공합니다.
-
-- **성능 최적화**  
-  `InheritedNotifier`는 상태가 변경될 때 의존하는 하위 위젯만 리빌드하지만, 너무 많은 위젯이 의존성을 등록하면 성능 저하가 발생할 수 있습니다. 따라서 적절한 위젯 분리와 의존성 관리가 필요합니다.
-
-- **다른 ChangeNotifier 파생 클래스와 결합**  
-  `ValueNotifier`, `Listenable` 등 `ChangeNotifier`를 확장한 다양한 클래스를 `InheritedNotifier`와 함께 사용할 수 있습니다. 이를 통해 상태 관리의 유연성을 높일 수 있습니다.
-
----
-
-`InheritedNotifier`는 Flutter에서 상태 변경을 효율적으로 알리고, UI를 자동으로 갱신하는 강력한 도구입니다. 이를 이해하고 활용하면, 복잡한 상태 관리도 간결하고 명확하게 구현할 수 있습니다.
-
-## InheritedWidget 대비 개선점과 코드 차이
+## 기존 방식 대비 개선점
 
 - 리빌드 범위 최소화 (필요한 하위만 리빌드)
 - 부모 위젯 리빌드 불필요 (상태 변경 시 provider 자체는 리빌드되지 않음)
@@ -318,6 +288,10 @@ class CounterWidget extends StatelessWidget {
   - before: 테스트 어려움, 역할 혼재  
   - after: 상태/로직 분리로 단위 테스트·재사용 용이
 
+---
+
+## 마이그레이션 체크리스트 + 성능 팁
+
 ### 마이그레이션 체크리스트
 
 1. 기존 상태(`int count` 등)를 `ChangeNotifier` 하위 클래스로 이전
@@ -333,16 +307,44 @@ class CounterWidget extends StatelessWidget {
 - selector 패턴 또는 위젯 분리로 불필요한 리빌드 방지(부분 위젯만 구독).
 - 리스트/맵 등 컬렉션 갱신 시, 변경 후에만 `notifyListeners()` 호출(불필요한 알림 최소화).
 
-
+---
 
 ## 보일러플레이트와 Provider 패키지
 
 `InheritedWidget`이나 `InheritedNotifier`를 직접 구현하면 `Provider` 클래스를 정의하고, `of(context)` 메서드를 작성하며, `updateShouldNotify`를 구현하는 등의 반복적인 보일러플레이트 코드가 발생합니다. 이러한 작업은 상태 관리를 위해 필수적이지만, 코드가 길어지고 복잡해질 수 있습니다.
 
-
 ### Provider 패키지
 
 `Provider` 패키지는 Flutter에서 상태 관리를 간편하게 해주는 라이브러리로, `InheritedNotifier`를 기반으로 하면서 보일러플레이트를 줄이고 사용성을 크게 향상시켰습니다. `ChangeNotifierProvider`와 `Consumer` 위젯을 통해 상태를 쉽게 제공하고 구독할 수 있습니다.
 
+---
 
+## 실습 과제
 
+1. `InheritedNotifier`를 사용하여 테마 색상을 변경하는 앱을 만들어보세요.  
+   - `ChangeNotifier`를 사용해 테마 색상 값을 관리합니다.  
+   - 버튼을 눌러 색상을 변경하면 앱 전체가 변경된 색상으로 리빌드됩니다.
+
+2. `InheritedNotifier`와 `InheritedWidget`을 각각 사용해 간단한 상태 관리를 구현해보고, 두 방식의 차이를 코드와 실행 결과로 비교해보세요.
+
+3. `CounterNotifier`에 `decrement()` 메서드를 추가하고, UI에 감소 버튼을 추가하여 상태 변경이 정상적으로 반영되는지 확인하세요.
+
+---
+
+## 확장 개념
+
+- **`InheritedNotifier`의 재사용성**  
+  `InheritedNotifier`는 여러 `ChangeNotifier`를 조합하여 복합 상태 관리에도 활용할 수 있습니다. 예를 들어, 여러 개의 `ChangeNotifier`를 하나의 상위 `ChangeNotifier`로 묶어 관리할 수 있습니다.
+
+- **`InheritedNotifier`와 `Provider` 패키지**  
+  Flutter 커뮤니티에서는 `InheritedNotifier`를 기반으로 한 `Provider` 패키지를 널리 사용합니다. `Provider`는 `InheritedNotifier`의 복잡성을 감추고, 더 많은 기능과 편의성을 제공합니다.
+
+- **성능 최적화**  
+  `InheritedNotifier`는 상태가 변경될 때 의존하는 하위 위젯만 리빌드하지만, 너무 많은 위젯이 의존성을 등록하면 성능 저하가 발생할 수 있습니다. 따라서 적절한 위젯 분리와 의존성 관리가 필요합니다.
+
+- **다른 ChangeNotifier 파생 클래스와 결합**  
+  `ValueNotifier`, `Listenable` 등 `ChangeNotifier`를 확장한 다양한 클래스를 `InheritedNotifier`와 함께 사용할 수 있습니다. 이를 통해 상태 관리의 유연성을 높일 수 있습니다.
+
+---
+
+`InheritedNotifier`는 Flutter에서 상태 변경을 효율적으로 알리고, UI를 자동으로 갱신하는 강력한 도구입니다. 이를 이해하고 활용하면, 복잡한 상태 관리도 간결하고 명확하게 구현할 수 있습니다.
