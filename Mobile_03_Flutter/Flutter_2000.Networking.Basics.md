@@ -4,7 +4,16 @@
 
 ## 📌 개요
 
-Flutter 앱에서는 외부 서버와 데이터를 주고받기 위해 주로 HTTP 기반의 RESTful API를 사용한다. 이 문서에서는 Flutter에서의 네트워킹 개념과 기본 HTTP 요청 처리 흐름을 설명한다.
+
+Flutter 앱에서는 외부 서버와 데이터를 주고받기 위해 주로 HTTP 기반의 RESTful API를 사용한다. 
+
+> **용어 정리**  
+> - **클라이언트(Client)**: 요청(Request)을 보내는 쪽 → Flutter 앱  
+> - **서버(Server)**: 요청을 받아 응답(Response)을 돌려주는 쪽 → 백엔드 API  
+>
+> ⚠️ 주의: 여기서 클라이언트/서버는 “갑/을” 관계가 아니라, **누가 먼저 요청을 시작하느냐**의 역할 기준이다.
+
+
 
 ---
 
@@ -13,6 +22,36 @@ Flutter 앱에서는 외부 서버와 데이터를 주고받기 위해 주로 HT
 - 클라이언트(Flutter 앱)가 서버에 요청(Request)을 보내고, 서버는 응답(Response)을 반환하는 구조
 - 주로 JSON 형식의 데이터를 주고받음
 - 대표적인 통신 방식: RESTful API (GET, POST, PUT, DELETE)
+
+---
+
+### 📌 Flutter에서의 네트워킹 기본 절차
+
+1. 클라이언트(앱)가 서버에 **요청(Request)** 을 보낸다.
+2. 서버는 요청을 받아 **응답(Response)** 을 돌려준다.
+3. 응답 데이터는 보통 **JSON 문자열**로 오며, 이를 Dart에서 문자열 → JSON 객체(Map/List)로 변환한다.
+4. 변환된 데이터를 앱의 모델 클래스에 매핑해 사용한다.
+
+### 무설치
+
+Flutter에는 기본적으로 `dart:io` 라이브러리가 있어서, 별도 패키지 설치 없이도 네트워크 요청이 가능하다.
+
+```dart
+import 'dart:io';
+import 'dart:convert';
+
+void main() async {
+  final client = HttpClient();
+  final request = await client.getUrl(Uri.parse('https://jsonplaceholder.typicode.com/posts/1'));
+  final response = await request.close();
+
+  final body = await response.transform(utf8.decoder).join();
+  final data = jsonDecode(body); // Map<String, dynamic>
+  print(data['title']);
+}
+```
+
+👉 하지만 코드가 장황하고 관리가 불편하기 때문에, 보통은 **http 패키지**나 **Dio 패키지**를 설치해서 더 간결하게 작성한다.
 
 ---
 
@@ -35,14 +74,26 @@ HTTP 응답 데이터는 JSON 형태로 오는데, 그 구조에 따라 처리 �
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-Future<void> fetchUserData() async {
-    final response = await http.get(Uri.parse('https://example.com/user'));
-
-    if (response.statusCode == 200) {
-    final data = jsonDecode(response.body); // Map<String, dynamic>
-    print('User name: ${data['name']}');
-    }
+Future<void> fetchData() async {  
+  const url = 'https://jsonplaceholder.typicode.com/posts/1';  
+  final response = await http.get(Uri.parse(url));  
+  
+  if (response.statusCode == 200) {  
+    final data = jsonDecode(response.body); // Map<String, dynamic>  
+    print('User name: ${data['title']}');  
+  }  
 }
+
+/*
+{
+  "userId": 1,
+  "id": 1,
+  "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+  "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+*/
+
+
 ```
 
 #### 📌 2. JSON 리스트 (List) 형태 응답

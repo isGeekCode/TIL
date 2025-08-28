@@ -267,6 +267,182 @@ Flutter 앱에서 디바이스(OS 기반) 기능 및 외부 SDK/API를 연동하
 이 가이드는 Flutter 문서 관리와 확장을 체계적으로 유지하기 위해 가장 앞에 위치합니다。
 
 
+## 동시성 관련 로드맵
+
+기초 (입문 · 핵심 개념)
+- Flutter_2000.Networking.Basics.md → 네트워크 기초 
+- Flutter_2001.Async.Overview.md → 비동기 개념 지도(Future/Stream/Isolate, 언제 무엇을 쓰나)
+- Flutter_2001.1.Future.AsyncAwait.Basics.md → Future 기본, async/await 규칙, 반환 타입 정리
+- Flutter_2002.Dio.Basics.md → Dio 기본
+- Flutter_2003.Future.ThenVsAwait.md → then 체인 vs async/await 비교, 가독성/예외처리 차이
+- Flutter_2004.Async.ErrorHandling.md → try/on/catch/finally, StackTrace, rethrow 패턴
+
+응용 (패턴 · 실전 코드)
+- Flutter_2004_Sequential_vs_Parallel.md — 순차(await) vs 병렬(Future.wait), 성능/주의점
+- Flutter_2005_Stream_Basics.md — 단발성(Future) vs 다발성(Stream), await for, listen
+- Flutter_2006_StreamController_Broadcast.md — StreamController, 단일/브로드캐스트, 변환(map, where)
+- Flutter_2007_FutureBuilder_Recipes.md — FutureBuilder 상태 설계(로딩/성공/실패), 실수 패턴 교정
+- Flutter_2008_StreamBuilder_Recipes.md — StreamBuilder 지속 업데이트 UI, 구독/해제 주의점
+- Flutter_2009_EventLoop_Microtask.md — 이벤트 루프, microtask vs event queue, scheduleMicrotask
+
+고급 (성능 · 구조 · 테스트)
+- Flutter_2010_Timeout_Cancel_Retry.md — timeout, 취소 토큰(대안), 재시도(backoff) 패턴
+- Flutter_2011_Async_in_Widget_Lifecycle.md — initState/dispose에서의 비동기, 메모리릭·race 방지
+- Flutter_2012_Isolates_and_compute.md — Isolate/compute로 메인 스레드 블로킹 방지
+- Flutter_2013_Async_Performance_Tips.md — jank 방지, 배치 처리, 디바운스/스로틀
+- Flutter_2014_Testing_Async.md — 비동기 유닛/위젯 테스트, pump/pumpAndSettle, fake async
+
+연계 (네트워크/상태관리)
+- Flutter_2015_Dio_with_Async_Patterns.md — Dio + async 베스트 프랙티스(Interceptor/에러모델)
+- Flutter_2016_Result_Either_ErrorModel.md — 성공/실패 타입 모델링(Result/Either) + UI 연동
+- Flutter_2017_Async_with_Provider_Riverpod.md — FutureProvider/StreamProvider, cancel-safe 설계
+- Flutter_2018_Async_File_IO.md — 파일 읽기/쓰기 비동기 패턴, isolate로 파싱 오프로딩
+- Flutter_2019_Concurrency_Race_Conditions.md — 중복 클릭·중복 요청, 최신만 반영 패턴(switchMap 유사)
+
+⸻
+
+보조 링크(카탈로그 교차참조)
+- 1011 Async 위젯과 상호 링크: FutureBuilder, StreamBuilder 문서는 1000번대(위젯 카탈로그)에도 요약 카드로 두고, 자세한 내용은 2007/2008로 점프하도록 앵커 연결.
+
+
+## 동시성 로드맵 – 실행 가이드 (메타 + 체크박스 + 미션)
+
+> 체크박스 상태: [ ] 예정  [~] 작성 중  [x] 완료
+
+### 기초 (입문 · 핵심 개념)
+- [ ] **Flutter_2000.Networking.Basics.md**
+  - **목표**: HTTP/REST 개념, `http`/Dio 개요, JSON 구조(Map/List) 분기 이해
+  - **키워드**: REST, HTTP 메서드, JSON, `http` 패키지
+  - **예상소요**: 40m
+  - **선행지식**: Dart 기본, 비동기 기초(Future 개념)
+  - **실습(필수)**: JSON 객체/리스트 응답 각각 파싱, 상태코드 분기 처리
+  - **실습(심화)**: 모델 `fromJson/toJson` 작성 후 리스트 매핑
+  - **링크**: 2002 Dio Basics ↔ 3000 JSON 파싱, 2007 FutureBuilder
+
+- [ ] **Flutter_2001.Async.Overview.md**
+  - **목표**: Future/Stream/Isolate 개념 지도와 선택 기준 확립
+  - **키워드**: 단발성/다발성, 메인스레드, 오프로딩
+  - **예상소요**: 30m
+  - **실습(필수)**: `Future.delayed(300ms)` → "hello" 로그  
+  - **실습(심화)**: `Stream.periodic` 5회 카운트 → 콘솔  
+  - **링크**: 2001.1 Async/Await Basics, 2005 Stream Basics(예고)
+
+- [ ] **Flutter_2001.1.Future.AsyncAwait.Basics.md**
+  - **목표**: async/await 규칙, `Future<T>` 반환/호출 패턴 이해
+  - **키워드**: async 필요조건, await/then 비교, 불필요한 await
+  - **예상소요**: 40m
+  - **실습(필수)**: `Future<int>` 500ms 뒤 42 리턴 → 버튼 클릭 출력
+  - **실습(심화)**: try/catch로 실패 흐름 가짜 처리
+  - **링크**: 2007 FutureBuilder, 2003 ThenVsAwait
+
+- [ ] **Flutter_2002.Dio.Basics.md**
+  - **목표**: Dio 기본 사용(GET/POST), BaseOptions, LogInterceptor, 커스텀 Interceptor, 싱글턴
+  - **키워드**: Dio, BaseOptions, InterceptorsWrapper, LogInterceptor, Singleton
+  - **예상소요**: 60m
+  - **실습(필수)**: `GET /images/search` 1·5건 호출 후 URL 추출
+  - **실습(심화)**: `ApiClient` 싱글턴으로 공통 헤더·타임아웃 구성, 로그 커스터마이즈
+  - **링크**: 2015 Dio with Async Patterns, 2007 FutureBuilder
+
+- [ ] **Flutter_2003.Future.ThenVsAwait.md**
+  - **목표**: then 체인 vs await 가독성/예외 처리 비교
+  - **키워드**: 콜백 체인, catchError, 가독성
+  - **예상소요**: 25m
+  - **실습(필수)**: 동일 기능을 then/await 2버전으로 작성, 로그 순서 비교
+  - **실습(심화)**: 에러 발생 시 두 방식의 스택트레이스 차이 캡처
+
+- [ ] **Flutter_2004.Async.ErrorHandling.md**
+  - **목표**: try/on/catch/finally, rethrow, StackTrace
+  - **키워드**: 도메인에러→UI메시지 매핑
+  - **예상소요**: 35m
+  - **실습(필수)**: `risky()`에서 Exception 던지고 UI에 안전 표시  
+  - **실습(심화)**: `finally`에서 로딩 off 보장하는 미니 헬퍼
+
+---
+
+### 응용 (패턴 · 실전 코드)
+
+- [ ] **Flutter_2004_Sequential_vs_Parallel.md**
+  - **목표**: 순차(await 체인) vs 병렬(Future.wait) 체감
+  - **벤치마크**: `DateTime.now()`로 총 소요 로그
+  - **실습(필수)**: 500ms/700ms 작업 순차 vs 병렬 시간 비교
+  - **실습(심화)**: 일부 실패 시 부분성공 전략(성공만 필터)
+
+- [ ] **Flutter_2005_Stream_Basics.md**
+  - **목표**: Future↔Stream 차이, await for, listen
+  - **실습(필수)**: 300ms 간격 카운터 1..5 `await for` 출력
+  - **실습(심화)**: `listen`으로 구독 시작/해제 버튼
+
+- [ ] **Flutter_2006_StreamController_Broadcast.md**
+  - **목표**: 단일 vs broadcast, 변환(map, where)
+  - **실습(필수)**: Controller → 두 위젯 동시 구독
+  - **실습(심화)**: `where`로 짝수만 UI 반영
+
+- [ ] **Flutter_2007_FutureBuilder_Recipes.md**
+  - **목표**: 로딩/성공/실패 3상태 안전 패턴
+  - **안티패턴**: `future` 재생성, 빌드 내 무한 재호출 방지
+  - **실습(필수)**: 성공/실패 토글되는 목 API로 카드 UI
+
+- [ ] **Flutter_2008_StreamBuilder_Recipes.md**
+  - **목표**: 실시간 업데이트/구독수명 관리
+  - **실습(필수)**: 타이머 스트림 + 일시정지/재개
+  - **주의**: dispose에서 구독 해제
+
+- [ ] **Flutter_2009_EventLoop_Microtask.md**
+  - **목표**: event queue vs microtask, scheduleMicrotask
+  - **실습(필수)**: `print` 순서 실험(then vs scheduleMicrotask)
+
+---
+
+### 고급 (성능 · 구조 · 테스트)
+
+- [ ] **Flutter_2010_Timeout_Cancel_Retry.md**
+  - **목표**: timeout, 취소(대안), 지수 백오프
+  - **실습(필수)**: `Future.any`/타임아웃 가드
+
+- [ ] **Flutter_2011_Async_in_Widget_Lifecycle.md**
+  - **목표**: initState/dispose 중 비동기 안전처리
+  - **실습(필수)**: mounted 체크, late cancel 패턴
+
+- [ ] **Flutter_2012_Isolates_and_compute.md**
+  - **목표**: compute/Isolate로 무거운 파싱 오프로딩
+  - **벤치마크**: 메인 프레임 드랍 vs 오프로딩 비교
+
+- [ ] **Flutter_2013_Async_Performance_Tips.md**
+  - **목표**: jank 방지, 디바운스/스로틀/배치
+  - **실습(필수)**: 입력 디바운스 검색 리스트
+
+- [ ] **Flutter_2014_Testing_Async.md**
+  - **목표**: fakeAsync, pump/pumpAndSettle
+  - **실습(필수)**: FutureBuilder 위젯테스트
+
+---
+
+### 연계 (네트워크/상태관리)
+
+- [ ] **Flutter_2015_Dio_with_Async_Patterns.md**
+  - **목표**: Interceptor, 공통 에러모델, 재시도
+  - **실습(필수)**: 성공/실패/타임아웃 3케이스 UI 바인딩
+
+- [ ] **Flutter_2016_Result_Either_ErrorModel.md**
+  - **목표**: 성공/실패 타입(Result/Either)로 UI 단순화
+  - **실습(필수)**: `when(success:..., failure:...)` 렌더
+
+- [ ] **Flutter_2017_Async_with_Provider_Riverpod.md**
+  - **목표**: FutureProvider/StreamProvider, cancel-safe
+  - **실습(필수)**: 탭 전환 중 중복요청 차단
+
+- [ ] **Flutter_2018_Async_File_IO.md**
+  - **목표**: 파일 IO 비동기 + isolate 파싱
+  - **실습(필수)**: 대용량 JSON 파싱 오프로딩
+
+- [ ] **Flutter_2019_Concurrency_Race_Conditions.md**
+  - **목표**: 최신값만 반영(switchLatest 유사), 중복 클릭 방지
+  - **실습(필수)**: 빠른 연타에도 마지막 요청만 UI 반영
+
+
+<br><br>
+
+
 ### 공식 개발문서 연번
 읽어야할 자료를 모았습니다.  
 Flutter Docs 순서 그대로 가져왔습니다.  
