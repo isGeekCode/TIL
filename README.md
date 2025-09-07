@@ -431,7 +431,7 @@ _446 TILs and counting..._
 - [Let us: Go! 2023 봄 - 2304(미참석)](Conference/Conference2023_LetUSGo2023_1Spring.md)
 
 
-## Mobile 공통기능 구현
+## Mobile 공통 기능 구현
 아래와 같이 매칭합니다.
 ```
 📁 Mobile_00_Common/
