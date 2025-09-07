@@ -25,7 +25,7 @@ _446 TILs and counting..._
 앱 개발에서 공통적으로 필요한 기능들을 정리합니다.  
 (예: Splash 화면, UserDefaults, 퍼미션 처리 등)
 
-- [Mobile 공통 기능 구현](#mobile-공통-기능)
+- [Mobile 공통 기능 구현](#mobile-공통-기능-구현)
     - [Mobile iOS 공통 기능 구현](#mobile-ios-공통-기능-구현)
     - [Mobile Android 공통 기능 구현](#mobile-android-공통-기능-구현)
     - [Mobile Flutter 공통 기능 구현](#mobile-flutter-공통-기능-구현)
@@ -431,7 +431,7 @@ _446 TILs and counting..._
 - [Let us: Go! 2023 봄 - 2304(미참석)](Conference/Conference2023_LetUSGo2023_1Spring.md)
 
 
-## Mobile-공통기능
+## Mobile 공통기능 구현
 아래와 같이 매칭합니다.
 ```
 📁 Mobile_00_Common/
