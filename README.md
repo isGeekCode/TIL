@@ -475,16 +475,16 @@ _446 TILs and counting..._
 
 ## 📦 iOS - UIKit 기반 앱
 ### 📦 UIKit - 앱의 구조와 실행 흐름
-- [[Apple Document] - UIApplicationMain(::::)](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_000UIApplicationMain.md)
-- [[Apple Document] - UIApplication 싱글턴 객체](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_001UIApplication.md)
-- [[Apple Document] - AppDelegate, UIApplicationDelegate 프로토콜](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_002UIApplicationDelegate.md)
-- [[Apple Document] - Managing your app’s life cycle : 앱의 생명주기 관리](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_003AppLifeCycle.md)
-- [[Apple Document] - Responding to the launch of your app : 앱 실행에 대한 응답](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_004LaunchStoryboard.md)
-- [[Apple Document] - About the app launch sequence : 앱의 실행되는 순서에 관하여](iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_005AppLaunchSequnce.md)
-- [앱의 구동에 관하여](iOS-Framework-UIKit-UIResponder-UIApplication/AppLaunching_About.md)
-- [UIApplication_AppDelegate - 헷갈릴수 있는 두 함수(didReceive형제)](iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_AppDelegate-DifferenceNotification.md)
-- [UIApplication_AppDelegate - userNotificationCenter](iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_AppDelegate_userNotificationCenter.md)
-- [UIApplication_AppDelegate - UIApplicationDelegate : 앱의 상태 / 생명주기(Life-Cycle)](iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_StatusCycle_of_App.md)
+- [[Apple Document] - UIApplicationMain(::::)](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_000UIApplicationMain.md)
+- [[Apple Document] - UIApplication 싱글턴 객체](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_001UIApplication.md)
+- [[Apple Document] - AppDelegate, UIApplicationDelegate 프로토콜](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_002UIApplicationDelegate.md)
+- [[Apple Document] - Managing your app’s life cycle : 앱의 생명주기 관리](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_003AppLifeCycle.md)
+- [[Apple Document] - Responding to the launch of your app : 앱 실행에 대한 응답](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_004LaunchStoryboard.md)
+- [[Apple Document] - About the app launch sequence : 앱의 실행되는 순서에 관하여](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIApplication/About_UIKit_005AppLaunchSequnce.md)
+- [앱의 구동에 관하여](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIApplication/AppLaunching_About.md)
+- [UIApplication_AppDelegate - 헷갈릴수 있는 두 함수(didReceive형제)](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_AppDelegate-DifferenceNotification.md)
+- [UIApplication_AppDelegate - userNotificationCenter](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_AppDelegate_userNotificationCenter.md)
+- [UIApplication_AppDelegate - UIApplicationDelegate : 앱의 상태 / 생명주기(Life-Cycle)](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIApplication/UIApplication_StatusCycle_of_App.md)
 
 
 ### 🎨 UIKit - UI 구성 요소 설계
