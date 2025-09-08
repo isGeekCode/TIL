@@ -502,7 +502,7 @@ _446 TILs and counting..._
 - UIViewController
     - [PHPickerController 사용하기-iOS14이상](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIViewController/PHPickerViewController.md)
     - [UIImagePickerController 사용하기-iOS14미만](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIViewController/UIImagePickerController.md)
-    - [NSObject_UIResponder_UIViewController_UITableViewController : 테이블뷰 전용 ViewController](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableViewController.md)
+    - [NSObject_UIResponder_UIViewController_UITableViewController : 테이블뷰 전용 ViewController](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIViewController/UITableViewController.md)
 
 
 - [Layout - CGRectMake는 뭘까](Mobile_01_iOS/iOS-Framework-UIKit/Layout_CGRectMake.md)
@@ -684,9 +684,7 @@ _446 TILs and counting..._
 - 웹뷰 구현
     - [WKWebView 사용하기, 구성 요소 살펴보기](Mobile_01_iOS/iOS-Networking/WebView_00_INTRO.md)
     - [WebView - 웹뷰에 스크립트를 적용시키는 방법](Mobile_01_iOS/iOS-Networking/WebView_Adjust_Script.md)
-    - [WebView - 웹에서 앱으로 보내는 JavaScript 수신하기 : WKScriptMessageHandler](Mobile_01_iOS/iOS-Networking/WebView_CatchingJS.md)
     - [WebView - Delegate method](Mobile_01_iOS/iOS-Networking/WebView_Delegate.md)
-    - [WebView - 앱에서 웹소스의 JavaScript 메서드 호출하기 : evaluateJavaScript()](Mobile_01_iOS/iOS-Networking/WebView_Sending_JS.md)
     - [WebView - App에서 웹페이지를 여는 3가지 방법](Mobile_01_iOS/iOS-Networking/WebView_basic_use.md)
     - [WebView - 네비게이션컨트롤러 목록으로 웹뷰 관리하는 방법](Mobile_01_iOS/iOS-Networking/WebView_catchNavigation.md)
     - [WebView - Safari로 웹뷰 디버깅하는 방법](Mobile_01_iOS/iOS-Networking/WebView_commute_with_Web.md)
