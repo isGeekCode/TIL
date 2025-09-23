@@ -1,4 +1,4 @@
-# WebView - 웹에서 앱으로 보내는 JavaScript 수신하기 : WKScriptMessageHandler
+# WebView - JavaScript와 Native 간 양방향 통신
 
 iOS에서 웹 페이지(JavaScript)에서 앱으로 메시지를 보내려면, WKWebView의 `WKScriptMessageHandler`를 활용해야 합니다. 이 문서에서는 WKScriptMessageHandler를 등록하고, 메시지를 수신 및 처리하는 방법, 메모리 관리(LeakAvoider), Objective-C 적용법까지 다룹니다.
 

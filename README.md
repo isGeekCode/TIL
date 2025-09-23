@@ -488,6 +488,7 @@ _446 TILs and counting..._
 
 
 ### 🎨 UIKit - UI 구성 요소 설계
+- UIKit 기반 화면에서 **어떤 UI 컴포넌트를 배치하고 구성하는지**에 초점을 맞춘 문서들입니다.
 - [[Apple Document] - About App Development with UIKit](Mobile_01_iOS/iOS-Framework-UIKit/About_UIKit_.md)
 - [UIKit기반 앱의 간단한 화면 인터페이스 구조](Mobile_01_iOS/iOS-Framework-UIKit/About_UIKit_050WindowsAnsScreens_Screens_SimpleUIKitInterface.md)
 - [읽어야할 개발자 문서](Mobile_01_iOS/iOS-Framework-UIKit/About__Document_Recommended.md)
@@ -498,6 +499,9 @@ _446 TILs and counting..._
 - [Container ViewController Type - Navigation Controller](Mobile_01_iOS/iOS-Framework-UIKit/Container_ViewController_NavigationController.md)
 - UIView
     - [Layout - UIView에 대하여](Mobile_01_iOS/iOS-Framework-UIKit/Layout_About_UIView.md)
+    - UIImageView
+        - [View - UIImageView 핵심 가이드](Mobile_01_iOS/iOS-Framework-UIKit/View_UIImageView.md)
+        - [NSObject_UIResponder_UIView_UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
 
 - UIViewController
     - [PHPickerController 사용하기-iOS14이상](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIViewController/PHPickerViewController.md)
@@ -505,14 +509,9 @@ _446 TILs and counting..._
     - [NSObject_UIResponder_UIViewController_UITableViewController : 테이블뷰 전용 ViewController](Mobile_01_iOS/iOS-Framework-UIKit-UIResponder-UIViewController/UITableViewController.md)
 
 
-- [Layout - CGRectMake는 뭘까](Mobile_01_iOS/iOS-Framework-UIKit/Layout_CGRectMake.md)
-- [Layout - CodeUI: CustomShadow(feat.CustomClass)](Mobile_01_iOS/iOS-Framework-UIKit/Layout_CodeUI_CustomShadow.md)
 - [Layout - CodeUI: UIView, UILabel](Mobile_01_iOS/iOS-Framework-UIKit/Layout_CodeUI_UILabel_UIView.md)
 - [Layout - CodeUI: UILabel 고정폭 지정 이유 및 방법](Mobile_01_iOS/iOS-Framework-UIKit/Layout_CodeUI_UILabel_Width_Fix.md)  
-- [Layout - 이미지 컨텐츠 모드 (ContentMode)](Mobile_01_iOS/iOS-Framework-UIKit/Layout_ImageContentMode.md)
-- [Layout - StoryboardUI: CornerRadius](Mobile_01_iOS/iOS-Framework-UIKit/Layout_StoryboardUI_CornerRadius.md)
 - [UIAlert 어디서든 띄우기](Mobile_01_iOS/iOS-Framework-UIKit/Layout_UIAlert.md)
-- [Layout - Hierarchy of UIView (feat. addSubView)](Mobile_01_iOS/iOS-Framework-UIKit/Layout_addSubView.md)
 - [현재기기의 화면크기 측정하기 + 콤바인을 이용한 반응형레이아웃 만들기](Mobile_01_iOS/iOS-Framework-UIKit/Layout_currentDeviceCheck&useCombineReactiveAutoLayout.md)
 - [MessageUI란](Mobile_01_iOS/iOS-Framework-UIKit/MessageUI.md)
 - [MessageUI - MFMailComposeVC : 문의메일 보내기](Mobile_01_iOS/iOS-Framework-UIKit/MessageUI_sendMail.md)
@@ -520,25 +519,18 @@ _446 TILs and counting..._
 - [NSDate - Timezone: UTC, GMT, KST](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_NSDate_UTC.md)
 - [NSObject - Timer : 타이머 구현하기](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_Timer.md)
 - [NSObject_UIBarItem_UIBarButtonItem & UITabBarItem : 네비게이션바 / 툴바 / 탭바를 표시하는 아이템](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIBarItem.md)
-- [CGColor에 대하여](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIColorCgColor.md)
 - [NSObject - UIFont](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIFont.md)
 - [NSObjcect_GestureRecognizer_UILongPressGestureRecognizer](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIGestureRecognizer_LongPress.md)
-- [NSObject_UIResponder : UIResponder와 Responder Chain](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_.md)
 - [NSObject_UIResponder_UIViewController_UIActivityViewController : 공유하기 기능](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_UIActivityViewController.md)
 - [NSObject_UIResponder_UIViewController : 소개](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_a_Functions.md)
 - [NSObject_UIResponder_UIViewController : 생성자](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_a_howToMake.md)
-- [NSObject_UIResponder_UIViewController : UIViewController's Life-cycle (뷰컨트롤러의 생명주기)](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_lifeCycle.md)
 - [NSObject_UIResponder_UIView : UIView 클래스](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIView_.md)
-- [UIView의 Drawing Cycle (Layout Cycle)](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIView_DrawingCycle.md)
-- [NSObject_UIResponder_UIView_UIImageView - 경로를 통해 이미지 다운로드하여 세팅하기](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIImageView_setImageDownload.md)
 - [NSObject_UIResponder_UIView : UIPickerView](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIPickerView.md)
 - [NSObject_UIResponder_UIView_UIProgressView](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIProgressView.md)
 - [NSObject_UIResponder_UIView_UIScrollView](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIScrollView.md)
 - [NSObject_UIResponder_UIView : UITabBar](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIView_UITabBar.md)
-- [UIView - Layer란 무엇인가(작성중)](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIView_layer.md)
 - [NSObject_UIResponder_UIView_UIActivityIndicatorView : 사용법](Mobile_01_iOS/iOS-Framework-UIKit/NsObject_UIResponder_UIView_UIActivityIndicatorView.md)
 - [UIKit에서 RootViewController 찾기](Mobile_01_iOS/iOS-Framework-UIKit/SearchingRootVC.md)
-- [CGPoint, CGSize, CGRect](Mobile_01_iOS/iOS-Framework-UIKit/UIKit_CGPoint_CGSize_CGRect.md)
 - [UIDevice](Mobile_01_iOS/iOS-Framework-UIKit/UIKit_UIDevice.md)
 - [UIKit - UISearchBar](Mobile_01_iOS/iOS-Framework-UIKit/UIKit_UITextField_UISearchBar.md)
 - [UICollectionView - 프로퍼티 옵저버 didSet과 isSelected](Mobile_01_iOS/iOS-Framework-UIKit/ios_CollectionViewCell.md)
@@ -577,6 +569,9 @@ _446 TILs and counting..._
 ### 🎨 UIKit - 레이아웃과 배치 전략
 - [Layout - 오토레이아웃의 개념](Mobile_01_iOS/iOS-Framework-UIKit/Layout_About_AutoLayout.md)
 - [UIKit - UIStoryboard](Mobile_01_iOS/iOS-Framework-UIKit/About_UIKIt_010_UIStoryboard.md)
+- [Layout - CGRectMake는 뭘까](Mobile_01_iOS/iOS-Framework-UIKit/Layout_CGRectMake.md)
+- [Layout - Hierarchy of UIView (feat. addSubView)](Mobile_01_iOS/iOS-Framework-UIKit/Layout_addSubView.md)
+- [CGPoint, CGSize, CGRect](Mobile_01_iOS/iOS-Framework-UIKit/UIKit_CGPoint_CGSize_CGRect.md)
 
 [\- 👆목차로 돌아가기 \-](#ios---uikit-목차)
 
@@ -609,6 +604,14 @@ _446 TILs and counting..._
 ### 🧠 UIKit - 메모리 관리
 
 [\- 👆목차로 돌아가기 \-](#ios---uikit-목차)
+
+<br>
+
+### 🔁 UIKit - 주요 사이클
+- [UIView의 Drawing Cycle (Layout Cycle)](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIView_DrawingCycle.md)
+- [NSObject_UIResponder : UIResponder와 Responder Chain](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_.md)
+- [NSObject_UIResponder_UIViewController : UIViewController's Life-cycle (뷰컨트롤러의 생명주기)](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIViewController_lifeCycle.md)
+
 
 <br>
 
@@ -653,6 +656,12 @@ _446 TILs and counting..._
 [\- 👆목차로 돌아가기 \-](#ios---swiftui-목차)
 
 ### 🧠 SwiftUI - 메모리 관리
+
+[\- 👆목차로 돌아가기 \-](#ios---swiftui-목차)
+
+### 🔁 SwiftUI - 주요 사이클
+- [SwiftUI View 생명주기 정리](Mobile_01_iOS/iOS-Framework-SwiftUI/SwiftUI_ViewLifecycle.md)
+- [Layout - SwiftUI: State와 바인딩](Mobile_01_iOS/iOS-Framework-SwiftUI/SwiftUI_State.md)
 
 [\- 👆목차로 돌아가기 \-](#ios---swiftui-목차)
 
@@ -905,10 +914,19 @@ _446 TILs and counting..._
 <br><br>
 
 ## iOS - 그래픽 렌더링 & 시각 효과
+- UI가 **어떻게 그려지고 표현되는가**에 대한 개념과 Core Animation, 마스크 등 렌더링 중심 자료를 모았습니다.
 
 - [dp와 pt에 대하여 (Feat. 포인트란)](Mobile_01_iOS/iOS-RelatedImage/DP_PT.md)
 - [화면캡처 - 특정화면을 이미지로 저장하기](Mobile_01_iOS/iOS-RelatedImage/imageSave.md)
 - [PNG와 JPG에 대하여](Mobile_01_iOS/iOS-RelatedImage/png_jpg.md)
+- [View - UIView 마스크 입문 (두 개의 UIView로 이해하기)](Mobile_01_iOS/iOS-Framework-UIKit/View_Mask_BasicExample.md)
+- [UIView 투명 영역 구현: 마스크 vs 딤 오버레이](Mobile_01_iOS/iOS-Framework-UIKit/View_Mask_vs_DimOverlay.md)
+- UIKit 레이어 & 시각 효과
+    - [Layout - 이미지 컨텐츠 모드 (ContentMode)](Mobile_01_iOS/iOS-Framework-UIKit/Layout_ImageContentMode.md)
+    - [Layout - CodeUI: CustomShadow(feat.CustomClass)](Mobile_01_iOS/iOS-Framework-UIKit/Layout_CodeUI_CustomShadow.md)
+    - [Layout - StoryboardUI: CornerRadius](Mobile_01_iOS/iOS-Framework-UIKit/Layout_StoryboardUI_CornerRadius.md)
+    - [CGColor에 대하여](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIColorCgColor.md)
+    - [UIView - Layer란 무엇인가(작성중)](Mobile_01_iOS/iOS-Framework-UIKit/NSObject_UIResponder_UIView_layer.md)
 
 ### 🖼 iOS - Core Graphics - 직접 드로잉 처리
 
