@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIControl : UITextField
+# UITextField
 
 ## 스토리보드로 구현하기
 1. 라이브러리로 부터 viewController 위로 텍스트필드를 올려둔다. (addSubView 처리)

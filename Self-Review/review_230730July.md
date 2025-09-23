@@ -104,7 +104,7 @@
 - 화면전환 - UINavigationController 이해하기
     - [[TIL 링크]](https://github.com/isGeekCode/TIL/blob/main/iOS-ScreenTranport/navigationController.md)
 - UITabBar 알아보기
-    - [[TIL 링크]](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit/NSObject_UIResponder_UIView_UITabBar.md)
+    - [[TIL 링크]](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit/View_UITabBar.md)
 - 화면전환 - Segue를 이용한 화면이동
     - [[TIL 링크]](https://github.com/isGeekCode/TIL/blob/main/iOS-ScreenTranport/segue.md)
 - Cocoa Design Pattern - Observer 옵저버 패턴

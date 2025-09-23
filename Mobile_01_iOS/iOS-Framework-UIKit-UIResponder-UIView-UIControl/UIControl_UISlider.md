@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIControl : UISlider
+# UISlider
 
 
 기본적인 Frame을 갖고있어 XY 축만 잡아주면 된다.  

@@ -1,4 +1,4 @@
-# NSObject_UIResponder : UIResponder와 Responder Chain
+# UIResponder와 Responder Chain
 
 리스폰더 객체(Responder objects), 즉 UIResponder의 인스턴스는 UIKit 앱 이벤트 처리 백본(backbone)을 구성한다.
 

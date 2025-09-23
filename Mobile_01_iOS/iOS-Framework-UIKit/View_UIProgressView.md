@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIProgressView
+# UIProgressView
 
 
 프로그래스뷰는 아래그림처럼 어떤 작업을 진행중에 있다는 것을 사용자에게 보여줄때 사용한다.

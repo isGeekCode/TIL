@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIActivityIndicatorView : 사용법
+# UIActivityIndicatorView 사용법
 
 앱을 구현할 때, 로직상 기다려야하는 경우, 사용자에게 로딩을 알려주는 객체가 있다.
 아래 그림을 보면 iOS, Android 사용자들은 각자의 사용자 경험을 떠올려보자. 

@@ -24,7 +24,7 @@
 ## 실무에서 자주 쓰는 패턴
 ### 네트워크 이미지 로딩
 - URL에서 이미지를 내려받아 설정할 때는 다운샘플링·캐싱·재사용 이슈를 고려해야 합니다.
-- 구체적인 코드 예시는 `NSObject_UIResponder_UIView_UIImageView_setImageDownload.md` 문서를 참고하세요.
+- 구체적인 코드 예시는 `View_UIImageView_Download.md` 문서를 참고하세요.
 
 ### 셀 재사용 대비 초기화
 - `UITableViewCell`/`UICollectionViewCell` 안에서 이미지 뷰를 사용할 때는 `prepareForReuse()`에서 이미지/애니메이션을 초기화해 플리커를 방지합니다.

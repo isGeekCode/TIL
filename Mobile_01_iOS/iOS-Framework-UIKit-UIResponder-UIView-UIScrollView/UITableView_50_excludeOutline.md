@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIScrollView_UITableView : 셀 경계선없는 테이블뷰
+# UITableView - 셀 경계선 없는 테이블뷰
 
 
 ## 셀경계선 없애기

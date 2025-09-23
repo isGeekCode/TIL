@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIViewController_UITableViewController : 테이블뷰 전용 ViewController
+# UITableViewController : 테이블뷰 전용 ViewController
 
 <br><br>
 
@@ -19,7 +19,7 @@ UITableView는 위에서 말한것처럼 규칙적으로 반복되는 형태의 
 
 - UITableView 만드는 방법
     - [TIL : UITableView 사용법
-](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/NSObject_UIResponder_UIView_UIScrollView_UITableView_a_howToMake.md)  
+](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_01_basic.md)  
   
   <br><br>
   

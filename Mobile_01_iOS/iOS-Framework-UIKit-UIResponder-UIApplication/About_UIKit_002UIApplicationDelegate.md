@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 AppDelegate는 UIResponder라는 클래스를 상속하고 있기때문에 들어오는 이벤트를 수신하고 들어온 이벤트에 대해 처리할 수 있는 객체이다.  
 
 UIResponder에 대한 설명은 아래 링크를 참고하자.
-- [TIL : UIResponder와 Responder Chain](https://github.com/isGeekCode/TIL/blob/main/iOS-UIKit/NSObject_UIResponder_.md)
+- [TIL : UIResponder와 Responder Chain](https://github.com/isGeekCode/TIL/blob/main/iOS-UIKit/UIResponder_ResponderChain.md)
 
 <br><br><br>
 

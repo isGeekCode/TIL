@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIScrollView
+# UIScrollView
 
 UIScrollView는 iOS 앱에서 스크롤 가능한 컨텐츠를 제공하기 위해 사용되는 뷰. 
 

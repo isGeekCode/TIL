@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIControl : UISegmentedControl
+# UISegmentedControl
 
 UISegmentedControl은 아래와 같다.  
 

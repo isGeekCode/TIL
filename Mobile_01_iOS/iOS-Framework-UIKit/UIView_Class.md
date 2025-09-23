@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView : UIView 클래스
+# UIView 클래스
 
 화면의 직사각형 영역에 대한 내용을 관리하는 개체.
 
@@ -204,7 +204,7 @@ UIView는 정말 다양하게 설정 가능한 클래스이기 때문에 커스�
 - `layerClass`
     - View의 뒤에 다른 Core Animation Layer를 사용하여 배경 공간을 생성할 때 사용한다.
     - 예를 들어, 스크롤 가능한 넓은 영역을 표시하기 위해 타일링을 사용하는 경우, 이속성을 CATiledLayer클래스로 설정할 수 있다.  
-    - 자세한 내용은 [TIL : Layer에 대하여](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit/NSObject_UIResponder_UIView_layer.md) 참고 
+    - 자세한 내용은 [TIL : Layer에 대하여](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit/UIView_Layer.md) 참고 
 
 <br><br>
 

@@ -1,4 +1,4 @@
-# NSObject_UIBarItem_UIBarButtonItem & UITabBarItem : 네비게이션바 / 툴바 / 탭바를 표시하는 아이템
+# UIBarItem & UITabBarItem 가이드
 
 NSObject 의 UIBarItem은 iOS 애플리케이션에서 사용되는 클래스 중 하나로,
 
@@ -151,7 +151,7 @@ class ViewController: UIViewController {
 
 
 ## UITabBarItem
-NSObject_UIBarItem 클래스는 애플리케이션에서 매우 자주 사용되는 클래스이며, UI를 구성하는데 매우 중요한 역할을 합니다.
+UIBarItem 클래스는 애플리케이션에서 매우 자주 사용되는 클래스이며, UI를 구성하는데 매우 중요한 역할을 합니다.
 
 탭 바 인터페이스는 일반적으로 화면 아래에 위치하며, 여러 화면(뷰 컨트롤러) 간에 전환할 수 있는 간단한 방법을 제공한다.
 

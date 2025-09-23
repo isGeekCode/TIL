@@ -1,4 +1,4 @@
-# [Apple Document] - NSObject_UIResponder_UIView_UITableViewCell
+# [Apple Document] UITableViewCell
 
 UITableViewCell객체는 단일 테이블의 콘텐츠를 관리하는 UIView다. 
 테이블뷰셀을 구현할 때는 주로 커스텀 콘텐츠를 구성하겠지만, 아래와 같은 테이블뷰 관련 동작을 지원하고 있다.

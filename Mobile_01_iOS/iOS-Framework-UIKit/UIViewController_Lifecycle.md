@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIViewController : UIViewController's Life-cycle (뷰컨트롤러의 생명주기)
+# UIViewController Life-cycle (뷰컨트롤러의 생명주기)
 -[앱의 생명주기](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit/About_UIKit_003AppLifeCycle.md)
 
 앱이 실행되면 OS에 의해 자동으로 호출되는 메서드들이 있다.  

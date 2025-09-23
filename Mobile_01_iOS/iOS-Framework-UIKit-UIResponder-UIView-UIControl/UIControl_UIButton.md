@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIControl : UIButton
+# UIButton
 
 UIButton 은 말그대로 버튼을 눌렀을 때, 특정 로직을 실행할 수 있도록 
 

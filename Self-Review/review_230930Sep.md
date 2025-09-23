@@ -54,10 +54,10 @@
     - [[TIL 링크]](https://github.com/isGeekCode/TIL/blob/main/iOS-Foundation/AVFoundation_BarcodeScan.md)
 - WebView - createWebViewWith : blank로 새창열기
     - [[TIL 링크]](https://github.com/isGeekCode/TIL/blob/main/iOS-Networking/WebView_createWebViewWith.md)
-- NSObject_UIResponder_UIView_UIScrollView
-    - [[TIL 링크]](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIScrollView.md)
-- NSObject_UIResponder_UIView_UIScrollView_UITableView : 편집스타일 설정하기 - editingStyle
-    - [[TIL 링크]](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit/NSObject_UIResponder_UIView_UIScrollView_UITableView_editingStyle.md)
+- UIScrollView
+    - [[TIL 링크]](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit/View_UIScrollView.md)
+- UITableView : 편집스타일 설정하기 - editingStyle
+    - [[TIL 링크]](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit-UIResponder-UIView-UIScrollView/UITableView_10_editingStyle.md)
 - [StoryBoard] - Unknown class ViewControllerC in Interface Builder file
     - [[TIL 링크]](https://github.com/isGeekCode/TIL/blob/main/iOS-Framework-UIKit/StoryBoard_InheritModuleFromTarget.md)
 

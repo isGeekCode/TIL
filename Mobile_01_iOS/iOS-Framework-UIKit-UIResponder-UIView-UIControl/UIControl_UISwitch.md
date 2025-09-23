@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIControl : UISwitch
+# UISwitch
 UISwitch는 iOS 애플리케이션에서 사용자가 특정 설정을 켜고 끄는 데 사용되는 UI Control 객체이다.
 
 스위치는 일반적으로 2진수의 옵션(On 또는 Off)을 나타내고, 사용자가 스위치를 터치하여 설정을 변경할 수 있다.

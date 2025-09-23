@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIControl : UIRefreshControl
+# UIRefreshControl
 
 웹뷰나 테이블뷰 등을 스크롤하면서 로딩 인디케이터가 나오고 일정 이상 드래그하면 새로고침이 되는 것을 본적이 있을것이다. 이 때 사용하는 것이 UIRefreshControl객체이다. 
 

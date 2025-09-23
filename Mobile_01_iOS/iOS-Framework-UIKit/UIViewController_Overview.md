@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIViewController : 소개
+# UIViewController 소개
 
 UIViewController는 iOS 앱에서 사용자 인터페이스를 관리하고 화면을 제어하는 객체이다. 앱의 화면을 구성하는 뷰들과 함께 작동하여 사용자 인터페이스를 구성하고 제어하는 역할을 수행한다.
 
@@ -24,11 +24,11 @@ UIViewController는 iOS 앱의 핵심 구성 요소 중 하나로, 사용자 인
 워낙 iOS앱의 핵심 구성 요소이기 때문에 많은 함수가 존재한다.
 
 ### 생성자 함수
-- [TIL : UIViewController의 생성자 함수](https://github.com/isGeekCode/TIL/blob/main/Mobile-IOS/NSObject_UIResponder_UIViewController_a_howToMake.md)
+- [TIL : UIViewController의 생성자 함수](https://github.com/isGeekCode/TIL/blob/main/Mobile-IOS/UIViewController_Initializers.md)
 
 
 
 ### 생명주기 함수
-- [TIL : UIViewController의 생명주기 함수](https://github.com/isGeekCode/TIL/blob/main/Mobile-IOS/NSObject_UIResponder_UIViewController_lifeCycle.md)
+- [TIL : UIViewController의 생명주기 함수](https://github.com/isGeekCode/TIL/blob/main/Mobile-IOS/UIViewController_Lifecycle.md)
 
 

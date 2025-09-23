@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIScrollView_UITableView : SwiftUI로 셀 구현하기
+# UITableView - SwiftUI 구성
 
 
 

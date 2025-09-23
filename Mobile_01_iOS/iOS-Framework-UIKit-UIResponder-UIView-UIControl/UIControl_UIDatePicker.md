@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIView_UIControl : UIDatePicker
+# UIDatePicker
 
 ```swift
 func setDatePicker() {

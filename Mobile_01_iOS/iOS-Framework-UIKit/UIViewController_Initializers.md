@@ -1,4 +1,4 @@
-# NSObject_UIResponder_UIViewController : 생성자
+# UIViewController 생성자 정리
 
 UIViewController 클래스를 살펴보면 init과 관련하여 2가지를 확인할 수 있고, 추가적으로 팩토리 메소드 패턴인 instantiateViewController를 통하여도 생성할 수 있다.
 
