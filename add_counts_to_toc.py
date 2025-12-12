@@ -59,8 +59,28 @@ def extract_section_counts(readme_content):
 
     return section_counts
 
+def header_to_anchor(header_text):
+    """헤더 텍스트를 GitHub/Obsidian 앵커 형식으로 변환"""
+    # ## 제거
+    text = re.sub(r'^##\s+', '', header_text)
+    # 소문자 변환
+    text = text.lower()
+    # 이모지 제거 (공백은 유지!)
+    text = re.sub(r'[\U0001F000-\U0001F9FF\U00002600-\U000027BF\U0001F300-\U0001F5FF\U0001F600-\U0001F64F\U0001F680-\U0001F6FF\U0001F900-\U0001F9FF]', '', text)
+    # 특수문자를 공백으로 대체 (한글, 영문, 숫자, 공백, 하이픈만 유지)
+    text = re.sub(r'[^\w가-힣\s-]', ' ', text)
+    # 공백을 하이픈으로
+    text = text.replace(' ', '-')
+    return '#' + text
+
 def add_counts_to_toc(readme_content, section_counts):
     """TOC의 링크에 개수를 추가"""
+
+    # 섹션 이름을 앵커로 변환한 딕셔너리 생성
+    anchor_to_count = {}
+    for section_name, count in section_counts.items():
+        section_anchor = header_to_anchor(section_name)
+        anchor_to_count[section_anchor] = count
 
     lines = readme_content.split('\n')
     result_lines = []
@@ -76,23 +96,20 @@ def add_counts_to_toc(readme_content, section_counts):
             anchor = match.group(3)
             rest = match.group(4)
 
-            # 기존 (숫자) 표시 제거
-            clean_text = re.sub(r'\s*\(\d+\)\s*$', '', link_text).strip()
+            # 기존 (숫자) 표시를 모두 제거 (link_text와 rest 둘 다)
+            clean_text = re.sub(r'\s*\(\d+\)', '', link_text).strip()
+            clean_rest = re.sub(r'^\s*\(\d+\)', '', rest).strip()
+            if clean_rest and not clean_rest.startswith(':'):
+                clean_rest = ' ' + clean_rest
 
-            # 섹션 카운트에서 매칭되는 항목 찾기
-            count = None
-            for section_name, section_count in section_counts.items():
-                # 이모지와 텍스트 부분만 비교 (## 제거)
-                section_clean = re.sub(r'^##\s+', '', section_name).strip()
-                if section_clean in clean_text or clean_text in section_clean:
-                    count = section_count
-                    break
+            # 앵커로 개수 찾기
+            count = anchor_to_count.get(anchor)
 
             # 개수 추가 (링크 바깥에)
             if count is not None and count > 0:
-                new_line = f"{indent}[{clean_text}]({anchor}) ({count}){rest}"
+                new_line = f"{indent}[{clean_text}]({anchor}) ({count}){clean_rest}"
             else:
-                new_line = f"{indent}[{clean_text}]({anchor}){rest}"
+                new_line = f"{indent}[{clean_text}]({anchor}){clean_rest}"
 
             result_lines.append(new_line)
         else:
