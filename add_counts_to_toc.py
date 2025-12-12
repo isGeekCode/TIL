@@ -21,30 +21,39 @@ def get_file_content_size(file_path):
         return 0
 
 def extract_section_counts(readme_content):
-    """각 ## 헤더 섹션의 파일 개수를 계산"""
+    """각 ##, ### 헤더 섹션의 파일 개수를 계산 (상위 섹션은 하위 섹션 합계 포함)"""
 
-    # ## 헤더로 섹션 분리
-    section_pattern = r'^(##\s+.+?)$'
+    section_pattern = r'^(##+)\s+(.+?)$'
     link_pattern = r'\[([^\]]+)\]\(([^)]+)\)'
 
     lines = readme_content.split('\n')
     section_counts = {}
-    current_section = None
-    current_section_name = None
+    section_stack = []  # (level, name) 스택
 
     for line in lines:
-        # ## 헤더 찾기
+        # 헤더 찾기
         header_match = re.match(section_pattern, line)
         if header_match:
-            current_section = header_match.group(1)
-            # 기존에 (숫자) 표시가 있으면 제거
-            current_section_name = re.sub(r'\s*\(\d+\)\s*$', '', current_section).strip()
-            if current_section_name not in section_counts:
-                section_counts[current_section_name] = 0
+            level = len(header_match.group(1))  # ## = 2, ### = 3
+            header_name = header_match.group(2).strip()
+            # 기존 (숫자) 제거
+            header_name = re.sub(r'\s*\(\d+\)\s*$', '', header_name)
+            full_header = '#' * level + ' ' + header_name
+
+            # 현재 레벨보다 깊은 섹션 제거
+            while section_stack and section_stack[-1][0] >= level:
+                section_stack.pop()
+
+            # 현재 섹션 추가
+            section_stack.append((level, full_header))
+
+            # 섹션 초기화
+            if full_header not in section_counts:
+                section_counts[full_header] = 0
             continue
 
-        # 현재 섹션에서 파일 링크 찾기
-        if current_section_name:
+        # 파일 링크 찾기 (현재 활성화된 모든 섹션에 추가)
+        if section_stack:
             for match in re.finditer(link_pattern, line):
                 link_url = match.group(2)
 
@@ -55,14 +64,16 @@ def extract_section_counts(readme_content):
                 # 파일 경로 확인
                 file_path = SCRIPT_DIR / link_url
                 if get_file_content_size(file_path) > 0:
-                    section_counts[current_section_name] += 1
+                    # 모든 상위 섹션에 카운트 추가
+                    for level, section_name in section_stack:
+                        section_counts[section_name] += 1
 
     return section_counts
 
 def header_to_anchor(header_text):
     """헤더 텍스트를 GitHub/Obsidian 앵커 형식으로 변환"""
-    # ## 제거
-    text = re.sub(r'^##\s+', '', header_text)
+    # ##, ### 제거
+    text = re.sub(r'^##+\s+', '', header_text)
     # 소문자 변환
     text = text.lower()
     # 이모지 제거 (공백은 유지!)

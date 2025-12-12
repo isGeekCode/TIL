@@ -35,11 +35,11 @@ _446 TILs and counting..._
 ## iOS - UIKit 목차
 
 - [📦 UIKit 기반 앱](#-ios---uikit-기반-앱) (76)
-    - [📦 UIKit - 앱의 구조와 실행 흐름](#-uikit---앱의-구조와-실행-흐름): 어떻게 실행되는가
-    - [🎨 UIKit - UI 구성 요소 설계](#-uikit---ui-구성-요소-설계): 어떤 뷰로 구성되는가
-    - [🎨 UIKit - 레이아웃과 배치 전략](#-uikit---레이아웃과-배치-전략): 어떻게 배치할까
+    - [📦 UIKit - 앱의 구조와 실행 흐름](#-uikit---앱의-구조와-실행-흐름) (4): 어떻게 실행되는가
+    - [🎨 UIKit - UI 구성 요소 설계](#-uikit---ui-구성-요소-설계) (56): 어떤 뷰로 구성되는가
+    - [🎨 UIKit - 레이아웃과 배치 전략](#-uikit---레이아웃과-배치-전략) (5): 어떻게 배치할까
     - [🕹 UIKit - 이벤트 & 입력 처리 흐름](#-uikit---이벤트--입력-처리-흐름): 어떤 입력을 어떻게 처리할까
-    - [🔀 UIKit - 화면 전환 흐름](#-uikit---화면-전환-흐름): 어떤 흐름으로 이동할까
+    - [🔀 UIKit - 화면 전환 흐름](#-uikit---화면-전환-흐름) (8): 어떤 흐름으로 이동할까
     - [🧠 UIKit - 데이터의 흐름과 상태 관리](#-uikit---데이터의-흐름과-상태-관리): 데이터는 어떻게 전달되고, 상태는 어떻게 UI에 반영되는가
     - [🎨 UIKit - 애니메이션 & 뷰 효과 구성](#-uikit---애니메이션--뷰-효과-구성): 어떻게 그려지는가
     - [🧠 UIKit - 메모리 관리](#-uikit---메모리-관리)
@@ -47,8 +47,8 @@ _446 TILs and counting..._
 ## iOS - SwiftUI 목차
 
 - [📦 SwiftUI 기반 앱](#-ios---swiftui-기반-앱) (15)
-    - [📦 SwiftUI - 앱의 구조와 실행 흐름](#-swiftui---앱의-구조와-실행-흐름): 어떻게 실행되는가
-    - [🎨 SwiftUI - UI 구성 요소 설계](#-swiftui---ui-구성-요소-설계): 어떤 뷰로 구성되는가
+    - [📦 SwiftUI - 앱의 구조와 실행 흐름](#-swiftui---앱의-구조와-실행-흐름) (1): 어떻게 실행되는가
+    - [🎨 SwiftUI - UI 구성 요소 설계](#-swiftui---ui-구성-요소-설계) (12): 어떤 뷰로 구성되는가
     - [🎨 SwiftUI - 레이아웃과 배치 전략](#-swiftui---레이아웃과-배치-전략): 어떻게 배치할까
     - [🕹 SwiftUI - 이벤트 & 입력 처리 흐름](#-swiftui---이벤트--입력-처리-흐름): 어떤 입력을 어떻게 처리할까
     - [🔀 SwiftUI - 화면 전환 흐름](#-swiftui---화면-전환-흐름): 어떤 흐름으로 이동할까
@@ -70,28 +70,28 @@ _446 TILs and counting..._
 
 ## iOS - 앱 아키텍쳐 및 성능 목차
 - [iOS - 앱 아키텍쳐 및 성능](#ios---앱-아키텍쳐-및-성능) (31)
-    - [🏗 iOS - 아키텍처 및 모듈 설계](#-ios---아키텍처-및-모듈-설계)
-    - [🔀 iOS - 동시성 처리](#-ios---동시성-처리)
-    - [🧱 iOS - Deprecated API 마이그레이션 기록](#-ios---deprecated-api-마이그레이션-기록)
+    - [🏗 iOS - 아키텍처 및 모듈 설계](#-ios---아키텍처-및-모듈-설계) (19)
+    - [🔀 iOS - 동시성 처리](#-ios---동시성-처리) (8)
+    - [🧱 iOS - Deprecated API 마이그레이션 기록](#-ios---deprecated-api-마이그레이션-기록) (4)
 
 
 ## iOS - 시스템 및 운영 배포 목차
 - [iOS - 시스템 및 운영 배포](#ios---시스템-및-운영-배포) (19)
-    - [🔧 iOS - 시스템 환경 설정](#-ios---시스템-환경-설정)
-    - [🚀 iOS - 배포](#-ios---배포)
+    - [🔧 iOS - 시스템 환경 설정](#-ios---시스템-환경-설정) (6)
+    - [🚀 iOS - 배포](#-ios---배포) (12)
     - [🚀 iOS - CI/CD](#-ios---cicd)
-    - [🧯 iOS - 운영 이슈 문제 해결](#-ios---운영-이슈-문제-해결)
+    - [🧯 iOS - 운영 이슈 문제 해결](#-ios---운영-이슈-문제-해결) (1)
 
 ## iOS - 테스트 및 도구 목차
 - [iOS - 테스트 및 도구](#-ios---테스트-및-도구) (7)
-    - [🧰 iOS - 개발 보조 도구 및 구성 관리](#-ios---개발-보조-도구-및-구성-관리)
-    - [🧪 iOS - 앱 테스트 구성 요소](#-ios---앱-테스트-구성-요소)
+    - [🧰 iOS - 개발 보조 도구 및 구성 관리](#-ios---개발-보조-도구-및-구성-관리) (6)
+    - [🧪 iOS - 앱 테스트 구성 요소](#-ios---앱-테스트-구성-요소) (1)
 
 
 ## 🎨 iOS - 그래픽 렌더링 & 시각 효과 목차
 - [iOS - 그래픽 렌더링 & 시각 효과](#ios---그래픽-렌더링--시각-효과)
     - [🖼 iOS - Core Graphics - 직접 드로잉 처리](#-ios---core-graphics---직접-드로잉-처리)
-    - [💫 iOS - Core Animation - 저수준 애니메이션 처리](#-ios---core-animation---저수준-애니메이션-처리)
+    - [💫 iOS - Core Animation - 저수준 애니메이션 처리](#-ios---core-animation---저수준-애니메이션-처리) (1)
     - [🎮 iOS - Metal - 고성능 GPU 렌더링](#-ios---metal---고성능-gpu-렌더링)
     - [🌈 iOS - Core Image - 이미지 필터링 및 효과](#-ios---core-image---이미지-필터링-및-효과)
     - [🕹 iOS - SceneKit & ARKit - 3D 및 증강현실](#-ios---scenekit--arkit---3d-및-증강현실)
@@ -208,9 +208,9 @@ _446 TILs and counting..._
 ## Flutter 목차
 - [📦 Flutter - 앱의 구조와 실행 흐름](#-flutter---앱의-구조와-실행-흐름) (2)
 - [🎨 Flutter - UI 구성 요소 설계](#-flutter---ui-구성-요소-설계) (11)
-    - [Basic Widgets](#basic-widgets): 가장 기초적인 위젯 구성 요소들 (Text, Button 등)
-    - [Layout Widgets](#layout-widgets): 레이아웃 구성용 위젯 (Row, Column, Stack 등)
-    - [Text Widgets](#text-widgets): 텍스트 표시 및 스타일링 관련 위젯
+    - [Basic Widgets](#basic-widgets) (5): 가장 기초적인 위젯 구성 요소들 (Text, Button 등)
+    - [Layout Widgets](#layout-widgets) (5): 레이아웃 구성용 위젯 (Row, Column, Stack 등)
+    - [Text Widgets](#text-widgets) (1): 텍스트 표시 및 스타일링 관련 위젯
     - [Input Widgets](#input-widgets): 사용자 입력을 위한 위젯 (TextField, Button, Form 등)
     - [Assets, Images, and Icons](#images-and-icons): 이미지, 아이콘, 에셋 관련 구성 요소
     - [Scrolling Widgets](#scrolling-widgets): 스크롤 가능한 콘텐츠를 구성하는 위젯
@@ -246,10 +246,10 @@ _446 TILs and counting..._
 
 ## Flutter - 시스템 및 운영 배포 목차
 - [Flutter - 시스템 및 운영 배포](#flutter---시스템-및-운영-배포) (8)
-    - [🔧 Flutter - 시스템 환경 설정](#-flutter---시스템-환경-설정)
-    - [🚀 Flutter - 배포](#-flutter---배포)
+    - [🔧 Flutter - 시스템 환경 설정](#-flutter---시스템-환경-설정) (3)
+    - [🚀 Flutter - 배포](#-flutter---배포) (1)
     - [🚀 Flutter - CI/CD](#-flutter---cicd)
-    - [🧯 Flutter - 운영 이슈 문제 해결](#-flutter---운영-이슈-문제-해결)
+    - [🧯 Flutter - 운영 이슈 문제 해결](#-flutter---운영-이슈-문제-해결) (4)
 
 ## Flutter - 테스트 및 도구 목차
 - [Flutter - 테스트 및 도구](#-flutter---테스트-및-도구)
@@ -259,7 +259,7 @@ _446 TILs and counting..._
 
 ## 🎨 Flutter - 그래픽 렌더링 & 시각 효과 목차
 - [🎨 Flutter - 그래픽 렌더링 & 시각 효과 목차]
-    - [🖼 CustomPainter](#-custompainter): drawLine, drawRect 등으로 직접 도형을 그리는 방법
+    - [🖼 CustomPainter](#-custompainter) (1): drawLine, drawRect 등으로 직접 도형을 그리는 방법
     - [💫 AnimationController & Tween] : 커스텀 애니메이션 처리
     - [🎮 Flutter + OpenGL / Unity 통합] : 고성능 그래픽 또는 3D 렌더링이 필요한 경우 외부 엔진 연동 방법
     - [🌈 ImageFilter & BlendMode] : 이미지 필터와 색상 효과 등 이미지 시각 효과 적용
@@ -295,17 +295,17 @@ _446 TILs and counting..._
 # 📚 Programming Language Reference  
 
 - [🧬 Languages](#-languages)
-    - [Lang-Swift](#lang-swift)
+    - [Lang-Swift](#lang-swift) (51)
     - [Lang-Objective-C](#lang-objective-c)
-    - [Lang-Ruby](#lang-ruby)
-    - [Lang-Dart](#lang-dart)
+    - [Lang-Ruby](#lang-ruby) (3)
+    - [Lang-Dart](#lang-dart) (7)
     - [Lang-TypeScript](#lang-typescript)
     - [Lang-JavaScript](#lang-javascript)
     - [Lang-SQL](#lang-sql)
 
 
 ### Markup & Style
-- [Lang-Markdown](#lang-markdown)
+- [Lang-Markdown](#lang-markdown) (5)
 - [Lang-HTML](#lang-html)
 - [Lang-CSS](#lang-css)
 
@@ -331,10 +331,10 @@ _446 TILs and counting..._
       
 ### ⚙️ DevOps / Tools
 
-- [Tools](#tools)
+- [Tools](#tools) (1)
 - [CI_CD](#ci_cd)
 - [Docs](#docs)
-- [Git](#git)
+- [Git](#git) (20)
 
 
 ## 🌐 Other Topics
