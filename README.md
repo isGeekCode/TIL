@@ -25,8 +25,8 @@ _446 TILs and counting..._
 앱 개발에서 공통적으로 필요한 기능들을 정리합니다.  
 (예: Splash 화면, UserDefaults, 퍼미션 처리 등)
 
-- [Mobile 공통 기능 구현](#mobile-공통-기능-구현) (5)
-    - [Mobile iOS 공통 기능 구현](#mobile-ios-공통-기능-구현) (2)
+- [Mobile 공통 기능 구현](#mobile-공통-기능-구현) (5) (5)
+    - [Mobile iOS 공통 기능 구현](#mobile-ios-공통-기능-구현) (2) (2)
     - [Mobile Android 공통 기능 구현](#mobile-android-공통-기능-구현)
     - [Mobile Flutter 공통 기능 구현](#mobile-flutter-공통-기능-구현)
 
@@ -63,9 +63,9 @@ _446 TILs and counting..._
 ## iOS - 기능 개발 핵심 목차
 
 - [🌐 iOS - 통신 & 네트워킹](#-ios---통신--네트워킹)
-- [🔧 iOS - 시스템 기능 & 네이티브 API](#-ios---시스템-기능--네이티브-api) (20)
+- [🔧 iOS - 시스템 기능 & 네이티브 API](#-ios---시스템-기능--네이티브-api) (20) (20)
   - [🔔 iOS - 푸시 알림 및 백그라운드 처리](#-ios---푸시-알림-및-백그라운드-처리)
-- [🔗 iOS - 외부 SDK & 서비스 연동](#-ios---외부-sdk--서비스-연동) (17)
+- [🔗 iOS - 외부 SDK & 서비스 연동](#-ios---외부-sdk--서비스-연동) (17) (17)
 
 
 ## iOS - 앱 아키텍쳐 및 성능 목차
@@ -97,7 +97,7 @@ _446 TILs and counting..._
     - [🕹 iOS - SceneKit & ARKit - 3D 및 증강현실](#-ios---scenekit--arkit---3d-및-증강현실)
 
 ## iOS - 보안 및 저장 목차
-- [🛡 iOS - 보안 및 데이터 저장 기술](#-ios---보안-및-데이터-저장-기술) (11)
+- [🛡 iOS - 보안 및 데이터 저장 기술](#-ios---보안-및-데이터-저장-기술) (11) (11)
 
 ## iOS - 컨퍼런스 인사이트
 - [🏛 국내 컨퍼런스 정리](#-국내-컨퍼런스-정리)
@@ -191,7 +191,7 @@ _446 TILs and counting..._
 
 
 ## Android - 샘플 앱 목차
-- [🧾 Android - 샘플 앱](#-ios---샘플-앱) (6)
+- [🧾 Android - 샘플 앱](#-ios---샘플-앱) (6) (6)
 
 
 <br><br>
@@ -206,8 +206,8 @@ _446 TILs and counting..._
 - [Mobile Flutter 공통 기능 구현](#mobile-flutter-공통-기능-구현)
 
 ## Flutter 목차
-- [📦 Flutter - 앱의 구조와 실행 흐름](#-flutter---앱의-구조와-실행-흐름) (2)
-- [🎨 Flutter - UI 구성 요소 설계](#-flutter---ui-구성-요소-설계) (11)
+- [📦 Flutter - 앱의 구조와 실행 흐름](#-flutter---앱의-구조와-실행-흐름) (2) (2)
+- [🎨 Flutter - UI 구성 요소 설계](#-flutter---ui-구성-요소-설계) (11) (11)
     - [Basic Widgets](#basic-widgets) : 가장 기초적인 위젯 구성 요소들 (Text, Button 등)
     - [Layout Widgets](#layout-widgets) : 레이아웃 구성용 위젯 (Row, Column, Stack 등)
     - [Text Widgets](#text-widgets) : 텍스트 표시 및 스타일링 관련 위젯
@@ -222,10 +222,10 @@ _446 TILs and counting..._
     - [Accessibility Widgets](#accessibility-widgets) : 앱의 접근성을 향상시키는 도구 제공
     
 
-- [📐 Flutter - 레이아웃과 배치 전략](#-flutter---레이아웃과-배치-전략) (3)
+- [📐 Flutter - 레이아웃과 배치 전략](#-flutter---레이아웃과-배치-전략) (3) (3)
 - [🕹 Flutter - 이벤트 & 입력 처리 흐름](#-flutter---이벤트--입력-처리-흐름)
-- [🔀 Flutter - 화면 전환 흐름](#-flutter---화면-전환-흐름) (1)
-- [🧠 Flutter - 데이터의 흐름과 상태 관리](#-flutter---데이터의-흐름과-상태-관리) (5)
+- [🔀 Flutter - 화면 전환 흐름](#-flutter---화면-전환-흐름) (1) (1)
+- [🧠 Flutter - 데이터의 흐름과 상태 관리](#-flutter---데이터의-흐름과-상태-관리) (5) (5)
 - [🎨 Flutter - 애니메이션 & 뷰 효과 구성](#-flutter---애니메이션--뷰-효과-구성)
 - [🧠 Flutter - 메모리 관리 및 성능 최적화](#-flutter---메모리-관리-및-성능-최적화)
 
@@ -315,18 +315,18 @@ _446 TILs and counting..._
 ---
 
 - [🖥️ Computer Science](#-computer-science)
-    - [📚 Basics](#-basics) (2) : 컴퓨터 과학의 기초 개념, 비트와 바이트, 논리 게이트 등
+    - [📚 Basics](#-basics) (2) (2) : 컴퓨터 과학의 기초 개념, 비트와 바이트, 논리 게이트 등
     - [⚙️ Hardware](#-hardware) : CPU, 메모리, 저장장치 등 하드웨어 구성 요소
-    - [🧩 Software](#-software) (5) : 운영체제, 컴파일러, 소프트웨어 개발의 기반
-    - [📐 Algorithms](#-algorithms) (23) : 문제 해결을 위한 알고리즘과 패턴
+    - [🧩 Software](#-software) (5) (5) : 운영체제, 컴파일러, 소프트웨어 개발의 기반
+    - [📐 Algorithms](#-algorithms) (23) (23) : 문제 해결을 위한 알고리즘과 패턴
     - [📦 Data Structure](#-data-structure) : 배열, 리스트, 트리 등 자료 구조
-    - [🌐 Networking](#-networking) (7) : 인터넷, TCP/IP, OSI 7계층 등 네트워크 원리
-    - [🧮 Programming Paradigms](#-programming-paradigms) (3) : 명령형, 함수형, 객체지향 등 프로그래밍 방식
-    - [🎯 Design Patterns](#-design-patterns) (2) : 재사용 가능한 소프트웨어 설계 패턴 (싱글턴, 팩토리, 옵저버 등)
+    - [🌐 Networking](#-networking) (7) (7) : 인터넷, TCP/IP, OSI 7계층 등 네트워크 원리
+    - [🧮 Programming Paradigms](#-programming-paradigms) (3) (3) : 명령형, 함수형, 객체지향 등 프로그래밍 방식
+    - [🎯 Design Patterns](#-design-patterns) (2) (2) : 재사용 가능한 소프트웨어 설계 패턴 (싱글턴, 팩토리, 옵저버 등)
     - [🏛 Architecture Patterns](#-architecture-patterns) : 앱의 구조를 구성하는 고수준 설계 패턴 (MVC, MVVM 등)
     - [🛡 Security & Cryptography](#-security--cryptography) : 인증, 암호화, 보안 위협 대응 방법
     - [🗄 Database](#-database) : 데이터베이스 기본 개념과 SQL 활용
-    - [🧠 AI / Machine Learning](#-ai--machine-learning) (28) : 인공지능의 기본 개념과 머신러닝 모델  
+    - [🧠 AI / Machine Learning](#-ai--machine-learning) (28) (28) : 인공지능의 기본 개념과 머신러닝 모델  
     
       
 ### ⚙️ DevOps / Tools
