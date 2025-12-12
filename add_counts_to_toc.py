@@ -109,8 +109,9 @@ def add_counts_to_toc(readme_content, section_counts):
 
             # 기존 (숫자) 표시를 모두 제거 (link_text와 rest 둘 다)
             clean_text = re.sub(r'\s*\(\d+\)', '', link_text).strip()
-            clean_rest = re.sub(r'^\s*\(\d+\)', '', rest).strip()
-            if clean_rest and not clean_rest.startswith(':'):
+            clean_rest = re.sub(r'^\s*\(\d+\)', '', rest)
+            # 공백-로 시작하면 그대로 붙이기 (기존 공백 유지), 나머지는 공백 추가
+            if clean_rest and not clean_rest.startswith(' -'):
                 clean_rest = ' ' + clean_rest
 
             # 앵커로 개수 찾기
