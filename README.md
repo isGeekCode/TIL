@@ -65,7 +65,8 @@ _446 TILs and counting..._
 - [🌐 iOS - 통신 & 네트워킹](#-ios---통신--네트워킹) (23)
 - [🔧 iOS - 시스템 기능 & 네이티브 API](#-ios---시스템-기능--네이티브-api) (20)
   - [🔔 iOS - 푸시 알림 및 백그라운드 처리](#-ios---푸시-알림-및-백그라운드-처리)
-- [🔗 iOS - 외부 SDK & 서비스 연동](#-ios---외부-sdk--서비스-연동) (17)
+- [🔌 iOS - 플랫폼 네이티브 기능 연동](#-ios---플랫폼-네이티브-기능-연동) (18)
+- [🔗 iOS - 서드파티 라이브러리 연동](#-ios---서드파티-라이브러리-연동) (17)
 
 
 ## iOS - 앱 아키텍쳐 및 성능 목차
@@ -155,7 +156,8 @@ _446 TILs and counting..._
 - [🌐 Android - 통신 & 네트워킹](#-android---통신--네트워킹)
 - [🔧 Android - 시스템 기능 & 네이티브 API](#-android---시스템-기능--네이티브-api)
   - [🔔 Android - 푸시 알림 및 백그라운드 처리](#-android---푸시-알림-및-백그라운드-처리)
-- [🔗 Android - 외부 SDK & 서비스 연동](#-android---외부-sdk--서비스-연동)
+- [🔌 Android - 플랫폼 네이티브 기능 연동](#-android---플랫폼-네이티브-기능-연동)
+- [🔗 Android - 서드파티 라이브러리 연동](#-android---서드파티-라이브러리-연동)
 
 
 ## Android - 앱 아키텍쳐 및 성능 목차
@@ -235,7 +237,8 @@ _446 TILs and counting..._
 - [🌐 Flutter - 통신 & 네트워킹](#-flutter---통신--네트워킹) (4)
 - [🔧 Flutter - 시스템 기능 & 네이티브 API](#-flutter---시스템-기능--네이티브-api)
   - [🔔 Flutter - 푸시 알림 및 백그라운드 처리](#-flutter---푸시-알림-및-백그라운드-처리)
-- [🔗 Flutter - 외부 SDK & 서비스 연동](#-flutter---외부-sdk--서비스-연동)
+- [🔌 Flutter - 플랫폼 네이티브 기능 연동](#-flutter---플랫폼-네이티브-기능-연동)
+- [🔗 Flutter - 서드파티 라이브러리 연동](#-flutter---서드파티-라이브러리-연동)
 
 ## Flutter - 앱 아키텍쳐 및 성능 목차
 - [Flutter - 앱 아키텍쳐 및 성능](#flutter--앱-아키텍쳐-및-성능)
@@ -722,7 +725,7 @@ _446 TILs and counting..._
 [\- 👆목차로 돌아가기 \-](#ios---기능-개발-핵심-목차)
 
 
-### 🔌 iOS - 내부 프레임워크 기능 활용
+### 🔌 iOS - 플랫폼 네이티브 기능 연동
 - 시간 관련
     - [Date - Date로 두 개의 시간차 구하기](Mobile_01_iOS/iOS-Development/Date_getTimeInterval.md)
 - CLLocation
@@ -755,7 +758,7 @@ _446 TILs and counting..._
 
 
 
-## 🔗 iOS - 외부 SDK & 서비스 연동
+## 🔗 iOS - 서드파티 라이브러리 연동
 - [External Link (외부링크) - 커스텀 앱스키마 만들기, 사용하기](Mobile_01_iOS/iOS-Development/ExternalLink_CustomScheme.md)
 - [iOS - 패키지 의존성 관리 도구: CocoaPods, Carthage, SPM](Mobile_01_iOS/iOS-Library/About_A_iOS_Package.md)
 - [About Swift PackageManager](Mobile_01_iOS/iOS-Library/About_SPM.md)
@@ -1100,7 +1103,7 @@ _446 TILs and counting..._
 
 [\- 👆목차로 돌아가기 \-](#android---기능-개발-핵심-목차)
 
-### 🔗 Android - 외부 SDK & 서비스 연동
+### 🔗 Android - 서드파티 라이브러리 연동
 
 [\- 👆목차로 돌아가기 \-](#android---기능-개발-핵심-목차)
 
@@ -1371,7 +1374,7 @@ AR 및 3D 렌더링
 
 <br><br>
 
-### 🔗 Flutter - 외부 SDK & 서비스 연동
+### 🔗 Flutter - 서드파티 라이브러리 연동
 
 [\- 👆목차로 돌아가기 \-](#flutter---기능-개발-핵심-목차)
 
