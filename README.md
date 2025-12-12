@@ -321,8 +321,8 @@ _446 TILs and counting..._
     - [📚 Basics](#-basics) (2) - 컴퓨터 과학의 기초 개념, 비트와 바이트, 논리 게이트 등
     - [⚙️ Hardware](#-hardware) - CPU, 메모리, 저장장치 등 하드웨어 구성 요소
     - [🧩 Software](#-software) (5) - 운영체제, 컴파일러, 소프트웨어 개발의 기반
-    - [📐 Algorithms](#-algorithms) (23) - 문제 해결을 위한 알고리즘과 패턴
-    - [📦 Data Structure](#-data-structure) - 배열, 리스트, 트리 등 자료 구조
+    - [📐 Algorithms](#-algorithms) (18) - 문제 해결을 위한 알고리즘과 패턴
+    - [📦 Data Structure](#-data-structure) (5) - 배열, 리스트, 트리 등 자료 구조
     - [🌐 Networking](#-networking) (7) - 인터넷, TCP/IP, OSI 7계층 등 네트워크 원리
     - [🧮 Programming Paradigms](#-programming-paradigms) (3) - 명령형, 함수형, 객체지향 등 프로그래밍 방식
     - [🎯 Design Patterns](#-design-patterns) (2) - 재사용 가능한 소프트웨어 설계 패턴 (싱글턴, 팩토리, 옵저버 등)
@@ -1634,12 +1634,7 @@ ARKit, SceneKit처럼 AR 기능은 외부 플러그인 기반 접근 정리
 - [필수 알고리즘 - 그리디 (Greedy)](Algorithm/algorithm_006_esssential_Greedy.md)
 - [구현 정리](Algorithm/strategy_001_basic_implementation.md)
 - [그래프 정리 (stack, queue, 재귀, bfs, dfs)](Algorithm/strategy_002_basic_graph_search.md)
-- [기본 자료 구조 - 배열](Algorithm/000_algorithm_dataStructure_essential_array.md)
-- [기본 자료 구조 - 연결 리스트 (Linked List)](Algorithm/001_algorithm_dataStructure_essential_linkedList.md)
-- [기본 자료 구조 - 스택 (Stack)](Algorithm/002_algorithm_dataStructure_essential_stack.md)
-- [기본 자료 구조 - 큐 (Queue)](Algorithm/003_algoritym_dataStructure_essential_queue.md)
 - [알고리즘이란](Algorithm/About_Algorithm.md)
-- [자료구조를 왜 공부해야하는지](Algorithm/algorithm00_00_dataStructure.md)
 - [알고리즘 - 선택정렬 : Selection Sort](Algorithm/algorithm00_selectionSort.md)
 - [알고리즘 - 버블정렬 : Bubble Sort(작성중)](Algorithm/algorithm01_bubbleSort.md)
 - [알고리즘 템플릿](Algorithm/algorithm_000_AQuck.md)
@@ -1654,6 +1649,11 @@ ARKit, SceneKit처럼 AR 기능은 외부 플러그인 기반 접근 정리
 - [필수 알고리즘 - 다익스트라 (Dijkstra)](Algorithm/algorithm_009_essential_Dijkstra.md)
 
 ## 📦 Data Structure
+- [자료구조를 왜 공부해야하는지](Algorithm/algorithm00_00_dataStructure.md)
+- [기본 자료 구조 - 배열](Algorithm/000_algorithm_dataStructure_essential_array.md)
+- [기본 자료 구조 - 연결 리스트 (Linked List)](Algorithm/001_algorithm_dataStructure_essential_linkedList.md)
+- [기본 자료 구조 - 스택 (Stack)](Algorithm/002_algorithm_dataStructure_essential_stack.md)
+- [기본 자료 구조 - 큐 (Queue)](Algorithm/003_algoritym_dataStructure_essential_queue.md)
 
 ## 🌐 Networking
 - [HTTP/2에 대하여(feat.ios)](ComputerScience/http_2.md)
