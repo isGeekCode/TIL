@@ -7,6 +7,7 @@ on:
     paths:
       - '**.md'
       - '!README.md'  # README 자체 변경은 제외
+      - 'add_counts_to_toc.py'  # 스크립트 변경 시에도 실행
 
 jobs:
   update-readme:

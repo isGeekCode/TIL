@@ -78,8 +78,8 @@ def header_to_anchor(header_text):
     text = text.lower()
     # 이모지 제거 (공백은 유지!)
     text = re.sub(r'[\U0001F000-\U0001F9FF\U00002600-\U000027BF\U0001F300-\U0001F5FF\U0001F600-\U0001F64F\U0001F680-\U0001F6FF\U0001F900-\U0001F9FF]', '', text)
-    # 특수문자를 공백으로 대체 (한글, 영문, 숫자, 공백, 하이픈만 유지)
-    text = re.sub(r'[^\w가-힣\s-]', ' ', text)
+    # 특수문자 제거 (한글, 영문, 숫자, 공백, 하이픈만 유지)
+    text = re.sub(r'[^\w가-힣\s-]', '', text)
     # 공백을 하이픈으로
     text = text.replace(' ', '-')
     return '#' + text

@@ -57,15 +57,15 @@ _446 TILs and counting..._
     - [🧠 SwiftUI - 메모리 관리](#-swiftui---메모리-관리)
 
 ## iOS - 공통
-- [🔗 UIKit / SwiftUI - 상호 연동](#-uikit--swiftui-상호-연동)
+- [🔗 UIKit / SwiftUI - 상호 연동](#-uikit--swiftui-상호-연동) (4)
 
 
 ## iOS - 기능 개발 핵심 목차
 
-- [🌐 iOS - 통신 & 네트워킹](#-ios---통신--네트워킹)
-- [🔧 iOS - 시스템 기능 & 네이티브 API](#-ios---시스템-기능--네이티브-api)
+- [🌐 iOS - 통신 & 네트워킹](#-ios---통신--네트워킹) (23)
+- [🔧 iOS - 시스템 기능 & 네이티브 API](#-ios---시스템-기능--네이티브-api) (20)
   - [🔔 iOS - 푸시 알림 및 백그라운드 처리](#-ios---푸시-알림-및-백그라운드-처리)
-- [🔗 iOS - 외부 SDK & 서비스 연동](#-ios---외부-sdk--서비스-연동)
+- [🔗 iOS - 외부 SDK & 서비스 연동](#-ios---외부-sdk--서비스-연동) (17)
 
 
 ## iOS - 앱 아키텍쳐 및 성능 목차
@@ -89,7 +89,7 @@ _446 TILs and counting..._
 
 
 ## 🎨 iOS - 그래픽 렌더링 & 시각 효과 목차
-- [iOS - 그래픽 렌더링 & 시각 효과](#ios---그래픽-렌더링--시각-효과)
+- [iOS - 그래픽 렌더링 & 시각 효과](#ios---그래픽-렌더링--시각-효과) (11)
     - [🖼 iOS - Core Graphics - 직접 드로잉 처리](#-ios---core-graphics---직접-드로잉-처리)
     - [💫 iOS - Core Animation - 저수준 애니메이션 처리](#-ios---core-animation---저수준-애니메이션-처리) (1)
     - [🎮 iOS - Metal - 고성능 GPU 렌더링](#-ios---metal---고성능-gpu-렌더링)
@@ -232,7 +232,7 @@ _446 TILs and counting..._
 
 
 ## Flutter - 기능 개발 핵심 목차
-- [🌐 Flutter - 통신 & 네트워킹](#-flutter---통신--네트워킹)
+- [🌐 Flutter - 통신 & 네트워킹](#-flutter---통신--네트워킹) (4)
 - [🔧 Flutter - 시스템 기능 & 네이티브 API](#-flutter---시스템-기능--네이티브-api)
   - [🔔 Flutter - 푸시 알림 및 백그라운드 처리](#-flutter---푸시-알림-및-백그라운드-처리)
 - [🔗 Flutter - 외부 SDK & 서비스 연동](#-flutter---외부-sdk--서비스-연동)
@@ -326,7 +326,7 @@ _446 TILs and counting..._
     - [🏛 Architecture Patterns](#-architecture-patterns): 앱의 구조를 구성하는 고수준 설계 패턴 (MVC, MVVM 등)
     - [🛡 Security & Cryptography](#-security--cryptography): 인증, 암호화, 보안 위협 대응 방법
     - [🗄 Database](#-database): 데이터베이스 기본 개념과 SQL 활용
-    - [🧠 AI / Machine Learning](#-ai--machine-learning): 인공지능의 기본 개념과 머신러닝 모델
+    - [🧠 AI / Machine Learning](#-ai--machine-learning) (28): 인공지능의 기본 개념과 머신러닝 모델
     
       
 ### ⚙️ DevOps / Tools
