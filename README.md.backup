@@ -34,7 +34,7 @@ _446 TILs and counting..._
 
 ## iOS - UIKit 목차
 
-- [📦 UIKit 기반 앱](#-ios---uikit-기반-앱)
+- [📦 UIKit 기반 앱](#-ios---uikit-기반-앱) (76)
     - [📦 UIKit - 앱의 구조와 실행 흐름](#-uikit---앱의-구조와-실행-흐름) (4): 어떻게 실행되는가
     - [🎨 UIKit - UI 구성 요소 설계](#-uikit---ui-구성-요소-설계) (56): 어떤 뷰로 구성되는가
     - [🎨 UIKit - 레이아웃과 배치 전략](#-uikit---레이아웃과-배치-전략) (5): 어떻게 배치할까
@@ -46,7 +46,7 @@ _446 TILs and counting..._
 
 ## iOS - SwiftUI 목차
 
-- [📦 SwiftUI 기반 앱](#-ios---swiftui-기반-앱)
+- [📦 SwiftUI 기반 앱](#-ios---swiftui-기반-앱) (15)
     - [📦 SwiftUI - 앱의 구조와 실행 흐름](#-swiftui---앱의-구조와-실행-흐름) (1): 어떻게 실행되는가
     - [🎨 SwiftUI - UI 구성 요소 설계](#-swiftui---ui-구성-요소-설계) (12): 어떤 뷰로 구성되는가
     - [🎨 SwiftUI - 레이아웃과 배치 전략](#-swiftui---레이아웃과-배치-전략): 어떻게 배치할까
@@ -69,21 +69,21 @@ _446 TILs and counting..._
 
 
 ## iOS - 앱 아키텍쳐 및 성능 목차
-- [iOS - 앱 아키텍쳐 및 성능](#ios---앱-아키텍쳐-및-성능)
+- [iOS - 앱 아키텍쳐 및 성능](#ios---앱-아키텍쳐-및-성능) (31)
     - [🏗 iOS - 아키텍처 및 모듈 설계](#-ios---아키텍처-및-모듈-설계) (19)
     - [🔀 iOS - 동시성 처리](#-ios---동시성-처리) (8)
     - [🧱 iOS - Deprecated API 마이그레이션 기록](#-ios---deprecated-api-마이그레이션-기록) (4)
 
 
 ## iOS - 시스템 및 운영 배포 목차
-- [iOS - 시스템 및 운영 배포](#ios---시스템-및-운영-배포)
+- [iOS - 시스템 및 운영 배포](#ios---시스템-및-운영-배포) (19)
     - [🔧 iOS - 시스템 환경 설정](#-ios---시스템-환경-설정) (6)
     - [🚀 iOS - 배포](#-ios---배포) (12)
     - [🚀 iOS - CI/CD](#-ios---cicd)
     - [🧯 iOS - 운영 이슈 문제 해결](#-ios---운영-이슈-문제-해결) (1)
 
 ## iOS - 테스트 및 도구 목차
-- [iOS - 테스트 및 도구](#-ios---테스트-및-도구)
+- [iOS - 테스트 및 도구](#-ios---테스트-및-도구) (7)
     - [🧰 iOS - 개발 보조 도구 및 구성 관리](#-ios---개발-보조-도구-및-구성-관리) (6)
     - [🧪 iOS - 앱 테스트 구성 요소](#-ios---앱-테스트-구성-요소) (1)
 
@@ -112,7 +112,7 @@ _446 TILs and counting..._
     - [WWDC](#wwdc)
 
 ## iOS - 샘플 앱 목차
-- [🧾 iOS - 샘플 앱](#-ios---샘플-앱)
+- [🧾 iOS - 샘플 앱](#-ios---샘플-앱) (3)
 
 
 
@@ -191,7 +191,7 @@ _446 TILs and counting..._
 
 
 ## Android - 샘플 앱 목차
-- [🧾 Android - 샘플 앱](#-ios---샘플-앱)
+- [🧾 Android - 샘플 앱](#-ios---샘플-앱) (3)
 
 
 <br><br>
@@ -207,7 +207,7 @@ _446 TILs and counting..._
 
 ## Flutter 목차
 - [📦 Flutter - 앱의 구조와 실행 흐름](#-flutter---앱의-구조와-실행-흐름) (2)
-- [🎨 Flutter - UI 구성 요소 설계](#-flutter---ui-구성-요소-설계)
+- [🎨 Flutter - UI 구성 요소 설계](#-flutter---ui-구성-요소-설계) (11)
     - [Basic Widgets](#basic-widgets) (5): 가장 기초적인 위젯 구성 요소들 (Text, Button 등)
     - [Layout Widgets](#layout-widgets) (5): 레이아웃 구성용 위젯 (Row, Column, Stack 등)
     - [Text Widgets](#text-widgets) (1): 텍스트 표시 및 스타일링 관련 위젯
@@ -245,7 +245,7 @@ _446 TILs and counting..._
 
 
 ## Flutter - 시스템 및 운영 배포 목차
-- [Flutter - 시스템 및 운영 배포](#flutter---시스템-및-운영-배포)
+- [Flutter - 시스템 및 운영 배포](#flutter---시스템-및-운영-배포) (8)
     - [🔧 Flutter - 시스템 환경 설정](#-flutter---시스템-환경-설정) (3)
     - [🚀 Flutter - 배포](#-flutter---배포) (1)
     - [🚀 Flutter - CI/CD](#-flutter---cicd)
