@@ -1,0 +1,46 @@
+name: Update README TOC Counts
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.md'
+      - '!README.md'  # README 자체 변경은 제외
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    # 무한 루프 방지: GitHub Actions bot이 만든 커밋은 건너뛰기
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 전체 히스토리 가져오기
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run README count update script
+        run: python3 add_counts_to_toc.py
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code README.md || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push if changed
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git commit -m "docs: Update README TOC counts [skip ci]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
