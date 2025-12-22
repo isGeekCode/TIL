@@ -1,5 +1,7 @@
 # [Apple Document] - Responding to the launch of your app : 앱 실행에 대한 응답
 
+#dev/mobile/ios
+
 - [Apple Document : Managing your app’s life cycle](https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle)
 
 <br><br>

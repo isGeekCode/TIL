@@ -1,5 +1,7 @@
 # UIApplication_AppDelegate - 헷갈릴수 있는 두 함수(didReceive형제)
 
+#dev/mobile/ios
+
 
 푸시알림을 받기위해 세팅하다보면 두가지 함수에서 고민을 하게 된다. 바로 아래 두 함수다.
 

@@ -2,7 +2,7 @@
 
 - [Apple Document : Managing your app’s life cycle](https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle)
 
-#dev/생명주기  
+#dev/생명주기   #dev/mobile/ios
 
 ## Overview
 

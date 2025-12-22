@@ -1,5 +1,7 @@
 # [Apple Document] - AppDelegate, UIApplicationDelegate 프로토콜
 
+#dev/mobile/ios
+
 - [Apple Document : delegate 변수](https://developer.apple.com/documentation/uikit/uiapplication/1622936-delegate)
 - [Apple Document : UIApplicationDelegate 프로토콜](https://developer.apple.com/documentation/uikit/uiapplicationdelegate)
 

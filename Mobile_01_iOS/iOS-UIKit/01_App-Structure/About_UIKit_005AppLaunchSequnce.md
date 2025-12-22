@@ -1,4 +1,6 @@
 # [Apple Document] - About the app launch sequence : 앱의 실행되는 순서에 관하여
+#dev/mobile/ios
+
 
 앱 실행 시 시스템이 코드를 실행하는 순서를 확인해보자.
 

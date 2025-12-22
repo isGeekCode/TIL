@@ -1,3 +1,5 @@
+#dev/mobile/ios
+
 # UIApplication_AppDelegate - userNotificationCenter
 AppDelegate클래스는 앱의 전반적인 라이프사이클 관리르 담당하는 클래스다.
 

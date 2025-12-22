@@ -4,6 +4,8 @@
 - [코더스하이: 앱의 생명주기](https://www.youtube.com/watch?v=7GlwS2lOKbE)
 
 
+#dev/mobile/ios
+
 <br><br>
 
 UIApplication은 애플리케이션의 라이프 사이클을 관리하는 싱글톤 클래스를 말한다.  

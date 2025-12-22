@@ -1,6 +1,6 @@
 # [Apple Document] - UIApplication 싱글턴 객체
 
-
+#dev/mobile/ios
 ## 참고링크
 - [Apple Doc : UIApplication객체](https://developer.apple.com/documentation/uikit/uiapplication)
 
