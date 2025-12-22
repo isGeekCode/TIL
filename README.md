@@ -478,6 +478,8 @@ _446 TILs and counting..._
 
 ## 📦 iOS - UIKit 기반 앱
 ### 📦 UIKit - 앱의 구조와 실행 흐름
+
+#### 앱 레벨 구조
 - [[Apple Document] - UIApplicationMain(::::)](Mobile_01_iOS/iOS-UIKit/01_App-Structure/About_UIKit_000UIApplicationMain.md)
 - [[Apple Document] - UIApplication 싱글턴 객체](Mobile_01_iOS/iOS-UIKit/01_App-Structure/About_UIKit_001UIApplication.md)
 - [[Apple Document] - AppDelegate, UIApplicationDelegate 프로토콜](Mobile_01_iOS/iOS-UIKit/01_App-Structure/About_UIKit_002UIApplicationDelegate.md)
@@ -488,6 +490,11 @@ _446 TILs and counting..._
 - [UIApplication_AppDelegate - 헷갈릴수 있는 두 함수(didReceive형제)](Mobile_01_iOS/iOS-UIKit/01_App-Structure/UIApplication_AppDelegate-DifferenceNotification.md)
 - [UIApplication_AppDelegate - userNotificationCenter](Mobile_01_iOS/iOS-UIKit/01_App-Structure/UIApplication_AppDelegate_userNotificationCenter.md)
 - [UIApplication_AppDelegate - UIApplicationDelegate : 앱의 상태 / 생명주기(Life-Cycle)](Mobile_01_iOS/iOS-UIKit/01_App-Structure/UIApplication_StatusCycle_of_App.md)
+
+#### 🔁 컴포넌트별 생명주기
+- [UIViewController의 Life-cycle](Mobile_01_iOS/iOS-UIKit/02_ViewControllers/UIViewController_Lifecycle.md)
+- [UIView의 Drawing Cycle (Layout Cycle)](Mobile_01_iOS/iOS-UIKit/03_Views/Basic/UIView_DrawingCycle.md)
+- [UIResponder와 Responder Chain](Mobile_01_iOS/iOS-UIKit/03_Views/Basic/UIResponder_ResponderChain.md)
 
 
 ### 🎨 UIKit - UI 구성 요소 설계
@@ -610,18 +617,16 @@ _446 TILs and counting..._
 
 <br>
 
-### 🔁 UIKit - 주요 사이클
-- [UIView의 Drawing Cycle (Layout Cycle)](Mobile_01_iOS/iOS-UIKit/03_Views/Basic/UIView_DrawingCycle.md)
-- [UIResponder와 Responder Chain](Mobile_01_iOS/iOS-UIKit/03_Views/Basic/UIResponder_ResponderChain.md)
-- [UIViewController의 Life-cycle](Mobile_01_iOS/iOS-UIKit/02_ViewControllers/UIViewController_Lifecycle.md)
-
-
-<br>
 
 ## 📦 iOS - SwiftUI 기반 앱
 
 ### 📦 SwiftUI - 앱의 구조와 실행 흐름
+
+#### 앱 레벨 구조
 - [Layout - SwiftUI: State와 바인딩](Mobile_01_iOS/iOS-Framework-SwiftUI/SwiftUI_State.md)
+
+#### 🔁 컴포넌트별 생명주기
+- [SwiftUI View 생명주기 정리](Mobile_01_iOS/iOS-Framework-SwiftUI/SwiftUI_ViewLifecycle.md)
 
 ### 🎨 SwiftUI - UI 구성 요소 설계
 - [Layout - SwiftUI: Text](Mobile_01_iOS/iOS-Framework-SwiftUI/SwiftUI_001_Text.md)
@@ -659,12 +664,6 @@ _446 TILs and counting..._
 [\- 👆목차로 돌아가기 \-](#ios---swiftui-목차)
 
 ### 🧠 SwiftUI - 메모리 관리
-
-[\- 👆목차로 돌아가기 \-](#ios---swiftui-목차)
-
-### 🔁 SwiftUI - 주요 사이클
-- [SwiftUI View 생명주기 정리](Mobile_01_iOS/iOS-Framework-SwiftUI/SwiftUI_ViewLifecycle.md)
-- [Layout - SwiftUI: State와 바인딩](Mobile_01_iOS/iOS-Framework-SwiftUI/SwiftUI_State.md)
 
 [\- 👆목차로 돌아가기 \-](#ios---swiftui-목차)
 
