@@ -1,6 +1,8 @@
-# [Apple Document] - Managing your app’s life cycle : 앱의 생명주기 관리
+# [Apple Document] - 앱의 생명주기 관리
 
 - [Apple Document : Managing your app’s life cycle](https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle)
+
+#dev/생명주기  
 
 ## Overview
 
@@ -20,11 +22,20 @@
 
 <br><br><br>
 
-## Scene-based App 기반의 Life-cycle 동작
-
+## Scene 기반 생명주기(UISceneDelegate 중심) 동작
 앱에서 `Scene`을 지원하는 경우, `UIKit`은 각 Scene에 대하여 별도의 Life-cycle 이벤트를 제공한다.  
 
+
 Scene는 디바이스에서 실행되는 앱 UI의 한 인스턴스를 나타낸다.  
+
+### Window의 소유와 관리
+Scene 기반 생명주기에서 `Window`는 **앱(App) 단위가 아니라 Scene 단위**로 붙는다.
+
+- `UIWindow`는 특정 `UIWindowScene`에 소속된다. 즉, **Window의 논리적 소유자는 `UIWindowScene`** 이다.
+- 하나의 Scene은 **하나 이상의 Window**를 가질 수 있다.
+- 따라서 window를 조회/관리할 때도 “앱 전체” 관점보다 **현재 Scene 관점(`UIWindowScene.windows`)** 으로 접근하는 흐름이 자연스럽다.
+- 실무에서는 보통 `SceneDelegate`에 `var window: UIWindow?`를 두고, scene 연결 시점에 root UI(또는 `UIHostingController`)를 구성한다.
+
 
 사용자가  각 앱에 대해 여러 장면을 만들고, 이를 별도로 표시하거나 숨길 수 있다.  
 
@@ -59,6 +70,12 @@ UIKit은 언제든지  `background` 또는 `suspended` 상태의 `Scene`을 연�
  
 <img width="600" alt="스크린샷 2023-08-09 오후 3 19 58" src="https://github.com/isGeekCode/TIL/assets/76529148/40a06a49-03e1-4182-abed-d5846cd3396a">
 
+
+![](https://i.imgur.com/rWoFYSh.png)
+
+
+
+
 <br><br>
 
 scene transition을 사용하면 다름 작업을 수행할 수 있다.
@@ -74,13 +91,22 @@ scene transition을 사용하면 다름 작업을 수행할 수 있다.
     앱 시작시 수행할 작업에 대해서는 [Responding to the launch of your app](https://developer.apple.com/documentation/uikit/app_and_environment/responding_to_the_launch_of_your_app) 문서를 참고
 > UI의 Life-cycle은 SceneDelegate에서 처리하지만 앱 시작에 관련해선 AppDelegate에서 처리한다.  
 
+
+
+
 <br><br><br>
 
-## App 기반의 Life-cycle 동작
-
+## 전통적인 앱 생명주기(AppDelegate 중심, Scene 미사용) 동작
 iOS 12이전 버전과 Scene을 지원하지 않는 앱에서 UIKit은 모든 Life-cycle 이벤트를 UIApplication 객체에 제공한다.  
 
 `App Delegate`는 별도의 화면에 표시되는 화면을 포함하여 앱의 모든 `Window`를 관리한다.  
+
+### Window의 소유와 관리
+Scene을 사용하지 않는 구성에서는 **Window를 앱(App) 단위로 관리**한다.
+
+- 보통 `AppDelegate`가 `var window: UIWindow?` 형태로 **메인 Window를 보유/관리**한다.
+- 이 구조에서는 앱 상태 전환(활성/비활성/백그라운드 등)이 **앱 전체 UI(=관리 중인 Window들)** 에 일괄적으로 영향을 준다.
+
 
 결과적으로 앱 상태의 전환은 외부 디스플레이의 콘텐츠를 포함한 앱 전체 UI에 영향을 준다.  
 
@@ -95,12 +121,14 @@ iOS 12이전 버전과 Scene을 지원하지 않는 앱에서 UIKit은 모든 Li
 그 후 앱이 종료될떄까지 `active`와 `background` 사이에서 상태가 변한다.
 
 <img width="600" alt="스크린샷 2023-08-09 오후 3 20 05" src="https://github.com/isGeekCode/TIL/assets/76529148/2dfd0444-9272-4811-9f13-17ddcc905cdc">
-  
+
+![](https://i.imgur.com/GykRbP0.png)  
+
 앱 전환을 사용하여 다음 작업을 수행할 수 있다.
 
 - 앱 실행 시, 앱의 데이터 구조와 UI를 초기화한다. 
     - [참고링크 : Responding to the Launch of Your App](https://developer.apple.com/documentation/uikit/app_and_environment/responding_to_the_launch_of_your_app)
-- 앱이 활성화 되었을때 UI구성을 오나료하고 사용자와 상호 작용할 준비한다. 
+- 앱이 활성화 되었을때 UI구성을 완료하고 사용자와 상호 작용할 준비한다. 
     - [참고링크 : Preparing Your UI to Run in the Foreground](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_foreground)
 - 비활성화되면 데이터를 저장하고 앱 동작을 조용하게 한다.
     - [참고링크 : Preparing Your UI to Run in the Background](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background) 
@@ -142,7 +170,145 @@ UIApplicationDelegate 객체를 사용하여 이러한 이벤트 대부분을 �
 
 <br><br><br>
 
+## Window 대체(교체) 예시 코드
+
+아래 예시는 **Window 자체를 새로 만들어 교체**하는 방식과, 실무에서 더 자주 쓰는 **기존 Window는 유지하고 `rootViewController`만 교체**하는 방식을 함께 보여준다.
+
+### 1) 전통 방식(AppDelegate 중심, Scene 미사용) — Window 교체
+
+#### A. 앱 시작 시 커스텀 Window 생성
+```swift
+import UIKit
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
+
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
+
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = SplashViewController() // 시작 화면
+        window.makeKeyAndVisible()
+        self.window = window
+
+        return true
+    }
+}
+```
+
+#### B. 런타임에 Window 자체를 새로 만들어 대체
+```swift
+extension AppDelegate {
+
+    func replaceWindowWithMain() {
+        let newWindow = UIWindow(frame: UIScreen.main.bounds)
+        newWindow.rootViewController = MainTabBarController()
+        newWindow.makeKeyAndVisible()
+
+        // 기존 window를 숨김 처리(선택)
+        self.window?.isHidden = true
+
+        // 교체
+        self.window = newWindow
+    }
+}
+```
+
+#### C. (추천) Window는 유지하고 rootViewController만 교체
+```swift
+extension AppDelegate {
+
+    func switchRoot(_ viewController: UIViewController, animated: Bool = true) {
+        guard let window = self.window else { return }
+
+        if animated {
+            UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve) {
+                window.rootViewController = viewController
+            }
+        } else {
+            window.rootViewController = viewController
+        }
+
+        window.makeKeyAndVisible()
+    }
+}
+```
+
+---
+
+### 2) Scene 기반(UISceneDelegate 중심) — Window 교체
+
+> Scene 기반에서는 `UIWindow`가 특정 `UIWindowScene`에 소속되므로, 새 window를 만들 때도 **`UIWindow(windowScene:)`** 로 생성해야 한다.
+
+#### A. scene 연결 시 커스텀 Window 생성
+```swift
+import UIKit
+
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    var window: UIWindow?
+
+    func scene(
+        _ scene: UIScene,
+        willConnectTo session: UISceneSession,
+        options connectionOptions: UIScene.ConnectionOptions
+    ) {
+        guard let windowScene = scene as? UIWindowScene else { return }
+
+        let window = UIWindow(windowScene: windowScene)
+        window.rootViewController = SplashViewController()
+        window.makeKeyAndVisible()
+        self.window = window
+    }
+}
+```
+
+#### B. 런타임에 Window 자체를 새로 만들어 대체
+```swift
+extension SceneDelegate {
+
+    func replaceWindowWithLogin() {
+        guard let windowScene = self.window?.windowScene else { return }
+
+        let newWindow = UIWindow(windowScene: windowScene)
+        newWindow.rootViewController = LoginViewController()
+        newWindow.makeKeyAndVisible()
+
+        // 기존 window를 숨김 처리(선택)
+        self.window?.isHidden = true
+
+        // 교체
+        self.window = newWindow
+    }
+}
+```
+
+#### C. (추천) Window는 유지하고 rootViewController만 교체
+```swift
+extension SceneDelegate {
+
+    func switchRoot(_ viewController: UIViewController, animated: Bool = true) {
+        guard let window = self.window else { return }
+
+        if animated {
+            UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve) {
+                window.rootViewController = viewController
+            }
+        } else {
+            window.rootViewController = viewController
+        }
+
+        window.makeKeyAndVisible()
+    }
+}
+```
+
+
 ## History
 - 230809 : 초안작성
 - 230810 : 기타 이벤트 응답 추가
-
+- 251222
+	- 플로우차트 추가
+	- Window 교체 예시 코드 추가
