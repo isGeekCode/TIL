@@ -304,6 +304,7 @@ _446 TILs and counting..._
     - [Lang-Dart](#lang-dart) (7)
     - [Lang-TypeScript](#lang-typescript)
     - [Lang-JavaScript](#lang-javascript)
+    - [Lang-JavaScript](#lang-javascript)
     - [Lang-SQL](#lang-sql)
 
 
@@ -1621,8 +1622,47 @@ ARKit, SceneKit처럼 AR 기능은 외부 플러그인 기반 접근 정리
 ## ⚙️ Hardware
 
 ## 🧩 Software
-- [여러가지 버전관리정책](ComputerScience/VersionLint.md)
+
+### 💼 개발 방법론 (Development Methodology)
+
+#### 📋 Process (개발 프로세스)
 - [애자일 방법론 이해하기](ComputerScience/methodology_agile.md)
+- [Scrum (스크럼)](Development/Process/scrum.md) **(예정중)**
+- [Kanban (칸반)](Development/Process/kanban.md) **(예정중)**
+
+#### 🎨 Design (설계 방법론)
+- [TDD - 테스트 주도 개발](Development/Design/TDD/tdd_concept.md)
+  - [Testable한 코드 만들기 (MVC → MVP)](Mobile_01_iOS/iOS-TDD/testable_mvc_mvp.md)
+- [BDD - 행위 주도 개발](Development/Design/BDD/bdd_concept.md) **(예정중)**
+- [DDD - 도메인 주도 설계](Development/Design/DDD/ddd_concept.md) **(예정중)**
+
+#### ✨ Code Quality (코드 품질)
+- [Clean Code](Development/CodeQuality/clean_code.md) **(예정중)**
+- [SOLID 원칙](Development/CodeQuality/solid_principles.md) **(예정중)**
+- [Design Patterns](Development/CodeQuality/design_patterns.md) **(예정중)**
+- [Refactoring](Development/CodeQuality/refactoring.md) **(예정중)**
+
+#### 🔀 Git Strategy (브랜치 전략)
+- [여러가지 버전관리정책](ComputerScience/VersionLint.md)
+- [Git Flow](Development/GitStrategy/git_flow.md) **(예정중)**
+- [GitHub Flow](Development/GitStrategy/github_flow.md) **(예정중)**
+- [Trunk-Based Development](Development/GitStrategy/trunk_based_development.md) **(예정중)**
+
+#### 🚀 Deployment (배포 전략)
+- [Feature Flag](Development/Deployment/feature_flag.md) **(예정중)**
+- [Blue-Green Deployment](Development/Deployment/blue_green_deployment.md) **(예정중)**
+- [Canary Deployment](Development/Deployment/canary_deployment.md) **(예정중)**
+
+#### 🤝 Collaboration (협업 전략)
+- [Micro PR](Development/Collaboration/micro_pr.md) **(예정중)**
+- [Pair Programming](Development/Collaboration/pair_programming.md) **(예정중)**
+- [Code Review Guide](Development/Collaboration/code_review_guide.md) **(예정중)**
+
+#### 🏗 Architecture (아키텍처)
+- [Clean Architecture](Development/Architecture/clean_architecture.md) **(예정중)**
+- [Hexagonal Architecture](Development/Architecture/hexagonal_architecture.md) **(예정중)**
+
+### 🔧 기타 Software 개념
 - [MVP: Minimum Viable Product](ComputerScience/MVP.md)
 - [직렬화(Serialization)](ComputerScience/Serialization.md)
 - [Virtual Memory - Page File Swap](ComputerScience/VirtualMemory_PageFileSwap.md)
@@ -1637,8 +1677,8 @@ ARKit, SceneKit처럼 AR 기능은 외부 플러그인 기반 접근 정리
 - [알고리즘 - 선택정렬 : Selection Sort](Algorithm/algorithm00_selectionSort.md)
 - [알고리즘 - 버블정렬 : Bubble Sort(작성중)](Algorithm/algorithm01_bubbleSort.md)
 - [알고리즘 템플릿](Algorithm/algorithm_000_AQuck.md)
-- [필수 알고리즘 - BFS: 너비 우선 탐색(Breadth-first search)](Algorithm/algorithm_000_essential_BFS.md)
-- [필수 알고리즘 - DFS: 깊이 우선 탐색(Depth-first search)](Algorithm/algorithm_000_essential_DFS.md)
+- [필수 알고리즘 - BFS: 너비 우선 탐색(Breadth-first search)](algorithm_001_essential_BFS.md)
+- [필수 알고리즘 - DFS: 깊이 우선 탐색(Depth-first search)](algorithm_001_essential_DFS.md)
 - [필수 알고리즘 - 백트래킹](Algorithm/algorithm_002_essential_BackTracking.md)
 - [필수 알고리즘 - 시뮬레이션](Algorithm/algorithm_003_essential_simulation.md)
 - [필수 알고리즘 - 투 포인터](Algorithm/algorithm_004_essential_twoPointer.md)

@@ -8,7 +8,9 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(cat:*)",
-      "Bash(git fetch:*)"
+      "Bash(git fetch:*)",
+      "Bash(find:*)",
+      "WebFetch(domain:velog.io)"
     ],
     "deny": [],
     "ask": []
