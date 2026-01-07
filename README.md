@@ -28,7 +28,7 @@ _446 TILs and counting..._
 - [Mobile 공통 기능 구현](#mobile-공통-기능-구현) (5)
     - [Mobile iOS 공통 기능 구현](#mobile-ios-공통-기능-구현) (2)
     - [Mobile Android 공통 기능 구현](#mobile-android-공통-기능-구현)
-    - [Mobile Flutter 공통 기능 구현](#mobile-flutter-공통-기능-구현)
+    - [Mobile Flutter 공통 기능 구현](#mobile-flutter-공통-기능-구현) (1)
     - [Mobile React Native 공통 기능 구현](#mobile-react-native-공통-기능-구현)
 
 # Mobile - iOS
@@ -206,7 +206,7 @@ _446 TILs and counting..._
 
 # Mobile - Flutter 목차
 
-- [Mobile Flutter 공통 기능 구현](#mobile-flutter-공통-기능-구현)
+- [Mobile Flutter 공통 기능 구현](#mobile-flutter-공통-기능-구현) (1)
 
 ## Flutter 목차
 - [📦 Flutter - 앱의 구조와 실행 흐름](#-flutter---앱의-구조와-실행-흐름) (2)
