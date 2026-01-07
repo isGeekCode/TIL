@@ -439,13 +439,13 @@ _446 TILs and counting..._
 아래와 같이 매칭합니다.
 ```
 📁 Mobile_00_Common/
-  ├── MobileCommon_000.Splash.md
-  ├── MobileCommon_001.LocalMemory.md
+  ├── MobileCommon_001.Splash.md
+  ├── MobileCommon_002.LocalStorage.md
   └── ...
 
 📁 Mobile_01_iOS/
-  ├── iosCommon_000.Splash.md
-  ├── iosCommon_001.UserDefault.md
+  ├── iOSCommon_001.SplashScreen.md
+  ├── iOSCommon_002.UserDefault.md
   └── ...
 
 📁 Mobile_02_Android/
