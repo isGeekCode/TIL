@@ -22,7 +22,10 @@
       "Bash(echo:*)",
       "Bash(else)",
       "Bash(fi)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(tree -L 2 -a:*)",
+      "Bash(du -sh:*)",
+      "Bash(tree:*)"
     ],
     "deny": [],
     "ask": []
