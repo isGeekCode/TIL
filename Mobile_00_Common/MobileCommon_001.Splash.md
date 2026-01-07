@@ -63,4 +63,4 @@ Splash Screen은 앱 실행 시 사용자에게 **가장 먼저 노출되는 화
 ## 🔗 연결 문서
 - [Flutter 구현 보기](../Mobile_03_Flutter/Flutter_0271_SplashScreen_basic.md)
 - [iOS 구현 보기](../Mobile_01_iOS/iOSCommon_001.SplashScreen.md)
-- [Android 구현 보기](../Mobile_02_Android/Android_0001_SplashScreen.md) *(예정)*
+- Android 구현 보기 (예정)

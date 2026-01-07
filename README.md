@@ -368,11 +368,11 @@ _446 TILs and counting..._
 세부 Topic들이 입력되는곳
 
 ### [A_Writing_in_Progress](#a_writing_in_progress)
-- [Design Pattern - Command 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Command.md)
-- [Design Pattern - Composite 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Composite.md)
-- [Design Pattern - Factory method 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Factory.md)
-- [Design Pattern - Mediator 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Mediator.md)
-- [Design Pattern - Strategy 패턴(작성예정)](A_Writing_in_Progress/Architecture_201_De_Strategy.md)
+- [Design Pattern - Command 패턴 (작성중)](A_Writing_in_Progress/Architecture_201_De_Command.md)
+- [Design Pattern - Composite 패턴 (작성중)](A_Writing_in_Progress/Architecture_201_De_Composite.md)
+- [Design Pattern - Factory method 패턴 (작성중)](A_Writing_in_Progress/Architecture_201_De_Factory.md)
+- [Design Pattern - Mediator 패턴 (작성중)](A_Writing_in_Progress/Architecture_201_De_Mediator.md)
+- [Design Pattern - Strategy 패턴 (작성중)](A_Writing_in_Progress/Architecture_201_De_Strategy.md)
 - [[Apple Documentation Archive] Auto Layout Guide(작성중)](A_Writing_in_Progress/Devpedia_AutolayoutGuide.md)
 - [[Apple Documentation Archive] Coordinate System : View의 좌표계(작성중)](A_Writing_in_Progress/Devpedia_coordinateSystem.md)
 - [Integrity - App Attest (앱 증명)](A_Writing_in_Progress/Integrity.AppAttest.md)
@@ -1627,40 +1627,40 @@ ARKit, SceneKit처럼 AR 기능은 외부 플러그인 기반 접근 정리
 
 #### 📋 Process (개발 프로세스)
 - [애자일 방법론 이해하기](ComputerScience/methodology_agile.md)
-- [Scrum (스크럼)](Development/Process/scrum.md) **(예정중)**
-- [Kanban (칸반)](Development/Process/kanban.md) **(예정중)**
+- [Scrum (스크럼)](Development/Process/scrum.md) **(작성중)**
+- [Kanban (칸반)](Development/Process/kanban.md) **(작성중)**
 
 #### 🎨 Design (설계 방법론)
 - [TDD - 테스트 주도 개발](Development/Design/TDD/tdd_concept.md)
   - [Testable한 코드 만들기 (MVC → MVP)](Mobile_01_iOS/iOS-TDD/testable_mvc_mvp.md)
-- [BDD - 행위 주도 개발](Development/Design/BDD/bdd_concept.md) **(예정중)**
-- [DDD - 도메인 주도 설계](Development/Design/DDD/ddd_concept.md) **(예정중)**
+- [BDD - 행위 주도 개발](Development/Design/BDD/bdd_concept.md) **(작성중)**
+- [DDD - 도메인 주도 설계](Development/Design/DDD/ddd_concept.md) **(작성중)**
 
 #### ✨ Code Quality (코드 품질)
-- [Clean Code](Development/CodeQuality/clean_code.md) **(예정중)**
-- [SOLID 원칙](Development/CodeQuality/solid_principles.md) **(예정중)**
-- [Design Patterns](Development/CodeQuality/design_patterns.md) **(예정중)**
-- [Refactoring](Development/CodeQuality/refactoring.md) **(예정중)**
+- [Clean Code](Development/CodeQuality/clean_code.md) **(작성중)**
+- [SOLID 원칙](Development/CodeQuality/solid_principles.md) **(작성중)**
+- [Design Patterns](Development/CodeQuality/design_patterns.md) **(작성중)**
+- [Refactoring](Development/CodeQuality/refactoring.md) **(작성중)**
 
 #### 🔀 Git Strategy (브랜치 전략)
 - [여러가지 버전관리정책](ComputerScience/VersionLint.md)
-- [Git Flow](Development/GitStrategy/git_flow.md) **(예정중)**
-- [GitHub Flow](Development/GitStrategy/github_flow.md) **(예정중)**
-- [Trunk-Based Development](Development/GitStrategy/trunk_based_development.md) **(예정중)**
+- [Git Flow](Development/GitStrategy/git_flow.md) **(작성중)**
+- [GitHub Flow](Development/GitStrategy/github_flow.md) **(작성중)**
+- [Trunk-Based Development](Development/GitStrategy/trunk_based_development.md) **(작성중)**
 
 #### 🚀 Deployment (배포 전략)
-- [Feature Flag](Development/Deployment/feature_flag.md) **(예정중)**
-- [Blue-Green Deployment](Development/Deployment/blue_green_deployment.md) **(예정중)**
-- [Canary Deployment](Development/Deployment/canary_deployment.md) **(예정중)**
+- [Feature Flag](Development/Deployment/feature_flag.md) **(작성중)**
+- [Blue-Green Deployment](Development/Deployment/blue_green_deployment.md) **(작성중)**
+- [Canary Deployment](Development/Deployment/canary_deployment.md) **(작성중)**
 
 #### 🤝 Collaboration (협업 전략)
-- [Micro PR](Development/Collaboration/micro_pr.md) **(예정중)**
-- [Pair Programming](Development/Collaboration/pair_programming.md) **(예정중)**
-- [Code Review Guide](Development/Collaboration/code_review_guide.md) **(예정중)**
+- [Micro PR](Development/Collaboration/micro_pr.md) **(작성중)**
+- [Pair Programming](Development/Collaboration/pair_programming.md) **(작성중)**
+- [Code Review Guide](Development/Collaboration/code_review_guide.md) **(작성중)**
 
 #### 🏗 Architecture (아키텍처)
-- [Clean Architecture](Development/Architecture/clean_architecture.md) **(예정중)**
-- [Hexagonal Architecture](Development/Architecture/hexagonal_architecture.md) **(예정중)**
+- [Clean Architecture](Development/Architecture/clean_architecture.md) **(작성중)**
+- [Hexagonal Architecture](Development/Architecture/hexagonal_architecture.md) **(작성중)**
 
 ### 🔧 기타 Software 개념
 - [MVP: Minimum Viable Product](ComputerScience/MVP.md)

@@ -10,7 +10,19 @@
       "Bash(cat:*)",
       "Bash(git fetch:*)",
       "Bash(find:*)",
-      "WebFetch(domain:velog.io)"
+      "WebFetch(domain:velog.io)",
+      "Bash(for file in \"A_Writing_in_Progress/Architecture_201_De_Command.md\" )",
+      "Bash(\"A_Writing_in_Progress/Architecture_201_De_Composite.md\" )",
+      "Bash(\"A_Writing_in_Progress/Architecture_201_De_Factory.md\" )",
+      "Bash(\"A_Writing_in_Progress/Architecture_201_De_Mediator.md\" )",
+      "Bash(\"A_Writing_in_Progress/Architecture_201_De_Strategy.md\")",
+      "Bash(do)",
+      "Bash(if [ -f \"$file\" ])",
+      "Bash(then)",
+      "Bash(echo:*)",
+      "Bash(else)",
+      "Bash(fi)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []
