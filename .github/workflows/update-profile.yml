@@ -62,8 +62,8 @@ jobs:
           DEV="${{ steps.count.outputs.dev }}"
           SWIFT="${{ steps.count.outputs.swift }}"
 
-          # ComputerScience + Algorithm 통합
-          CS_TOTAL=$((CS + ALGO))
+          # ComputerScience + Algorithm + Development 통합
+          CS_TOTAL=$((CS + ALGO + DEV))
           # iOS + Swift 통합
           IOS_TOTAL=$((IOS + SWIFT))
           # Cross Platform 통합
@@ -81,7 +81,6 @@ _${TOTAL} TILs_
       - Flutter: ${FLUTTER}
       - React Native: ${RN}
 - Computer Science: ${CS_TOTAL}
-- Development: ${DEV}
 EOF
 
           # 기존 "_숫자 TILs" 라인부터 다음 빈 줄 또는 --- 까지를 새 내용으로 교체
