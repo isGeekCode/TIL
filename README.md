@@ -290,18 +290,18 @@ _446 TILs and counting..._
 - [Mobile React Native 공통 기능 구현](#mobile-react-native-공통-기능-구현)
 
 ## React Native 목차
-- [📦 React Native - 기초 & 프로젝트 구조](#-react-native---기초--프로젝트-구조) (3)  (3개)
-- [🌐 React Native - WebView & 웹뷰 통신](#-react-native---webview--웹뷰-통신) (5)  (5개)
+- [📦 React Native - 기초 & 프로젝트 구조](#-react-native---기초--프로젝트-구조) (3)   (3개)
+- [🌐 React Native - WebView & 웹뷰 통신](#-react-native---webview--웹뷰-통신) (5)   (5개)
 - [🎨 React Native - UI 구성 요소](#-react-native---ui-구성-요소)
 - [📐 React Native - 레이아웃과 스타일링](#-react-native---레이아웃과-스타일링)
 - [🕹 React Native - 이벤트 & 입력 처리](#-react-native---이벤트--입력-처리)
-- [🔌 React Native - Native Modules & Bridge](#-react-native---native-modules--bridge) (1)  (1개)
+- [🔌 React Native - Native Modules & Bridge](#-react-native---native-modules--bridge) (1)   (1개)
 - [📡 React Native - 네트워킹 & API](#-react-native---네트워킹--api)
 - [🗂 React Native - 상태 관리](#-react-native---상태-관리)
 - [🧭 React Native - 네비게이션](#-react-native---네비게이션)
 - [🔧 React Native - 디버깅 & 개발 도구](#-react-native---디버깅--개발-도구)
 - [📦 React Native - 배포 & 빌드](#-react-native---배포--빌드)
-- [🔥 React Native - Firebase](#-react-native---firebase) (1)  (1개)
+- [🔥 React Native - Firebase](#-react-native---firebase) (1)   (1개)
 
 
 
@@ -347,7 +347,7 @@ _446 TILs and counting..._
     - [📚 Basics](#-basics) (2) - 컴퓨터 과학의 기초 개념, 비트와 바이트, 논리 게이트 등
     - [⚙️ Hardware](#-hardware) - CPU, 메모리, 저장장치 등 하드웨어 구성 요소
     - [🧩 Software](#-software) (26) - 운영체제, 컴파일러, 소프트웨어 개발의 기반
-    - [📐 Algorithms](#-algorithms) (16) - 문제 해결을 위한 알고리즘과 패턴
+    - [📐 Algorithms](#-algorithms) (17) - 문제 해결을 위한 알고리즘과 패턴
     - [📦 Data Structure](#-data-structure) (5) - 배열, 리스트, 트리 등 자료 구조
     - [🌐 Networking](#-networking) (7) - 인터넷, TCP/IP, OSI 7계층 등 네트워크 원리
     - [🧮 Programming Paradigms](#-programming-paradigms) (3) - 명령형, 함수형, 객체지향 등 프로그래밍 방식
