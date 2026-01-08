@@ -1,10 +1,12 @@
 # React Native - Splash Screen 네이티브 커스텀 구현 (WebView 기반)
 
-React Native WebView 기반 앱에서 복잡한 Splash Screen을 구현하는 방법입니다.
-라이브러리로는 한계가 있는 커스텀 레이아웃을 네이티브에서 구현하고, WebView 로드 시점에 제어합니다.
+React Native WebView 기반 앱에서 Splash Screen을 Native Module로 제어하는 방법입니다.
 
-## 전체 흐름
+## 개요
 
+WebView 기반 앱에서는 복잡한 Splash Screen 구현을 위해 네이티브 모듈을 직접 연동합니다.
+
+**전체 흐름:**
 ```
 ┌─────────────────────────────────────────────┐
 │ 1. 앱 실행                                    │
@@ -38,23 +40,7 @@ React Native WebView 기반 앱에서 복잡한 Splash Screen을 구현하는 �
 
 ---
 
-## 문제 상황
-
-### 라이브러리의 한계
-- `react-native-splash-screen` 같은 라이브러리는 단순한 중앙 이미지만 가능
-- iOS와 Android에서 동일한 복잡한 레이아웃 구현 불가능
-
-### 실제 요구사항
-고객사 요청:
-- **중앙 로고**: 메인 브랜드 로고
-- **하단 로고**: 파트너/제공사 로고
-- **화면 비율 대응**: 다양한 디바이스 크기 자동 대응
-
-→ **해결책: Native Module 직접 구현**
-
----
-
-## React Native - WebView에서 Native Module 호출
+## Part 1: React Native - WebView에서 Native Module 호출
 
 ### 1. WebView 로드 시작 시 Splash 숨김
 
@@ -185,17 +171,74 @@ function App() {
 
 ---
 
-## 네이티브 구현
+### 5. TypeScript 사용 시
 
-React Native에서는 단순히 `SplashModule.hide()`를 호출하는 **인터페이스** 역할만 합니다.
-실제 Splash 구현은 iOS와 Android 네이티브에서 이루어집니다.
+```typescript
+// types/SplashModule.d.ts
+declare module 'react-native' {
+  interface NativeModulesStatic {
+    SplashModule: {
+      hide: () => void;
+    };
+  }
+}
+```
 
-### iOS 네이티브 구현
+---
 
-**상세 내용:**
-- [iOS - WebView 앱 Splash Screen 커스텀 구현](../Mobile_01_iOS/iOS_Splash_WebView앱_커스텀구현.md)
+## Part 2: iOS Native Module 구현
 
-**구현 요약:**
+React Native와 iOS를 연결하는 Bridge를 구현합니다.
+
+### 1. SplashModule.swift 생성
+
+```swift
+// SplashModule.swift
+import Foundation
+import React
+
+@objc(SplashModule)
+class SplashModule: NSObject {
+
+  @objc
+  func hide() {
+    DispatchQueue.main.async {
+      guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+        return
+      }
+      // AppDelegate의 hideSplash 호출
+      appDelegate.hideSplash()
+    }
+  }
+
+  @objc
+  static func requiresMainQueueSetup() -> Bool {
+    return true
+  }
+}
+```
+
+**핵심:**
+- `@objc`: Objective-C에서 접근 가능하도록
+- `DispatchQueue.main.async`: UI 작업은 메인 스레드에서
+- `appDelegate.hideSplash()`: 실제 Splash 제거 로직 호출
+
+---
+
+### 2. SplashModule.m (Objective-C Bridge)
+
+```objective-c
+// SplashModule.m
+#import <React/RCTBridgeModule.h>
+
+@interface RCT_EXTERN_MODULE(SplashModule, NSObject)
+
+RCT_EXTERN_METHOD(hide)
+
+@end
+```
+
+**Bridge 역할:**
 ```
 JavaScript: SplashModule.hide()
   ↓
@@ -203,44 +246,119 @@ Objective-C Bridge (SplashModule.m)
   ↓
 Swift: SplashModule.hide()
   ↓
-AppDelegate.hideSplashFromWebView()
-  ↓
-SplashViewController dismiss
+AppDelegate.hideSplash()
 ```
-
-**핵심 파일:**
-- `SplashModule.swift`: Native Module
-- `SplashModule.m`: Objective-C Bridge
-- `SplashViewController.swift`: 복잡한 레이아웃 구현
-- `AppDelegate.swift`: Splash 표시/숨김 관리
 
 ---
 
-### Android 네이티브 구현
+### iOS 네이티브 UI 구현
+
+실제 Splash UI 구현 (SplashViewController, AppDelegate 등)은 별도 문서 참고:
 
 **상세 내용:**
-- [Android - WebView 앱 Splash Screen 커스텀 구현](../Mobile_02_Android/aOS_Splash_WebView앱_커스텀구현.md)
+- [iOS - 스플래시 화면 구현 가이드 § 4. WebView 앱 스플래시 구현](../Mobile_01_iOS/iOSCommon_001.SplashScreen.md#4-webview-앱-스플래시-구현-react-native-ionic-등)
 
-**구현 요약:**
+**구현 내용:**
+- SplashViewController (복잡한 레이아웃)
+- AppDelegate 연동 (showSplash/hideSplash)
+- NIB/Storyboard vs 코드 구현
+- LaunchScreen 연동
+
+---
+
+## Part 3: Android Native Module 구현
+
+React Native와 Android를 연결하는 Native Module을 구현합니다.
+
+### 1. SplashModule.kt 생성
+
+```kotlin
+// SplashModule.kt
+package com.myapp
+
+import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.bridge.ReactContextBaseJavaModule
+import com.facebook.react.bridge.ReactMethod
+
+class SplashModule(reactContext: ReactApplicationContext) :
+    ReactContextBaseJavaModule(reactContext) {
+
+    override fun getName(): String {
+        return "SplashModule"
+    }
+
+    @ReactMethod
+    fun hide() {
+        val activity = currentActivity as? MainActivity
+        activity?.runOnUiThread {
+            activity.hideSplash()
+        }
+    }
+}
 ```
-JavaScript: SplashModule.hide()
-  ↓
-SplashModule.kt
-  ↓
-MainActivity.hideSplash()
-  ↓
-Splash Layout 제거
+
+**핵심:**
+- `@ReactMethod`: JavaScript에서 호출 가능한 메서드
+- `runOnUiThread`: UI 작업은 메인 스레드에서
+- `MainActivity.hideSplash()`: 실제 Splash 제거 로직 호출
+
+---
+
+### 2. SplashPackage.kt
+
+```kotlin
+// SplashPackage.kt
+package com.myapp
+
+import com.facebook.react.ReactPackage
+import com.facebook.react.bridge.NativeModule
+import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.uimanager.ViewManager
+
+class SplashPackage : ReactPackage {
+    override fun createNativeModules(reactContext: ReactApplicationContext):
+        List<NativeModule> {
+        return listOf(SplashModule(reactContext))
+    }
+
+    override fun createViewManagers(reactContext: ReactApplicationContext):
+        List<ViewManager<*, *>> {
+        return emptyList()
+    }
+}
 ```
 
-**핵심 파일:**
-- `SplashModule.kt`: Native Module
-- `SplashPackage.kt`: Module 등록
-- `MainActivity.kt`: Splash 표시/제거
-- `res/layout/splash_screen.xml`: ConstraintLayout 레이아웃
+---
 
-**특징:**
-- MainActivity에서 Splash를 띄워 Activity 전환 시 흰 화면 방지
-- WebView 로드 시간 동안 Splash로 시간 벌기
+### 3. MainApplication.kt 등록
+
+```kotlin
+// MainApplication.kt
+class MainApplication : Application(), ReactApplication {
+
+  override fun getPackages(): List<ReactPackage> {
+    return PackageList(this).packages.apply {
+      // SplashPackage 추가
+      add(SplashPackage())
+    }
+  }
+}
+```
+
+---
+
+### Android 네이티브 UI 구현
+
+실제 Splash UI 구현 (MainActivity, Layout 등)은 별도 문서 참고:
+
+**상세 내용:**
+- [Android - 스플래시 화면 구현 가이드 § 4. WebView 앱 스플래시 구현](../Mobile_02_Android/aOS_0271_SplashScreen.md#4-webview-앱-스플래시-구현-react-native-ionic-등)
+
+**구현 내용:**
+- MainActivity에서 Splash 띄우기 (흰 화면 방지)
+- ConstraintLayout 복잡한 레이아웃
+- ViewModel 아키텍처 패턴 (MainVM + SplashUseCase)
+- 실전 팁 (다크모드, 애니메이션 등)
 
 ---
 
@@ -255,8 +373,8 @@ SplashModule.hide();
 ```
 
 **실제 구현은 네이티브에서:**
-- iOS: Swift + Objective-C
-- Android: Kotlin
+- iOS: Swift + Objective-C Bridge
+- Android: Kotlin Module
 
 ---
 
@@ -276,59 +394,40 @@ SplashModule.hide();
 
 ---
 
-### 3. Native가 UI 담당
+### 3. Bridge 구조
 
-- **iOS**: SplashViewController로 복잡한 레이아웃
-- **Android**: ConstraintLayout으로 복잡한 레이아웃
-
-**레이아웃 예시:**
+**iOS:**
 ```
-┌─────────────────────────────┐
-│                             │
-│        ┌──────────┐         │
-│        │ 중앙 로고 │         │ ← centerYAnchor / constraint center
-│        └──────────┘         │
-│                             │
-│        ┌──────────┐         │
-│        │ 하단 로고 │         │ ← bottomAnchor / constraint bottom
-│        └──────────┘         │
-└─────────────────────────────┘
+JavaScript
+  ↓
+SplashModule.m (Objective-C Bridge)
+  ↓
+SplashModule.swift
+  ↓
+AppDelegate.hideSplash()
 ```
 
----
-
-### 4. 화면 비율 대응
-
-- **iOS**: Auto Layout Constraints
-- **Android**: ConstraintLayout
-
-**장점:**
-- 다양한 화면 크기 자동 대응
-- iPhone SE부터 iPad까지
-- 작은 Android 폰부터 태블릿까지
-
----
-
-## iOS vs Android 차이점
-
-| 구분 | iOS | Android |
-|------|-----|---------|
-| **Module** | Swift + Objective-C Bridge | Kotlin |
-| **UI** | SplashViewController | Splash Layout (ConstraintLayout) |
-| **표시** | Present/Dismiss | addView/removeView |
-| **Thread** | DispatchQueue.main | runOnUiThread |
-| **레이아웃** | Auto Layout | ConstraintLayout |
-| **특징** | LaunchScreen → SplashVC 자연스러운 전환 | MainActivity에서 Splash 띄워 흰 화면 방지 |
+**Android:**
+```
+JavaScript
+  ↓
+SplashModule.kt
+  ↓
+MainActivity.hideSplash()
+```
 
 ---
 
 ## 실전 팁
 
-### 1. 최소 표시 시간 보장
+### 1. 디버깅
 
 ```javascript
-// 너무 빨리 사라지지 않도록
-const MINIMUM_SPLASH_TIME = 2000;
+// Module이 제대로 등록됐는지 확인
+console.log('SplashModule:', NativeModules.SplashModule);
+
+// 메서드 확인
+console.log('hide method:', typeof NativeModules.SplashModule?.hide);
 ```
 
 ### 2. 에러 처리
@@ -343,27 +442,10 @@ try {
 }
 ```
 
-### 3. 디버깅
+### 3. 최소 표시 시간 보장
 
 ```javascript
-// Module이 제대로 등록됐는지 확인
-console.log('SplashModule:', NativeModules.SplashModule);
-
-// 메서드 확인
-console.log('hide method:', typeof NativeModules.SplashModule?.hide);
-```
-
-### 4. TypeScript 사용 시
-
-```typescript
-// types/SplashModule.d.ts
-declare module 'react-native' {
-  interface NativeModulesStatic {
-    SplashModule: {
-      hide: () => void;
-    };
-  }
-}
+const MINIMUM_SPLASH_TIME = 2000;
 ```
 
 ---
@@ -375,6 +457,7 @@ declare module 'react-native' {
 **React Native 역할:**
 - `SplashModule.hide()` 호출 (인터페이스)
 - `onLoadStart` 이벤트 활용
+- Bridge를 통한 네이티브 연동
 
 **네이티브 역할:**
 - 실제 Splash UI 구현 (복잡한 레이아웃)
@@ -386,14 +469,9 @@ declare module 'react-native' {
 - **커스터마이징** 자유로움
 - 플랫폼별 최적화 가능
 
-**다음 단계:**
-1. [iOS 네이티브 구현 보기](../Mobile_01_iOS/iOS_Splash_WebView앱_커스텀구현.md)
-2. [Android 네이티브 구현 보기](../Mobile_02_Android/aOS_Splash_WebView앱_커스텀구현.md)
-
 ---
 
 ## 관련 문서
 
-- [iOS - WebView 앱 Splash Screen 커스텀 구현](../Mobile_01_iOS/iOS_Splash_WebView앱_커스텀구현.md)
-- [Android - WebView 앱 Splash Screen 커스텀 구현](../Mobile_02_Android/aOS_Splash_WebView앱_커스텀구현.md)
-- [RN - Native Module 이해하기](./RN_Native_001_Native_Module_이해하기.md)
+- [iOS - 스플래시 화면 구현 가이드](../Mobile_01_iOS/iOSCommon_001.SplashScreen.md)
+- [Android - 스플래시 화면 구현 가이드](../Mobile_02_Android/aOS_0271_SplashScreen.md)

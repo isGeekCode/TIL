@@ -157,6 +157,230 @@ splashVC.present(mainVC, animated: false)
 
 ---
 
+## 4. WebView 앱 스플래시 구현 (React Native, Ionic 등)
+
+WebView 기반 앱(React Native WebView, Ionic 등)에서는 복잡한 레이아웃의 Splash Screen을 네이티브로 구현합니다.
+
+### 📌 WebView 앱의 특징
+
+- 라이브러리의 한계: `react-native-splash-screen` 같은 라이브러리는 단순한 중앙 이미지만 가능
+- 복잡한 레이아웃 필요: 중앙 로고 + 하단 파트너 로고 등
+- 네이티브 구현 필요: SplashViewController로 직접 구현
+
+### 4-1. SplashViewController 구현 (복잡한 레이아웃)
+
+중앙 로고와 하단 로고를 배치하는 복잡한 레이아웃 예시입니다.
+
+```swift
+// SplashViewController.swift
+import UIKit
+
+class SplashViewController: UIViewController {
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setupUI()
+  }
+
+  private func setupUI() {
+    view.backgroundColor = .white
+
+    // 중앙 로고
+    let centerLogo = UIImageView(image: UIImage(named: "main_logo"))
+    centerLogo.contentMode = .scaleAspectFit
+    centerLogo.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(centerLogo)
+
+    // 하단 로고
+    let bottomLogo = UIImageView(image: UIImage(named: "partner_logo"))
+    bottomLogo.contentMode = .scaleAspectFit
+    bottomLogo.translatesAutoresizingMaskIntoConstraints = false
+    view.addSubview(bottomLogo)
+
+    // Auto Layout
+    NSLayoutConstraint.activate([
+      // 중앙 로고
+      centerLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      centerLogo.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      centerLogo.widthAnchor.constraint(equalToConstant: 200),
+      centerLogo.heightAnchor.constraint(equalToConstant: 200),
+
+      // 하단 로고
+      bottomLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      bottomLogo.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+      bottomLogo.heightAnchor.constraint(equalToConstant: 40)
+    ])
+  }
+}
+```
+
+**레이아웃 구조:**
+```
+┌─────────────────────────────┐
+│                             │
+│        ┌──────────┐         │
+│        │ 중앙 로고 │         │ ← centerYAnchor
+│        └──────────┘         │
+│                             │
+│        ┌──────────┐         │
+│        │ 하단 로고 │         │ ← bottomAnchor (safe area)
+│        └──────────┘         │
+└─────────────────────────────┘
+```
+
+<br>
+
+### 4-2. AppDelegate 연동
+
+```swift
+// AppDelegate.swift
+import UIKit
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+  var window: UIWindow?
+  var splashViewController: SplashViewController?
+
+  func application(_ application: UIApplication,
+                  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+    // 메인 Window 설정
+    self.window = UIWindow(frame: UIScreen.main.bounds)
+
+    // Root ViewController 설정 (React Native 등)
+    // ... 앱 초기화 로직 ...
+
+    self.window?.makeKeyAndVisible()
+
+    // Splash 표시
+    showSplash()
+
+    return true
+  }
+
+  func showSplash() {
+    splashViewController = SplashViewController()
+
+    if let rootVC = window?.rootViewController {
+      splashViewController?.modalPresentationStyle = .fullScreen
+      rootVC.present(splashViewController!, animated: false)
+    }
+  }
+
+  // Splash 숨김 (외부에서 호출)
+  func hideSplash() {
+    splashViewController?.dismiss(animated: true) {
+      self.splashViewController = nil
+    }
+  }
+}
+```
+
+**핵심:**
+- `modalPresentationStyle = .fullScreen`: iOS 13+ 카드 모달 방지
+- `animated: false`: LaunchScreen → Splash 자연스러운 전환
+- 메모리 관리: dismiss 후 `nil` 처리
+
+<br>
+
+### 4-3. NIB/Storyboard 활용
+
+코드 대신 Interface Builder로 구현하는 방법:
+
+**1. SplashViewController.xib 생성**
+- File > New > View
+- Auto Layout으로 중앙/하단 로고 배치
+
+**2. ViewController 연결**
+```swift
+class SplashViewController: UIViewController {
+    @IBOutlet weak var centerLogo: UIImageView!
+    @IBOutlet weak var bottomLogo: UIImageView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // 추가 설정이 필요하면 여기서
+    }
+}
+```
+
+**3. AppDelegate에서 로드**
+```swift
+func showSplash() {
+    splashViewController = SplashViewController(nibName: "SplashViewController", bundle: nil)
+    // ... present
+}
+```
+
+<br>
+
+### 4-4. LaunchScreen과 동일하게 유지
+
+**LaunchScreen.storyboard/xib**도 동일한 레이아웃으로 구성하여 자연스러운 전환:
+
+```
+LaunchScreen (시스템)
+  ↓ (동일한 레이아웃)
+SplashViewController (네이티브)
+  ↓ (외부에서 제어)
+Main 화면
+```
+
+<br>
+
+### 4-5. 실전 팁
+
+**안전 영역 고려:**
+```swift
+bottomLogo.bottomAnchor.constraint(
+  equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+  constant: -20
+)
+```
+
+**다크모드 대응:**
+```swift
+view.backgroundColor = UIColor.systemBackground
+
+// 또는 Asset Catalog에서 Color Set으로 관리
+view.backgroundColor = UIColor(named: "SplashBackground")
+```
+
+**이미지 해상도:**
+```
+Assets.xcassets/
+  main_logo.imageset/
+    ├─ main_logo@2x.png (iPhone 8, XR 등)
+    └─ main_logo@3x.png (iPhone 12 Pro 등)
+```
+
+**애니메이션 추가 (선택):**
+```swift
+func hideSplash() {
+  UIView.animate(withDuration: 0.3, animations: {
+    self.splashViewController?.view.alpha = 0
+  }) { _ in
+    self.splashViewController?.dismiss(animated: false) {
+      self.splashViewController = nil
+    }
+  }
+}
+```
+
+<br>
+
+### 4-6. React Native 연동
+
+React Native WebView 앱에서 네이티브로 제어하는 방법은 별도 문서 참고:
+
+**관련 문서:**
+- [React Native - WebView 앱 Splash 구현](../Mobile_04_ReactNative/RN_Splash_001_네이티브_커스텀_구현.md)
+
+<br><br>
+
+---
 
 ## HISTORY
 - 260626: 초안작성
+- 260108: WebView 앱 스플래시 구현 섹션 추가
