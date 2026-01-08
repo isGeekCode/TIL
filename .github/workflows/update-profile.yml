@@ -56,3 +56,4 @@ jobs:
             git push
             echo "Changes committed and pushed"
           fi
+test
