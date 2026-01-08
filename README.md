@@ -1236,6 +1236,7 @@ AR 및 3D 렌더링
 - [Android Studio 완전삭제](Mobile_02_Android/AndroidStudio_delete.md)
 - [Android - Basic : 안드로이드의 기본 앱구조](Mobile_02_Android/Android_Basic_AppStructure.md)
 - [Android - WebView : 앱에서 웹으로 JavaScript 보내기](Mobile_02_Android/Android_WebView_Sending_JS.md)
+- [Android - SplashScreen 구현](Mobile_02_Android/aOS_0271_SplashScreen.md)
 
 
 <br><br>
