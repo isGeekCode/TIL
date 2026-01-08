@@ -1,7 +1,7 @@
-# React Native - Splash Screen 네이티브 커스텀 구현
+# React Native - Splash Screen 네이티브 커스텀 구현 (WebView 기반)
 
-React Native에서 복잡한 Splash Screen을 구현하려면 Native Module을 직접 만들어야 합니다.
-라이브러리로는 한계가 있는 커스텀 레이아웃을 네이티브에서 구현하고, RN에서 제어하는 방식입니다.
+React Native WebView 기반 앱에서 복잡한 Splash Screen을 구현하는 방법입니다.
+라이브러리로는 한계가 있는 커스텀 레이아웃을 네이티브에서 구현하고, WebView 로드 시점에 제어합니다.
 
 ## 전체 흐름
 
@@ -13,18 +13,23 @@ React Native에서 복잡한 Splash Screen을 구현하려면 Native Module을 �
 └─────────────────────────────────────────────┘
                     ↓
 ┌─────────────────────────────────────────────┐
-│ 2. React Native 부팅 시작                    │
+│ 2. React Native 부팅                         │
 │    - JS Bundle 로드                         │
-│    - 컴포넌트 초기화                          │
+│    - WebView 컴포넌트 렌더링                  │
 └─────────────────────────────────────────────┘
                     ↓
 ┌─────────────────────────────────────────────┐
-│ 3. RN 부팅 완료 후 호출                       │
-│    SplashModule.hide()                      │
+│ 3. WebView 로드 시작 (onLoadStart)            │
+│    → SplashModule.hide() 호출               │
 └─────────────────────────────────────────────┘
                     ↓
 ┌─────────────────────────────────────────────┐
-│ 4. Native에서 Splash 제거                    │
+│ 4. Objective-C Bridge                        │
+│    SplashModule.m → hideSplashFromWebView() │
+└─────────────────────────────────────────────┘
+                    ↓
+┌─────────────────────────────────────────────┐
+│ 5. Native에서 Splash 제거                    │
 │    - iOS: SplashVC dismiss                 │
 │    - Android: Splash Layout 제거            │
 └─────────────────────────────────────────────┘
@@ -46,56 +51,81 @@ React Native에서 복잡한 Splash Screen을 구현하려면 Native Module을 �
 
 ---
 
-## Part 1: React Native - Native Module 호출
+## Part 1: React Native - WebView에서 Native Module 호출
 
-### 1. Native Module 인터페이스 사용
+### 1. WebView 로드 시작 시 Splash 숨김
 
 ```javascript
 // App.js
-import React, { useEffect } from 'react';
+import React from 'react';
 import { NativeModules } from 'react-native';
+import { WebView } from 'react-native-webview';
 
 const { SplashModule } = NativeModules;
 
 function App() {
-  useEffect(() => {
-    // 앱 초기화 작업
-    initializeApp().then(() => {
-      // 초기화 완료 후 Splash 숨김
-      SplashModule.hide();
-    });
-  }, []);
-
-  const initializeApp = async () => {
-    // API 호출, 데이터 로드 등
-    await fetchInitialData();
-    await loadUserSettings();
+  const handleLoadStart = () => {
+    // WebView 로드가 시작되면 즉시 Splash 숨김
+    SplashModule.hide();
   };
 
   return (
-    // 앱 컴포넌트
+    <WebView
+      source={{ uri: 'https://example.com' }}
+      onLoadStart={handleLoadStart}  // ← 핵심!
+      onLoad={() => console.log('WebView loaded')}
+      onError={(error) => {
+        console.error('WebView error:', error);
+        SplashModule.hide();  // 에러 발생해도 Splash는 숨김
+      }}
+    />
   );
 }
 ```
 
-### 2. 타이밍 제어
+### 2. WebView 완전 로드 후 숨기기 (선택)
 
 ```javascript
-// 최소 2초는 보여주기
+// 웹 페이지가 완전히 로드된 후 숨기고 싶다면
+function App() {
+  const handleLoad = () => {
+    // WebView 완전 로드 완료 시
+    SplashModule.hide();
+  };
+
+  return (
+    <WebView
+      source={{ uri: 'https://example.com' }}
+      onLoad={handleLoad}  // onLoadStart 대신 onLoad 사용
+    />
+  );
+}
+```
+
+### 3. 타이밍 제어 (선택)
+
+```javascript
+// 최소 표시 시간 보장
 const MINIMUM_SPLASH_TIME = 2000;
+let startTime = Date.now();
 
-useEffect(() => {
-  const startTime = Date.now();
-
-  initializeApp().then(() => {
+function App() {
+  const handleLoadStart = () => {
     const elapsed = Date.now() - startTime;
     const remaining = Math.max(0, MINIMUM_SPLASH_TIME - elapsed);
 
     setTimeout(() => {
       SplashModule.hide();
     }, remaining);
-  });
-}, []);
+  };
+
+  return (
+    <WebView
+      source={{ uri: 'https://example.com' }}
+      onLoadStart={handleLoadStart}
+    />
+  );
+}
 ```
 
 ---
@@ -118,7 +148,8 @@ class SplashModule: NSObject {
       guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
         return
       }
-      appDelegate.hideSplash()
+      // AppDelegate의 hideSplashFromWebView 호출
+      appDelegate.hideSplashFromWebView()
     }
   }
 
@@ -129,7 +160,7 @@ class SplashModule: NSObject {
 }
 ```
 
-### 2. SplashModule.m (Bridge)
+### 2. SplashModule.m (Objective-C Bridge)
 
 ```objective-c
 // SplashModule.m
@@ -141,6 +172,12 @@ RCT_EXTERN_METHOD(hide)
 
 @end
 ```
+
+**Bridge 역할:**
+- JavaScript `SplashModule.hide()` 호출
+- → Objective-C Bridge (SplashModule.m)
+- → Swift 메서드 실행 (SplashModule.swift)
+- → AppDelegate의 `hideSplashFromWebView()` 호출
 
 ### 3. AppDelegate.swift 수정
 
@@ -183,7 +220,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
   }
 
-  func hideSplash() {
+  // WebView에서 호출되는 메서드
+  func hideSplashFromWebView() {
     splashViewController?.dismiss(animated: true) {
       self.splashViewController = nil
     }
@@ -400,21 +438,36 @@ class MainActivity : ReactActivity() {
 
 ## 핵심 포인트
 
-### 1. RN은 제어만 담당
+### 1. WebView 기반 앱의 특징
 ```javascript
-// RN의 역할: 타이밍만 제어
-SplashModule.hide();  // "이제 숨겨!"
+// WebView 로드 시작 시점에 Splash 제거
+<WebView
+  onLoadStart={() => SplashModule.hide()}
+/>
 ```
 
-### 2. Native가 UI 담당
+### 2. Objective-C Bridge를 통한 호출
+```
+JavaScript (RN)
+  ↓
+SplashModule.m (Objective-C Bridge)
+  ↓
+SplashModule.swift
+  ↓
+AppDelegate.hideSplashFromWebView()
+  ↓
+SplashViewController dismiss
+```
+
+### 3. Native가 UI 담당
 - **iOS**: SplashViewController로 복잡한 레이아웃
 - **Android**: ConstraintLayout으로 복잡한 레이아웃
 
-### 3. 화면 비율 대응
+### 4. 화면 비율 대응
 - **iOS**: Auto Layout Constraints
 - **Android**: ConstraintLayout
 
-### 4. 자연스러운 전환
+### 5. 자연스러운 전환
 - LaunchScreen → SplashVC: 동일한 레이아웃으로 깜빡임 없음
 - MainActivity: ContentView에 Splash 추가/제거
 
@@ -473,12 +526,17 @@ view.backgroundColor = UIColor.systemBackground
 
 ## 결론
 
-**복잡한 Splash는 Native Module로 직접 구현**
+**WebView 기반 RN 앱의 Splash는 Native Module로 직접 구현**
 
-1. RN에서 `SplashModule.hide()` 호출
-2. iOS/Android 각각 Native Module 구현
-3. 복잡한 레이아웃은 네이티브로 구현
-4. RN 부팅 완료 후 제어권은 RN이 가짐
+1. **WebView 로드 시작** 시점에 `SplashModule.hide()` 호출
+2. **Objective-C Bridge** 통해 네이티브 메서드 호출
+3. iOS: `hideSplashFromWebView()` / Android: `hideSplash()`
+4. 복잡한 레이아웃(중앙 + 하단 로고)은 네이티브로 구현
+
+**핵심:**
+- WebView 기반 앱은 `onLoadStart` 이벤트 활용
+- Bridge 구조: JS → Objective-C (.m) → Swift
+- 메서드 명명: `hideSplashFromWebView` (목적이 명확)
 
 이 방식이 라이브러리보다 **안정적**이고 **커스터마이징**이 자유롭습니다.
 
