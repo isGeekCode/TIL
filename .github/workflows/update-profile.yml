@@ -62,14 +62,16 @@ jobs:
           DEV="${{ steps.count.outputs.dev }}"
           SWIFT="${{ steps.count.outputs.swift }}"
 
-          # 카테고리 수 계산 (0이 아닌 카테고리만)
+          # ComputerScience + Algorithm 통합
+          CS_TOTAL=$((CS + ALGO))
+
+          # 카테고리 수 계산 (0이 아닌 카테고리만, CS+ALGO는 하나로 계산)
           categories=0
           [ "$IOS" -gt 0 ] && ((categories++))
           [ "$ANDROID" -gt 0 ] && ((categories++))
           [ "$FLUTTER" -gt 0 ] && ((categories++))
           [ "$RN" -gt 0 ] && ((categories++))
-          [ "$CS" -gt 0 ] && ((categories++))
-          [ "$ALGO" -gt 0 ] && ((categories++))
+          [ "$CS_TOTAL" -gt 0 ] && ((categories++))
           [ "$DEV" -gt 0 ] && ((categories++))
           [ "$SWIFT" -gt 0 ] && ((categories++))
 
@@ -78,11 +80,10 @@ jobs:
 _${TOTAL} TILs across ${categories} categories_
   - iOS: ${IOS} articles
   - Flutter: ${FLUTTER} articles
-  - ComputerScience: ${CS} articles
-  - Algorithm: ${ALGO} articles
-  - Development: ${DEV} articles
   - Swift: ${SWIFT} articles
+  - Computer Science: ${CS_TOTAL} articles
   - React Native: ${RN} articles
+  - Development: ${DEV} articles
   - Android: ${ANDROID} articles
 EOF
 

@@ -8,12 +8,11 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_583 TILs across 8 categories_
+_583 TILs across 7 categories_
   - iOS: 268 articles
   - Flutter: 52 articles
-  - ComputerScience: 26 articles
-  - Algorithm: 24 articles
   - Swift: 51 articles
+  - Computer Science: 50 articles
   - React Native: 12 articles
   - Development: 7 articles
   - Android: 4 articles
