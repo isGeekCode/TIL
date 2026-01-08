@@ -18,23 +18,90 @@ jobs:
           token: ${{ secrets.PROFILE_UPDATE_TOKEN }}
           path: TIL
 
-      - name: Count markdown files
+      - name: Count markdown files by category
         id: count
         run: |
           cd TIL
-          count=$(find . -name "*.md" -type f ! -name "README.md" | wc -l)
-          echo "count=$count" >> $GITHUB_OUTPUT
-          echo "Total articles: $count"
+
+          # 각 카테고리별 아티클 수 카운트 (README, MIGRATION_LOG 제외)
+          ios_count=$(find Mobile_01_iOS -name "*.md" -type f ! -name "README.md" ! -name "MIGRATION_LOG*" 2>/dev/null | wc -l | xargs)
+          android_count=$(find Mobile_02_Android -name "*.md" -type f ! -name "README.md" 2>/dev/null | wc -l | xargs)
+          flutter_count=$(find Mobile_03_Flutter -name "*.md" -type f ! -name "README.md" 2>/dev/null | wc -l | xargs)
+          rn_count=$(find Mobile_04_ReactNative -name "*.md" -type f ! -name "README.md" 2>/dev/null | wc -l | xargs)
+          cs_count=$(find ComputerScience -name "*.md" -type f ! -name "README.md" 2>/dev/null | wc -l | xargs)
+          algo_count=$(find Algorithm -name "*.md" -type f ! -name "README.md" 2>/dev/null | wc -l | xargs)
+          dev_count=$(find Development -name "*.md" -type f ! -name "README.md" 2>/dev/null | wc -l | xargs)
+          swift_count=$(find Lang-Swift -name "*.md" -type f ! -name "README.md" 2>/dev/null | wc -l | xargs)
+
+          # 전체 아티클 수 (README 제외, MIGRATION_LOG 제외)
+          total_count=$(find . -name "*.md" -type f ! -name "README.md" ! -name "MIGRATION_LOG*" | wc -l | xargs)
+
+          echo "count=$total_count" >> $GITHUB_OUTPUT
+          echo "ios=$ios_count" >> $GITHUB_OUTPUT
+          echo "android=$android_count" >> $GITHUB_OUTPUT
+          echo "flutter=$flutter_count" >> $GITHUB_OUTPUT
+          echo "rn=$rn_count" >> $GITHUB_OUTPUT
+          echo "cs=$cs_count" >> $GITHUB_OUTPUT
+          echo "algo=$algo_count" >> $GITHUB_OUTPUT
+          echo "dev=$dev_count" >> $GITHUB_OUTPUT
+          echo "swift=$swift_count" >> $GITHUB_OUTPUT
+
+          echo "Total: $total_count articles"
+          echo "iOS: $ios_count, Flutter: $flutter_count, React Native: $rn_count"
 
       - name: Update TIL README
         run: |
           cd TIL
-          ARTICLE_COUNT="${{ steps.count.outputs.count }}"
+          TOTAL="${{ steps.count.outputs.count }}"
+          IOS="${{ steps.count.outputs.ios }}"
+          ANDROID="${{ steps.count.outputs.android }}"
+          FLUTTER="${{ steps.count.outputs.flutter }}"
+          RN="${{ steps.count.outputs.rn }}"
+          CS="${{ steps.count.outputs.cs }}"
+          ALGO="${{ steps.count.outputs.algo }}"
+          DEV="${{ steps.count.outputs.dev }}"
+          SWIFT="${{ steps.count.outputs.swift }}"
 
-          # TIL README.md에서 "_숫자 TILs and counting..._" 패턴을 찾아서 업데이트
-          sed -i "s/_[0-9]* TILs and counting.../_$ARTICLE_COUNT TILs and counting.../g" README.md
+          # 카테고리 수 계산 (0이 아닌 카테고리만)
+          categories=0
+          [ "$IOS" -gt 0 ] && ((categories++))
+          [ "$ANDROID" -gt 0 ] && ((categories++))
+          [ "$FLUTTER" -gt 0 ] && ((categories++))
+          [ "$RN" -gt 0 ] && ((categories++))
+          [ "$CS" -gt 0 ] && ((categories++))
+          [ "$ALGO" -gt 0 ] && ((categories++))
+          [ "$DEV" -gt 0 ] && ((categories++))
+          [ "$SWIFT" -gt 0 ] && ((categories++))
 
-          echo "Updated TIL README article count to: $ARTICLE_COUNT"
+          # README 업데이트할 내용 생성
+          cat > /tmp/til_stats.txt << EOF
+_${TOTAL} TILs across ${categories} categories_
+  - iOS: ${IOS} articles
+  - Flutter: ${FLUTTER} articles
+  - ComputerScience: ${CS} articles
+  - Algorithm: ${ALGO} articles
+  - Development: ${DEV} articles
+  - Swift: ${SWIFT} articles
+  - React Native: ${RN} articles
+  - Android: ${ANDROID} articles
+EOF
+
+          # 기존 "_숫자 TILs" 라인부터 다음 빈 줄 또는 --- 까지를 새 내용으로 교체
+          awk '
+            /_[0-9]+ TILs/ {
+              system("cat /tmp/til_stats.txt")
+              # 다음 빈 줄이나 --- 까지 스킵
+              getline
+              while (getline && $0 != "" && $0 !~ /^---/) {}
+              if ($0 == "" || $0 ~ /^---/) print $0
+              next
+            }
+            {print}
+          ' README.md > README.md.tmp
+
+          mv README.md.tmp README.md
+
+          echo "Updated TIL README with category breakdown"
 
       - name: Commit and push TIL README if changed
         run: |
