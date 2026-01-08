@@ -10,7 +10,7 @@
 
 _583 TILs across 5 categories_
   - iOS: 319
-  - Flutter / React Native: 64
+  - Flutter / React Native: 52 / 12
   - Computer Science: 50
   - Development: 7
   - Android: 4
