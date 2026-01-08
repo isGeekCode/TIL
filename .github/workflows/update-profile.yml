@@ -15,6 +15,7 @@ jobs:
       - name: Checkout TIL repository
         uses: actions/checkout@v3
         with:
+          token: ${{ secrets.PROFILE_UPDATE_TOKEN }}
           path: TIL
 
       - name: Count markdown files
@@ -25,6 +26,31 @@ jobs:
           echo "count=$count" >> $GITHUB_OUTPUT
           echo "Total articles: $count"
 
+      - name: Update TIL README
+        run: |
+          cd TIL
+          ARTICLE_COUNT="${{ steps.count.outputs.count }}"
+
+          # TIL README.md에서 "_숫자 TILs and counting..._" 패턴을 찾아서 업데이트
+          sed -i "s/_[0-9]* TILs and counting.../_$ARTICLE_COUNT TILs and counting.../g" README.md
+
+          echo "Updated TIL README article count to: $ARTICLE_COUNT"
+
+      - name: Commit and push TIL README if changed
+        run: |
+          cd TIL
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet; then
+            echo "No changes to commit in TIL README"
+          else
+            git add README.md
+            git commit -m "[AUTO] Update TIL article count to ${{ steps.count.outputs.count }}"
+            git push
+            echo "TIL README changes committed and pushed"
+          fi
+
       - name: Checkout profile repository
         uses: actions/checkout@v3
         with:
@@ -32,27 +58,27 @@ jobs:
           token: ${{ secrets.PROFILE_UPDATE_TOKEN }}
           path: profile
 
-      - name: Update README
+      - name: Update Profile README
         run: |
           cd profile
           ARTICLE_COUNT="${{ steps.count.outputs.count }}"
 
-          # README.md에서 "TIL (숫자 articles)" 패턴을 찾아서 업데이트
+          # Profile README.md에서 "TIL (숫자 articles)" 패턴을 찾아서 업데이트
           sed -i "s/TIL ([0-9]* articles)/TIL ($ARTICLE_COUNT articles)/g" README.md
 
-          echo "Updated article count to: $ARTICLE_COUNT"
+          echo "Updated Profile README article count to: $ARTICLE_COUNT"
 
-      - name: Commit and push if changed
+      - name: Commit and push Profile README if changed
         run: |
           cd profile
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           if git diff --quiet; then
-            echo "No changes to commit"
+            echo "No changes to commit in Profile README"
           else
             git add README.md
             git commit -m "[AUTO] Update TIL article count to ${{ steps.count.outputs.count }}"
             git push
-            echo "Changes committed and pushed"
+            echo "Profile README changes committed and pushed"
           fi

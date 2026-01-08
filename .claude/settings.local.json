@@ -25,7 +25,9 @@
       "Bash(done)",
       "Bash(tree -L 2 -a:*)",
       "Bash(du -sh:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(git rm:*)",
+      "Bash(git stash:*)"
     ],
     "deny": [],
     "ask": []
