@@ -8,7 +8,7 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_446 TILs and counting..._
+_584 TILs and counting..._
 
 ---
 
