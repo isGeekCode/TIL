@@ -283,6 +283,74 @@ class SplashViewController: UIViewController {
 
 ## Part 3: Android Native 구현
 
+### 왜 MainActivity에서 Splash를 띄우는가?
+
+**일반적인 Android 앱:**
+```
+SplashActivity (Splash 표시)
+  ↓
+MainActivity (메인 화면)
+```
+
+**하지만 WebView 기반 RN 앱의 문제:**
+```
+SplashActivity 종료
+  ↓
+MainActivity 시작
+  ↓
+WebView 로드 중... 😱 흰 화면 깜빡임 발생!
+  ↓
+WebView 로드 완료
+```
+
+**해결: MainActivity에서 즉시 Splash를 띄우기**
+```
+MainActivity onCreate()
+  ↓
+즉시 Splash Layout을 ContentView 위에 추가
+  ↓
+(뒤에서 WebView 로드 진행 중...)
+  ↓
+WebView onLoadStart → Splash 제거
+```
+
+**장점:**
+- ✅ **흰 화면 방지**: WebView 로드 중에도 Splash가 보임
+- ✅ **시간 벌기**: WebView 로드는 시간이 걸림 (네트워크 요청)
+- ✅ **자연스러운 전환**: 깜빡임 없이 Splash → WebView
+- ✅ **로직 추가 가능**: Activity 생명주기에서 제어 가능
+
+**핵심:**
+- SplashActivity를 별도로 두면 Activity 전환 시 흰 화면 발생
+- MainActivity에서 바로 Splash를 올리면 WebView 로드 동안 시간 벌기 가능
+
+### ViewModel 아키텍처 패턴
+
+**전통적인 방식: SplashVM + MainVM 분리**
+```
+MainActivity
+  ├─ SplashViewModel (Splash 로직)
+  └─ MainViewModel (메인 로직)
+```
+
+**최근 권장 방식: MainVM 내부에 SplashUseCase**
+```
+MainActivity
+  └─ MainViewModel
+       ├─ SplashUseCase (Splash 관련 로직)
+       └─ 기타 UseCase들
+```
+
+**MainVM + SplashUseCase 방식이 더 나은 이유:**
+- ✅ **단일 책임**: MainActivity는 하나의 ViewModel만 관리
+- ✅ **응집도**: Splash는 Main 화면의 일부 → UseCase로 관리하는 것이 자연스러움
+- ✅ **생명주기 관리 단순화**: ViewModel 하나만 observe하면 됨
+- ✅ **테스트 용이**: UseCase 단위로 테스트 가능
+
+**참고:** 별도 SplashVM을 두는 경우도 있지만, Splash가 단순히 "로딩 상태"라면 UseCase로 분리하는 것이 더 깔끔합니다.
+
+---
+
 ### 1. SplashModule.kt 생성
 
 ```kotlin
