@@ -8,12 +8,15 @@
   2단계. 블로그에 정리해서 게시 ✨
 
 
-_583 TILs across 5 categories_
-  - iOS: 319
-  - Flutter / React Native: 52 / 12
-  - Computer Science: 50
-  - Development: 7
-  - Android: 4
+_583 TILs_
+- Mobile: 387
+    - iOS: 319
+    - Android: 4
+    - Cross Platform: 64
+      - Flutter: 52
+      - React Native: 12
+- Computer Science: 50
+- Development: 7
 
 ---
 

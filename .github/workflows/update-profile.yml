@@ -66,24 +66,22 @@ jobs:
           CS_TOTAL=$((CS + ALGO))
           # iOS + Swift 통합
           IOS_TOTAL=$((IOS + SWIFT))
+          # Cross Platform 통합
+          CROSS_TOTAL=$((FLUTTER + RN))
+          # Mobile 전체
+          MOBILE_TOTAL=$((IOS_TOTAL + ANDROID + CROSS_TOTAL))
 
-          # 카테고리 수 계산 (0이 아닌 카테고리만)
-          # Flutter / RN은 하나의 카테고리로 계산
-          categories=0
-          [ "$IOS_TOTAL" -gt 0 ] && ((categories++))
-          [ "$ANDROID" -gt 0 ] && ((categories++))
-          [ "$FLUTTER" -gt 0 ] || [ "$RN" -gt 0 ] && ((categories++))
-          [ "$CS_TOTAL" -gt 0 ] && ((categories++))
-          [ "$DEV" -gt 0 ] && ((categories++))
-
-          # README 업데이트할 내용 생성
+          # README 업데이트할 내용 생성 (계층 구조)
           cat > /tmp/til_stats.txt << EOF
-_${TOTAL} TILs across ${categories} categories_
-  - iOS: ${IOS_TOTAL}
-  - Flutter / React Native: ${FLUTTER} / ${RN}
-  - Computer Science: ${CS_TOTAL}
-  - Development: ${DEV}
-  - Android: ${ANDROID}
+_${TOTAL} TILs_
+- Mobile: ${MOBILE_TOTAL}
+    - iOS: ${IOS_TOTAL}
+    - Android: ${ANDROID}
+    - Cross Platform: ${CROSS_TOTAL}
+      - Flutter: ${FLUTTER}
+      - React Native: ${RN}
+- Computer Science: ${CS_TOTAL}
+- Development: ${DEV}
 EOF
 
           # 기존 "_숫자 TILs" 라인부터 다음 빈 줄 또는 --- 까지를 새 내용으로 교체
