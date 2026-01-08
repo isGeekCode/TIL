@@ -1550,7 +1550,7 @@ ARKit, SceneKit처럼 AR 기능은 외부 플러그인 기반 접근 정리
 # Mobile-React Native
 
 ## Mobile React Native 공통 기능 구현
-- React Native - Splash 구현 (예정)
+- [React Native - Splash Screen 네이티브 커스텀 구현](Mobile_04_ReactNative/RN_Splash_001_네이티브_커스텀_구현.md)
 
 
 <br><br>
