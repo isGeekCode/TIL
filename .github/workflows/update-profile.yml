@@ -1,0 +1,58 @@
+name: Update Profile README
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.md'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout TIL repository
+        uses: actions/checkout@v3
+        with:
+          path: TIL
+
+      - name: Count markdown files
+        id: count
+        run: |
+          cd TIL
+          count=$(find . -name "*.md" -type f ! -name "README.md" | wc -l)
+          echo "count=$count" >> $GITHUB_OUTPUT
+          echo "Total articles: $count"
+
+      - name: Checkout profile repository
+        uses: actions/checkout@v3
+        with:
+          repository: isGeekCode/isGeekCode
+          token: ${{ secrets.PROFILE_UPDATE_TOKEN }}
+          path: profile
+
+      - name: Update README
+        run: |
+          cd profile
+          ARTICLE_COUNT="${{ steps.count.outputs.count }}"
+
+          # README.md에서 "TIL (숫자 articles)" 패턴을 찾아서 업데이트
+          sed -i "s/TIL ([0-9]* articles)/TIL ($ARTICLE_COUNT articles)/g" README.md
+
+          echo "Updated article count to: $ARTICLE_COUNT"
+
+      - name: Commit and push if changed
+        run: |
+          cd profile
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet; then
+            echo "No changes to commit"
+          else
+            git add README.md
+            git commit -m "[AUTO] Update TIL article count to ${{ steps.count.outputs.count }}"
+            git push
+            echo "Changes committed and pushed"
+          fi
