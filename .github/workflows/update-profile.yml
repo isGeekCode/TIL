@@ -66,25 +66,25 @@ jobs:
           CS_TOTAL=$((CS + ALGO))
           # iOS + Swift 통합
           IOS_TOTAL=$((IOS + SWIFT))
+          # Flutter + React Native 통합
+          FLUTTER_RN_TOTAL=$((FLUTTER + RN))
 
           # 카테고리 수 계산 (0이 아닌 카테고리만)
           categories=0
           [ "$IOS_TOTAL" -gt 0 ] && ((categories++))
           [ "$ANDROID" -gt 0 ] && ((categories++))
-          [ "$FLUTTER" -gt 0 ] && ((categories++))
-          [ "$RN" -gt 0 ] && ((categories++))
+          [ "$FLUTTER_RN_TOTAL" -gt 0 ] && ((categories++))
           [ "$CS_TOTAL" -gt 0 ] && ((categories++))
           [ "$DEV" -gt 0 ] && ((categories++))
 
           # README 업데이트할 내용 생성
           cat > /tmp/til_stats.txt << EOF
 _${TOTAL} TILs across ${categories} categories_
-  - iOS: ${IOS_TOTAL} articles
-  - Flutter: ${FLUTTER} articles
-  - Computer Science: ${CS_TOTAL} articles
-  - React Native: ${RN} articles
-  - Development: ${DEV} articles
-  - Android: ${ANDROID} articles
+  - iOS: ${IOS_TOTAL}
+  - Flutter / React Native: ${FLUTTER_RN_TOTAL}
+  - Computer Science: ${CS_TOTAL}
+  - Development: ${DEV}
+  - Android: ${ANDROID}
 EOF
 
           # 기존 "_숫자 TILs" 라인부터 다음 빈 줄 또는 --- 까지를 새 내용으로 교체
