@@ -508,6 +508,7 @@ _597 TILs_
 
 ## Mobile iOS 공통 기능 구현
 - [iOS - 스플래시 화면 구현 가이드 (정적 & 동적)](Mobile_01_iOS/iOSCommon_001.SplashScreen.md)
+- [iOS - WebView 앱 Splash Screen 커스텀 구현](Mobile_01_iOS/iOS_Splash_WebView앱_커스텀구현.md)
 - [iOS -WebView–Native 통신](Mobile_01_iOS/iOSCommon_004.WebViewNativeCommunication.md)
 ## 기초 개념
 - [iOS_Hierachy - Foundation](Mobile_01_iOS/iOS-Hierachy/IOS_Hierachy_Foundation.md)
@@ -1237,6 +1238,7 @@ AR 및 3D 렌더링
 - [Android - Basic : 안드로이드의 기본 앱구조](Mobile_02_Android/Android_Basic_AppStructure.md)
 - [Android - WebView : 앱에서 웹으로 JavaScript 보내기](Mobile_02_Android/Android_WebView_Sending_JS.md)
 - [Android - SplashScreen 구현](Mobile_02_Android/aOS_0271_SplashScreen.md)
+- [Android - WebView 앱 Splash Screen 커스텀 구현](Mobile_02_Android/aOS_Splash_WebView앱_커스텀구현.md)
 
 
 <br><br>
